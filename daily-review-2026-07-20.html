@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 · 7月20日 周一</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #0d1117;
+  color: #c9d1d9;
+  line-height: 1.75;
+  min-height: 100vh;
+}
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 60px;
+}
+.header {
+  text-align: center;
+  padding: 32px 0 20px;
+  border-bottom: 1px solid #21262d;
+  margin-bottom: 24px;
+}
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f0f6fc;
+  letter-spacing: 0.02em;
+}
+.header .date-badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  background: #161b22;
+  color: #8b949e;
+  border: 1px solid #30363d;
+}
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 24px;
+  background: #161b22;
+  border-radius: 12px;
+  padding: 4px;
+}
+.tab-btn {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  color: #8b949e;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+.tab-btn.active {
+  background: #1f6feb;
+  color: #fff;
+}
+.tab-btn.biz.active {
+  background: #1f6feb;
+}
+.tab-btn.diary.active {
+  background: #bf4b8b;
+}
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.content-block {
+  margin-bottom: 28px;
+}
+.content-block p {
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  color: #c9d1d9;
+}
+.content-block p.lead {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #f0f6fc;
+  padding: 16px 20px;
+  background: #161b22;
+  border-left: 3px solid #1f6feb;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 24px;
+}
+.tab-diary .content-block p.lead {
+  border-left-color: #bf4b8b;
+}
+.content-block h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #58a6ff;
+  margin: 24px 0 12px;
+}
+.tab-diary .content-block h2 {
+  color: #f088bf;
+}
+.content-block h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e6edf3;
+  margin: 20px 0 10px;
+}
+.signal-bar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+.signal-tag {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  background: #1a2332;
+  color: #58a6ff;
+  border: 1px solid #1f6feb33;
+}
+.divider {
+  text-align: center;
+  margin: 32px 0 20px;
+  color: #30363d;
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+}
+.stats-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+.stat-card {
+  flex: 1;
+  min-width: 100px;
+  padding: 14px 16px;
+  background: #161b22;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #21262d;
+}
+.stat-card .num {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #58a6ff;
+}
+.tab-diary .stat-card .num {
+  color: #f088bf;
+}
+.stat-card .label {
+  font-size: 0.78rem;
+  color: #8b949e;
+  margin-top: 4px;
+}
+.footer {
+  text-align: center;
+  padding-top: 32px;
+  border-top: 1px solid #21262d;
+  margin-top: 40px;
+  color: #484f58;
+  font-size: 0.8rem;
+}
+.note {
+  font-style: italic;
+  color: #8b949e;
+  font-size: 0.85rem;
+  padding: 10px 14px;
+  background: #161b22;
+  border-radius: 6px;
+  margin: 12px 0;
+}
+.highlight {
+  color: #f0f6fc;
+  font-weight: 500;
+}
+.em {
+  color: #f088bf;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <h1>每日复盘</h1>
+  <div class="date-badge">2026年7月20日 · 周一</div>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn biz active" onclick="switchTab('biz')">商业复盘</button>
+  <button class="tab-btn diary" onclick="switchTab('diary')">日记随笔</button>
+</div>
+
+<!-- ====== BUSINESS VERSION ====== -->
+<div id="tab-biz" class="tab-content active">
+<div class="content-block">
+
+<p class="lead">AI视觉业务本周正式进入"复刻验证"阶段——不再只是访谈和画全景图，而是要求每个团队成员领回一个业务岗位的实际任务，用AI工具试着做出来。这个转折点的推力来自上周的积累：聊完了代表业务、看清了全链路、拿到了实际产物资料，但如果不进入"做"的阶段，了解就永远停留在了解。</p>
+
+<div class="stats-row">
+  <div class="stat-card"><div class="num">8</div><div class="label">场会议</div></div>
+  <div class="stat-card"><div class="num">281</div><div class="label">会议分钟</div></div>
+  <div class="stat-card"><div class="num">93</div><div class="label">条消息</div></div>
+</div>
+
+<h2>从"调研"到"复刻"——一个被明确划定的转折</h2>
+
+<p>今天周会上，团队明确了资源聚焦方向：水滴、米九、依依三人正式嵌入视觉业务部门。上周他们做的事情是"了解每个节点代表业务的工作内容"——访谈、画链路、收集资料。本周的任务边界被重新划定：<span class="highlight">每个人领回一个具体业务岗位的任务，亲自走一遍对方的流程，然后尝试用AI工具复刻产出。</span></p>
+
+<p>这不是微调，是一次方法论切换。"了解"的产出是可汇报的文档；"复刻"的产出是可被原岗位同事评价的成品。前者输出认知，后者输出能力。这个切换的紧迫感来自一个简单的压力测试：如果下周有人问"AI在视频生产里到底能做什么"，团队的答案不能是一张全景图——得是一个实际剪出来的视频。</p>
+
+<p>最直接的指令出现在视频生产流程复刻的短会上。有同事提到"不只是停留在了解阶段"，要求拿到剪辑原片、按对方规范用Codex插件试着剪到标准、拿成品回去让人提意见再迭代。这个逻辑往下推一层就是：<span class="highlight">AI赋能不是"我帮你更快"的工具思维，而是"我能不能独立做出你的产出"的能力对标。</span>前者是效率提升，后者是替代性验证——意义完全不同。</p>
+
+<h2>全景图拆解：周四/五的闭门战役</h2>
+
+<p>本周最大的一笔时间投入是视觉全景图的闭门拆解——一整天的沉浸式工作坊。这不是在会议室里展示PPT，是跟业务方坐在一起，把视觉生产从需求到交付的每一个环节拆到不能再拆。类似之前GSA培训中的拆解方法论：先穷举所有节点，再逐一判断AI在该节点的可替代性。</p>
+
+<p>这里有个值得注意的细节：今天跟策划团队的深度访谈（75.9分钟）拿到了一个真实产品从样品到最终交付视频的完整流程产物。策划链路比想象中更依赖"现场看样品→口头理解定位→灵活调整方案"这个非标环节。这个发现意味着，<span class="highlight">全景图拆解不能只拆"标准流程"，必须留出一个维度专门标注"隐性知识节点"——那些靠经验和默契而非SOP驱动的决策点。</span>如果全景图漏掉了这些节点，后续的AI赋能方案会像在沙滩上盖楼。</p>
+
+<h2>AI分身讨论：一场未完成的辩论</h2>
+
+<p>另有一场30分钟的讨论聚焦在AI分身的协作模式上。核心张力在两种范式之间：一种是专家型Agent + 多个子Agent分发的中央集权模式；另一种是多Agent间自主博弈的分布式模式。讨论中明确指出了角色扮演模式的局限性——"提高不了效率，提高不了决策的准确度"。</p>
+
+<p>这个讨论的价值不在于结论，而在于它暴露了当前团队对AI Agent的核心困惑：<span class="highlight">我们到底是在设计一个更聪明的工具，还是在一个组织中引入一个新的协作角色？</span>这两种答案对应完全不同的产品形态和落地路径。目前讨论停留在概念层面，但从GPT群聊功能被下线（今天确认了这个消息）来看，大模型厂商自己也在摸索群组协作的合理边界——这个问题没有标准答案，只能靠实践推演。</p>
+
+<h2>本周信号追踪</h2>
+
+<div class="signal-bar">
+  <span class="signal-tag">AI视觉进入执行验证期</span>
+  <span class="signal-tag">周四/五全天闭门拆解</span>
+  <span class="signal-tag">Codex更新频繁</span>
+  <span class="signal-tag">GPT群聊下线</span>
+  <span class="signal-tag">年中白皮书进行中</span>
+  <span class="signal-tag">德尔玛交流成果同步</span>
+</div>
+
+<p>从周度维度看，本周是AI视觉业务嵌入的第二周。上周是"建立认知"，本周是"产生证据"。周五的闭门拆解产出将决定下周整个团队的发力方向——是继续补认知还是转向规模化落地。<span class="highlight">这个节奏如果踩对了，7月底能看到第一批AI复刻的实际产出。</span></p>
+
+</div>
+</div>
+
+<!-- ====== DIARY VERSION ====== -->
+<div id="tab-diary" class="tab-content">
+<div class="content-block">
+
+<p class="lead">八场会，两百八十分钟。开完最后一场从会议室出来，天已经暗了。给洁敏发了句"走了不"——周一就这样被会议填满，但奇怪的是不觉得累。有一种东西正在从纸面落地的踏实感。</p>
+
+<h2>"不只停留在了解的阶段"</h2>
+
+<p>这句话今天蹦出来两次。一次是在周会上读周报时，另一次是在跟视频团队的短会上，有人直截了当地说：你们现在了解得差不多了，去试着把他那个事情通过AI做一下。</p>
+
+<p>我愣了一下。不是因为这话不对——恰恰是因为太对了，所以被说到的时候有一种被轻轻戳中的感觉。过去一周我们确实在"了解"上花了很多功夫：访谈业务、画链路、收资料、建全景图。这些都是必要的，但如果你诚实面对自己，你会发现"了解"比"做"安全太多了。了解是站在岸上看泳池，做是跳下去发现自己根本不会换气。</p>
+
+<p>但今天团队给了我一个信号：他们准备好了。米九和依依在周会上汇报说上周已经聊了部分代表业务，这周会把全链路聊完、每人领一个任务回去尝试复刻。那种"我们领了任务明天就干"的语气，比任何ppt都能说明状态。</p>
+
+<p>然后有人电脑黑屏了。全场安静了两秒，然后大家笑起来——"我第一次出现这种情况。"不是什么大事，但就是这种小意外，让一场严肃的周会突然有了人的温度。</p>
+
+<h2>策划链路里的"隐性知识"</h2>
+
+<p>下午最长的会——75分钟，跟策划团队坐在一起。他们拿了一个真实产品的流程来讲：从看样品开始，运营同事拿着一张纸口头介绍产品定位、成本、竞品信息。没有文档，没有brief，全靠现场理解和经验判断。</p>
+
+<p>我问能不能拿到一整个项目从需求表到最终交付视频的完整产物链。他们想了想说可以，挑一个产品给你。这个"可以"的意义比我预期的大——它不是同意，是信任。意味着业务方愿意把自己工作的"原材料"交出来让我们拆解。</p>
+
+<p>会开到一半我意识到一件事：我们过去对AI赋能视觉的想象太"干净"了。以为是把一个明确的输入扔给AI，它输出一个可评估的结果。但实际链路中，从样品说明到方案调整，有太多环节依赖"在场"——你在现场看到了产品的手感、听到了同事的语气、感受到了氛围的微妙变化，这些是任何SOP都没有记录但决定最终产出质量的东西。</p>
+
+<p>这些东西AI能替代吗？老实说我不知道。但知道"不知道什么"本身就是进展。</p>
+
+<h2>散会后的碎片</h2>
+
+<p>17:00左右，GPT群聊被确认下线了。不只是功能入口消失，OpenAI发了正式公告。我翻出四个月前讨论"要不建个AI群聊做内部FAQ"的聊天记录，觉得有点好笑——那时候我们认真争论过群聊里AI应该以什么角色出现、能不能引用个人记忆库。现在看来这个问题短期内不会有官方答案了。</p>
+
+<p>然后是一连串碎片式的协调：苹果账号续费要发链接、ChatGPT续费要让同事检查是不是free版、培训成绩统计有人没填、明天要去区政府开会要早点出发。这些事每件都不大，但加起来就是管理工作真实的肌理——你以为你在做战略，其实一半时间在发确认链接。</p>
+
+<p>晚上健新发了一份中英文白皮书，34页。我扫了一眼，琢磨着怎么从里面抽页合页。德彬的白皮书我也想参与——"我们俩互相强绑定的"，这话我说得挺自然的，但想了想，确实是实话。过去半年我们在AI落地上绑得越来越紧，从GSA培训到一起推视觉项目，已经不太分得清谁在负责什么——更像是两个人各顶半边，缝隙处自然咬合。</p>
+
+<div class="note">
+<p>今天有个瞬间值得记住：在讨论AI分身的时候，有人说了一句"角色扮演就是个伪命题，提高不了效率也提高不了决策准确度"。不是结论，是一句诚实的困惑。这种困惑比任何笃定都珍贵——它说明我们在想真正的问题，而不是在给已有的答案找理由。</p>
+</div>
+
+</div>
+</div>
+
+<div class="footer">
+  每日复盘 · 2026.07.20 · 周一 · AI产品创新部
+</div>
+
+</div>
+
+<script>
+function switchTab(tab) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  document.querySelector('.tab-btn.' + tab).classList.add('active');
+}
+</script>
+</body>
+</html>
