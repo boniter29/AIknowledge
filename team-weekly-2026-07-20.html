@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>团队周报洞察 · 7/13 ~ 7/19</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background:#0d1117; color:#c9d1d9; line-height:1.6; padding:20px; max-width:900px; margin:0 auto; }
+h1 { font-size:1.6em; color:#58a6ff; margin:20px 0 16px; padding-bottom:8px; border-bottom:1px solid #21262d; }
+h2 { font-size:1.25em; color:#f0f6fc; margin:24px 0 12px; }
+h3 { font-size:1.05em; color:#8b949e; margin:16px 0 8px; }
+.card { background:#161b22; border:1px solid #21262d; border-radius:10px; padding:20px; margin:16px 0; }
+.metric-row { display:flex; gap:16px; flex-wrap:wrap; margin:16px 0; }
+.metric { flex:1; min-width:140px; background:#0d1117; border:1px solid #30363d; border-radius:8px; padding:16px; text-align:center; }
+.metric .value { font-size:2em; font-weight:700; margin:4px 0; }
+.metric .label { font-size:0.8em; color:#8b949e; }
+.green { color:#3fb950; }
+.yellow { color:#d29922; }
+.red { color:#f85149; }
+.gauge-container { margin:16px 0; }
+.gauge-bar { height:24px; border-radius:12px; background:#21262d; overflow:hidden; position:relative; }
+.gauge-fill { height:100%; border-radius:12px; transition:width 0.5s; }
+.gauge-fill.red { background:linear-gradient(90deg,#f85149,#da3633); }
+.gauge-fill.yellow { background:linear-gradient(90deg,#d29922,#bb8009); }
+.gauge-fill.green { background:linear-gradient(90deg,#238636,#3fb950); }
+.gauge-label { display:flex; justify-content:space-between; margin-top:6px; font-size:0.8em; color:#8b949e; }
+table { width:100%; border-collapse:collapse; margin:12px 0; font-size:0.9em; }
+th { background:#21262d; color:#f0f6fc; padding:10px 12px; text-align:left; border-bottom:2px solid #30363d; }
+td { padding:10px 12px; border-bottom:1px solid #21262d; vertical-align:top; }
+tr:hover td { background:#1c2128; }
+.tag { display:inline-block; padding:2px 8px; border-radius:12px; font-size:0.75em; font-weight:600; }
+.tag-red { background:#490202; color:#f85149; }
+.tag-yellow { background:#341a00; color:#d29922; }
+.tag-green { background:#04260f; color:#3fb950; }
+.tag-blue { background:#0d1b3e; color:#58a6ff; }
+.tag-gray { background:#21262d; color:#8b949e; }
+.alert { border-left:3px solid; padding:12px 16px; margin:12px 0; border-radius:0 8px 8px 0; background:#0d1117; }
+.alert-red { border-color:#f85149; background:#49020220; }
+.alert-yellow { border-color:#d29922; background:#341a0020; }
+.footer { margin-top:32px; padding-top:16px; border-top:1px solid #21262d; color:#484f58; font-size:0.8em; text-align:center; }
+.signal { background:#0d1b3e; border:1px solid #1f6feb40; border-radius:8px; padding:12px 16px; margin:8px 0; }
+.person-row { display:flex; align-items:center; gap:12px; padding:8px 0; border-bottom:1px solid #21262d; }
+.person-name { font-weight:600; min-width:50px; color:#f0f6fc; }
+.person-desc { font-size:0.9em; }
+@media (max-width:600px) {
+  body { padding:12px; }
+  .metric-row { flex-direction:column; }
+  .metric { min-width:auto; }
+}
+</style>
+</head>
+<body>
+
+<h1>🧠 团队周报洞察 · 7/13 ~ 7/19</h1>
+<p style="color:#8b949e;margin-bottom:24px;">ISO Week 29 · AI产品创新部周报 · 6人团队全提交 ✅</p>
+
+<!-- 聚焦度仪表盘 -->
+<h2>① 聚焦度体检</h2>
+<div class="card">
+  <div class="metric-row">
+    <div class="metric">
+      <div class="label">主战场工时占比</div>
+      <div class="value yellow">39.5%</div>
+      <div class="label" style="color:#d29922">🟡 黄灯（<40%红灯）</div>
+    </div>
+    <div class="metric">
+      <div class="label">海外方向占比</div>
+      <div class="value red">32.4%</div>
+      <div class="label" style="color:#f85149">🔴 超20%阈值</div>
+    </div>
+    <div class="metric">
+      <div class="label">活跃战线</div>
+      <div class="value" style="color:#f0f6fc">11条</div>
+      <div class="label">⚠ 超阈值(9)</div>
+    </div>
+  </div>
+  <div class="gauge-container">
+    <div class="gauge-label"><span>主战场工时占比</span><span>39.5% / 60%目标</span></div>
+    <div class="gauge-bar"><div class="gauge-fill yellow" style="width:39.5%"></div></div>
+  </div>
+  <div class="gauge-container">
+    <div class="gauge-label"><span>海外低优先级占比</span><span>32.4% / 20%上限</span></div>
+    <div class="gauge-bar"><div class="gauge-fill red" style="width:32.4%"></div></div>
+  </div>
+  <p style="margin-top:12px;color:#8b949e;font-size:0.9em;">
+    <strong>判断：</strong>主战场工时勉强踩在黄灯线。剔除全员培训（3.5d集中投入）后，真实业务投入中海外方向占比过高。④S&OP供需计划联动完全空档。战线11条，碎片化明显。海外每人 >1.5d 投入是核心结构性问题。
+  </p>
+</div>
+
+<!-- 价值链看板 -->
+<h2>② 价值链看板</h2>
+<div class="card">
+  <table>
+    <tr><th>项目</th><th>主战场</th><th>环节</th><th>断点</th><th>建议</th></tr>
+    <tr>
+      <td>林氏放我家</td>
+      <td>③ 客服/导购</td>
+      <td><span class="tag tag-green">使用中→推广</span></td>
+      <td>—</td>
+      <td>远景规划已对齐，下周关键是里程碑拆解和套系数据规则输出。标杆门店试点从5家→更多？</td>
+    </tr>
+    <tr>
+      <td>AI视觉工具评估</td>
+      <td>② 商品视觉</td>
+      <td><span class="tag tag-yellow">构建中</span></td>
+      <td>—</td>
+      <td>Cris+YIYI并行推进，本周进入评估实操阶段。调研成果需尽快转化为工具选型决策。</td>
+    </tr>
+    <tr>
+      <td>小红书KOS/KOB</td>
+      <td>① 内容生产</td>
+      <td><span class="tag tag-yellow">构建中</span></td>
+      <td>—</td>
+      <td>本周仅浮云1d做项目盘点。下周计划2d深入拆解——仍是单人推进，需考虑是否需要更多力量。</td>
+    </tr>
+    <tr>
+      <td>林氏小龙虾·专家套件</td>
+      <td>跨场</td>
+      <td><span class="tag tag-blue">开发中</span></td>
+      <td>—</td>
+      <td>文鑫+水滴推进，本周已与heven确认启动开发。需锁定开发资源。</td>
+    </tr>
+    <tr>
+      <td>S&OP供需计划</td>
+      <td>④ S&OP</td>
+      <td><span class="tag tag-red">未启动</span></td>
+      <td>⚠ 空档</td>
+      <td>四个主战场之一完全空转。需明确是否有意搁置或等待条件成熟。</td>
+    </tr>
+    <tr>
+      <td style="color:#f85149">海外IECM/BPS</td>
+      <td style="color:#f85149">⚠ 低优先级</td>
+      <td>持续治理</td>
+      <td>⚠ 资源消耗</td>
+      <td style="color:#f85149">米酒+YIYI合计3.3d。规则治理类工作惯性大，建议设定MVR（最小可行范围）截止线。</td>
+    </tr>
+  </table>
+</div>
+
+<!-- 行动事项 -->
+<h2>③ 需要行动的事（Top 3）</h2>
+<div class="card">
+  <div class="alert alert-red">
+    <strong>1. 海外资源止血</strong> — 米酒90%+工时在海外(IECM+BPS)，YIYI也有1.3d在BPS，合计占团队非培训工时的32%。超出20%阈值<br>
+    → 假设[置信度：高]：海外方向存在"惯性治理"——问题来了就修，但缺乏明确的收口节点<br>
+    → 动作：与米酒1:1，设定IECM/BPS的MVR截止线和交接条件；与YIYI确认BPS投入可否收窄到「仅已承诺交付」
+  </div>
+  <div class="alert alert-yellow">
+    <strong>2. S&OP供需计划——四个主战场之一完全空档</strong> — 本周无人投入，W28也无人投入<br>
+    → 假设[置信度：中]：可能在等待条件（系统就绪/业务对齐），但空转超过2周即应主动判断是"等条件"还是"战略搁置"<br>
+    → 动作：周会确认——S&OP方向本周是否需要启动？如果暂不启动，是否从主战场列表中移除？
+  </div>
+  <div class="alert alert-yellow">
+    <strong>3. 培训周对聚焦度的冲击</strong> — 全团队培训投入3.5d+，加上白皮书1.5d，约占总工时25%<br>
+    → 不否定培训价值（黑客精神是团队价值观），但AI赋能培训本周密集（Trae+线上营销+分享交流三场）<br>
+    → 动作：下周恢复常态后观察聚焦度是否回升到50%+，否则需结构性调整
+  </div>
+</div>
+
+<!-- 卡点看板 -->
+<h2>④ 卡点看板</h2>
+<div class="card">
+  <table>
+    <tr><th>事项</th><th>涉及方</th><th>状态</th><th>建议解法</th></tr>
+    <tr>
+      <td>白皮书数据依赖heven</td>
+      <td>文鑫 ↔ heven</td>
+      <td>本周已标记风险</td>
+      <td>提前确认数据口径与交付节点</td>
+    </tr>
+    <tr>
+      <td>专家套件开发资源未锁定</td>
+      <td>文鑫 ↔ 水滴/heven</td>
+      <td>本周已标记风险</td>
+      <td>确认开发排期与资源投入</td>
+    </tr>
+    <tr>
+      <td>小红书业务方协同</td>
+      <td>浮云 ↔ 业务团队</td>
+      <td>已识别需自上而下拉通</td>
+      <td>先达成建设共识</td>
+    </tr>
+  </table>
+  <p style="margin-top:12px;color:#8b949e;font-size:0.9em;">本周未发现连续2周+的僵尸卡点。协调栏填写率约50%（3/6人有具体内容），属正常水平。</p>
+</div>
+
+<!-- 信号速览 -->
+<h2>⑤ 信号速览</h2>
+<div class="card">
+  <h3>· 行业信号</h3>
+  <div class="signal">
+    <strong>GPT-5.6-Sol "代理雇人"模式</strong> — 模型自主开Subagent推高Token消耗，输出Token单价是输入的6倍。对应团队的Claude Tag调研（文鑫本周1d）和小林AI产研思考——当模型越来越"主动"，产品侧的用量预估和成本模型需要更新。建议文鑫将Claude Tag调研与GPT-5.6的"用量变化"洞察结合，输出一份面向团队的成本认知更新。
+  </div>
+  <div class="signal">
+    <strong>火山引擎Trae产品经理培训</strong> — 本周浮云/米酒/YIYI/水滴均参加。字节系AI工具在快速渗透PM工作流，对应团队的AI赋能培训正在做的事——但需要警惕"培训多了、落地少了"。建议下一次培训后1周内收集3个实际应用案例。
+  </div>
+
+  <h3>· 个体信号</h3>
+  <div class="person-row">
+    <span class="person-name">米酒</span>
+    <span class="person-desc"><span class="tag tag-red">⚠ 主战场脱钩</span> 90%+工时在海外方向，与四个主战场无直接关联。建议1:1了解是否有转回主战场的计划，或需重新定义角色边界。</span>
+  </div>
+  <div class="person-row">
+    <span class="person-name">YIYI</span>
+    <span class="person-desc"><span class="tag tag-yellow">⚠ 双线拉扯</span> 视觉(1.4d)+BPS(1.3d)，两边都是"进行中"但都未闭环。从W28到W29 BPS投入未见缩减。建议明确BPS的退出时间点。</span>
+  </div>
+  <div class="person-row">
+    <span class="person-name">文鑫</span>
+    <span class="person-desc"><span class="tag tag-green">✓ 学习亮点</span> Claude Tag调研(1d)+缓存命中技术，前沿探索投入扎实。产研协作切入(评测角度)方向有前瞻性但尚在初期。</span>
+  </div>
+
+  <h3>· 趋势（vs W28 双周报）</h3>
+  <p style="font-size:0.9em;">
+    <strong>聚焦度 ↓</strong> W28 主战场集中（浮云全投林氏放我家7d+），W29 AI培训周冲散结构<br>
+    <strong>价值链进度 →</strong> 林氏放我家从"交付验证"进入"远景规划+推广"，是正向推进；AI视觉从0到1启动<br>
+    <strong>海外投入 →</strong> 米酒W28约4d→W29约2d，体量缩减但仍是唯一主线；YIYI的BPS投入持平<br>
+    <strong>学习投入 ↑</strong> 本周培训密集，是正面信号但需关注"学以致用"转化
+  </p>
+</div>
+
+<!-- 团队贡献摘要 -->
+<h2>⑥ 个人贡献摘要</h2>
+<div class="card">
+  <table>
+    <tr><th>成员</th><th>核心事项</th><th>工时(d)</th><th>主战场覆盖</th></tr>
+    <tr><td>浮云</td><td>林氏放我家远景规划、小红书KOS/KOB盘点、AI培训</td><td>~4.5</td><td>③+①</td></tr>
+    <tr><td>Cris</td><td>AI视觉战略+工具评估、全景图交付、德尔玛沉淀</td><td>~3.7</td><td>②</td></tr>
+    <tr><td>米酒</td><td>IECM海外仓物流、BPS财务闭环、VC标发治理</td><td>~3.4</td><td>⚠ 海外</td></tr>
+    <tr><td>文鑫</td><td>白皮书、专家套件、Claude Tag调研、产研协作</td><td>~3.8</td><td>跨场</td></tr>
+    <tr><td>YIYI</td><td>AI视觉内容生产、BPS迭代、AI培训</td><td>~3.5</td><td>②+⚠海外</td></tr>
+    <tr><td>水滴/三叶</td><td>AI视频融合、电商AI SOP、培训、架构方案</td><td>~0.7*</td><td>②+跨场</td></tr>
+  </table>
+  <p style="color:#8b949e;font-size:0.8em;margin-top:8px;">* 水滴工时可能因报告截断偏低。注：dw系统显示为"水滴"，skill中引用名为"三叶"。</p>
+</div>
+
+<p style="margin-top:20px;color:#8b949e;font-size:0.85em;">
+  ⚠ 行业信号数据不完整 — AI日报/信源简报本周推送至origin未归档，行业信号基于session历史关键词提取，覆盖度有限。
+</p>
+
+<div class="footer">
+  Generated by Hermes Agent · 2026-07-20 · ISO Week 30<br>
+  Boniter29 Team Weekly Insights
+</div>
+
+</body>
+</html>
