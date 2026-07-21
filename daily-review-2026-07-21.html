@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>每日复盘 2026-07-21</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.8;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 20px 16px 60px;
+  }
+  .header {
+    text-align: center;
+    padding: 32px 0 20px;
+    border-bottom: 1px solid #21262d;
+    margin-bottom: 24px;
+  }
+  .header .date {
+    font-size: 14px;
+    color: #8b949e;
+    margin-bottom: 4px;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #f0f6fc;
+  }
+  .header .subtitle {
+    font-size: 13px;
+    color: #8b949e;
+    margin-top: 6px;
+  }
+  .tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 28px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #30363d;
+  }
+  .tab-btn {
+    flex: 1;
+    padding: 12px 16px;
+    background: #161b22;
+    border: none;
+    color: #8b949e;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  .tab-btn:first-child { border-right: 1px solid #30363d; }
+  .tab-btn.active-biz {
+    background: linear-gradient(135deg, #1a3a5c, #1a2a44);
+    color: #58a6ff;
+  }
+  .tab-btn.active-diary {
+    background: linear-gradient(135deg, #3d1a3a, #2d1a2d);
+    color: #f778ba;
+  }
+  .tab-btn:hover { color: #e6edf3; }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+  #biz-content .tone {
+    font-size: 17px;
+    font-weight: 700;
+    color: #58a6ff;
+    padding: 16px 20px;
+    background: rgba(88, 166, 255, 0.08);
+    border-left: 3px solid #58a6ff;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 28px;
+    line-height: 1.7;
+  }
+  #biz-content p {
+    font-size: 15px;
+    margin-bottom: 18px;
+    color: #c9d1d9;
+  }
+  #biz-content .highlight {
+    color: #f0f6fc;
+    font-weight: 500;
+  }
+  #diary-content .opening {
+    font-size: 16px;
+    color: #f0f6fc;
+    margin-bottom: 24px;
+    line-height: 1.9;
+  }
+  #diary-content p {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #c9d1d9;
+    line-height: 1.9;
+  }
+  #diary-content .insight-line {
+    font-size: 16px;
+    font-weight: 600;
+    color: #f778ba;
+    padding: 14px 18px;
+    background: rgba(247, 120, 186, 0.06);
+    border-left: 3px solid #f778ba;
+    border-radius: 0 8px 8px 0;
+    margin: 28px 0;
+  }
+  .section-break {
+    text-align: center;
+    color: #30363d;
+    font-size: 20px;
+    margin: 24px 0 20px;
+    letter-spacing: 8px;
+  }
+  .footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #21262d;
+    text-align: center;
+    font-size: 12px;
+    color: #484f58;
+  }
+  .stats-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  .stat-card {
+    flex: 1;
+    min-width: 80px;
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 10px;
+    padding: 12px 14px;
+    text-align: center;
+  }
+  .stat-card .num {
+    font-size: 20px;
+    font-weight: 700;
+    color: #58a6ff;
+  }
+  .stat-card .label {
+    font-size: 11px;
+    color: #8b949e;
+    margin-top: 2px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="date">2026年7月21日 · 星期二</div>
+  <h1>每日复盘</h1>
+  <div class="subtitle">7场会议 · 60条消息 · 373分钟</div>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn active-biz" id="btn-biz" onclick="switchTab('biz')">📊 商业版</button>
+  <button class="tab-btn" id="btn-diary" onclick="switchTab('diary')">📝 日记版</button>
+</div>
+
+<!-- Business Tab -->
+<div class="tab-content active" id="biz-content">
+
+<div class="tone">
+  当组织边界模糊时，再好的AI产品也只是58分——今天的七场会议反复验证了一个命题：AI落地的瓶颈不在工具能力，而在组织定位的模糊地带。
+</div>
+
+<div class="stats-row">
+  <div class="stat-card"><div class="num">7</div><div class="label">场会议</div></div>
+  <div class="stat-card"><div class="num">373</div><div class="label">分钟</div></div>
+  <div class="stat-card"><div class="num">5</div><div class="label">个Skill上线</div></div>
+  <div class="stat-card"><div class="num">15万</div><div class="label">代金券闲置</div></div>
+</div>
+
+<p>南海区政府AI座谈会上，书记说「政府服务好企业家无非就是牵线搭桥」，企业代表胡杰把AI定位成「参谋和军师」。这恰好反衬出内部组织对AI定位的暧昧——<span class="highlight">外部在谈生态，内部还在争地盘</span>。</p>
+
+<p>十五万代金券免费送都没人用，不是技术问题，是「诸侯割据」的组织惯性。业务团队自建分析能力，不信任中心团队——「我凭什么要你帮忙？」这句会议录音里的反问，比任何战略PPT都更准确地揭示了阻力根源：<span class="highlight">不是能力不够，是信任没建立</span>。</p>
+
+<p>与Cris关于牛奶妹的对话进一步印证了这一点。费用归属不清——牛奶妹要单独申请预算怕被质疑重复，挂在小林生影下面又不符合实际场景。更深层的问题是：<span class="highlight">AI预算该挂在哪个部门？AI团队该服务谁？</span>当陈超部门直接承接IT需求却不部署，当两笔AI费用只能用同一笔钱——这不是资源问题，是组织设计没跟上技术演进。</p>
+
+<p>八十六分钟的那场深度会议里有个耐人寻味的细节：凌晨两点写完PPT的人，在最后一页写下「这是一个58分的产品」。58分不是因为功能差，是因为价值闭环没跑通——平台能力已基本建成，但运营推广和规模化应用还远远不够。而今天5个场景的Skill已上线——<span class="highlight">技术侧不缺执行力，缺的是「谁为结果负责」</span>。</p>
+
+<p>智慧营销一体化的讨论也在同一条线上：从临时抱佛脚的工具升级到贯穿客户全旅程的中台，但技术架构升级如果没有组织授权和预算机制配套，就只是换了个更大的工具。</p>
+
+<p>陈超还在「做工具的思路」——这个判断的精准之处在于，它不是否定工具本身，而是指出：如果AI团队停留在「我把功能做完交付给你」，就永远跨不过从工具到生态的鸿沟。</p>
+
+<p>最后那句「做对的事情，做深，不要做多」——是对今天所有讨论最清醒的收束。不是不帮其他部门，是帮之前先问：<span class="highlight">谁对结果负责？</span></p>
+
+</div>
+
+<!-- Diary Tab -->
+<div class="tab-content" id="diary-content">
+
+<div class="opening">
+  早上八点多，对着手机打了句「不想听课了，明天补课好了」。不是真的想逃课，是真的累了。连续几天的会议密度让人喘不过气，今天七场会排下来，从早九点到晚六点，中间只有喝水的间隙。
+</div>
+
+<div class="section-break">· · ·</div>
+
+<p>但累归累，脑子没停。</p>
+
+<p>上午南海区的AI座谈会开了两个半小时，坐在会议室里听书记说「AI不是跟人家拼模型」，听企业代表讲「先尝后买」的路径。这种场合的好处是能跳出来看——跳出日常的交付压力、预算扯皮、部门边界，看到AI这个东西在整个产业里的真实水位。不高，但有人在认真做。</p>
+
+<p>下午回到公司，气氛就变了。和Cris聊牛奶妹的事，两个核心问题摆出来：钱怎么算？人怎么配？牛奶妹找了好几次，Cris都不敢答复，因为这不是一个技术决策——费用归属、合作边界、谁对结果负责，每一条都踩在组织最敏感的位置上。</p>
+
+<p>跟健新说「陈超还是在做工具的思路」，说完自己都觉得这句话有点重。但确实如此。IT深入业务动到了某些人的奶酪——这事不能硬碰，但也绕不开。</p>
+
+<div class="section-break">· · ·</div>
+
+<p>中间穿插了视频工具的demo评审，看了供应商做的网页版剪辑工具。坦白说没什么惊喜，跟牛奶妹的需求还有距离。问了一句「那这个对于打视频标杆有什么帮助吗」，其实心里已经有答案了。</p>
+
+<p>累是真累。晚上还要上课，但先得把手头的事理清楚。和德彬出方案的时候，脑子里还挂着明天的陈超对谈——有点压力，但不慌。</p>
+
+<div class="insight-line">
+  「做对的事情，做深，不要做多。」<br>这句话是今天跟自己的对话里，最清醒的一句。不是因为思路清晰了才说出这句话，而是说出这句话之后，思路才开始清晰。
+</div>
+
+</div>
+
+<div class="footer">
+  每日复盘 · 2026-07-21 · Hermes Agent 自动生成<br>
+  数据来源：AI听记（7场）+ 聊天记录（60条）
+</div>
+
+<script>
+function switchTab(tab) {
+  document.getElementById('biz-content').classList.remove('active');
+  document.getElementById('diary-content').classList.remove('active');
+  document.getElementById('btn-biz').classList.remove('active-biz');
+  document.getElementById('btn-diary').classList.remove('active-diary');
+
+  if (tab === 'biz') {
+    document.getElementById('biz-content').classList.add('active');
+    document.getElementById('btn-biz').classList.add('active-biz');
+  } else {
+    document.getElementById('diary-content').classList.add('active');
+    document.getElementById('btn-diary').classList.add('active-diary');
+  }
+}
+</script>
+
+</body>
+</html>
