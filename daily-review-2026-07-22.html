@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-07-22</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #0d1117; color: #c9d1d9; line-height: 1.8; min-height: 100vh;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 20px 80px; }
+  header { padding: 40px 0 24px; text-align: center; border-bottom: 1px solid #21262d; margin-bottom: 24px; }
+  header h1 { font-size: 1.6em; font-weight: 700; color: #f0f6fc; }
+  header .date { font-size: 0.9em; color: #8b949e; margin-top: 6px; }
+  header .stats { display: flex; gap: 16px; justify-content: center; margin-top: 14px; flex-wrap: wrap; }
+  header .stat { background: #161b22; border-radius: 8px; padding: 6px 14px; font-size: 0.8em; color: #8b949e; }
+  header .stat strong { color: #58a6ff; font-size: 1.1em; }
+
+  .tabs { display: flex; gap: 0; margin-bottom: 28px; border-radius: 10px; overflow: hidden; }
+  .tab { flex: 1; text-align: center; padding: 12px 0; cursor: pointer; font-size: 0.95em; font-weight: 600;
+    border: none; background: #161b22; color: #8b949e; transition: all 0.2s; }
+  .tab.active { background: #1a2332; color: #58a6ff; box-shadow: inset 0 -2px 0 #58a6ff; }
+  .tab:hover:not(.active) { color: #c9d1d9; background: #1c2333; }
+
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  .content h2 { font-size: 1.15em; color: #58a6ff; margin: 28px 0 12px; }
+  .content p { margin-bottom: 16px; font-size: 0.95em; }
+  .content .lead { font-size: 1.05em; font-weight: 600; color: #f0f6fc; margin-bottom: 24px; padding: 16px 20px;
+    background: linear-gradient(135deg, #1a2332 0%, #161b22 100%); border-left: 3px solid #58a6ff; border-radius: 0 8px 8px 0; }
+
+  .diary .content .lead { border-left-color: #f778ba; background: linear-gradient(135deg, #261a28 0%, #161b22 100%); }
+  .diary .content h2 { color: #f778ba; }
+
+  .divider { border: none; border-top: 1px solid #21262d; margin: 32px 0; }
+
+  footer { text-align: center; padding: 32px 0; color: #484f58; font-size: 0.8em; border-top: 1px solid #21262d; margin-top: 40px; }
+
+  @media (max-width: 480px) {
+    .container { padding: 16px 16px 60px; }
+    header h1 { font-size: 1.35em; }
+    header { padding: 28px 0 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>2026-07-22 周三</h1>
+    <div class="date">每日复盘 · 第30周</div>
+    <div class="stats">
+      <span class="stat">会议 <strong>9</strong> 场</span>
+      <span class="stat">消息 <strong>83</strong> 条</span>
+      <span class="stat">总时长 <strong>337</strong> 分钟</span>
+    </div>
+  </header>
+
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('business')">商业版</button>
+    <button class="tab" onclick="switchTab('diary')">日记版</button>
+  </div>
+
+  <div id="business" class="panel active">
+    <div class="content">
+      <div class="lead">定调：当AI工具从实验走向运营，瓶颈从「能不能建」转移到了「谁来决定建什么」</div>
+
+      <p>今天早上的第一场会（IT与业务协作三阶段模型）只用了一个小时，就把过去几周项目推进中最深层的摩擦刨出来了。有同事在会上直接提了一个已经在内部跑了好几天的工具——IT团队已经投入精力去理解业务流程的每个环节，但业务方自己还没想清楚需求。他提出的三阶段模型本质上是重新定义IT的工作边界：第一阶段由业务主导，先想清楚「这件事有没有价值、需不需要AI」；第二阶段业务搭一个30-40%的demo后，IT再介入做完善；第三阶段才是IT主导的深度开发。</p>
+
+      <p>这个模型的真正杀伤力不在于流程本身，而在于它打破了「IT应该深入业务」这个看似正确但实际危险的假设。IT深入业务没问题——问题是深入到什么程度。如果一个业务方自己都不确定需求价值，让IT去趟这趟浑水，结果就是两边的精力都耗散在今天这个工具、明天那个优化上，没人对最终交付负责。</p>
+
+      <p>下午的视频产品规划会，是早上这场边界对话的直接延续。把Chris、米酒、一一三个人聚到一起，给了他们清晰的领域分工：Chris管前端和需求分析（离业务最近）、米酒管剪辑和视觉工作流（对工具理解最深）、一一管素材和技术（对技术最熟）。然后抛出一个判断——这个产品定位是全链路的，从需求输入到脚本生成、图生图、生视频、剪辑、素材入库，每一个环节的界面都要匹配该环节最自然的使用形态。这不是一个工具包装问题，是一个产品设计问题。</p>
+
+      <p>这个判断的分量在于：它不是在说「我们做一个视频生成工具」，而是在说「我们把整个视频生产的每个环节重新串成一个有界面的产品」。如果做成，AI就不只是替代美工的工具——它变成了一个贯穿业务链路的操作系统。这解释了为什么定位为「今年最具价值的核心标杆产品」，有望直接带来公司级收益。</p>
+
+      <p>但要看到这个野心背后的代价。Cloud Agent SDK做底座意味着产品需求会随着SDK迭代而频繁变动，三人协作又意味着沟通开销倍增。全天9场会议本身就是一个信号：当组织里的AI推进线从1条变成5条以上，管理复杂度就不再是加法，是指数。</p>
+
+      <p>今天的另一层信号来自API密钥争议——有业务团队想用公司资源跑OpenClaw但不愿承担费用，被直接拒绝。这不是费用审批问题，是责任归属问题。当AI工具的使用权和管理权分离时，滥用是必然的。决策上没有犹豫：「先不放开吧，放开之后不仅是AI token成本的提升，运营和维护成本也比较高。」这句话里的冷静，和早上IT边界模型里的逻辑是同源的：管控成本比使用成本更难算。</p>
+
+      <p>全天还有两条暗线值得关注。一是品牌建设——清华联合阿里云的AI应用调研访谈在即，「小林AI智能平台」完成对外品牌定名，内部代号「小黑」「小龙虾」保留。二是素材管理的基础设施化——DAM系统关停后的替代方案进入调研阶段，需求明确了对财务对账的可追溯性。这些看似独立的推进线，汇聚到一个共同的判断上：小林AI正在从「有工具」阶段进入「有体系」阶段。</p>
+
+      <p>如果说这一周前面两天是「铺开」，今天就是「收紧」——收紧流程、收紧边界、收紧权限。不是退，是让铺开之后的东西能站住。</p>
+    </div>
+  </div>
+
+  <div id="diary" class="panel diary">
+    <div class="content">
+      <div class="lead">如果每天都能像今天一样——不是事情少，而是事情都有边界——我可能就不会觉得被工作推着走。</div>
+
+      <p>今天第一场会是早上八点五十九分。</p>
+
+      <p>打开AI听记摘要——IT与业务协作三阶段模型，一小时。有同事直接开麦讲的，说最近协作有些误区，IT的同学很吃力，因为被要求去了解业务流程的每一个环节。他说了一句让我在屏幕这头点了下头的话：不是IT把所有精力花在扎进底层业务，而是业务先想清楚「这一步到底需不需要AI」。</p>
+
+      <p>这话太对了。过去几周最消耗精力的项目，没有一个是因为技术做不出来，全是因为「到底要做成什么样」没人拍板。IT被拉进业务的模糊地带，然后两边一起在模糊里转。</p>
+
+      <p>上午十点，AI视频生成工作流整合会开了一个多小时，6个人。从AI主图到批量生成到AI种草到实拍剪辑，四个板块并列。我听到一个细节：AI主播使用量在上升，但性能瓶颈卡在本地电脑上。这让我想起上周M3培训时的讨论——工具先用起来，再考虑系统化。但今天这个局面已经过了「先用起来」的阶段，到了「怎么串起来」的关口。</p>
+
+      <p>中午跟同事聊微信，电商那边也想接入AI工具。我回了三条：第一，他们做的东西到底有多少人用，要搞清楚；第二，费用有多少——视觉板块费用高但人家愿意承担，OpenClaw我判断也就几百块；第三，直接操作电脑有风险。发完又补了一句：先不放开吧，运营和维护成本比token成本更高。</p>
+
+      <p>下午就做了决定。</p>
+
+      <p>三点之后，把Chris、米酒、一一叫到一起，开了个15分钟的短会。我说得很直：你们仨要协同分工。Chris管前端和需求——他离业务最近。米酒管剪辑和视觉工作流——他对工具理解最深。一一管素材和技术。然后我把定位说了——这不是一个视频生成工具，是全链路的。从需求进来到脚本、到生图、到剪辑、到素材入库，每个环节配最合适的界面。Cloud Agent SDK做底座，分支加worktree协作。</p>
+
+      <p>我说这是今年最值得投入的产品。不是因为它技术多新颖，是如果做成，改变的不是一个环节的效率，是整条链路的生产方式。</p>
+
+      <p>这句话说出来的时候，我知道它的分量。意味着接下来两周要密集规划。但今天我不焦虑。全天的节奏虽然紧凑——9个会、83条消息——但每件事都有明确的边界。上午定了IT和业务的边界，中午拒了API密钥费用转移，下午定了视频团队的分工，傍晚聊了素材管理系统的重构。没有一件事是漂着的。</p>
+
+      <p>有一瞬间的念头：如果每天都能像今天一样——不是事情少，而是事情都有边界——我可能就不会觉得被工作推着走，而是我在推着工作走。</p>
+
+      <p>但也知道这太理想了。明天有公关采访，清华和阿里云联合的调研，成果要在亚太峰会发布。建新想参加闭门会，我在私聊里跟同事发了一句「我有点不想拉他哈哈哈哈」——是真心。</p>
+
+      <p>傍晚翻了眼群里的AI&海外年中白皮书，KPI分解做了一半，周四下班前交，周五合稿跟新哥过初稿。晚上回家前看了一眼今天的路线：9个会切完，收工。</p>
+
+      <p>打开空调的时候发现是29度，冷得我一激灵。</p>
+
+      <p>今天是周三。这周过去一半了。</p>
+    </div>
+  </div>
+
+  <footer>
+    每日复盘 · 2026-07-22 · 由 Hermes Agent 自动生成 · 存于 Notion Writing Projects
+  </footer>
+</div>
+
+<script>
+function switchTab(tab) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  event.target.classList.add('active');
+  document.getElementById(tab).classList.add('active');
+}
+</script>
+</body>
+</html>
