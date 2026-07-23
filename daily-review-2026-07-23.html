@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-07-23</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Noto Sans SC', sans-serif; background: #0f1117; color: #e1e4e8; line-height: 1.75; padding: 20px; }
+.container { max-width: 720px; margin: 0 auto; }
+.header { text-align: center; padding: 40px 0 24px; }
+.header h1 { font-size: 1.6rem; font-weight: 700; color: #f0f3f8; }
+.header .date { font-size: 0.9rem; color: #8b949e; margin-top: 6px; }
+.tabs { display: flex; gap: 0; margin-bottom: 32px; border-radius: 12px; overflow: hidden; background: #1a1d27; }
+.tab-btn { flex: 1; padding: 12px 20px; text-align: center; font-size: 0.95rem; font-weight: 600; cursor: pointer; border: none; background: transparent; color: #8b949e; transition: all 0.2s; }
+.tab-btn.active { background: #1f6feb; color: #fff; }
+.tab-btn.diary.active { background: #d63384; }
+.tab-content { display: none; animation: fadeIn 0.3s ease; }
+.tab-content.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.review-body { background: #1a1d27; border-radius: 14px; padding: 32px; }
+.thesis { font-size: 1.15rem; font-weight: 700; color: #58a6ff; margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid #30363d; line-height: 1.6; }
+.thesis.diary { color: #f778a1; }
+.section { margin-bottom: 28px; }
+.section:last-child { margin-bottom: 0; }
+.section h2 { font-size: 1.05rem; font-weight: 700; color: #f0f3f8; margin-bottom: 10px; }
+.section p { font-size: 0.95rem; color: #c9d1d9; margin-bottom: 12px; }
+.section p:last-child { margin-bottom: 0; }
+.highlight { color: #f0883e; font-weight: 600; }
+.tag-line { display: inline-block; background: #21262d; color: #8b949e; font-size: 0.8rem; padding: 3px 10px; border-radius: 6px; margin-right: 6px; margin-bottom: 4px; }
+.em { font-style: italic; }
+.footer { text-align: center; padding: 32px 0 20px; color: #484f58; font-size: 0.8rem; }
+.footer a { color: #58a6ff; text-decoration: none; }
+@media (max-width: 600px) {
+  .container { padding: 0; }
+  .review-body { padding: 20px; }
+  .header h1 { font-size: 1.35rem; }
+  .thesis { font-size: 1.05rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<h1>每日复盘</h1>
+<div class="date">2026年7月23日 · 星期四</div>
+</div>
+
+<div class="tabs">
+<button class="tab-btn active" onclick="switchTab('business')">📊 商业复盘版</button>
+<button class="tab-btn diary" onclick="switchTab('diary')">📝 日记版</button>
+</div>
+
+<div id="business" class="tab-content active">
+<div class="review-body">
+<div class="thesis">AI能力的系统化拆解，本质是一场组织节奏的测试——产品能不能在迭代速度超过评估周期的环境里设目标，人才能不能在「做demo」和「做产品」之间找到路径，外部叙事能不能把20多个场景讲成一个故事。</div>
+
+<div class="section">
+<h2>一、视觉全链路拆解：从单点提效到端到端重构的临界点</h2>
+<p>今天最重的一场会——183分钟、8个人，把AI视觉从策划到内容生产的整条链路摊开来拆。闭门拆解被描述为「比较顺利」，但「比较顺利」后面藏着更深的东西。陈超带来的不是工具清单，是包含<span class="highlight">流程变革和组织架构调整</span>的全局规划。而且品类视觉部已经同步过了，IT这边不知道——这本身就是一个信号。当AI落地从单点场景进入端到端重构，技术部门和业务部门之间的信息差开始成为瓶颈。谁看到全局规划，谁就参与定义下一阶段的游戏规则。</p>
+<p>更深一层看，这次拆解的价值不在于「拆出了多少可落地的点」，而在于它暴露了一个结构性问题：之前的AI落地是点状的——小林生影做图、评论助手打标、智数查数据——各自跑各自的场景。当点状提效的天花板触达后，必须有人把整条链路串起来。今天这个「有人」是陈超，但明天需要的是组织级的全链路视角，而不是依赖某个人的全局规划能力。</p>
+</div>
+
+<div class="section">
+<h2>二、浮云转正：当评估周期遇到AI产品迭代速度</h2>
+<p>两场转正会议、40分钟，核心矛盾一句话：「我觉得基本跟他现在做的是有很大出入的。」试用期计划里写的是A方向，实际做的是B模块。不是浮云没干活——本地demo跑起来了，竞品分析做了，培训也讲了——而是计划的版本跟不上产品的版本。当AI产品方向在6个月内迭代数次，固定窗口的评估计划天然会过期。</p>
+<p>同一天发生的另一件事恰好回应了这个问题。新哥对vibe coding的表态：「产品优先还是把产品打磨好，vibe coding更多用于做demo和功能验证。」文鑫的代码权限从提交降为浏览。这两个动作放在一起看，揭示了一个底层逻辑：AI工具降低了「做出来」的门槛之后，组织需要重新定义什么算<span class="highlight">「做成」</span>。demo是做成吗？功能验证是做成吗？如果一个试用期员工的产出看起来像demo但产品方向已经变了，该怎么评估？</p>
+<p>这不是浮云一个人的问题。这是AI团队通用的规划方法论问题：在方向变化速度超过评估周期的环境里，目标的颗粒度应该放在「产出」上还是「能力」上？</p>
+</div>
+
+<div class="section">
+<h2>三、清华采访：外部叙事中的定位焦虑</h2>
+<p>117分钟的清华采访，从研产销服人财讲到国际业务。访谈准备阶段的讨论暴露出一个有意思的张力——群里的问题是：先讲林氏自研平台还是先讲阿里合作？电商讲生意管家还是IT讲内部？有人说「总体来说，当然是建议先输出林氏，然后再介绍阿里的应用。」</p>
+<p>这种叙事排序的讨论，本质不是流程问题，是定位判断：我们到底是<span class="highlight">「在阿里生态里跑得快的企业」</span>，还是<span class="highlight">「自己有AI发动机的企业」</span>？20多个AI场景、全链路覆盖，这个体量放在行业里确实能打，但当需要向外部讲述自己的时候，叙事的主语还没完全站稳。</p>
+</div>
+
+<div class="section">
+<h2>四、三线合一：本周第四天进入深水区</h2>
+<p>三条线——产品节奏（视觉全链路拆解）、人才融合（转正评估 + vibe coding权限收窄）、外部叙事（清华采访定位）——在今天同时进入需要决策的阶段。不是其中哪一条线出了问题，而是它们同时到达了一个需要「合」而非「拆」的节点。</p>
+<p>今天的数据说：<span class="highlight">拆得开，但还没合得上</span>。视觉全链路拆解本身是成功的，但后续依赖陈超的全局规划来做下一步整合；转正评估的gap是清晰的，但解决方案不是换个计划模板能解决的；清华采访的内容是丰富的，但叙事结构还差一口气。</p>
+<p>这是周四的状态，也是本周进入深水区的信号。</p>
+</div>
+
+</div>
+</div>
+
+<div id="diary" class="tab-content">
+<div class="review-body">
+<div class="thesis diary">「我已经快无了。」这句话今天在聊天里出现了不止一次，用不同的说法，但意思一样。</div>
+
+<div class="section">
+<p>太累了。这周累到最近几天回家先睡一到两个小时，才能爬起来继续干活。</p>
+<p>早上是AI视觉的闭门拆解。说「比较顺利」，陈超也来了，领走了拆解任务，不用集中时间一起拆了。但「比较顺利」后面跟着的是明天还要开会——陈超做了全局规划，包含流程变革和组织架构调整，还没跟我们同步过。他说「怕我们对AI落地规划不知情比较迷茫」。听着体贴，但「不知情」三个字本身就说明了一些事情，你不确定这是照顾还是信息隔离。</p>
+</div>
+
+<div class="section">
+<p>下午是清华的采访。从两点开始，聊了近两个小时。采访前群里在讨论谁先讲、先讲什么——林氏自研还是阿里合作？惠筠说1-3题品牌公关讲就好了。这些讨论你一条条回，安排顺序，最后回复「总体来说，建议先输出林氏，然后再介绍阿里的应用。」采访本身应该还行，内容够多，20多个场景铺开来讲。但结束之后你在群里问AI岗位调整的口径问得怎么样了——采访给了你一个外部视角，但也提醒你太多东西还没对齐。</p>
+</div>
+
+<div class="section">
+<p>采访结束后是浮云的转正评估。你先和新哥单独聊了十几分钟——计划要调，评价要出，时间不一定能在本月内走完流程。然后三个人坐下来谈。浮云说这一个月超出预期，公司扁平化管理，比以前在乙方强太多，能专注做一件事而不是全天开会。你听到这句的时候，心里应该是认同的——但同时也知道，今天你自己的状态离「专注做一件事」差得太远。</p>
+<p>有一刻说到AI改款项目「暂未正式落地」，浮云想了想说「这个我已经有本地的demo，但是我还在调」。他说这句话的时候大概是期待一个方向的，但你给的方向是：优先级较低。这是管理者的诚实，也是某种程度上的残忍。</p>
+</div>
+
+<div class="section">
+<p>下班前和洁敏商量几点走。「能早走就早走，太累了」。她说「7的话等你」。后来你又说「拿回家改吧」，因为明天还要交中心的白皮书。你已经连续好几天回家先睡了，今晚大概率也一样。</p>
+<p>还有一件小事。文鑫的代码权限被你改成了浏览权限，「可以拉取和更新最新代码，但不能提交代码」。这是新哥对vibe coding的表态落地后的第一个组织动作。不大，但方向很明确。</p>
+</div>
+
+<div class="section">
+<p>今天最诚实的信号不是任何一个会议结论，是身体在说：该慢了。五个会、三百六十分钟、清华采访、转正评估、视觉拆解——每一件单拿出来都值得认真做，但它们挤进了同一天。而明天还有白皮书。</p>
+<p>你没说，但你知道：这种密度不是今天的事，是本州的惯性。</p>
+</div>
+
+</div>
+</div>
+
+<div class="footer">
+Generated by Hermes Agent · <a href="https://boniter29.github.io/AIknowledge/">AIknowledge</a>
+</div>
+</div>
+
+<script>
+function switchTab(tab) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  if (tab === 'business') {
+    document.querySelectorAll('.tab-btn')[0].classList.add('active');
+    document.getElementById('business').classList.add('active');
+  } else {
+    document.querySelectorAll('.tab-btn')[1].classList.add('active');
+    document.getElementById('diary').classList.add('active');
+  }
+}
+</script>
+</body>
+</html>
