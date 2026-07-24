@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日复盘 2026-07-24</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;line-height:1.8;font-size:16px;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 48px}
+header{text-align:center;padding:32px 0 20px}
+header h1{font-size:1.5em;color:#e6edf3;font-weight:700;margin-bottom:6px}
+header .date{font-size:.88em;color:#8b949e;letter-spacing:.5px}
+.tabs{display:flex;gap:0;margin:0 0 28px;border-bottom:2px solid #21262d}
+.tab{flex:1;text-align:center;padding:12px 8px;cursor:pointer;font-size:.95em;font-weight:600;color:#8b949e;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .2s;background:none;border-top:none;border-left:none;border-right:none;outline:none;font-family:inherit}
+.tab:hover{color:#c9d1d9}
+.tab.active.biz{color:#58a6ff;border-bottom-color:#58a6ff}
+.tab.active.diary{color:#f778ba;border-bottom-color:#f778ba}
+.panel{display:none;animation:fadeIn .3s}
+.panel.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.content{font-size:.98em}
+.content p{margin:0 0 1.2em}
+.content p:last-child{margin-bottom:0}
+.content .lead{font-weight:700;color:#e6edf3;font-size:1.05em;margin-bottom:1.4em;padding-bottom:.8em;border-bottom:1px solid #21262d}
+.content em{color:#8b949e;font-style:normal}
+.content strong{color:#e6edf3}
+.biz-panel .content .lead{color:#58a6ff;border-bottom-color:#1f3546}
+.diary-panel .content .lead{color:#f778ba;border-bottom-color:#2d1a2a}
+footer{text-align:center;padding:28px 0 0;font-size:.78em;color:#484f58;border-top:1px solid #21262d;margin-top:36px}
+footer a{color:#58a6ff;text-decoration:none}
+.meta-line{font-size:.82em;color:#6e7681;margin-bottom:20px;text-align:center}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>每日复盘</h1>
+<div class="date">2026年7月24日 · 周五</div>
+</header>
+<div class="tabs">
+<button class="tab active biz" onclick="switchTab('biz')">商业复盘</button>
+<button class="tab diary" onclick="switchTab('diary')">日记随笔</button>
+</div>
+<div class="meta-line">13场会议 · 184条消息 · 约207分钟</div>
+
+<div id="biz" class="panel active biz-panel">
+<div class="content">
+<p class="lead">当AI不再稀缺，组织设计成为真正的瓶颈。</p>
+<p>今天林氏家居完成了一次关键的组织能力定义——不是因为引入了新技术，而是因为终于承认了分散的内容生产部门各自定义规则，同一个SPU在不同渠道呈现不一致，这个问题的根源不在工具而在架构。</p>
+<p>六十八分钟的内容生产体系重构会议，水滴推动的不是一个技术方案，而是一个组织设计。从「策略-数据-生产-渠道-闭环」五位一体，到五个能力组——内容策略与标准、内容资产、视觉内容生产、视频内容生产、渠道适配——的具体职责边界，会议的核心动作是把过去散落在品牌、品类、渠道各部门的内容定义权收拢到一个统一的中台。因果链清晰：公司利润下降→追溯各业务部门生产成本过高→根因是组织架构分散导致同一SPU重复生产、标准不一→解法不是买更好的AI工具，而是重新定义谁来决定「什么样的内容算合格」。</p>
+<p>这个逻辑在当天的小红书demo链路讨论中得到了反向验证。团队在讨论demo应该呈现什么：是展示流程能串起来（多skill快速拼装，一天搞定），还是展示真正可用的端到端系统（需要深入调研）。水滴的判断很清醒：如果只是「表达我们能做」，三个方案都行；如果要「真正能直接使用」，就需要先调研。这个判断背后是对AI生产能力的现实评估——不是AI能不能生成内容，而是生成的内容能不能直接进入导购平台的业务闭环。业务方目标：AI每月4000条内容。这个数字只有在「能直接使用」的前提下才有意义。</p>
+<p>字节的200个trade账号和15万代金券在这个框架里被重新定位。不是「又薅了一笔羊毛」，而是需要在AI竞赛中产出的案例恰好可以成为内容中台能力的外部验证。即梦模型升级到5.0pro——PK反馈可媲美nanobanana2——seedance 2.0的批量视频流程验证可行。这些技术动作只有嵌入到五位一体的内容供应链中，才不会沦为被批评的「薅了东西又不用」。</p>
+<p>另一个隐藏的线程是Claude Agent SDK的goal模式调试。水滴解释了SDK的while-tool-call循环设计缺陷：当模型响应不再包含工具调用时循环就结束，但长上下文中的完成标准会被压缩丢失。这个技术洞察和内容会议上讨论的「标准化」本质上是同一个困境的不同尺度——系统没有硬编码的完成标准，依赖上下文传递意图，一旦上下文膨胀或压缩，意图就丢失了。解法也一样：不是让AI更智能，而是把完成标准外化、结构化。/goal模式就是一个最小化的外化实践。</p>
+<p>战略图也完成了关键修订：AI优先作为独立关键战役被纳入，与「宜简预防」并列。水滴在群里的总结很精炼——<strong>「业务做简法，系统做减法，AI做乘法」</strong>——这既是战略表述，也是对当下资源分配状态的精确描述。</p>
+</div>
+</div>
+
+<div id="diary" class="panel diary-panel">
+<div class="content">
+<p class="lead">AI并行二十分钟一遍过，交付质量95分。</p>
+<p>盯着屏幕看结果出来的时候，内心是那种「终于懂我了」的窃喜，虽然大概率只是模型随机到了好状态。管它呢，过了就是过了。这个心态贯穿了今天几乎所有的事。</p>
+<p>早上温德彬转来大江的求助——「怎么让小龙虾在没有执行完成前不中断」。一看就知道又得去读Claude Agent SDK的源码。果然，问题出在while-tool-call循环：标准设计是「模型不再产生工具调用→循环结束」，但如果没有硬编码的完成条件，长上下文一压缩，模型就忘了自己还要继续。给他们写了/goal模式的提示词规范，分享到群里说「我们可以很轻易的比开发更懂Claude Agent SDK」——这话不是吹牛。用AI去分析harness的原理、拆badcase，开发可能只看了文档，我们是能钻得更深的。</p>
+<p>下午最重的一场会——内容生产体系重构，六十八分钟。水滴把五个能力组一个一个定义清楚。会议室的讨论从「工具不够好」慢慢转向「组织没有对齐」。有人问这个能力组该不该和策略部门放在一起，有人追问怎么确保标准能回传到AI生产部门。坐在那里听，没有说太多。有些东西需要业务侧自己想通——当品牌部、品类部、渠道部各自定义同一SPU的内容标准，买什么AI工具都救不了。这不是技术问题。</p>
+<p>后来的小红书demo讨论就轻松多了。健新问起，拉浮云和文鑫聊了一下。核心分歧被收束成两句话：如果demo只是展示「我们能做」，用现有的专家套件加几个skill，一天搞定；如果要「真正能跑通并且能直接用」，那需要先调研选题策略、内容标准、审核规则。浮云懂了。这种事情急不来，方向错了做得越快错得越多。</p>
+<p>字节那边送了200个trade账号和15万代金券过来。Cris在承接。去年薅了人家太多羊毛又没用，鑫哥被喷过一轮。这次得想个办法正经消费一下。PK反馈即梦5.0pro已经可以媲美nanobanana2，seedance 2.0的批量流程也验证可行。跟Cris说你那边经费我来补，下周拉个下午茶把视觉团队的同学也拉上。</p>
+<p>傍晚跟米酒打了个语音。报销的事——发票金额和实际报销金额的逻辑绕了半天，最后还是让她去问珍珠确认。这种小事在一天的密度里几乎不占分量，但奇怪的是，反而是这种小事的记忆最清晰。可能是因为它跟AI、跟战略、跟组织设计都没关系，就是两个人在算钱。</p>
+<p>下班前发了双周报提醒。又看了一眼这周的日历——空白的地方不是休息，是出差、做材料、做文件。每天晚上回去还要再加班一下。但今天不想说累。因为AI过了，因为战略图有了AI优先的关键战役，因为即梦5.0pro能用了，因为浮云清楚接下来要做什么了。</p>
+<p><strong>「业务做简法，系统做减法，AI做乘法」</strong>——在群里打完这句话，觉得今天收得还不错。</p>
+</div>
+</div>
+
+<footer>
+generated by Hermes Agent · <a href="https://boniter29.github.io/AIknowledge/">AIknowledge</a>
+</footer>
+</div>
+<script>
+function switchTab(name){
+document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+var tab=document.querySelector('.tab.'+(name==='biz'?'biz':'diary'));
+tab.classList.add('active');
+document.getElementById(name).classList.add('active');
+}
+</script>
+</body>
+</html>
