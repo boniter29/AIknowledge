@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每周复盘 2026-07-20 ~ 2026-07-25</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0d1117; color: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", sans-serif; max-width: 720px; margin: 0 auto; padding: 24px 20px 60px; line-height: 1.75; }
+h2 { font-size: 1.3em; margin: 32px 0 16px; color: #f0f6fc; }
+h3 { font-size: 1.1em; margin: 24px 0 12px; }
+p, li { font-size: 15px; margin-bottom: 12px; }
+strong { color: #f0f6fc; }
+ul, ol { padding-left: 20px; margin-bottom: 16px; }
+li { margin-bottom: 6px; }
+.header { text-align: center; padding: 32px 0 20px; border-bottom: 1px solid #21262d; margin-bottom: 32px; }
+.header h1 { font-size: 1.5em; color: #f0f6fc; margin-bottom: 8px; }
+.header .date { color: #8b949e; font-size: 0.9em; }
+.header .subtitle { color: #58a6ff; font-size: 0.95em; margin-top: 6px; }
+/* Tabs */
+.tabs { display: flex; gap: 0; margin-bottom: 24px; border-bottom: 1px solid #21262d; }
+.tab { padding: 10px 20px; cursor: pointer; color: #8b949e; font-size: 14px; border-bottom: 2px solid transparent; transition: all 0.2s; user-select: none; }
+.tab:hover { color: #c9d1d9; }
+.tab.active { color: #f0f6fc; }
+.tab.active.biz { border-bottom-color: #58a6ff; }
+.tab.active.diary { border-bottom-color: #f78166; }
+.tab.active.silence { border-bottom-color: #d2a8ff; }
+.panel { display: none; }
+.panel.active { display: block; }
+/* Thread cards */
+.thread { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+.thread .thread-title { color: #58a6ff; font-size: 1em; font-weight: 600; margin-bottom: 10px; }
+/* Arc block */
+.arc-block { background: linear-gradient(135deg, #1a1a1a 0%, #1f1714 100%); border-left: 3px solid #f78166; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+/* Silence items */
+.silence-item { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 16px 20px; margin-bottom: 12px; border-left: 3px solid #d2a8ff; }
+.silence-item .si-title { font-weight: 600; color: #d2a8ff; margin-bottom: 4px; }
+/* Dividers */
+.divider { border: none; border-top: 1px solid #21262d; margin: 28px 0; }
+.footer { text-align: center; color: #484f58; font-size: 0.8em; margin-top: 48px; padding-top: 20px; border-top: 1px solid #21262d; }
+.footer a { color: #58a6ff; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>每周复盘 · 周度版 Pro</h1>
+  <div class="date">2026-07-20 周一 ~ 2026-07-25 周六</div>
+  <div class="subtitle">从「AI能不能做」到「谁来决定AI做什么」<br>林氏AI正式从能力建设阶段跨入组织治理阶段</div>
+</div>
+
+<div class="tabs">
+  <div class="tab active biz" onclick="switchTab('biz')">商业版</div>
+  <div class="tab diary" onclick="switchTab('diary')">日记版</div>
+  <div class="tab silence" onclick="switchTab('silence')">沉默板</div>
+</div>
+
+<!-- Business Panel -->
+<div id="biz" class="panel active">
+
+<p><strong>定调：从「AI能不能做」到「谁来决定AI做什么」——本周林氏AI正式从能力建设阶段跨入组织治理阶段。</strong></p>
+
+<div class="thread">
+  <div class="thread-title">线索一：视觉AI——从方法论到产品到终局重定义（Mon→Sat）</div>
+  <p>周一「复刻验证」的方法论切换（「了解」产出文档，「复刻」产出可被原岗位同事评价的成品），周三升级为全链路视频产品定位（「今年最具价值的核心标杆产品」，从需求输入到脚本、生图、剪辑、素材入库的全链路串接），周四183分钟闭门拆解暴露了一个结构性问题——品类视觉部已同步全局规划但IT不知情，信息差成为AI规模化落地的新瓶颈。</p>
+  <p>周五被「差异化困局」重新拉回战略原点。调研发现「市面上工具其实能解决大部分问题」，当初被竞品信号驱动立项而非被内部明确需求驱动——这个裂缝在本周末尾被彻底刨开。深夜咨询小米视觉AI前五号位专家的行为，不是在找答案，是在找参照系。PK那条「把所有生产手段串起来，降低使用门槛」的判断，在七天的深度拆解后被重新校准：自建的护城河不在工具能力，而在「如何比竞品更快地把领域上下文转化为AI可用的输入」。</p>
+  <p>一条线从周一方法论切换开始，走完启动→产品化→拆解→质疑→重定义，七天一个完整战略周期。</p>
+</div>
+
+<div class="thread">
+  <div class="thread-title">线索二：组织边界——从诸侯割据到收束归位（贯穿整周）</div>
+  <p>周二「十五万代金券免费送没人用」不是技术问题，是「诸侯割据」的组织惯性——业务团队自建分析能力，不信任中心团队。周三IT与业务三阶段模型划定了新边界：业务先证明需求价值（搭30-40% demo），IT再介入深度开发。这不是把IT推远，是让「谁对结果负责」有明确答案。周五自建vs购买的讨论本质上是同一个命题：能力杠杆被质疑、成本杠杆被证伪后，剩下的是竞争焦虑驱动的惯性。</p>
+  <p>三个节点——代金券困境（信号）→ 三阶段模型（规则）→ vibe coding权限收窄（执行）——是同一逻辑的递进。AI从散落走向收束的过程中，核心命题从「怎么让更多人用AI」变成了「谁对AI产出负责」。陈超被评价为「还是在做工具的思路」，不是否定他，是指出从工具到生态的最后一步：不是把功能交付完，是让组织具备持续使用和迭代的能力。</p>
+</div>
+
+<div class="thread">
+  <div class="thread-title">线索三：内容生产体系——本周最意外的结构性突破（Wed→Fri）</div>
+  <p>周三DAM系统关停后的替代方案调研像一颗种子。周四68分钟的内容生产体系重构会议让它长成了枝干——「策略-数据-生产-渠道-闭环」五位一体，五个能力组（内容策略与标准、内容资产、视觉内容生产、视频内容生产、渠道适配）的职责边界被逐一划定。会议的核心动作不是引入新技术，而是承认了一件事：品牌部、品类部、渠道部各自定义同一SPU的内容标准，AI工具救不了这个问题。</p>
+  <p>周五字节200个trade账号+15万代金券的竞赛承接、即梦5.0pro可媲美nanobanana2的验证——这两件事在内容中台的框架里获得了新意义。不再是「薅了羊毛又不用」，而是AI竞赛产出的案例可以成为中台能力的外部验证。如果这条线能跑通，视觉AI就不再是孤立场景，而是嵌入生产体系的一个节点。本周内容会议的一条关键判断值得标记：当AI每月4000条内容的业务目标被提出时，「能直接使用」是唯一有意义的质量标准。</p>
+</div>
+
+</div>
+
+<!-- Diary Panel -->
+<div id="diary" class="panel">
+
+<div class="arc-block">
+  <p>他周一走进八场会议的时候，还不知道这周会多深。一种「从纸面落地」的踏实感推着他——「不只是停留在了解的阶段」，团队给了他一个信号：他们准备好了。不算轻松，但步伐是稳的。</p>
+</div>
+
+<p>周二累意袭来。七场会从早九点到晚六点，早上对着手机打出「不想听课了，明天补课好了」——不是想逃，是身体在说话。但脑子没停。南海区的AI座谈会让他跳出来看，下午回到公司，组织最敏感的问题——钱怎么算、人怎么配、谁对结果负责——一个一个摆到桌上。</p>
+
+<div class="arc-block">
+  <p>周三是个转折点。IT与业务三阶段模型那场会，有人把模糊地带刨开了。「不是IT把所有精力花在扎进底层业务」——他点了头。然后把Chris、米酒、一一叫到一间会议室，十五分钟，说了那句分量很重的话：这不是视频生成工具，是全链路。说出口的时候他知道接下来两周要密集规划，但周三的他不焦虑。不是因为事情少了——九场会、八十三条消息——而是每件事都有边界。「如果每天都能像今天一样——事情都有边界——可能就不会觉得被工作推着走。」</p>
+</div>
+
+<p>周四身体先于意志喊了停。「我已经快无了」——五场会、清华采访、浮云转正评估挤进同一天。最诚实的信号不是累，是陈超那句「怕你们对AI落地规划不知情比较迷茫」——体贴和隔离之间的距离，他分得清。浮云转正评估时说到公司扁平化管理，比在乙方强太多，他认同，但也知道今天的自己离「专注做一件事」差得太远。</p>
+
+<p>周五没有通勤，脑子没停。周末一条聊天记录里CHENCHAO说的那句「如果非得内部做，成本反而高」——不是气话，是一个被反复验证的工程结论。他给同事回「感谢节假日耐心回复」——「节假日」这个词，说明团队的状态是：不在一个物理空间，但还在同一张桌子上。</p>
+
+<div class="arc-block">
+  <p>周六深夜，他找了一位小米做视觉AI的前五号位专家。不是在找答案，是在找参照系。内部说差异化难，外部说某某也在做类似的事——两条声音同时跑，他选择去听第三条。</p>
+  <p style="margin-bottom:0">他这周没怎么停下来。但他给洁敏发「走了不」的瞬间、给同事回感谢的那几秒——这些比任何结论都更能说明他的状态：在推着事情走，而不是被推着走。只是偶尔，事情太多了，需要确认身边的人还在。</p>
+</div>
+
+</div>
+
+<!-- Silence Panel -->
+<div id="silence" class="panel">
+
+<div class="silence-item">
+  <div class="si-title">视觉全景图拆解的后续整合</div>
+  <p>陈超领走了拆解任务（周四），但他在品类视觉部已同步的全局规划尚未与IT团队对齐。这是本周最清晰的「拆得开但还没合得上」的信号，下周必须补上这轮信息同步。</p>
+</div>
+
+<div class="silence-item">
+  <div class="si-title">浮云的转正评估</div>
+  <p>计划版本跟不上产品版本的结构性问题被识别，但具体时间线未定。新哥说「不一定能在这个月内走完流程」，这个延迟本身会传递一个信号。</p>
+</div>
+
+<div class="silence-item">
+  <div class="si-title">牛奶妹的预算归属</div>
+  <p>周二被提及、周四仍在悬浮。费用归属和合作边界的决策没有形成任何进展，但它涉及的「AI预算该挂哪个部门」是组织治理的核心卡点，不是可以长期搁置的问题。</p>
+</div>
+
+<div class="silence-item">
+  <div class="si-title">AI&海外年中白皮书</div>
+  <p>周三KPI分解做了一半，原定周五合稿。本周会议密度下优先级自然下沉，但deadline已过，修复成本在累积。</p>
+</div>
+
+<div class="silence-item">
+  <div class="si-title">自建工具差异化的结论</div>
+  <p>周五调研方向已转向「上下文供给管道」，深夜专家咨询补了一块参照系拼图，但决策层面的方向性表态尚未形成。下周面临一个分岔路口：继续追问差异化还是转向买+定制。</p>
+</div>
+
+</div>
+
+<hr class="divider">
+<div class="footer">
+  由 Hermes Agent 自动生成 · 数据来源：Notion Writing Projects（每日复盘）<br>
+  <a href="https://boniter29.github.io/AIknowledge/">boniter29.github.io/AIknowledge</a>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(name).classList.add('active');
+  document.querySelector(`.tab.${name === 'biz' ? 'biz' : name === 'diary' ? 'diary' : 'silence'}`).classList.add('active');
+}
+</script>
+</body>
+</html>
