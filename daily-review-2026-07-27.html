@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-07-27</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --border: #30363d;
+  --text: #c9d1d9;
+  --text-muted: #8b949e;
+  --blue: #58a6ff;
+  --blue-bg: rgba(88,166,255,0.1);
+  --pink: #f778ba;
+  --pink-bg: rgba(247,120,186,0.1);
+  --green: #3fb950;
+  --radius: 12px;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
+  line-height: 1.7;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 60px;
+}
+.header { text-align: center; margin-bottom: 28px; }
+.header h1 { font-size: 1.5rem; font-weight: 700; }
+.header .date { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; }
+.header .stats { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 14px; }
+.header .stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+.header .stat strong { color: var(--text); font-size: 1.1rem; display: block; }
+
+.tabs { display: flex; gap: 0; margin-bottom: 20px; border-bottom: 1px solid var(--border); }
+.tab {
+  flex: 1; text-align: center; padding: 10px 0; cursor: pointer; font-size: 0.9rem;
+  color: var(--text-muted); border-bottom: 2px solid transparent; transition: all 0.2s;
+  font-weight: 500;
+}
+.tab.active { color: var(--blue); border-bottom-color: var(--blue); }
+.tab.diary-tab.active { color: var(--pink); border-bottom-color: var(--pink); }
+
+.panel { display: none; }
+.panel.active { display: block; }
+
+.content { 
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  margin-bottom: 20px;
+}
+.content p { margin-bottom: 16px; }
+.content p:last-child { margin-bottom: 0; }
+.content strong { color: var(--text); font-weight: 600; }
+.biz-panel .content strong { color: var(--blue); }
+
+.diary-panel .content { border-color: rgba(247,120,186,0.2); }
+.diary-panel .content strong { color: var(--pink); }
+
+.insight-box {
+  background: var(--blue-bg);
+  border-left: 3px solid var(--blue);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 14px 16px;
+  margin: 20px 0;
+  font-size: 0.93rem;
+}
+
+.footer {
+  text-align: center; color: var(--text-muted); font-size: 0.75rem;
+  margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border);
+}
+.footer a { color: var(--blue); text-decoration: none; }
+
+@media (max-width: 480px) {
+  body { padding: 16px 12px 40px; }
+  .header h1 { font-size: 1.3rem; }
+  .content { padding: 16px 14px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>每日复盘</h1>
+  <div class="date">2026年7月27日 · 星期一</div>
+  <div class="stats">
+    <div class="stat"><strong>9</strong>场会议</div>
+    <div class="stat"><strong>183</strong>条消息</div>
+    <div class="stat"><strong>214</strong>分钟</div>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="switchTab('biz')" id="biz-tab">📊 商业版</div>
+  <div class="tab diary-tab" onclick="switchTab('diary')" id="diary-tab">📝 日记版</div>
+</div>
+
+<div class="panel active biz-panel" id="biz-panel">
+<div class="content">
+<p><strong>全球AI在进步，而我们的卡点不在工具上。</strong></p>
+
+<p>这是一句听起来像结论、实际上更像提问的判断。今天AI视频生产目标对齐那场23分钟的小会，本质上是两种组织逻辑的碰撞：一边是用三个人的产能覆盖一个部门需求，另一边是让三百人的组织完成AI化转型。有同事转述超哥的质疑——「你们的产量目标已经达成了，为什么还要做SOP赋能？」他算了一笔账：一个店一个月能发的视频数量有上限，AI视频效果又不如实拍，800条就差不多了，超出的产能没有渠道承接。这个逻辑在「产量=目标」的框架下完全自洽。但他的推理暴露了框架本身的问题：如果产量是唯一目标，那组织架构调整的半年规划就没意义；如果三个人就能干完整个部门的活，其余三百人干什么？这场对话没有争出对错，但让一个问题浮出水面——AI覆盖率才是真正的指标，而不是AI产量。覆盖率天然需要更多人会用、敢用，而这不是靠工具能解决的。</p>
+
+<p>这个判断在今天另外几个会议里找到了回响。AI赋能计划进度可视化的讨论中，有同事提到全景图里的组织人事节点目标「有点难定义」。这是一个信号：你没办法用一个可视化看板驱动AI转型，因为转型需要每个人重新理解自己的工作流，而不是在表格里打勾。1024赛事的筹备同样在走两条线：对内要降低参赛门槛（报名筛选、场景指引），对外要拉赞助预算。比赛时间线是8月12日-10月24日，这意味着Q3的核心叙事之一就是「让大家真的用起来」。</p>
+
+<p>小林生影PRO的全链路整合会议跑了整整60分钟——从分镜脚本到多轨剪辑再到渠道分发，11个环节一个不落。团队已经做完了一版demo，但今天水滴提出了一个关键问题：和Lovart、LibTV的差异到底在哪里？不是功能差异，是用户为什么选你的差异。这个问题背后的逻辑是：如果你只是在功能矩阵上和现有产品对标，那你永远在追赶；如果你能在业务场景上提供闭环——比如套系化方案从产品图到效果图到视频的一键生成——那工具才不是锤子，而是流水线。AI生成室内效果图的视角与数据标准讨论（17.8分钟）恰恰触及了这个痛点的技术面：单品图只有正面视角，套系化生成需要多角度素材，而现有素材库不支持。</p>
+
+<p>周会上水滴还提到了一个细节：「双周报的洞察总结又没跑，每周都不跑，每周都要让我手动再去跑一遍。」这句话的潜台词是：自动化流程仍然脆弱，团队必须靠人肉盯。而文鑫那边的评测培训待办（准备2-3周）、小龙虾API稳定性问题、后台研发排期卡点——这些协调类的阻塞项正在系统性地消耗资源。团队周报数据显示聚焦度在47-48%，战线17-22条。白皮书收尾和培训集中爆发（育木计划）稀释了主战场投入，下周期有望回收，但前提是本周能把这些收尾干净。</p>
+
+<p>林氏小龙虾的外部反馈同样值得关注。有部门反映「当做豆包在使用」，自定义提示词功能下线后覆盖率下降。水滴的判断很清醒：暂不投入大规模推广，产品还在内测阶段。这个判断是对的，但执行上有一个微妙的张力：不推广就缺真实反馈来打磨产品，推广了就会被当成通用问答工具来用。打破这个循环需要的不是更好的产品功能，而是一个让用户愿意主动探索的「体感」——1024赛事恰好可以成为制造这种体感的杠杆。</p>
+
+<p>最后一条暗线是今天水滴在群里对一位同事的回复：「市面上基本很少有系统运用的培训，刚出一个课程AI更新一版，以前不能做的事情就能做了……应用方面还是建议多用，多尝试提升AI工作的占比。」这段话不像回复，更像自我说服——当工具迭代速度远超培训体系更新速度时，唯一可行的赋能方式就是让每个人在实战中建立自己的AI操作直觉。这解释了为什么超哥的团队不需要赋能（他们已经在实践中建立了直觉），也解释了为什么「组织300人的AI转型」是一个远比「做出更好用的工具」更难、更慢、也更本质的命题。</p>
+</div>
+</div>
+
+<div class="panel diary-panel" id="diary-panel">
+<div class="content">
+<p>下午六点，正准备去吃饭，被叫住了。</p>
+
+<p>不是开会，是站在走廊里聊了二十多分钟。起因是超哥对那个SOP和Skill梳理的事情还是不能理解——「你们现在不是已经能做到800条了吗？为什么还要花时间做赋能？」</p>
+
+<p>我听着同事转述这些话，脑子里其实没有在想怎么反驳。我在想另一件事：三个月前我们定方向的时候，说的是「AI视频产量不够，需要提升产能」。那时候逻辑链是清晰的——产量不够，需要工具，工具做好了产量就上去了。三个月后，产能真的上去了，新的问题却从另一个方向砸过来：产能够了，然后呢？这才是我今天真正在思考的东西。不是产能够不够，而是「够了」本身就是一个值得怀疑的命题。三个人做到800条就算够了——那这个数字是谁定的？不是组织能力的上限，是业务侧承载的上限。我一直在说AI覆盖率，但今天被问到的时候才发现，这个词在我脑子里还没有一个可量化的定义。覆盖率是什么？是用过AI的人占比，还是AI产出在总产出中的占比？这个模糊性不是语言问题，是战略方向还在蒸发的信号。</p>
+
+<p>和牛奶妹的私聊里，我把这个困惑摊开了。我说「我看不到目标是什么，卡点是什么」。说「你们跑通一条路径就教大家按你们的方法去产出测试，然后你们腾出精力做更高质量的视频」。这些话说出口的时候我自己也觉得有点空——因为「教大家」这件事本身就是今天下午那场对话里超哥最不理解的环节。他觉得他的部门不需要赋能，不是小白不需要手把手教。但我心里清楚：如果赋能的对象不是他们三四个人，而是整个视觉板块的其他三百人，那「不需要赋能」的前提就不成立——因为其他人甚至不知道AI能做什么。</p>
+
+<p>牛奶妹的回复很温柔。她说看到我双眼通红、一定挨了大夜，说如果有些反馈没做好先道歉。我在屏幕这头停顿了一下——不是客气的那种停顿，是突然意识到自己确实绷太紧了。今天从早上1024赛事筹备到下午小林生影全链路整合，中间插了五个会，我一边开周会一边在微信上回消息说「双周报的洞察总结又没跑」，说完自己愣了一下：我是在抱怨cron没跑，还是在抱怨自己又要手动补一个本该自动化完成的东西？都有。但更扎心的是，当我需要靠手动补来维持节奏的时候，说明这套系统离「自动驾驶」还有很长的路。不是工具的问题，是我对系统的依赖已经到了一个临界点：它掉一次链子，我就多出一个小时的碎片劳动。</p>
+
+<p>晚上的对话是另一条暗线。晚餐延迟的问题不是今天才出现的——数值没怎么掉，吃得太晚（从十点推迟到十二点半），大概是因为工作晚回家。这个话题在私人聊天里只占了三分钟，但它和白天那些高强度会议构成了某种对位：所有关于「组织转型」「AI覆盖率」「全链路产品规划」的宏大叙事，最终都会落到一个人晚上十二点回家点外卖这件小事上。我不认为这是代价——我是想说这是底色。没有这个底色，你写的那些规划和方向就是PPT。</p>
+
+<p>今天和小龙虾那边的对话也有意思。有部门反馈说用户体验「就是当做豆包在用」，也有人反馈自定义提示词下线之后覆盖率下降。我回了句「林氏小龙虾暂不投入大规模推广」——这个判断我当时说得很坚决，但事后想了想，这里面有个死结：不推就没反馈，没反馈就没迭代依据，没迭代就无法说服自己值得推。下午有人在群里问「AI到底能做什么」，我回了一段很长的话，大意是多用、多试、把以前觉得AI不能做的交给它做。这段话讲得挺硬的，但其实我没有给出一个具体的路径。因为说实话，我自己也没有——不是没有能力，是没有足够的时间把这些东西沉淀成可传播的方法论。这大概就是超哥不需要赋能的底气所在：他们可以在试错中摸索出直觉，而我设想的那种「规模化赋能」目前还没有一个拿得出手的范例。</p>
+
+<p>明天还有很多事：海报改一版，策划案更新，自定义提示词的数据拉一下，开发那边的API费用回复要跟进。但今晚真正占据我注意力的，是那个「产量够了」的命题。我还没有想清楚回应的方式，但至少我不再觉得它只是一个需要反驳的错误答案——它更像一面镜子，照出了「产量」和「覆盖率」这两个词之间那片我还没填满的空白。Q3的任务之一，就是把这片空白填上。不是用PPT，是用让更多人真正动手的结果。</p>
+</div>
+</div>
+
+<div class="footer">
+  由 Hermes Agent 自动生成 · <a href="https://boniter29.github.io/AIknowledge/">GitHub Pages</a>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.getElementById(name + '-tab').classList.add('active');
+  document.getElementById(name + '-panel').classList.add('active');
+}
+</script>
+</body>
+</html>
