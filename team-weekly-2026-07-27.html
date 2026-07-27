@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>团队周报洞察 · 7/20~7/26</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;background:#0d1117;color:#c9d1d9;line-height:1.6;padding:16px;max-width:900px;margin:0 auto}
+h1{font-size:1.6em;color:#58a6ff;margin:20px 0 12px;border-bottom:1px solid #21262d;padding-bottom:8px}
+h2{font-size:1.2em;color:#58a6ff;margin:24px 0 10px}
+h3{font-size:1em;color:#f0f6fc;margin:16px 0 8px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:16px;margin:12px 0}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:12px 0}
+.metric{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:14px;text-align:center}
+.metric .value{font-size:2em;font-weight:700;margin:4px 0}
+.metric .label{font-size:.75em;color:#8b949e;text-transform:uppercase;letter-spacing:.5px}
+.yellow{color:#d29922}.red{color:#f85149}.green{color:#3fb950}.blue{color:#58a6ff}
+.badge{display:inline-block;padding:2px 8px;border-radius:12px;font-size:.75em;font-weight:600}
+.badge-yellow{background:rgba(210,153,34,.15);color:#d29922}
+.badge-red{background:rgba(248,81,73,.15);color:#f85149}
+.badge-green{background:rgba(63,185,80,.15);color:#3fb950}
+.badge-blue{background:rgba(88,166,255,.15);color:#58a6ff}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.85em}
+th,td{border:1px solid #30363d;padding:8px 10px;text-align:left}
+th{background:#21262d;font-weight:600;color:#f0f6fc}
+tr:nth-child(even){background:rgba(22,27,34,.5)}
+tr:hover{background:rgba(88,166,255,.06)}
+.progress-bar{height:10px;background:#21262d;border-radius:5px;overflow:hidden;margin:4px 0}
+.progress-fill{height:100%;border-radius:5px;transition:width .3s}
+.fill-green{background:#3fb950}.fill-yellow{background:#d29922}.fill-red{background:#f85149}
+.fill-blue{background:#58a6ff}.fill-purple{background:#a371f7}
+.tag{display:inline-block;padding:1px 6px;border-radius:4px;font-size:.7em;margin:0 2px}
+.tag-build{background:rgba(88,166,255,.2);color:#58a6ff}
+.tag-demo{background:rgba(163,113,247,.2);color:#a371f7}
+.tag-pilot{background:rgba(210,153,34,.2);color:#d29922}
+.tag-blocked{background:rgba(248,81,73,.2);color:#f85149}
+.warning{border-left:3px solid #d29922;padding:8px 12px;margin:12px 0;background:rgba(210,153,34,.08);font-size:.85em}
+.danger{border-left:3px solid #f85149;padding:8px 12px;margin:12px 0;background:rgba(248,81,73,.08);font-size:.85em}
+.info{border-left:3px solid #58a6ff;padding:8px 12px;margin:12px 0;background:rgba(88,166,255,.08);font-size:.85em}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.grid-2{grid-template-columns:1fr}}
+.footer{text-align:center;color:#484f58;font-size:.75em;margin:40px 0 20px;border-top:1px solid #21262d;padding-top:16px}
+</style>
+</head>
+<body>
+
+<h1>🧠 团队周报洞察</h1>
+<p style="color:#8b949e;font-size:.9em">W30 · 2026年7月20日 ~ 7月26日 · 双周报</p>
+
+<!-- 聚焦度仪表盘 -->
+<h2>① 聚焦度体检</h2>
+<div class="card">
+<div class="metrics">
+  <div class="metric">
+    <div class="label">主战场占比</div>
+    <div class="value yellow">47%</div>
+  </div>
+  <div class="metric">
+    <div class="label">战线数量</div>
+    <div class="value red">22</div>
+  </div>
+  <div class="metric">
+    <div class="label">海外消耗</div>
+    <div class="value" style="color:#c9d1d9">14%</div>
+  </div>
+  <div class="metric">
+    <div class="label">学习投入</div>
+    <div class="value blue">22%</div>
+  </div>
+</div>
+<div style="margin:12px 0">
+  <div style="display:flex;justify-content:space-between;font-size:.75em;color:#8b949e;margin-bottom:4px">
+    <span>🔴 40%</span><span>🟡 60%</span>
+  </div>
+  <div class="progress-bar"><div class="progress-fill fill-yellow" style="width:47%"></div></div>
+</div>
+<p style="font-size:.85em">🟡 <b>黄灯</b> — 主战场工时47%，低于60%安全线。主要受白皮书制作和集中培训（育木计划3天+全员AI赋能培训）稀释。商品视觉(33%)是最大投入方向。</p>
+
+<div class="warning">
+<b>⚠️ 资源分散预警：</b>22条战线远超团队容量上限(9条)。白皮书收尾后需大幅收缩。<br>
+<b>⚠️ 盲区：</b>S&OP供需计划联动连续多周零投入。内容生产场景(7%)和消费者标签(6%)投入严重不足。
+</div>
+</div>
+
+<!-- 战场分布图 -->
+<h3>工时分布</h3>
+<div class="card">
+<div style="margin:8px 0"><span style="font-size:.8em">商品视觉场景</span> <span style="float:right;font-size:.8em">33% · 20.2天</span></div>
+<div class="progress-bar"><div class="progress-fill fill-blue" style="width:33%"></div></div>
+<div style="margin:8px 0"><span style="font-size:.8em">学习/培训</span> <span style="float:right;font-size:.8em">22% · 13.2天</span></div>
+<div class="progress-bar"><div class="progress-fill fill-purple" style="width:22%"></div></div>
+<div style="margin:8px 0"><span style="font-size:.8em">通用/治理/内部</span> <span style="float:right;font-size:.8em">18% · 10.9天</span></div>
+<div class="progress-bar"><div class="progress-fill" style="width:18%;background:#484f58"></div></div>
+<div style="margin:8px 0"><span style="font-size:.8em">海外IECM/BPS <span class="tag tag-blocked">低优先级</span></span> <span style="float:right;font-size:.8em">14% · 8.2天</span></div>
+<div class="progress-bar"><div class="progress-fill" style="width:14%;background:#da3633"></div></div>
+<div style="margin:8px 0"><span style="font-size:.8em">内容生产场景</span> <span style="float:right;font-size:.8em">7% · 4.5天</span></div>
+<div class="progress-bar"><div class="progress-fill fill-green" style="width:7%"></div></div>
+<div style="margin:8px 0"><span style="font-size:.8em">客服/导购·消费者标签</span> <span style="float:right;font-size:.8em">6% · 3.6天</span></div>
+<div class="progress-bar"><div class="progress-fill fill-green" style="width:6%"></div></div>
+<div style="margin:8px 0"><span style="font-size:.8em">S&OP供需计划</span> <span style="float:right;font-size:.8em">0%</span></div>
+<div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+</div>
+
+<!-- 价值链看板 -->
+<h2>② 价值链看板</h2>
+<div class="card">
+<table>
+<tr><th>项目</th><th>环节</th><th>状态</th><th>建议</th></tr>
+<tr>
+  <td>林氏放我家3.0</td>
+  <td><span class="tag tag-demo">Demo完成→技术验证</span></td>
+  <td>待业务数据就绪</td>
+  <td>浮云本周启动seedream5.0测评</td>
+</tr>
+<tr>
+  <td>林氏小龙虾专家套件</td>
+  <td><span class="tag tag-build">V21原型→待后台联调</span></td>
+  <td><span class="tag tag-blocked">研发依赖</span></td>
+  <td>需水滴+文鑫推动研发排期</td>
+</tr>
+<tr>
+  <td>AI视觉全链路</td>
+  <td><span class="tag tag-build">调研收尾→试点</span></td>
+  <td>规划完整，缺量化试点</td>
+  <td>本周对齐1个试点场景+度量指标</td>
+</tr>
+<tr>
+  <td>内容生产体系重构</td>
+  <td><span class="tag tag-build">框架规划</span></td>
+  <td>工具串联未启动</td>
+  <td>水滴P0，与CHENCHAO对齐方案</td>
+</tr>
+<tr>
+  <td>小林生影改造</td>
+  <td><span class="tag tag-build">改造中</span></td>
+  <td>即梦模型适配待验证</td>
+  <td>Cris本周推进</td>
+</tr>
+<tr>
+  <td>小红书KOS/KOB</td>
+  <td><span class="tag tag-build">调研+方案设计</span></td>
+  <td>Demo待输出</td>
+  <td>浮云本周输出产品方案Demo</td>
+</tr>
+<tr>
+  <td>BPS商城端优化</td>
+  <td><span class="tag tag-demo">7/29上线</span></td>
+  <td>待发版修复</td>
+  <td>YIYI推进修复</td>
+</tr>
+<tr>
+  <td>BPS财务项目</td>
+  <td><span class="tag tag-demo">结项准备</span></td>
+  <td>待提交结项材料</td>
+  <td>米酒本周提交</td>
+</tr>
+</table>
+</div>
+
+<!-- 项目×人员矩阵 -->
+<h2>③ 项目×人员矩阵</h2>
+<div class="card">
+<table>
+<tr><th></th><th>水滴</th><th>Cris</th><th>浮云</th><th>米酒</th><th>YIYI</th><th>文鑫</th></tr>
+<tr><td>AI视觉/内容生产</td><td>🔵</td><td>🔵</td><td></td><td>🔵</td><td>🔵</td><td></td></tr>
+<tr><td>小红书内容链路</td><td>🔵</td><td></td><td>🔵</td><td></td><td></td><td></td></tr>
+<tr><td>林氏放我家3.0</td><td>⚪</td><td></td><td>🔵</td><td></td><td></td><td></td></tr>
+<tr><td>林氏小龙虾/专家套件</td><td></td><td></td><td></td><td></td><td></td><td>🔵</td></tr>
+<tr><td>小林生影</td><td></td><td>🔵</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>小林AI经营分析</td><td>⚪</td><td></td><td></td><td></td><td></td><td>🔵</td></tr>
+<tr><td>BPS/IECM/海外</td><td>⚪</td><td></td><td></td><td>🔵</td><td>🔵</td><td></td></tr>
+<tr><td>白皮书/治理</td><td>🔵</td><td>🔵</td><td>⚪</td><td>⚪</td><td>⚪</td><td>🔵</td></tr>
+</table>
+<div style="font-size:.75em;color:#8b949e;margin-top:8px">🔵 主力投入 ⚪ 参与/支持</div>
+</div>
+
+<!-- 风险卡点面板 -->
+<h2>④ 风险卡点</h2>
+<div class="card">
+<table>
+<tr><th>风险点</th><th>涉及方</th><th>影响</th><th>建议</th></tr>
+<tr>
+  <td>小龙虾API偶发不稳定</td>
+  <td>文鑫→德彬</td>
+  <td>用户急用场景受阻</td>
+  <td>德彬侧给出排查时间线</td>
+</tr>
+<tr>
+  <td>专家套件后台研发排期</td>
+  <td>文鑫→研发</td>
+  <td>专家套件交付延期</td>
+  <td>水滴协助推进资源确认</td>
+</tr>
+<tr>
+  <td>评测平台数据集</td>
+  <td>文鑫→Heven</td>
+  <td>评测覆盖度受限</td>
+  <td>跟进Heven补充评测数据</td>
+</tr>
+</table>
+</div>
+
+<!-- 行业信号 -->
+<h2>⑤ 行业信号</h2>
+<div class="card">
+<div class="warning" style="margin-bottom:12px">
+<b>⚠️ 数据不完整：</b>AI日报和一手信源简报均推送至 origin 未归档，本周行业信号来自替代来源。
+</div>
+<div class="info">
+<b>GPT-5.6 Subagent 模式推高 Token 消耗</b><br>
+行业发现 AI Agent 开启 Subagent 后 Token 消耗暴涨（输出单价是输入的6倍）——这与团队专家套件+小龙虾群聊Agent化方向直接相关。建议在工具设计中提前考虑用量预估和成本控制，避免上线后用户额度问题（小龙虾已出现类似投诉）。
+</div>
+</div>
+
+<!-- 个体摘要 -->
+<h2>⑥ 个体贡献摘要</h2>
+<div class="card grid-2">
+<div>
+<h3>水滴 <span style="font-size:.75em;color:#8b949e">15.0天</span></h3>
+<p style="font-size:.8em">育木计划(3天)+AI视觉/内容生产(3.7天)+战略/白皮书(2.8天)。AI赋能培训组织+清华采访+外宣对齐。学习投入6.8天为全队最高。</p>
+<div><span class="badge badge-blue">学习先锋</span> <span class="badge badge-green">战略驱动</span></div>
+</div>
+<div>
+<h3>Cris <span style="font-size:.75em;color:#8b949e">12.4天</span></h3>
+<p style="font-size:.8em">AI视觉/内容生产(6.4天)+全景图治理(2.8天)+工具资产沉淀(1.8天)。推进小林生影改造+模型验证+白皮书材料。</p>
+<div><span class="badge badge-blue">商品视觉核心</span></div>
+</div>
+<div>
+<h3>浮云 <span style="font-size:.75em;color:#8b949e">9.5天</span></h3>
+<p style="font-size:.8em">林氏放我家(3天)+小红书(1.5天)+AI改款(1.5天)。Demo完成+进入技术验证。转正评估通过。</p>
+<div><span class="badge badge-green">客服导购主力</span> <span class="badge badge-blue">成长中</span></div>
+</div>
+<div>
+<h3>米酒 <span style="font-size:.75em;color:#8b949e">8.8天</span></h3>
+<p style="font-size:.8em">海外事务(4.8天)+AI视觉/内容生产(4.0天)。VC履约治理完成+BPS结项准备。跨域能力突出但海外占比偏高。</p>
+<div><span class="badge badge-yellow">海外主力</span> <span class="badge badge-blue">兼顾AI</span></div>
+</div>
+<div>
+<h3>YIYI <span style="font-size:.75em;color:#8b949e">9.1天</span></h3>
+<p style="font-size:.8em">AI视觉(4.6天)+BPS商城端(3.0天)。视觉全链路调研+商城端7/29上线。工单处理效率高(8项)。</p>
+<div><span class="badge badge-blue">视觉调研先锋</span></div>
+</div>
+<div>
+<h3>文鑫 <span style="font-size:.75em;color:#8b949e">6.3天</span></h3>
+<p style="font-size:.8em">专家套件(2.8天)+白皮书(1.5天)+Claude Tag调研(1天)。原型迭代至V21，3项协调待解。用户支持1天。</p>
+<div><span class="badge badge-blue">产品设计深度</span> <span class="badge tag-blocked">3项卡点</span></div>
+</div>
+</div>
+
+<div class="footer">
+团队周报洞察 · 自动生成于 2026-07-27 · W30 双周报<br>
+诊断工具，非考核工具 | 聚焦度是团队健康第一指标
+</div>
+
+</body>
+</html>
