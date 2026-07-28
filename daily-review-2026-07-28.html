@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-07-28</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: #0d1117;
+  color: #c9d1d9;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px 60px;
+  line-height: 1.8;
+}
+.header {
+  padding: 24px 0 16px;
+  border-bottom: 1px solid #21262d;
+  margin-bottom: 20px;
+}
+.header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #f0f6fc;
+  margin-bottom: 4px;
+}
+.header .date {
+  font-size: 13px;
+  color: #8b949e;
+}
+.tabs {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 24px;
+  background: #161b22;
+  border-radius: 8px;
+  padding: 3px;
+}
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #8b949e;
+  transition: all 0.2s;
+  border: none;
+  background: transparent;
+}
+.tab.active.biz { background: #1f6feb22; color: #58a6ff; }
+.tab.active.diary { background: #db61a222; color: #db61a2; }
+.tab:hover { color: #c9d1d9; }
+.panel { display: none; }
+.panel.active { display: block; }
+.content {
+  font-size: 15px;
+  color: #c9d1d9;
+}
+.content p {
+  margin-bottom: 16px;
+}
+.biz-panel .content p:first-child {
+  font-weight: 600;
+  color: #f0f6fc;
+  font-size: 16px;
+  padding: 12px 16px;
+  background: #161b22;
+  border-left: 3px solid #1f6feb;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 24px;
+}
+.diary-panel .content p:first-child {
+  font-style: italic;
+  color: #db61a2;
+  font-size: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #21262d;
+  margin-bottom: 24px;
+}
+.footer {
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid #21262d;
+  font-size: 12px;
+  color: #484f58;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>每日复盘</h1>
+  <div class="date">2026年7月28日 · 周二 · 第31周</div>
+</div>
+
+<div class="tabs">
+  <button class="tab active biz" onclick="switchTab('biz')">📊 商业复盘</button>
+  <button class="tab diary" onclick="switchTab('diary')">📝 日记随笔</button>
+</div>
+
+<div class="panel active biz-panel" id="panel-biz">
+<div class="content">
+<p>AI在组织里的渗透正在从「让大家知道」进入「让大家会用」的阶段，而今天的会议和聊天揭示了一条关键断层：培训和大赛可以造声势，但真正让AI落地的不是事件，是机制。</p>
+
+<p>AI创意大赛的方案迭代占据了今天最多的注意力——奖金改礼品、AI先锋改名AI创意大赛、评委从5人压缩到3人火山提交加内部灵活调整、知识产权归属和Trae账号的细节逐一敲定。这些调整的背后是一个产品化的关键决策：新哥定调这次大赛定位从「技术竞赛」转向「文化传播」。这意味着评价维度需要重新校准——heven已经察觉到了这层矛盾：可复制性怎么评判？文化熏陶的目标和创新评分的标准之间的张力还没被完全解开。</p>
+
+<p>但比大赛细节更重要的是另一条线。AI工具推广与文化落地会议里暴露了一个真实瓶颈：有同事花一个小时讲完工具用法，但业务同学「面对新工具还是会有些陌生」，遇到困难后「纠结着就不用了」。这不是培训不够，是缺乏持续支持机制。会议提出「陪伴式」模式——每条业务线有对口的IT/产品经理做AI陪跑，遇到问题直接找人而不是自己死磕。这个方案和薯条之前提出的「业务+IT配对」思路完全一致，区别在于现在有了明确的落地形式。大赛负责造势和氛围，陪伴式负责落地和提效，两条线互补。但会议里有人清醒地指出：大赛奖金拿完之后，「再往下怎么落地，怎么真正为大家提效赋能，就需要比较长期的跟踪」。这不是悲观，是把节奏拉回现实——造势容易，生根难。</p>
+
+<p>资源管控是今天另一条贯穿始终的线。聊天记录里反复出现「半个人资源」「严控资源」「能砍就砍」——用户在多条线上明确收紧了资源承诺。这不是抠门，是AI团队带宽已经被拉得太散：林氏小龙虾还在打磨、3.0项目10月要上最小可量化版本、AI视觉要重新共识目标、DAM海外素材要开权限、各业务线的AI提效需求在排队。资源收紧的背后是一个清醒的判断——不是所有需求都值得做，先做好核心的几件事。</p>
+
+<p>3.0项目的分工会上明确了倒推节奏：10月上线，8月6日前拉通数据治理方案。产中、AI中台、导购助手三条线并行，但「存在三方并行、步调不协同的问题」。这个分工会的价值不在于分好了活，而在于暴露了协同瓶颈——三个模块互相依赖但各自推进，缺少总控确保节奏对齐。AI视觉那边，用户直接点出核心问题：「打造AI标杆」太虚了，需要在经营和业务上找到具体量化目标。图生规模没卡点了，但视频实拍剪辑还有提效需求。</p>
+
+<p>智能体SDK架构对比的讨论是今天最有技术深度的一段。用户发现Cloud Agent SDK的Agent Loop机制「几乎吊打一切的自研架构」——它在知识库检索时会先调工具去搜索关键词、再找向量、再做综合判断，而自研的小林AI走的还是固定图流程。这个对比不只是技术优劣，更是架构理念的分歧：是让AI自己决定检索路径，还是预设好流程图。用户已经在手搓基于Cloud Agent SDK的应用，这不是实验，是在验证下一代技术路线的可行性。</p>
+
+<p>最后一条重要信号来自AI项目绩效指标设计的讨论。全链路13个价值链×4个维度（标准、赋能、工具）=39个格子，覆盖一个就提升一个占比。这个框架的目标不是精确计量，而是建立AI对业务渗透的可视化度量——不是要完美的KPI，是要一张能看见进度的地图。</p>
+</div>
+</div>
+
+<div class="panel diary-panel" id="panel-diary">
+<div class="content">
+<p>今天从第一条消息开始就在高速运转。</p>
+
+<p>早上醒来看到的是需求文档的补充留言——套件的技术架构要写清楚、怎么实现团队编排、千万不要做成Subagent或者workflow，「会变笨很多或者巨量消耗token」。这句话写下来的时候，脑子里闪过的可能是之前那些做了又推翻的方案版本。不是在写文档，是在保护一个方向。</p>
+
+<p>整个上午在各种群里切换。火山引擎的AI创意大赛进入了密集协同——评委选谁、评分模型怎么定、奖金改礼品、名字从AI先锋改成AI创意大赛。德彬说这是新哥改的，「更注重文化传播」。你打了一行字又删掉，最后发出去的是「你别跟我说」。这个「你别跟我说」里有一种好笑的无奈——明明已经知道了，但不听就等于没发生。</p>
+
+<p>下午的AI工具推广会议里，你说了一个很精准的词：「陪伴式」。不是培训完就放手，不是丢个文档让他们自己琢磨，是「你遇到问题就可以直接找我，我不懂的我就去找技术」。这个想法你显然已经想了很久——你知道培训解决不了上手的问题，知道人对新工具的陌生感不会因为听了一小时的讲解就消失。你想的是机制，不只是方法。薯条也在会上呼应了这个思路，说之前写组队方案时也建议让业务同学和IT同学配对。两个人在不同时间点想到同一件事，说明这不是灵机一动，是踩到了真问题。</p>
+
+<p>海外DAM系统的需求沟通会里，安全是绕不过去的坎。阿千问文件有多大、提醒不能长期开放，「万一有人整个打包带走」。你试图缩小范围——海外货盘只有国内十分之一，只开放这些产品的权限就行。但对方说不行，「他们也会提供一些」。这种你来我往的拉扯，是每个跨部门项目的日常——大家都有道理，但共识要一层一层磨。你后来直接推动：「有办法确认一个范围吗？有些系列不卖的可以剔除掉。」不是在争对错，是在找能落地的那个点。</p>
+
+<p>傍晚在群里复盘AI视觉的时候，你发了一长段话。让几个团队「重新更新并共识一下目标」，说「打造AI标杆」不够明确，要在经营和业务上找到具体或量化的目标。然后补了一句：「接下来半年，我们这几个团队一起达到什么目标，解决什么事情」。这不是日常的进度追问，是站在高处做方向矫正——你看到大家各自推进但没有对齐，你在推他们回到同一个坐标系里。</p>
+
+<p>资源管控是今天你反复在做的一件事。「半个人资源」「严控资源」「能砍就砍，很难拒绝就说我这边不给资源」——这些话出现在不同群里、不同语境下。你知道团队带宽已经被拉得太散：小龙虾在打磨、3.0要上、AI视觉要共识、DAM要开权限、各业务线的AI提效需求排着队。你不是不想做，是知道什么都做的结果是什么都做不好。收紧不是退缩，是帮团队排优先级。</p>
+
+<p>还有一个细节。有人在群里问林氏小龙虾有没有通用PPT。你说没有，「因为内测产品，我们现在还没打算给太多人去使用」。但你后面又补了一句：「最好的方法就是你直接去林氏小龙虾尝试让他完成你日常的一些工作，看看他能不能办到。」真正的推广不是靠PPT，是靠让人自己用出感觉来。你自己就是用这个方法——先用起来，再教别人用起来，然后用教别人的过程反过来打磨产品。</p>
+
+<p>晚上和同事讨论智能体SDK架构的时候，你说了一句挺直白的话：「Cloud Agent SDK几乎吊打一切的哈尼斯。」不是说自家产品不行，是看到了差距，然后已经「手搓了一些基于Cloud Agent SDK的应用」。这不只是技术判断，是一种做事方式——不等正式立项，不等完美方案，先把东西做出来看看。这和你在AI视觉群里的那句「不要定一大堆东西把事情搞复杂了」是同一种本能。</p>
+
+<p>还有一个小的瞬间。有人在群里贴了AI使用数据的反馈，你回了一句：「我们目前还在内测阶段，本意是不主动推广林氏小龙虾，我们产品还要进行打磨。」紧跟着又补了一句：「按理是各线路自行推广和统计。客中是安排了作业，让各同学反馈，收集案例的。」你设了边界——帮一次可以，但不会变成常态。不推卸责任，也不把别人的活揽到自己身上。</p>
+
+<p>夜晚的最后几条消息是赛事方案更新、封面海报就位、评委名单提交。明天还有更多的协调、更多的拉扯、更多的「你别跟我说」。但你知道方向是对的。</p>
+</div>
+</div>
+
+<div class="footer">
+  Hermes Agent · 每日复盘自动生成 · 基于7场AI听记 + 170条聊天记录
+</div>
+
+<script>
+function switchTab(type) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => {
+    t.classList.remove('active', 'biz', 'diary');
+    if (t.textContent.includes(type === 'biz' ? '商业' : '日记')) {
+      t.classList.add('active', type === 'biz' ? 'biz' : 'diary');
+    }
+    if (t.textContent.includes(type === 'biz' ? '日记' : '商业')) {
+      t.classList.add(type === 'biz' ? 'diary' : 'biz');
+    }
+  });
+  document.getElementById('panel-' + type).classList.add('active');
+}
+</script>
+</body>
+</html>
