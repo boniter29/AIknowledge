@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-07-29 · 周三</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
+    background: #0f1117; color: #d1d5db; line-height: 1.8;
+    max-width: 720px; margin: 0 auto; padding: 0 16px;
+  }
+  header {
+    padding: 32px 0 16px; border-bottom: 1px solid #1e2130;
+    text-align: center;
+  }
+  header h1 { font-size: 22px; color: #e5e7eb; margin-bottom: 6px; }
+  header .date { font-size: 14px; color: #6b7280; }
+  .tabs {
+    display: flex; gap: 0; margin: 24px 0 0;
+    border-bottom: 2px solid #1e2130;
+  }
+  .tab {
+    flex: 1; padding: 12px 0; text-align: center; cursor: pointer;
+    font-size: 15px; font-weight: 600; border: none; background: none;
+    color: #6b7280; transition: color 0.2s, border-color 0.2s;
+    border-bottom: 2px solid transparent; margin-bottom: -2px;
+  }
+  .tab.active.business { color: #60a5fa; border-color: #60a5fa; }
+  .tab.active.diary { color: #f472b6; border-color: #f472b6; }
+  .tab:hover { color: #9ca3af; }
+  .panel { display: none; padding: 24px 0 48px; }
+  .panel.active { display: block; }
+  .panel.business p { margin-bottom: 18px; }
+  .panel.business strong { color: #93c5fd; }
+  .panel.diary p { margin-bottom: 18px; }
+  .panel.diary em { color: #f9a8d4; font-style: normal; }
+  .divider { border: none; border-top: 1px solid #1e2130; margin: 28px 0; }
+  blockquote {
+    border-left: 3px solid #374151; padding: 8px 16px;
+    margin: 16px 0; color: #9ca3af; font-style: italic;
+    background: #131620; border-radius: 0 6px 6px 0;
+  }
+  footer {
+    padding: 24px 0; border-top: 1px solid #1e2130;
+    text-align: center; font-size: 12px; color: #4b5563;
+  }
+  footer a { color: #6b7280; text-decoration: none; }
+</style>
+</head>
+<body>
+<header>
+  <h1>每日复盘</h1>
+  <div class="date">2026年7月29日 · 周三 · 5场会议 163分钟 · 213条消息</div>
+</header>
+<nav class="tabs">
+  <button class="tab active business" onclick="switchTab('business')">📊 商业复盘版</button>
+  <button class="tab diary" onclick="switchTab('diary')">📝 日记版</button>
+</nav>
+
+<div id="business" class="panel business active">
+
+<p><strong>当AI建设的推进者无法回答"做到什么程度算成功"时，项目就会从交付之争滑向定义权之争。</strong></p>
+
+<p>7月29日的五场会议，表面看是五个独立的议题——AI体系化建设的目标缺失、AI全链路内容生产、专家套件产品评审、小林AI架构升级评估、财务闭环项目结项争议——但贯穿其中的是同一个紧张的弦：当做事的人说不清目标，决策的人就给不出标准。</p>
+
+<p>CHENCHAO花了几个月画出一张40个节点的全景图，把AI化的"输入输出"填满每个格子，却无法回答一个问题：这些节点解决的是产量问题、质量问题、还是成本问题？他在白皮书里做了GSA计划，给了责任人、完成时间、预期效益，但当你追问"产量从多少提到多少，成本降百分之几，质量用什么指标衡量"时，全景图突然变得像一场填字游戏——每个格子都填了，但连起来读不出一个故事。</p>
+
+<p>这不是CHENCHAO一个人的问题。同一天的财务闭环项目，IT交付了立项范围里的所有模块，业务方却说"你们完成了任务，但没达到我的目的"。这个矛盾的本质是同一件事：<strong>立项时的功能清单不等于业务方的成功标准。</strong>当"做完了"和"做成了"之间没有量化桥梁，结项就会变成一场互相指责的拉锯战——63分钟，7个人，最终达成的唯一共识是"8月12日无论验收结果如何，强制结项"。这不是胜利，是所有人都累了。</p>
+
+<p>健新在同一天给出了诊断这个病的方子。他的原话被反复引用和咀嚼："我们总是把一些简单的问题想的很复杂，把复杂的问题想的很简单。"具体到林氏小龙虾的BUG问题：有人说招一个AI测试人员就能解决——这是在把简单问题想复杂。本质不是有没有测试人员，是有没有测试环节。在AI加持下，产品经理不能做测试吗？用户不能做测试吗？为什么需要一个专职的人才能启动测试流程？这个追问的逻辑链是：<strong>工具变强了→测试门槛降低了→组织流程没跟上→问题暴露在产品上→被误诊为资源问题。</strong></p>
+
+<p>这条逻辑链恰好解释了CHENCHAO和财务闭环的两难处境：他们都在做"填格子"的事，但没有人定义格子填完之后，世界应该变成什么样。CHENCHAO把"用AI把整个组织的体系改一遍"当作目标，这本质上是一个手段而非目的——体系改革服务于什么？增收？降本？提效？这个问题不回答，40个节点的优先级排序就失去了锚点，任何一个节点的P0都可以被质疑。</p>
+
+<p>另一条线也在验证同一个判断。小林AI架构升级评估会议上，团队面对一个经典决策：自研的Harness vs Cloud Agent SDK。结论是"评测驱动"——不纠结架构选型的对错，直接拉数据对比RAG效果和SDK表现。这种"先跑数据再决策"的思路，本质上就是健新说的"看到本质"：架构争论是复杂问题，数据对比是简单答案。同时专家套件评审会上，一个关键提醒被抛出——"千万不要做成sub agent或者workflow的形式，会要么极致消耗token，要么降智"。产品形态的选择，最终还是要回到本质问题：这个工具到底要为谁解决什么。</p>
+
+<p>今天的信号在本周持续累积。AI体系化建设的目标问题从周一就开始发酵，今天CHENCHAO的回应是"目标他是清楚的，只是大家没有达成共识"——这句话本身就是一个危险信号：<strong>当推进者认为目标已清晰而协作者不这么认为时，问题已经从"目标是什么"变成了"谁有权力定义目标"。</strong>用户在同一天的反思里写道："核心矛盾是问题和策略的定义权"——这个判断把一周的拉扯收束到了一个精确的概念上。</p>
+
+</div>
+
+<div id="diary" class="panel diary">
+
+<p>健新那句"把简单问题想复杂，把复杂问题想简单"，在今天的每一场会议里都能找到回响。</p>
+
+<p>早上开完AI体系化建设的会，我在钉钉上给水滴发了一长串消息。不是抱怨，是真的迷茫。"我们未来半年的投入到底解决什么问题，要达到什么目标，和目标之间有多少gap"——这个问题我问了三遍，CHENCHAO给了三版答案，每一版都比上一版详细，但没有一版回答了"做到什么程度算成功"。他最新那一版全景图拆成了40个节点，输入输出写得密密麻麻。我去看了，每一个格子都填了字，但连起来读不出这个故事要讲到哪里。这不是他不努力，是他把<em>目标的定义权</em>和<em>策略的定义权</em>绑在一起了——一旦接受别人定义的目标，他的故事可能就讲不下去了。</p>
+
+<p>中午跟健新聊，他几句话把我最近脑子里转的东西全讲透了。他说有人提的"招AI测试"是在把简单问题想复杂——现在这个时代，AI都能写代码了，你告诉我没有专职测试人员就不能做测试？产品经理不能测？用户不能测？缺的不是人，是流程。需求→开发→测试→验收，这四个环节在林氏小龙虾的迭代里从来没跑通过。而另一边，CHENCHAO的全景图就是在把复杂问题想简单——"用AI把整个组织的体系改一遍"，听起来像一句口号，但当你追问量化目标时，它脆弱得经不起任何追问。</p>
+
+<p>健新这个人最厉害的地方，是他永远先问"这个事情的本质是什么"。我发现自己看了很多问题总是看不到本质，而他几乎本能地就能做到。今天他在群里说了一句让我记了一整天的话：<em>事物的发展是螺旋上升的。矛盾是普遍存在的，要辩证地看待矛盾的对立和统一。</em>他用辩证法来理解CHENCHAO的不配合——这不是态度问题，是定义权之争。谁定义问题和策略，谁就掌握了AI体系化建设的方向盘。</p>
+
+<p>下午的财务闭环会议是今天最让人疲惫的一场。63分钟，7个人。IT方说功能都交付了，业务方说目的没达到。我看着他们在"装箱单"的字段差异上纠结了一个小时，最后达成的唯一共识是"8月12日强制结项"。散会后我在群里跟Cris说：<em>拉了这么一个会我其实已经不在乎他们项目怎么评价了</em>——这句话打出来的时候我自己都愣了一下。年初我为这个项目跑了多少轮沟通，现在只想让它赶紧结束。不是不在乎结果，是一年的拉锯已经把所有人的耐心磨成了同一种疲惫。</p>
+
+<p>今天还做了几件让人开心的事。跟薯条聊了Claude和GPT的模型对比——Claude opus 4.6写作最强，GPT 5.6 sol在智能体编程上独一档，Claude Fable 5的复杂编程规划能力很惊艳。为了用上更好的Claude，自费快300美元了，在尝试跨境卫士的Claude账号，后面还是打算用住宅IP自己养号。薯条说我"自费200美元没报销"，我说"宁愿自费也得用好了，生产力差距巨大"。</p>
+
+<p>还有文鑫分享的Fable寓言Skill，用心理学、管理学、人工智能的概念都测试了一下，效果还可以。准备周五分享会上用。Cris帮忙在群里张罗下午茶——说了好久一直没点，明天终于有人来点了。</p>
+
+<p>下班前提交了周一的调休假。这几周工作强度有点大，最近一个月周末基本没怎么休息。跟新哥说的时候还补了一句玩笑：周末在家就是一天蹬一周的额度。其实不是玩笑。晚上回去经常9-10点了，有时候还要上AI课上到11-12点。</p>
+
+<p>洁敏今晚不知道几点走，在群里问了她"今晚几点走呀"。这种日复一日的通勤搭车，已经成了一种不用言说的默契。</p>
+
+</div>
+
+<footer>
+  由 Hermes Agent 自动生成 · 
+  <a href="https://boniter29.github.io/AIknowledge/">AIknowledge</a>
+</footer>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active', 'business', 'diary'));
+  document.getElementById(name).classList.add('active');
+  const tab = document.querySelector(`.tab.${name === 'business' ? 'business' : 'diary'}`);
+  // Find the right button
+  document.querySelectorAll('.tab').forEach(b => {
+    if ((name === 'business' && b.textContent.includes('商业')) || 
+        (name === 'diary' && b.textContent.includes('日记'))) {
+      b.classList.add('active', name);
+    }
+  });
+}
+</script>
+</body>
+</html>
