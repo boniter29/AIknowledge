@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>每日复盘 2026-07-30</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;background:#0d1117;color:#c9d1d9;line-height:1.75;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:24px 20px 60px}
+.header{padding:32px 0 24px;border-bottom:1px solid #21262d;margin-bottom:28px}
+.header h1{font-size:24px;font-weight:700;color:#e6edf3;letter-spacing:-0.3px}
+.header .date{font-size:14px;color:#8b949e;margin-top:6px}
+.header .meta{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
+.header .tag{padding:3px 10px;border-radius:12px;font-size:12px;font-weight:500}
+.tag-meetings{background:rgba(88,166,255,0.15);color:#58a6ff}
+.tag-messages{background:rgba(163,113,247,0.15);color:#a371f7}
+
+.tabs{display:flex;gap:0;margin-bottom:28px;border-bottom:1px solid #21262d}
+.tab{flex:1;padding:12px 16px;text-align:center;font-size:15px;font-weight:500;cursor:pointer;border:none;background:none;color:#8b949e;border-bottom:2px solid transparent;transition:all 0.2s;font-family:inherit}
+.tab.active{color:#e6edf3;border-bottom-color:#58a6ff}
+.tab.diary.active{border-bottom-color:#f78166}
+.tab:hover{color:#c9d1d9}
+
+.panel{display:none}
+.panel.active{display:block}
+
+.content h2{font-size:20px;color:#e6edf3;margin:32px 0 16px;font-weight:600}
+.content p{margin:0 0 16px;font-size:16px;color:#c9d1d9;text-align:justify}
+.content .lead{font-size:17px;font-weight:500;color:#e6edf3;margin-bottom:24px;padding:16px 20px;background:rgba(88,166,255,0.08);border-radius:10px;border-left:3px solid #58a6ff}
+.diary-panel .lead{background:rgba(247,129,102,0.08);border-left-color:#f78166}
+
+.content em{font-style:normal;color:#58a6ff}
+.diary-panel em{color:#f78166}
+
+.content strong{color:#e6edf3}
+
+.stats{display:flex;gap:16px;margin:20px 0 32px;flex-wrap:wrap}
+.stat-card{flex:1;min-width:100px;background:rgba(255,255,255,0.03);border:1px solid #21262d;border-radius:10px;padding:16px;text-align:center}
+.stat-card .num{font-size:28px;font-weight:700;color:#58a6ff}
+.stat-card .label{font-size:12px;color:#8b949e;margin-top:4px}
+
+.section-divider{height:1px;background:#21262d;margin:28px 0}
+
+.footer{margin-top:40px;padding-top:20px;border-top:1px solid #21262d;font-size:12px;color:#484f58}
+
+@media(max-width:480px){
+  .container{padding:16px 14px 40px}
+  .header h1{font-size:20px}
+  .content p{font-size:15px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>每日复盘 · 7月30日 周四</h1>
+    <div class="date">2026年7月30日 · 星期四</div>
+    <div class="meta">
+      <span class="tag tag-meetings">🏢 4场会议 · 156分钟</span>
+      <span class="tag tag-messages">💬 74条聊天</span>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('business')">📊 商业复盘</button>
+    <button class="tab diary" onclick="switchTab('diary')">📝 日记随笔</button>
+  </div>
+
+  <div id="business" class="panel active content">
+    <div class="lead">当四个会议的隐含主题都指向同一个推力——AI正在改变的不只是工具层，而是组织的协作成本结构——7月30日的真正信号不在任何一场会议里，而在它们之间的关系中。</div>
+
+    <p>商品对比AI客服那场会只有22分钟，但暴露的问题很典型：同事现在做的对比图是手动生成的，发给客户后「让客户看这个图片就是可能没有什么重点」。这不是一个技术问题——是信息密度和信息结构的矛盾。AI对比能解决的不是「做得更快」，而是「给客户看什么」这个决策本身可以被自动化。</p>
+
+    <p>Cloud SOP那场55分钟的产品调研更有意思。同事在调研的是一个企业IM内的AI机器人——类似Slack Bot在钉钉/企微里的形态。关键不在产品形态，而在她讲「产品的定义形态、还有它的一些相关的机制」时那种从零构建产品认知的方式。当一个团队开始系统性地研究「AI如何嵌入现有工作流」，而不是「这个AI功能能做什么」，产品思路就已经从功能驱动转向了流程驱动。</p>
+
+    <p>而绩效调整那场8人会议把今天串起来了。核心改动只有一条：取消强制排名。管理成本太高——「每个月除了打个1.2跟1.0之外，中间的那一撮人都要做排名，要排出个23456789」。这句话的逻辑反过来推：如果AI在承担越来越多重复性工作，个体产出的方差在缩小，排名本身的信号价值就在衰减。不是排名太难做，是它不再值得做。</p>
+
+    <p>这四场会表面无关——客服效率、产品调研、电商自动化、绩效机制——但底层是同一个推力在作用。组织正在从「管人」过渡到「管人+AI的混合工作流」，而管理工具还没跟上。强制排名的取消是这个过渡期的第一个制度性信号。</p>
+
+    <p>电商那场45分钟的对话也佐证了这一点。同事在解释为什么需要找外部供应商时说的很直白：「我们内部之前干了些AI工具&hellip;阿里的工具它有的好用有的不好用」。这不是在选工具，是在搭建一个多供应商的AI能力矩阵。当内部已经跑过一轮、知道什么能自动化什么不能时，再找外部就不是「试试看」，而是精准补位。</p>
+
+    <p>今天74条聊天消息里，下午茶点单占了至少20条——从喜茶到平台切换、打包费、按名单叫人——这本身也是协作成本的一个切面。当管理精力被这些「人肉运维」吃掉的时侯，AI的价值就不是锦上添花，而是刚需。</p>
+  </div>
+
+  <div id="diary" class="panel content diary-panel">
+    <div class="lead">下午茶的订单改了三次。</div>
+
+    <p>先是说霸王茶姬，有人嘀咕「换个平台一样吗」，然后发现「每一杯居然还有打包费」——于是切到喜茶。人数从12到「12个人，买15杯吧，留三杯备着，如果没人喝就带回家」。名单改了两次，因为要把三园写成三圆被纠正，还有人在群里喊「你们三圆打错了啊哈哈哈哈」。最后定了18杯。</p>
+
+    <p>就这么一件小事，从选品台到定人数到纠错字，跑了20多条消息。而穿插在这20条消息之间的，是四场会。</p>
+
+    <p>第一场讲AI客服。同事在展示商品对比功能时语气里有一种微妙的无奈——「让客户看这个图片就是可能没有什么重点嘛」。她说「嘛」字的时候，不是抱怨AI不行，是在说当前的工作流太笨了。对比图生成了，但信息密度不够，客户扫一眼就过了。这个22分钟的会最终落在一个非常具体的点上：AI不是要替代人做对比，是要决定「给客户看什么」。</p>
+
+    <p>第二场最长，55分钟。做产品调研的同事在讲Cloud SOP——Slack里的AI机器人。她在开头特意请人解释了Slack是什么，因为「它是类似于我们钉钉的」。这种解释成本本身就是信号：团队在做的事已经在跨语境了。她讲「产品的定义形态」时，那种从零搭框架的认真，让人想起第一次搭商品视觉体系时的感觉。</p>
+
+    <p>第三场电商自动化的会有火药味。同事在解释为什么找了外部供应商时，另一个同事打断了他，他说「你先不要打断我嘛，我先讲完嘛」。45分钟的会，前10分钟在这个节奏上。但当他终于讲完需求后，逻辑很清晰：阿里工具好用但有限，内部已经跑过一轮，现在找外部是因为知道缺口在哪。这不是外包，是补位。</p>
+
+    <p>第四场绩效会最重。8个人，33分钟，核心议题是把强制排名砍掉。宣讲的同事说「管理者成本」时不用解释——每个人都知道这意味着什么。「除了打个1.2跟1.0之外，中间的那一撮人都要做排名」——这半句话的重点不是排名本身，是「中间那一撮人」这个措辞。当团队足够大、工作足够标准化时，中间层确实很难分出23456789。</p>
+
+    <p>回到下午茶。18杯喜茶送过来的时候，牛奶和PK按名单叫人。视觉那边的费用是用户自己出——「视觉那边的我出，视觉的每人反正一杯喝的一起吃东西呗」。120块预算分给团队每个人，垫付的退钱，报销的走流程。一个完整的费用结算逻辑，在5条消息里讲清楚了。</p>
+
+    <p>今天最微妙的感觉是：管理正在从「区分人」变成「连接人+工具」。绩效取消排名是一个信号，AI客服、Cloud SOP、电商自动化是另一面的推力。下午茶是这两者之间的润滑剂——那些「打错了啊哈哈哈哈」和「不用等我，我也吃不了多少」，把系统性的张力化解在过去了。</p>
+
+    <p>这就是周四。没有惊天动地的事，但每件事都在往同一个方向挪。</p>
+  </div>
+
+  <div class="footer">
+    Generated by Hermes Agent · daily-review-2026-07-30
+  </div>
+</div>
+
+<script>
+function switchTab(tab) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  if(tab === 'business') {
+    document.querySelectorAll('.tab')[0].classList.add('active');
+    document.getElementById('business').classList.add('active');
+  } else {
+    document.querySelectorAll('.tab')[1].classList.add('active');
+    document.getElementById('diary').classList.add('active');
+  }
+}
+</script>
+</body>
+</html>
