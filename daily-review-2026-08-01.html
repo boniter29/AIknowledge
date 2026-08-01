@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-01</title>
+<style>
+  :root { --bg:#0f1117; --card:#181b26; --card2:#1e2230; --text:#e8eaf0; --muted:#9aa3b5;
+          --blue:#4f6ef7; --pink:#f472b6; --line:#2a2f3f; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+         line-height:1.85; padding:0 0 60px; }
+  .wrap { max-width:800px; margin:0 auto; padding:0 20px; }
+  header { padding:36px 0 20px; border-bottom:1px solid var(--line); margin-bottom:20px; }
+  .kicker { font-size:13px; color:var(--muted); letter-spacing:2px; }
+  h1 { font-size:24px; font-weight:700; margin-top:8px; }
+  .date { font-size:14px; color:var(--muted); margin-top:6px; }
+  .tabs { display:flex; gap:10px; margin:22px 0 18px; }
+  .tab { flex:1; text-align:center; padding:12px 0; border-radius:12px; cursor:pointer; font-size:15px; font-weight:600;
+         background:var(--card); color:var(--muted); border:1px solid var(--line); transition:all .2s; user-select:none; }
+  .tab.active { color:#fff; border-color:transparent; }
+  .tab.biz.active { background:linear-gradient(135deg,#4f6ef7,#7c5cf0); box-shadow:0 4px 18px rgba(79,110,247,.35); }
+  .tab.per.active { background:linear-gradient(135deg,#f472b6,#ec4899); box-shadow:0 4px 18px rgba(244,114,182,.3); }
+  .panel { display:none; }
+  .panel.active { display:block; animation:fade .3s ease; }
+  @keyframes fade { from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:none;} }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px 22px 8px; margin-bottom:16px; }
+  .card.biz { border-left:3px solid var(--blue); }
+  .card.per { border-left:3px solid var(--pink); }
+  .card p { margin-bottom:14px; font-size:15.5px; }
+  .card strong { color:#fff; font-weight:700; }
+  .card.biz strong { color:#a5b8ff; }
+  .card.per strong { color:#fbb6d9; }
+  .biz-lead { font-size:16.5px; }
+  .per-lead { font-size:16px; }
+  footer { margin-top:28px; text-align:center; font-size:12.5px; color:var(--muted); }
+  .pill { display:inline-block; font-size:12px; padding:2px 10px; border-radius:99px; border:1px solid var(--line); color:var(--muted); margin-right:6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">HERMES DAILY REVIEW · PRO</div>
+    <h1>每日复盘 2026-08-01</h1>
+    <div class="date">周六 · 低数据日 · 一份下半年清单</div>
+  </header>
+
+  <div class="tabs">
+    <div class="tab biz active" onclick="switchTab('biz')">📊 商业复盘版</div>
+    <div class="tab per" onclick="switchTab('per')">📝 日记版</div>
+  </div>
+
+  <div id="biz" class="panel active">
+    <div class="card biz">
+      <p><strong>这份清单不是在列任务，是在给下半年的组织换一套管理语言——从「我们建了什么」切换到「我们怎么算钱、怎么计量使用、怎么把体验做薄」。</strong></p>
+<p>周六，没有会议，没有AI听记，聊天记录里只有一条消息。但一份没有署名的下半年事项清单，信息密度超过了过去一周的大部分会议。12条，从IT费用测算（2026下半年、全年、27年Q1）到机房改造方案，粗略可分四类：算钱的（IT费用测算、第三方平台对接清单）、计量的（AI工牌定期使用情况）、做薄的（小林智数用户定位、售后责任分类精简、用户心智/服务地图语言统一、官网材料更新）、稳地基的（商品知识库、帆软慢SQL监控、机房改造、林氏放我家3.0、小红书KOS自动化全链路）。做新功能的只有两条，其余全在讲「怎么管理已经建成的东西」。</p>
+<p>这份清单最大的信号不在任何单一项，而在它出现的形态本身：AI建设从「建」进入「管」的拐点，在这里完成了最后一格拼图。过去一周反复讨论的几条线，都在清单上找到了制度化落点。</p>
+<p><strong>算钱的口径，第一次成为一级工作流。</strong> IT费用测算横跨下半年、全年、27年Q1三个时间窗；第三方平台对接清单要求写明对接方式、是否存在跨体系调用，且明确「和费用管理梳理一起输出」——这不是财务的例行报表，是把7/25 CHENCHAO那句「如果非得内部做，成本反而高」从一句断言变成一套机制。回头看这一周：7/25视觉自建工具的差异化困局第一次被成本账检验，7/31前端选型还在两难里，周六这份清单直接要求把全公司的平台对接和费用管理并轨。成本账就是战略——这句话在清单上被制度化了。</p>
+<p><strong>「覆盖率」从口号变成报表。</strong> 7/27超哥质疑「产量目标达成为什么还要做SOP赋能」时，我们得出的判断是：AI覆盖率才是真正的指标，而不是AI产量。周六的清单里，「让业务发AI工牌的定期使用情况」——这就是覆盖率问题的操作化：不计量使用，一切赋能都是自说自话。同一条逻辑链上，商品知识库被明确标注为「AI客服依赖前置条件」——7/30那场商品对比AI客服会暴露的「给客户看什么」的信息结构问题，现在有了明确的施工顺序：先建知识库，再谈AI客服。</p>
+<p><strong>视觉这条线从「解释边界」进入「定义边界」。</strong> 7/25我们还在解释「自定义提示词解决不了商品图角度问题，因为AI没见过那个角度的产品」；周六清单里写着「林氏放我家3.0，生图视角、参数要有要求」——上周的边界解释，这周变成了demo的验收标准。浮云刘艺要尽快做出demo，说明3.0已经从构思进入执行倒计时。上周那句「暂时即使是开了自定义提示词也不能满足」留的那扇门，这周被明确推开了。</p>
+<p>把四类放在一起看，隐藏结构就出来了：清单里所有「管理动作」都在为同一个问题铺路——7/29留下的那句「做到什么程度算成功」。费用测算能回答花了多少，AI工牌使用情况能回答用了多少，但「好了多少」的指标依然空缺。清单把账本建好了，指标那一格还空着。这不是疏忽，是组织能力还没走到那一步：能算钱的团队有了，能定义「成功」的团队还没出现。</p>
+<p>接下来三周，两类动作会分化：清单上的「管」项会快速落地——费用口径、使用报表、知识库排期都是执行层的事；而「成功定义」的空缺会再次以会议的形式出现，直到有人把7/29那个问题正面接住。清单是地图，不是答案。</p>
+    </div>
+  </div>
+
+  <div id="per" class="panel">
+    <div class="card per">
+      <p>周六的聊天记录里只有一条消息，是我自己发出去的两朵花和一个赞。</p>
+<p>没有上下文，不知道送给谁，也不知道在回谁的哪句话。但周六还愿意打开钉钉、主动发点什么的时刻，通常只有一种：这周有哪件事，干得让自己满意了。花和赞都是溢出来的——工作是做完了才有的余量，不是挤出来的。</p>
+<p>傍晚收到一份清单。没有署名，12条，从IT费用测算（2026下半年、全年、27年Q1）到机房改造方案。像一封提前寄到的课程表：暑假还没过完，下学期的课已经排好了。</p>
+<p>我一条一条往下看。看到「机房改造方案：升级问题，如水桶有倒的」的时候愣了一下。整份清单里最不像战略的一句话，却最有画面感——再宏大的下半年规划，最后都落在一只倒掉的水桶上。机房的水桶都倒了，说明问题真实到不需要修辞。</p>
+<p>看到「M层看按钮多会劝退」也停了一下。给小林智数定位用户人群，结论是按钮多是劝退因素。我其实当过那个被劝退的人——打开一个工具，满屏功能，不知道从哪下手，最后默默关掉。产品做了一年多，最大的敌人可能是按钮数量。这句话是别人写进清单的，但读起来像在说我。</p>
+<p>「浮云刘艺要尽快做出demo」——林氏放我家2.0在跑，3.0的结构已经有了构思。上周还在跟人解释「AI没见过你那个角度的产品」，这周清单上已经写着「生图视角、参数要有要求」。从解释边界，到定义边界，中间只隔了一个周末。也隔着一个demo。</p>
+<p>「27年Q1」——看到这个年份，恍惚了一下。2026年刚过完一半多，清单已经排到了明年一季度。时间在这份清单上是折叠的：水桶倒了的机房是今天，费用测算的截止窗口在明年。一个周六的傍晚，同时装着最具体和最遥远的事。</p>
+<p>把清单关掉，屏幕暗下去。明天是周日，周报18:00截止。周一它们都会醒过来——费用口径、知识库排期、那个demo。今天先让它们睡着。</p>
+<p>我也该去睡了。周六的尾巴，很短。</p>
+    </div>
+  </div>
+
+  <footer>
+    <span class="pill">AI听记 0</span><span class="pill">聊天 1</span><span class="pill">@我 1</span>
+    <p style="margin-top:10px">每日复盘 · 商业版 + 日记版 · 自动双存 · GitHub Pages 部署</p>
+  </footer>
+</div>
+
+<script>
+function switchTab(t){
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
+  document.querySelector('.tab.'+t).classList.add('active');
+  document.getElementById(t).classList.add('active');
+}
+</script>
+</body>
+</html>
