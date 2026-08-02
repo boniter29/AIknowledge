@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-02</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0f1117; color: #e5e7eb;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.75; padding: 24px 16px 60px; max-width: 800px; margin: 0 auto;
+  }
+  .header { text-align: center; padding: 28px 0 20px; }
+  .header .date { font-size: 13px; color: #8b93a7; letter-spacing: 2px; }
+  .header h1 { font-size: 22px; font-weight: 700; margin-top: 8px; background: linear-gradient(90deg, #4f6ef7, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .tabs { display: flex; gap: 10px; justify-content: center; margin: 22px 0 26px; }
+  .tab {
+    flex: 1; max-width: 220px; padding: 11px 0; border-radius: 12px;
+    border: 1px solid #262b3d; background: #161923; color: #aab2c5;
+    font-size: 15px; font-weight: 600; cursor: pointer; transition: all .2s;
+  }
+  .tab.active-biz { background: rgba(79,110,247,.15); border-color: #4f6ef7; color: #8fa3ff; }
+  .tab.active-pers { background: rgba(244,114,182,.12); border-color: #f472b6; color: #f9a8d4; }
+  .panel { display: none; }
+  .panel.active { display: block; }
+  .card {
+    background: #161923; border: 1px solid #222838; border-radius: 16px;
+    padding: 24px 22px; margin-bottom: 18px;
+  }
+  .card p { margin-bottom: 14px; font-size: 15px; color: #d6dae4; }
+  .card p:last-child { margin-bottom: 0; }
+  .card strong { color: #ffffff; font-weight: 700; }
+  .biz-card { border-left: 3px solid #4f6ef7; }
+  .pers-card { border-left: 3px solid #f472b6; }
+  .lead {
+    font-size: 15.5px; line-height: 1.85; padding: 20px 20px;
+    border-radius: 14px; margin-bottom: 18px;
+  }
+  .lead-biz { background: linear-gradient(135deg, rgba(79,110,247,.12), rgba(79,110,247,.03)); border: 1px solid rgba(79,110,247,.35); }
+  .lead-pers { background: linear-gradient(135deg, rgba(244,114,182,.10), rgba(244,114,182,.03)); border: 1px solid rgba(244,114,182,.32); }
+  .lead strong { color: #fff; }
+  .foot { text-align: center; color: #5b6478; font-size: 12px; margin-top: 30px; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="date">DAILY REVIEW · 周日</div>
+    <h1>每日复盘 2026-08-02</h1>
+  </div>
+  <div class="tabs">
+    <button class="tab active-biz" id="tab-biz" onclick="showTab('biz')">📊 商业版</button>
+    <button class="tab" id="tab-pers" onclick="showTab('pers')">📝 日记版</button>
+  </div>
+  <div class="panel active" id="panel-biz">
+    <div class="lead lead-biz"><p><strong>周日的复盘不该写「今天做了什么」，而该写「周日晚上的后台」——催周报、批请假、扫行业，三件事共享同一个推力：团队的节奏管理，正在从「人盯人」过渡到「机制 + 人兜底」，而周日晚上就是这段过渡里最真实的压力测试。</strong></p></div>
+    <div class="card biz-card"><p>▎今天有什么</p>
+<p>数据上是安静的一天：0 场会议、0 条 AI 听记、8 条消息，且全部是我自己发出的。没有对谈、没有 @，只有一个人在周日晚上的「后台操作」。但这 8 条消息里，藏着三种时间尺度。</p>
+<p>第一条线是日节奏。17:00 的周报自动催交通知因 cron 配置漂移没发出去，我手动补发，截止从 18:00 延到 22:00。已提交 4/6：米酒、YIYI、文鑫、水滴；未提交 2/6：浮云、Cris。这条线的因果链值得拆：自动化省心，但自动化会静默失败——没有报错、没有提示，只是「没发生」。而我能发现它失效，靠的不是监控面板，而是「这个点应该有消息」的直觉。这意味着团队管理自动化的真正成本不在搭建，而在「监控监控者」：每一层自动化之上，都要有人对「它本该发生」保持敏感。那句「这响应号召的力度不够啊」是玩笑，也是量化——从催收到提交之间隔着的，是每个人对「截止」这个词的执行力。</p>
+<p>第二条线是季度视角。周日晚上我还在扫行业：豆包 seed-evolving 的多模态，「比较顶级」，这两天已有其他团队在提。当多个团队开始把同一个模型当作对标对象，说明它已经跨过了「能用」的门槛，进入「值得研究」的区间。seed-evolving 这条技术路线的潜台词是：不做基座重训，靠数据回流与持续进化迭代能力——这正在成为多模态竞争的新打法。对我们做 AI 落地的启示是：选型时多模态能力的分位，可能比参数规模更能决定产品上限，值得在下一轮技术评审里放上桌。</p>
+<p>第三条线是周排班。批了两条请假：米酒调休 1 天（8/3 全天）、YIYI 因私外出半天（8/3 上午）。周一的协作盘需要重排。这是小事，但调休文化正常化本身就是健康信号——用调休消化加班，说明团队在维护长期可持续的节奏，而不是靠透支换短期产出。</p>
+<p>▎我的判断</p>
+<p>三件事表面无关，底层是同一个东西：周日晚上，管理者没有真正下班。催收、审批、扫行业，分别对应日、周、季三种时间尺度，都是在为周一「蓄水」。真正值得盯的不是今天做了什么，而是这三条线各自的下一个节点。</p>
+<p>▎一个结论</p>
+<p>下周的观察点有两个：一是 22:00 之前那 2 份周报能否收齐——拖到最后一刻的人与立刻交的人，背后是两种节奏观；二是豆包多模态这条线，会不会在团队里触发一次正经的选型讨论。周日晚上埋下的这两颗种子，周一会发芽。</p></div>
+  </div>
+  <div class="panel" id="panel-pers">
+    <div class="lead lead-pers"><p><strong>周日的微信，8 条消息，全部是我自己发的。</strong></p></div>
+    <div class="card pers-card"><p>下午五点左右，我盯着手机愣了一下：周报提醒该发了，怎么没动静。查了一下，cron 配置漂移，17:00 的自动通知悄悄死在了某个配置文件里。没有报错、没有警告，只是「没发生」。我手动补发，把截止延到 22:00。那一刻有种说不清的感觉——你精心设置的自动化，在没人看见的角落失效，而你靠的居然是「这个点应该有消息」的直觉把它捞了回来。原来人对节奏的敏感，才是最可靠的监控。</p>
+<p>补发完看到已交 4 份、差 2 份，我发了句「这响应号召的力度不够啊」，后面跟了个[憨笑]。发完自己先笑了。周日在群里催周报的人，和被催的人，其实活在同一个时区里——谁也没真正从工作里下班。</p>
+<p>晚上刷行业消息，看到豆包 seed-evolving 的多模态被几个团队提起，说「比较顶级」。周日晚上脑子还在转这些，说不上是卷，就是好奇心没收住。看到别人在进步，心里会痒。</p>
+<p>临睡前批了两条请假：米酒调休一天，YIYI 外出半天，都是周一。点「同意」的瞬间，脑子里已经开始排周一的盘——早上的会谁在、缺了谁、哪些事要重新认领。这个动作我做了无数次，但每次还是会有一瞬间的恍惚：明天一睁眼，就是新的一周了。</p>
+<p>窗外的天已经黑透。周报还差两份，名单上少了两个人，明天是周一。</p>
+<p>把手机放下，今晚就到这里。</p></div>
+  </div>
+  <div class="foot">由 Hermes 自动生成 · boniter29</div>
+<script>
+function showTab(t){
+  var bizP = document.getElementById('panel-biz');
+  var persP = document.getElementById('panel-pers');
+  var tb = document.getElementById('tab-biz');
+  var tp = document.getElementById('tab-pers');
+  if(t==='biz'){ bizP.classList.add('active'); persP.classList.remove('active'); tb.className='tab active-biz'; tp.className='tab'; }
+  else { persP.classList.add('active'); bizP.classList.remove('active'); tp.className='tab active-pers'; tb.className='tab'; }
+}
+</script>
+</body>
+</html>
