@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每周复盘 2026-07-27 ~ 2026-07-31</title>
+<style>
+:root {
+  --bg: #0f0f14; --card-bg: #1a1a24; --border: #2a2a3a;
+  --text: #e0e0e0; --text-secondary: #999; --text-muted: #666;
+  --accent-business: #4f6ef7; --accent-diary: #e8795e; --accent-silence: #a78bfa;
+  --radius: 12px; --radius-sm: 8px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.75;
+  max-width: 720px; margin: 0 auto; padding: 32px 20px 60px;
+}
+h1 { font-size: 1.6rem; margin-bottom: 4px; color: #fff; }
+.subtitle { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 28px; }
+.tabs { display: flex; gap: 4px; margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 0; }
+.tab { padding: 10px 20px; border-radius: var(--radius-sm) var(--radius-sm) 0 0; cursor: pointer;
+  font-size: 0.9rem; color: var(--text-muted); border: none; background: transparent;
+  transition: all 0.2s; }
+.tab.active { color: #fff; border-bottom: 2px solid var(--accent-business); }
+.tab:nth-child(2).active { border-bottom-color: var(--accent-diary); }
+.tab:nth-child(3).active { border-bottom-color: var(--accent-silence); }
+.panel { display: none; animation: fadeIn 0.3s; }
+.panel.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+.thread { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 20px 24px; margin-bottom: 20px; }
+.thread-num { font-size: 0.75rem; color: var(--accent-business); text-transform: uppercase;
+  letter-spacing: 0.08em; margin-bottom: 6px; }
+.thread h2 { font-size: 1.1rem; color: #fff; margin-bottom: 12px; line-height: 1.5; }
+.thread p { font-size: 0.92rem; color: var(--text); margin-bottom: 14px; }
+.thread .highlight { color: var(--accent-business); font-weight: 600; }
+.day-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 4px; }
+.day-tag { font-size: 0.72rem; padding: 3px 10px; border-radius: 20px;
+  background: rgba(79,110,247,0.12); color: var(--accent-business); }
+.verdict-banner { background: linear-gradient(135deg, rgba(79,110,247,0.15), rgba(79,110,247,0.05));
+  border: 1px solid rgba(79,110,247,0.25); border-radius: var(--radius); padding: 20px 24px; margin-bottom: 24px; }
+.verdict-banner .label { font-size: 0.75rem; color: var(--accent-business); text-transform: uppercase;
+  letter-spacing: 0.08em; margin-bottom: 6px; }
+.verdict-banner .quote { font-size: 1.05rem; color: #fff; font-weight: 600; line-height: 1.6; }
+/* Diary panel */
+#panel-diary .thread h2 { color: var(--accent-diary); }
+#panel-diary .thread-num { color: var(--accent-diary); }
+#panel-diary .day-tag { background: rgba(232,121,94,0.12); color: var(--accent-diary); }
+#panel-diary .highlight { color: var(--accent-diary); }
+/* Silence panel */
+#panel-silence .thread h2 { color: var(--accent-silence); }
+#panel-silence .thread-num { color: var(--accent-silence); }
+#panel-silence .day-tag { background: rgba(167,139,250,0.12); color: var(--accent-silence); }
+#panel-silence .highlight { color: var(--accent-silence); }
+.sep { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+.footer { font-size: 0.78rem; color: var(--text-muted); margin-top: 40px; text-align: center; }
+.footer a { color: var(--accent-business); text-decoration: none; }
+blockquote { border-left: 3px solid var(--accent-business); padding-left: 16px; margin: 12px 0;
+  color: var(--text-secondary); font-style: italic; }
+.day-arc { position: relative; padding-left: 20px; }
+.day-arc::before { content: ''; position: absolute; left: 6px; top: 0; bottom: 0;
+  width: 2px; background: rgba(232,121,94,0.25); }
+.day-arc-item { margin-bottom: 18px; position: relative; }
+.day-arc-item::before { content: ''; position: absolute; left: -18px; top: 8px;
+  width: 8px; height: 8px; border-radius: 50%; background: var(--accent-diary); }
+.day-arc-item .day-label { font-size: 0.78rem; color: var(--accent-diary); font-weight: 600; margin-bottom: 4px; }
+.day-arc-item p { font-size: 0.9rem; color: var(--text); margin: 0; }
+</style>
+</head>
+<body>
+
+<h1>🗓️ 每周复盘</h1>
+<p class="subtitle">2026年7月27日（周一）— 7月31日（周五） · 第31周</p>
+
+<div class="tabs">
+  <button class="tab active" onclick="switchPanel('business')">📊 商业版</button>
+  <button class="tab" onclick="switchPanel('diary')">📝 日记版</button>
+  <button class="tab" onclick="switchPanel('silence')">🔇 沉默/未完成</button>
+</div>
+
+<!-- ============ BUSINESS PANEL ============ -->
+<div id="panel-business" class="panel active">
+
+<div class="verdict-banner">
+  <div class="label">如果他们只记得本周的一件事</div>
+  <div class="quote">「产量够了」是一面镜子——它照出的不是AI产能的上限，而是组织在AI时代的成功标准还没被定义。</div>
+</div>
+
+<div class="thread">
+  <div class="thread-num">交叉线索 1</div>
+  <h2>从「产量」到「覆盖率」：一个指标的名字，也是一场权力博弈</h2>
+  <p>周一，超哥丢出一句话：「你们的产量已经达成了，为什么还要做SOP赋能？」这个质疑的逻辑完全自洽——<span class="highlight">在「产量=目标」的框架下，800条就够了，超出的产能没有渠道承接。</span></p>
+  <p>周三，这个张力在CHENCHAO的40节点全景图上达到了顶点。他花了几个月把AI化的「输入输出」填满每个格子，却无法回答一个追问：这些节点到底解决的是产量问题、质量问题、还是成本问题？<span class="highlight">当推进者认为目标已清晰而协作者不这么认为时，问题已经从「目标是什么」变成了「谁有权力定义目标」。</span></p>
+  <p>周五，产品团队在小林AI技能评测会上说「无从下手，没有可安装+测试skill的环境」。这是同一个问题的第三副面孔：定义权之争的结果，最终以「基础设施缺失」的形式下沉到了产品层面。不是没有做，是<span class="highlight">从「做了」到「能用」之间，缺少一个有意识的交付环节。</span></p>
+  <div class="day-tags">
+    <span class="day-tag">周一 · 质疑</span>
+    <span class="day-tag">周三 · 定义权之争</span>
+    <span class="day-tag">周五 · 台阶缺失</span>
+  </div>
+</div>
+
+<div class="thread">
+  <div class="thread-num">交叉线索 2</div>
+  <h2>架构选择：自研还是骑在巨人肩上？</h2>
+  <p>周二，Cloud Agent SDK的Agent Loop机制被发现「几乎吊打一切自研架构」——它在知识库检索时先调工具搜索关键词、再找向量、再做综合判断，而自研的小林AI走的是固定图流程。</p>
+  <p>周三的决策很务实：<span class="highlight">「评测驱动」——不纠结架构选型的对错，直接拉数据对比RAG效果和SDK表现。</span>但同一天的专家套件评审会上，一个关键警告被抛出：「千万不要做成sub agent或workflow，会要么极致消耗token，要么降智。」</p>
+  <p>周五，视觉团队用Codex逆向出了libtv的完整前端技术栈（React + Next.js + XYFlow + WebCodecs + Zustand）。一边在找台阶，一边已经搭了梯子——<span class="highlight">两种速度在同一条产品线上并行，本身就是本周最诚实的组织状态。</span></p>
+  <div class="day-tags">
+    <span class="day-tag">周二 · 发现差距</span>
+    <span class="day-tag">周三 · 评测驱动决策</span>
+    <span class="day-tag">周五 · 逆向执行</span>
+  </div>
+</div>
+
+<div class="thread">
+  <div class="thread-num">交叉线索 3</div>
+  <h2>AI落地：事件驱动还是机制驱动？</h2>
+  <p>1024 AI创意大赛改名、从「技术竞赛」转向「文化传播」——这是一个造势事件。同一天，AI工具推广会议提出了「陪伴式」模式：每条业务线有对口的IT/产品经理做AI陪跑。大赛负责造势，陪伴式负责生根，<span class="highlight">两条线互补，但没有人能回答：大赛奖金拿完之后，往下怎么落地？</span></p>
+  <p>周四的绩效调整——取消强制排名——给出了一个意料之外的回应。取消排名的逻辑是：当AI在承担越来越多重复性工作，个体产出的方差在缩小，<span class="highlight">排名本身的信号价值在衰减。</span>组织正在从「管人」过渡到「管人+AI的混合工作流」，而管理工具还没跟上。这不是AI事件，但它的出现本身就是AI渗透的滞后指标。</p>
+  <div class="day-tags">
+    <span class="day-tag">周二 · 造势+生根</span>
+    <span class="day-tag">周四 · 制度的滞后反应</span>
+  </div>
+</div>
+
+</div>
+
+<!-- ============ DIARY PANEL ============ -->
+<div id="panel-diary" class="panel">
+
+<div class="verdict-banner" style="border-color: rgba(232,121,94,0.25); background: linear-gradient(135deg, rgba(232,121,94,0.12), rgba(232,121,94,0.03));">
+  <div class="label" style="color: var(--accent-diary);">一个人的一周</div>
+  <div class="quote">这周开头他站在走廊里被一个问题砸中，到周三一个朋友帮他看清了本质，周末他提着包去了机场。</div>
+</div>
+
+<div class="day-arc">
+  <div class="day-arc-item">
+    <div class="day-label">周一 · 07/27</div>
+    <p>站在走廊里聊了二十分钟。「产量够了」——这句话不是攻击，是让他发现<span class="highlight">连自己用的词都没想清楚</span>。覆盖率是什么？是用过AI的人占比，还是AI产出在总产出中的占比？这个模糊性不是语言问题，是战略方向还在蒸发的信号。晚上回消息时发现自己对牛奶妹说「我看不到目标是什么，卡点是什么」——话说出口时自己都觉得有点空。</p>
+  </div>
+  <div class="day-arc-item">
+    <div class="day-label">周二 · 07/28</div>
+    <p>从早到晚五场会。在最忙的一天里，他找到了一个精准的词：<span class="highlight">「陪伴式」。</span>不是培训完就放手，是「你遇到问题就可以直接找我，我不懂的我就去找技术」。这个想法显然想了很久，和薯条在不同时间点想到同一件事——不是灵机一动，是踩到了真问题。深夜还在改赛事方案，但那个"陪伴式"的词已经钉进了本周的中心。</p>
+  </div>
+  <div class="day-arc-item">
+    <div class="day-label">周三 · 07/29</div>
+    <p><span class="highlight">本周的转折点。</span>健新说出了那句他记了一整天的话——「把简单问题想复杂，把复杂问题想简单」。林氏小龙虾的BUG不是缺测试人员，是缺测试流程；CHENCHAO的全景图不是不努力，是把定义权和目标权绑在了一起。下午的财务闭环会议63分钟，7个人，唯一共识是"8月12日强制结项"。散会后他说「我已经不在乎他们项目怎么评价了」。但健新的那句话像个减压阀——他终于有一个框架能看懂这一周在发生什么。</p>
+  </div>
+  <div class="day-arc-item">
+    <div class="day-label">周四 · 07/30</div>
+    <p>下午茶改了三遍。从霸王茶姬到喜茶，从12杯改到18杯。穿插在点单的20条消息之间的是四场会——AI客服、Cloud SOP调研、电商自动化、绩效取消排名。他没有试图总结这一天，但这一天的结构自己说出来了：<span class="highlight">管理正在从「区分人」变成「连接人+工具」。</span>下午茶是这两者之间的润滑剂。</p>
+  </div>
+  <div class="day-arc-item">
+    <div class="day-label">周五 · 07/31</div>
+    <p><span class="highlight">赶，但不慌。</span>小林AI会议14分钟快速同频，视觉团队用Codex逆向了完整技术栈，25份员工画像问卷整理完。傍晚找洁敏问几点走，短消息一条比一条短——「坐你车」「回陈村吗」「响哥几点走」。该交的材料都交了，该安排的都说清楚了。发完「下周一我休假了」之后关电脑。不是终于熬到周末的释然，是<span class="highlight">所有账算清之后提起包就走的那种干净的收尾。</span></p>
+  </div>
+</div>
+
+</div>
+
+<!-- ============ SILENCE PANEL ============ -->
+<div id="panel-silence" class="panel">
+
+<div class="verdict-banner" style="border-color: rgba(167,139,250,0.25); background: linear-gradient(135deg, rgba(167,139,250,0.12), rgba(167,139,250,0.03));">
+  <div class="label" style="color: var(--accent-silence);">本周沉默</div>
+  <div class="quote">有些问题被反复提起却从未被回答，有些堵点被所有人感知但没有人负责推动。</div>
+</div>
+
+<div class="thread">
+  <div class="thread-num" style="color: var(--accent-silence);">未完成 1</div>
+  <h2>「AI覆盖率」的量化定义</h2>
+  <p>周一明确提出这个词「还没有一个可量化的定义」。覆盖率是什么？用过AI的人占比，还是AI产出在总产出中的占比？<span class="highlight">五天过去了，这个问题在CHENCHAO的40节点全景图里出现过、在AI委员会讨论里被触碰过，但没有任何一个场合把它作为议程来解决。</span>它在下沉为「战略模糊负债」——每个人都知道它在，但没有人觉得应该由自己来定义。</p>
+  <div class="day-tags">
+    <span class="day-tag">周一提出 · 整周悬置</span>
+  </div>
+</div>
+
+<div class="thread">
+  <div class="thread-num" style="color: var(--accent-silence);">未完成 2</div>
+  <h2>产品评测环境（「台阶缺失」）</h2>
+  <p>周五小林AI会议上最诚实的一句话：「产品有点无从下手，没有可安装+测试skill的环境。」这不是资源问题，<span class="highlight">是基础设施的最后一截缺失——skill开发在推进，评测框架也在搭，但从「开发好了」到「产品能摸到它」，中间缺了一个可操作的接口层。</span>AI委员会的议程调整（缩小范围、聚焦推动）似乎触及了这个问题，但还没有转化为具体的负责人和排期。</p>
+  <div class="day-tags">
+    <span class="day-tag">周五暴露 · 待排期</span>
+  </div>
+</div>
+
+<div class="thread">
+  <div class="thread-num" style="color: var(--accent-silence);">未完成 3</div>
+  <h2>林氏小龙虾的产品-推广悖论</h2>
+  <p>整整一周反复出现同一个死结：<span class="highlight">不推广就缺真实反馈来打磨产品，推广了就会被当成通用问答工具来用。</span>自定义提示词下线后覆盖率下降，有部门反馈「当做豆包在使用」。用户的态度是「暂不投入大规模推广」，但同时也补了一句「按理是各线路自行推广和统计」。不推卸责任，也不把别人的活揽到自己身上——但这个平衡点还没有找到。</p>
+  <div class="day-tags">
+    <span class="day-tag">周一 · 周二 · 周三 · 周四</span>
+  </div>
+</div>
+
+<div class="thread">
+  <div class="thread-num" style="color: var(--accent-silence);">未完成 4</div>
+  <h2>财务闭环项目</h2>
+  <p>63分钟的会议，唯一的共识是「8月12日强制结项」。IT方说功能都交付了，业务方说目的没达到。<span class="highlight">从立项到现在，这个问题不是没人管，是没有人能管——因为「做完了」和「做成了」之间没有量化桥梁。</span>这是一个已经耗尽了所有人耐心的项目，但它的结项方式会成为未来类似项目的先例。</p>
+  <div class="day-tags">
+    <span class="day-tag">周三 · 8/12 强制结项</span>
+  </div>
+</div>
+
+</div>
+
+<hr class="sep">
+<div class="footer">
+  由 Hermes Agent 自动生成 · 基于本周 10 篇每日复盘（5天 × 商业版+日记版）<br>
+  <a href="https://boniter29.github.io/AIknowledge/">AIknowledge</a> · 2026年第31周
+</div>
+
+<script>
+function switchPanel(name) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + name).classList.add('active');
+  document.querySelectorAll('.tab').forEach(t => {
+    if (t.textContent.includes({'business':'商业','diary':'日记','silence':'沉默'}[name])) t.classList.add('active');
+  });
+}
+</script>
+</body>
+</html>
