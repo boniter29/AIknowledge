@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 资讯获取与阅读指南 · 个人内训手册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #f5f0e8;
+    --bg-alt: #ebe2d3;
+    --paper: #fdfaf4;
+    --ink: #2b2419;
+    --ink-soft: #5d544a;
+    --ink-muted: #8a8175;
+    --line: #d8ccb8;
+    --line-soft: #e8ddc9;
+    --accent: #b8472a;
+    --accent-soft: #d97757;
+    --accent-bg: #f8e8df;
+    --gold: #b08545;
+    --code-bg: #2b2419;
+    --code-text: #f5f0e8;
+    --shadow-sm: 0 1px 3px rgba(43,36,25,.08);
+    --shadow-md: 0 4px 16px rgba(43,36,25,.10);
+    --radius-lg: 12px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Noto Sans SC", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.75;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    background-image:
+      radial-gradient(at 20% 10%, rgba(217,119,87,.06) 0, transparent 40%),
+      radial-gradient(at 90% 80%, rgba(176,133,69,.05) 0, transparent 40%);
+    background-attachment: fixed;
+  }
+
+  .progress-rail{
+    position: fixed; top: 0; left: 0;
+    height: 3px; background: var(--accent);
+    width: 0; z-index: 99; transition: width .1s ease;
+  }
+
+  .cover{ position: relative; padding: 70px 5vw 70px; border-bottom: 1px solid var(--line); overflow: hidden; }
+  .cover::before{
+    content:""; position:absolute; top:0; left:0; right:0; height:6px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--gold) 50%, var(--accent-soft) 100%);
+  }
+  .cover-inner{ max-width: 1100px; margin: 0 auto; }
+  .cover-tag{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:13px; font-weight:500; letter-spacing:.2em;
+    color:var(--accent); text-transform:uppercase; margin-bottom:20px;
+  }
+  .cover-tag::before{ content:""; width:32px; height:1px; background: var(--accent); }
+  .cover h1{
+    font-family:"Noto Serif SC", serif; font-weight:900;
+    font-size: clamp(34px, 4.5vw, 54px); letter-spacing:-.01em;
+    line-height: 1.15; color: var(--ink); margin-bottom: 18px;
+  }
+  .cover h1 span{ color: var(--accent); }
+  .cover-sub{ font-size: clamp(15px, 1.3vw, 17px); color: var(--ink-soft); max-width: 680px; line-height: 1.85; }
+
+  .layout{
+    display:grid; grid-template-columns: 260px minmax(0, 1fr);
+    gap: 60px; max-width: 1240px; margin: 0 auto; padding: 50px 5vw 100px;
+  }
+  @media (max-width: 960px){
+    .layout{ grid-template-columns: 1fr; gap: 0; padding: 30px 5vw 80px;}
+    .toc{ position: static !important; max-height:none !important; margin-bottom: 32px; }
+  }
+
+  .toc{ position: sticky; top: 30px; align-self: start; max-height: calc(100vh - 60px); overflow-y: auto; padding-right: 12px; font-size: 14px; }
+  .toc::-webkit-scrollbar{width:4px;} .toc::-webkit-scrollbar-thumb{background:var(--line);border-radius:2px;}
+  .toc-title{
+    font-family:"Noto Serif SC",serif; font-size: 12px; font-weight:700;
+    letter-spacing:.25em; color: var(--ink-muted); text-transform: uppercase;
+    margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line);
+  }
+  .toc ol{ list-style:none; counter-reset: toc; }
+  .toc > ol > li{ counter-increment: toc; margin-bottom: 6px; }
+  .toc a{
+    display:block; padding: 6px 10px 6px 14px; color: var(--ink-soft);
+    text-decoration: none; border-left: 2px solid transparent;
+    transition: all .15s ease; font-weight: 500; line-height: 1.5;
+  }
+  .toc > ol > li > a::before{
+    content: counter(toc, decimal-leading-zero) "  ";
+    color: var(--gold); font-family: "JetBrains Mono", monospace; font-size: 12px; font-weight:700;
+  }
+  .toc a:hover{ color: var(--accent); border-left-color: var(--accent); }
+  .toc a.active{ color: var(--accent); border-left-color: var(--accent); font-weight:700;}
+  .toc ol ol{ margin: 4px 0 6px; padding-left: 16px; }
+  .toc ol ol a{ font-size: 13px; padding: 4px 10px 4px 12px; font-weight: 400; color: var(--ink-muted); }
+  .toc ol ol a::before{ display:none; }
+
+  .content{ min-width: 0; }
+  .content-actions{ display: flex; gap: 8px; justify-content: flex-end; margin-bottom: 16px; }
+  .mini-btn{
+    appearance: none; border: 1px solid var(--line); background: transparent;
+    color: var(--ink-muted); font: inherit; font-size: 12px;
+    padding: 5px 12px; border-radius: 999px; cursor: pointer; transition: all .15s ease;
+  }
+  .mini-btn:hover{ color: var(--accent); border-color: var(--accent); }
+
+  .section{
+    background: var(--paper); border: 1px solid var(--line);
+    border-radius: var(--radius-lg); margin-bottom: 20px; overflow: hidden;
+    box-shadow: var(--shadow-sm); transition: box-shadow .25s ease;
+  }
+  .section:hover{ box-shadow: var(--shadow-md); }
+  .section-head{
+    appearance:none; border:none; background:transparent; width: 100%;
+    padding: 24px 28px; display:flex; align-items:center; gap: 18px;
+    cursor: pointer; text-align: left; font: inherit; color: inherit; transition: background .15s ease;
+  }
+  .section-head:hover{ background: rgba(217,119,87,.04); }
+  .section-num{
+    flex-shrink: 0; font-family: "JetBrains Mono", monospace;
+    font-size: 13px; font-weight:700; color: var(--accent);
+    background: var(--accent-bg); padding: 5px 11px; border-radius: 4px; letter-spacing: .05em;
+  }
+  .section-title{ font-family:"Noto Serif SC", serif; font-size: 21px; font-weight: 700; color: var(--ink); flex: 1; line-height: 1.4; }
+  .section-meta{ font-size: 12.5px; color: var(--ink-muted); margin-right: 10px; white-space: nowrap; }
+  .chevron{
+    flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
+    background: var(--bg-alt); display:grid; place-items:center;
+    transition: transform .3s ease, background .15s ease; color: var(--ink-soft);
+  }
+  .section.open .chevron{ transform: rotate(180deg); background: var(--accent); color: var(--paper); }
+  .chevron svg{ width: 14px; height: 14px; }
+  .section-body{ max-height: 0; overflow: hidden; transition: max-height .4s cubic-bezier(.4,0,.2,1); }
+  .section.open .section-body{ max-height: 50000px; }
+  .section-body-inner{ padding: 0 28px 32px; border-top: 1px solid var(--line-soft); padding-top: 24px; }
+
+  .step{ position: relative; padding: 22px 0 22px 52px; border-bottom: 1px dashed var(--line); }
+  .step:last-child{ border-bottom:none; padding-bottom: 4px; }
+  .step:first-child{ padding-top: 0; }
+  .step-num{
+    position: absolute; left: 0; top: 22px;
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--ink); color: var(--paper);
+    display:grid; place-items:center;
+    font-family:"Noto Serif SC", serif; font-weight: 700; font-size: 15px;
+  }
+  .step:first-child .step-num{ top: 0; }
+  .step-title{ font-family:"Noto Serif SC", serif; font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 10px; line-height: 1.4; }
+  .step p{ color: var(--ink-soft); font-size: 14.5px; margin-bottom: 10px; }
+  .step p:last-child{ margin-bottom: 0; }
+  .step ul, .step ol{ color: var(--ink-soft); font-size: 14.5px; margin: 6px 0 10px; padding-left: 20px; }
+  .step li{ margin-bottom: 4px; }
+  .step a{ color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;}
+  .step a:hover{ color: var(--accent-soft);}
+  .step strong{ color: var(--ink); font-weight: 600;}
+  .step code{
+    font-family: "JetBrains Mono", monospace; font-size: 13px;
+    background: var(--accent-bg); color: var(--accent);
+    padding: 2px 6px; border-radius: 3px; font-weight: 500;
+  }
+
+  .codeblock{
+    position: relative; background: var(--code-bg); color: var(--code-text);
+    padding: 14px 16px 14px 46px; border-radius: 8px;
+    font-family: "JetBrains Mono", monospace; font-size: 13.5px;
+    line-height: 1.7; margin: 10px 0; overflow-x: auto; white-space: pre;
+  }
+  .codeblock::before{
+    content: "$"; position: absolute; left: 16px; top: 14px;
+    color: var(--accent-soft); font-weight: 700;
+  }
+  .copy-btn{
+    position: absolute; top: 8px; right: 8px;
+    background: rgba(245,240,232,.1); border: 1px solid rgba(245,240,232,.2);
+    color: var(--code-text); font-family: inherit; font-size: 11px;
+    padding: 4px 9px; border-radius: 3px; cursor: pointer;
+    transition: all .15s ease; opacity: 0;
+  }
+  .codeblock:hover .copy-btn{ opacity: 1; }
+  .copy-btn:hover{ background: var(--accent); border-color: var(--accent);}
+  .copy-btn.copied{ background: #4a7c59; border-color: #4a7c59;}
+
+  .callout{
+    margin: 12px 0; padding: 12px 16px 12px 44px;
+    border-radius: 6px; font-size: 14px; line-height: 1.7;
+    position: relative; border-left: 3px solid;
+  }
+  .callout::before{
+    position: absolute; left: 16px; top: 12px;
+    font-family:"Noto Serif SC", serif; font-weight: 900; font-size: 15px;
+  }
+  .callout-tip{ background:#fef6e7; border-color:#d4a93a; color: #6b5217;}
+  .callout-tip::before{ content:"叮"; color:#b78a1f; }
+  .callout-warn{ background:#fbe9e2; border-color: var(--accent); color:#7a2914;}
+  .callout-warn::before{ content:"!"; color: var(--accent); font-size: 17px;}
+  .callout strong{ color: inherit; }
+  .callout code{ background: rgba(0,0,0,.06); color: inherit; }
+
+  .resource{
+    margin: 14px 0; padding: 16px 18px;
+    background: #fefcf7; border: 1px solid var(--line-soft);
+    border-radius: 8px; border-left: 3px solid var(--gold);
+  }
+  .resource-name{
+    font-family:"Noto Serif SC", serif; font-size: 16px; font-weight: 700;
+    color: var(--ink); margin-bottom: 4px;
+  }
+  .resource-url{
+    font-family: "JetBrains Mono", monospace; font-size: 12.5px;
+    color: var(--accent); word-break: break-all; display:block; margin-bottom: 8px;
+    text-decoration: none;
+  }
+  .resource-url:hover{ text-decoration: underline; }
+  .resource-desc{ font-size: 14px; color: var(--ink-soft); line-height: 1.75; }
+  .resource-desc + .resource-desc{ margin-top: 6px; }
+  .resource-tag{
+    display: inline-block; font-size: 11px;
+    background: var(--accent-bg); color: var(--accent);
+    padding: 2px 8px; border-radius: 3px;
+    font-family:"JetBrains Mono", monospace; font-weight: 500;
+    margin-right: 6px; margin-bottom: 6px; letter-spacing: .03em;
+  }
+  .action-tag{
+    background: #e8f4e8; color: #2d6a2d;
+    border: 1px dashed #8bc38b;
+  }
+
+  .blog-list{ list-style: none !important; padding-left: 0 !important; }
+  .blog-list li{
+    padding: 8px 0 8px 16px; border-bottom: 1px dashed var(--line-soft);
+    position: relative;
+  }
+  .blog-list li::before{
+    content: "·"; position: absolute; left: 0; color: var(--accent);
+    font-weight: 900; font-size: 18px; line-height: 1;
+  }
+  .blog-list li:last-child{ border-bottom: none; }
+  .blog-list strong{ color: var(--ink); }
+  .blog-list em{ color: var(--ink-muted); font-style: normal; font-size: 13px; }
+
+  table{
+    width: 100%; border-collapse: collapse; margin: 12px 0;
+    background: #fff; border: 1px solid var(--line);
+    border-radius: 6px; overflow: hidden; font-size: 13.5px;
+  }
+  thead{ background: var(--accent-bg); }
+  th, td{
+    padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line-soft);
+    color: var(--ink-soft);
+  }
+  th{
+    font-family:"Noto Serif SC", serif; font-weight: 700; color: var(--ink);
+    font-size: 13px;
+  }
+  tbody tr:last-child td{ border-bottom: none; }
+  tbody tr:hover{ background: #fbf6ec; }
+  td code{
+    font-family: "JetBrains Mono", monospace; font-size: 12px;
+    background: var(--accent-bg); color: var(--accent);
+    padding: 1px 5px; border-radius: 3px;
+  }
+
+  .quote{
+    margin: 16px 0; padding: 16px 20px;
+    background: var(--accent-bg);
+    border-left: 4px solid var(--accent);
+    border-radius: 4px;
+    font-family:"Noto Serif SC", serif;
+    font-size: 15px; color: var(--ink); line-height: 1.85;
+  }
+  .quote strong{ color: var(--accent); }
+
+  .flow{
+    margin: 14px 0; padding: 18px 20px;
+    background: linear-gradient(135deg, #fdf8ee 0%, #f5ecd9 100%);
+    border-radius: 8px; border: 1px solid var(--line);
+    font-family: "JetBrains Mono", monospace; font-size: 12.5px;
+    line-height: 2.1; color: var(--ink-soft); white-space: pre-wrap;
+  }
+  .flow strong{ color: var(--accent); font-weight: 700; }
+
+  /* 双轨模型标签 */
+  .track-label{
+    display: inline-block; font-size: 11px; font-weight: 700;
+    padding: 3px 10px; border-radius: 3px; letter-spacing: .06em;
+    font-family: "JetBrains Mono", monospace; vertical-align: middle;
+  }
+  .track-pulse{ background: #e0f0ff; color: #1a5fb4; border: 1px solid #a0c8f0; }
+  .track-depth{ background: #f0e8f8; color: #6b3fa0; border: 1px solid #c8a8e8; }
+
+  footer{ text-align: center; color: var(--ink-muted); font-size: 13px; padding: 36px 5vw 50px; border-top: 1px solid var(--line); background: var(--bg-alt); }
+  footer p{ margin-bottom: 4px; }
+  footer .seal{
+    display: inline-block; margin-bottom: 14px;
+    padding: 7px 16px; border: 2px solid var(--accent); color: var(--accent);
+    font-family:"Noto Serif SC", serif; font-weight: 700;
+    letter-spacing: .3em; font-size: 12px; border-radius: 2px;
+    transform: rotate(-2deg);
+  }
+
+  .lightbox{
+    position: fixed; inset: 0; background: rgba(43,36,25,.92);
+    backdrop-filter: blur(8px); z-index: 1000;
+    display: none; align-items: center; justify-content: center;
+    padding: 5vh 5vw; cursor: zoom-out;
+  }
+  .lightbox.open{ display: flex; }
+</style>
+</head>
+<body>
+<div class="progress-rail" id="progress"></div>
+
+<header class="cover">
+  <div class="cover-inner">
+    <div class="cover-tag">产品经理 · 个人内训资料</div>
+    <h1>AI 资讯获取与<span>阅读指南</span><br>从二手信息走向一手信源</h1>
+    <p class="cover-sub">
+      整理一套属于自己的 AI 信息系统:用<strong>「动态」追热点、「洞察」建认知</strong>,绕开二次加工的科技媒体,直接接触公司博客、研究者随笔、工程实战、核心访谈与论文,并配上一份适合 AI 产品经理的可执行阅读节奏。
+    </p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="toc">
+    <div class="toc-title">目录</div>
+    <ol>
+      <li>
+        <a href="#sec-1" data-target="sec-1">核心方法论</a>
+        <ol>
+          <li><a href="#step-1-1">一手 vs 二手</a></li>
+          <li><a href="#step-1-2">动态 vs 洞察</a></li>
+        </ol>
+      </li>
+      <li>
+        <a href="#sec-2" data-target="sec-2">动态:每日 AI 热点</a>
+        <ol>
+          <li><a href="#step-2-1">AIHOT 热点监控</a></li>
+          <li><a href="#step-2-2">新闻聚合与 X</a></li>
+        </ol>
+      </li>
+      <li>
+        <a href="#sec-3" data-target="sec-3">洞察:海外一手信源</a>
+        <ol>
+          <li><a href="#step-3-1">公司信源地图</a></li>
+          <li><a href="#step-3-2">核心人物与博客</a></li>
+          <li><a href="#step-3-3">访谈与播客</a></li>
+          <li><a href="#step-3-4">论文与开源</a></li>
+          <li><a href="#step-3-5">X List 订阅建议</a></li>
+        </ol>
+      </li>
+      <li>
+        <a href="#sec-4" data-target="sec-4">洞察:国内信源</a>
+        <ol>
+          <li><a href="#step-4-1">付费星球与博主</a></li>
+          <li><a href="#step-4-2">公众号与媒体</a></li>
+          <li><a href="#step-4-3">国内一手内容</a></li>
+        </ol>
+      </li>
+      <li>
+        <a href="#sec-5" data-target="sec-5">关键概念解析</a>
+        <ol>
+          <li><a href="#step-5-1">产品标杆</a></li>
+          <li><a href="#step-5-2">技术方向词</a></li>
+        </ol>
+      </li>
+      <li>
+        <a href="#sec-6" data-target="sec-6">AI PM 行动指南</a>
+        <ol>
+          <li><a href="#step-6-1">每日 15 分钟</a></li>
+          <li><a href="#step-6-2">每周深读</a></li>
+          <li><a href="#step-6-3">每月主题调研</a></li>
+          <li><a href="#step-6-4">季度复盘</a></li>
+        </ol>
+      </li>
+      <li>
+        <a href="#sec-7" data-target="sec-7">速查与避坑</a>
+        <ol>
+          <li><a href="#step-7-1">信源速查表</a></li>
+          <li><a href="#step-7-2">常见误区</a></li>
+        </ol>
+      </li>
+    </ol>
+  </aside>
+
+  <main class="content">
+
+    <div class="content-actions">
+      <button class="mini-btn" onclick="toggleAll(true)">展开全部</button>
+      <button class="mini-btn" onclick="toggleAll(false)">收起全部</button>
+    </div>
+
+    <!-- ===== 第一节:核心方法论 ===== -->
+    <section class="section open" id="sec-1">
+      <button class="section-head" aria-expanded="true">
+        <span class="section-num">01</span>
+        <span class="section-title">核心方法论</span>
+        <span class="section-meta">2 步</span>
+        <span class="chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span>
+      </button>
+      <div class="section-body">
+        <div class="section-body-inner">
+
+          <article class="step" id="step-1-1">
+            <div class="step-num">1</div>
+            <h3 class="step-title">一手 vs 二手:信源决定认知上限</h3>
+            <p>国内的 AI 资讯绝大多数是<strong>科技媒体加工过的二手内容</strong>——把英文原文翻译、压缩、加上观点,然后投喂给读者。便利的代价是:细节丢失、上下文断裂、观点同质化,所有人最终看到的是同一份"嚼过的食物"。</p>
+
+            <div class="quote">
+              真正的信息源在国外。<strong>人物访谈、技术博客、公司最佳实践、开发者大会、开发者论坛、论文</strong>——这些才是国内媒体转述的源头。直接去看,信息密度能高出 3–5 倍。
+            </div>
+
+            <p>日常阅读的优先级:</p>
+            <ol>
+              <li><strong>海外一手内容</strong>:公司工程博客、研究者随笔、开发者大会视频、X</li>
+              <li><strong>GitHub 高星项目</strong>:代码不会骗人,是判断技术真实成熟度的硬指标</li>
+              <li><strong>国内媒体</strong>:作为兜底和线索来源,看到感兴趣的话题去找原文</li>
+            </ol>
+
+            <div class="callout callout-tip">
+              <strong>读不动英文怎么办?</strong> 用 <code>沉浸式翻译</code> 浏览器插件做双语对照,或者把链接丢给 Claude / ChatGPT 让它做"忠实翻译 + 要点提炼"。<strong>千万别直接看翻译稿</strong>——双语对照才能慢慢建立英文阅读肌肉。
+            </div>
+          </article>
+
+          <article class="step" id="step-1-2">
+            <div class="step-num">2</div>
+            <h3 class="step-title">双轨模型:动态 × 洞察</h3>
+            <p>AI 资讯不是一锅端,要分成<strong>两条轨道</strong>来经营,精力分配大约 <strong>2:8</strong>:</p>
+
+            <table>
+              <thead>
+                <tr><th>轨道</th><th>目标</th><th>精力占比</th><th>核心工具</th><th>节奏</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="track-label track-pulse">动态</span></td>
+                  <td>知道发生了什么</td>
+                  <td>20–30%</td>
+                  <td>AIHOT、Techmeme、X Lists、即刻</td>
+                  <td>每天 5–10 分钟扫一遍</td>
+                </tr>
+                <tr>
+                  <td><span class="track-label track-depth">洞察</span></td>
+                  <td>理解为什么、意味着什么</td>
+                  <td>70–80%</td>
+                  <td>公司博客、人物随笔、访谈、论文</td>
+                  <td>每周 1–2 小时精读</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="callout callout-tip">
+              <strong>两条轨道的关系:</strong>先看动态知道"今天发生了什么",再从动态中挑出值得深挖的线索,去一手信源里做洞察。<strong>动态是雷达,洞察是望远镜</strong>——前者帮你发现信号,后者帮你理解信号。
+            </div>
+
+            <p>后续章节按这个框架展开:第 2 节讲<span class="track-label track-pulse">动态</span>怎么追,第 3–4 节讲<span class="track-label track-depth">洞察</span>的信源体系,第 6 节把两条轨道合成一份可执行的行动指南。</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第二节:动态 ===== -->
+    <section class="section" id="sec-2">
+      <button class="section-head" aria-expanded="false">
+        <span class="section-num">02</span>
+        <span class="section-title"><span class="track-label track-pulse">动态</span> 每日 AI 热点</span>
+        <span class="section-meta">2 步</span>
+        <span class="chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span>
+      </button>
+      <div class="section-body">
+        <div class="section-body-inner">
+
+          <article class="step" id="step-2-1">
+            <div class="step-num">1</div>
+            <h3 class="step-title">AIHOT:AI 热点一站式监控</h3>
+            <p>动态追踪的第一站。AIHOT 从几百个信源自动抓取、筛选、去重、打分、分类,每天北京时间早上 8 点生成一份 AI 日报,<strong>30 秒知道昨天整个 AI 行业发生了什么</strong>。</p>
+
+            <div class="resource">
+              <div class="resource-name">AIHOT · AI 热点监控网站</div>
+              <a class="resource-url" href="https://aihot.virxact.com" target="_blank">https://aihot.virxact.com</a>
+              <p class="resource-desc">
+                <span class="resource-tag">每日必扫</span><span class="resource-tag">免费</span><span class="resource-tag action-tag">每天早上扫 3 分钟</span><br>
+                日报分五个版块:<strong>模型发布/更新、产品发布/更新、行业动态、论文研究、技巧与观点</strong>。每条有中文标题、一句话摘要、信息来源和原文链接——感兴趣的点进去就是一手原文,直接从动态跳到洞察。
+              </p>
+              <p class="resource-desc">
+                除日报外还有<strong>精选模式</strong>(不漏高质量条目)和<strong>全量模式</strong>(按分类/时间窗口/关键词检索全部动态),覆盖从"快速扫一眼"到"某个方向全面排查"的不同需求。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">AIHOT Skill · 让 Agent 帮你盯新闻</div>
+              <a class="resource-url" href="https://aihot.virxact.com/aihot-skill/" target="_blank">https://aihot.virxact.com/aihot-skill/</a>
+              <p class="resource-desc">
+                <span class="resource-tag">Agent 工作流</span><span class="resource-tag action-tag">装一次,每天一句话</span><br>
+                支持 Claude Code、Codex、OpenCode 等 Skill 协议的 Agent 直接安装。装上之后不用再打开浏览器,跟 Agent 说一句"给我今天的 AI 日报"或"最近三天有什么 AI 新模型"就行。同时提供 <strong>RSS Feed</strong>(Feedly / Inoreader 等阅读器)和 <strong>API</strong>(集成到自有系统),按需选用。
+              </p>
+              <p class="resource-desc" style="margin-top:6px;">
+                安装命令: <code>帮我安装这个 skill：https://aihot.virxact.com/aihot-skill/</code>
+              </p>
+            </div>
+
+            <div class="callout callout-tip">
+              <strong>AIHOT 的最佳使用姿势:</strong>工作日早上扫日报 → 发现感兴趣的条目 → 点原文链接跳到一手信源精读。<strong>周末不看新闻也没关系</strong>,周一早上跟 Agent 说"总结最近三天的 AI 日报",刷刷刷全出来了。
+            </div>
+          </article>
+
+          <article class="step" id="step-2-2">
+            <div class="step-num">2</div>
+            <h3 class="step-title">新闻聚合与 X:补充 AIHOT 的两个侧翼</h3>
+
+            <div class="resource">
+              <div class="resource-name">Techmeme</div>
+              <a class="resource-url" href="https://www.techmeme.com/" target="_blank">https://www.techmeme.com/</a>
+              <p class="resource-desc">
+                <span class="resource-tag">聚合</span><span class="resource-tag action-tag">每天 3 分钟</span><br>
+                全球科技新闻聚合站,把同一件事的不同报道聚在一起。AIHOT 专注 AI 垂直领域,Techmeme 覆盖更广的科技面,两者互补。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">X(Twitter)· AI 信息的前线</div>
+              <a class="resource-url" href="https://twitter.com/" target="_blank">https://twitter.com/</a>
+              <p class="resource-desc">
+                <span class="resource-tag">前沿</span><span class="resource-tag action-tag">用 Lists 分流,每天 3 分钟</span><br>
+                很多重要发布和争论<strong>先在 X 上发,然后才被博客和媒体加工</strong>。配合列表功能(Lists)做信息分流,避免被算法首页拉走注意力。具体 List 建议见第 3 节末尾。
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第三节:洞察 · 海外一手信源 ===== -->
+    <section class="section" id="sec-3">
+      <button class="section-head" aria-expanded="false">
+        <span class="section-num">03</span>
+        <span class="section-title"><span class="track-label track-depth">洞察</span> 海外一手信源地图</span>
+        <span class="section-meta">5 步</span>
+        <span class="chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span>
+      </button>
+      <div class="section-body">
+        <div class="section-body-inner">
+
+          <article class="step" id="step-3-1">
+            <div class="step-num">1</div>
+            <h3 class="step-title">公司信源地图:从模型到产品的全链条</h3>
+            <p>一线 AI 公司的工程师把正在做的事写出来,几乎所有国内 Agent 类文章都源自这里。按<strong>"模型层 → 工具层 → 应用层"</strong>三层组织:</p>
+
+            <p style="margin: 14px 0 4px; font-family:'Noto Serif SC', serif; font-weight: 700; color: var(--accent); font-size: 14px;">▍ 模型层:三大 AI Lab</p>
+
+            <div class="resource">
+              <div class="resource-name">Anthropic · Engineering / Research / Claude Docs</div>
+              <a class="resource-url" href="https://www.anthropic.com/engineering" target="_blank">https://www.anthropic.com/engineering</a>
+              <a class="resource-url" href="https://docs.anthropic.com/" target="_blank">https://docs.anthropic.com/</a>
+              <p class="resource-desc">
+                <span class="resource-tag">必读</span><span class="resource-tag">Agent 工程</span><span class="resource-tag">Evals</span><span class="resource-tag action-tag">每周精读一篇</span><br>
+                Agent 工程化和模型行为设计的核心信源。重点看 Claude Code、Tool Use、Evals、Context Engineering、Constitutional AI 相关内容。<em>Building effective agents</em> 等文章几乎是行业范式的设定者。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">OpenAI · Blog / Research / Cookbook / Developers</div>
+              <a class="resource-url" href="https://openai.com/blog" target="_blank">https://openai.com/blog</a>
+              <a class="resource-url" href="https://cookbook.openai.com/" target="_blank">https://cookbook.openai.com/</a>
+              <p class="resource-desc">
+                <span class="resource-tag">必读</span><span class="resource-tag">模型发布</span><span class="resource-tag action-tag">新发布当天看</span><br>
+                模型和产品发布、安全框架、开发者实践的一手源。PM 重点看发布文章里的能力边界、使用场景和定价策略;工程同学重点看 Cookbook。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">Google DeepMind · Blog / Research / Podcast</div>
+              <a class="resource-url" href="https://deepmind.google/discover/blog/" target="_blank">https://deepmind.google/discover/blog/</a>
+              <p class="resource-desc">
+                <span class="resource-tag">研究前沿</span><span class="resource-tag">科学 AI</span><span class="resource-tag action-tag">主题调研时搜索</span><br>
+                研究前沿跟踪首选,重点关注 Gemini、AlphaFold、Gemini Robotics、数学推理和具身智能。
+              </p>
+            </div>
+
+            <p style="margin: 18px 0 4px; font-family:'Noto Serif SC', serif; font-weight: 700; color: var(--accent); font-size: 14px;">▍ 工具层:开发者基础设施</p>
+
+            <div class="resource">
+              <div class="resource-name">Cursor / Anysphere · Blog / Changelog / Docs</div>
+              <a class="resource-url" href="https://www.cursor.com/" target="_blank">https://www.cursor.com/</a>
+              <p class="resource-desc">
+                <span class="resource-tag">AI 编程</span><span class="resource-tag">AI IDE</span><span class="resource-tag action-tag">Changelog 每周扫</span><br>
+                AI Coding 赛道标杆。关注它是为了理解 AI 如何重构专业软件工作流:补全、编辑、Agent、项目上下文、团队协作。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">Hugging Face · Blog / Papers / Spaces</div>
+              <a class="resource-url" href="https://huggingface.co/blog" target="_blank">https://huggingface.co/blog</a>
+              <p class="resource-desc">
+                <span class="resource-tag">开源</span><span class="resource-tag">工程性强</span><span class="resource-tag action-tag">新模型出来时看教程</span><br>
+                开源社区视角,新模型如何用、如何微调、如何部署,几乎都能在这里找到第一份教程。适合作为"技术成熟度验证池"。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">LangChain / LangSmith · Blog / Docs / Academy</div>
+              <a class="resource-url" href="https://blog.langchain.dev/" target="_blank">https://blog.langchain.dev/</a>
+              <p class="resource-desc">
+                <span class="resource-tag">Agent 框架</span><span class="resource-tag">Evals</span><span class="resource-tag action-tag">主题调研时搜索</span><br>
+                Agent、RAG、Evals、Observability 的工程实践密集信源。LangChain Academy 有系统教程。
+              </p>
+            </div>
+
+            <p style="margin: 18px 0 4px; font-family:'Noto Serif SC', serif; font-weight: 700; color: var(--accent); font-size: 14px;">▍ 应用层:AI 进入真实业务</p>
+
+            <div class="resource">
+              <div class="resource-name">Perplexity · Blog / Product Updates</div>
+              <a class="resource-url" href="https://www.perplexity.ai/hub" target="_blank">https://www.perplexity.ai/hub</a>
+              <p class="resource-desc">
+                <span class="resource-tag">AI 搜索</span><span class="resource-tag">Deep Research</span><span class="resource-tag action-tag">产品更新时看</span><br>
+                AI Search / Answer Engine 的产品标杆,跟踪搜索范式变化。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">Figma / Canva / Salesforce · AI SaaS 产品化样本</div>
+              <a class="resource-url" href="https://www.figma.com/blog/" target="_blank">https://www.figma.com/blog/</a>
+              <a class="resource-url" href="https://www.canva.com/newsroom/" target="_blank">https://www.canva.com/newsroom/</a>
+              <a class="resource-url" href="https://www.salesforce.com/artificial-intelligence/" target="_blank">https://www.salesforce.com/artificial-intelligence/</a>
+              <p class="resource-desc">
+                <span class="resource-tag">AI SaaS</span><span class="resource-tag">企业 AI</span><span class="resource-tag action-tag">发布会 / 大会时看</span><br>
+                观察"AI 如何进入真实业务软件"的窗口。Figma 看设计与代码融合,Canva 看 AI 设计和视觉办公(2026 AI 2.0 转型),Salesforce 看企业 Agent(Agentforce 平台)。
+              </p>
+            </div>
+
+            <div class="callout callout-tip">
+              <strong>公司信源的阅读策略:</strong>模型层(OpenAI / Anthropic / DeepMind)的发布<strong>必须第一时间看</strong>,工具层(Cursor / LangChain)可以<strong>每周扫 Changelog</strong>,应用层(Figma / Canva / Salesforce)只需<strong>在发布会和大会时集中看</strong>。
+            </div>
+          </article>
+
+          <article class="step" id="step-3-2">
+            <div class="step-num">2</div>
+            <h3 class="step-title">核心人物与博客:追踪决策者的大脑</h3>
+            <p>公司博客有 PR 滤镜,但<strong>个人博客和 X 没有</strong>。下面的人物清单把"值得关注的人"和"有个人博客/随笔可以精读的人"合在一起——有博客的人物是你做洞察时的重点精读对象。</p>
+
+            <p style="margin: 14px 0 4px; font-family:'Noto Serif SC', serif; font-weight: 700; color: var(--accent); font-size: 14px;">▍ AI Lab 创始人与研究者</p>
+            <table>
+              <thead>
+                <tr><th>人物</th><th>所属</th><th>重点关注</th><th>X / 博客</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Dario Amodei</strong></td><td>Anthropic CEO</td><td>AI 安全、Scaling Laws、AGI 时间线</td><td>@DarioAmodei · <a href="https://darioamodei.com/" target="_blank">darioamodei.com</a></td></tr>
+                <tr><td><strong>Amanda Askell</strong></td><td>Anthropic 哲学家</td><td>Claude 性格、Constitutional AI、模型伦理</td><td>@AmandaAskell · <a href="https://askell.io/" target="_blank">askell.io</a></td></tr>
+                <tr><td><strong>Chris Olah</strong></td><td>Anthropic 可解释性</td><td>机制可解释性、Transformer Circuits</td><td><a href="https://transformer-circuits.pub/" target="_blank">Transformer Circuits</a></td></tr>
+                <tr><td><strong>Jared Kaplan</strong></td><td>Anthropic 联合创始人</td><td>Scaling Laws、模型训练</td><td>Anthropic Research</td></tr>
+                <tr><td><strong>Sam Altman</strong></td><td>OpenAI CEO</td><td>AGI 战略、产品路线、社会影响</td><td>@sama · <a href="https://blog.samaltman.com/" target="_blank">blog.samaltman.com</a></td></tr>
+                <tr><td><strong>Joanne Jang</strong></td><td>OpenAI / CoreAutoAI</td><td>模型行为、AI 交互、人格与产品体验</td><td>@joannejang · <a href="https://joannejang.com/" target="_blank">joannejang.com</a></td></tr>
+                <tr><td><strong>Lilian Weng</strong></td><td>OpenAI 研究者</td><td>Agent、RAG、RL、LLM 系统综述</td><td>@lilianweng · <a href="https://lilianweng.github.io/" target="_blank">Lilian's Blog</a></td></tr>
+                <tr><td><strong>Mark Chen</strong></td><td>OpenAI 研究负责人</td><td>模型研究、推理、多模态</td><td>@markchen90</td></tr>
+                <tr><td><strong>Andrej Karpathy</strong></td><td>Eureka Labs / 前 OpenAI & Tesla</td><td>LLM 入门、AI 教育、Vibe Coding</td><td>@karpathy · <a href="https://karpathy.ai/" target="_blank">karpathy.ai</a> · <a href="https://www.youtube.com/@AndrejKarpathy" target="_blank">YouTube</a></td></tr>
+                <tr><td><strong>Demis Hassabis</strong></td><td>Google DeepMind CEO</td><td>科学 AI、Gemini、AGI、AlphaFold</td><td>@demishassabis</td></tr>
+                <tr><td><strong>Jeff Dean</strong></td><td>Google DeepMind</td><td>基础设施、模型训练</td><td>@JeffDean</td></tr>
+                <tr><td><strong>Oriol Vinyals</strong></td><td>Google DeepMind</td><td>多模态、推理、Agent</td><td>@OriolVinyalsML</td></tr>
+              </tbody>
+            </table>
+
+            <p style="margin: 18px 0 4px; font-family:'Noto Serif SC', serif; font-weight: 700; color: var(--accent); font-size: 14px;">▍ AI 产品、工具与工程圈</p>
+            <table>
+              <thead>
+                <tr><th>人物</th><th>所属</th><th>重点关注</th><th>X / 博客</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Simon Willison</strong></td><td>独立开发者</td><td>AI 工具实测、LLM 工程、开源观察</td><td>@simonw · <a href="https://simonwillison.net/" target="_blank">simonwillison.net</a>(日更)</td></tr>
+                <tr><td><strong>swyx</strong></td><td>Latent Space 主理人</td><td>AI Engineer 生态、技术访谈</td><td>@swyx · <a href="https://www.latent.space/" target="_blank">latent.space</a></td></tr>
+                <tr><td><strong>Michael Truell</strong></td><td>Cursor / Anysphere CEO</td><td>AI IDE、AI Coding 商业化</td><td>@michael_truell</td></tr>
+                <tr><td><strong>Harrison Chase</strong></td><td>LangChain 创始人</td><td>Agent、RAG、Evals</td><td>@hwchase17</td></tr>
+                <tr><td><strong>Guillermo Rauch</strong></td><td>Vercel CEO</td><td>AI 应用开发、前端生成、v0</td><td>@rauchg</td></tr>
+                <tr><td><strong>Dylan Field</strong></td><td>Figma CEO</td><td>设计工具、AI 原型、Code + Canvas</td><td>@zoink · <a href="https://www.figma.com/blog/" target="_blank">Figma Blog</a></td></tr>
+                <tr><td><strong>Melanie Perkins</strong></td><td>Canva CEO</td><td>AI 设计、视觉办公</td><td>Canva Newsroom / 访谈</td></tr>
+                <tr><td><strong>Marc Benioff</strong></td><td>Salesforce CEO</td><td>企业 AI、Agentforce</td><td>@Benioff</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout callout-tip">
+              <strong>有博客的人物是精读重点。</strong>Dario 的长文(如 <em>Machines of Loving Grace</em>)、Lilian Weng 的系统综述、Simon Willison 的日更、Amanda Askell 关于模型性格的思考——这些<strong>比任何媒体解读都更接近他们的真实想法</strong>。Karpathy 的 YouTube 视频(<em>Intro to Large Language Models</em>、<em>Let's build GPT</em>)是理解 LLM 的最佳入门材料。
+            </div>
+
+            <div class="callout callout-tip">
+              <strong>关注优先级:</strong>先追<strong>创始人</strong>(Dario、Sam、Demis——看战略判断),再追<strong>实战派</strong>(Simon、swyx、Karpathy——看技术趋势),最后追<strong>产品人</strong>(Dylan、Melanie——看产品落地)。
+            </div>
+          </article>
+
+          <article class="step" id="step-3-3">
+            <div class="step-num">3</div>
+            <h3 class="step-title">访谈与播客:按优先级排列</h3>
+            <p>视频和播客<strong>不会被加工成公众号文章</strong>——加工成本太高。反而成了"信息差红利"最大的地方。下面按<strong>对 AI PM 的实用优先级</strong>排列:</p>
+
+            <p style="margin: 14px 0 4px; font-family:'Noto Serif SC', serif; font-weight: 700; color: var(--accent); font-size: 14px;">▍ 第一梯队:产品 × 工程(每周必扫)</p>
+
+            <div class="resource">
+              <div class="resource-name">Latent Space · 播客 + 博客</div>
+              <a class="resource-url" href="https://www.latent.space/" target="_blank">https://www.latent.space/</a>
+              <p class="resource-desc">
+                <span class="resource-tag">AI Engineer</span><span class="resource-tag action-tag">每周扫标题,Agent/Evals/Coding 精听</span><br>
+                访谈 OpenAI、Anthropic、Cursor、Databricks 等一线公司。swyx 主理,偏工程、模型和 Infra。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">The Verge · Decoder</div>
+              <a class="resource-url" href="https://www.theverge.com/decoder-podcast-with-nilay-patel" target="_blank">Decoder Podcast</a>
+              <p class="resource-desc">
+                <span class="resource-tag">产品战略</span><span class="resource-tag action-tag">AI CEO 出场时精听</span><br>
+                产品、商业模式、平台战略非常强。Canva CEO 的 Decoder 访谈深入讨论了 AI 2.0 和企业转型。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">YouTube · AI Engineer Summit / Conference</div>
+              <a class="resource-url" href="https://www.youtube.com/results?search_query=AI+Engineer+Summit" target="_blank">YouTube 搜索 AI Engineer Summit</a>
+              <p class="resource-desc">
+                <span class="resource-tag">实战</span><span class="resource-tag action-tag">搜 Evals 关键词看实操</span><br>
+                分享者大多是 SaaS 产品负责人,讲的都是真实在做的事。搜 <code>Evals</code> 关键词可以挖到"如何给 AI 产品做评测"的大量实操内容。
+              </p>
+            </div>
+
+            <p style="margin: 18px 0 4px; font-family:'Noto Serif SC', serif; font-weight: 700; color: var(--accent); font-size: 14px;">▍ 第二梯队:深度世界观(周末长听)</p>
+
+            <div class="resource">
+              <div class="resource-name">Lex Fridman Podcast</div>
+              <a class="resource-url" href="https://lexfridman.com/podcast/" target="_blank">https://lexfridman.com/podcast/</a> · <a class="resource-url" href="https://www.youtube.com/@lexfridman" target="_blank">YouTube @lexfridman</a>
+              <p class="resource-desc">
+                <span class="resource-tag">超长访谈</span><span class="resource-tag action-tag">周末长听,建人物画像</span><br>
+                3–4 小时深度访谈,Sam Altman、Dario Amodei、Demis Hassabis、Karpathy 都来过。适合跑步通勤时听。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">Dwarkesh Podcast</div>
+              <a class="resource-url" href="https://www.dwarkeshpatel.com/podcast" target="_blank">https://www.dwarkeshpatel.com/podcast</a> · <a class="resource-url" href="https://www.youtube.com/@DwarkeshPatel" target="_blank">YouTube @DwarkeshPatel</a>
+              <p class="resource-desc">
+                <span class="resource-tag">硬核</span><span class="resource-tag action-tag">主题调研时搜关键词</span><br>
+                问题硬,偏长期主义、基础设施、经济影响和 AGI 时间线。
+              </p>
+            </div>
+
+            <p style="margin: 18px 0 4px; font-family:'Noto Serif SC', serif; font-weight: 700; color: var(--accent); font-size: 14px;">▍ 第三梯队:社会影响 × 商业(按需)</p>
+
+            <div class="resource">
+              <div class="resource-name">Hard Fork(NYTimes)/ The Ezra Klein Show</div>
+              <p class="resource-desc">
+                <span class="resource-tag">社会影响</span><span class="resource-tag">政策</span><span class="resource-tag action-tag">有争议事件时听</span><br>
+                Hard Fork 偏科技新闻 + 社会影响;Ezra Klein 偏长线治理和风险。补充"技术之外"的判断。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">No Priors / a16z Podcast / Y Combinator</div>
+              <a class="resource-url" href="https://www.no-priors.com/" target="_blank">https://www.no-priors.com/</a> · <a class="resource-url" href="https://www.youtube.com/@ycombinator" target="_blank">YouTube @ycombinator</a>
+              <p class="resource-desc">
+                <span class="resource-tag">创投</span><span class="resource-tag action-tag">看资本押注方向和创业案例</span><br>
+                No Priors(Sarah Guo &amp; Elad Gil)看 AI 商业落地;a16z 看投资框架和市场结构;YC 看创业实操。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">The Information / Stratechery</div>
+              <p class="resource-desc">
+                <span class="resource-tag">商业分析</span><span class="resource-tag">付费</span><span class="resource-tag action-tag">深读竞争格局</span><br>
+                商业分析最强,理解 OpenAI、Google、Meta、Anthropic 竞争格局。付费内容可作为季度深读。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">Andrej Karpathy YouTube</div>
+              <a class="resource-url" href="https://www.youtube.com/@AndrejKarpathy" target="_blank">YouTube @AndrejKarpathy</a>
+              <p class="resource-desc">
+                <span class="resource-tag">教学向</span><span class="resource-tag action-tag">入门必看</span><br>
+                <em>Intro to Large Language Models</em>、<em>Let's build GPT</em> 是理解 LLM 内部机制最好的入门视频,产品经理也能听懂。
+              </p>
+            </div>
+          </article>
+
+          <article class="step" id="step-3-4">
+            <div class="step-num">4</div>
+            <h3 class="step-title">论文与开源:深挖原理与验证成熟度</h3>
+
+            <div class="resource">
+              <div class="resource-name">Google Scholar</div>
+              <a class="resource-url" href="https://scholar.google.com/" target="_blank">https://scholar.google.com/</a>
+              <p class="resource-desc">
+                <span class="resource-tag">论文入口</span><span class="resource-tag action-tag">月度调研时用</span><br>
+                按时间排序看某个方向最新论文,按引用数判断影响力。<strong>主题调研时的首选工具</strong>。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">Hugging Face · Daily Papers</div>
+              <a class="resource-url" href="https://huggingface.co/papers" target="_blank">https://huggingface.co/papers</a>
+              <p class="resource-desc">
+                <span class="resource-tag">论文精选</span><span class="resource-tag action-tag">每周扫标题</span><br>
+                社区投票筛选的每日论文精选,比直接刷 arXiv 效率高很多。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">GitHub Trending</div>
+              <a class="resource-url" href="https://github.com/trending" target="_blank">https://github.com/trending</a>
+              <p class="resource-desc">
+                <span class="resource-tag">硬指标</span><span class="resource-tag action-tag">验证成熟度</span><br>
+                <strong>demo 可以骗人,star 数和 commit 频率不会</strong>。按 Topic 搜 <code>agent</code>、<code>llm</code>、<code>rag</code> 看趋势。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">Deep Research 类工具(案头调研神器)</div>
+              <p class="resource-desc">
+                <span class="resource-tag">效率工具</span><span class="resource-tag action-tag">调研起手式</span><br>
+                自动检索、阅读、综合,输出带引用源的研究报告。同一题目<strong>用 2–3 个工具各跑一遍</strong>,交叉对比结论:Perplexity(综合最好)、ChatGPT(深度强)、Gemini(覆盖广)、Grok(时效性高,整合 X 实时信息)。
+              </p>
+            </div>
+
+            <div class="callout callout-tip">
+              <strong>论文三选标准:</strong>① 选综述(快速搭建知识图谱)② 选工程类(直接指导落地)③ 看引用数和时间(近 12 个月、引用 50+ 优先)。
+            </div>
+          </article>
+
+          <article class="step" id="step-3-5">
+            <div class="step-num">5</div>
+            <h3 class="step-title">X List 订阅建议:用列表对抗算法噪音</h3>
+            <p>X 的算法首页噪音极大,<strong>用 Lists 做信息分流</strong>是唯一靠谱的用法。建议建 5 个列表:</p>
+
+            <table>
+              <thead>
+                <tr><th>列表名</th><th>收录谁</th><th>用途</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>AI Labs</strong></td><td>@OpenAI · @AnthropicAI · @GoogleDeepMind · @AIatMeta · @MistralAI · @xaboratory</td><td>官方发布第一时间知道</td></tr>
+                <tr><td><strong>AI People</strong></td><td>@sama · @DarioAmodei · @demishassabis · @karpathy · @AmandaAskell · @simonw</td><td>核心人物一手判断</td></tr>
+                <tr><td><strong>AI Engineering</strong></td><td>@swyx · @simonw · @hwchase17 · @jxnlco · @LangChainAI · @lilianweng</td><td>工程实战、框架动态</td></tr>
+                <tr><td><strong>AI Product</strong></td><td>@zoink · @michael_truell · @rauchg · @Benioff</td><td>产品方向和 UX 思考</td></tr>
+                <tr><td><strong>AI Investing</strong></td><td>Sarah Guo · Elad Gil · a16z · @stratechery · @benedictevans</td><td>资本和商业分析</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout callout-tip">
+              <strong>每天只看列表,不刷首页。</strong>5 个列表各扫 1 分钟,5 分钟搞定——比刷 30 分钟算法首页的信息密度高 10 倍。
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第四节:洞察 · 国内信源 ===== -->
+    <section class="section" id="sec-4">
+      <button class="section-head" aria-expanded="false">
+        <span class="section-num">04</span>
+        <span class="section-title"><span class="track-label track-depth">洞察</span> 国内信源</span>
+        <span class="section-meta">3 步</span>
+        <span class="chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span>
+      </button>
+      <div class="section-body">
+        <div class="section-body-inner">
+
+          <article class="step" id="step-4-1">
+            <div class="step-num">1</div>
+            <h3 class="step-title">付费星球与博主:精选过的二次创作</h3>
+            <p>国内大多数 AI 内容是二手加工,但有几位<strong>"二次创作但加工质量极高"</strong>的博主和付费圈,效率上比自己看英文一手内容更高,适合作为补充。</p>
+
+            <div class="resource">
+              <div class="resource-name">hanniman 的 AI 产品经理大本营(知识星球)</div>
+              <p class="resource-desc">
+                <span class="resource-tag">付费星球</span><span class="resource-tag">PM 必备</span><br>
+                <strong>国内 AI 产品经理圈最有价值的付费内容之一</strong>。覆盖 AI PM 方法论、行业趋势、招聘信息、岗位拆解。配合他的<strong>公众号 hanniman</strong> 和<strong>视频号</strong>免费内容食用更佳。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">宝玉 AI</div>
+              <p class="resource-desc">
+                <span class="resource-tag">翻译搬运</span><br>
+                国内<strong>翻译海外一手内容最勤快的博主之一</strong>。一时看不了英文原文时,他的翻译版本质量高,可以作为过渡。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">李继刚</div>
+              <p class="resource-desc">
+                <span class="resource-tag">Prompt 工程</span><br>
+                以 Prompt 工程闻名,"汉语新解"系列作者,Prompt 设计方法论的国内代表人物。
+              </p>
+            </div>
+
+            <p style="margin-top: 14px; color: var(--ink-soft); font-size: 14.5px;"><strong>其他值得关注的博主</strong>:</p>
+            <ul class="blog-list">
+              <li><strong>数字生命卡兹克</strong> <em>· AI 应用、AI 视频赛道活跃博主,AIHOT 作者</em></li>
+              <li><strong>归藏的 AI 工具箱</strong> <em>· AI 工具测评与教程</em></li>
+              <li><strong>几米宋</strong> <em>· AI 设计、产品方向</em></li>
+              <li><strong>唐韧</strong> <em>· 产品经理视角看 AI</em></li>
+              <li><strong>傅盛</strong> <em>· 猎豹移动创始人,偏主动阅读</em></li>
+            </ul>
+          </article>
+
+          <article class="step" id="step-4-2">
+            <div class="step-num">2</div>
+            <h3 class="step-title">公众号与媒体:当线索池用</h3>
+            <p>下面这些<strong>都是二手加工内容</strong>,但更新快、覆盖广。把它们当作<strong>"线索池"</strong>——看到感兴趣的话题,去找原文。</p>
+
+            <ul class="blog-list">
+              <li><strong>机器之心</strong> <em>· 老牌技术媒体,覆盖最全</em></li>
+              <li><strong>量子位</strong> <em>· 选题更偏热点</em></li>
+              <li><strong>新智元</strong> <em>· 翻译速度快,但标题党严重</em></li>
+              <li><strong>果比 AI</strong> <em>· 后起之秀</em></li>
+              <li><strong>AI base 基地</strong> <em>· 工具类信息为主</em></li>
+            </ul>
+
+            <div class="callout callout-warn">
+              <strong>媒体类内容只看 30% 就够。</strong>它们的功能是"告诉你有这件事发生",而不是"告诉你这件事是什么"。<strong>看到感兴趣的,立刻找原文</strong>。
+            </div>
+          </article>
+
+          <article class="step" id="step-4-3">
+            <div class="step-num">3</div>
+            <h3 class="step-title">国内一手内容(被低估的部分)</h3>
+            <p>"国内大多是二手"是大趋势,但<strong>国内也有一手</strong>:</p>
+            <ul>
+              <li><strong>国产模型公司的技术报告</strong> —— DeepSeek、智谱、阶跃、Kimi、MiniMax 等</li>
+              <li><strong>国内 AI 公司的开发者大会</strong> —— DeepSeek Open Day、智谱 ZhipuCon 等的视频回放</li>
+              <li><strong>WAIC、智源大会</strong> —— 现场嘉宾分享视频,信息密度很高</li>
+              <li><strong>即刻 App</strong> —— AI 圈非正式信息集散地,从业者发观点、踩坑记录</li>
+            </ul>
+
+            <div class="callout callout-tip">
+              <strong>即刻使用方法:</strong>搜 "AI 产品经理"、"大模型" 等关键词关注活跃 KOL,让算法喂信息流。每天通勤 5 分钟翻一翻就够。
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第五节:关键概念 ===== -->
+    <section class="section" id="sec-5">
+      <button class="section-head" aria-expanded="false">
+        <span class="section-num">05</span>
+        <span class="section-title">关键概念解析</span>
+        <span class="section-meta">2 步</span>
+        <span class="chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span>
+      </button>
+      <div class="section-body">
+        <div class="section-body-inner">
+
+          <article class="step" id="step-5-1">
+            <div class="step-num">1</div>
+            <h3 class="step-title">三大 AI 应用赛道标杆产品</h3>
+            <p>三个目前最值得长期跟踪的海外 AI 应用标杆,代表三个最重要的赛道:</p>
+
+            <div class="resource">
+              <div class="resource-name">Cursor · AI 编程</div>
+              <a class="resource-url" href="https://www.cursor.com/" target="_blank">https://www.cursor.com/</a>
+              <p class="resource-desc">理解它的成功路径(产品节奏、UX 决策、对 LLM 能力边界的拿捏)对所有想做 AI 应用的 PM 都极有参考价值。</p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">Perplexity · AI 搜索</div>
+              <a class="resource-url" href="https://www.perplexity.ai/" target="_blank">https://www.perplexity.ai/</a>
+              <p class="resource-desc">把"搜索 + 综合 + 引用"打包成新形态。Deep Research 模式是 AI PM 必须亲自用过的产品。</p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">Canva Enterprise · AI 设计</div>
+              <a class="resource-url" href="https://www.canva.com/enterprise/" target="_blank">https://www.canva.com/enterprise/</a>
+              <p class="resource-desc">代表"AI 增强 SaaS"路线:把 AI 嵌入已有工作流,而不是另起炉灶。</p>
+            </div>
+          </article>
+
+          <article class="step" id="step-5-2">
+            <div class="step-num">2</div>
+            <h3 class="step-title">技术方向热词</h3>
+
+            <div class="resource">
+              <div class="resource-name">Harness Engineering(驾具工程)</div>
+              <p class="resource-desc">
+                <span class="resource-tag">Agent 核心</span><span class="resource-tag">2026 热词</span><br>
+                由 Mitchell Hashimoto（HashiCorp 创始人）在 2026 年 2 月提出,核心公式:<strong>Agent = Model + Harness</strong>。Harness 是包裹 LLM 让它在特定任务下稳定输出的<strong>整套非模型层基础设施</strong>——提示词模板、工具调用、权限控制、记忆管理、评测、监控、Rules 文件。和 Prompt Engineering（优化单次指令）不同,Harness Engineering 关注的是<strong>多步骤、多会话、多 Agent 场景下的系统级可靠性</strong>。生产级 Agent 的成败往往不取决于模型本身,而取决于 Harness 的质量。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">Context Engineering(上下文工程)</div>
+              <p class="resource-desc">
+                <span class="resource-tag">工程</span><br>
+                由 Andrej Karpathy 于 2025 年 12 月提出。取代"Prompt Engineering"的新范式——不只是写提示词,而是<strong>系统地管理 LLM 的整个输入上下文</strong>:系统提示、工具定义、检索结果、对话历史、约束条件。与 Harness Engineering 互补:Context Engineering 管"喂给模型什么",Harness Engineering 管"模型周围的一切"。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">Context Graph(上下文图谱)</div>
+              <a class="resource-url" href="https://foundationcapital.com/ideas/context-graphs-ais-trillion-dollar-opportunity" target="_blank">Foundation Capital · Context Graphs: AI's Trillion-Dollar Opportunity</a>
+              <p class="resource-desc">
+                <span class="resource-tag">企业 AI</span><span class="resource-tag">万亿美元机会</span><br>
+                Foundation Capital 在 2025 年 12 月提出的概念,被称为"AI 的万亿美元机会"。核心论点:上一代企业软件（Salesforce、Workday、SAP）靠<strong>系统 of Record</strong>（记录发生了什么）成为万亿平台;下一代将靠<strong>Context Graph</strong>——<strong>一张记录决策痕迹的活图谱</strong>,不只存储数据,还捕获"为什么这样决策、谁批准、什么上下文"。Agent 需要的不是更多数据,而是<strong>可搜索的决策先例</strong>。这个概念正在快速成为企业 AI 架构讨论的核心词汇。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">Evals(评测)</div>
+              <p class="resource-desc">
+                <span class="resource-tag">PM 必修</span><br>
+                <strong>做 AI 产品最核心的工程能力,没有之一</strong>。优先看 Anthropic Evals 系列、OpenAI Cookbook Evals 章节、LangSmith / LangFuse 教程。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">VLA(Vision-Language-Action)</div>
+              <p class="resource-desc">
+                <span class="resource-tag">具身智能</span><span class="resource-tag">前沿</span><br>
+                <strong>视觉-语言-动作模型</strong>,机器人和自动驾驶领域核心架构。2025–2026 年最重要的技术方向之一。
+              </p>
+            </div>
+
+            <div class="resource">
+              <div class="resource-name">Deep Research(深度研究)</div>
+              <p class="resource-desc">
+                <span class="resource-tag">Agent 范式</span><br>
+                让 AI 替人做几十分钟的深度调研。"Deep Research 论文"是了解这套系统搭建方式的检索词。
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第六节:PM 行动指南 ===== -->
+    <section class="section" id="sec-6">
+      <button class="section-head" aria-expanded="false">
+        <span class="section-num">06</span>
+        <span class="section-title">AI PM 行动指南</span>
+        <span class="section-meta">4 步</span>
+        <span class="chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span>
+      </button>
+      <div class="section-body">
+        <div class="section-body-inner">
+
+          <article class="step" id="step-6-1">
+            <div class="step-num">1</div>
+            <h3 class="step-title">每日 15 分钟:动态 + 洞察入口</h3>
+            <p>核心是<strong>"建立节奏",而不是"全部覆盖"</strong>。每天 15 分钟的最低保底:</p>
+
+            <table>
+              <thead><tr><th>时间</th><th>轨道</th><th>动作</th><th>目的</th></tr></thead>
+              <tbody>
+                <tr><td>早 5 分钟</td><td><span class="track-label track-pulse">动态</span></td><td>打开 AIHOT 扫日报(或让 Agent 拉日报)</td><td>知道 AI 行业昨天发生了什么</td></tr>
+                <tr><td>通勤 5 分钟</td><td><span class="track-label track-pulse">动态</span></td><td>Techmeme + 即刻翻一翻</td><td>全球科技面 + 国内圈子动态</td></tr>
+                <tr><td>睡前 5 分钟</td><td><span class="track-label track-depth">洞察</span></td><td>X Lists 看一眼核心账号</td><td>抓"还没成稿"的一手信号,标记值得周末精读的内容</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout callout-tip">
+              <strong>关键不是看了多少,是别中断节奏。</strong>一天 15 分钟坚持一年,远好过周末突击 3 小时。
+            </div>
+          </article>
+
+          <article class="step" id="step-6-2">
+            <div class="step-num">2</div>
+            <h3 class="step-title">每周深读:1–2 篇硬货 <span class="track-label track-depth">洞察</span></h3>
+            <p>每周固定时间(比如周日上午 1 小时)精读 1–2 篇<strong>一手长文</strong>:</p>
+            <ul>
+              <li>本周 Anthropic Engineering / OpenAI Blog / DeepMind Blog 有没有新发布</li>
+              <li>Simon Willison 本周哪几篇点评最有意思</li>
+              <li>Latent Space / Decoder 最新一期访谈讲了什么(YouTube 看回放更方便)</li>
+              <li>AIHOT 本周精选中有没有值得深挖原文的条目</li>
+            </ul>
+
+            <p><strong>精读的输出</strong>:用自己的话写一段 300–500 字的复述(飞书文档、Notion、即刻、朋友圈都行)。</p>
+
+            <div class="callout callout-warn">
+              <strong>没有输出的输入会很快忘掉。</strong>AI PM 的核心能力是"把别人的认知转成自己的判断",写下来是唯一的硬指标。
+            </div>
+          </article>
+
+          <article class="step" id="step-6-3">
+            <div class="step-num">3</div>
+            <h3 class="step-title">每月主题调研:选一个方向深挖 <span class="track-label track-depth">洞察</span></h3>
+            <p>每个月选一个<strong>感兴趣或工作相关的 AI 方向</strong>,做一次系统调研:</p>
+
+            <div class="flow"><strong>Step 1</strong> 用 2–3 个 Deep Research 工具各跑一遍,得到初步知识图谱
+<strong>Step 2</strong> 去 Google Scholar / HuggingFace Daily Papers 找综述论文
+<strong>Step 3</strong> 去 GitHub 看这个方向 star 前 5 的开源项目,读 README
+<strong>Step 4</strong> 找 1–2 个相关人物的访谈(YouTube / Latent Space / Lex 搜关键词)
+<strong>Step 5</strong> 写一份 2000–3000 字的内部分享文档</div>
+
+            <p>建议优先调研的方向:</p>
+            <ul>
+              <li><strong>Harness Engineering</strong>(从 awesome-harness-engineering GitHub 仓库入手)</li>
+              <li><strong>AI Agent 工程化</strong>(从 Anthropic Engineering 入手)</li>
+              <li><strong>Evals 体系搭建</strong>(从 LangSmith / LangFuse 入手)</li>
+              <li><strong>Context Graph</strong>(从 Foundation Capital 原文入手)</li>
+              <li><strong>Deep Research / Agentic Search</strong>(从 Perplexity / OpenAI 案例入手)</li>
+              <li><strong>VLA 与具身智能</strong>(从 Google / Figure 的公开材料入手)</li>
+            </ul>
+          </article>
+
+          <article class="step" id="step-6-4">
+            <div class="step-num">4</div>
+            <h3 class="step-title">季度复盘:沉淀自己的判断</h3>
+            <p>每个季度末花半天做一次复盘:</p>
+            <ul>
+              <li>过去三个月,我对 AI 行业的判断哪些被验证了、哪些被打脸</li>
+              <li>有哪些"以为重要但其实不重要"的方向,哪些"原本忽视但现在不能不看"的方向</li>
+              <li>我的信息源结构需要做什么调整(加哪些、砍哪些)</li>
+              <li>我在产品工作中,真正落地用上了哪些读到的东西</li>
+            </ul>
+
+            <div class="callout callout-tip">
+              <strong>季度复盘的最大价值是"修剪信息源"。</strong>AI 圈变化太快,半年前热的博主可能不更了,半年前小众的圈子可能成了主流。<strong>定期清理订阅列表,比无脑增加订阅重要得多</strong>。
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第七节:速查与避坑 ===== -->
+    <section class="section" id="sec-7">
+      <button class="section-head" aria-expanded="false">
+        <span class="section-num">07</span>
+        <span class="section-title">速查与避坑</span>
+        <span class="section-meta">2 步</span>
+        <span class="chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></span>
+      </button>
+      <div class="section-body">
+        <div class="section-body-inner">
+
+          <article class="step" id="step-7-1">
+            <div class="step-num">1</div>
+            <h3 class="step-title">信源速查表</h3>
+
+            <p style="margin: 6px 0 4px; font-family:'Noto Serif SC', serif; font-weight: 700; color: var(--accent); font-size: 14px;">▍ <span class="track-label track-pulse">动态</span> 每日扫读(5–10 分钟)</p>
+            <table>
+              <thead>
+                <tr><th>信源</th><th>类型</th><th>一手度</th><th>阅读动作</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>AIHOT 日报</td><td>聚合</td><td>★★★★</td><td>每天早上扫 3 分钟,点原文跳洞察</td></tr>
+                <tr><td>Techmeme</td><td>聚合</td><td>★★★★</td><td>每天 3 分钟,覆盖 AI 之外的科技面</td></tr>
+                <tr><td>X Lists(5 个列表)</td><td>短动态</td><td>★★★★</td><td>每天 3 分钟,抓还没成稿的信号</td></tr>
+                <tr><td>即刻</td><td>国内社交</td><td>★★★</td><td>通勤翻一翻</td></tr>
+              </tbody>
+            </table>
+
+            <p style="margin: 18px 0 4px; font-family:'Noto Serif SC', serif; font-weight: 700; color: var(--accent); font-size: 14px;">▍ <span class="track-label track-depth">洞察</span> 每周精读(1–2 小时)</p>
+            <table>
+              <thead>
+                <tr><th>信源</th><th>类型</th><th>一手度</th><th>阅读动作</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Anthropic Engineering</td><td>公司博客</td><td>★★★★★</td><td>新文必读,写 300 字复述</td></tr>
+                <tr><td>OpenAI / DeepMind Blog</td><td>公司博客</td><td>★★★★★</td><td>有新发布时精读</td></tr>
+                <tr><td>Simon Willison</td><td>个人博客</td><td>★★★★★</td><td>每天扫标题,感兴趣的精读</td></tr>
+                <tr><td>Latent Space / Decoder</td><td>播客</td><td>★★★★</td><td>每周扫标题,产品/工程主题精听</td></tr>
+                <tr><td>Lex / Dwarkesh (YouTube)</td><td>超长访谈</td><td>★★★★</td><td>周末长听,建人物画像</td></tr>
+                <tr><td>Dario / Lilian / Amanda 博客</td><td>个人随笔</td><td>★★★★★</td><td>新文出来时精读</td></tr>
+                <tr><td>Cursor Changelog</td><td>产品更新</td><td>★★★★★</td><td>每周扫,跟踪 AI IDE 演进</td></tr>
+                <tr><td>Google Scholar / HF Papers</td><td>学术</td><td>★★★★★</td><td>月度调研时用</td></tr>
+                <tr><td>GitHub Trending</td><td>代码</td><td>★★★★★</td><td>验证技术成熟度</td></tr>
+                <tr><td>hanniman 星球</td><td>付费圈</td><td>★★★★</td><td>PM 视角补充</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout callout-tip">
+              <strong>动态是保底,洞察是进攻。</strong>某周实在忙可以砍洞察,但动态不能断——每天 5 分钟扫 AIHOT + X Lists 就够。
+            </div>
+          </article>
+
+          <article class="step" id="step-7-2">
+            <div class="step-num">2</div>
+            <h3 class="step-title">五个常见误区</h3>
+
+            <div class="callout callout-warn">
+              <strong>误区 1:订阅 ≠ 学习。</strong>关注了 50 个 AI 公众号,实际只看 3 个。<strong>每季度强制清理一次订阅</strong>。
+            </div>
+
+            <div class="callout callout-warn">
+              <strong>误区 2:只看中文翻译稿。</strong>翻译损失细节且加入偏差。<strong>用双语对照插件读英文原文</strong>,练 3 个月速度就上来了。
+            </div>
+
+            <div class="callout callout-warn">
+              <strong>误区 3:追求"全部跟上"。</strong>AI 圈每天发生的事谁都看不完。<strong>挑 2–3 个方向深耕,其他只保留最低感知</strong>。
+            </div>
+
+            <div class="callout callout-warn">
+              <strong>误区 4:囤资料不读。</strong>微信收藏夹、Notion 全是没看的文章。<strong>读完即用</strong>——写一段笔记或讲给同事听,没消化的就别囤。
+            </div>
+
+            <div class="callout callout-warn">
+              <strong>误区 5:不亲自用产品。</strong>看再多文章不如亲手用 ChatGPT、Claude、Cursor、Perplexity。<strong>每月至少深度试一个新 AI 产品</strong>,写一份产品分析。
+            </div>
+
+            <div class="quote">
+              一句话总结:<strong>动态让你不掉队,洞察让你有判断,输出让你真的懂</strong>。三者缺一不可。
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-label="图片查看器">
+  <button class="lightbox-close" aria-label="关闭" style="position:absolute;top:24px;right:24px;width:44px;height:44px;border-radius:50%;background:rgba(245,240,232,.1);border:1px solid rgba(245,240,232,.3);color:var(--paper);font-size:22px;display:grid;place-items:center;cursor:pointer;">×</button>
+  <img id="lightbox-img" src="" alt="" style="max-width:100%;max-height:100%;border-radius:4px;">
+</div>
+
+<footer>
+  <div class="seal">个人 · AI 学习手册</div>
+  <p>作者:水滴 · 本指南整理自团队分享会议 · 用于个人 AI 产品经理转型期的资讯系统搭建</p>
+  <p style="margin-top:8px;font-size:12px;color:var(--ink-muted);">最后更新:2026 年 5 月</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.section-head').forEach(head => {
+    head.addEventListener('click', () => {
+      const section = head.parentElement;
+      const expanded = section.classList.toggle('open');
+      head.setAttribute('aria-expanded', expanded);
+    });
+  });
+
+  function toggleAll(open){
+    document.querySelectorAll('.section').forEach(s => {
+      s.classList.toggle('open', open);
+      s.querySelector('.section-head').setAttribute('aria-expanded', open);
+    });
+  }
+
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', async (e) => {
+      e.stopPropagation();
+      const block = btn.parentElement;
+      const text = block.textContent.replace(btn.textContent, '').trim();
+      try{
+        await navigator.clipboard.writeText(text);
+        const orig = btn.textContent;
+        btn.textContent = '✓ 已复制';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 1500);
+      }catch(err){
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+        btn.textContent = '✓ 已复制';
+        setTimeout(() => btn.textContent = '复制', 1500);
+      }
+    });
+  });
+
+  document.querySelectorAll('.toc a[data-target]').forEach(a => {
+    a.addEventListener('click', () => {
+      const id = a.dataset.target;
+      const sec = document.getElementById(id);
+      if(sec && !sec.classList.contains('open')){
+        sec.classList.add('open');
+        sec.querySelector('.section-head').setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  const progress = document.getElementById('progress');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = h.scrollHeight - h.clientHeight > 0 ? (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100 : 0;
+    progress.style.width = pct + '%';
+  });
+
+  const sections = document.querySelectorAll('.section');
+  const tocLinks = document.querySelectorAll('.toc a[data-target]');
+  function updateActiveToc(){
+    let current = null;
+    sections.forEach(s => {
+      const rect = s.getBoundingClientRect();
+      if(rect.top < 200) current = s.id;
+    });
+    tocLinks.forEach(l => { l.classList.toggle('active', l.dataset.target === current); });
+  }
+  window.addEventListener('scroll', updateActiveToc);
+  updateActiveToc();
+</script>
+</body>
+</html>
