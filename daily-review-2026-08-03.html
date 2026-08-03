@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-03</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0f1115; color: #e5e7eb; font-family: "PingFang SC", "Microsoft YaHei", -apple-system, sans-serif; line-height: 1.85; }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 32px 20px 64px; }
+  header { text-align: center; padding: 24px 0 8px; }
+  header h1 { font-size: 22px; font-weight: 700; letter-spacing: 1px; }
+  header .date { color: #8b93a7; font-size: 13px; margin-top: 8px; }
+  .tabs { display: flex; gap: 10px; justify-content: center; margin: 24px 0 28px; }
+  .tab { padding: 9px 22px; border-radius: 999px; font-size: 14px; cursor: pointer; border: 1px solid #2a2f3a; background: #171a21; color: #8b93a7; transition: all .2s; }
+  .tab.active-biz { background: #4f6ef7; border-color: #4f6ef7; color: #fff; }
+  .tab.active-diary { background: #f472b6; border-color: #f472b6; color: #fff; }
+  .panel { display: none; animation: fade .35s ease; }
+  .panel.show { display: block; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .panel p { margin: 0 0 18px; font-size: 15px; }
+  .lead { background: linear-gradient(135deg, rgba(79,110,247,.16), rgba(79,110,247,.04)); border-left: 3px solid #4f6ef7; border-radius: 0 12px 12px 0; padding: 18px 20px; margin: 0 0 24px; font-size: 15.5px; color: #c7d2fe; font-weight: 600; }
+  .diary-open { font-size: 15.5px; }
+  .quote { border-left: 3px solid #f472b6; background: rgba(244,114,182,.07); padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 22px 0; color: #fbcfe8; }
+  footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid #22262f; color: #565e70; font-size: 12px; text-align: center; }
+  .tag { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 11px; margin: 0 4px; }
+  .tag.b { background: rgba(79,110,247,.15); color: #93a5ff; }
+  .tag.d { background: rgba(244,114,182,.15); color: #f9a8d4; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>每日复盘 <span style="color:#8b93a7">·</span> 2026-08-03</h1>
+    <div class="date">周一 · 调休日 &nbsp;<span class="tag b">商业版</span><span class="tag d">日记版</span></div>
+  </header>
+  <div class="tabs">
+    <div class="tab active-biz" onclick="switchTab('biz', this)">📊 商业复盘</div>
+    <div class="tab" onclick="switchTab('diary', this)">📝 日记随笔</div>
+  </div>
+  <div id="biz" class="panel show">
+<div class="lead">今天真正发生的事不是调休，而是两件被调休掩盖的进展：卡了两周的小林生影费用留痕问题出现了闭合路径，AI 落地展示的物料准备进入了只剩出图的收官阶段——而这一切的底层，是同一个判断：AI 的价值必须能被量化，才能被组织真正接受。</div>
+<p>小林生影的模型费用归属和留痕机制，在周报的风险栏里连续躺了两周，Cris 连续标记。今天有同事在群里给出了明确解法：费用和留痕依托报销机制和路由平台，上周已经和条姐、财务对过，heven 那边把 baseUrl 和 Key 都给了对方。这个问题卡了两周，不是卡在技术上，而是卡在「谁出钱、怎么留痕」的流程真空里。一旦把它接回既有的报销和路由机制，两周的悬置就有了落点。跨部门问题拖而不决时，缺的从来不是态度，是一条现成的流程通道——今天的消息等于给这条通道点了灯。</p>
+<p>同一个逻辑也在物料侧上演。AI 落地展示的筹备已经走到「所有物料只差不同尺寸的图」，图加推文都输出完了，报名表用 AI 填报的二维码，业务站台还差一点，培训排期靠后。从提出想法到只差出图，这一程走完了大半。过程中同事挑出「海报没有报名的入口」——当一件事开始被挑细节，就说明验收已经开始了，离交付不远了。</p>
+<p>晚上一段私聊，整段对话其实在说同一件事：模型层正在加速商品化。GLM 马上不如 DS，企业用模型比个人贵，通用办公场景很难量化价值，所以只有「可量化价值明显的场景」才值得上贵模型；白领大部分工作基本可以被替代，以后的模型越来越不用规划方案。顺着这条线看，差异化的空间已经从「脑子」转移到「手脚」——DS 只有脑子，龙虾有手脚。Claude Agent SDK 加画布就是大模型指令修图，加剪辑时间轴就是指令剪辑工作台，接上表格处理就是财务对账，而对话框只是最通用最常规的一种 GUI。这和林氏「重点做企业内数字资产多、人力成本高的场景」的定位是同一个方向：企业 AI 的价值不在模型本身，在模型被接进业务流程末端之后省下的那些人天。</p>
+<p>把今天三件事串起来，共同推力是「可量化」。费用留痕要可量化，物料交付要可验收，模型选型要可量化价值。而周报里那条红线——YIYI 和米酒合计 6.7 天/周消耗在 BPS/IECM 海外系统上，超 2 人当量，AI 视觉主战场投入几乎清零——恰恰是今天唯一不可量化的消耗。战线 17 条对健康线 9 条，聚焦度只有 54%。如果 8 月 BPS 迭代不减量、IECM 月结不固化流程，视觉主战场会继续被稀释。这不是技术问题，是取舍问题。</p>
+<p>接下来一周的判断：小林生影费用机制正式闭合，物料出齐，培训按计划走，转正后的浮云以 T2-1 进入产品经理的新阶段。真正的变量只有一个——海外系统能不能减量。这一刀砍不砍得下去，决定了下半年 AI 视觉的投入密度。</p>
+
+  </div>
+  <div id="diary" class="panel">
+<p class="diary-open">调休日的早晨没有闹钟，手机还是在八点多震了一下。浮云的转正申请躺在审批流里，我点了同意。T2-1，产品经理，转正日期 8 月 1 日。审批单上写着「转正员工：陈琪渊」，所属部门层级 2。去年还在试用期里打转的人，今天就是正式员工了——时间在审批单上走得比日历快。我盯着屏幕看了两秒，想起三年前棒谷经济上行期的日子，那时候大家职业压力都不大，谁也没想到后来会卷成这样。</p>
+<p>一个两分半的会，聊的不是工作，是体重。有人问，你怎么没发饮食和体重登记上来了。对方说，去南京玩了一趟，还在等飞机。回来先平衡恢复两天，看看明天的体重怎么样。又有人补了一句，你出去玩那些营养棒也没吃。旅行有多开心，记录就有多容易断。恢复，从落地那一刻才开始。</p>
+<p>调休通知写的是「有事留言，急事电联」，但「有事」比想象中多。开权限、看物料清单、跟进小林生影的补充、海报报名入口的问题，同事一条一条 @ 我，我一条一条回。调的休，被手机震得越来越薄。可奇怪的是，处理这些事的时候并不烦——大概是知道，事情在你手里能往前走一步，这种确定感比休息本身更让人踏实。上周五快下班才把材料搞定，现在物料只差不同尺寸的图了，图加推文都输出完了。看着清单一项一项划掉，有种收尾的安心。</p>
+<p>晚上一段私聊，聊着聊着就到了行业。「互联网已经哀鸿遍野了，林氏感觉没那么快。」我说我们重点做企业内数字资产多的、人力成本高的，那些第三方就能解决，核心在聊天记录里；现在重点在视觉板块。对方说软件行业的销售现在都叫 FDE 了，要求现场聊、现场把产品做出 demo 给客户看。我笑，白领大部分工作基本都可以被替代了。一转眼，对面的人已经是林氏三年老员工。三年，在我们这一行，算得上沧海桑田。</p>
+<p>这一年我卷我们团队都是对标硅谷标准的。朋友说，大家都怕落后，向前比较累，但至少能帮他们一直跟上风口。我哈哈哈地回，是啊。笑着笑着想到，怕落后这件事，本身就是这个行业最大的引擎。</p>
+<p>有句话在脑子里转了一晚上：「DS 只有脑子，龙虾有手脚。」今天更新了模型，很多以前搞不定的玩法可以重新试了。我们做的视觉 demo、剪辑工作台、财务对账，说到底都是在给 AI 装手脚。装手脚的人，比只有脑子的人睡得着觉。</p>
+<p>明天，出去玩的人该回来补上体重登记了；被海外系统拖住的同事也该回到主战场了。调休只有一天，恢复是一条长长的路。今晚早点睡。</p>
+
+  </div>
+  <footer>Hermes 每日复盘 · 自动生成 · 数据源：钉钉 AI听记 / 聊天记录</footer>
+</div>
+<script>
+function switchTab(name, el) {
+  document.getElementById('biz').classList.remove('show');
+  document.getElementById('diary').classList.remove('show');
+  document.getElementById(name).classList.add('show');
+  var tabs = document.querySelectorAll('.tab');
+  tabs.forEach(function(t){ t.className = 'tab'; });
+  el.className = 'tab ' + (name === 'biz' ? 'active-biz' : 'active-diary');
+}
+</script>
+</body>
+</html>
