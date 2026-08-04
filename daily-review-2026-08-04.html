@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-04</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0b0e14;
+    color: #c9d1d9;
+    font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.75;
+    padding-bottom: 60px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+  header {
+    padding: 44px 20px 24px;
+    text-align: center;
+    border-bottom: 1px solid #1c2230;
+  }
+  header h1 { font-size: 26px; font-weight: 700; color: #f0f3f8; letter-spacing: 1px; }
+  header .date { margin-top: 8px; font-size: 14px; color: #7d8590; }
+  .tabs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px 20px 8px;
+    position: sticky;
+    top: 0;
+    background: rgba(11,14,20,0.92);
+    backdrop-filter: blur(8px);
+    z-index: 10;
+  }
+  .tab {
+    flex: 1;
+    max-width: 220px;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #2a3140;
+    color: #7d8590;
+    transition: all .2s;
+    user-select: none;
+  }
+  .tab.active-biz { background: rgba(79,140,255,.15); border-color: #4f8cff; color: #7fb0ff; }
+  .tab.active-diary { background: rgba(255,107,157,.15); border-color: #ff6b9d; color: #ff9dc0; }
+  .panel { display: none; padding-top: 24px; }
+  .panel.show { display: block; animation: fade .3s ease; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .card {
+    background: #12161f;
+    border: 1px solid #1e2532;
+    border-radius: 14px;
+    padding: 22px 22px 26px;
+    margin-bottom: 18px;
+  }
+  .biz .lead {
+    color: #b8d4ff;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.7;
+    border-left: 3px solid #4f8cff;
+    padding-left: 14px;
+    margin-bottom: 18px;
+  }
+  .biz h2 {
+    color: #7fb0ff;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 26px 0 10px;
+    letter-spacing: .5px;
+  }
+  .biz p { color: #b6becb; font-size: 15px; margin-bottom: 14px; }
+  .diary .lead { color: #ffc4d9; font-size: 16px; font-style: italic; }
+  .diary p { color: #c4bcc4; font-size: 15px; margin-bottom: 16px; }
+  .diary .quote {
+    color: #ff9dc0;
+    font-size: 16px;
+    font-weight: 600;
+    border-left: 3px solid #ff6b9d;
+    padding-left: 14px;
+    margin: 22px 0;
+  }
+  footer {
+    text-align: center;
+    color: #565e6b;
+    font-size: 12px;
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+  .tagline {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 13px;
+    color: #565e6b;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>每日复盘</h1>
+  <div class="date">2026-08-04 · 周二</div>
+  <div class="tagline">商业复盘版 · 日记版</div>
+</header>
+
+<div class="tabs">
+  <div class="tab active-biz" id="tab-biz" onclick="switchTab('biz')">📊 商业版</div>
+  <div class="tab" id="tab-diary" onclick="switchTab('diary')">📝 日记版</div>
+</div>
+
+<div class="wrap">
+
+<div class="panel show biz" id="panel-biz">
+  <div class="card">
+    <div class="lead">定调：今天不是推进某个项目，而是把 AI 落地从「项目思维」切到「机制思维」——白天把 AI 视觉全链路摊成一张地图，晚上给 AI 委员会搭运营机器，中间还为一件事较了真：选战略重点，到底需不需要复杂方法论。</div>
+
+    <h2>一、AI 视觉：从「各自梳理」到「一张地图」</h2>
+    <p>上午的核心动作是给 AI 视觉项目管理表逐条写评论：流程拆解粒度太粗；主图视频和种草视频没分开（目标、渠道、制作方式、指标完全不同）；流程输入输出和 SOP 有缺口；耗时口径缺人员数量。四点指向同一个诉求——这张表目前是「过程记录」，我要的是「决策地图」：能让人一眼看到价值高、成本低的撬动点在哪里。</p>
+    <p>背后是视角切换。我把电商拉进来：电商看需求，视觉端看流程和成本，IT 看工程量和技术，一起看整盘业务的战略重点怎么划，而不是策划看策划的、视觉看视觉的。先画出现状与期望的 gap，再决定先击破哪个环节、用什么方式。周五或下周初的会议就是落地共识的节点。</p>
+    <p>中间有一场数据口径的较真：表格里「1.5 天/项目、16～18 个项目/月/人」相乘是 24～27 人天/月，有人质疑超过单人月工作量。我澄清：这本来就不是单人的月工作量，是多个人协作完成。口径不较真，后面所有基于它的判断都是糊涂账。</p>
+
+    <h2>二、一场关于「决策方法」的争论：不是方法不够，是不想负责</h2>
+    <p>围绕「怎么选战略重点」，对方反复说「决策不了」「方法论还要再过一遍」。我的立场很直接：所有格子投 3 个最重要的，投完说理由，投出来集中还是离散一目了然，为什么决策不了？价值高不高——人数、频次就是工作量；解决成本低不低——培训、做工具、做 SOP，谁高谁低一眼可辨。方法论是育木计划 500 强战略老师讲的，小郭、陈超、健新都上过课，过一遍流程不产生任何决策。</p>
+    <p>这句话说重了，最后以「不重要，应该是你敏感了」收场。但问题没消失：组织里「决策不了」往往不是方法缺失，而是没人愿意为一个简单选择负责。投票的本质是让选择显性化——投下去，集中或离散，责任就有了归属。</p>
+
+    <h2>三、AI 委员会：给 AI 落地装一台持续运转的机器</h2>
+    <p>晚上搭 AI 委员会月度例会机制：职能限定为通报费用、核心产品与 AI 专项进展，加三类专项会议（培训分享、AI 大赛、核心产品）；上会前先同步议程，无议题可不参会，同频内容由成员各自同频。运营动作列了九条：竞赛竞猜播报、赛手故事采访（A/B 面）、客服和 AI 视觉讲案例、21 天陪跑打卡（每天一个小任务、截图分享、积分）、外部分享、答疑直播、黑客松、月度 AI 战报（使用率、Top 案例、节省工时）、每周一个 AI 争议话题。</p>
+    <p>这套设计的共同点：每个动作都具体到能执行——打卡有积分规则，战报有明确指标，采访有固定问题框架。加上技能包「开始只放 3-4 个真正有用的」和投票决策逻辑，今天三条线其实是同一个信念：机制要轻，动作要持续，把宏大拆成可执行的最小单元，而不是把简单的事复杂化。</p>
+
+    <h2>四、回头看</h2>
+    <p>AI 视觉这条线本周已到临界点：前两周的梳理表格 → 管理层例会汇报 PPT V5 → 今天的逐条评论，正从「梳理现状」跨向「共识突破口与节奏」。今天的评论是在为周五/下周初的共识会议铺路，属于加深而非转折。AI 委员会则从「成立」走向「机制化」第一稿。</p>
+  </div>
+</div>
+
+<div class="panel diary" id="panel-diary">
+  <div class="card">
+    <p>上午是跟一张表格较劲。</p>
+    <p>AI 视觉项目管理表，前两周梳理的，我一条条写评论：流程拆解粒度还是有点粗；主图视频和种草视频没分开——目标、渠道、制作方式、指标根本是两回事；流程输入输出、SOP 还是有缺乏；耗时口径缺人员数量。写到最后我其实在想一件事：这张表要能让人一眼看到价值高成本低的撬动点，而不是让人看完更迷糊。</p>
+    <p>有人问：「1.5 天/项目、16～18 个/月/人，乘起来 24～27 人天，超了单人月工作量吧？」我说，因为就不是单人的月工作量啊，可能是多个人一起做的。对方又说，那编导也不只一个人吧。同一个意思，我说了三遍。数据口径这种事，不较真，后面全是糊涂账；较真完也有点累。</p>
+    <p>中午前 @米酒 @Cris @YIYI 把上月未上线需求发给我，三条里两条写着「6月已上线」。我愣了一秒：6月上了，7月怎么就没上？后来明白，7月优先做项目重构，挪到8月了。迭代这种事，每个月都要清一遍账，像给花盆松土。</p>
+    <p>下午的争论最磨人。对方说「决策不了」，要再过一遍方法论。我想不通：所有格子，投 3 个最重要的，投完说理由，为什么决策不了？价值高不高，人数、频次就是工作量；成本低不低，培训、工具、SOP，一眼就能比出来。方法论是育木计划那个 500 强战略老师讲的，小郭陈超健新都上过课，过一遍能起什么作用？</p>
+    <div class="quote">「我其实不太理解决策不了是为啥。」</div>
+    <p>这句话在键盘上敲了两遍。第二遍删掉了，换成了「不重要，应该是你敏感了」。把话收回来，不是因为想通了，是再争下去就变成抬杠。晚上才慢慢想明白：也许人家不是选不出来，是不想承担选错的责任。投票最狠的地方就在这里——投下去，责任就有名字了。</p>
+    <p>傍晚有几件小事让这天没那么硬。发票催了八百遍，终于开回来了，三百块的 AI 课程发票，攥在手里像打了场胜仗。看到泉州攻略，对象说更喜欢文面线糊，朋友强推美美阿姨醋肉，配本地壶见。聊起打球，我说篮球以前打过比赛，今年体重重了怕受伤就没报名；羽毛球是入门水平。文鑫和米酒倒是经常去。我说最近晚上加班多，偶尔还在上 AI 课，有空就去。</p>
+    <p>晚上跟 Cris 通了 11 分钟语音。没说大事，就是把白天的事又顺了一遍。</p>
+    <p>睡前想：今天其实只做了一件事——把一盘散棋摊开，一格一格摆好，然后等别人来下。有人觉得这盘棋下不了，我觉得能，投个票就行了。</p>
+  </div>
+</div>
+
+<footer>Hermes 每日复盘 · 自动生成于 2026-08-04</footer>
+</div>
+
+<script>
+function switchTab(name) {
+  document.getElementById('panel-biz').classList.toggle('show', name === 'biz');
+  document.getElementById('panel-diary').classList.toggle('show', name === 'diary');
+  document.getElementById('tab-biz').className = 'tab' + (name === 'biz' ? ' active-biz' : '');
+  document.getElementById('tab-diary').className = 'tab' + (name === 'diary' ? ' active-diary' : '');
+  window.scrollTo({top: 0});
+}
+</script>
+</body>
+</html>
