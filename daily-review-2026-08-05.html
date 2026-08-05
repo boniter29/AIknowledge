@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-05</title>
+<style>
+  :root{--bg:#0e1117;--card:#161b26;--border:#232a3b;--text:#e6e9f2;--muted:#8b93a7;--blue:#4f6ef7;--pink:#f472b6}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75}
+  .wrap{max-width:760px;margin:0 auto;padding:28px 18px 60px}
+  header h1{font-size:22px;font-weight:700;letter-spacing:.5px}
+  header .date{color:var(--muted);font-size:13px;margin-top:6px}
+  .tabs{display:flex;gap:10px;margin:22px 0 4px}
+  .tab{flex:1;text-align:center;padding:11px 0;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--muted);font-size:14px;cursor:pointer;user-select:none;transition:.2s}
+  .tab.active-b{background:rgba(79,110,247,.15);border-color:var(--blue);color:#b9c6ff}
+  .tab.active-p{background:rgba(244,114,182,.15);border-color:var(--pink);color:#ffc7e4}
+  .panel{display:none;margin-top:18px}
+  .panel.show{display:block}
+  .panel.biz h3{color:var(--blue);font-size:15px;margin:20px 0 8px}
+  .panel.biz p{font-size:14px;color:#c9cfdd;margin-bottom:10px}
+  .panel.biz .lead{font-weight:700;font-size:15.5px;color:#cdd6ff;border-left:3px solid var(--blue);padding-left:12px;margin:0 0 6px}
+  .panel.biz ul{margin:6px 0 12px;padding-left:2px;list-style:none}
+  .panel.biz li{font-size:13.5px;color:#c9cfdd;padding:5px 0 5px 16px;position:relative;border-bottom:1px dashed #232a3b}
+  .panel.biz li:last-child{border-bottom:none}
+  .panel.biz li::before{content:"";position:absolute;left:0;top:13px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+  .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0 4px}
+  .metric{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 6px;text-align:center}
+  .metric .n{font-size:18px;font-weight:700;color:#cdd6ff}
+  .metric .l{font-size:11px;color:var(--muted);margin-top:2px}
+  .signal-card{background:linear-gradient(135deg,rgba(79,110,247,.12),rgba(244,114,182,.08));border:1px solid rgba(79,110,247,.35);border-radius:14px;padding:14px 16px;margin:16px 0}
+  .signal-card h3{color:#ffd9ec;font-size:14.5px;margin-bottom:6px}
+  .signal-card li{font-size:13px;color:#d5d9e8;padding:4px 0;border-bottom:none}
+  .signal-card li::before{background:var(--pink)}
+  .panel.diary p{font-size:14.5px;color:#e8dbe6;margin-bottom:14px}
+  .panel.diary .quote{border-left:3px solid var(--pink);padding:8px 14px;margin:14px 0;background:rgba(244,114,182,.07);border-radius:0 10px 10px 0;color:#ffd9ec;font-size:14px}
+  footer{margin-top:36px;text-align:center;color:#5b6378;font-size:11.5px}
+  strong{color:#fff}
+  .panel.diary strong{color:#ffd9ec}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>📋 每日复盘</h1>
+    <div class="date">2026年8月5日 · 周三 · AI视觉版块</div>
+  </header>
+  <div class="tabs">
+    <div class="tab active-b" onclick="switchTab('biz',this)">📊 商业复盘版</div>
+    <div class="tab" onclick="switchTab('diary',this)">📝 日记版</div>
+  </div>
+  <div class="metrics">
+    <div class="metric"><div class="n">7</div><div class="l">AI听记</div></div>
+    <div class="metric"><div class="n">128</div><div class="l">聊天消息</div></div>
+    <div class="metric"><div class="n">14</div><div class="l">@我</div></div>
+    <div class="metric"><div class="n">50.9min</div><div class="l">最长会议</div></div>
+  </div>
+  <div class="panel biz show" id="panel-biz">
+    <p class="lead">AI 业务今天整体切换到了运营期：大赛、产品、预算、战略四条线同时进入交付节奏，而所有交付都卡在了同一个变量上——人。</p>
+<h3>一、大赛：一个人扛起八个人的期待</h3>
+<p>今天最重的一条线是林氏AI创意大赛。50.9 分钟的策划会定下三板块结构：赛事本身、文化建设、赛事预热。关键定位是——参赛的肯定是少数人，要达成 AI 文化建设的效果，参与的人不能只是参赛的少数人。所以大赛本质是文化建设的手段，不是目的。费用侧 1.4 万已获财务 BP 确认，明天走请示；企文敲定 10 号发「AI案例+大赛预热」推文、11 号发规则介绍推文，下周的传播日历就此锁定。</p>
+<p>但执行侧只有一个人。今天的原话是：「属于是我一个人干活。八个人催我。」海报要改 8 项——报名表、二维码、奖品说明、荣誉表述、去掉火山引擎 logo、7-8 版不同尺寸——「AI 都跑不动了」。赛事从策划进入交付后，决策分散（调解、周二、宪哥各催各的）与执行集中（物料全部出自一人之手）的错配彻底显性化。催办节奏正在稀释交付质量，这是大赛进入冲刺期最大的风险。</p>
+<h3>二、标杆的裂缝：用户在用「他们自己的工具」</h3>
+<p>产品侧今天有两个会议：小龙虾可用性治理、AI 应用费用预算。表面是两件事，底层是同一根链条——标杆能不能被持续使用。</p>
+<p>可用性治理定了双路径：导出现有工单逐条与开发核对解决情况，再结合源码做测试；UI 对照 Codex 和 Workbody 改版，下载链接「AI 味还是有点重」要优化。边界同样清楚：只解决基础可用性问题（报错、404、卡顿），不碰操作系统、不代替用户操作内部系统。这是从功能堆叠转向体验治理的第一刀。</p>
+<p>但另一边，预算会上小龙虾被点名是「不稳定」因素——推广范围一变，费用就大幅波动；更刺眼的信号来自小林生影：有同事反馈，牛奶妹团队 2-3 个人在用，「但现在他们也不怎么用了，主要用他们自己的工具」。标杆用户正在流失。这解释了为什么费用只能「按趋势乘以增量百分比」给一个大概数——当增长叙事从「我们做了多少标杆」转向「标杆用户还在不在用」，所有数字都失去了锚。</p>
+<h3>三、战略从画图进入对表</h3>
+<p>下周一要开战略重点会：按超哥拆解的全景图定第一阶段重点。但全景图拆得粗、板块不够细、量化目标迟迟没出来——所以要想是否拉慧姐一起过。会上还立了边界：「我们进去是赋能他们」「不要喧宾夺主，不然项目管理推不下去」。明早 9 点产委会检讨各团队架构梳理计划。战略文件开始讲「赋能≠接管」，这是组织成熟度的信号：AI 团队的角色定位从「替业务做」转向「教业务做」。</p>
+<h3>四、协同损耗开始收费</h3>
+<p>今天有三次摩擦。浮云对任务标准、要求和截止时间的理解两三次不一致，而其他同学没有这个问题，我直接问原因并留了调整窗口；BPS 的 PPT 没讲上次闭环项目冲突的结论、没有重点——需求提了多少、砍了多少、还剩多少，一句话说不明白，两人合成一页；「除了新哥的话找机会阴阳回去」的玩笑背后是真实的积累。项目从规划进入执行后，信息传递的损耗开始以返工的形式收费。今天的选择是把标准讲清楚（从 IT、业务角度解决了什么问题），而不是降低标准迁就。</p>
+<div class="signal-card"><h3>🔔 今日重要信号</h3>
+</div>
+<ul>
+<li>费用获批：大赛 1.4w 预算财务 BP 已确认，明天走请示——大赛从策划进入实质投入</li>
+<li>传播锁定：10 号发 AI案例+预热推文、11 号发规则推文，与企文定稿——下周传播日历已定</li>
+<li>标杆流失：小林生影用户「不怎么用了，用他们自己的工具」——可用性治理紧迫性的来源</li>
+<li>形态建议：「换成 agent 会合适一些」——有人建议流程形态从工具向 agent 迁移</li>
+<li>产能信号：「开发说我们能写多少他们就做多少」——瓶颈在需求侧，需求质量决定产能利用率</li>
+</ul>
+<h3>收尾判断</h3>
+<p>今天真正值得记住的不是大赛进度，而是 AI 业务的评价体系正在换锚：从「有多少人在用我们的标杆」，到「标杆用户还在不在用」。下周一的战略重点会和明早的产委会检讨，是新评价体系第一次被摆上桌面。如果小林生影的流失不是个例，可用性治理的优先级应当提到与大赛同等的位置——大赛拉来的是注意力，可用性留住的才是业务。</p>
+  </div>
+  <div class="panel diary" id="panel-diary">
+    <p>今天是从一句话开始的：属于是我一个人干活。八个人催我。</p>
+<p>说这话的时候语气是无奈的，但我听出了点别的——那种「我一个人也能扛住」的笃定。这句话像背景音乐一样跟了我一整天，从早上改海报，到下午评 PPT，到晚上还有人问我进度。</p>
+<p>上午大部分时间泡在赛事物料里。报名表要调，海报要嵌二维码，奖品说明要改，荣誉表述要改，火山引擎的 logo 要去掉，尺寸还要出七八版。我把清单发给同事：现在待调整的点有点多，AI 都跑不动了。八项。一个人改八项，八个人等八项。中间还穿插着「海报好了没有」「PPT 好了没有」「15 点能按时提交吗」。</p>
+<p>累到某个点反而会笑出来。看到同事用那个 skill 跑出来的样式，我发了一句：哈哈哈你们这个拿那个 skill 跑过没，怎么样式还是这么奇怪。那一刻我觉得自己还行——还有力气笑，就还没被压垮。</p>
+<p>下午有一段纯粹的分析时光，是今天最清醒的十几分钟。把 IT 战略地图发过去，从老板的视角拆语言信号：效率是目的，AI 是手段；要……不要……，全是二元对立，没有平衡；99% 和 1% 是修辞武器。拆老板的话，其实也是在拆自己的工作——他给 AI 划的边界，就是我每天干活的地板。评完战略图，又评同事的 PPT，优点缺点列得清清楚楚。我发现自己对「重点」这件事越来越敏感了——可能是被八个人催出来的。</p>
+<p>下午还顺手核了一组数字：7 月只有 7 条工单，除掉这 7 个还有 28 个需求等着排，平均一人手里压着十四个。数字不多，但每一条背后都是一个在等答复的人。我突然理解了老板为什么把「效率」挂在嘴边——不是口号，是这些数字攒出来的焦虑。</p>
+<p>管人的时候，我尽量直接。问浮云：你有两三次对安排任务的标准、要求和截止时间的理解不一致，其他同学没出现这个问题，你觉得是什么原因，后续能不能调整。没有发火，说完还补了一句：等你 PPT 交付了再考虑下这个部分。对付「指手画脚」，我给自己定了规矩：下次谁再让我改，我说，我负责这部分，你提意见的这部分你来改吧。</p>
+<p>傍晚有人夸我：视角表达有点意思。还有人接了一句玩笑：除了新哥的话，找机会阴阳回去。累了一天，还能跟人开这种玩笑，说明今天还没把我怎么着。</p>
+<p>晚上收尾的时候，跟人约了一句：那你来坐洁敏的车。一天的热闹忽然有了个回家的落点。</p>
+<div class="quote">催的人很多，干活的人有我就够了——这大概就是今天的全部底气。</div>
+  </div>
+  <footer>Hermes 每日复盘 · 自动生成</footer>
+</div>
+<script>
+function switchTab(t,el){
+  document.querySelectorAll('.tab').forEach(function(x){x.className='tab';});
+  el.className='tab '+(t==='biz'?'active-b':'active-p');
+  document.getElementById('panel-biz').classList.toggle('show',t==='biz');
+  document.getElementById('panel-diary').classList.toggle('show',t==='diary');
+}
+</script>
+</body>
+</html>
