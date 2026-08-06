@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-06</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0f1117; color: #e5e7eb;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.75; padding: 24px 16px 60px; max-width: 800px; margin: 0 auto;
+  }
+  .header { text-align: center; padding: 28px 0 20px; }
+  .header .date { font-size: 13px; color: #8b93a7; letter-spacing: 2px; }
+  .header h1 { font-size: 22px; font-weight: 700; margin-top: 8px; background: linear-gradient(90deg, #4f6ef7, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .tabs { display: flex; gap: 10px; justify-content: center; margin: 22px 0 26px; }
+  .tab {
+    flex: 1; max-width: 220px; padding: 11px 0; border-radius: 12px;
+    border: 1px solid #262b3d; background: #161923; color: #aab2c5;
+    font-size: 15px; font-weight: 600; cursor: pointer; transition: all .2s;
+  }
+  .tab.active-biz { background: rgba(79,110,247,.15); border-color: #4f6ef7; color: #8fa3ff; }
+  .tab.active-pers { background: rgba(244,114,182,.12); border-color: #f472b6; color: #f9a8d4; }
+  .panel { display: none; }
+  .panel.active { display: block; }
+  .card {
+    background: #161923; border: 1px solid #222838; border-radius: 16px;
+    padding: 24px 22px; margin-bottom: 18px;
+  }
+  .card p { margin-bottom: 14px; font-size: 15px; color: #d6dae4; }
+  .card p:last-child { margin-bottom: 0; }
+  .card strong { color: #ffffff; font-weight: 700; }
+  .biz-card { border-left: 3px solid #4f6ef7; }
+  .pers-card { border-left: 3px solid #f472b6; }
+  .lead {
+    font-size: 15.5px; line-height: 1.85; padding: 20px 20px;
+    border-radius: 14px; margin-bottom: 18px;
+  }
+  .lead-biz { background: linear-gradient(135deg, rgba(79,110,247,.12), rgba(79,110,247,.03)); border: 1px solid rgba(79,110,247,.35); }
+  .lead-pers { background: linear-gradient(135deg, rgba(244,114,182,.10), rgba(244,114,182,.03)); border: 1px solid rgba(244,114,182,.32); }
+  .lead strong { color: #fff; }
+  .sig-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 13.5px; }
+  .sig-table td { border: 1px solid #262b3d; padding: 8px 10px; color: #c9cfdd; }
+  .sig-table tr td:first-child { color: #8fa3ff; font-weight: 600; width: 42%; }
+  .foot { text-align: center; color: #5b6478; font-size: 12px; margin-top: 30px; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="date">DAILY REVIEW · 周四</div>
+    <h1>每日复盘 2026-08-06</h1>
+  </div>
+  <div class="tabs">
+    <button class="tab active-biz" id="tab-biz" onclick="showTab('biz')">📊 商业版</button>
+    <button class="tab" id="tab-pers" onclick="showTab('pers')">📝 日记版</button>
+  </div>
+  <div class="panel active" id="panel-biz">
+    <div class="lead lead-biz"><strong>今天不是「砍了活动」，而是给 AI 推广换了一套范式：从造势转向做深，从热闹转向场景。</strong></div>
+    <div class="card biz-card">
+    <p><strong>一、砍掉活动，砍出的是判断力</strong></p>
+    <p>跟 boss 汇报完，把活动全砍了，只保留报名相关的宣传。这不是拍脑袋，背后有一条完整的推理链：篮球赛做了那么多活动，关注的始终是本来就关注篮球的人，对篮球毫无兴趣的人依然毫无感知——活动只是在存量人群里反复加热，无法触达增量。「我们的目的是做深场景，打造 AI 标杆，不是追求热闹」——这句话是今天所有决策的总纲。种子选手不需要号召也会参加，非目标人群花再大精力做活动他们也不感兴趣。所以策划案 V7 直接把文化运营板块的栏目传播、打卡、战报全部砍掉，只留培训和赛事本身。</p>
+    <p><strong>二、借火山的势，但不挂火山的名</strong></p>
+    <p>AI 创新大赛背后是一场精心计算的借势：火山引擎（佛山供应商）主动找来，给 15 万算力券加两场免费培训，还打通了字节全国大赛的通道，广东只有林氏和美宜佳两家入选。但细看动作——海报上「去掉火山之类的描述」「只表达提供配套 AI 工具和 token 支持」——我们借的是算力资源和全国通道，却不替火山背书，培训也坚持用内部工具来做。「借他的活动来推我们的」，工具是影子，舞台是自己的。这是一种成熟的资源博弈：拿资源，不背品牌；用外力，不交主导权。</p>
+    <p><strong>三、放我家 3.0：AI 效果的上限不是模型，是数据</strong></p>
+    <p>1.0 和 2.0 已验证效果，3.0 的目标是打通全链路：风格空间 → 产品 → 效果图生成 → 导购助手报价 → 下单。但今天会议的核心不是模型能力，而是基础数据治理——主图、SKU 图、风格套系、卖点信息全都需要结构化。最刺痛的一个细节：用户选 1.8 米的床，SKU 小图展示的却是 1.5 米的，直接制造误导和售后。而火山云 seedream5-pro 的权限审批同一天通过——模型能力已经就位，卡脖子的变成了数据底座。线上 AI 生图会话数从 6 月 1825 次暴涨到 7 月 5699 次（3.1 倍），线下稳定在 9296 次：量已经跑起来了，数据质量决定这波量能转化成多少成交。</p>
+    <p><strong>四、7 月指标：交付率与需求齐涨，AI 评级上总办</strong></p>
+    <p>7 月项目交付率 79.17%、交付 12 个项目，需求新增 918 个（明显偏高，可能受绩效方案调整影响），积压仍维持在 1000 个；但故障和差评在持续下降——在线故障全年同比少 16 个，差评累计下降 42%。AI 评级和材料开始上交总办，AI 从部门动作升级为中心级考核项。</p>
+    <p><strong>🔔 今日重要信号</strong></p>
+    <table class="sig-table"><tr><td>:----</td><td>:----</td></tr><tr><td>大家居新零售 BP 问：能不能让 M2 以上的人下载小龙虾用</td><td>小龙虾开始向管理层渗透，工具推广从执行层打到决策层</td></tr><tr><td>各业务线明天下班前输出一页数字化产品矩阵 PPT</td><td>产品家底要被摊开盘点，按服务对象归类</td></tr><tr><td>小龙虾在客中、财务、人力都能用，但「串联得不好」</td><td>下一阶段的关键词是串联，不是新增</td></tr><tr><td>DeepSeek 准备涨价，方案未出</td><td>模型成本结构要变，选型和预算需要提前应对</td></tr></table>
+    <p><strong>收尾判断</strong>：接下来两周的胜负手在数据治理和产品矩阵两件事上——放我家 3.0 的数据底座能不能在 10 月前立起来，决定 AI 生图的流量能否兑现为成交；一页纸产品矩阵摊开后，小龙虾从「各用各的」到「串成一条线」的路径就会第一次有了图纸。</p>
+    </div>
+  </div>
+  <div class="panel" id="panel-pers">
+    <div class="lead lead-pers">今天一整天，我都在做减法。</div>
+    <div class="card pers-card">
+    <p>早上跟 boss 汇报完，转头就在群里跟德彬说：把活动全砍了。五个字，轻飘飘发出去，但我知道这意味着什么——策划案 V7 里，栏目传播、打卡、战报，那些我们花了很久铺起来的板块，一页一页删掉；海报上火山引擎的描述删掉，赛题方向简化，黑客松环节删掉。删到最后只剩一件事：报名。</p>
+    <p>做这个决定的时候，脑子里一直回响着那句关于篮球赛的话：做了这么多活动，但关注的始终是本来就关注篮球的人。对篮球毫无兴趣的人，依然没有什么感知。这句话像一记闷棍。我们之前不也是这样吗？热热闹闹办场子，来的永远是那批种子选手，他们本来就会来；真正该被触达的人，连门都没进过。热闹是给别人的，场景才是给自己的。</p>
+    <p>「我们的目的是做深场景，打造 AI 标杆，不是追求热闹。」这话我说给同事听，其实也是说给自己听。说出口的瞬间，心里反而踏实了。</p>
+    <p>下午的放我家 3.0 会议，讨论的是更硬的东西：数据。1.8 米的床，SKU 小图却显示 1.5 米的——导购拿这个给客户看，能不售后吗。卖点只躺在图片上，没有结构化的营销口径，AI 再聪明也不知道该推什么。模型权限同一天批下来了，seedream5-pro，火山云。工具到位了，卡脖子的却是那些最不起眼的主图、白底图、规格图。我忽然觉得，AI 落地这回事，像极了做菜：锅是新的，火是旺的，但食材没洗干净，什么大菜都做不出来。</p>
+    <p>4 个小时的交付会，数字一个个砸过来：交付率 79.17%，需求新增 918 个，积压 1000 个。好在故障在降，差评全年降了 42%。AI 评级要上交总办——我们的活儿开始被放在更大的台面上称重了。</p>
+    <p>晚上有人问我明天出发的同事要不要紧，我让他先补点电解质；有人约了 7 点半的按摩，有人要回去收拾行李，有人说不太舒服下周再说。我这边，6 点才能结束，只能跟团队说：你们要早走的话，下周再开这个会。</p>
+    <p>散会前最后一条消息是催作业的：「我们组还没一个人交作业哈哈哈，周末前记得提交。」组里没人吭声，我知道都在憋着周末写。</p>
+    <p>今天删了很多东西，但删完之后，留下来的每一样都变得很清晰：一个只留报名的比赛，一页按服务对象归类的产品矩阵，一条从风格空间到下单的全链路。减法做到底，剩下的就是真正重要的。</p>
+    </div>
+  </div>
+  <div class="foot">由 Hermes 自动生成 · boniter29</div>
+<script>
+function showTab(t){
+  var bizP = document.getElementById('panel-biz');
+  var persP = document.getElementById('panel-pers');
+  var tb = document.getElementById('tab-biz');
+  var tp = document.getElementById('tab-pers');
+  if(t==='biz'){ bizP.classList.add('active'); persP.classList.remove('active'); tb.className='tab active-biz'; tp.className='tab'; }
+  else { persP.classList.add('active'); bizP.classList.remove('active'); tp.className='tab active-pers'; tb.className='tab'; }
+}
+</script>
+</body>
+</html>
