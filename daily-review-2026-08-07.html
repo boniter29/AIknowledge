@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-07（周五）</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0f1117; color: #e5e7eb; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.75; }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 24px 18px 60px; }
+  header { text-align: center; padding: 32px 0 20px; }
+  header h1 { font-size: 26px; font-weight: 800; letter-spacing: 1px; }
+  header .date { margin-top: 6px; color: #9ca3af; font-size: 14px; }
+  header .date span { color: #f472b6; }
+  .tabs { display: flex; justify-content: center; gap: 12px; margin: 22px 0 28px; }
+  .tab { padding: 10px 26px; border-radius: 999px; border: 1px solid #2a2e3a; background: #171a23; color: #9ca3af; font-size: 15px; cursor: pointer; transition: all .2s; }
+  .tab.active { border-color: transparent; }
+  .tab.biz.active { background: linear-gradient(135deg, #4f6ef7, #7c5cf7); color: #fff; }
+  .tab.per.active { background: linear-gradient(135deg, #ec4899, #f472b6); color: #fff; }
+  .panel { display: none; }
+  .panel.active { display: block; animation: fade .35s ease; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 26px; }
+  .stat { background: #171a23; border: 1px solid #262b38; border-radius: 12px; padding: 14px 8px; text-align: center; }
+  .stat .num { font-size: 22px; font-weight: 800; color: #7c9cff; }
+  .stat .lbl { font-size: 12px; color: #8b93a7; margin-top: 2px; }
+  .card { background: #171a23; border: 1px solid #262b38; border-radius: 14px; padding: 22px 22px; margin-bottom: 18px; }
+  .card h2 { font-size: 17px; font-weight: 700; margin-bottom: 12px; color: #a5b8ff; }
+  .card.biz h2 { border-left: 3px solid #4f6ef7; padding-left: 10px; }
+  .card p { font-size: 15px; color: #d1d5db; margin-bottom: 10px; }
+  .card p:last-child { margin-bottom: 0; }
+  .lead { background: linear-gradient(135deg, rgba(79,110,247,.14), rgba(124,92,247,.10)); border: 1px solid rgba(79,110,247,.35); border-radius: 14px; padding: 18px 20px; margin-bottom: 22px; font-size: 15.5px; }
+  .lead strong { color: #cdd9ff; }
+  ul.sig { list-style: none; }
+  ul.sig li { padding: 7px 0 7px 22px; position: relative; font-size: 14.5px; color: #d1d5db; border-bottom: 1px dashed #262b38; }
+  ul.sig li:last-child { border-bottom: none; }
+  ul.sig li::before { content: "◆"; position: absolute; left: 2px; top: 8px; color: #4f6ef7; font-size: 10px; }
+  .closing { border-top: 1px solid #262b38; margin-top: 8px; padding-top: 16px; }
+  /* diary */
+  .card.per h2 { border-left: 3px solid #f472b6; padding-left: 10px; color: #f9c1de; }
+  .quote { border-left: 3px solid #f472b6; background: rgba(244,114,182,.08); padding: 12px 16px; border-radius: 0 12px 12px 0; margin: 14px 0; font-size: 15px; color: #f3cfe2; }
+  .card.per p { color: #e2d9de; }
+  footer { text-align: center; margin-top: 34px; color: #6b7280; font-size: 12.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>📋 每日复盘</h1>
+    <div class="date">2026-08-07 <span>周五</span> · 林氏 AI · 水滴</div>
+  </header>
+
+  <div class="tabs">
+    <button class="tab biz active" onclick="switchTab('biz', this)">📊 商业版</button>
+    <button class="tab per" onclick="switchTab('per', this)">📝 日记版</button>
+  </div>
+
+  <!-- 商业版 -->
+  <div id="panel-biz" class="panel active">
+    <div class="stats">
+      <div class="stat"><div class="num">5</div><div class="lbl">会议</div></div>
+      <div class="stat"><div class="num">73</div><div class="lbl">分钟</div></div>
+      <div class="stat"><div class="num">135</div><div class="lbl">消息</div></div>
+      <div class="stat"><div class="num">13</div><div class="lbl">@我</div></div>
+    </div>
+
+    <div class="lead"><strong>AI 在林氏第一次进入了组织的运营节奏：创意大赛有了精确到天的时间表，小红书内容生产被拆成五步自动化流水线，模型采购被一把 8.5 折的尺子卡住。四件事指向同一个转折——AI 已经证明「能做」，今天所有人都在回答「怎么低成本、规模化、常态化地做」。</strong></div>
+
+    <div class="card biz">
+      <h2>一、大赛进入传播执行期：AI 第一次有了对外时间表</h2>
+      <p>策划案定稿：删减赛程中的运营活动、只保留培训内容；报名海报去掉字节相关内容、重写赛题方向表达；门户主图被要求加上报名时间、参赛对象、荣誉奖金。传播节点精确到天：8 月 10 日（周一）林氏头条发 AI 案例推文、四位 AI 同事站台，8 月 11 日（周二）发报名推文，电梯、洗手间物料周一晚布置、周二一早可见，会议室大屏与门户登录页同步切换；连 1024 大会是否请 CEO 站台、要不要突出神秘嘉宾都已进入讨论。</p>
+      <p>这场大赛的意义不在活动本身，而在 AI 第一次被装进组织的传播机器——三个月后，全公司会拿这场大赛的结果给 AI 部门打分。</p>
+    </div>
+
+    <div class="card biz">
+      <h2>二、小红书五步链路：AI 改造业务的第一张完整路线图</h2>
+      <p>一场 24.7 分钟的会，把小红书运营盘成了一条五步流水线：Agent skill 批量生产内容（价值最高、生产难度最低）→ Agent 内容审核 → 内容策划表（最难、但价值最高）→ 按计划表生产 → AI 规划账号分发、一键下发到导购端，今年目标是把「策划到自动化生产」打通。</p>
+      <p>排序逻辑是组织推进策略：先做规模效益最直接的一步，每一步都在放大前一步的产出，不等待组织流程先改变。对比现状——运营目前每月手工盘点下月要生产的内容——这条链路一旦跑通，周期性人工劳动就变成按需自动运行。</p>
+    </div>
+
+    <div class="card biz">
+      <h2>三、算力与模型的成本纪律：设备是高点，8.5 折是门槛</h2>
+      <p>40.9 分钟的算力沟通会，聊的是最朴素的问题：API 调用和租赁算力到底哪个便宜？真要自建部署要花多少钱？供应商判断很直接：自建要慎重，设备现在是高点，最好别买，租赁可以。同一天聊到另一家模型供应商，态度更直白：「我们大模型已经比较完善了，应该不需要，除非他们价格比较合适，比如官方基础上 8.5 折以下、后付费」。</p>
+      <p>视频模型同理：sendance 2.5 开放了，但 4K 一个 15-30 秒视频要 100 多块，业务已先用即梦，结论是接进来备选、不切主力。不买设备、不用不划算的模型、不切换已验证的路径——AI 投入第一次被放到 ROI 的尺子上称重。被认真算成本的技术，才是被认真对待的技术。</p>
+    </div>
+
+    <div class="card biz">
+      <h2>四、平台架构的判断：workflow 类应用在退场</h2>
+      <p>数据源导入不能只按模块的指定交互形式，要加上对话式操作：用 Claude Agent SDK 调大模型来导入，清洗、总结、蒸馏、连接 CLI/MCP 做成 skill，DWS-CLI 固定接入，对话实验室用来纠偏。同一天还有一个明确的技术栈判断：dify 未来可能弃用，workflow 类应用基本快被淘汰，Vibe Coding 定制的 workflow 比 dify 搭的效率高得多。</p>
+      <p>这条线是其他所有事的底座：当业务开始要求 AI 进运营节奏、跑内容流水线、被成本核算，底座就必须从「模块拼装」走向「Agent 原生」——对话即接口，能力即 skill。</p>
+    </div>
+
+    <div class="card biz">
+      <h2>五、落在你身上的信号</h2>
+      <ul class="sig">
+        <li>小龙虾主题三套切换（Claude / Codex 浅色 / Codex 深色），默认主题由你定——产品进入打磨期，连皮肤都被认真对待</li>
+        <li>sendance 2.5 视频模型要不要切换——已回：贵，不切主力，接进来备选</li>
+        <li>业务链路图被追问「是单条路径还是分支」——链路梳理进入颗粒度细化阶段</li>
+        <li>门户登录页主图太空，要加报名时间、参赛对象、荣誉奖金——大赛物料的最后一公里</li>
+        <li>自定义词汇板块梳理得如何、能否重新开放给门店——被搁置的能力在等待重启</li>
+      </ul>
+    </div>
+
+    <div class="card biz">
+      <h2>隐藏结构</h2>
+      <p>四件事的共同推力只有一个：AI 在林氏已经从「证明能做」进入「证明划算、可复制、常态化」的阶段。大赛传播是把成果装进组织节奏，小红书五步是把单点工具变成链路自动化，成本纪律是把模型选型交给 ROI，平台重构是把能力沉淀为 Agent 原生架构——它们不是四件独立的事，而是同一个转折的四个面。</p>
+      <div class="closing">
+        <p><strong>收尾判断：</strong>接下来两周，显性节奏是大赛：周一推文、周二报名、物料上墙，全公司都会看到 AI 的名字。但真正决定三个月后格局的，是小红书链路的第一步——Agent skill 批量生产能否跑通。那将是 AI 从「帮我做」到「自己跑」的第一个闭环：大赛负责让 AI 被看见，链路负责让 AI 被需要。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 日记版 -->
+  <div id="panel-per" class="panel">
+    <div class="card per">
+      <h2>今天有人问我是不是焦虑了</h2>
+      <p>起因是昨天我分享了一些思考，今天有人跑来打趣：「该不会是昨天我找你说培训的事情提到的点，大家说没时间，然后大家又不在，给你制造的焦虑吧。」我认真想了想，回他：我的侧重点不是说我焦虑或压力大，说不焦虑没有压力也是假的，但昨天的本意是想单纯分享一些新的思考，重点还是在反思上，吾日三省吾身。最后补了一句：「我每隔一段时间都会想想类似的一些问题。如果硬要说的话，好像每天都是这样的思考状态，不说的话我都没觉得焦虑。」</p>
+      <div class="quote">「好像每天都是这样的思考状态，不说的话我都没觉得焦虑。」</div>
+      <p>说完自己有点意外。原来在别人眼里，「每隔一段时间停下来想想」是可以被读成焦虑的。可对我来说它更像呼吸——每天都是这样的状态，只是大多数时候不说。</p>
+      <p>今天的忙碌，是同一种状态的延续。</p>
+    </div>
+
+    <div class="card per">
+      <h2>上午 · 算力价格的朴素一问</h2>
+      <p>上午 11 点，和德彬一起见大模型供应商。我们坦承诉求很朴素：API 调用多少钱，租赁算力多少钱，真要自己部署又得花多少。供应商很实在：设备现在是高点，最好别买，租赁可以。散会前我想，省钱这种事，问清楚就是赚到。</p>
+    </div>
+
+    <div class="card per">
+      <h2>中午 · 五步链路</h2>
+      <p>那场 24 分钟的小红书会，有人把整条链路摊开，排成五步：Agent skill 批量生产、内容审核、策划表、按计划生产、账号分发，最后一键下发到导购端。我听着走神了一瞬：去年我们还在讨论 AI 能不能写文案，今年已经在排「让 AI 自己规划发什么笔记」了。</p>
+    </div>
+
+    <div class="card per">
+      <h2>下午 · 大赛倒计时</h2>
+      <p>下午基本泡在大赛里。策划案改到第三版，删了赛程里的运营活动只留培训；海报重做，把字节相关的内容全删了；时间节点一条条钉死：周一案例推文、周二报名、物料周一晚布置。有人问门户主图是不是太空，我回：「我再迭代一版，把荣耀加身和丰厚礼品放显眼点看看。」还有人问 1024 大会要不要请 CEO 站台、搞个神秘嘉宾——我说不好，也不一定去，去了也不会很隆重，先不写了。</p>
+    </div>
+
+    <div class="card per">
+      <h2>穿插的笑声</h2>
+      <p>让 Codex 填了个表，它自己顺着网线把真名、手机号、企业邮箱全找了出来，我发消息：「我靠，我让Codex填了个表，这是提示词，他自己去把我真名手机号和企业邮箱找到了」。晚上试了小龙虾新的双向群聊功能，发消息跟人说「在钉钉这边发消息，另一边实时同步」，像在介绍自己养的孩子。傍晚还发了条双周报提醒：「下雨天最适合窝着写周报啦」。外面确实在下雨。</p>
+    </div>
+
+    <div class="card per">
+      <h2>8.5 折的砍价</h2>
+      <p>坛子那边也聊了几句。有人问我们大模型要不要对接，我回得干脆：「我们大模型已经比较完善了，应该不需要，除非他们价格比较合适，比如官方基础上 8.5 折以下，然后后付费之类的。」回完自己想了想，AI 这东西，用着用着，就从仰望变成过日子了。</p>
+    </div>
+
+    <div class="card per">
+      <h2>晚上</h2>
+      <p>安静下来，又想起那句玩笑。焦虑吗？多少有一点吧，说没有是假的。但今天一整天，从算力价格到五步链路，从大赛物料到 8.5 折，每件事都在往前走，每一步都有具体的人在接。这种「每天都是思考状态」的日子，其实挺踏实的。</p>
+      <p>明天周六，物料要开始布置了。先不想了，周末愉快。🌙</p>
+    </div>
+  </div>
+
+  <footer>林氏 AI · 每日复盘自动生成 · 2026-08-07</footer>
+</div>
+
+<script>
+function switchTab(name, btn) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
