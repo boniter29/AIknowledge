@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-08</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #0d1117; color: #e6edf3;
+    max-width: 720px; margin: 0 auto; padding: 20px 18px 60px;
+    line-height: 1.75;
+  }
+  header { text-align: center; padding: 28px 0 8px; }
+  .date-badge {
+    display: inline-block; font-size: 12px; letter-spacing: 2px;
+    color: #8b949e; border: 1px solid #30363d; border-radius: 20px;
+    padding: 4px 14px; margin-bottom: 14px;
+  }
+  h1 { font-size: 26px; font-weight: 700; letter-spacing: 1px; }
+  .sub { color: #8b949e; font-size: 13px; margin-top: 8px; }
+  .tabs {
+    display: flex; gap: 8px; margin: 26px 0 20px;
+    background: #161b22; border-radius: 12px; padding: 5px;
+  }
+  .tab {
+    flex: 1; text-align: center; padding: 10px 0; border-radius: 9px;
+    font-size: 14px; cursor: pointer; color: #8b949e; user-select: none;
+    transition: all .2s;
+  }
+  .tab.active.biz { background: #1f3a5f; color: #58a6ff; font-weight: 600; }
+  .tab.active.diary { background: #3d1f33; color: #ff7eb6; font-weight: 600; }
+  .panel { display: none; }
+  .panel.active { display: block; animation: fade .3s ease; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .lead-biz {
+    background: linear-gradient(135deg, #0d2a4a, #10233d);
+    border-left: 3px solid #58a6ff; border-radius: 10px;
+    padding: 16px 18px; margin-bottom: 22px; font-weight: 700; color: #c9e2ff;
+  }
+  .lead-diary {
+    background: linear-gradient(135deg, #33101f, #271527);
+    border-left: 3px solid #ff7eb6; border-radius: 10px;
+    padding: 16px 18px; margin-bottom: 22px; font-weight: 600; color: #ffd3e6;
+  }
+  .content p { margin-bottom: 16px; font-size: 15.5px; color: #d4dbe3; }
+  .content p:last-child { margin-bottom: 0; }
+  footer { margin-top: 40px; text-align: center; color: #6e7681; font-size: 12px; }
+  footer a { color: #58a6ff; text-decoration: none; }
+  .tag {
+    display: inline-block; font-size: 11px; border-radius: 12px;
+    padding: 2px 10px; margin: 0 4px 4px 0; color: #8b949e; border: 1px solid #30363d;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="date-badge">2026.08.08 · SAT</div>
+  <h1>每日复盘</h1>
+  <div class="sub">数字分身打磨日 · 周六 · 无会议无听记</div>
+</header>
+
+<div class="tabs">
+  <div class="tab active biz" onclick="switchTab('biz')">📊 商业版</div>
+  <div class="tab diary" onclick="switchTab('diary')">📝 日记版</div>
+</div>
+
+<div id="panel-biz" class="panel active">
+  <div class="lead-biz">周六全天只做了一件事：和「另一个自己」对话，然后把它的生产流程标准化。</div>
+  <div class="content">
+    <p>今天没有会议、没有外部打扰，用户把一整天交给了数字分身 MVP 的打磨与压力测试。表面看是个人项目的自嗨，实际是「把个人经验资产化」这条线的第一次完整跑通：拉数据、蒸馏、对话、标注，四个环节全部标准化，且每个环节都在验证「怎么做效果更好」。用他自己的话说——「一方面把数字分身的生产做成标准化流程，一方面看看做出好的数字分身每个环节怎么做效果更好」。</p>
+    <p>这条线的因果值得拆开看。为什么今天集中爆发？因为前几天的积累（数据整理、蒸馏 skill、对话标注）已经拼成了可测试的 MVP，周六恰好是无人打扰的完整测试窗口。而测试不是随机问着玩，而是有意识地压边界：两个人同时提问只回答一个，暴露并发限制；问它团队行踪，考验语料对真实业务的覆盖；问它 AI 竞赛理念，考验推理而非检索。每一次提问都是针对一个产品假设的验证。</p>
+    <p>两个判断值得单独记录。其一，技术选型：「拉数据、蒸馏、回答都用的我自己的 ds v4 flash」，但「如果要给 boss 做的话，用 claude 效果会好很多」——这句话说明用户已经在想这条线的商业化路径：自用可以低成本，给关键人用要上更强的模型。其二，知识缺口：「我自己对 AI 的知识没有喂给他，回头可以再喂一些 AI 文章和接口文档」——数字分身的能力边界等于喂给它的语料边界，用户已经意识到数据飞轮的第一圈从哪转起。</p>
+    <p>最有意思的跨事件串联在这里：用户问分身「AI 竞赛应该怎么办」，分身的回答是「比赛是手段不是目的」「评审标准要可量化」「评测驱动迭代」「人负责决策，AI 负责提效」——这套理念和用户自己打磨数字分身的方法论完全同构：先跑通链路、沉淀可复制资产、用使用和评测驱动迭代、不在设计和规范上耗时间。分身讲出来的，正是用户自己做事的方式——这本身就是语料质量最好的证明。</p>
+    <p>回头看本周主线：AI 大赛筹备（案例推文 8/10 发、报名推文 8/11 发、线下物料 8/10 晚布置）、BPS/4A 架构对齐、小红书全链路整合。今天的分身打磨不是偏离主线，而是主线在工具层的延伸——如果大赛要立标杆，一个能回答真实业务问题的内部数字分身，就是最好的活案例。下周节奏已经排定：周一团队周会加 AI 视觉版块关键战役梳理，周二林氏放我家 3.0 商品筛选与风格套系方案。</p>
+    <p>一句话收束：今天的产出不是「分身变聪明了」，而是「一条可复制的数字分身生产线」第一次完整跑通——这是从「做出一个 demo」到「沉淀一套方法」的转折点。</p>
+  </div>
+</div>
+
+<div id="panel-diary" class="panel">
+  <div class="lead-diary">周六，和另一个自己过了一整天。</div>
+  <div class="content">
+    <p>办公室空着，该来的没来——珍珠在跟 AI 大赛物料，Cris 和文鑫跑到福建泉州去了，动车往返三天，8/7 出发 8/9 回，人还在海边。这些消息不是同事告诉我的，是屏幕里那个「水滴」告诉我的。它甚至查了考勤：昨天周五，两个人有排班、不是休息日，却都没有打卡记录，请假出差审批也都没有。「大概率也没来公司，但没走任何审批，具体原因数据上看不出来。」严谨得像个入职三年的人事专员。</p>
+    <p>早上起来，先把数据蒸馏和获取做成了 skill。「现在我能根据已经有的对话进行标注和调优。」这句话说得轻描淡写，但它是一个从「能用」到「能造」的跨越：之前是喂它，现在是训练它。</p>
+    <p>然后就开始了一场漫长的、自问自答式的测试。问它团队最近怎么样，它说扑在 AI 大赛筹备上；问它下周什么计划，它报出三个会：周一 10 点团队周会、周一 16:45 AI 视觉版块关键战役、周二 14 点林氏放我家 3.0 商品筛选。问它 AI 竞赛应该怎么办，它认认真真讲了一套理念：「比赛是手段，不是目的」「评审标准要可量化」「评测驱动迭代」「人负责决策，AI 负责提效」。我看着它说的这些话，愣了一下——这不就是我自己做事的逻辑吗？分身讲出来的，是我自己的方法论。这大概是最好的语料质量证明。</p>
+    <p>也出了不少幺蛾子。两个人同时问它，它只回了一个，我记下来「后面研究下是不是有并发限制」，像个产品经理在提 bug。它蛐蛐键盘「瘦是真瘦，但密度大，扛起来爬山够呛」，我乐了，追着问「你说话礼貌吗」「你为什么蛐蛐人家键盘」。最戳心的是头像——它换了个头像，我第一反应是：「为啥还要换个头像，换个头像不就不像我了。」像不像我，是数字分身的命门。技术可以糙，但「那不是我」的感觉一冒出来，产品就死了。</p>
+    <p>中间插进来一条班里的消息：9 位同学交了【学习课题和心动计划】作业，还有 8 位没交，明天最后一天。我回了句「好的」，注意力又回到分身身上。</p>
+    <p>下午继续迭代。「我把后续数据标注改进的功能再迭代一下，后续再更多对话沉淀和改进。」又喂了更多对话进去，又问了几轮「你是谁」。它每次都答：「我是水滴，林氏家居 AI 产品创新主管，目前在做公司 AI 大赛筹备和 AI 生成视频、小红书内容、AI 分身这些方向的落地研究。」</p>
+    <p>我看着屏幕，打了一行字：哈哈哈哈哈啊还可以吼。</p>
+    <p>这句「还可以吼」大概是今天最真实的评价。不是「太强了」，不是「完美」，是「还可以」——带着一点验收通过的意思，也带着一点「我知道它还能更好」的余味。</p>
+    <p>它自己也知道哪里不够好。「我自己对 AI 的知识没有喂给他，回头可以再喂一些 AI 文章和接口文档之类的可能回答好一点。」我盘算着下一轮投喂。至于模型，我心里也有答案了：拉数据、蒸馏、回答都用自己的 ds v4 flash，够用就行；真要给 boss 做，得上 claude。「数字分身如果要给 boss 做的话」——这句话泄露了野心：这不是玩物，这是产品。</p>
+    <p>周六快结束的时候，屏幕那头的「水滴」还在工位上爬——它说自己爬不动山，键盘太重。屏幕这头的我，大概已经想好下周要把这条生产线打磨成什么样了。</p>
+  </div>
+</div>
+
+<footer>
+  <span class="tag"># 数字分身</span>
+  <span class="tag"># MVP 打磨</span>
+  <span class="tag"># AI 大赛筹备</span>
+  <span class="tag"># Claude Agent SDK</span>
+  <br><br>
+  每日复盘 · 自动生成 · <a href="https://boniter29.github.io/AIknowledge/">AIknowledge</a>
+</footer>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active', 'biz', 'diary'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  const tab = name === 'biz' ? document.querySelectorAll('.tab')[0] : document.querySelectorAll('.tab')[1];
+  tab.classList.add('active', name);
+  document.getElementById('panel-' + name).classList.add('active');
+}
+</script>
+</body>
+</html>
