@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-09</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#0d1117; color:#e6edf3; font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; line-height:1.8; padding-bottom:60px; }
+.container { max-width:800px; margin:0 auto; padding:20px 18px; }
+header { text-align:center; padding:36px 0 8px; }
+header .date { font-size:14px; color:#8b949e; letter-spacing:2px; }
+header h1 { font-size:26px; font-weight:700; margin-top:6px; }
+header .sub { font-size:13px; color:#8b949e; margin-top:8px; }
+.tabs { display:flex; gap:10px; justify-content:center; margin:28px 0 24px; }
+.tab { padding:10px 28px; border-radius:999px; font-size:15px; cursor:pointer; border:1px solid #30363d; color:#8b949e; background:transparent; transition:all .25s; }
+.tab.active { color:#fff; }
+.tab.biz.active { background:#4f6ef7; border-color:#4f6ef7; box-shadow:0 0 20px rgba(79,110,247,.35); }
+.tab.day.active { background:#f472b6; border-color:#f472b6; box-shadow:0 0 20px rgba(244,114,182,.35); }
+.panel { display:none; }
+.panel.active { display:block; animation:fade .35s ease; }
+@keyframes fade { from {opacity:0; transform:translateY(8px);} to {opacity:1; transform:none;} }
+.card { background:#161b22; border:1px solid #21262d; border-radius:14px; padding:26px 26px; margin-bottom:18px; }
+.card.biz { border-left:4px solid #4f6ef7; }
+.card.day { border-left:4px solid #f472b6; }
+.card p { margin-bottom:14px; font-size:15.5px; color:#c9d1d9; }
+.card p:last-child { margin-bottom:0; }
+.card strong { color:#fff; }
+.card.biz strong { color:#8fa8ff; }
+.card.day strong { color:#f9a8d4; }
+footer { text-align:center; color:#484f58; font-size:12px; margin-top:30px; }
+footer a { color:#58a6ff; text-decoration:none; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<div class="date">SUNDAY · 2026-08-09</div>
+<h1>每日复盘 <span style="color:#4f6ef7">8/9</span></h1>
+<div class="sub">AI 落地的瓶颈，从「能不能做」到「会不会用」</div>
+</header>
+
+<div class="tabs">
+<button class="tab biz active" onclick="switchTab('biz',this)">📊 商业版</button>
+<button class="tab day" onclick="switchTab('day',this)">📝 日记版</button>
+</div>
+
+<div id="panel-biz" class="panel biz active"><div class="card biz">
+<p><strong>今天四件事指向同一个判断：AI 落地的瓶颈，已经从「能不能做」转移到「会不会用」。而「会不会用」的答案，不取决于用户的聪明，取决于产品设计是否假设用户是小白、培训机制是否覆盖到那些「不会的人」。</strong></p>
+<p>今天是周日，没有会议，没有听记。但 17 条消息里，藏着一条完整的因果链。</p>
+<p><strong>一、交作业的动作，比作业本身更重要。</strong></p>
+<p>「我大概把AI视觉的案例作为这个育木计划作业的内容提交了，要求和上级面谈，我就发你看看。」——把实战案例整理成《学员课题分析与行动计划（水滴+信息与数字化中心）.pptx》，这不是交差，这是给项目找组织级出口。主动要求面谈，说明案例已经长出了方法论：不是「我做了个东西」，而是「这东西可以复制」。一个人开始把项目经验转译成别人能听懂的汇报材料时，他就从执行者变成了布道者。</p>
+<p><strong>二、「培训覆盖不够」和「把用户当小白」，是同一枚硬币的两面。</strong></p>
+<p>今天有人@我：会不会培训覆盖不够。同一天，我自己说了两句话：「产品设计一定要把用户当小白，不要很多时候有产品优越感」「是啊，我都没想到这个不会用」。三句话在说同一件事：我们系统性高估了别人的理解力。培训覆盖不够，往往不是场次不够，而是默认了「来的人都会」；产品优越感，是默认了「用户应该懂」。当「我都没想到这个不会用」成为真实发生的惊讶，说明盲区不是用户的，是我们的。</p>
+<p><strong>三、cici 的「在线求教」，是需求侧最诚实的信号。</strong></p>
+<p>央视在门店拍「AI到我家」，门店的人第一反应是打开手机找人问——在线求教、语音通话，聊天记录被转给项目组。电视台开始报道 AI 进家门，说明公共叙事已进入普及期；而门店的 AI 能力还停留在「找人问」阶段。这个落差不是坏事：谁先做出「小白也能用」的交付物，谁就吃到普及期的红利。</p>
+<p><strong>隐藏结构</strong>：向上汇报（育木计划面谈）、横向推广（转发林氏项目组）、外部求助（cici）、组织反思（培训覆盖）——四件事共享同一个推力：AI 正从「少数人的项目」变成「多数人的日常」。而你今天的角色，已经从「做 AI 的人」变成了「教 AI 的人」。</p>
+<p><strong>收尾判断</strong>：接下来三周，如果把「把用户当小白」从产品设计原则升级为培训与交付原则——材料按小白写、案例按门店场景写、给上级的面谈版和给客户的演示版分开——「培训覆盖不够」这句质疑，就会变成你最好的答案。</p>
+</div></div>
+
+<div id="panel-day" class="panel day"><div class="card day">
+<p>今天的词是「不会」。</p>
+<p>周日晚上，我在电影院。手机亮起来，是双周报的催交通知：截止 18:00，米酒、浮云、YIYI 交了，文鑫和 Cris 还没交。我低头回完消息，抬头，银幕上已经换了一个场景。散场后我想，这个周日，我一半的心思在钉钉里，一半在银幕上。</p>
+<p>今天好几个瞬间，都撞在同一个词上：「不会」。</p>
+<p>下午跟人聊产品，我说：产品设计一定要把用户当小白，不要很多时候有产品优越感。这话我说过很多次了，但今天再说，是因为上午又验证了一次——「是啊，我都没想到这个不会用」。我以为理所当然的功能，有人不会用。这个「没想到」，比「不会用」本身更值得记住：原来我以为的「默认」，只是我自己的默认。</p>
+<p>cici 发来一段聊天记录：在线求教，语音通话。央视在她们门店拍「AI到我家」。门店的人面对镜头，第一反应是打开手机找我。我回了一句「还需要帮忙吗」，把记录转给项目组，又转给林氏那边放我家的项目组成员。一个周日，我像中转站一样，把「会」传给「不会」的人。有人回我「那还不错」，我发了个笑哭的表情，回了句「哈哈哈哈哈哈好吧」。</p>
+<p>晚上有人@我：会不会培训覆盖不够。我盯着这句话看了很久。它和「把用户当小白」是同一件事——我们总是默认来的人都会，就像我总是默认功能不用教。可今天的事实是：有人不会用，有人在线求教，有人在培训里掉队。覆盖不够，也许不是场次不够，是我们从来没把「不会」当成起点。</p>
+<p>在电影院里，我其实没怎么专注。脑子里一直转着那句话。散场的时候我忽然想明白：把用户当小白，说起来容易；难的是承认——我自己，在大多数领域，也是那个「不会用」的人。会做 AI 视觉，不代表会讲；会做产品，不代表会用别人的产品。优越感是最贵的幻觉，它让我们看不见对面的人真的不会。</p>
+<p>周日结束了。明天又是新的一周，我大概还会继续做那个「教 AI 的人」。挺好的。</p>
+</div></div>
+
+<footer>Hermes 每日复盘 · <a href="https://boniter29.github.io/AIknowledge/">AIknowledge</a></footer>
+</div>
+
+<script>
+function switchTab(name, el) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + name).classList.add('active');
+  el.classList.add('active');
+}
+</script>
+</body>
+</html>
