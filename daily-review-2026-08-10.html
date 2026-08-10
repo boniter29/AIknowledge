@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 · 2026-08-10</title>
+<style>
+  :root { --bg:#0f1117; --card:#171a23; --text:#e8eaf0; --muted:#9aa0b0; --blue:#4f8cff; --pink:#ff7eb6; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; line-height:1.9; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:720px; margin:0 auto; padding:32px 20px 60px; }
+  header { text-align:center; padding:26px 0 8px; }
+  .date-badge { display:inline-block; font-size:13px; letter-spacing:2px; color:var(--muted); border:1px solid #2a2f3d; border-radius:999px; padding:4px 16px; margin-bottom:16px; }
+  h1 { font-size:26px; font-weight:700; letter-spacing:2px; }
+  .sub { color:var(--muted); font-size:13px; margin-top:8px; letter-spacing:1px; }
+  .tabs { display:flex; gap:10px; justify-content:center; margin:30px 0 22px; }
+  .tab { flex:1; max-width:220px; padding:11px 0; text-align:center; border-radius:12px; background:#1a1e29; color:var(--muted); font-size:15px; cursor:pointer; border:1px solid #252b3a; transition:all .2s; user-select:none; }
+  .tab.active.biz { background:linear-gradient(135deg,#2b3f6e,#1d2a4a); color:#fff; border-color:#3d5a9e; }
+  .tab.active.diary { background:linear-gradient(135deg,#5e2b4a,#3a1d33); color:#fff; border-color:#a03d6e; }
+  .panel { display:none; }
+  .panel.active { display:block; }
+  .card { background:var(--card); border:1px solid #232836; border-radius:16px; padding:28px 24px; }
+  .card.biz { border-top:3px solid var(--blue); }
+  .card.diary { border-top:3px solid var(--pink); }
+  .lead { font-weight:700; font-size:16.5px; }
+  .biz .lead { color:#8fb3ff; }
+  .diary .lead { color:#ffb3d1; }
+  p { margin:0 0 18px; font-size:15.5px; text-align:justify; }
+  p:last-child { margin-bottom:0; }
+  footer { text-align:center; color:#565d70; font-size:12px; margin-top:36px; line-height:1.9; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="date-badge">2026.08.10 · 周一</div>
+    <h1>每日复盘</h1>
+    <div class="sub">商业版 📊 / 日记版 📝</div>
+  </header>
+
+  <div class="tabs">
+    <div class="tab biz active" onclick="switchTab('biz')">📊 商业复盘版</div>
+    <div class="tab diary" onclick="switchTab('diary')">📝 日记版</div>
+  </div>
+
+  <div class="panel biz active" id="panel-biz">
+    <div class="card biz">
+      <p class="lead">今天是从「方向摇摆」走向「方向收敛」的一天：上午用白皮书视角盘完半年的路线变迁，把林氏小龙虾收敛到「垂直场景做深」；下午把「林氏放我家」的落地责任，从「没有 owner」钉到「必须有人对全链路负责」。</p>
+      <p>四场会议里最长的一场（AI 产品价值深化，102 分钟）最先定了调：回归本质、走进业务，AI 立项与协同、项目开展——方向性、原则性的讨论优先于具体事项。紧接着两个人的白皮书对谈把过去半年完整盘了一遍：年初想自研汉尼斯（技术导向），到追红杉 Claude Agent SDK、追群聊，再到价值论证、AI 视觉落地，路线以螺旋方式不断切换。切换本身是有代价的：Chris 会跑来说「AI 视觉一直没什么进展，很焦虑」，而这焦虑一半来自外部、一半来自组织——方向不稳，团队就无法积累势能。早上和团队成员的沟通已抛出林氏小龙虾的定位问题，随后与 AI 协作产出两版分析（战略困局分析、战略定位深度洞察），把「方向不稳定」当作问题本身来解。</p>
+      <p>收敛的答案是垂直化：通用办公维持现状、不再铺，但对小红书这类高价值垂直场景单独定制，甚至可以上更好的模型。会上关于「中台 vs 前台」的讨论，实质是把顺序摆正——先有前台场景跑出价值，才有中台沉淀的资格。这个决策不是空想，是被资源现实逼出来的：上周周报里主战场工时只有 47%、战线铺了 16+ 条，米酒一个人 60% 的工时压在海外 IECM 上，AI 投入占比不升反降。方向不收敛，资源就被无限稀释；垂直化是给「减法」一个名正言顺的理由。</p>
+      <p>下午两场会都在做「对齐」。AI 视觉生产链路优化会上，和电商内容部（保时捷板块）把 AI 视觉半年的供给、需求目标摆上桌面，看两边是否匹配、落地怎么开展——把「AI 视觉没进展」的焦虑翻译成可量化的目标；商品数据治理与 AI 生图推进会上，问题更尖锐：林氏放我家至今没有 owner，全链路没人负责，10 月底上线的压力就在眼前，而泰源大团队对数据治理「无感」，只能倒推产品部协同。会上有同事指出节奏不清晰，本质是责任不清晰——先定项目经理，再谈白底图等数据规范，再谈效果标准。同步把导购触点拆成「拿图→生成→采纳→发送」四环，特别强调采纳与发送是两个环节：导购认不认可、客户看不看得到，必须分开评估、分开迭代。连下午陈超那边的会，财务 BP、HRBP 也被拉进来共识量化目标。目标可量化、责任有人认、环节可观测——「做 AI」从口号变成了工程。</p>
+      <p>同一股收敛的力也在组织和品牌层面推进：推荐 Cris 进育苗计划，理由写得很实——承担团队管理职能、亲历 AI 产品团队从 0 到 1、稳重靠谱能扛事，信数两个名额，截止后通过键盘补推；对外披露口径统一为「小林 AI 智能平台 · 20 多个场景」，小林生影、林氏放我家都只是平台下的案例，数字工卡把小林 AI 作为员工助手呈现——名字少而统一，是为了让心智不被稀释。与之配套的是资源的取舍：小林生影明确降为「不是优先级很高的事情」。知道不做什么，比知道做什么更难。</p>
+      <p>今天所有动作指向同一件事：定身份——产品定垂直身份（小龙虾），项目定责任身份（owner），平台定心智身份（小林 AI）。方向摇摆的根源从来不是执行，而是身份；身份一旦定了，工时、目标、预算自然会跟着归位。8 月目标周二就要提报，这份收敛正好赶在提报之前，算是给 8 月定了一个不那么摇摆的调子。</p>
+    </div>
+  </div>
+
+  <div class="panel diary" id="panel-diary">
+    <div class="card diary">
+      <p class="lead">今天好像一直在跟「名字」打交道。上午聊小林生影，业务同事懒得叫全名，张口就是「小林那个产品」；晚上看工卡设计稿，职务、部门，我把小林 AI 放进去当员工助手。名字少一点，大家记住一个就够了——这个道理白天争了一整天，晚上反而想通了。可白天真正压在心里的，不是名字，是方向。</p>
+      <p>上午和白皮书那位同事开会，两个人把过去半年盘了一遍：年初想自研汉尼斯，技术导向；后来看见红杉的 Claude Agent SDK，追；再后来是群聊，追；再到价值论证、AI 视觉……像螺旋，一圈圈往上，也像原地打转。他问「什么叫中台，什么叫前台」，我没直接接话，心里却在想：顺序摆反了，就会一直摇摆。Chris 来找我，说很焦虑，AI 视觉一直没什么进展。我懂那种焦虑——不是没在做事，是方向老动，力气攒不起来。上午我跟团队成员讲了林氏小龙虾的定位，又跟 AI 一起做了两版分析，一版叫「战略困局」，一版叫「战略定位深度洞察」。写完松了口气：至少把「为什么一直在变」这件事，讲清楚了。</p>
+      <p>下午是两场硬仗。第一场和电商内容部对齐 AI 视觉半年的目标，保时捷板块的同事也来了，供给、需求两边目标摆在一起，看匹不匹配、落地怎么开展。第二场更扎心——商品数据治理，10 月底要上线，可现在连 owner 都没有。会上有同事说节奏不清晰，我想，不是节奏不清晰，是责任不清晰。散会后我在群里把导购的流程画了出来：拿用户空间图、生成图片、采纳、发送。画的时候特意把「采纳」和「发送」拆成两格——导购认不认可，和客户看不看得到，是两回事，要分开评估、分开迭代。事情一旦能被画出来，就有办法被管住。这个道理，好像是今天才真正想明白的。</p>
+      <p>中间穿插着一些小事。把 Cris 推进育苗计划，写了三条理由，越写越像在给朋友写推荐信，字字斟酌；后来发现今早就截止了，又跟键盘聊起还能补推，最后推了出去，心里踏实。周报洞察发出去：聚焦度黄灯，主战场工时 47%，战线 16 条。数字是冷的，但我知道背后是大家被摊薄的时间——也包括我自己的。</p>
+      <p>晚上问洁敏几点走，她说等我。响哥走了，我也溜了，跟她说：「后面多坐你的。」明天早上要去医院，请了假，不坐车。白天一整天都在给产品定方向、给项目定 owner、给人定位置，轮到给自己安排，明天的日程是去医院——把身体这个项目也纳入管理，大概也是一种「定」吧。</p>
+    </div>
+  </div>
+
+  <footer>由 Hermes Agent 自动生成 · 数据来源：钉钉 AI 听记 × 聊天记录<br>boniter29.github.io/AIknowledge</footer>
+</div>
+<script>
+function switchTab(name){
+  document.querySelectorAll('.tab').forEach(function(t){ t.classList.remove('active','biz','diary'); });
+  document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
+  document.querySelector('.tab.'+name).classList.add('active',name);
+  document.getElementById('panel-'+name).classList.add('active');
+}
+</script>
+</body>
+</html>
