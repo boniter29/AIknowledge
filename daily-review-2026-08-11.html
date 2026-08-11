@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-11</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#0f1117; color:#e8eaf2; font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; line-height:1.85; padding:28px 16px 70px; }
+.wrap { max-width:760px; margin:0 auto; }
+header { text-align:center; margin-bottom:8px; }
+.date { font-size:13px; color:#9aa0b5; letter-spacing:2px; }
+h1 { font-size:25px; margin:8px 0 6px; font-weight:700; letter-spacing:1px; }
+.sub { font-size:13px; color:#9aa0b5; }
+.tabs { display:flex; gap:12px; justify-content:center; margin:26px 0 24px; }
+.tab { flex:1; max-width:240px; padding:11px 0; text-align:center; border-radius:14px; cursor:pointer; font-size:15px; font-weight:600; color:#9aa0b5; background:#1c2030; border:1px solid #262b3d; transition:.2s; user-select:none; }
+.tab.active-biz { background:rgba(79,110,247,.16); color:#4f6ef7; border-color:#4f6ef7; }
+.tab.active-diary { background:rgba(244,114,182,.16); color:#f472b6; border-color:#f472b6; }
+.panel { display:none; }
+.panel.show { display:block; }
+.hero { background:linear-gradient(135deg,rgba(79,110,247,.18),rgba(79,110,247,.05)); border:1px solid rgba(79,110,247,.45); border-radius:16px; padding:22px 22px 20px; margin-bottom:18px; }
+.hero .hero-tag { display:inline-block; font-size:12px; color:#4f6ef7; background:rgba(79,110,247,.2); border-radius:999px; padding:2px 12px; margin-bottom:10px; letter-spacing:2px; }
+.hero strong { color:#8fa3ff; }
+.dash { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:18px; }
+.ditem { background:#1c2030; border:1px solid #262b3d; border-radius:14px; padding:14px 6px; text-align:center; }
+.dnum { font-size:24px; font-weight:700; color:#4f6ef7; }
+.dlabel { font-size:12px; color:#9aa0b5; margin-top:2px; }
+.bcard { background:#171a24; border:1px solid #262b3d; border-left:3px solid #4f6ef7; border-radius:14px; padding:18px 20px; margin-bottom:14px; }
+.blead { font-size:16.5px; color:#8fa3ff; margin-bottom:8px; font-weight:700; }
+.bbody { font-size:15px; color:#d6d9e6; }
+.bbody strong { color:#aab8ff; }
+.panel-diary p { font-size:15.5px; color:#e2e0ea; margin-bottom:16px; }
+.panel-diary p:first-child { color:#f9a8d4; }
+.dquote { border-left:3px solid #f472b6; background:rgba(244,114,182,.08); border-radius:0 12px 12px 0; padding:14px 18px; margin:0 0 18px; color:#f9a8d4; font-size:15.5px; }
+footer { text-align:center; color:#5b6072; font-size:12px; margin-top:34px; letter-spacing:1px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="date">DAILY REVIEW · 2026-08-11</div>
+    <h1>每日复盘</h1>
+    <div class="sub">8月11日 · 周二</div>
+  </header>
+  <div class="tabs">
+    <div class="tab active-biz" id="tab-biz" onclick="switchTab('biz')">📊 商业版</div>
+    <div class="tab" id="tab-diary" onclick="switchTab('diary')">📝 日记版</div>
+  </div>
+  <div class="panel panel-biz show" id="panel-biz">
+
+    <div class="hero">
+      <div class="hero-tag">定调</div>
+      <strong>今天定下来的事，是把一句话从口头变成行动。讲不清价值的东西，不再配得上资源。</strong>
+    </div>
+    <div class="dash">
+      <div class="ditem"><div class="dnum">3</div><div class="dlabel">场会议</div></div>
+      <div class="ditem"><div class="dnum">42</div><div class="dlabel">分钟</div></div>
+      <div class="ditem"><div class="dnum">207</div><div class="dlabel">条消息</div></div>
+      <div class="ditem"><div class="dnum">12</div><div class="dlabel">条 @我</div></div>
+    </div>
+    <div class="bcard"><h3 class="blead">AI视觉项目被按下暂停键。</h3><div class="bbody"> 昨天开完AI视觉的会，今天小范围复盘，结论是陈超推不动了。他一直在做事，但他的逻辑是，我先去做这么一大通东西，他肯定是有价值的。会上有人问他的目标是什么，怎么问都问不出来，旁边有人补了一句，感觉他每次开会讲的东西都差不多。有人把星哥的意思带得很直，你要做这些事，总得讲得出对经营的价值，现在讲不出价值，我们还投入这么多资源陪他玩，这笔账划不划算。于是分两步走，先不追加投入，安排一次跟boss的会把这个事摆上台面，同时给两条新方向去探，一条是林氏放我家的素材治理，那是目前几乎绕不开的核心卡点，另一条是Chat Canvas类的图片编辑产品。这件事要紧的地方在于，组织把立项逻辑从先做后说改成了先说后做，陈超只是撞上这条新规矩的第一个人。</div></div><div class="bcard"><h3 class="blead">同一套逻辑，白天在打标复核上已经预演过一次。</h3><div class="bbody"> 业务的人来问，AI打标之后，概率低的词每次要人工复核一个小时，有没有办法减负。我先把流程问清楚，打标复核和AI审核是分开的，先人工审核，改完再一起喂给AI，AI用的是GPT。问完发现，人工耗时的大头不在判断标签，在信息缺失。词没有原始出处和上下文，人得去多个平台查含义，新品名和产品类目对不上，得人工搜确认。这跟AI视觉是同一件事的两面，那边讲不清价值，这边讲不清词义，解法都是把缺的信息补上，而不是继续堆人堆资源。给的方向也沿着这个走，让AI去搜出处补上下文，或者回头优化训练数据的准备环节，新品名先做产品词库匹配。</div></div><div class="bcard"><h3 class="blead">BI那边在给价值立账。</h3><div class="bbody"> 统计下来需求少得可怜，总共2个需求，3小时工时。明天要去B2C聊BI切换，上午明哥过来，我让米酒把这半年的需求清单拉一版。小归小，账要立清楚，不然坐下来谈迁移方案手里没数。这件事我说了不算，最后要看小明跟健新聊的情况，我的位置是把人凑齐，把方案两边对一遍。</div></div><div class="bcard"><h3 class="blead">今天最讽刺的注脚是AI大赛的二维码。</h3><div class="bbody"> 早上贴出去的海报，钉钉官方BUG，扫码提报的数据直接丢了。一整天都在抢救，自己扫码能扫能提交，别人扫码就有问题，下午改了权限，扫码正常了，手机提交不了，电脑提交的收不到，后来有人让嘉莫来看，又好了。我人在医院，电脑没电，对着手机一张图一张图对。最后是别人说了句实在话，AI表格似乎不行，我用钉钉流程配置一个吧。一场要给公司秀AI价值的大赛，报名环节被钉钉的表单卡了一整天。这跟AI视觉项目的停摆是同一个信号的两种长相，组织的工具链和立项逻辑，都还没准备好承接把价值讲清楚这件事。</div></div><div class="bcard"><h3 class="blead">对照组是服务续签。</h3><div class="bbody"> 客户技术搞不定，我们给了三套方案，最便宜的是他自己招人，也要60万一年。客户怕我们不续，一个劲催。同样是技术交付，那边被追着要，这边被叫停，差别全在价值讲不讲得清。续签明天落地，我过去跟他聊。</div></div><div class="bcard"><div class="bbody">接下来两周的判断。素材治理会成为新的资源投入点，放我家图片取值的问题盘点已经排上日程，SKU图、白底图、详情图的规范缺口今天也有人点到。AI视觉项目会在boss会上被正式校准，大概率收缩。大赛的报名工具链要用钉钉流程固化下来，别让二维码的戏重演。今天看起来是乱糟糟的一天，其实所有事都在回答同一个问题，资源该往哪放。答案已经出来了。</div></div>
+    
+  </div>
+  <div class="panel panel-diary" id="panel-diary">
+    <p>上午人在医院，电脑没电，操作很鸡肋。假条补到下午两点十五。</p>
+    <p>消息一条接一条进来，群里开始炸。早上贴出去的海报，二维码出事了。钉钉官方的BUG，扫码提报的报名信息没有进后台。我人不在，只能一张图一张图地看截图。有人说线下的是可以扫的，有人说扫码进去是申请报名管理后台权限的页面，我扫码进去就是报名表。同一个码，不同的人，不同的页面。我说我万万没想到，我自己扫码可以扫也可以提交，今早别人扫码会有问题。后来有人让嘉莫来看，立马又好了。好奇怪。</p>
+    <p>我在医院里对着手机，一会儿气笑一会儿气哭。我吐了。二维码又出问题了，在抢救二维码。</p>
+    <p>反流性食管炎，从高中就有了。跟文鑫聊到心电图，我顺手讲了个冷知识，心电图只能看瞬时的，很多心脏问题，早搏、X联律那些，都得看24小时心电图才行。做完心电图正常，也不代表你心脏正常。这话讲给文鑫听，也讲给自己听。</p>
+    <blockquote class="dquote">下午回到公司，坐下来第一件事还是二维码。验证，换码，改权限，手机端电脑端来回试。一整天我都在回答同一个问题，这个码扫出来，到底是什么页面。最后有人说了句实在话，AI表格似乎不行，我扫了好久都不行，我用钉钉流程配置一个吧。</blockquote>
+    <p>晚上七点，AI视觉项目的会，13分钟，四个人。开会之前，我白天已经说过，深入问一下，到底提效了多少，解决了什么问题，他们是说不清楚的。他们最开始导这个数据，其实就是为了汇报写白皮书。会上有人把话讲得更直，陈超是推不动了，问他目标是什么，怎么问都问不出来。他的逻辑是，我先去做这么一大通东西，他肯定是有价值的。有人补了一句，感觉他每次开会讲的东西都差不多。有人把星哥的意思带出来，你要做这些事，要讲得出对经营的价值，现在讲不出价值，我们投入这么多资源陪他玩，划不划算。散会的时候定了，不追加投入，安排一次跟boss的会，把这事摆到台面上。</p>
+    <p>散会之后我坐了一会儿。白天我说，我挺不想支持他们这些需求的，晚上会上的结论跟我的直觉对上了，但我没有轻松的感觉。陈超这个人我不算熟，可他那种先做一大堆、价值总会有的逻辑，我自己身上有没有，我也不敢说没有。只是他撞上了。</p>
+    <p>白天还有一件事。有人问我，AI打标之后，概率低的词业务每次要复核一个小时，怎么减负。我把流程问了一遍，打标复核和AI审核是分开的，先人工审核，改完再一起给AI，AI用的GPT。问完我心里有数了，人工耗时的大头不在判断标签，在信息缺失，词没有出处和上下文，人得去好几个平台查，新品名和类目对不上，得人工搜。给的方向是，让AI去搜出处补上下文，新品名先做词库匹配。这件事和晚上那场会，其实是一件事，缺的信息补上，别继续堆资源。</p>
+    <p>明天上午明哥过来，还要去B2C聊BI切换。米酒帮我拉这半年的需求清单，统计下来BI的需求就2个，3小时工时。少得有点好笑，但账要立清楚。</p>
+    <p>官宣推文今天发出去了，副标题写着，下一位AI新同事，由你来创造。一整天连让同事扫码报个名都费这么大劲，这句口号读起来有点晃眼。可是话说回来，二维码最后有解，钉钉流程配一版就好。陈超的事也会有解，boss会上总会有个说法。</p>
+    <blockquote class="dquote">明天的二维码，应该不会再出问题了。</blockquote>
+  </div>
+  <footer>林氏 · Hermes 每日复盘 · 自动生成</footer>
+</div>
+<script>
+function switchTab(name) {
+  document.getElementById('panel-biz').classList.toggle('show', name==='biz');
+  document.getElementById('panel-diary').classList.toggle('show', name==='diary');
+  document.getElementById('tab-biz').className = 'tab' + (name==='biz' ? ' active-biz' : '');
+  document.getElementById('tab-diary').className = 'tab' + (name==='diary' ? ' active-diary' : '');
+}
+</script>
+</body>
+</html>
