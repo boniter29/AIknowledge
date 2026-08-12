@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-12</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0f1117;
+    color: #e8e6e3;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, sans-serif;
+    line-height: 1.85;
+    padding: 0 0 60px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+  header {
+    padding: 40px 0 20px;
+    text-align: center;
+    border-bottom: 1px solid #232838;
+    margin-bottom: 24px;
+  }
+  header .date { font-size: 13px; color: #8b93a7; letter-spacing: 2px; }
+  header h1 { font-size: 26px; font-weight: 700; margin-top: 8px; letter-spacing: 1px; }
+  header .sub { font-size: 14px; color: #8b93a7; margin-top: 6px; }
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  .tab {
+    flex: 1;
+    padding: 11px 0;
+    border: 1px solid #2a3042;
+    border-radius: 10px;
+    background: #161a26;
+    color: #8b93a7;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .2s;
+  }
+  .tab.active.biz { background: #16233d; border-color: #4f8ef7; color: #7db0ff; }
+  .tab.active.diary { background: #38182e; border-color: #f472b6; color: #f9a8d4; }
+  .panel { display: none; }
+  .panel.active { display: block; }
+  .panel p {
+    background: #151925;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+    font-size: 15.5px;
+    letter-spacing: .3px;
+  }
+  .panel.biz p { border-left: 3px solid #4f8ef7; }
+  .panel.diary p { border-left: 3px solid #f472b6; }
+  .panel p strong { color: #7db0ff; }
+  .panel.diary p strong { color: #f9a8d4; }
+  .kicker {
+    font-size: 12px;
+    color: #6b7488;
+    letter-spacing: 2px;
+    margin: 6px 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .kicker::after { content: ""; flex: 1; height: 1px; background: #232838; }
+  footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: #4d5468;
+  }
+  @media (max-width: 480px) {
+    header h1 { font-size: 22px; }
+    .panel p { font-size: 15px; padding: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="date">WEDNESDAY · 星期三</div>
+    <h1>每日复盘 2026-08-12</h1>
+    <div class="sub">把每一条 AI 线落到具体的人头上</div>
+  </header>
+
+  <div class="tabs">
+    <button class="tab biz active" data-tab="biz">📊 商业版</button>
+    <button class="tab diary" data-tab="diary">📝 日记版</button>
+  </div>
+
+  <section id="biz" class="panel biz active">
+    <div class="kicker">商业复盘</div>
+    <p><strong>AI委员会改革从方案进入运行态。今天一整天都在做同一件事，把每一条AI线落到具体的人头上。</strong></p>
+    <p>先看机制。AI委员会正式分拆为月度例会加专项会的双轨结构。例会每月一次，只议大事，没有有效议题就取消。专项会按需召开，由项目负责人主导。今天下午的专项会议首次给一批项目定了责任人。林氏放我家由刘艺主导，小红书由轩然负责，素材库归修宇，AI视觉和通用工具的人选也都有了方向。改革背景写得很直白，原来的月度例会议题多决策少、干系人不准确，专业讨论和跨部门决策混在一起。调整方向是给会议做减法，把原本已经存在的有效会议统一纳入管理，让每个人的时间都花在刀刃上。</p>
+    <p>再看治理和现实之间的张力。PMO提议给AI项目清单加两个节点，上线节点和价值兑现节点。后者的意思是，项目上线不算完，要看到价值真正兑现。逻辑站得住，但同一天立项这件事被按下暂停。玲玲那边说项目立项不做了，答复是这个月不一定做得出来，但会推。林氏小龙虾和小林AI大概率不立项，原因是讲不清楚业务价值。AI视觉更远，业务自己都还没和老板聊明白目标。今天最值得记录的，是这条张力第一次摆到明面上。治理要求先讲清价值再立项，现实是多数专项还处在先跑起来再说的阶段。对走形式的立项，态度很警惕，如果为了做份材料，编个材料也可以，那这个立项不就是走个形式。这句话把今天的分歧点说透了。</p>
+    <p>AI大赛这条线，把治理的逻辑反过来用。报名8月17日截止，IT陪跑按归口分工。营销类由浩星和轩然承接，供应链与物流类归yaya，财务人力行政内控类归卡罗，经营分析与数据治理类归Samper和车仔，暂时无法归类的场景由德彬先行承接。内部动员的目标是3到5支队伍，一个人一组，把业务和产品同学拉进队里。判断很清醒，业务同学大概率不会coding，拉进来是让他们有氛围、跟着学。借了个由头参赛，本来就是你们要干的活。大赛在这里成了让业务和IT在真实项目上互相认识的抓手。信号已经出现，有电商同学私聊说有个好点子，但不知道找哪个IT组队。报名结束后陪跑资源怎么分配，是下一个要解决的问题。</p>
+    <p>成本线今天浮出水面。模型API这边，供应商反馈我们提供的API模型费用比他们原先的贵了4倍左右，续费5000要付，采购需要拉通谈价。BI报表方案选型会上，海外报表数量占10%，成本最优的方案一是按0.5人力包干，需要额外投入3人以上的重方案直接不做。AI从先用起来的阶段，进入算得过来账的阶段。这和立项收紧是同一股力，预算开始替业务价值把关。</p>
+    <p>还有一件确定性最高的事。财务中台8月21日晚10点升级9.1版本，停机约24小时，海外影响评估收敛为四条。BPS客户充值停机期间有影响，提前知会业务当天不做充值。物流尾程头程费用结算已通知业务当天不操作，无影响。库存流水、批次费用消息走消息中心订阅拉取，不需要重推。调拨升级期间若产生在途差异，升级后重推修复。影响面从十几个系统收敛到四条动作，这是今天做得最干净的一件事。</p>
+    <p>回头看，今天所有的事共享同一条推力。AI从尝鲜进入经营阶段。会议在做减法，项目在定人定节点，成本开始算账，财务中台的风险面也顺手收了一遍。改革方案是两个月复盘的结果，今天是它变成排期的第一天。接下来要盯两件事。立项暂停之后，价值兑现节点怎么定义。大赛报名截止后，陪跑资源怎么分。两条线的答案，都会在下个月的例会上见。</p>
+  </section>
+
+  <section id="diary" class="panel diary">
+    <div class="kicker">日记随笔</div>
+    <p>今天在群里看到自己发过的一句话。去年刚来健新就在给我画这个饼了，配了个表情，难啊，看下这个饼啥时候吃嘴里。结果今天一整天，我都在分饼。</p>
+    <p>一上来先把手头那摊财务中台的事理完。8月21日晚上10点升级，停机24小时，海外这边的影响我列了四条。BPS客户充值，停机那天提前知会业务，当天不做充值就行。物流的尾程头程费用结算，已经通知业务不操作，没有影响。库存流水、批次费用这些消息走消息中心订阅拉取，不需要重推。调拨如果有在途差异，升级完再重推修复。列完发出去，和卡罗确认了一圈，回了个原来如此。一件事从十几个系统的影响点收敛成四条动作，心里就踏实了。</p>
+    <p>今天AI项目的会开了一个又一个。有人提议给项目清单加两个节点，上线节点和价值兑现节点，让PMO进来跟进。方向是对的。可转头就听说，立项不做了。我回，这个月不一定做得出来，但会推。这话说出口自己都知道是缓兵之计。小龙虾和小林AI大概率不立项，因为讲不清业务价值。AI视觉连目标都还没跟老板聊明白。白天我还在群里写，这两个产品讲不清楚业务价值，那这个立项不就是走个形式嘛。写的时候有点气，气的是有些事明明该先想清楚再动手，结果总是先动起来再说。</p>
+    <p>把AI委员会的新机制发出去了。跟Cris复盘了两个月，最后落成一页通知。月度例会只议大事，没议题就取消。专题会按需开，本来就在开的会继续开。薯条说这是在给会议做减法，我说对，唯一的区别就是每个月同步一下这个月会开什么会，大家自行决定要不要参加。发完通知，又想起那句画饼的话。健新画饼是一年前的事，一年后轮到我在群里给别人分饼了。</p>
+    <p>AI大赛的报名群今天最吵。8月17日截止，报名规则里写每支队伍配IT陪跑，我把归口分工列了出来，营销、供应链、财务、经营分析，各有人认领。有人私聊我，说有个好点子，但不知道找哪个IT组队。我看了她的想法，东西很宽泛，担心没人愿意接。跟浮云他们说，你们带队伍，一个人一组，拉业务和产品同学进来，3到5个人就行。聊到业务同学能不能参赛，我说他们大概率不会coding啊，拉进来不过是让他们有点氛围，跟着学学。借了个由头参赛，本来就是你们要干的活。这话我说得理直气壮，其实心里清楚，大赛对业务同学也是个由头，让他们光明正大地来碰AI。</p>
+    <p>中间还夹着一些杂事。模型API的费用比供应商原来的贵了4倍，要拉通采购去谈价格，续费5000先付了。Cris申请了Seedream 5.0的API Key做评测，重点看图层分离，我点了同意。白底图的事还在推，跟德彬聊起来，门店那边连生图都还没用懂，导购客服接待客户的时候操作时间很有限。聊完有点泄气，又觉得这才是真实情况。工具做得再好，门店的人没有一分钟空余，就是白搭。群里还吐槽了一句，他们有点离谱，盘点个人才盘点了两个月。</p>
+    <p>今天还打了一通电话，问监护补贴的事。电话转了几个弯，最后是合成社区居委会的人接的。她说，你现在还没有这边的居住证，尽快办一下，明年年初二三月份申请的时候要提供。我应着好，挂了电话把办居住证记进待办。白天分了一整天公司的饼，临了轮到给自己家的事排期。</p>
+    <p>写到这里，今天差不多就是这样。饼很多，有的在嘴里，有的还在画。但至少今天，每个饼都写上了名字，有的写人名，有的写日期。</p>
+  </section>
+
+  <footer>Hermes Agent · 每日复盘自动生成 · 2026-08-12</footer>
+</div>
+
+<script>
+  document.querySelectorAll('.tab').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
+      document.querySelectorAll('.panel').forEach(function(p) { p.classList.remove('active'); });
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
