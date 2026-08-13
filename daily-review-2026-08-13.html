@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-13</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#0f1117; color:#e8eaf2; font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; line-height:1.85; padding:28px 16px 70px; }
+.wrap { max-width:760px; margin:0 auto; }
+header { text-align:center; margin-bottom:8px; }
+.date { font-size:13px; color:#9aa0b5; letter-spacing:2px; }
+h1 { font-size:25px; margin:8px 0 6px; font-weight:700; letter-spacing:1px; }
+.sub { font-size:13px; color:#9aa0b5; }
+.tabs { display:flex; gap:12px; justify-content:center; margin:26px 0 24px; }
+.tab { flex:1; max-width:240px; padding:11px 0; text-align:center; border-radius:14px; cursor:pointer; font-size:15px; font-weight:600; color:#9aa0b5; background:#1c2030; border:1px solid #262b3d; transition:.2s; user-select:none; }
+.tab.active-biz { background:rgba(79,110,247,.16); color:#4f6ef7; border-color:#4f6ef7; }
+.tab.active-diary { background:rgba(244,114,182,.16); color:#f472b6; border-color:#f472b6; }
+.panel { display:none; }
+.panel.show { display:block; }
+.hero { background:linear-gradient(135deg,rgba(79,110,247,.18),rgba(79,110,247,.05)); border:1px solid rgba(79,110,247,.45); border-radius:16px; padding:22px 22px 20px; margin-bottom:18px; }
+.hero .hero-tag { display:inline-block; font-size:12px; color:#4f6ef7; background:rgba(79,110,247,.2); border-radius:999px; padding:2px 12px; margin-bottom:10px; letter-spacing:2px; }
+.hero strong { color:#8fa3ff; }
+.dash { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:18px; }
+.ditem { background:#1c2030; border:1px solid #262b3d; border-radius:14px; padding:14px 6px; text-align:center; }
+.dnum { font-size:24px; font-weight:700; color:#4f6ef7; }
+.dlabel { font-size:12px; color:#9aa0b5; margin-top:2px; }
+.bcard { background:#171a24; border:1px solid #262b3d; border-left:3px solid #4f6ef7; border-radius:14px; padding:18px 20px; margin-bottom:14px; }
+.blead { font-size:16.5px; color:#8fa3ff; margin-bottom:8px; font-weight:700; }
+.bbody { font-size:15px; color:#d6d9e6; }
+.bbody strong { color:#aab8ff; }
+.panel-diary p { font-size:15.5px; color:#e2e0ea; margin-bottom:16px; }
+.panel-diary p:first-child { color:#f9a8d4; }
+.dquote { border-left:3px solid #f472b6; background:rgba(244,114,182,.08); border-radius:0 12px 12px 0; padding:14px 18px; margin:0 0 18px; color:#f9a8d4; font-size:15.5px; }
+footer { text-align:center; color:#5b6072; font-size:12px; margin-top:34px; letter-spacing:1px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="date">DAILY REVIEW · 2026-08-13</div>
+    <h1>每日复盘</h1>
+    <div class="sub">8月13日 · 周四</div>
+  </header>
+  <div class="tabs">
+    <div class="tab active-biz" id="tab-biz" onclick="switchTab('biz')">📊 商业版</div>
+    <div class="tab" id="tab-diary" onclick="switchTab('diary')">📝 日记版</div>
+  </div>
+
+  <div class="panel panel-biz show" id="panel-biz">
+
+    <div class="hero">
+      <div class="hero-tag">定调</div>
+      <strong>今天是一场收拢。8月17日大赛报名截止，散落在各处的AI想法开始往参赛项目上收，改款智能体、放我家生图、Chat Canvas、视频工作台，各归各队。但收拢的过程把一件事暴露得很彻底，所有项目都缺真实数据，改款的CMF接口是自己编的，放我家生图看不懂尺寸，库里成堆的图片没有物料编码，用不起来。</strong>
+    </div>
+    <div class="dash">
+      <div class="ditem"><div class="dnum">6</div><div class="dlabel">场会议</div></div>
+      <div class="ditem"><div class="dnum">68</div><div class="dlabel">分钟</div></div>
+      <div class="ditem"><div class="dnum">284</div><div class="dlabel">条消息</div></div>
+      <div class="ditem"><div class="dnum">24</div><div class="dlabel">条 @我</div></div>
+    </div>
+    <div class="bcard"><h3 class="blead">改款智能体要参赛，才发现CMF接口是自己编的。</h3><div class="bbody"> 改款智能体的会开了十分钟，两个人，把流程从头盘了一遍。竞品收集Agent采集竞品图片和基本信息，CMF视觉Agent做规划，三名国际知名设计师Agent出方案，结构工程师Agent查卷边强度和弯曲模具堆叠性，最后市场Agent看卖点、定价和定位。流程是通的，问题出在输入。我问CMF的接口从哪来，对方说，自己编的，根据公开信息编的，具体的数据在你们手里。这个demo是很久以前做的，版本很旧，当时的技术比现在先进很多。现在要拿它参赛，缺的是业务同学把真实材料喂进来，我在群里说，我们的同学已经有一个版本的demo了，也能提供AI技术和产品设计，主要需要业务同学。</div></div><div class="bcard"><h3 class="blead">数据缺位是今天的主旋律，反复以不同长相出现。</h3><div class="bbody"> 放我家那边，视觉AI看不懂尺寸的表达，视角不同，尺寸没法按比例调整，就算加一个AI来验证，也得先有客户家的完整空间尺寸，没有实景图，AI测量不了空间尺寸。物料编码那边更直接，库里堆着白底图、场景图、正反面，图片上没有物料编码，导购按SKU拿货，对不上就卖错拿错，一堆图用不起来。连电商代发视频这种小项目都被否了，一个月近3000块的量，因为生意参谋的数据拿不到，价值说不清。今天有同事把这句话挑明了，这个项目能不能做，就看有没有数据。</div></div><div class="bcard"><h3 class="blead">文鑫没连钉钉CLI，低效了几个月，没人问第二遍。</h3><div class="bbody"> 上午发现文鑫没连钉钉CLI，一个AI产品经理，低效了几个月，原因是我以为权限早就开了，开放权限的时间点其实在他入职之前，入职默认的权限不开放CLI。我说，恐怖故事，AI产品经理没连钉钉cli，效率比业务产品经理还低。又说，我突然有点无语。最后说，有点罪恶，感觉因为这个问题让你低效了几个月。打了一个月伞才发现根本没下雨。这件事和缺数据是同一件事的两面，AI落地真正卡住的位置在接入层，权限没开是入口没通，数据没有是输入没通。</div></div><div class="bcard"><h3 class="blead">动员在推进，队伍陆续归位。</h3><div class="bbody"> 视觉队四支里有一支报了名，计划的队让周老师组，户型图队有人牵头。我消化一支队伍，其他的靠ya总。木木那边搞定了，林氏放我家拉了泰源和浮云。Cris的队做脚本到视频剪辑的工作台，缺视觉同学，拉小马来聊。给所有人定了条原则，无论做哪个应用，都用Claude Agent SDK做底座。报名答疑也交给了AI，替我回答参赛者的疑问，但不透露任何其他队伍的报名信息。以赛代练，别寄希望于拿奖，重在参与。8月17日截止，还剩四天。</div></div><div class="bcard"><div class="bbody">回头看，8月11日定过调，讲不清价值的东西不再配得上资源，AI视觉项目被按下暂停键，素材治理成为新的投入点。今天就是那天的展开。接下来两周的主战场会从组队转向数据接入，素材治理调研已经排了九个调研对象，放我家的尺寸数据、图片的物料编码，都会在赛后继续活成业务。大赛只是把这些问题摆到台面上的一次集中亮相。</div></div>
+    
+  </div>
+  <div class="panel panel-diary" id="panel-diary">
+    <p>打了一个月伞才发现根本没下雨。这句话是我今天自己说的，说完还哈哈哈了一串。</p>
+    <p>起因是文鑫。上午他跟我说钉钉CLI的事，他说他好像没权限，我说那你明天跑一下看下是谁，申请一下吧。翻完聊天记录我愣住了，他之前问过我，我说能用，然后就没下文了。再往前翻，开放权限的时间点在他入职之前，入职默认的权限不带CLI。所以他入职那天起，就默认自己不能用，用着原始工具过了几个月，没再问第二遍。我说，恐怖故事，AI产品经理没连钉钉cli，效率比业务产品经理还低。又补了一句，我突然有点无语。最后是那句，有点罪恶，感觉因为这个问题让你低效了几个月。</p>
+    <p>我一边觉得离谱，一边开始教他。直接用codex去读Claude，用claude总结成handoff文档丢给codex，设计类的用Claude design，Kimi K3也行。最后我让他明天第一时间在codex上把钉钉装好。</p>
+    <p>然后我一整天都在组队。</p>
+    <p>AI改款的队，我本来打算和IT搭档一起组的，后来想想还是自己消化一支队伍，其他的靠ya总。木木那边我搞定了。林氏放我家拉了泰源，浮云也进来了。视觉队四支里才有一支报名，还得催。户型图队有人在牵头，我盘点了一下要报哪些人和项目。Cris的队做脚本到视频剪辑的工作台，缺视觉同学，我让他和小马聊聊。</p>
+    <p>中午跟木木交代改款的事。慧姐之前提过，能不能用AI改款做一个东西出来，我们做过一个demo，现在安排一个同学拿它参赛，找几位业务同学帮忙打磨，提供材料、需求指导都行。这位同学准备参赛两个作品，只能做一个队长，需要挂名一个队长。demo的流程是这样的，竞品分析Agent收集竞品信息，CMF视觉Agent做规划，三名国际知名设计师Agent完成设计，结构工程师Agent审查结构，品牌视觉Agent审查品牌元素，最后输出方案。</p>
+    <p>下午开了个会，十分钟，两个人，把改款的流程重新盘了一遍。我问了一句，CMF的接口是从哪里来的。对方说，自己编的，根据公开信息编的，具体的数据肯定在你们手里。我哦了一声。这个demo是很久以前做的，版本很旧。现在要参赛，缺的是业务同学把真实材料喂进来。</p>
+    <p>放我家那边也在聊数据的事。客户家的照片，AI看不懂尺寸的表达，视角不一样，尺寸怎么按比例调整，说不清楚。没有实景图，AI也测量不了空间尺寸。有人提议，可能我们一开始不从上传实景图入手，从无实景图呢，大家先搞到图呗。我说可以再考虑考虑。还有软装的事，客户家很杂乱，或者审美装修不好，我们的目的是给他一个更好的摆放视觉效果，帮他把单促成了。要不要支持有软装和无软装两类场景，还得调研。</p>
+    <p>物料编码的会上，有人说库里好多图片，白底图、场景图、正反面，一大堆，但图片上没有物料编码，用不起来。导购按SKU拿货，对不上就要卖错拿错。线下拿的是电商的图，B店有一班人专门做商品上架，人工把商品组合在一起再自动上架。我听下来，觉得这事的根子还是数据没接上。</p>
+    <p>晚上整理素材调研的规划，四五个部门，九个调研对象，从共享盘到群聊到云端，挨个问。沈阳那家经销店的图要导出，岳总店反馈的生成情况也要看。浮云手头的评测任务太多，我让他列一下优先级，数据集准备分给十二Ly。</p>
+    <p>散会之后我坐了一会儿，又想起上午那句话。打了一个月伞才发现根本没下雨。可文鑫低效的那几个月是真的，我以为是晴天的那些日子也是真的。工具开放了，不等于大家会用起来，中间隔着培训，更隔着有没有人愿意追问第二遍。改款的CMF数据也是，问起来才知道是同事根据公开信息编的，之前我一直没细究。伞一直挂在门口，我以为每个人都带了一把。</p>
+    <blockquote class="dquote">明天让文鑫把钉钉装上，权限的事再核一遍。然后我打算把自己手里那些以为早就开放了的东西，重新翻出来看看。</blockquote>
+  </div>
+  <footer>林氏 · Hermes 每日复盘 · 自动生成</footer>
+</div>
+<script>
+function switchTab(name) {
+  document.getElementById('panel-biz').classList.toggle('show', name==='biz');
+  document.getElementById('panel-diary').classList.toggle('show', name==='diary');
+  document.getElementById('tab-biz').className = 'tab' + (name==='biz' ? ' active-biz' : '');
+  document.getElementById('tab-diary').className = 'tab' + (name==='diary' ? ' active-diary' : '');
+}
+</script>
+</body>
+</html>
