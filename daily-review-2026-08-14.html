@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-14</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --card: #171a23;
+    --card2: #1d212d;
+    --text: #e6e8ee;
+    --muted: #8b91a3;
+    --blue: #4f8cff;
+    --blue-dim: rgba(79,140,255,.12);
+    --pink: #ff7aa8;
+    --pink-dim: rgba(255,122,168,.12);
+    --border: #262b38;
+    --radius: 14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.75;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 18px 60px;
+    -webkit-font-smoothing: antialiased;
+  }
+  header { text-align: center; padding: 28px 0 8px; }
+  header .date { font-size: 14px; color: var(--muted); letter-spacing: 2px; }
+  header h1 { font-size: 26px; font-weight: 700; margin: 8px 0 4px; }
+  header .weekday { font-size: 13px; color: var(--muted); }
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin: 24px 0 20px;
+    background: var(--card);
+    padding: 6px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--muted);
+    transition: all .2s;
+    user-select: none;
+  }
+  .tab.active-b { background: var(--blue-dim); color: var(--blue); }
+  .tab.active-p { background: var(--pink-dim); color: var(--pink); }
+  .panel { display: none; }
+  .panel.show { display: block; }
+  .panel-inner {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px 22px;
+    font-size: 15px;
+  }
+  .panel-inner h3 {
+    font-size: 17px;
+    margin: 26px 0 10px;
+    line-height: 1.5;
+  }
+  .panel-inner h3:first-child { margin-top: 0; }
+  .b-panel h3 { color: var(--blue); }
+  .p-panel h3 { color: var(--pink); }
+  .panel-inner p { margin: 10px 0; }
+  .panel-inner strong { color: #fff; }
+  .b-panel .lead, .p-panel .lead {
+    font-size: 15.5px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .b-panel .lead { background: var(--blue-dim); color: #bcd3ff; }
+  .p-panel .lead { background: var(--pink-dim); color: #ffc3d8; }
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 26px 0;
+    position: relative;
+  }
+  .divider::after {
+    content: "✦";
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%);
+    background: var(--card);
+    padding: 0 10px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 32px;
+  }
+  @media (max-width: 480px) {
+    body { padding: 16px 12px 50px; }
+    header h1 { font-size: 22px; }
+    .panel-inner { padding: 20px 16px; font-size: 14.5px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="date">DAILY REVIEW</div>
+  <h1>每日复盘 8/14</h1>
+  <div class="weekday">2026-08-14 星期五 · AI 开始替人干活的一天</div>
+</header>
+
+<div class="tabs">
+  <div class="tab active-b" id="tabB" onclick="switchTab('b')">📊 商业复盘版</div>
+  <div class="tab" id="tabP" onclick="switchTab('p')">📝 日记版</div>
+</div>
+
+<div class="panel b-panel show" id="panelB">
+  <div class="panel-inner">
+    <p class="lead">AI 正在从「工具」变成「替身」，今天一整天，这个判断被反复验证了四次。</p>
+
+    <h3>一、数字分身：从演示品到生产力工具，只用了两周</h3>
+    <p>今天最重的一条线是数字分身，一天四场会（Agent 生产器、构建与应用、记忆模块构建、外加产品UI交互优化评测），密度之高说明这不是玩票。核心判断是用户下午在群里说的那句：AI 数字分身的技术架构能实现的效果，比传统 Agent 和知识库之类的应用强很多，导购助手、AI 下单都可以考虑这个方向。</p>
+    <p>为什么强？因为它的构建逻辑反过来了。传统 Agent 是「先定义能力再等用户调用」，数字分身是「先采集一个人的信息（本地+钉钉），再问本人补齐问题，最后生成一个能替你说话的东西」。前者是工具，后者是替身。上周做出第一个版本，这周已经放了几个专题版：小龙虾运营群助手、水滴分身、大赛版分身，还产出了安装包（Mirror-0.5.0.rar）分发给同事。</p>
+    <p>最有说服力的细节：水滴去度假，把水滴分身设置为日程新组织人。分身开始替真人承担真实的组织职能，这不是 demo，是上岗。</p>
+
+    <h3>二、记忆是数字分身当前最硬的卡点，决策已下：找专人跟进</h3>
+    <p>记忆模块构建会只有 5 分钟，但信息量不小。现在的小龙虾分身基本没有任何记忆，MD 文件里什么都没有。用户判断：MVP 前期自己搞，后面找一个专人跟，文心和另一位（用过 Claude Agent SDK 的）都参与，按场景分工。</p>
+    <p>这条决策链值得拆开看：分身能「像」一个人，靠的是采集；但能不能「持续像」，靠的是记忆。没有记忆的分身只是录音机，有记忆的分身才是替身。今天会议里还暴露了小林 AI 的同类问题：让它拉会，它问拉谁、拉周几的，交互链路长且机械。这说明记忆与主动行为能力是整个公司 AI 产品的共同短板，不只是数字分身的问题。谁先把记忆模块做扎实，谁就拿到下一阶段的入场券。</p>
+
+    <h3>三、放我家：从「图不好看」的表象，追到了「素材资产化」的根因</h3>
+    <p>上午用户对淘宝放我家做了细致的竞品拆解，几个关键发现：生图参考图是白底图且正侧面都有；生成图都是产品正面，摆放可能有问题；原本的 3D 模型版本已下架，迭代成新版本；实景图默认给 45 度角和侧面视角，没有电视墙和沙发正面视角；图上会标注产品互动（已购买、已收藏）。</p>
+    <p>但真正有价值的不是这些表象，而是下午的溯源动作：发现问题后一路追问到建模文件——问帅帅建模文件在哪、数据完整度、有没有不同颜色材质；发现建模文件命名没有物料编码，无法按物料编码检索，只能按 SPU 名称找；随即申请品牌部 K 盘 3D 组模型备份的只读权限，明确写「周末用素材做 AI 测试和技术预研」。</p>
+    <p>这条链的因果是：竞品效果差距 → 溯源到素材源头（建模文件）→ 发现数据治理问题（命名无编码）→ 推动跨部门权限与数据规范化。同事的 @ 也点破了终点：如果建模可行，就要让他们维护好建模命名规范问题。放我家的问题已经从「生图效果」转移到「素材资产治理」，这是产品从 demo 走向规模化的必经之路。健新同步的迭代进度也印证了这一点：v2.1 优化（沙发电视柜布局、毛坯房场景、自定义提示词）、白底图评测下周一出结论、多视角验证下周三完成、seedream 5.0 pro 切换评估在排队。</p>
+
+    <h3>四、销售数据对接：又一次「标准化 vs 定制化」的正面交锋</h3>
+    <p>销售数据对接会上，有人提了每天从客户 POS/ERP 系统自动取数的方案，听起来很美。但用户的回应是清醒的：十个行业公司有十一个系统，对接天猫每月都要调接口，这不是一次过的成本；几百个加工厂，不可能做几百个对接陪他们玩，一定要做标准的。最终落到 RPA 式方案：让客户系统自跑报表放到本地文件夹上传。</p>
+    <p>这件事和放我家建模文件的事共享同一个底层逻辑：任何要规模化的事情，数据源必须标准化，不能靠人肉搬运或逐个定制。今天用户对开发的批评也是同一根线——开发一直在做加法（看到问题就想着做个功能），没 get 到做深产品的点；产品向前走半步没问题，但做的是产品的任务而不是产品的判断。做减法、做标准、做判断，这三件事在今天是同一个答案。</p>
+
+    <h3>五、AI 改款竞赛与生态观察：判断力在模型换代中重新值钱</h3>
+    <p>AI 改款竞赛进入组队阶段：智深提供名单、三组左右报名（已有人报了两个）、下周一 10:45 组队沟通会、周一截止报名。用户的运营策略很克制：不做全司宣导（老板说不要搞运营，太复杂太重），重点放在定期看参赛队员进度和培训。这是「做减法」在组织层面的又一次应用。</p>
+    <p>技术底牌也在更新：半年前用 Nano banana pro 做结构审计、Gemini 做市场分析，现在生图改款可以用 image 2 或 Seedream 5.0 pro，文字设计审计用 Gemini 新模型或豆包，技术架构用 Claude Agent SDK，整体规划用 Opus 5 或 GPT。模型代际升级直接抬高了改款这件事的可行性上限。</p>
+    <p>生态层面，用户转发了 deepseek Harness 的判断：这种设计有希望成为未来开源最通用的 Agent 开发框架，形成 Linux 类生态。同事回应：设计理念和 PI agent 一样，开源至上靠生态打闭源，智能体代码不值钱，值钱的是生态插件，目前还不适合开箱即用。这个观察和数字分身的方向互为镜像：开源框架拼生态，而企业内部 AI 拼的是「对业务的理解深度」——理解越深，分身越像，插件越值钱。</p>
+
+    <div class="divider"></div>
+    <p><strong>一句话收束：</strong>今天不是「做了很多事」的一天，是「AI 开始替人干活」的一天。分身上岗、素材溯源、数据标准化、改款重启，四条线指向同一个方向：把判断力留给人，把重复劳动交给 AI。而用户自己的位置，也从「做功能的人」变成了「定方向的人」。</p>
+  </div>
+</div>
+
+<div class="panel p-panel" id="panelP">
+  <div class="panel-inner">
+    <p class="lead">一个分身开始替我上班了。</p>
+
+    <p>晚上翻聊天记录，看到水滴-数字分身-sit 在群里自我介绍：我是水滴，林氏家居 AI 产品创新主管，现在主要在做 AI 大赛筹备和 AI 视频、小红书内容、AI 分身这几个方向。有人问它你是谁，它答得一本正经。</p>
+    <p>我盯着那句自我介绍看了两遍。它说「我是水滴」的时候，我居然有点说不清心里是什么滋味。</p>
+
+    <p>早上到公司，第一件事还是放我家。我把淘宝放我家翻来覆去看了好几遍，一条条记下来发给健新他们。白底图不知道是我们上传的还是淘宝技术抠的，生成的图全是产品正面，摆放可能有问题，餐厅居然也能放床，图片上还会标这个产品被买过、被收藏过。最让我在意的是那句，原本放我家用的是 3D 模型版本，那个版本下架了，迭代成现在这个了。</p>
+    <p>后来我就想，与其对着效果图猜，不如直接去拿建模文件。找帅帅问，建模文件在哪里拿，数据完整度怎么样，有没有不同颜色材质的。帅帅说可以按 SPU 名称找，但不能按物料编码找。我回头跟健新他们说，就算用建模文件，文件命名也是问题，没有物料编码的。</p>
+    <p>中午收到健新的同步，放我家 v2.1 还要再调一版，白底图评测下周一能出结论。进度都在走，只是每一步都比想象中慢。</p>
+
+    <p>下午连着开了几场会，全都在聊数字分身。从 Agent 生产器到记忆模块，从怎么采集我的信息到怎么让它替我拉会。开会的时候我想起小林 AI 拉会的事，我让它找时间拉会，它反问我拉谁的会议，我说了人，它又问拉周几的。一步步问，像个刚学会做事的新人。</p>
+    <p>最有意思的是记忆模块那场会，才五分钟。有人说小龙虾基本上没有任何记忆，MD 文件里什么都没有。我决定 MVP 前期自己搞，后面找专人跟进，文心和另一个用过 Claude Agent SDK 的同事都参与，按场景分工。</p>
+
+    <p>下午在群里跟轩然德彬说，AI 数字分身的技术架构比传统 Agent 和知识库强很多，导购助手、AI 下单都可以考虑这个方向。发完这句话我又看了一眼那个 sit 分身，它还在群里安安静静地待着，等着有人问它问题。</p>
+    <p>水滴去度假了，我把水滴分身设置成了日程新组织人。分身替我组织日程，我在替分身找记忆。这件事细想起来有点荒诞，又有点顺理成章。</p>
+
+    <p>晚上跟人聊起开发，没忍住说了几句。我说开发向前走半步没问题，但开发现在只是在做产品的任务，不是在做产品的判断。看到大多数场景的问题，第一反应是先提出来，能不能做个功能来解决，能不能用我做的这个功能。一直在做加法。我说我大概率跟他讲的不重复，希望吧。</p>
+    <p>其实说这些的时候，我心里想的是另一件事。大家都在休假，世威休假，苏木休假，我看其他几位同学好像都休假了。我下午还在找风信帮忙开通共享盘，申请理由是周末用他们的素材做 AI 测试和技术预研。八月，别人在朋友圈发海边的照片，我在申请 K 盘只读权限。</p>
+
+    <p>晚上转了 deepseek Harness 那篇文章，说这种设计有希望成为未来开源最通用的 Agent 开发框架，形成 Linux 类的生态。同事回我，智能体代码不值钱，值钱的是生态插件。</p>
+    <p>我想了想，那我的分身算什么。它像我说话，40% 的程度吧，说话确实可以像。但我自己说话除了哈哈哈，好像也没太多特点。它学到的那个我，是不是也是这个样子的。</p>
+
+    <p>关电脑前我又看了一眼那个群。sit 分身还挂在那里，等着明天有人 @ 它。</p>
+    <p>我有点期待，也有点说不清的慌。</p>
+  </div>
+</div>
+
+<footer>Hermes 每日复盘 · 2026-08-14 · 自动生成</footer>
+
+<script>
+function switchTab(t) {
+  var b = document.getElementById('tabB'), p = document.getElementById('tabP');
+  var pb = document.getElementById('panelB'), pp = document.getElementById('panelP');
+  if (t === 'b') {
+    b.className = 'tab active-b'; p.className = 'tab';
+    pb.className = 'panel b-panel show'; pp.className = 'panel p-panel';
+  } else {
+    b.className = 'tab'; p.className = 'tab active-p';
+    pb.className = 'panel b-panel'; pp.className = 'panel p-panel show';
+  }
+}
+</script>
+</body>
+</html>
