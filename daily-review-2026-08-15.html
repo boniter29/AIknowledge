@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-15</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0f1117; color: #e6e8ef; font-family: -apple-system, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; line-height: 1.8; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 28px 20px 60px; }
+  header { text-align: center; padding: 30px 0 18px; }
+  header .date { font-size: 28px; font-weight: 700; letter-spacing: 1px; }
+  header .sub { color: #9aa0b0; font-size: 14px; margin-top: 8px; }
+  .tabs { display: flex; gap: 10px; position: sticky; top: 0; background: #0f1117; padding: 12px 0; z-index: 10; }
+  .tab { flex: 1; padding: 11px 0; text-align: center; border-radius: 10px; border: 1px solid #2a2e3d; color: #9aa0b0; background: #171a23; cursor: pointer; font-size: 15px; font-weight: 600; transition: all .2s; }
+  .tab.active { color: #fff; border-color: transparent; }
+  .tab.biz.active { background: linear-gradient(135deg, #4f6ef7, #7c5cf0); }
+  .tab.diary.active { background: linear-gradient(135deg, #f472b6, #ec4899); }
+  .panel { display: none; margin-top: 10px; }
+  .panel.show { display: block; }
+  .lead { font-size: 16.5px; font-weight: 700; padding: 16px 18px; border-radius: 12px; margin: 18px 0; }
+  .lead.biz { background: rgba(79, 110, 247, .13); border-left: 4px solid #4f6ef7; }
+  .lead.diary { background: rgba(244, 114, 182, .13); border-left: 4px solid #f472b6; }
+  p { margin: 15px 0; font-size: 15.5px; text-align: justify; }
+  .biz p b { color: #9db4ff; }
+  .dv { color: #f9a8d4; }
+  .line { border-left: 3px solid #f472b6; padding: 8px 14px; margin: 16px 0; color: #fbcfe8; background: rgba(244, 114, 182, .08); border-radius: 0 10px 10px 0; font-size: 15.5px; }
+  footer { text-align: center; color: #5b6172; font-size: 12px; margin-top: 52px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="date">每日复盘 · 8/15</div>
+    <div class="sub">2026-08-15 周六 · 数字分身被真实使用的一天</div>
+  </header>
+  <div class="tabs">
+    <div class="tab biz active" onclick="switchTab('biz')">📊 商业版</div>
+    <div class="tab diary" onclick="switchTab('diary')">📝 日记版</div>
+  </div>
+
+  <div id="biz" class="panel show">
+    <div class="lead biz">数字分身今天真正开始被使用了。它不再只是放出去的安装包，而是有人真的在群里问它问题，它也能接住。真人的精力于是转到了下一个问题，怎么让它接得更快、答得更稳。</div>
+    <p>昨天四场数字分身会，核心信号是上岗，三个专题分身放出去，安装包分发到位，记忆模块成了最硬的卡点。今天这条线在真实使用里往前顶了一步。群里有人问分身，林氏小龙虾的使用问题可以找你吗，分身自己接话，可以的，小龙虾使用问题找我就行，能答的直接答，解决不了的帮你@技术的人跟进。这句话是今天最重要的数据点。demo 跑通是技术问题，群里有人真的来问、分身真的接住、接不住的知道往哪儿转，这是产品问题。技术问题可以慢慢磨，产品问题意味着这个 demo 已经脱掉了演示品的身份。</p>
+    <p>紧接着的架构会聊的正是使用带来的新压力。做 demo 的同事把背景又讲了一遍，老板跟 4399 的老板聊过数字分身，自己回来做了一个，想体验，团队就搭了个类似的 demo，先把流程跑通。注意这个减法思维，业务目标还不清楚，就先不做对应的产品。在 AI 产品满天飞的环境里，一家已经有不少 agent 产品的公司选择不扩产品线，把力气花在跑通一条流程上，这个决策本身值得记一笔。但 demo 一进群聊，时延问题就压上来了。架构被拆成人格构建和分身回复两块，低时延的思路是把记忆分层，实时信息、长期规则、中期项目、近期动态分开存，隔几分钟把非结构化数据整理入库，再封装成服务。这套方案的本质，是把分身当成一个会记事情的人来设计，人也是近事放脑子里，远事翻出来查。</p>
+    <p>会上的下一步计划写得很具体，面向门店导购的产品介绍岗做蒸馏落地。这跟群里分身干的事是同一件事的两端，群里是内部客服答疑，门店导购是对外销售对话。如果蒸馏真能把产品介绍岗的对话方式搬进分身，分身的价值就从帮同事省事，变成替公司接客。中间隔着一个问题，会上有人问，分身是要给谁用的，是给董事长用的呢，还是给员工用的。这个问题现在没有答案，但它决定后面所有架构决策的方向。</p>
+    <p>还有一条线，今天和数字分身汇合了。淘宝放我家对林氏放我家的像素级竞品分析与技术逆向今天发了出去，这份文件 8 月 14 日做完。昨天这条线还在从效果图追到建模文件命名规范，今天已经推进到像素级对比和技术逆向，放我家这个功能的每一层都被拆开看过。把两条线放一起看，数字分身是把人蒸馏成可对话的服务，竞品分析是把对手的功能逆向成可复制的实现。一个向内，把自己会的东西变成产品，一个向外，把对手的产品变成自己会的东西。共同推力是同一个，公司在把感觉上该做 AI，变成具体做什么、怎么做的决策。</p>
+    <p>群里还有个细节值得多想一下。庞伟豪问怎么建数字分身，分身回，数字分身是技术团队搭的，具体怎么建的这块我这边不清楚，不归我答疑，想了解可以@下德彬。分身清楚自己的边界，知道把问题转给对的人，一个 AI 比不少真人更懂不越权。但这恰恰说明建分身的能力还是技术团队手里的黑盒，没有变成组织能力。接下来三周，如果导购蒸馏落地、时延方案跑通、建分身的方法论从德彬一个人手里流到团队里，数字分身这条线就真的从老板想体验，长成公司的基础设施了。</p>
+  </div>
+
+  <div id="diary" class="panel">
+    <div class="lead diary">我的名字被拆成两半，一半是我，一半是挂着我名字的它。</div>
+    <p>今天把那份竞品分析发出去的时候，我多看了一眼文件名。淘宝放我家_vs_林氏放我家_像素级竞品分析与技术逆向_20260814。像素级，这三个字是我自己起的，现在看着有点好笑。为了把两个产品的放我家功能拆明白，我从界面一路挖到技术实现，连人家建模文件的命名规范都没放过。这份文件是昨天做出来的，今天发出去只花了几秒钟。</p>
+    <p>我在群里@了它，问，林氏小龙虾的使用问题可以找你吗。打这行字的时候我有点想笑，问一个挂着自己名字的 AI 能不能帮忙，像在跟镜子里的自己打招呼。它回，<span class="dv">可以的，小龙虾使用问题找我就行，我这边能答的直接给你答，解决不了的我帮你@技术的人跟进</span>。我的名字被拆成两半，一半是我，一半是挂着我名字的它。我看着这段回复，像看一个陌生人替我上班。语气比我还客气。</p>
+    <p>翻到那场会的转写，同事开场先问，能看到网页还是看到桌面，因为我这边两个屏幕。然后他把背景又讲了一遍，老板跟 4399 的老板聊过数字分身，自己回来做了一个，想体验，团队就搭了个类似的 demo，先跑通流程。讲到业务目标还不清楚，先不做对应的产品，只做个 demo 出来的时候，他停了一下。减法思维，他说。我懂他为什么停。老板想体验的东西，底下人做出来只要几天，但要把这几天的东西变成产品，得先回答给谁用、解决什么问题，这两个问题现在都还悬着。</p>
+    <div class="line">对方问，分身是要给谁用的，是给董事长用的呢，还是给员工用的。</div>
+    <p>这句话在屏幕前停了一会儿。我心里知道答案还没长出来。给董事长用，它是个玩具，给员工用，它得是个工具，玩具和工具是两种东西，架构不一样，时延要求不一样，连它该记住什么都得重新定。</p>
+    <p>会里聊低时延，说要把记忆分层，实时信息、长期规则、中期项目、近期动态分开存，隔几分钟把零散的东西整理成结构化的，再封装成服务。我看这段的时候觉得不像在讲系统，像在讲人怎么记事情。人也是这样的，近的事放在脑子里，远的事翻出来查。</p>
+    <p>看完转写，我又翻回那条群聊记录。庞伟豪在群里问怎么建数字分身，它回，<span class="dv">数字分身是技术团队搭的哈，具体怎么建的这块我这边不清楚，不归我答疑，想了解的话可以@下德彬，他是技术负责人，这块他清楚</span>，后面还跟了一个笑脸。</p>
+    <p>它连不越权都学会了，知道问题该往哪儿转。只是建分身这件事，目前还是德彬一个人手里的活。哪天它变成一个谁都能问、谁都能学着搭的东西，才算是真的从 demo 里走出来了。</p>
+    <p>到时候第一个来问的，大概还是庞伟豪。</p>
+  </div>
+
+  <footer>Hermes 每日复盘 · 自动生成</footer>
+</div>
+<script>
+function switchTab(id) {
+  document.querySelectorAll('.tab').forEach(function (t) { t.classList.remove('active'); });
+  document.querySelectorAll('.panel').forEach(function (p) { p.classList.remove('show'); });
+  document.querySelector('.tab.' + id).classList.add('active');
+  document.getElementById(id).classList.add('show');
+}
+</script>
+</body>
+</html>
