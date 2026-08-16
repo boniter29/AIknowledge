@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每周复盘 2026-08-10 ~ 2026-08-15</title>
+<style>
+  :root {
+    --bg: #0d1117; --panel: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e;
+    --blue: #58a6ff; --orange: #f78166; --purple: #d2a8ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.75; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+  header { margin-bottom: 24px; }
+  .kicker { color: var(--muted); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; }
+  h1 { font-size: 26px; font-weight: 700; margin: 6px 0 4px; }
+  .range { color: var(--muted); font-size: 15px; }
+  .tabs { display: flex; gap: 8px; margin: 24px 0 20px; border-bottom: 1px solid var(--border); }
+  .tab {
+    padding: 10px 16px; font-size: 15px; color: var(--muted); cursor: pointer;
+    border: none; background: none; border-bottom: 2px solid transparent; transition: all .2s;
+  }
+  .tab.active { color: var(--text); font-weight: 600; }
+  .tab[data-panel="business"].active { border-color: var(--blue); color: var(--blue); }
+  .tab[data-panel="diary"].active { border-color: var(--orange); color: var(--orange); }
+  .tab[data-panel="silence"].active { border-color: var(--purple); color: var(--purple); }
+  .panel { display: none; }
+  .panel.active { display: block; }
+  .thesis {
+    background: rgba(88,166,255,.08); border-left: 3px solid var(--blue);
+    padding: 16px 18px; border-radius: 8px; margin-bottom: 20px; font-size: 16px;
+  }
+  .thread { margin-bottom: 22px; }
+  .thread-head {
+    color: var(--blue); font-weight: 700; font-size: 16px; margin-bottom: 8px;
+    display: flex; align-items: baseline; gap: 8px;
+  }
+  .thread-num {
+    color: var(--blue); font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 13px;
+    opacity: .7;
+  }
+  .thread p { color: var(--text); font-size: 15px; }
+  .closing {
+    margin-top: 20px; padding: 14px 18px; border-radius: 8px;
+    background: var(--panel); border: 1px solid var(--border); color: var(--text); font-size: 15px;
+  }
+  .dpara {
+    margin-bottom: 18px; font-size: 16px; color: #e6edf3;
+    border-left: 3px solid rgba(247,129,102,.4); padding-left: 14px;
+  }
+  .silence-list { list-style: none; }
+  .silence-list li {
+    position: relative; padding: 14px 16px 14px 40px; margin-bottom: 12px;
+    background: var(--panel); border: 1px solid var(--border); border-radius: 8px; font-size: 15px;
+  }
+  .silence-list li::before {
+    content: "◌"; position: absolute; left: 14px; top: 14px; color: var(--purple); font-size: 18px;
+  }
+  .foot { margin-top: 40px; color: var(--muted); font-size: 12px; text-align: center; }
+  @media (max-width: 480px) {
+    h1 { font-size: 22px; }
+    .tab { padding: 9px 12px; font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Weekly Review · Pro</div>
+    <h1>每周复盘</h1>
+    <div class="range">2026.08.10 — 2026.08.15 · 第 33 周</div>
+  </header>
+
+  <div class="tabs">
+    <button class="tab active" data-panel="business">商业版</button>
+    <button class="tab" data-panel="diary">日记版</button>
+    <button class="tab" data-panel="silence">沉默板</button>
+  </div>
+
+  <div class="panel active" id="panel-business">
+    <div class="thesis">这一周，AI 从「尝鲜」正式进入「经营」——讲不清价值的东西不再配得上资源，数字分身从 demo 上岗成了替身，而真正的卡点不在模型，在数据与接入层。</div>
+    
+    <div class="thread">
+      <div class="thread-head"><span class="thread-num">01</span>「讲清价值」从个人直觉长成了组织规则。</div>
+      <p>周一，方向摇摆的根因被点破——不是执行，是身份没定，收敛到垂直化。周二，AI 视觉按下暂停键，立项逻辑从「先做后说」翻成「先说后做」，陈超是撞上这条新规矩的第一个人。周三，立项整体暂停，PMO 加进「价值兑现节点」，「为了做材料而编材料，立项就是走形式」的警惕被摆到明面。一条线三天走完：个人观察 → 口头规则 → 治理机制。</p>
+    </div>
+    <div class="thread">
+      <div class="thread-head"><span class="thread-num">02</span>数字分身从演示品到「上岗」，但「给谁用」还没答案。</div>
+      <p>周四一天四场分身会，判断「AI 从工具变成替身」，记忆是最硬的卡点。周五，群里真有人来问分身，分身接得住、接不住的知道转派——demo 脱掉了演示品的身份。可到周六架构会，「给董事长用还是给员工用」被悬置，建分身的能力仍是德彬一个人的黑盒。演化方向：从「技术能跑通」转向「产品定位未定」。</p>
+    </div>
+    <div class="thread">
+      <div class="thread-head"><span class="thread-num">03</span>真正的卡点不在模型，在数据与接入层。</div>
+      <p>周二打标复核，耗时大头不在判断标签，在信息缺失——词没有出处和上下文。周三，文鑫几个月没连钉钉 CLI，「打了一个月伞才发现根本没下雨」，入口没通。周四，放我家从「图不好看」一路追到「素材资产化」——建模文件命名没有物料编码，输入没通。周五，销售数据对接回到「标准化 vs 定制化」，规模化必须标准化，不能逐个定制。</p>
+    </div>
+    <div class="closing">把判断力留给人、把重复劳动交给 AI 的方向已经清楚，剩下要补的是数据、权限、记忆这些看不见的地基。</div>
+  </div>
+
+  <div class="panel" id="panel-diary">
+    <p class="dpara">周一，他跟「名字」打了一整天交道，心里压着的却是方向。白天把半年的路线盘了一遍，像螺旋，一圈圈往上，也像原地打转。晚上他问洁敏几点走，她说等他。他溜了，跟她说「后面多坐你的」。明天要去医院，把身体也纳入管理，大概也是一种「定」。</p><p class="dpara">周二，人在医院，电脑没电。反流性食管炎，从高中就有。群里海报的二维码炸了，他对着手机一张图一张图地看，气笑又气哭。晚上 AI 视觉项目散会，结论跟他的直觉对上了，他却没觉得轻松——陈超那种「先做一大堆、价值总会有的」逻辑，他自己身上有没有，他也不敢说没有。</p><p class="dpara">周三，他分了一整天的饼。健新一年前画的饼还没吃进嘴里，一年后轮到他在群里给别人分饼。每个饼都写上了名字，有的写人名，有的写日期。临了给自己家的事排期——办居住证，明年年初申请监护补贴要用。</p><p class="dpara">周四，一个分身开始替他上班。群里那个分身自我介绍：「我是水滴」。他盯着这句话看了两遍，心里说不清是什么滋味。别人在朋友圈发海边的照片，他在申请 K 盘只读权限，理由写着「周末用素材做 AI 测试」。</p><p class="dpara">周五，他把竞品分析发出去，文件名是「像素级竞品分析与技术逆向」，「像素级」三个字是他自己起的。他 @ 分身问小龙虾的问题，像跟镜子里的自己打招呼。他的名字被拆成两半，一半是他，一半是挂着他名字的它。</p><p class="dpara">这一周，他从「给别人定方向」走到「给自己造替身」，最后却对着那个替身问：我的分身算什么。有点期待，也有点说不清的慌。</p>
+  </div>
+
+  <div class="panel" id="panel-silence">
+    <ul class="silence-list">
+      <li>AI 视觉项目：周二按下暂停键，说好「安排一次跟 boss 的会摆上台面」，到周六这个会还没落地，正式校准悬而未决。</li><li>「价值兑现节点」怎么定义：周三提出，只留下「下月例会再议」的尾巴，没有标准。</li><li>数字分身「给谁用」（董事长 vs 员工）：周五、周六反复出现，没有答案，却决定后面所有架构决策的方向。</li><li>建分身的能力还是黑盒：方法论还攥在德彬一个人手里，没流成组织能力。</li><li>文鑫的钉钉 CLI 权限暴露的断层：「工具开放了不等于大家会用」，中间隔着培训和「有没有人愿意追问第二遍」，但没形成机制性补救。</li><li>放我家的建模文件命名规范：「如果建模可行，要让他们维护好命名规范」，目前只是一句 @ 提醒，没落地成规则。</li>
+    </ul>
+  </div>
+
+  <div class="foot">林氏家居 · AI 产品线 · 每周复盘（Pro）</div>
+</div>
+
+<script>
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('panel-' + tab.dataset.panel).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
