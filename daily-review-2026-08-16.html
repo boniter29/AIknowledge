@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-16</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0d1117; color: #e6edf3; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif; line-height: 1.85; }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 28px 20px 60px; }
+  .head { text-align: center; padding: 18px 0 8px; }
+  .head .date { font-size: 13px; color: #8b949e; letter-spacing: 2px; }
+  .head h1 { font-size: 26px; margin-top: 6px; font-weight: 700; }
+  .tabs { display: flex; justify-content: center; gap: 12px; margin: 24px 0 8px; }
+  .tab { padding: 10px 28px; border-radius: 999px; border: 1px solid #30363d; background: transparent; color: #8b949e; font-size: 15px; cursor: pointer; transition: all .2s; font-family: inherit; }
+  .tab.active-b { background: #4f6ef7; border-color: #4f6ef7; color: #fff; }
+  .tab.active-p { background: #f472b6; border-color: #f472b6; color: #fff; }
+  .panel { display: none; margin-top: 20px; }
+  .panel.show { display: block; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 14px; padding: 26px 24px; }
+  .card p { margin-bottom: 18px; font-size: 15.5px; }
+  .card p:last-child { margin-bottom: 0; }
+  .biz .lead { border-left: 3px solid #4f6ef7; padding: 14px 16px; background: rgba(79,110,247,.07); border-radius: 0 10px 10px 0; font-weight: 700; color: #dbe2ff; }
+  .biz .lead p { margin-bottom: 0; }
+  .per .card { border-color: rgba(244,114,182,.25); }
+  .per .lead { border-left: 3px solid #f472b6; padding: 14px 16px; background: rgba(244,114,182,.06); border-radius: 0 10px 10px 0; }
+  .foot { text-align: center; margin-top: 30px; font-size: 12px; color: #484f58; }
+  .divider { height: 1px; background: #21262d; margin: 8px 0 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <div class="date">SUNDAY · 2026.08.16</div>
+    <h1>每日复盘</h1>
+    <div style="font-size:13px;color:#8b949e;margin-top:6px;">工具封装，决定 Agent 的上限</div>
+  </div>
+  <div class="tabs">
+    <button class="tab active-b" id="tabB" onclick="switchTab('b')">📊 商业版</button>
+    <button class="tab" id="tabP" onclick="switchTab('p')">📝 日记版</button>
+  </div>
+
+  <div class="panel show biz" id="panelB">
+    <div class="card">
+      <div class="lead"><p><strong>今天这堂课，把本周一直在摸的那层东西叫出了名字。一整天 AI 课程，每个同学的项目被逐一点评，技术细节很多，最后留下来的只有一句话，MCP 什么情况下该封装、什么情况下不该封装，差的封装会限制 Agent 本身的能力。对照完行业里的实践，我自己的判断是，现有的小林智数架构，有点限制 Agent 发挥智能。</strong></p></div>
+      <div class="divider"></div>
+      <p>课程把封装原则讲成了两个问题，什么情况下封装，什么情况下不封装。封装的本质是决定 Agent 能看到什么、能操作什么。封得太厚，Agent 只能对一个黑盒接口说话，工具内部发生了什么它不知道，遇到边界只能瞎猜；封得太薄，原始参数和过程细节全部摊在上下文里，噪音盖过信号，注意力被无关信息吃掉。两种失败指向同一个结论，工具层暴露信息的方式，直接决定一个 Agent 能发挥出模型几成的能力。模型的能力是给定的，封装是我们能改的，这一层最容易被顺手做掉，却最影响结果。</p>
+      <p>这个判断放到本周的脉络里看，早就有迹可循。8 月 13 日复盘，几个项目卡在最底层，文鑫的钉钉 CLI 权限几个月没开，放我家的图片库没有物料编码，当时归因到接入层，权限是入口没通，数据是输入没通。8 月 15 日数字分身上岗，架构会聊的是记忆分层和低时延，分身接住了群里的提问，接不住的知道往哪儿转。今天课程的封装原则，把这两天的经验收进同一个框架，Agent 的能力由模型和工具的暴露方式共同决定。小林智数现在的架构，大概率还停在把功能接通的阶段，没有走到为 Agent 重新设计工具暴露这一步。</p>
+      <p>对比行业内实践的意义也在这里。不看别人用了什么模型，看别人把工具暴露到了什么粒度，哪些能力封装成原子操作，哪些让 Agent 自己编排。参照系一旦建立，小林智数要动的地方就具体了，哪些 MCP 拆细，哪些收口，哪些接口精简上下文。明天 8 月 17 日大赛报名截止，改款智能体、放我家生图都要赶在明天定稿，今天这堂课给的也不只是参赛技巧，是评审时别人会从哪个角度挑你的项目，封装得好的，Agent 能自己往前跑，封装得差的，演示一卡壳就露馅。</p>
+      <p>接下来三周，小林智数这条线会从架构讨论走进工具层改造，用今天的原则把现有 MCP 过一遍，先挑两三个高价值封装做试点；数字分身那边，导购蒸馏落地之后，封装原则就是它能不能接住真实对话的关键。工具层的认知一旦建立，后面每一次封装决策都会带上这个判断。本周的数据缺位、权限没开、架构讨论，最后沉淀下来的是同一个答案，先改工具暴露的方式，再谈 Agent 的能力。</p>
+    </div>
+  </div>
+
+  <div class="panel per" id="panelP">
+    <div class="card">
+      <p>周日，我在教室里坐了一整天。课程是项目点评制，每个同学把自己做的东西摆出来，老师一条一条挑毛病。别人上台的时候，我低头记笔记，一页半记下来，发现老师讲的很多点，都能套回我自己的项目上。一整天的信息量很大，最后留下来的只有一句，差的 MCP 封装会限制 Agent 本身的能力。</p>
+      <p>这句话能留下来，大概因为我手里正好有一个可以对照的东西。下课之后我用 AI 把今天的视频总结了一遍，把 MCP 封装的原则整理出来，发到群里，让大家参考。老师讲了一天的东西，被压缩成几行字，压缩完之后那句话还在，而且更清楚了。什么情况下封装，什么情况下不封装。封得厚，Agent 对着一个黑盒接口说话，工具内部发生了什么它不知道；封得薄，原始参数摊在上下文里，噪音盖过信号。模型的能力是给定的，封装是我们能改的。</p>
+      <p>晚上我对比了行业里的一些实践，越比越觉得，小林智数现有的架构，有点限制 Agent 发挥智能。白天老师在点评别人的项目，晚上我在点评自己的架构。白天老师讲的那些封装原则，什么情况该拆细，什么情况该收口，换个名字，全都能安到我们自己头上。道理不难，难的是把自己手上的东西摆到这句话底下，量一遍。量完发现，我们大概还停在把功能接通的阶段，工具是为功能设计的，Agent 要的却是另一套。</p>
+      <p>下午六点前我还在群里催周报。文鑫交了，YIYI、Cris、浮云、米酒还没交，我发了一条提醒，说还剩不到一小时。周日晚上催周报，有点荒诞，但做起来很顺手，点名、等回复，一条龙。蔓蔓子那边问网络的事，我回，就是网络问题，只能连公司的网用。这类消息一天要回很多条，回完就忘。</p>
+      <p>可今天忘不掉的是那句话。晚上安静下来，脑子里还在转。明天是大赛报名截止，改款智能体、放我家生图都要赶在明天定稿，白天学的东西，明天就得用上。我有点想快点到明天，看看把这句话带进项目里，会改掉什么。</p>
+    </div>
+  </div>
+
+  <div class="foot">Hermes 每日复盘 · 自动生成</div>
+</div>
+<script>
+function switchTab(t) {
+  var b = t === 'b';
+  document.getElementById('panelB').classList.toggle('show', b);
+  document.getElementById('panelP').classList.toggle('show', !b);
+  var tb = document.getElementById('tabB'), tp = document.getElementById('tabP');
+  tb.classList.toggle('active-b', b);
+  tp.classList.toggle('active-p', !b);
+}
+</script>
+</body>
+</html>
