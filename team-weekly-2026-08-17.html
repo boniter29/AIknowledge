@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>团队周报洞察 · 2026-08-10 ~ 08-16</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel2:#1c2129; --border:#30363d;
+    --text:#e6edf3; --muted:#8b949e; --accent:#58a6ff;
+    --green:#3fb950; --yellow:#d29922; --red:#f85149; --purple:#bc8cff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Segoe UI",Roboto,sans-serif;line-height:1.6;padding:16px;max-width:960px;margin:0 auto}
+  h1{font-size:22px;margin:8px 0 4px}
+  h2{font-size:17px;margin:24px 0 10px;padding-left:10px;border-left:3px solid var(--accent)}
+  .sub{color:var(--muted);font-size:13px;margin-bottom:16px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+  .stat{background:var(--panel2);border-radius:10px;padding:14px}
+  .stat .label{color:var(--muted);font-size:12px}
+  .stat .val{font-size:24px;font-weight:700;margin:4px 0}
+  .bar{height:10px;background:#21262d;border-radius:6px;overflow:hidden;margin-top:8px}
+  .bar>i{display:block;height:100%;border-radius:6px}
+  .tag{display:inline-block;padding:2px 8px;border-radius:20px;font-size:12px;font-weight:600}
+  .tag.green{background:rgba(63,185,80,.15);color:var(--green)}
+  .tag.yellow{background:rgba(210,153,34,.15);color:var(--yellow)}
+  .tag.red{background:rgba(248,81,73,.15);color:var(--red)}
+  .tag.purple{background:rgba(188,140,255,.15);color:var(--purple)}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--border);vertical-align:top}
+  th{color:var(--muted);font-weight:600;font-size:12px;background:var(--panel2)}
+  tr:last-child td{border-bottom:none}
+  .break{color:var(--red);font-weight:600}
+  .ok{color:var(--green)}
+  .warn{color:var(--yellow)}
+  ul{padding-left:20px;margin:8px 0}
+  li{margin:6px 0;font-size:14px}
+  .note{color:var(--muted);font-size:12px;margin-top:8px}
+  .section-desc{color:var(--muted);font-size:13px;margin-bottom:8px}
+  .person{background:var(--panel2);border-radius:10px;padding:12px;margin-bottom:10px}
+  .person .name{font-weight:700;font-size:15px}
+  .person .role{color:var(--muted);font-size:12px;margin-left:6px}
+  .person .desc{font-size:13px;margin-top:4px;color:#c9d1d9}
+  .matrix-cell{font-size:12px}
+  .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px}
+  .dot.on{background:var(--green)} .dot.off{background:#30363d} .dot.part{background:var(--yellow)}
+  .footer{margin-top:24px;color:var(--muted);font-size:12px;text-align:center}
+</style>
+</head>
+<body>
+
+<h1>🧠 团队周报洞察</h1>
+<div class="sub">周期 2026-08-10 ~ 08-16（ISO W33 · AI产品创新部周报）· 6/6 成员提交 · 生成于 2026-08-17</div>
+
+<h2>〇 聚焦度体检</h2>
+<div class="card">
+  <div class="grid">
+    <div class="stat">
+      <div class="label">主战场工时占比</div>
+      <div class="val">49%</div>
+      <div class="bar"><i style="width:49%;background:var(--yellow)"></i></div>
+      <div class="note">黄灯（&lt;60% 黄，&lt;40% 红）· 连续两周 47%→49%</div>
+    </div>
+    <div class="stat">
+      <div class="label">战线数量</div>
+      <div class="val">20+</div>
+      <div class="note">健康线 9 条 · 碎片化预警</div>
+    </div>
+    <div class="stat">
+      <div class="label">低优先级（海外）</div>
+      <div class="val">17.5%</div>
+      <div class="bar"><i style="width:17.5%;background:var(--red)"></i></div>
+      <div class="note">未超 20% 红线，但米酒个人 78% 在海外</div>
+    </div>
+    <div class="stat">
+      <div class="label">中台/工具/治理</div>
+      <div class="val">33%</div>
+      <div class="bar"><i style="width:33%;background:var(--purple)"></i></div>
+      <div class="note">既不属主战场也不属低优先级</div>
+    </div>
+  </div>
+  <div style="margin-top:12px" class="section-desc">
+    主战场分布：商品视觉 <b style="color:var(--green)">29%</b> · 林氏放我家/导购 <b style="color:var(--green)">19%</b> · 小红书内容生产 <b style="color:var(--red)">1%</b> · S&amp;OP 供需联动 <b style="color:var(--red)">0%</b>
+  </div>
+</div>
+
+<h2>一 价值链看板（AI落地进度）</h2>
+<div class="card">
+  <table>
+    <tr><th>项目</th><th>当前环节</th><th>断点预警</th><th>建议</th></tr>
+    <tr><td>林氏放我家 V2.1</td><td><span class="tag yellow">使用中未见效</span></td><td class="break">首轮评测未达预期（沙发/电视柜布局、毛坯场景）</td><td>浮云按失败样例分场景定位，高频场景优先复测</td></tr>
+    <tr><td>林氏放我家 3.0</td><td><span class="tag purple">构建中</span></td><td class="ok">生图需求梳理完成，评测启动</td><td>推进技术验证+多视角评测</td></tr>
+    <tr><td>小红书 KOB/KOS</td><td><span class="tag red">已交付未使用</span></td><td class="break">上周 demo 后本周停摆（&gt;1 周）</td><td>指定 PM，本周定下一步</td></tr>
+    <tr><td>素材库/DAM/KBMS</td><td><span class="tag yellow">规划中</span></td><td class="break">连续 2 周调研未进建设</td><td>收敛调研，8 月底定一期范围</td></tr>
+    <tr><td>数字分身</td><td><span class="tag purple">构建中</span></td><td class="warn">与主战场关系未定</td><td>明确是主战场能力还是探索项</td></tr>
+    <tr><td>S&amp;OP 供需计划联动</td><td><span class="tag red">未启动</span></td><td class="break">本周零动作</td><td>主战场4需重新确认是否仍列为重点</td></tr>
+  </table>
+</div>
+
+<h2>二 项目 × 人员矩阵</h2>
+<div class="card">
+  <table>
+    <tr><th>项目/方向</th><th>Cris</th><th>浮云</th><th>米酒</th><th>YIYI</th><th>文鑫</th><th>水滴</th></tr>
+    <tr><td>商品视觉(生影/剪辑/DAM)</td><td class="matrix-cell"><span class="dot on"></span>主力</td><td class="matrix-cell"><span class="dot off"></span></td><td class="matrix-cell"><span class="dot off"></span></td><td class="matrix-cell"><span class="dot on"></span>素材库</td><td class="matrix-cell"><span class="dot off"></span></td><td class="matrix-cell"><span class="dot on"></span>图片治理</td></tr>
+    <tr><td>林氏放我家(导购/标签)</td><td class="matrix-cell"><span class="dot off"></span></td><td class="matrix-cell"><span class="dot on"></span>主力</td><td class="matrix-cell"><span class="dot off"></span></td><td class="matrix-cell"><span class="dot part"></span>竞品</td><td class="matrix-cell"><span class="dot off"></span></td><td class="matrix-cell"><span class="dot part"></span>套餐</td></tr>
+    <tr><td>小红书 KOB/KOS</td><td class="matrix-cell"><span class="dot off"></span></td><td class="matrix-cell"><span class="dot off"></span></td><td class="matrix-cell"><span class="dot off"></span></td><td class="matrix-cell"><span class="dot off"></span></td><td class="matrix-cell"><span class="dot off"></span></td><td class="matrix-cell"><span class="dot part"></span>调研</td></tr>
+    <tr><td>S&amp;OP 供需联动</td><td colspan="6" class="matrix-cell" style="color:var(--muted)">本周无人投入</td></tr>
+    <tr><td>海外 IECM/BPS(低优先)</td><td class="matrix-cell"><span class="dot part"></span></td><td class="matrix-cell"><span class="dot off"></span></td><td class="matrix-cell"><span class="dot on"></span>主力</td><td class="matrix-cell"><span class="dot on"></span>工单+发版</td><td class="matrix-cell"><span class="dot off"></span></td><td class="matrix-cell"><span class="dot off"></span></td></tr>
+    <tr><td>中台/工具/评测/治理</td><td class="matrix-cell"><span class="dot part"></span></td><td class="matrix-cell"><span class="dot part"></span>大赛</td><td class="matrix-cell"><span class="dot part"></span>退款台</td><td class="matrix-cell"><span class="dot part"></span>学习</td><td class="matrix-cell"><span class="dot on"></span>主力</td><td class="matrix-cell"><span class="dot on"></span>主力</td></tr>
+  </table>
+  <div class="note">● 主力 = 本周主要投入；◐ 部分投入。矩阵仅反映本周工时分布，非绩效。</div>
+</div>
+
+<h2>三 风险卡点面板</h2>
+<div class="card">
+  <table>
+    <tr><th>卡点</th><th>涉及方</th><th>持续</th><th>建议解法</th></tr>
+    <tr><td>财务闭环结项</td><td>米酒 / YIYI / 财务 / 业务</td><td class="break">3 周+</td><td>无论结果都推荐结项，别再拖</td></tr>
+    <tr><td>放我家 / 小红书项目经理</td><td>健新</td><td class="break">2 周</td><td>本周拍板</td></tr>
+    <tr><td>素材规范（白底图/物料编码）</td><td>产中 / 电商</td><td class="break">2 周+</td><td>水滴牵头拉一条跨部门对齐路径</td></tr>
+    <tr><td>即梦 Seedream 5.0 Pro 评测收口</td><td>Cris</td><td class="warn">进行中 70%</td><td>全量结果收口，沉淀选型依据</td></tr>
+  </table>
+</div>
+
+<h2>四 行业信号对照</h2>
+<div class="card">
+  <div class="section-desc">注：本周 AI日报/一手信源简报归档缺失（推送至 origin 未入 session DB），行业信号仅取自团队自身工作报告，置信度中。</div>
+  <table>
+    <tr><th>信号</th><th>团队在做什么</th><th>差在哪 / 下一步</th></tr>
+    <tr><td>国产生图模型进入企业级图层分离/编辑场景（即梦 Seedream 5.0 Pro）</td><td>Cris 完成网关适配+50 用例评测，浮云推进放我家接入 5.0 Pro</td><td>评测结论应沉淀为团队可复用的选型依据，而非一次性报告；图层分离/融合限制复盘需同步给放我家 3.0</td></tr>
+    <tr><td>AI 运行成本快速上涨（DSV4/腾讯模型涨价）</td><td>水滴跟进 Token 费用上涨趋势，推动成本预估与优化</td><td>月度费用逼近 10W/月，需提前与财务对齐预算、推动缓存命中优化</td></tr>
+  </table>
+</div>
+
+<h2>五 个人贡献摘要（仅描述，非评价）</h2>
+<div class="card">
+  <div class="person"><span class="name">Cris</span><span class="role">商品视觉 · 主战场</span><div class="desc">本周主线为即梦 Seedream 5.0 Pro 图层分离评测（2.5天）与素材管理系统规划（0.8天），是商品视觉战场的主力。</div></div>
+  <div class="person"><span class="name">浮云</span><span class="role">林氏放我家 · 主战场</span><div class="desc">本周几乎全量投入林氏放我家 V2.1 评测与 3.0 生图需求梳理（4.25天），完成白底图评测集与用例观测平台。</div></div>
+  <div class="person"><span class="name">米酒</span><span class="role">海外 IECM/BPS · 低优先级</span><div class="desc">本周聚焦 BPS 财务闭环装箱单优化、海外订单履约治理与商城体验优化，另参与数字分身会议与 AI 竞赛退款工作台方向。</div></div>
+  <div class="person"><span class="name">YIYI</span><span class="role">素材库 + BPS · 双线</span><div class="desc">素材管理调研与 KBMS 企业知识库建设（1.6天）为主战场投入，同时承担 BPS 商城需求发版与 11 个工单运维；连续 2 周 AI 运维能力学习（正面）。</div></div>
+  <div class="person"><span class="name">文鑫</span><span class="role">评测能力建设 + 小龙虾 UI</span><div class="desc">本周聚焦林氏小龙虾 UI 原型九轮迭代与 Skill 三层评测框架、战略经营 Skill v1.2 升级；研读两份战略文件补齐经营侧背景（正面）。</div></div>
+  <div class="person"><span class="name">水滴（三叶）</span><span class="role">组织赋能 · 多线</span><div class="desc">战线最宽：数字分身产品化、AI 视觉链路治理、AI 产品战略与项目治理、BI 成本管控、AI 改款智能体、比赛组队；是组织赋能角色，需警惕「易事驱逐难事」。</div></div>
+</div>
+
+<h2>六 周期趋势（vs 上周）</h2>
+<div class="card">
+  <ul>
+    <li>聚焦度：<span class="warn">47% → 49%（→ 持平，仍黄灯）</span></li>
+    <li>战线数量：<span class="break">16 → 20+（↑ 扩张）</span></li>
+    <li>闭环率：<span class="break">↓ 财务闭环、小红书 demo、架构迁移评测均未闭环</span></li>
+    <li>学习投入：<span class="ok">→ YIYI 连续 2 周 AI 运维、文鑫新增战略研读（稳定正向）</span></li>
+    <li>僵尸卡点：<span class="break">↓ 财务闭环 / 项目经理 2 周以上未动</span></li>
+  </ul>
+</div>
+
+<div class="footer">团队周报汇总与战略洞察 · 诊断工具，非考核工具 · 量化信号仅产生假设，置信度见正文 · 2026-08-17</div>
+</body>
+</html>
