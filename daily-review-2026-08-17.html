@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-17</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0d1117; color: #e6edf3; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif; line-height: 1.85; }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 28px 20px 60px; }
+  .head { text-align: center; padding: 18px 0 8px; }
+  .head .date { font-size: 13px; color: #8b949e; letter-spacing: 2px; }
+  .head h1 { font-size: 26px; margin-top: 6px; font-weight: 700; }
+  .head .sub { font-size: 14px; color: #8b949e; margin-top: 8px; }
+  .tabs { display: flex; justify-content: center; gap: 12px; margin: 24px 0 8px; }
+  .tab { padding: 10px 28px; border-radius: 999px; border: 1px solid #30363d; background: transparent; color: #8b949e; font-size: 15px; cursor: pointer; transition: all .2s; font-family: inherit; }
+  .tab.active-b { background: #4f6ef7; border-color: #4f6ef7; color: #fff; }
+  .tab.active-p { background: #f472b6; border-color: #f472b6; color: #fff; }
+  .panel { display: none; margin-top: 20px; }
+  .panel.show { display: block; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 14px; padding: 26px 24px; }
+  .card p { margin-bottom: 18px; font-size: 15.5px; }
+  .card p:last-child { margin-bottom: 0; }
+  .biz .lead { border-left: 3px solid #4f6ef7; padding: 14px 16px; background: rgba(79,110,247,.07); border-radius: 0 10px 10px 0; font-weight: 700; color: #dbe2ff; }
+  .biz .lead p { margin-bottom: 0; }
+  .per .card { border-color: rgba(244,114,182,.25); }
+  .per .lead { border-left: 3px solid #f472b6; padding: 14px 16px; background: rgba(244,114,182,.06); border-radius: 0 10px 10px 0; }
+  .foot { text-align: center; margin-top: 30px; font-size: 12px; color: #484f58; }
+  .divider { height: 1px; background: #21262d; margin: 8px 0 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <div class="date">MONDAY · 2026.08.17</div>
+    <h1>每日复盘</h1>
+    <div class="sub">一半在铺，一半在收</div>
+  </div>
+  <div class="tabs">
+    <button class="tab active-b" id="tabB" onclick="switchTab('b')">📊 商业版</button>
+    <button class="tab" id="tabP" onclick="switchTab('p')">📝 日记版</button>
+  </div>
+
+  <div class="panel show biz" id="panelB">
+    <div class="card">
+      <div class="lead"><p><strong>八场会、281 分钟，一半在铺，一半在收。大赛动员、小红书全链路、数字分身是铺，供应商降本、使用规范迭代、专家套件试点是收。团队周报里那条连续两周黄灯的聚焦度 49%，是这场转向的背景音。</strong></p></div>
+      <div class="divider"></div>
+      <p><strong>一、停摆两周的小红书，今天被三条线同时拉起来</strong>
+周报刚写下「小红书 KOB/KOS 零推进，demo 交付后停摆，项目经理两周未定」，今天就有三件事同时发生。第一件是目标纠偏，会上把 4000 篇/月重新定义为一串结果指标，业务真正要追的是曝光，这一步把项目从交付物导向拉回业务价值导向。第二件是全链路方案会开了 55 分钟，内容生产、发布、数据回流三段拆开看，700 多家门店、几千个用户要批量生产内容，数据回流还靠 RPA 短链转长链人工匹配 ID，沙盘团队至今纯人工，现状连半自动都算不上。第三件是机制注入，ChatCanvas 参赛项目扩展成小红书全链路，YIYI 做组长、浮云参与、轩然主导业务侧，同时拉起 IT 内部专项群。停摆的根子是缺业务目标兜底，今天先把目标锁死，再用大赛的组队机制把干系人和资源一次性拉齐，这是本周第一个从停摆到重连的样板。</p>
+<p><strong>二、DeepSeek 涨价三倍，把 AI 第一次变成成本项</strong>
+上周末 DeepSeek V4 正式版全面涨价约三倍，今天团队直接切回预览版。同一周，供应商选型与降本会开了 47 分钟，腾讯、火山两大服务商，1 到 7 月账单盘出来，火山引擎消耗最高，目标是让财务去谈折扣。配合 AI 委员会月会改版，核心目的改成同频重点 AI 项目进展，议程第一条就是各 AI 核心产品月度运营数据。AI 正从随便用的免费能力，变成要核算、要谈判、要月报的成本项。涨价是外部坏事，但它把「AI 也要算账」提前摆上了桌面，比我们自己觉悟快了一步。</p>
+<p><strong>三、审计的一句话，把 AI 规范从鼓励用推进到规范用</strong>
+年初养虾那一波出的指引，今天开始迭代。审计那边提示了行业里的数据安全和使用规范风险，会议明确两大方向，数据安全加使用规范，覆盖所有 AI 工具，内部自研的小龙虾和外部公共的豆包、扣子、开源模型一视同仁，敏感数据从用户名、手机号开始界定。分工上水滴牵头统筹、坛子合并安全细则，本周出初稿、下周发文。年初教大家怎么用，年中教大家什么不能给，半年时间，AI 的渗透度已经逼着治理跟上来了。</p>
+<p><strong>四、数字分身与专家套件，三个源头撞出同一个答案</strong>
+82 分钟的大会，把三件事放在一张桌上，卡罗提的 AI 专项、阿星开过的分享、还有一版已经做出来的 demo。撞出来的共识是场景先聚焦产品经理，迭代需求分析和运维工单解答两条链路，都依赖代码逻辑和数据库只读权限这个地基。随后的短会定了以卡罗为第一试点，本周上线。问题出在重复上，IT 必应、IT 必达在做需求分析和原型设计，小龙虾专家套件也在做，各产品线套件必然不同，底座却是同一套。重复建设用试点来收敛，比用制度快。</p>
+<p><strong>五、大赛规则会上，最扎心的是那句「大家还是不相信」</strong>
+大赛规则会开了 51 分钟，报名很热闹，兰州拉面队因为用 AI 表格就能实现直接不报名了，Be water、真材实料、能工智人各队陆续加人，但会上有人说了句实话，大家还是不知道怎么去做、用什么工具，大家还是不相信。规则答疑解决不了信心问题，会上给的解法是 IT 配人进场，把项目做成真正可演示的东西。信心要靠做出来给他们看，这句话接下来一个月会被反复验证。</p>
+<p><strong>🔍 今日重要信号</strong>
+价值链没有被串起来，有人点破，过往大家解决的都是单点问题，局部成功不代表全局。今天小红书、数字分身、大赛三条线的动作，其实都在回应这句话。
+队员被复用，干活的只剩队长了，大赛组织成本开始显形，初筛规则要提前收紧。
+PLM 新规则 8 月底落地，系列、主型号、物料名称全换新规则，应用端和 BI 报表要排查影响。
+陈超那边目标一直给不出来，IT 要不要投入资源，需要他先讲清价值，本周要在经营分析会上把这件事拎出来。
+AI 委员会月会改版，本月 8 月 20 日周四开，周三前收齐各项目重点材料，用 AI 汇总，月会从仪式变成同频会。</p>
+<p><strong>收尾判断</strong>
+接下来两周有三个检验点。周四的 AI 委员会月会，看各项目能不能把月度运营数据讲清楚；AI 规范初稿本周出，下周发文；大赛报名本周收口，小红书如果按新目标重跑起来，就是第一个目标倒逼落地的样板。扩张的油门踩了半年，现在该踩刹车了，刹车的动作，是把 20 多条战线收成几条能闭环的。</p>
+    </div>
+  </div>
+
+  <div class="panel per" id="panelP">
+    <div class="card">
+      <p>八场会，加起来四个半小时。最长的一场聊数字分身，八十二分钟，最短的一场是专家套件试点，七分钟不到就散了。</p>
+<p>早上的规范会开得很快。审计那边提了醒，说行业里出过数据安全的事，年初养虾那波做的指引要迭代了。定的是我牵头，坛子把安全细则合过来，本周出初稿，下周发文。散会的时候我算了一下，年初我们还在教大家怎么用 AI，现在已经在教什么不能给了，半年。</p>
+<p>接着是大赛的报名。队伍一支支在加人，Be water 队，真材实料队，能工智人，我一边回消息一边改名单。兰州拉面队说不报名了，他们说用 AI 表格就能实现，不来了。我看着这条消息愣了两秒，有点想笑。用 AI 表格，这个退赛理由倒是比没时间好听，多少算个成果。</p>
+<p>大赛规则会开到一半，有人说了一句实话，大家其实还是不知道怎么去做，用什么工具，大家还是不相信。会议室静了一下。「不相信」三个字比「不会做」难办，不会做可以教，不相信只能做出来给他们看。会上定的办法是 IT 配人进来，把项目做成真正能演示的东西。</p>
+<p>数字分身那场会开了八十二分钟。卡罗那边提了 AI 专项，阿星开过分享，还有一版已经做出来的 demo，三个源头凑到一张桌上，聊到后面发现想做的事差不多，都是帮产品经理把需求分析、原型设计、工单解答这些活接过去。会上的结论是先以卡罗为试点，这周上线。我心里转的是另一件事，大家各做各的，做到快上线才发现是同一个东西，这种重复往后只会更多。</p>
+<p>小红书是今天最重的一条线。团队周报里还写着它零推进，demo 交付后就停摆了，全链路方案会就开了五十五分钟。生产、发布、数据回流三段拆开，七百多家门店要批量产内容，数据回流还靠 RPA 短链转长链、人工匹配 ID。会上最有分量的一句话是，四千篇一个月是结果，业务目标是提升曝光。停了两个星期的项目今天重新动起来，但这次是先锁目标，再动手。</p>
+<p>晚上回来，群里还在说陈超那个会的事。他一直给不出目标，我那条语音里说，他讲不清楚，那我们还要不要投入资源，要不要配合。这话我在心里过了好几遍，怕拎出来讲显得不配合，又觉得不讲清楚，投入就是笔糊涂账。明天下午要跟他对一版材料，我让同事今晚尽量给我，明早我再调。</p>
+<p>顺手还做了两件小事。DeepSeek 正式版涨价三倍，我们切回预览版了，群里同步了一声。给 boss 的汇报材料也交代下去了，AI 视觉按时间线理一版，小林生影做了什么，AI 成本比人工低多少，IT 驻场盘了四十个节点，高度浓缩，图文结合。</p>
+<p>傍晚我在群里发，明天会回收报名表权限，你要不先提交吧。催人这件事，我越来越熟练了。又聊到团建拼车，我问初次集合在哪里，出发的时候定。把消息划过去，回了一句，我也可以走了。</p>
+<p>走之前又看到那条消息，有人说的，过往大家都是在解决某个点上的问题，代表了局部的成功，但从全局看，价值链没有被串起来。今天这一天，大概就是在串这个。</p>
+    </div>
+  </div>
+
+  <div class="foot">Hermes 每日复盘 · 自动生成</div>
+</div>
+<script>
+function switchTab(t) {
+  var b = t === 'b';
+  document.getElementById('panelB').classList.toggle('show', b);
+  document.getElementById('panelP').classList.toggle('show', !b);
+  var tb = document.getElementById('tabB'), tp = document.getElementById('tabP');
+  tb.classList.toggle('active-b', b);
+  tp.classList.toggle('active-p', !b);
+}
+</script>
+</body>
+</html>
