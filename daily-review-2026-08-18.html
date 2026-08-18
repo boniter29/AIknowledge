@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-18</title>
+<style>
+  :root { --bg:#0b0e14; --card:#141926; --text:#e6e9f0; --muted:#8b93a7; --blue:#4f6ef7; --pink:#f472b6; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; line-height:1.85; padding:24px 16px 60px; max-width:800px; margin:0 auto; }
+  header { text-align:center; padding:20px 0 8px; }
+  header .date { font-size:13px; color:var(--muted); letter-spacing:2px; }
+  header h1 { font-size:22px; margin-top:6px; font-weight:700; }
+  .tabs { display:flex; gap:10px; justify-content:center; margin:22px 0 26px; }
+  .tab { flex:1; max-width:220px; padding:10px 0; text-align:center; border-radius:10px; border:1px solid #2a3142; background:#141926; color:var(--muted); font-size:15px; cursor:pointer; transition:all .2s; user-select:none; }
+  .tab.active { color:#fff; border-color:transparent; }
+  .tab.b.active { background:linear-gradient(135deg,#3b5bdb,#4f6ef7); box-shadow:0 4px 20px rgba(79,110,247,.35); }
+  .tab.p.active { background:linear-gradient(135deg,#db2777,#f472b6); box-shadow:0 4px 20px rgba(244,114,182,.35); }
+  .panel { display:none; }
+  .panel.show { display:block; }
+  .card { background:var(--card); border:1px solid #232b3d; border-radius:14px; padding:18px 20px; margin-bottom:16px; }
+  .tone { border-left:4px solid var(--blue); background:linear-gradient(135deg,rgba(79,110,247,.12),rgba(79,110,247,.03)); }
+  .tone b { font-size:16px; line-height:1.9; }
+  .sec h3 { font-size:15.5px; color:#8fa4ff; margin-bottom:8px; font-weight:700; line-height:1.6; }
+  .sec p { font-size:14.5px; color:#cdd3e0; }
+  .signals h3 { font-size:15px; color:#8fa4ff; margin-bottom:6px; }
+  .signals .sig { display:flex; gap:10px; padding:9px 0; border-bottom:1px dashed #2a3142; font-size:14px; color:#cdd3e0; }
+  .signals .sig:last-child { border-bottom:none; }
+  .signals .sig .ic { flex-shrink:0; }
+  .deep { border:1px solid #2a3142; background:rgba(79,110,247,.06); }
+  .deep h3 { color:#8fa4ff; font-size:15px; margin-bottom:8px; }
+  .deep p { font-size:14.5px; color:#cdd3e0; }
+  .d-card { background:var(--card); border:1px solid #232b3d; border-radius:14px; padding:22px 20px; margin-bottom:14px; }
+  .d-card p { font-size:15px; color:#d9d3dc; margin-bottom:15px; }
+  .d-card p:last-child { margin-bottom:0; }
+  .quote { border-left:3px solid var(--pink); padding:4px 0 4px 14px; color:#f9c6e2; font-size:16px; margin-bottom:16px; font-weight:600; }
+  .endline { color:var(--pink); font-weight:600; }
+  footer { text-align:center; color:#5a6172; font-size:12px; margin-top:30px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="date">DAILY REVIEW</div>
+  <h1>每日复盘 · 8月18日 周二</h1>
+</header>
+
+<div class="tabs">
+  <div class="tab b active" onclick="switchTab('b')">📊 商业版</div>
+  <div class="tab p" onclick="switchTab('p')">📝 日记版</div>
+</div>
+
+<div class="panel show" id="panel-b">
+
+  <div class="card tone"><b>今天不是「AI 大赛初筛」的一天，而是「把每件事翻过来看底子」的一天。从接需求到判断需求，团队第一次在需求入口批量拦截伪问题。</b></div>
+
+  <div class="card sec">
+    <h3>一、68 支队伍报名，初筛筛的不是队伍，是空想与落地之间的那层纸</h3>
+    <p>AI 大赛报名 68 队，产中占 29 队。组委会连夜定下初筛机制：产品线结合对口业务部门先评估需求，产品经理打标、前置需求沟通作为初筛依据，8 月 20 日下班前筛完，8 月 24 日公布。会上有人点破一组数据，40 多个队伍要么没有产品，要么没有开发。热情是真的，家底是虚的。所以初筛的本质不是淘汰，是把参赛热情翻译成可落地项目的第一道漏斗。两个设计细节值得记住：AI 先做评分，但产品线仍要先去对口业务聊需求 O 不 OK，这是对报名者最基本的尊重；进销存出现两组同题队伍，可整合性被直接写进评估维度。这一手把「筛」变成了「评估前置」，比简单打分高一个段位。</p>
+  </div>
+
+  <div class="card sec">
+    <h3>二、4000 篇小红书回答不了「为什么是 4000」，伪问题在需求入口被拦截</h3>
+    <p>新零售把月度生产 4000 篇小红书当成目标。会上有人说目标很清晰，当场被反问回去：4000 篇解决什么问题，曝光还是内容覆盖率，为什么是 4000，讲不清楚；5 个模板来自四五个月前的笔记趋势分析，现在套用还有没有流量，没人答得上来；需求源头只是几个实习生做笔记太慢。下午有同事去找业务聊同一件事，对方也答不上来「现在的模板还有没有曝光」。结论随之落定：引导新零售梳理全链路、定义目标、找到真痛点，以新零售为标杆。这条线的信号不在小红书本事，在于 IT 第一次在需求入口做伪问题拦截。需求评审从流程动作变成了价值判断。</p>
+  </div>
+
+  <div class="card sec">
+    <h3>三、数字分身当场否决 AI 客服：敢不做什么，比敢做什么更难</h3>
+    <p>数字分身定了两条改造线，IT 必达和导购必达，先接业务量最大的一条线上 MVP，再谈产品改造。同时会议明确否决直接切 AI 客服：运营场景不标准，用户问的往往是从未见过的焦虑场景，答错被直接复制出去，杀错单、价格错，谁负责。结论聚焦内部运营辅助和全司行政办公这类体感强、敢负责的场景。这个否决比任何立项都值钱。AI 落地最贵的成本不是算力，是答错之后的追责。数字分身选择先做敢负责的事，把「听起来性感」和「做起来敢担」分开。</p>
+  </div>
+
+  <div class="card sec">
+    <h3>四、竞品分析第一次做到像素级：用 AI 拆视频、拆代码、拆交互</h3>
+    <p>家装竞品分析用 AI 分析视频和代码，拆出三个结论：淘宝的等待界面是异步的，可以挂着等待去干别的任务；淘宝图片倾向保留家的真实场景，不加美感，连家里糟糕的原样元素都保留；天猫的逻辑和我们一致，拿图片做方案。产品规划的讨论也从点对点、各管各的垂直模块，转向合力共创。方法论的信号很清楚：竞品分析从「看界面」进化到「拆交互逻辑、拆实现」，技术团队做产品研究终于用上了自己的看家本领。</p>
+  </div>
+
+  <div class="card signals">
+    <h3>🔔 今日重要信号</h3>
+    <div class="sig"><span class="ic">⚡</span><span>报关结项：明天随机抽 2-3 个生产真实订单验收装箱单，无论结果如何按计划结项。问题定性（数据维护还是系统功能）比修 bug 更优先</span></div>
+    <div class="sig"><span class="ic">🚀</span><span>客服赋能小组：有同事提议下周三人组进入客服侧当 AI 产品角色，先理清真痛点。这是「下半年往前走一步」的第一个编制动作</span></div>
+    <div class="sig"><span class="ic">⚠️</span><span>小红书趋势：问业务「四五个月前的模板现在还有没有曝光」，答不上来，伪问题的直接证据</span></div>
+    <div class="sig"><span class="ic">🎯</span><span>字节开始问工具培训时间，AI 大赛的配套动作开始排期</span></div>
+    <div class="sig"><span class="ic">🔴</span><span>多业务线会上确认：上个月整体没什么进展，8 月交付压力全压在下半月</span></div>
+  </div>
+
+  <div class="card deep">
+    <h3>深层判断：四件事共享同一条因果链</h3>
+    <p>初筛判断空想与落地，小红书判断真伪问题，数字分身判断敢不敢负责，客服判断值不值得进。四件事发生在同一天不是巧合。共同推力只有一个：AI 投入正从业务驱动转向判断驱动，团队开始把「这个需求到底值不值得做」当成默认动作。往前看，8 月 24 日的初筛结果会把「产品线×业务对口」的评估机制变成常态，客服赋能小组会把产品思维从口号变成编制。接下来三周真正的看点不是 68 队里活下来多少，而是这套判断机制会不会长成新的协作方式。</p>
+  </div>
+
+</div>
+
+<div class="panel" id="panel-p">
+
+  <div class="d-card">
+    <div class="quote">「不要被迷惑啊，只是眼睛加了高光。」</div>
+    <p>这句话是我下午发给 YIYI 的。对面大概在给我看某个演示，画面里的小姐姐眼睛亮亮的。我说别被骗了，那是加的高光。</p>
+    <p>发完我愣了一下。这不就是我这一整天在干的事吗。把好看的东西翻过来，看它的底子。</p>
+    <p>早上有场会又聊到小红书。柴理他们那边月度生产 4000 篇，有人说，目标很清晰吧。我说我不觉得。4000 篇到底解决什么问题，曝光还是内容覆盖率，为什么是 4000，讲不清楚。每一篇如果只有 200 的阅读量，这个数字就没什么意义。还有那 5 个模板，是四五个月前分析的笔记趋势，现在套上去还有没有流量，也没人答得上来。</p>
+    <p>会散了我在手机上又补了几条消息给 YIYI，一条比一条直。发完坐在椅子上想，我今天是不是太凶了。</p>
+    <p>上午的会一个接一个。AI 大赛初筛，数字分身，多业务线卡点，中间见缝插针回消息。有人说报名表后台看不到数据，有人说提交了不显示，有人说两个队重复报了。我一条条回，好吧，以新队伍为准，重新报名吧。</p>
+    <p>「好吧」今天说了很多次。还有一句「变来变去的」，不知道在回谁的时候打出去的。</p>
+    <p>下午有人讲小龙虾的开发，实现效果没达到预期，进度也有点慢。又提到上个月每个业务线都没什么进展。我听着心里咯噔一下。一个月，说没就没了。日历翻过去的时候一点声音都没有。</p>
+    <p>数字分身那场会定了两条线，IT 必达先接业务量最大的一条线上 MVP，先解决问题。同时把 AI 客服的方案毙了。运营场景不标准，用户问的都是一些没见过的焦虑场景，答错了被直接复制出去，杀错单谁负责。下午有人问分身回复得不好是不是模型的问题。我说不一定，数据源、读取机制、蒸馏落档、模型，四个环节都可能出问题。有些场景要敢碰，有些场景要敢不碰。能把「不碰」说出口，比列十张路线图难。</p>
+    <p>下午还帮人看了一份材料。对方写了很多案例，我说极致专业的案例不太匹配，看起来不太能打，能不能讲对标硅谷的技术拆解和逆向。又说林氏小龙虾这种家喻户晓级的产品很有重量，值得重点写。讲台下面坐的人，想要的是真正硬的东西。</p>
+    <p>晚上改一份材料，改到一半跟对方说了实话，我写的很粗糙，有些写的不太实。又补一句，你尽量改一下，改实一点。话说出口我自己笑了。白天我追着别人问实不实，晚上轮到自己的东西，一样是虚的。</p>
+    <p>临睡前又想起一件事。下午我在群里说，我今天说晚了，应该早点让你们先线下去找他们几个明确一下还有没有问题。很多会议的问题是在会下提前解决的，会上只是同步共识。这话是说给他们听的，也是说给我自己听的。</p>
+    <p>快十点，我给洁敏发了条消息，问她几点下班。发完才意识到，今天一整天，我没怎么跟人说过工作以外的话。</p>
+    <p>明天还有报关的验收会，随机抽两三个真实订单生成报关单。无论结果怎么样，项目都按计划结项。这句话今天反复看了几遍，心里反而踏实。</p>
+    <p class="endline">今天我把别人的东西翻过来看了个遍。明天该别人翻我的了。</p>
+  </div>
+
+</div>
+
+<footer>Hermes Daily Review · 2026-08-18</footer>
+
+<script>
+function switchTab(t){
+  document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('active');});
+  document.querySelectorAll('.panel').forEach(function(x){x.classList.remove('show');});
+  document.querySelector('.tab.'+t).classList.add('active');
+  document.getElementById('panel-'+t).classList.add('show');
+}
+</script>
+</body>
+</html>
