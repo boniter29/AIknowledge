@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-19</title>
+<style>
+:root{--bg:#0e1013;--line:#262a33;--text:#e8e6e3;--muted:#8f8f98;--blue:#5b8cff;--pink:#ff7a9e}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:28px 20px 90px}
+header{padding:26px 0 4px}
+.date{color:var(--muted);font-size:13px;letter-spacing:2px}
+h1{font-size:27px;margin-top:8px;font-weight:800;letter-spacing:1px}
+.sub{color:var(--muted);font-size:14px;margin-top:6px}
+.tabs{display:flex;gap:10px;margin:26px 0 22px;position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:10}
+.tab{flex:1;text-align:center;padding:11px 0;border-radius:12px;cursor:pointer;border:1px solid var(--line);color:var(--muted);font-size:15px;font-weight:600;transition:all .2s;user-select:none}
+.tab.biz.active{background:rgba(91,140,255,.13);border-color:var(--blue);color:var(--blue)}
+.tab.dia.active{background:rgba(255,122,158,.13);border-color:var(--pink);color:var(--pink)}
+.panel{display:none;animation:fade .3s ease}
+.panel.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+p{margin:0 0 20px;font-size:16px}
+.lead{background:rgba(91,140,255,.08);border-left:3px solid var(--blue);padding:18px 20px;border-radius:0 12px 12px 0;margin-bottom:26px}
+.lead p{margin:0;font-size:16px}
+.lead strong{color:#cfe0ff}
+.dia .lead{background:rgba(255,122,158,.08);border-left-color:var(--pink)}
+.dia .lead strong{color:#ffd6e2}
+footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;text-align:center;letter-spacing:1px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="date">DAILY REVIEW · 2026.08.19 · WED</div>
+<h1>每日复盘</h1>
+<div class="sub">商业复盘版 + 日记版</div>
+</header>
+<div class="tabs">
+<div class="tab biz active" onclick="switchTab('biz')">📊 商业版</div>
+<div class="tab dia" onclick="switchTab('dia')">📝 日记版</div>
+</div>
+<section id="panel-biz" class="panel biz active">
+<div class="lead"><p><strong>今天的主线是收拢。数字分身四条链路定了归属，AI专项装上了三个关口，AI委员会改期到下周三，数据项目定了合并方向。AI从一堆各自验证的项目，开始变成几条有节奏的线。</strong></p></div>
+<p>数字分身这场会，比四条链路本身更有信息量的是分工的依据。IT必达、导购必达、邻家小姐姐、Agent生产平台，前两条交给长期接业务线工单、正在产中做调研、对NBO和商品卖点熟的人，后两条交给对搭建大产品有更高要求的人。我按业务熟悉度分，不按技术难度分，因为数字分身的瓶颈在业务知识，模型能力大家都差不多，谁离业务近，谁负责把AI接进业务流程。昨天刚定林家小姐姐复用小林AI的知识库，今天另外三条线也有了归属，这条业务从想法变成了四个在跑的项目。</p>
+<p>小龙虾要推广，推广的前提是体验过关。团队对Codex、Cloud、Workbody、QoderWork做了几乎像素级的调研，今天定下橙色主题色、浅色画布，左侧菜单和深度思考的展示都重新做了方案。一个零食电商的AI产品，跑去对标全球顶级AI IDE产品的交互链路，这个动作本身就说明小龙虾的定位已经不是内部工具。我对评审提了硬要求，原型对比要量化、要像素级，跟现在的小龙虾比，不要跟自己的旧版本比。</p>
+<p>玲零零反馈了AI专项的三个问题。验证周期两三个月起步，算上运营一个项目做一年，太废人。长周期投入成本难管控，价值兑现慢，风险大。业务配合也跟不上，现在的项目基本都要12月才结束。我的回应是三个关口，给尝试加一个节拍器。需求关，必须有业务负责人、真实使用对象、当前问题、愿意投入试用和验收的人，缺一项先暂停。验证关，探索期约定验证目标和截止时间，到期必须拿出真实场景的可行性和价值证据，拿不出就暂停。投入关，验证通过后明确业务和技术投入、落地节点、预期价值，没有资源承诺，或者投入、周期与价值明显不匹配，就暂停。这跟我一直的态度一致，AI专项是验证性场景，公司抱着怀疑和开放的态度鼓励更多尝试，但尝试要有节奏、有出口。</p>
+<p>同一天，米酒晋升特批。特批原因我写了三条，绩效排名有历史原因，认定标准与岗位要求不一致。团队是新业务技术团队，整体能力强，绩效是相对指标，体现不了能力绝对情况。米酒在团队动荡期一个人承接原本四个人维护的两个大业务系统，主导多个项目闭环，还完成了AI转型。推荐语里我写他独立交付、跨系统跨部门闭环、以事实和验收结果推动问题。我还跟他讲，材料还有提升空间，可以帮他改。玲零零问怎么激励大家，机制上的答案在三个关口和节奏，个体上的答案在给值得的人争取，两条线同一天都在推进。</p>
+<p>健新在做两件事，识别AI和IT的机会点，看现有流程的方案该怎么做。全链路是林氏放我家，销售端选空间、选套系、配软装，标准是什么，门店装修、摆场、调场，标准从哪来，拍摄又是什么标准。会上盘到一层现实，软装的风格是AI自出的虚拟风格，从端到端本来就该是一体的。我的判断是，不盘清楚链路，机会点和标准都是空的。技术侧也验证了一层现实，现有建模文件是3ds Max的.max格式，网页和普通程序打不开，任何方案都绕不开转成GLB。链路在加速，今天视觉中台和软装选品开了两场会，加起来一个半小时。</p>
+<p>组织节奏也在收。新哥外出，AI委员会改期到下周三，七条材料线周五收，小龙虾和小林AI、放我家、AI改款、小红书、AI视觉、素材库、数字分身，各有一个负责人。白皮书下周初开会。数据这边，检测室拆成两部分，检测数据分析落到小林智数，检测报告落到小林AI知识库。销售预测、发货预测和进销存提效、AI自动排产三个计划项目合并调整。摊子在重新排，该拆的拆，该合的合，每一条都有人认领。</p>
+<p>一天之内，数字分身、AI委员会、AI专项治理、数据项目四条线同时收拢。散的收成线，线变成能验收的。这是把前几个月撒出去的尝试，开始往回捡。</p>
+</section>
+<section id="panel-dia" class="panel dia">
+<div class="lead"><p><strong>今天我在聊天里发了一句话，我真的就是工具人来的。</strong></p></div>
+<p>今天早些时候，我把米酒的推荐语发出去。材料他自己写好了，我看了一遍，直接说还有提升的空间。他大概也习惯了。我写的那段话里有一句，说他一个人扛下了原本四个人维护的两个大业务系统。写完我补了两个字，加油。</p>
+<p>特批的事我提前跟人打过招呼。绩效排名有历史原因，认定标准跟岗位要求对不上。团队是新业务技术团队，整体能力强，相对指标看不出绝对水平。这些理由写的时候我心里清楚，特批在评审那里是要被挑战的，既挑战他，也挑战我。所以材料得让人挑不出毛病。</p>
+<p>今天还提交了远程办公的VPN申请，飞连。有些应用只有公司内网能打开，在外面干活就得靠它了。</p>
+<p>下午的会从文印室开始。小龙虾的UI方案会，五个人，四十六分钟。我们对着Codex、Claude、Workbody的界面一页一页拆过，今天定的事很具体，主题色从蓝改成橙、画布换浅色，左侧菜单和深度思考的展示一起重做。会上有人问引用要不要去掉，有人问外观设计留不留。我坐在那儿，脑子里过的是下午还有几场会。</p>
+<p>数字分身那场会定了四条线的归属。IT必达和导购必达给一个人，邻家小姐姐和Agent生产平台给另一个人。分法是我拍的，我按业务熟悉度分，谁离业务近谁接。下午五点半还有一场视觉流程讲解，开之前我发了条消息，问米酒在不在，说差不多了就可以下来了。健新那边问能不能开始讲了，我说等会儿吧。</p>
+<p>健新这两天在盘一件事，林氏放我家的全链路。销售端选空间、选套系、配软装，标准是什么，门店装修、摆场、调场，标准从哪来，拍摄又是什么标准。我看了他拉出来的链路，回他说，这里能看出巨多问题。软装的风格是AI自己出的虚拟风格，从端到端本来就该是一体的。不盘清楚，机会点在哪、标准在哪，都是空的。</p>
+<p>后来我给泰源打了个电话，七分钟。接通我先问，才开完吗。白天我还发了个demo出去，AI视觉版块的汇报逻辑，一页HTML。跟大家说不用填表了，各位直接截图标记修改意见给我就好。</p>
+<p>中间还聊了会儿晋升的事。有人问申请P4、P5是不是对标P6、P7的标准，我说标准只是入门，往T3-2靠一靠，申请T3-1。反正你领会一下意思就行。后来又说到自我总结，我说我不喜欢公司要求的自我总结，但我喜欢自己写总结。每次准备一大堆材料，真的绞尽脑汁。</p>
+<p>玲零零今天反馈了一件事，AI专项一个项目做一年，比想象中的废人，怎么激励大家。我听完写了一段治理的框架，三个关口，需求、验证、投入。写的时候我在想，激励这件事，一半靠机制，一半靠有人真的替你想。米酒的推荐语，我写得比自己的总结还认真。</p>
+<p>停下来的时候我才想起白天说过自己是工具人。工具人不用替人写推荐语，也不用在评审会前替人把特批理由一条条摆平。我给米酒写的那段话，开头四个字，独立交付。他当得起，我就写了。</p>
+</section>
+<footer>每日复盘 · 2026-08-19 · Hermes 生成</footer>
+</div>
+<script>
+function switchTab(n){document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active')});document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active')});document.querySelector('.tab.'+n).classList.add('active');document.getElementById('panel-'+n).classList.add('active')}
+</script>
+</body>
+</html>
