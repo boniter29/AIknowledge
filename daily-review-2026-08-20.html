@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-20 · 周四</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117;
+    color: #e6edf3;
+    font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.85;
+    padding: 24px 16px 60px;
+  }
+  .wrap { max-width: 800px; margin: 0 auto; }
+  .header { text-align: center; margin-bottom: 24px; }
+  .header h1 { font-size: 22px; font-weight: 700; letter-spacing: 1px; }
+  .header .date { margin-top: 6px; font-size: 14px; color: #8b949e; }
+  .tabs {
+    display: flex; gap: 8px; justify-content: center;
+    margin-bottom: 24px; position: sticky; top: 8px; z-index: 10;
+  }
+  .tab {
+    flex: 1; max-width: 240px; padding: 10px 0; text-align: center;
+    border-radius: 12px; border: 1px solid #30363d; background: #161b22;
+    color: #8b949e; font-size: 15px; font-weight: 600; cursor: pointer;
+    transition: all .2s; backdrop-filter: blur(8px);
+  }
+  .tab.active { background: #161b22; color: #fff; border-color: currentColor; }
+  .tab.biz.active { color: #6ea8ff; border-color: #4f6ef7; box-shadow: 0 0 18px rgba(79,110,247,.25); }
+  .tab.diary.active { color: #f9a8d4; border-color: #f472b6; box-shadow: 0 0 18px rgba(244,114,182,.25); }
+  .panel { display: none; }
+  .panel.active { display: block; animation: fade .35s ease; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+  /* 商业版 */
+  .biz .hero {
+    background: linear-gradient(135deg, rgba(79,110,247,.18), rgba(79,110,247,.04));
+    border: 1px solid rgba(79,110,247,.35);
+    border-radius: 16px; padding: 22px 20px; margin-bottom: 18px;
+  }
+  .biz .hero p { font-size: 17px; font-weight: 700; color: #dbe4ff; }
+  .biz .card {
+    background: #161b22; border: 1px solid #30363d; border-left: 3px solid #4f6ef7;
+    border-radius: 12px; padding: 18px 20px; margin-bottom: 14px; font-size: 15.5px;
+  }
+  .biz .card.hot { border-left-color: #f472b6; }
+  .biz .card.signal { border-left-color: #e3b341; background: rgba(227,179,65,.06); }
+  .biz .card p + p { margin-top: 10px; }
+  .biz .card .tag {
+    display: inline-block; font-size: 12px; color: #6ea8ff; background: rgba(79,110,247,.12);
+    padding: 2px 10px; border-radius: 999px; margin-bottom: 10px; letter-spacing: .5px;
+  }
+  .biz .close {
+    background: linear-gradient(135deg, rgba(79,110,247,.12), transparent);
+    border: 1px solid rgba(79,110,247,.25); border-radius: 12px;
+    padding: 18px 20px; font-size: 15.5px; color: #c9d4ea;
+  }
+
+  /* 日记版 */
+  .diary .lead {
+    font-size: 18px; font-weight: 700; color: #fbcfe8;
+    border-left: 3px solid #f472b6; padding: 6px 0 6px 16px; margin-bottom: 22px;
+  }
+  .diary .para { font-size: 15.5px; margin-bottom: 18px; color: #e6edf3; }
+  .diary .para .hl {
+    color: #f9a8d4; font-weight: 600;
+  }
+  .diary .quote {
+    background: rgba(244,114,182,.07); border: 1px solid rgba(244,114,182,.28);
+    border-radius: 12px; padding: 14px 18px; margin: 16px 0;
+    font-size: 15px; color: #fbcfe8;
+  }
+  .diary .tail { color: #9aa4b2; font-size: 14.5px; }
+
+  .footer { margin-top: 36px; text-align: center; font-size: 12.5px; color: #484f58; }
+  @media (max-width: 480px) {
+    body { padding: 16px 12px 48px; }
+    .biz .card, .biz .hero, .biz .close { padding: 15px 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <h1>每日复盘 · 2026年8月20日 周四</h1>
+    <div class="date">把散的东西往一起收的一天</div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab biz active" onclick="switchTab('biz')">📊 商业版</div>
+    <div class="tab diary" onclick="switchTab('diary')">📝 日记版</div>
+  </div>
+
+  <!-- 商业版 -->
+  <div class="panel biz active" id="panel-biz">
+    <div class="hero">
+      <p>今天公司把「空间」从一个口号，推进到了一条需要跨部门协作的标准链路上。上午的「空间套系全链路标准化」和下午的「放我家3.0全链路协同规划」，聊的是同一件事的两半，上午理标准怎么定，下午确认工具怎么升级，两条线在慧姐和新哥那里汇合，落到IT这边，是要牵头一场跨部门对齐会。</p>
+    </div>
+
+    <div class="card">
+      <span class="tag">生产方式的矩阵化重构</span>
+      <p>这条转型的真正含义，是把生产方式从「单品」换成「风格×空间×户型」的矩阵。会上反复拿酷家乐作参照，他们今年从按单品模式生产，改成按空间系列定义，先定风格，复古风、现代系，再定空间，客厅、餐厅、卧室的客餐卧组合，再按户型分大小。坐标系一换，产品开发、视觉拍摄、门店摆场、销售话术全要跟着改，目标从「三场统一」一路推到「五场统一」。临时放我家从1.0、1.2的单点效果图工具，变成覆盖产品开发到销售转化的全链路项目。工具升级是这条链上最轻的一环，真正的工程量在链路本身。</p>
+    </div>
+
+    <div class="card">
+      <span class="tag">链路堵点，卡在标准上</span>
+      <p>这条线从昨天聊资料模板，到今天上午小郭把现状摊开，越聊越清楚。泰源定标准，产经按套系开品，小郭出方案，陈超拍摄，培哥摆场，环环相扣，但每个环节都在用自己的标准。小郭的评价是风格定义偏主观、货盘打标太慢，年底都可能做不完。摄影棚和软装还按自己的标准打标，没和泰源对齐。资料模板刚从单品改成套系维度，月底上会和慧姐确认。这套堵点的逻辑，跟上午劝退小马的「林氏AI主图引擎」是同一个，图片资产的问题靠工具解决不了，要定义的是沉淀规则、链路和标准。链路上缺的，是各方认账的标准，工具反而不缺。</p>
+    </div>
+
+    <div class="card hot">
+      <span class="tag">结项哲学的一刀</span>
+      <p>结项这件事，今天被一把推到了桌面上。报关项目里，业务方坚持装箱单是报关的数据来源，就该算项目范围。我的判断是，项目初期没划定、中途没变更，这就是没识别到的强依赖，识别到一个就往范围里塞一个，项目永远结不了。处理办法给了三条，属于没识别到的强依赖，要纳入就走项目范围变更，强行纳入而做不完就失败结项。我打了个比方，赌钱已经输了100万，就因为还有几个盘没出结果，就一直等，一直不结束吗。这个比方糙，但戳的是核心，结项评的是资源还值不值得继续投入，项目范围做没做完，是另一套账。YIYI还在追问，标准在项目范围内的还没解决，提出结项真的可以吗。这个张力会一直带到结项评审那天。</p>
+    </div>
+
+    <div class="card">
+      <span class="tag">AI大赛 = 资源分配的修罗场</span>
+      <p>70组报名、200多人，初筛下周一结束。今天的沟通记录能看到完整的筛选动作，劝退小马的「林氏AI主图引擎」，理由是与AI主题无关，图片资产管理靠的是业务规范；让杰星的「AI自动备份」合并或取消，一人不能当两个队长，团队不能低于3人；问鱼桐的「AI漫剧Agent」做到什么程度，没队员、工程又大，技术同学优先做AI主图视频生成；让Summerr的摄影排单系统改范围，卡点不在AI，优先做后链路的空间、商品、软装匹配和效果图生成；撮合PK和Cris的视频工作台合并。队伍从19队并到18队，原材料部3队同类还要再并。培训排期同步落地，六场，火山两场、IT两场、陈超一场、大江一场，8月26日AI Agent落地基础，9月9日Trae实战，9月16日也定了。70组这个数字本身就是信号，想做AI的人远多于能匹配的资源，初筛就是在做减法，把「想做什么」筛成「能做什么」。</p>
+    </div>
+
+    <div class="card signal">
+      <span class="tag">🔍 平台侧在找落地场景</span>
+      <p>火山引擎那边在主动挖掘dws和AI表格的高频交互场景，实时读写AI表格、把实时价格写进表格再读出来做其他应用，有人提到类似数字分身那样实时监听dws高频调用。这和小林生影那边「字节官方要求300万资金流水才开放纯生视频、生图用量，人物视频不开放」形成对照，平台方在找商业化落地场景，我们自己的调用量级离门槛还很远。dws的开放说明公司没设限，真正的限制是场景不够高频。另一头，真意想让小龙虾在群里把工单生成待办推给客满，卡在「待办」这一步，工单得走工单系统流转，待办需要创建人账号，这条需求最后绕回了开发。</p>
+    </div>
+
+    <div class="close">
+      <p>接下来两周，两条线会同时进入执行期。8月24日初筛公布是第一个节点，之后是8月26日、9月9日、9月16日三场培训落地。空间套系这边，月底模板上会确认，跨部门对齐会要尽快开。一边在重写业务标准，一边在重新分配组织资源，它们其实是同一场变革的两面，从单点能力走向体系化。下周回来，队伍和模板都会有答案。</p>
+    </div>
+  </div>
+
+  <!-- 日记版 -->
+  <div class="panel diary" id="panel-diary">
+    <div class="lead">今天一整天，我都在做同一件事，把散的东西往一起收。</div>
+
+    <div class="para">上午十一点的会，讲空间套系。慧姐在公司层面打「空间」这个概念打了很久，以前都是单点，要么做AI视觉，要么做临时放我家那种销售端工具，今天想的是把这条链路整体拉通。泰源定标准，产经按套系开品，小郭出方案，陈超拍摄，培哥摆场。听着是一条顺的链，实际上每个环节都在用自己的标准。摄影棚和软装各打各的标，货盘打标慢到小郭说年底都可能做不完。散会的时候我在想，链条上每一环都觉得自己干得挺好，可环与环之间那段没人认账的空隙，才是真正慢下来的地方。</div>
+
+    <div class="para">下午两点，放我家3.0的会。新哥在各种场合讲临时放我家，我们从1.0、1.2一路做过来，现在要变成覆盖产品开发、视觉拍摄、门店摆场、销售转化的全链路项目。会上拿酷家乐做参照，他们从按单品生产改成按空间系列，先定风格，复古风、现代系，再定空间，客厅、餐厅、卧室，再分户型大小。<span class="hl">三场统一，五场统一，词越说越大</span>，落到IT这边就是一句话，我们得牵头开一场跨部门对齐会，把谁干什么先定下来。</div>
+
+    <div class="para">会与会的间隙，我一直在钉钉上跟人聊AI大赛的事。70组报名，200多人，初筛下周一就结束。<span class="hl">报名实在太火热了，我说这话的时候自己都想笑。</span>下午基本是在做减法。小马的林氏AI主图引擎，跟AI主题没什么关系，图片资产这事靠工具解决不了，要定义的是沉淀规则、链路和标准，我劝他把项目取消，后面用现有AI视觉项目串联需求。杰星的AI自动备份，一个人不能当两个队长，团队不能低于3人，要么合并要么取消。鱼桐的AI漫剧Agent，没有队员，工程又大，我问她做到什么程度了。Summerr的摄影排单系统，卡点不在AI，在进销存管理，我们商量优先做空间、商品、软装的匹配和效果图生成。还有PK和Cris，两个项目看着重复，我问要不要合成一组。合并的事一轮轮谈下来，19队变18队，橙色的那队画家当队长，绿色的那队daisy当队长，邱辉加进去。晚上七点一刻，日程上还排着一件事，AI大赛初筛匹配技术队员。</div>
+
+    <div class="para">中间还插了一个结项的讨论。报关项目那边，业务方说装箱单是报关的数据来源，应该算项目范围。我的看法是，项目初期没划定，中途也没变更，这就是他们没识别到的强依赖，识别到一个就往范围里塞一个，这项目永远结不了。</div>
+
+    <div class="quote">我打了个比方，赌钱输了100万，就因为还有几个盘没出结果，就一直等，一直不结束吗。</div>
+
+    <div class="para">打完这行字我自己停了一下。这个比方糙是糙，但它把我想说的说透了。结项评的是资源还值不值得继续投，项目做没做完，是另一张卷子。YIYI还在问，标准在项目范围内的还没解决，提出结项真的可以吗。可以，当然可以，失败结项也是一种结项。大家努力了这么久，都希望顺利结，但顺利不是等出来的。</div>
+
+    <div class="para">培训的事也定了大概。六场，火山两场，IT两场，陈超一场，大江一场。8月26日讲AI Agent落地基础，9月9日Trae实战，9月16日那场，<span class="hl">我说良辰吉日。这四个字是我今天说得最轻松的一句话。</span></div>
+
+    <div class="para">晚上跟健新通了23分钟语音。白天聊过的事太多，电话里具体又说了哪些，我现在说不全，只记得「字节官方要求300万资金流水才开放」这句话一直在脑子里转，人物视频暂时不开放，技术同学优先在做这个方向。挂了电话，说好最晚八点走，今晚怕是要迟一点了。</div>
+
+    <div class="para tail">明天还有两队没给合并的答案，月底还有一版模板要上会。今天收进来的这些散东西，明天又得一件件放出去。</div>
+  </div>
+
+  <div class="footer">Hermes 每日复盘 · 2026-08-20</div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + name).classList.add('active');
+  document.querySelector('.tab.' + name).classList.add('active');
+}
+</script>
+</body>
+</html>
