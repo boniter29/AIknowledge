@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-21</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0f1117; color: #e5e7eb;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.85; max-width: 720px; margin: 0 auto; padding: 24px 18px 60px;
+  }
+  header { text-align: center; padding: 28px 0 20px; }
+  header h1 { font-size: 26px; font-weight: 700; letter-spacing: 1px; }
+  header .date { color: #9ca3af; font-size: 14px; margin-top: 8px; }
+  header .meta { color: #6b7280; font-size: 12px; margin-top: 6px; }
+  .tabs {
+    display: flex; gap: 10px; justify-content: center;
+    position: sticky; top: 0; background: #0f1117ee; padding: 10px 0; z-index: 10;
+    backdrop-filter: blur(6px); border-radius: 12px;
+  }
+  .tab {
+    flex: 1; max-width: 220px; padding: 10px 0; border-radius: 10px;
+    border: 1px solid #2a2f3a; background: #171a22; color: #9ca3af;
+    font-size: 15px; cursor: pointer; transition: all .2s;
+  }
+  .tab.active-biz { background: linear-gradient(135deg, #4f6ef7, #7c5cf0); color: #fff; border-color: transparent; }
+  .tab.active-diary { background: linear-gradient(135deg, #f472b6, #fb7185); color: #fff; border-color: transparent; }
+  .panel { display: none; margin-top: 20px; }
+  .panel.show { display: block; }
+  .panel-biz .kicker { color: #8ea2ff; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; }
+  .panel-diary .kicker { color: #f9a8d4; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; }
+  .dingdiao {
+    background: linear-gradient(135deg, #1a2340, #1c1733); border: 1px solid #4f6ef744;
+    border-left: 4px solid #4f6ef7; border-radius: 12px; padding: 18px 18px;
+    font-size: 16px; color: #dbe4ff; margin-bottom: 26px;
+  }
+  .dingdiao strong { color: #fff; }
+  .section { margin-bottom: 26px; }
+  .section h3 { font-size: 17px; margin-bottom: 10px; color: #f3f4f6; }
+  .section h3 .num { color: #4f6ef7; margin-right: 6px; }
+  .section p { font-size: 15px; color: #c9cdd6; margin-bottom: 10px; text-align: justify; }
+  .bottom-logic {
+    border: 1px dashed #4f6ef766; border-radius: 12px; padding: 16px 18px;
+    background: #12162b; margin: 26px 0;
+  }
+  .bottom-logic p { color: #b9c2e8; font-size: 15px; text-align: justify; }
+  .diary-body p { font-size: 15.5px; color: #e2dce4; margin-bottom: 16px; text-align: justify; }
+  .diary-highlight {
+    border-left: 3px solid #f472b6; background: #241a2b;
+    padding: 12px 16px; border-radius: 8px; margin: 18px 0;
+    color: #fbcfe8; font-size: 15px;
+  }
+  footer { text-align: center; color: #4b5563; font-size: 12px; margin-top: 40px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>每日复盘</h1>
+  <div class="date">2026 年 8 月 21 日 · 周五</div>
+  <div class="meta">5 场会议 · 175 条消息 · 18 条 @我</div>
+</header>
+
+<div class="tabs">
+  <button class="tab active-biz" id="tab-biz" onclick="switchTab('biz')">📊 商业复盘版</button>
+  <button class="tab" id="tab-diary" onclick="switchTab('diary')">📝 日记版</button>
+</div>
+
+<section class="panel panel-biz show" id="panel-biz">
+  <div class="dingdiao"><strong>定调：今天所有的事，其实都在回答同一个问题。AI 的产能已经不是瓶颈，算得清、立得住、可复制才是。</strong>大赛初筛在给近百个项目立标准，费用研讨在给模型成本算账，月会 PPT Skill 在给 AI 产物定格式。三件事共享同一个底层矛盾，组织的度量能力还没跟上 AI 的产出速度。</div>
+
+  <div class="section">
+    <h3><span class="num">洞察一</span>初筛的本质不是筛选，是立标准</h3>
+    <p>报名近一百支队伍，下周一公布初筛结果。今天最重的动作不是刷掉谁，而是把尺度说清楚。我给一个范围写得过大的项目负责人发了一大段话，建议取消或缩小范围，核心一句是「先提出需求标准，能达成多少再谈」。这句话其实也是对自己说的，降低标准换来的效果不理想，问题多半出在标准定得松，不能怪对方不配合。同一天，天天队长那支队伍取消，需求由小林生影承接；抠图准确率没有 80%，轩然和修羽反馈大部分都有问题。每个判断背后是同一把尺子，可衡量、可交付。</p>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">洞察二</span>AI 成本已经大到必须算得清，而账本还是断的</h3>
+    <p>模型平台费用分摊方案研讨了 37 分钟，小林身影的分账问题又单独开了一档会。真正的障碍不是分账规则，是底层数据断联。快照数据只到应用维度，接了 SSO 也没有把人员信息带过来，「哪个部门、哪个人用了多少」根本查不到。结论是自建平台日志，再做一张快照聚合表，按日按月落库。</p>
+    <p>同一时间，德彬在群里拆了费用偏高的原因，一是单价确实偏高，二是 image2 生图、可灵 3.0 和 seedance 2.0 生视频、gpt5.5 写脚本的组合在一起用，后面切 gpt5.6luna 会便宜一些。我还提过一个数字，AIGC 视频图片生成业务的 token 费用占比，行业里大概占公司整体的一半以上。两件事拼起来是一个信号，AI 投入大到必须算清账，但算账的地基还在手工阶段。</p>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">洞察三</span>AI 产物的标准化，是今天最真实的墙</h3>
+    <p>月会 PPT 的 Skill 又出了一版，做了好几版都不太理想。格式要求很规范、约束很多，效果就刻板；约束放得松，又保证不了统一。这个两难几乎复刻了今天所有议题的形状。而大赛里那个整家定制 AI 内容创作 Agent 的项目，恰恰在给同一个问题找答案，把依赖个人经验和多轮沟通的 AI 漫剧创作方法，整理成标准化工作流，用新的真实项目做最小 Demo 验证。一边是 PPT 被格式卡住，一边是漫剧靠流程松绑，AI 产物的标准该长什么样，今天给出了两种试探。</p>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">洞察四</span>套件开发的协作方式，已经换了一代</h3>
+    <p>开发进度沟通里，协作流变成了「他上传分支，我拉下来本地跑」，同事直接说，界面不用看了，让 AI 拉代码下来帮你启动、帮你看。人写关键逻辑，AI 跑界面看进度，这个协作形态一个月前还在争论可行性，今天已经是日常。</p>
+  </div>
+
+  <div class="bottom-logic">
+    <p><strong>把今天串起来的底层逻辑：</strong>AI 的产能上来了，组织的度量没跟上。大赛在立标准的度量，费用在立成本的度量，日志建设在立使用的度量。谁先把度量体系建起来，谁就能从「AI 很热闹」走到「AI 很划算」。下周一初筛结果公布就是一次压力测试，尺子立得够硬，后面 PK 和复赛的噪音就小；标准如果是凑出来的，问题会在十月初赛前全部反弹。这一周把尺子立好，比多收十支队伍重要。</p>
+  </div>
+</section>
+
+<section class="panel panel-diary" id="panel-diary">
+  <div class="diary-body">
+    <p>今天的日记，从一个乌龙开始。喝了感冒药，困得神志不清，点东西发东西开始乱点乱发，不小心给健新打了个电话，把一个本来要给卡罗的东西发进了群。健新回过来，我说不好意思打错了。</p>
+    <p>我把这个记下来，是因为它比任何工作总结都诚实。这一天，身体和脑子各过各的。</p>
+    <div class="diary-highlight">早上出门前，我妈把药泡好了。我本来没打算吃药，感冒而已，扛一扛就过去。她也没说什么，就是把杯子放在桌上。我想，那就喝吧。</div>
+    <p>结果一杯药下去，上午就交代了。白塞病今天又冒了四个口腔溃疡，加上之前那个，嘴里一共五个，喝水都皱眉。有人给我出主意，说可以买个叫金喉健的喷雾，止痛用。我记下了，还没买。</p>
+    <p>但手上的事没因为身体不舒服就停。AI 大赛初筛下周一公布结果，今天最忙。近一百支队伍，一个一个沟通。有个项目范围写得太大，又没有明确标准，我给他发了一大段话，建议缩小范围或者取消。发完我自己也在想，这段话也是说给自己听的。标准先立，能达成多少再谈。效果不理想，多半是标准定得松，不能怪对方不配合。</p>
+    <p>中午那场评审会开着开着，话题拐到了输入法。有人说搜狗老弹广告，有人说微信语音输入没广告、粤语也准，还有人说回头搞个豆包输入法试试。审了一上午项目，脑子发麻，这种跑题大概是唯一的休息方式。</p>
+    <p>下午继续。费用分摊的会开了三十多分钟，聊到最后发现，小林摄影的底层使用日志根本没记到人，接了 SSO 也没把人带过来，哪个部门谁用了多少，查不到。账是断的。我忽然觉得这很像今天的状态，活干了不少，账目是糊的。</p>
+    <p>月会 PPT 的 Skill 又改了一版，版式还是不太满意。做了好几版了。格式管得严就刻板，管得松就不统一。这道题我今天解不开，但它是我现在最常撞上的墙。</p>
+    <p>快下班时培训排期定了终版，六场，从 8 月 26 日的 Trae 基础培训排到 9 月 23 日的 Agent 搭建实战。我回了句可以，待办、产物、概览这些信息，再考虑分析一下。</p>
+    <p>下午还聊到晋升的事。有人准备晋升，我说过程比结果重要。职级这东西，聊起来都是故事，T2 是中级，T3 是高级，T4 我们中心好像就没见过，Risen、英姐和我都是 T3。洁敏、秀洁都是十几年工作经验的老将了。这些话说完，大家都哈哈笑了。</p>
+    <p>下午跟新哥说，我妈今天来这边，我提前一小时走。一天下来，还是忙到了八点半。哈哈哈哈哈加班了。有人问下午是不是不困了，我说是啊，今天轻敌了。</p>
+    <p>回家的路上我想，这一天没什么惊天动地的事，但每一件小事都在往前走。大赛在筛，标准在立，培训的排期也定了。连那个乱点乱发的乌龙，都成了今天最真实的注脚，人累了会出错，但活儿不会等人。</p>
+    <p>哦对了，德彬那边有个字节的礼品，又是个酷酷的马甲，又是个挎包，我狠狠心动了，问他能不能多给一点。周末预报有雷雨，双周报要赶在周日晚 18 点前交，我打算窝在家里写完它。嘴里第五个溃疡还在长，明天大概会好一点。我妈来了，家里会有人做饭。</p>
+  </div>
+</section>
+
+<footer>Hermes 每日复盘 · 自动生成</footer>
+
+<script>
+function switchTab(name) {
+  document.getElementById('panel-biz').classList.toggle('show', name === 'biz');
+  document.getElementById('panel-diary').classList.toggle('show', name === 'diary');
+  var tb = document.getElementById('tab-biz');
+  var td = document.getElementById('tab-diary');
+  tb.className = 'tab' + (name === 'biz' ? ' active-biz' : '');
+  td.className = 'tab' + (name === 'diary' ? ' active-diary' : '');
+}
+</script>
+</body>
+</html>
