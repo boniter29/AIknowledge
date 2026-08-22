@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-22</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#0f1117; color:#e5e7eb; font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; line-height:1.75; padding:24px 16px 60px; }
+.wrap { max-width:800px; margin:0 auto; }
+header { text-align:center; margin-bottom:20px; }
+h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
+.sub { color:#8b8fa3; font-size:13px; margin-top:6px; }
+.tabs { display:flex; gap:10px; justify-content:center; margin:18px 0 24px; }
+.tab { padding:9px 22px; border-radius:999px; font-size:14px; cursor:pointer; border:1px solid #2a2e3d; background:#161a24; color:#9aa0b5; user-select:none; transition:.2s; }
+.tab.on-biz { background:#4f6ef7; border-color:#4f6ef7; color:#fff; }
+.tab.on-diary { background:#f472b6; border-color:#f472b6; color:#fff; }
+.panel { display:none; }
+.panel.show { display:block; }
+.card { background:#161a24; border:1px solid #232838; border-radius:14px; padding:22px 20px; margin-bottom:14px; }
+#biz .card { border-left:3px solid #4f6ef7; }
+#diary .card { border-left:3px solid #f472b6; }
+h2 { font-size:15px; color:#8b8fa3; margin-bottom:14px; font-weight:600; }
+#biz h3 { color:#8fa3ff; font-size:16px; margin:18px 0 10px; }
+#diary h3 { color:#f9a8d4; font-size:16px; margin:18px 0 10px; }
+h3:first-child { margin-top:0; }
+p { margin-bottom:12px; font-size:15px; }
+p:last-child { margin-bottom:0; }
+b { color:#fff; }
+#biz .card b { color:#a5b4fc; }
+#diary .card b { color:#fbcfe8; }
+footer { text-align:center; color:#565b70; font-size:12px; margin-top:26px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>每日复盘 2026-08-22</h1>
+<div class="sub">周六 · 2026年8月22日 · 商业版 / 日记版</div>
+</header>
+<div class="tabs">
+<div class="tab on-biz" id="tab-biz" onclick="switchTab('biz')">📊 商业版</div>
+<div class="tab" id="tab-diary" onclick="switchTab('diary')">📝 日记版</div>
+</div>
+<div class="panel show" id="biz">
+<div class="card">
+<h2>商业复盘版</h2>
+<p><b>周六晚上八点，没有会议、没有听记、也没有一条 @，今天唯一的产出是一个人对着 6 页 PPT 改到深夜。这张 PPT 把本周悬着的问题收拢成了一个技术判断，AI 的产出能不能复制，先看底层 harness 给不给自由度。</b></p>
+<h3>今天有什么</h3>
+<p>今天的数据薄得像一张纸。0 场听记，0 条 @，聊天记录里只有我在 20:18 和 20:24 发出的两张手机截图。截的是同一份 PPT，标题栏写着 AgentHarness.ppt，正在保存，第 3 页，一共 6 页。</p>
+<p>这一页的核心论点很直接。此 Skill，彼 Skill。如果底层 Harness 没做对，skill 就是垃圾。展开的论据是，Skill 其实就是精选的 Prompt，真实表现极大依赖底层 Agent Harness 的架构。同样的 skill 给到 Langchain、Langgraph、HiAgent，做出来的都是垃圾，因为这些平台没有给 agent 足够的自由度和工作的空间、必要工具，比如 bash、文件系统能够 write file、edit file，或者没有在 coding 能力上足够的强化。对 HiAgent 的批评更具体，它看似把 bash、文件系统都做了，但 AI 编程的基础能力没跟上，harness 的自由度没有打开，效果仍然很烂。</p>
+<h3>我的判断</h3>
+<p>判断一，这页 PPT 的本质是给本周的公司动作补地基。周一定了 AI 大赛初筛机制，68 支队伍，周一公布结果。周四定了空间套系标准化链路。周五讨论了月会 PPT Skill 怎么定格式、模型费用怎么分摊。这些事的共同前提是，AI 的产物要立得住、可复制。而今天这张 PPT 回答了那个最底层的问题，同样的 skill 换个平台就废，症结不在 prompt 写得够不够好，在 harness 有没有把自由度给足。八月的这一周，从流程到架构，线索在这一页收口。</p>
+<p>判断二，「skill 就是精选的 prompt」这个定义本身值钱。它把 skill 的价值从内容挪到了运行环境。对团队选型的含义是，评估任何一个 agent 平台，不要听它宣传有没有 harness，要看三件事，给不给 bash，给不给文件系统，coding 强化到什么程度。HiAgent 号称做了 harness 效果却很烂，就是这个检验法的现成案例。这一页改完，顺手就产出了一张平台评估清单。</p>
+<p>判断三，周六晚上还在改，说明这个判断首先是自己要先想清楚。六页纸，时间花在论证而不是排版上，这是典型的先把逻辑打透的节奏。</p>
+<h3>一个结论</h3>
+<p>周一 AI 大赛初筛结果公布。如果大赛项目要在公司真实落地，今天这个判断就是隐含的验收标准，工具链选型决定 AI 产物的上限。接下来三周真正要做的，可能不是再攒多少 skill，而是把所有要跑 AI 的地方，都确认站在一个自由度打开的 harness 上。这句话能不能被验证，下周就有第一批样本。</p>
+</div>
+</div>
+<div class="panel" id="diary">
+<div class="card">
+<h2>日记版</h2>
+<p>周六晚上八点，我还在改 PPT。手机里存着两张截图，20:18 一张，20:24 一张，前后隔了六分钟。截的是同一个页面，标题栏写着 AgentHarness.ppt，右上角还有个正在保存的提示。</p>
+<p>界面是 PowerPoint 的老样子，上面挂着一排插件，不坑盒子、EdrawMax、人工智能。我盯着第 3 页，一共 6 页。这一页最上面写了一行字，此 Skill，彼 Skill。如果底层 Harness 没做对，skill 就是垃圾。</p>
+<p>这句话是我今晚写的。写完读了一遍，觉得有点狠。又读了一遍，想起 Langchain 和 Langgraph 上那些跑不起来的 skill，想起 HiAgent 号称做了 harness 却连自由度都没真正放开，又觉得没说错。</p>
+<p>白天其实很安静。没有会，没有听记，微信里一整天只有我主动发出去的两张截图。周六的晚上，我对着一个 6 页的 PPT 一页一页改，改到第 3 页停下来，截个图发出去，六分钟后又截了一张。</p>
+<p>昨天白天还在跟同事定月会 PPT 的格式规范，晚上就自己坐下来一格一格地调这份 PPT。白天定的是别人的产物长什么样，晚上改的是自己的判断站不站得住。两种活，一种费口舌，一种费脑子。</p>
+<p>说不清为什么要在周末晚上做这件事。可能是周一要公布大赛初筛，68 支队伍，我隐约觉得这页 PPT 和那 68 支队伍是同一件事。他们要在公司里把 AI 做成真的东西，而我在这里写，skill 好不好用，取决于底层给不给自由。</p>
+<p>晚上十点，窗外没什么声音。PPT 还停在保存中。我保存完，把这一页的字又读了一遍。此 Skill，彼 Skill。如果底层 Harness 没做对，skill 就是垃圾。</p>
+<p>明天还有一天周末。这句话能不能立住，下周一见分晓。</p>
+</div>
+</div>
+<footer>Hermes Agent · 每日复盘自动生成</footer>
+</div>
+<script>
+function switchTab(name){
+  document.getElementById('biz').classList.toggle('show', name==='biz');
+  document.getElementById('diary').classList.toggle('show', name==='diary');
+  var tb=document.getElementById('tab-biz'), td=document.getElementById('tab-diary');
+  tb.className='tab'+(name==='biz'?' on-biz':'');
+  td.className='tab'+(name==='diary'?' on-diary':'');
+}
+</script>
+</body>
+</html>
