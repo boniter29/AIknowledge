@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-23 · 周日</title>
+<style>
+  :root { --bg:#0d1017; --card:#161a23; --text:#e8eaf0; --muted:#8b91a3; --blue:#4f6ef7; --pink:#f472b6; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif; line-height:1.8; padding:28px 16px 60px; }
+  .wrap { max-width:720px; margin:0 auto; }
+  header { text-align:center; margin-bottom:24px; }
+  header h1 { font-size:24px; font-weight:700; letter-spacing:1px; }
+  header .date { color:var(--muted); font-size:13px; margin-top:8px; }
+  .tabs { display:flex; gap:10px; justify-content:center; margin-bottom:22px; }
+  .tab { padding:9px 26px; border-radius:999px; font-size:14px; cursor:pointer; background:#1d2230; color:var(--muted); transition:all .2s ease; user-select:none; }
+  .tab.biz.active { background:var(--blue); color:#fff; box-shadow:0 4px 18px rgba(79,110,247,.35); }
+  .tab.diary.active { background:var(--pink); color:#fff; box-shadow:0 4px 18px rgba(244,114,182,.35); }
+  .panel { display:none; }
+  .panel.active { display:block; animation:fade .35s ease; }
+  @keyframes fade { from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:none} }
+  .card { background:var(--card); border-radius:16px; padding:26px 22px; }
+  .card p { margin-bottom:16px; font-size:15px; color:#dfe3ec; }
+  .card p:last-child { margin-bottom:0; }
+  .card p.lead { border-left:3px solid var(--blue); padding-left:14px; }
+  .panel.diary .card p.lead { border-left-color:var(--pink); }
+  .card p strong { font-weight:700; color:#fff; }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:30px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>每日复盘</h1>
+    <div class="date">2026-08-23 · 周日</div>
+  </header>
+  <div class="tabs">
+    <div class="tab biz active" onclick="switchTab('biz')">📊 商业版</div>
+    <div class="tab diary" onclick="switchTab('diary')">📝 日记版</div>
+  </div>
+  <div class="panel biz active"><div class="card">
+<p class="lead"><strong>这个周日，水滴把双周报交了。</strong> 交一份格式固定的报告，顺手把过去两周的 AI 工作彻底对了一遍账。六个专项，从模型降本到视觉全链路，从数字分身到火山杯竞赛，全摊在表格里。双周报这东西有个好处，它逼着人把「好像做了很多」改写成「到底做成了什么」。</p>
+<p class="">第一个值得说的信号，是「AI费用管理 / 模型降本」作为独立专项出现。费用能单独占一行，说明这套东西已经从尝鲜投入变成了常态化经营。一家公司开始认真核算AI的每一分钱，等于默认AI是要长期养着的基础设施，不再是试试看的玩具。更有意思的是它和「火山杯竞赛」出现在同一份报告里，一个在踩刹车管住成本，一个在踩油门押注能力。进攻和防守同时进行，恰恰是AI投入进入理性阶段的标志，从「把AI用起来」走向「把AI用划算」。</p>
+<p class="">第二个信号藏在专项清单的结构里。AI视觉全链路对着林氏放我家3.0，是产品侧；数字分身和Agent平台，是能力侧；火山杯竞赛，是人才和生态侧；小龙虾对应业务侧，BI对应数据侧。六个专项横跨成本、产品、平台、竞赛、业务、数据六个维度，拼起来就是一张AI能力的全景底图。其中数字分身和Agent平台并置值得单独看，从替人做事的数字人，到替人跑流程的Agent，能力线已经从单点工具走向平台化。双周报最有价值的地方在这里，它把散落在各处的动作压成一张能看清全局的图，哪些格子是实的、哪些还是空的，一眼可见。</p>
+<p class="">第三个信号是提交节奏。截止时间18:00，名单上已提交的是文鑫、Cris、米酒、水滴，还有两个人挂着没交。这个细节能读出东西。主动早交的人，通常对自己两周的产出有把握；压线不交的，要么项目还在泥里，要么把汇报当成负担。双周报机制真正的管理价值，藏在那张表定期制造的「对账时刻」里，它让每个人被迫回答同一个问题，这两周我到底做成了什么。这个问题问得越勤，团队对「产出」这个词的理解就越接近同一个意思。</p>
+<p class="">收个尾。接下来两周的看点，是降本专项能不能从算得清账走到省得下钱，Agent平台和数字分身能不能从报告里的专项变成业务里真正跑起来的东西，以及火山杯竞赛那张半空的格子会不会被填满。双周报已经把棋摆出来了，下一份见分晓。</p>
+  </div></div>
+  <div class="panel diary"><div class="card">
+<p class="lead">周日，把双周报交了。</p>
+<p class="">群里的提醒是临近截止来的。今晚18:00截止，已提交的四个名字，还有两个空位。我属于已经交掉的那一栏。看到自己名字在列的时候，松了一下，又好像没完全松。周日过到一半，被这份报告拽回工作里，那种感觉说不上好，也说不上坏，就是周末被划开一道口子。</p>
+<p class="">双周报这个东西，两周一次，逼着人定时回头。平时总觉得日子是一天一天过的，写报告的时候才意识到，日子其实是一段一段过的。这两段里有些事当时觉得很大，回头看只够占表格一行；有些事当时没在意，反而一路跟到了现在。</p>
+<p class="">同一份报告，我在对话框里贴了七八遍，每贴一遍都觉得还能再改。六个专项，一个一个过。AI视觉全链路对着林氏放我家3.0，这块最实，链路和场景都在里面，写的时候心里踏实。数字分身和Agent平台，能写的很多，能拍板的很少。火山杯竞赛，写的时候最没底，大赛的分量摆在那儿，能落笔的却不多。林氏小龙虾，名字本身就让人想笑，可它是真在跑的业务。AI费用管理和模型降本，心里最有数的一块，写得最顺。BI占的格子最少，我心里清楚它该占更多，只是还没想好怎么把它讲成一件有名字的事。</p>
+<p class="">表格的好处是诚实。两周里那些忙忙乱乱的日子，压缩进一行行之后，哪块有肉、哪块是壳，一眼就看得出来。对着表格改了很久。格式没大动，删掉的是几处自己看着心虚的话。表格里放不下的东西也很多，那些犹豫过的选择，那些没写进去的返工。它们进不了双周报，但我知道它们在。</p>
+<p class="">提醒还在群里跳。文鑫交了，Cris交了，米酒也交了。还有两个名字挂在「尚未提交」那一边。周日晚上，谁都有自己的一摊事。只是看着那排名字，忽然觉得双周报像一面墙，每个人把自己两周的活砌上去。墙结实不结实，站远一点就看清楚了。这话也有点像是在说自己。交完以后回头看我那份，有两块砖是我踮着脚才放上去的。</p>
+<p class="">18:00过了。名单上已提交的名字里，有我一个。剩下两个还亮着。下一份双周报，从现在开始就在攒了。</p>
+  </div></div>
+  <footer>由 Hermes 每日复盘自动生成 · 2026-08-23</footer>
+</div>
+<script>
+function switchTab(name){
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});
+  document.querySelector('.panel.'+name).classList.add('active');
+  document.querySelector('.tab.'+name).classList.add('active');
+}
+</script>
+</body>
+</html>
