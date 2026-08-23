@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每周复盘 2026-08-17 ~ 2026-08-23</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:#0d1117; color:#e6edf3; font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    line-height:1.8; -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:720px; margin:0 auto; padding:24px 20px 60px; }
+  header { padding:8px 0 20px; border-bottom:1px solid #21262d; margin-bottom:20px; }
+  h1 { font-size:22px; font-weight:700; line-height:1.4; }
+  .sub { color:#8b949e; font-size:13px; margin-top:6px; }
+  .tabs { display:flex; gap:8px; margin:20px 0 8px; }
+  .tab {
+    flex:1; text-align:center; padding:10px 8px; border-radius:10px; cursor:pointer;
+    background:#161b22; color:#8b949e; font-size:14px; font-weight:600;
+    border:1px solid #21262d; transition:.2s; user-select:none;
+  }
+  .tab.active { color:#0d1117; }
+  .tab.t-blue.active { background:#58a6ff; border-color:#58a6ff; }
+  .tab.t-orange.active { background:#f78166; border-color:#f78166; }
+  .tab.t-purple.active { background:#d2a8ff; border-color:#d2a8ff; }
+  .panel { display:none; padding:20px; background:#161b22; border:1px solid #21262d; border-radius:12px; }
+  .panel.active { display:block; }
+  .panel p { margin-bottom:16px; font-size:15px; }
+  .panel p:last-child { margin-bottom:0; }
+  .panel h {
+    display:block; font-size:16px; font-weight:700; margin:22px 0 10px; line-height:1.6;
+  }
+  .panel h:first-child { margin-top:0; }
+  .panel strong { color:#fff; }
+  .panel-blue h { color:#58a6ff; }
+  .panel-orange h { color:#f78166; }
+  .panel-purple h { color:#d2a8ff; }
+  ol { list-style:none; }
+  li { display:flex; gap:12px; margin-bottom:18px; font-size:15px; align-items:flex-start; }
+  li:last-child { margin-bottom:0; }
+  .num {
+    flex:0 0 26px; height:26px; border-radius:50%; background:#d2a8ff22; color:#d2a8ff;
+    display:flex; align-items:center; justify-content:center; font-weight:700; font-size:13px;
+  }
+  .txt { flex:1; }
+  footer { color:#8b949e; font-size:12px; text-align:center; margin-top:28px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>每周复盘</h1>
+    <div class="sub">2026-08-17（周一） ~ 2026-08-23（周日） · 周度版 Pro</div>
+  </header>
+
+  <div class="tabs">
+    <div class="tab t-blue active" data-tab="business">商业版</div>
+    <div class="tab t-orange" data-tab="diary">日记版</div>
+    <div class="tab t-purple" data-tab="silence">沉默板</div>
+  </div>
+
+  <div class="panel panel-blue active" id="panel-business">
+<h class="h"><strong>这一周，AI 在公司里从一件「抢着用」的免费能力，变成了一件「必须算得清、立得住、可复制」的资产。周一 DeepSeek 涨价三倍把成本摆上台面，周五定调「产能已不是瓶颈」，周日双周报把「费用管理」立成独立专项——七天走完一条从「用起来」到「用划算」的路。</strong></h>
+<h class="h"><strong>线索一｜度量能力补课：从「外部涨价逼算账」到「内部主动立标准」</strong></h>
+<p class="p">周一 DeepSeek V4 涨价约三倍，团队切回预览版，同一周供应商降本会盘出火山引擎消耗最高、要财务去谈折扣；审计一句话把 AI 规范从「年初教大家怎么用」推到「年中教大家什么不能给」。周五这口气收成一句话：「AI 产能已经不是瓶颈，算得清、立得住、可复制才是」——费用分摊会开了 37 分钟，发现「账是断的」：快照数据只到应用维度，接了 SSO 也没把人带过来，谁用了多少查不到。周六那张 6 页 PPT 把本周悬着的问题收口成一个技术判断：「此 Skill 彼 Skill，底层 harness 没做对，skill 就是垃圾」——可复制的根子在自由度。周日双周报把「AI 费用管理 / 模型降本」立成独立专项。演化线很清晰：外部涨价逼着算账 → 内部主动建账本、立规范 → 固化成一项常态化经营。</p>
+<h class="h"><strong>线索二｜一把尺子：大赛初筛从「筛人」变成「立标准」</strong></h>
+<p class="p">周一规则会上有人戳破「大家还是不相信」，解法是 IT 配人进场、把项目做成能演示的东西。周二 68 队报名，40 多队要么没产品要么没开发，「热情是真的，家底是虚的」，初筛定成「评估前置」：AI 先评分，产品线仍先去对口业务聊需求。周四初筛成了「资源分配的修罗场」——70 组、200 多人，19 队并到 18 队，劝退、合并、撮合，六场培训排期同步落地。周五点破本质：「初筛不是筛选，是立标准」，一句「先提出需求标准，能达成多少再谈」。这把「可衡量、可交付」的尺子，下周一公布结果时就是第一次压力测试。</p>
+<h class="h"><strong>线索三｜从单点工具到平台化：散的收成线</strong></h>
+<p class="p">数字分身周一还是「三个源头撞出同一个答案」的重复建设，周三就按「业务熟悉度」定下四条链路归属（IT 必达 / 导购必达 / 邻家小姐姐 / Agent 生产平台），把「谁离业务近谁接」当成分工原则。空间套系从「单品」换成「风格 × 空间 × 户型」矩阵，放我家从单点效果图工具走向覆盖开发到转化的全链路。周日双周报里，数字分身与 Agent 平台并置——从替人做事的数字人，到替人跑流程的 Agent，能力线正式从单点工具走向平台化。</p>
+  </div>
+  <div class="panel panel-orange" id="panel-diary">
+<p class="p">这一周，他在做同一件事：把好看的东西翻过来看底子，把散的东西往一起收。</p>
+<p class="p">周一他开了八场会，四个半小时。最长的一场聊数字分身，八十二分钟。散会时他算的是另一笔账：年初还在教大家怎么用 AI，现在已经在教什么不能给了，半年。晚上回来，群里还在说陈超那个会给不出目标，他那条「讲不清楚，我们还要不要投入资源」的语音，在心里过了好几遍——怕显得不配合，又怕投入变成糊涂账。</p>
+<p class="p">周二他发了一句话给 YIYI：「不要被迷惑啊，只是眼睛加了高光。」发完愣住：这不就是他一整天在干的事吗，把好看的东西翻过来，看它的底子。他追着新零售问「4000 篇到底解决什么问题」，问业务「四五个月前的模板还有没有流量」，晚上改材料时却发现自己写的东西「一样是虚的」。白天他翻别人的底子，晚上轮到翻自己的。</p>
+<p class="p">周三他说「我真的就是工具人来的」。可工具人不替人写推荐语，也不会在评审前把特批理由一条条摆平。他给米酒写推荐语，写得比自己的总结还认真，开头四个字「独立交付」——「他当得起，我就写了」。</p>
+<p class="p">周四他一整天在把散的东西往一起收，却也看清了链条上「环与环之间那段没人认账的空隙，才是真正慢下来的地方」。</p>
+<p class="p">周五身体先崩了：感冒药、白塞病又冒四个溃疡，喝水都皱眉。但活没停。费用分摊的会开完，他发现账是断的，忽然觉得这很像这一天的状态——活干了不少，账目是糊的。</p>
+<p class="p">周六他一个人对着 6 页 PPT 改到深夜，写下一句「此 Skill 彼 Skill，如果底层 harness 没做对，skill 就是垃圾」。写完读了一遍，觉得狠；又读一遍，觉得没说错。</p>
+<p class="p">周日交双周报。看到自己名字在已提交那一栏，「松了一下，又好像没完全松」。他盯着 BI 那格——写得最少，心里清楚它该占更多，只是还没想好怎么把它讲成一件有名字的事。交完回头看，有两块砖是踮着脚才放上去的。</p>
+  </div>
+  <div class="panel panel-purple" id="panel-silence">
+<ol><li><span class="num">1</span><span class="txt">价值链串起来 / 重复建设：周一有人点破「过往大家解决的都是单点问题，价值链没有被串起来」，数字分身三个源头撞车就是现成的例子。本周靠「试点收敛」和「合并」临时化解，但避免重复建设的机制性解法还没出现。</span></li>
+<li><span class="num">2</span><span class="txt">陈超的目标：周一说「要在经营分析会上拎出来」，此后一周再无音讯——IT 要不要投入资源，仍然悬着。</span></li>
+<li><span class="num">3</span><span class="txt">账本断的 / 费用分摊底层数据：周五发现「账是断的」（快照数据只到应用维度、SSO 没带人员信息），结论是自建平台日志 + 快照聚合表，但只是「要建」，还没落地。</span></li>
+<li><span class="num">4</span><span class="txt">月会 PPT Skill：做了好几版都不理想，「格式管严就刻板、管松就不统一」——这道题周五「解不开」，是反复撞上的墙。</span></li>
+<li><span class="num">5</span><span class="txt">BI 数据侧：双周报里格子最少，自己清楚「该占更多」，但还没想好怎么把它讲成「一件有名字的事」。</span></li>
+<li><span class="num">6</span><span class="txt">报关结项张力：结项与 YIYI 的追问（「标准在范围内还没解决，结项真的可以吗」）会一直带到评审日，胜负未分。</span></li></ol>
+  </div>
+
+  <footer>每周复盘 · 由 Hermes Agent 自动生成 · 基于本周每日复盘（商业版 + 日记版）</footer>
+</div>
+<script>
+  var tabs = document.querySelectorAll('.tab');
+  var panels = { business: document.getElementById('panel-business'),
+                  diary: document.getElementById('panel-diary'),
+                  silence: document.getElementById('panel-silence') };
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(x){ x.classList.remove('active'); });
+      Object.values(panels).forEach(function(p){ p.classList.remove('active'); });
+      t.classList.add('active');
+      panels[t.dataset.tab].classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
