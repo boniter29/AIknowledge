@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>团队周报洞察 · 8/17 ~ 8/23</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel2:#1c2330; --border:#30363d;
+    --txt:#e6edf3; --muted:#8b949e; --accent:#4f6ef7; --green:#3fb950;
+    --yellow:#d29922; --red:#f85149; --teal:#39c5cf; --purple:#a371f7;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--txt);font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif;line-height:1.6;padding:16px;max-width:900px;margin:0 auto}
+  header{padding:20px 0 12px;border-bottom:1px solid var(--border);margin-bottom:16px}
+  h1{font-size:22px;font-weight:700;letter-spacing:.5px}
+  .sub{color:var(--muted);font-size:13px;margin-top:6px}
+  .badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:12px;font-weight:600;margin-left:6px;vertical-align:middle}
+  section{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:14px}
+  h2{font-size:16px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  h2 .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block}
+  .meter-row{display:flex;align-items:center;gap:10px;margin:10px 0}
+  .meter-label{width:150px;font-size:13px;color:var(--muted);flex-shrink:0}
+  .meter{flex:1;height:10px;background:var(--panel2);border-radius:6px;overflow:hidden}
+  .meter-fill{height:100%;border-radius:6px}
+  .meter-val{width:52px;text-align:right;font-size:13px;font-weight:600}
+  .gauge-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:8px}
+  .gauge{background:var(--panel2);border-radius:10px;padding:12px;text-align:center}
+  .gauge .num{font-size:26px;font-weight:700}
+  .gauge .cap{font-size:12px;color:var(--muted);margin-top:4px}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+  th,td{padding:8px 6px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top}
+  th{color:var(--muted);font-weight:600;font-size:12px;background:var(--panel2)}
+  .tag{display:inline-block;padding:1px 8px;border-radius:4px;font-size:11px;font-weight:600;white-space:nowrap}
+  .t-main{background:rgba(63,185,80,.15);color:var(--green)}
+  .t-low{background:rgba(248,81,73,.15);color:var(--red)}
+  .t-new{background:rgba(163,113,247,.15);color:var(--purple)}
+  .t-cap{background:rgba(79,110,247,.15);color:var(--accent)}
+  .t-gray{background:rgba(139,148,158,.15);color:var(--muted)}
+  .matrix td{text-align:center;font-size:12px}
+  .matrix th:first-child,.matrix td:first-child{text-align:left}
+  .dot-cell{font-size:15px}
+  .green{color:var(--green)} .yellow{color:var(--yellow)} .red{color:var(--red)} .teal{color:var(--teal)}
+  .callout{border-left:3px solid var(--accent);background:var(--panel2);padding:10px 12px;border-radius:0 8px 8px 0;font-size:13px;margin:8px 0}
+  .callout.warn{border-color:var(--red)}
+  .callout.info{border-color:var(--teal)}
+  .person{border-top:1px solid var(--border);padding:10px 0}
+  .person:first-child{border-top:none;padding-top:0}
+  .person .name{font-weight:700;font-size:14px}
+  .person .role{color:var(--muted);font-size:12px}
+  ul{padding-left:18px;font-size:13px}
+  li{margin:4px 0}
+  .muted{color:var(--muted)} .small{font-size:12px}
+  .foot{color:var(--muted);font-size:12px;text-align:center;margin:20px 0 30px}
+  @media(max-width:560px){ .meter-label{width:110px;font-size:12px} th,td{font-size:12px;padding:6px 4px} }
+</style>
+</head>
+<body>
+<header>
+  <h1>🧠 团队周报洞察</h1>
+  <div class="sub">周期 2026-08-17 ~ 2026-08-23（ISO W34 · 双周报） · 6 人全员提交 · 生成于 2026-08-24</div>
+</header>
+
+<section>
+  <h2><span class="dot"></span>聚焦度体检 <span class="badge" style="background:rgba(210,153,34,.15);color:var(--yellow)">黄灯</span></h2>
+  <div class="meter-row"><div class="meter-label">主战场工时占比</div><div class="meter"><div class="meter-fill" style="width:50%;background:var(--yellow)"></div></div><div class="meter-val yellow">≈50%</div></div>
+  <div class="meter-row"><div class="meter-label">海外 IECM/BPS（低优先级）</div><div class="meter"><div class="meter-fill" style="width:18%;background:var(--red)"></div></div><div class="meter-val red">≈18%</div></div>
+  <div class="meter-row"><div class="meter-label">新方向/能力/治理</div><div class="meter"><div class="meter-fill" style="width:30%;background:var(--purple)"></div></div><div class="meter-val">≈30%</div></div>
+  <div class="gauge-grid">
+    <div class="gauge"><div class="num yellow">50%</div><div class="cap">主战场（&lt;60% 黄灯）</div></div>
+    <div class="gauge"><div class="num red">16 条</div><div class="cap">战线数（红线 9 条）</div></div>
+    <div class="gauge"><div class="num red">0</div><div class="cap">S&amp;OP 战场投入（空白）</div></div>
+    <div class="gauge"><div class="num">6/6</div><div class="cap">成员提交率</div></div>
+  </div>
+  <div class="callout warn">海外收缩未落地：米酒 63%、YIYI 46% 工时仍压在 BPS/IECM，与「能做减法就做减法」的战略定位背离；主战场被结项事务与工单挤占。S&amp;OP 供需计划联动（主战场 4）本周零覆盖，需确认是否为有意放弃还是遗漏。</div>
+</section>
+
+<section>
+  <h2><span class="dot"></span>价值链看板</h2>
+  <table>
+    <tr><th>项目 / 专项</th><th>环节</th><th>断点</th><th>建议动作</th></tr>
+    <tr><td>林氏放我家 V2.1</td><td>已交付·未使用</td><td class="red">待业务复核上线已 2 周</td><td>浮云本周定业务复核 owner + 截止日</td></tr>
+    <tr><td>放我家 3.0 / 白底图 / 商品数据</td><td>构建中</td><td class="yellow">白底图标准已出但未固化进生产链路</td><td>与产中敲定素材规范 + 物料编码打通</td></tr>
+    <tr><td>素材库 / DAM</td><td>调研中</td><td class="yellow">调研 70%，尚未立项</td><td>YIYI 本周出规划、定分工</td></tr>
+    <tr><td>数字分身 / Agent 平台</td><td>构建中</td><td class="yellow">落地未锚定到任一主战场</td><td>收敛到「导购必答」单一业务闭环</td></tr>
+    <tr><td>小红书内容生产</td><td>构建中</td><td class="yellow">4 人零散投入、无 owner</td><td>定一个牵头人拉通品市业务需求</td></tr>
+    <tr><td>海外 BPS / IECM</td><td>收尾中</td><td class="red">结项反复、未真正止血</td><td>见「风险卡点」</td></tr>
+    <tr><td>AI 评测体系 / 专家套件</td><td>能力建设</td><td class="green">已形成方法论并实战验证</td><td>沉淀为团队资产，向复制推进</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2><span class="dot"></span>项目 × 人员矩阵</h2>
+  <table class="matrix">
+    <tr><th>项目</th><th>浮云</th><th>Cris</th><th>米酒</th><th>YIYI</th><th>水滴</th><th>文鑫</th></tr>
+    <tr><td>放我家 V2.1 / 3.0 / 白底图 <span class="tag t-main">主战场3/2</span></td><td class="dot-cell">●</td><td>◐</td><td></td><td>◐</td><td>●</td><td></td></tr>
+    <tr><td>素材库 / DAM / 视觉中台 <span class="tag t-main">主战场2</span></td><td></td><td>●</td><td></td><td>●</td><td>◐</td><td></td></tr>
+    <tr><td>小红书内容生产 <span class="tag t-main">主战场1</span></td><td>◐</td><td>◐</td><td></td><td>◐</td><td>◐</td><td></td></tr>
+    <tr><td>S&amp;OP 供需计划 <span class="tag t-main">主战场4</span></td><td colspan="6" class="muted">— 本周无人覆盖 —</td></tr>
+    <tr><td>小林生影 / 费用治理 <span class="tag t-main">主战场2</span></td><td></td><td>●</td><td></td><td></td><td>◐</td><td></td></tr>
+    <tr><td>数字分身 / Agent 平台 <span class="tag t-new">新方向</span></td><td></td><td></td><td>◐</td><td></td><td>●</td><td>◐</td></tr>
+    <tr><td>AI 竞赛（改款/退款/漫剧）<span class="tag t-new">新方向</span></td><td>◐</td><td>◐</td><td>◐</td><td>◐</td><td>●</td><td></td></tr>
+    <tr><td>AI 评测体系 / 财务域套件 <span class="tag t-cap">能力建设</span></td><td></td><td></td><td></td><td></td><td></td><td>●</td></tr>
+    <tr><td>专家套件 / 小龙虾 <span class="tag t-main">主战场3</span></td><td></td><td></td><td></td><td></td><td>◐</td><td>●</td></tr>
+    <tr><td>海外 BPS / IECM <span class="tag t-low">低优先级</span></td><td></td><td>◐</td><td>●</td><td>●</td><td>◐</td><td></td></tr>
+    <tr><td>治理 / 团队管理 <span class="tag t-gray">横切</span></td><td></td><td></td><td></td><td></td><td>●</td><td></td></tr>
+  </table>
+  <div class="small muted" style="margin-top:8px">● 主要投入（≥1 天） · ◐ 次要投入（&lt;1 天）</div>
+</section>
+
+<section>
+  <h2><span class="dot"></span>风险卡点面板</h2>
+  <table>
+    <tr><th>事项</th><th>涉及方</th><th>卡了</th><th>建议解法</th></tr>
+    <tr><td>空间套系五场统一</td><td>门店/摄影棚/产品/IT</td><td class="red">2 周</td><td>水滴分阶段推进，先落地门店摆场 + 白底图规范</td></tr>
+    <tr><td>放我家 V2.1 业务复核</td><td>产中 / 业务</td><td class="red">2 周</td><td>定 owner + 截止日，卡住则升级</td></tr>
+    <tr><td>BPS 财务闭环结项</td><td>米酒 / YIYI / Cris</td><td class="yellow">2 周推进</td><td>结项后明确是否停接 BPS 新需求</td></tr>
+    <tr><td>数字分身材料索取</td><td>文鑫 → 轩然</td><td class="yellow">进行中</td><td>材料到位前先出电商运营场景盘点</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2><span class="dot"></span>行业信号对照</h2>
+  <div class="callout info"><b>「AI 同事」品类开战</b>（Grok @Bot / Meta Muse Glimmer / Claude System Prompts 同周落子）→ 团队的数字分身/Agent 平台正踩在主线，但行业已到「agent 登录你的工具、替你完成工作」的品类竞争，我们还停在「落地/生产器」阶段。差距在于：下一步应把数字分身从平台建设收敛成「导购替你干活」的单一可量化业务闭环。</div>
+  <div class="callout info"><b>算力成本进入再定价</b>（内存一年 +500%，Stripe $7B 收 OpenRouter）→ 团队的七牛云切换、gpt5.5→5.6 切换、费用分账正是对冲动作；但只节流不够，省下的成本应投回高价值场景，而非让费用治理本身变成一条独立战线。</div>
+</section>
+
+<section>
+  <h2><span class="dot"></span>个人贡献摘要</h2>
+  <div class="person"><span class="name">浮云</span> <span class="role">· 聚焦度最高（≈93% 主战场）</span>
+    <ul><li>放我家 V2.1/3.0 全周期：评测、白底图标准、用例观测平台、Seedream 5.0 评测</li><li>小红书品市/新零售链路串联 + AI 改款立项框架沉淀</li></ul></div>
+  <div class="person"><span class="name">Cris</span> <span class="role">· 主战场 ≈80%，低优先级仅 3%</span>
+    <ul><li>Seedream 5.0 Pro 图层分离评测闭环（3.1 天）+ AI 视觉 90 天专项复盘</li><li>小林生影七牛云切换 + 模型平台费用分账；另 1.2 天职级认证（个人事务）</li></ul></div>
+  <div class="person"><span class="name">米酒</span> <span class="role">· 海外 IECM/BPS 占 63%（低优先级红线）</span>
+    <ul><li>BPS 装箱单上线验收、报关数据治理、IECM 履约渠道修正</li><li>AI 数字分身 MVP 方案 + 退款工作台方案（各 1.5 天）</li></ul></div>
+  <div class="person"><span class="name">YIYI</span> <span class="role">· 主战场 54% / 低优先级 46%</span>
+    <ul><li>素材库/KBMS 调研 3.5 天（主战场）+ 小红书全链路了解</li><li>BPS 工单 12 项（1.2 天，高碎片化）+ 财务闭环验收</li></ul></div>
+  <div class="person"><span class="name">水滴（三叶）</span> <span class="role">· 团队协同中枢，工作高度碎片化</span>
+    <ul><li>数字分身/Agent 平台 2.85 天（林家小姐姐落地、Agent 生产器）</li><li>AI 大赛组队 + AI 费用降本 + BI/海外 + 治理；风险意识最强（风险表）</li></ul></div>
+  <div class="person"><span class="name">文鑫</span> <span class="role">· 学习投入突出（正面亮点）</span>
+    <ul><li>小龙虾原型 V59 + 财务域专家套件 v3.1 + AI 评测体系（三层框架、培训材料）</li><li>DeepSeek Harness 调研、记忆机制研究、论文拆解——黑客精神在线</li></ul></div>
+</section>
+
+<div class="foot">本报告为诊断工具，不做考核 · 工时为主战场聚类推算（置信度：中）· 数据来源：dws 双周报（6 人全员）+ 一手信源简报（W33/W34）</div>
+</body>
+</html>
