@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-24</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0b0f19; color: #d7dce6; font-family: -apple-system, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif; line-height: 1.85; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 24px 20px 60px; }
+  header { text-align: center; padding: 28px 0 22px; }
+  header h1 { font-size: 22px; font-weight: 700; letter-spacing: 1px; }
+  header .date { margin-top: 8px; font-size: 13px; color: #8b93a7; }
+  .tabs { display: flex; gap: 10px; justify-content: center; margin: 18px 0 26px; position: sticky; top: 10px; z-index: 10; }
+  .tab { flex: 1; max-width: 200px; padding: 10px 0; border-radius: 999px; text-align: center; font-size: 14px; font-weight: 600; cursor: pointer; border: 1px solid #2a3145; color: #8b93a7; background: #131827; transition: all .25s; }
+  .tab.on-biz { background: linear-gradient(135deg, #2563eb, #4f8ef7); border-color: transparent; color: #fff; box-shadow: 0 4px 18px rgba(79,142,247,.35); }
+  .tab.on-diary { background: linear-gradient(135deg, #db2777, #f472b6); border-color: transparent; color: #fff; box-shadow: 0 4px 18px rgba(244,114,182,.35); }
+  .panel { display: none; }
+  .panel.active { display: block; animation: fade .3s ease; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .panel h2 { font-size: 17px; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #232a3d; }
+  .biz h2 { color: #7fb1ff; }
+  .diary h2 { color: #f9a8d4; }
+  .panel p { margin-bottom: 18px; font-size: 15px; text-align: justify; }
+  .biz p:first-of-type strong { display: block; font-size: 16px; color: #9cc2ff; background: rgba(79,142,247,.08); border-left: 3px solid #4f8ef7; padding: 10px 14px; border-radius: 0 8px 8px 0; margin-bottom: 18px; }
+  .diary p:first-of-type strong { display: block; font-size: 17px; color: #fbcfe8; }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #232a3d; text-align: center; font-size: 12px; color: #5d6577; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>每日复盘</h1>
+    <div class="date">2026-08-24 · 周一 · 商业版 + 日记版</div>
+  </header>
+
+  <div class="tabs">
+    <div class="tab on-biz" id="tab-biz" onclick="switchTab('biz')">📊 商业复盘版</div>
+    <div class="tab" id="tab-diary" onclick="switchTab('diary')">📝 日记版</div>
+  </div>
+
+  <div class="panel biz active" id="panel-biz">
+    <h2>收口的一天</h2>
+    <p><strong>8月24日的主题是收口。范围在收，战线在收。连汇报材料，他都决定不再收集。</strong></p>
+    <p>AI大赛组委会的初筛反馈，和发出的团队周报洞察，说的是同一句话。资源不够，范围必须收。组委会对GTM全链路AI项目的意见很直接，范围过大，标准不明确，可行性存疑，报名队伍快一百支，技术资源不够，建议取消或者缩小。Christopher的回应是缩小，理由是市面上已经有做出来的智能体。这个回合值得记一笔。全链路在叙事上成立，在资源上不成立。范围本身就是风险，收掉它要趁立项阶段，不能拖到实现阶段。</p>
+    <p>有意思的是，收口在同一天是双向流动的。他一边接住组委会的收缩要求，一边对卡罗的海外队伍做了同样的处理，初筛通过，但不配备技术，人手不够就自己搞定demo。上下的口径在同一天对上了，这比任何会议都有用。</p>
+    <p>团队层面，周报洞察把同一把尺子量到了人头上。主战场工时约五成，低于六成健康线。战线约十六条，红线九条。海外IECM和BPS仍占18%，集中在米酒（63%）和YIYI（46%），和「能做减法就做减法」直接背离。数字分身全队投入4.6天，没有锚定任何主战场。被点名的五个人，正好是海外工时和数字分身两条线的执行者。把问题写到具体人头上，是这条线今天最实的动作。</p>
+    <p>信数中心白皮书会议是重头，276分钟。「以检预防，AI优先」的半年复盘，各板块交出答卷。线上营销中台9月16日上线。线下营销数字化换了汇报视角，不讲功能、系统、流程，讲消费者、导购、门店经营。供应链从局部扫描转向全局体系。数据治理聚焦指标统一与报表精简。AI产品创新部的分享最直接呼应今天的主题，从做工具到做深产品，为了聚焦开过不下十场会，带头反思，批评和自我批评。一个没有历史、一半成员是新的部门，用半年把产品从IT必答、小林AI迭代到新的方向。翻译成组织语言，就是从什么都做，到把少数几件做深。</p>
+    <p>空间全链路项目还停在减法没做完的状态。这是下半年部门最核心的项目，从放我家销售触点发起，产中的组织架构已经按空间重组，开品和策划都转向空间思路，但数据资产系统怎么定位、项目经理由哪个部门出，今天还在讨论。周报里点过名，空间套系五场统一跨四个部门，两周没推进。判断做完了，分工没做完。</p>
+    <p>把今天串起来是一条完整的因果链。范围膨胀在先，大赛项目和十六条战线都是证据。外部与内部同时给反馈，组委会初筛和周报洞察在同一天到位。收窄动作随即跟上，范围缩小、名单今天定、培训不再分场次、材料不再收集。结构性缺口同时暴露，海外18%的工时没收回，空间项目的owner缺位。明天要做的都是确定的事，名单公示、8月26日火山培训定时间、15万券分配、Trae需求收集。</p>
+    <p>明天真正要盯的，是减法落到人头。海外那18%什么时候收，空间项目的项目经理由谁当，以及两百多人名单公示之后，培训室坐不坐得下。坐不下，本身就是范围问题在物理世界的投影。</p>
+  </div>
+
+  <div class="panel diary" id="panel-diary">
+    <h2>记录，然后做减法</h2>
+    <p><strong>记录，然后做减法</strong></p>
+    <p>白天先从大赛的事开始。名单还在变动，两百多人参赛，今天要把最后名单定下来，上周待确认的队伍要确认。组委会的初筛反馈也到了，GTM全链路的AI项目范围过大，标准不明确，可行性存疑，报名队伍快一百支，技术资源不够，建议取消或者缩小。Christopher在对话里回了一句「Emmm，我们弱小下范围吧」，然后补了一个「缩小」。他把这段对话原样贴了出来。</p>
+    <p>开会前，他给Cris发消息，「我开一个整场的 AI 听记，你帮我在我讲的环节开个单独的 AI 听记吧」。过一会儿又补一句，「也帮忙你们提醒一下，免得忘了」。</p>
+    <p>一整天他都在跟「记录」这件事较劲。他转发白皮书会议的摘要，他提醒Cris记得关听记，他翻到听记的发言人识别，发现没有一个是对的，那个神奇的「KP」每回都在，他无语了。一个人反复核对记录的样子，仔细看有点好笑。他怕记错，比怕漏掉更甚。</p>
+    <p>然后是信数中心白皮书会议，276分钟，四个半钟头。各板块复盘半年。线上营销中台定在9月16日上线。线下营销数字化换了讲法，不讲功能、系统、流程，讲消费者、导购、门店经营。轮到AI产品创新部，他讲的是实事求是。他说这个部门没什么历史，没什么沉淀，上半年刚成立，一半以上的成员是新的，还有两个没转正。他说团队从做工具转向做深产品，为聚焦开了不下十场会，他带头反思，做批评和自我批评。他说，我实事求是的讲，从掌握AI技术越来越多之后，我加班的时间也越来越多，每周周末，我都会带着笔记本去找一个公园，学习、跟进平时没空跟进的AI的内容。</p>
+    <p>这段话他写出来，是要讲给全信数中心听的。一个没有历史的部门，向一屋子有历史的人汇报自己的半年。他没有把加班和公园藏起来。</p>
+    <p>三点刚结束AI委员会月会，他转头问键盘，会议室能不能安排，下午三点还是三点半。火山那边在问8月26日培训的具体时间，好安排讲师。群里有人提议，进群彩头可以是两百个Trae三个月免费名额，先到先得。他还给团队发了周报洞察，把海外工时和数字分身的问题写到具体人名上。</p>
+    <p>还有一场空间战略的会。下半年部门最核心的项目，从放我家销售触点发起，产中的组织架构已经按空间重组，睡眠空间一个组，什么空间一个组，开品不再按单品，按空间。但数据怎么承接，项目经理由哪个部门出，还在讨论。两周前就说要推进的五场统一，跨四个部门，还没落地。</p>
+    <p>散场之后，他又回到那些不着边际的消息里。有人问「清净？steven在厕所很响吗」，他回「哈哈哈哈」。他说「你问我有没有」「你要干啥」。他不小心拍了拍同事，赶紧解释，「没有，我点进去看了下，就不小心拍了拍你哈哈哈哈」。他让同事帮忙拍一下那个好用的杯子，营养师寄的那个。</p>
+    <p>他在群里说，还没有同学给我材料，那我也不收集材料了，各版块自己拿内容展开讲吧，避免材料带来太大的负担。</p>
+    <p>一天里他做了很多决定，大的小的。回看的时候，最像他的反而是两件小事。给自己讲的话单独开一份听记，以及，不收集材料了。</p>
+    <p>记录，然后做减法。今天他把这两件事都做了一遍。</p>
+  </div>
+
+  <footer>Hermes 每日复盘 · 2026-08-24 · 自动生成</footer>
+</div>
+
+<script>
+function switchTab(name) {
+  document.getElementById('panel-biz').classList.toggle('active', name === 'biz');
+  document.getElementById('panel-diary').classList.toggle('active', name === 'diary');
+  var tb = document.getElementById('tab-biz'), td = document.getElementById('tab-diary');
+  tb.className = 'tab' + (name === 'biz' ? ' on-biz' : '');
+  td.className = 'tab' + (name === 'diary' ? ' on-diary' : '');
+}
+</script>
+</body>
+</html>
