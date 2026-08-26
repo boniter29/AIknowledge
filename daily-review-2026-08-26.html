@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-26</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0d1117; color: #e6edf3; font-family: "PingFang SC","Microsoft YaHei",-apple-system,sans-serif;
+    line-height: 1.75; padding: 24px 16px 60px;
+  }
+  .wrap { max-width: 800px; margin: 0 auto; }
+  header { text-align: center; padding: 28px 0 8px; }
+  .date { font-size: 14px; color: #8b949e; letter-spacing: 2px; }
+  h1 { font-size: 26px; font-weight: 700; margin: 8px 0 6px; }
+  .sub { font-size: 14px; color: #8b949e; }
+  .dash {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 24px 0 20px;
+  }
+  .dash .card {
+    background: #161b22; border: 1px solid #21262d; border-radius: 12px; padding: 12px 8px; text-align: center;
+  }
+  .dash .num { font-size: 22px; font-weight: 700; color: #4f6ef7; }
+  .dash .lbl { font-size: 12px; color: #8b949e; margin-top: 2px; }
+  .tabs { display: flex; gap: 10px; margin: 20px 0; }
+  .tab {
+    flex: 1; padding: 12px; text-align: center; border-radius: 12px; cursor: pointer;
+    border: 1px solid #21262d; background: #161b22; color: #8b949e; font-size: 15px; font-weight: 600;
+    transition: all .2s;
+  }
+  .tab.active { background: #4f6ef7; border-color: #4f6ef7; color: #fff; }
+  .tab.pink.active { background: #f472b6; border-color: #f472b6; color: #1a0b12; }
+  .panel { display: none; }
+  .panel.active { display: block; }
+  .thesis {
+    background: linear-gradient(135deg, rgba(79,110,247,.15), rgba(79,110,247,.04));
+    border: 1px solid rgba(79,110,247,.35); border-radius: 14px; padding: 18px; margin-bottom: 18px;
+  }
+  .thesis b { color: #7c9bff; }
+  .ecard {
+    background: #161b22; border: 1px solid #21262d; border-left: 3px solid #4f6ef7;
+    border-radius: 12px; padding: 16px 18px; margin-bottom: 14px;
+  }
+  .ecard h3 { font-size: 16px; margin-bottom: 8px; color: #dbe4ff; }
+  .ecard p { font-size: 15px; color: #c9d1d9; }
+  .ecard .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 20px; margin-bottom: 8px; }
+  .tag.blue { background: rgba(79,110,247,.15); color: #7c9bff; }
+  .tag.yellow { background: rgba(210,153,34,.15); color: #d29922; }
+  .tag.green { background: rgba(63,185,80,.15); color: #3fb950; }
+  .tag.purple { background: rgba(163,113,247,.15); color: #a371f7; }
+  .tag.orange { background: rgba(219,109,40,.15); color: #db6d28; }
+  .insight { border-color: rgba(210,153,34,.4); border-left-color: #d29922; }
+  .insight h3 { color: #f0d9a8; }
+  .concl { border-color: rgba(63,185,80,.4); border-left-color: #3fb950; }
+  .concl h3 { color: #a8e6b8; }
+  .pcard {
+    background: #161b22; border: 1px solid #21262d; border-radius: 12px; padding: 18px; margin-bottom: 14px;
+  }
+  .pcard p { font-size: 15.5px; color: #c9d1d9; margin-bottom: 10px; }
+  .pcard p:last-child { margin-bottom: 0; }
+  .quote {
+    border-left: 3px solid #f472b6; background: rgba(244,114,182,.07); border-radius: 0 12px 12px 0;
+    padding: 12px 16px; margin: 12px 0; font-style: normal; color: #f9c8e0;
+  }
+  footer { text-align: center; color: #484f58; font-size: 12px; margin-top: 32px; }
+  @media (max-width: 480px) {
+    .dash { grid-template-columns: repeat(2, 1fr); }
+    h1 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="date">DAILY REVIEW · 2026-08-26 · 周三</div>
+    <h1>每日复盘</h1>
+    <div class="sub">从「敢不敢用」到「划不划算」</div>
+  </header>
+
+  <div class="dash">
+    <div class="card"><div class="num">7</div><div class="lbl">会议 / 听记</div></div>
+    <div class="card"><div class="num">182<span style="font-size:12px">min</span></div><div class="lbl">会议总时长</div></div>
+    <div class="card"><div class="num">307</div><div class="lbl">聊天消息</div></div>
+    <div class="card"><div class="num">18</div><div class="lbl">@我的</div></div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('biz')">📊 商业版</div>
+    <div class="tab pink" onclick="switchTab('per')">📝 日记版</div>
+  </div>
+
+  <div id="biz" class="panel active">
+    <div class="thesis">
+      <b>今天不是又开了一场降本汇报，而是 AI 推广的叙事正式换挡，从「它能做什么」切到「它省多少钱」。成本账，成了新的说服语言。</b>
+    </div>
+
+    <div class="ecard">
+      <span class="tag blue">战略</span>
+      <h3>AI 内容第一次进了经营数据的口径</h3>
+      <p>上午的 AI 内容生产降本增效汇报开了 59 分钟，四到七月在视频、生图、买家秀场景里的实测数据摆上桌，成本、效率、经营数据三本账分开算。种草视频拿拍摄图片做底、全自动生成，已投到工具上引流；实拍要搭景排期人盯，AI 把中间环节压扁了。进了经营口径，就要接受和实拍同样的审计，它从「试点工具」变成了「生产要素」。</p>
+    </div>
+
+    <div class="ecard">
+      <span class="tag green">财务</span>
+      <h3>模型选型从拍脑袋，变成了比价</h3>
+      <p>下午收到 seedream 5.0 pro 评测：120 组真实用例，指令遵循、图层编辑、一致性占优，空间理解偏弱，但在放我家「旧家具置换」场景里赢过 nano banana，建议切换，按当前用量每月省 3500 块。数字不大，可这是第一份「真实用例 + 每月金额」的模型报告。模型决策开始有价签了。</p>
+    </div>
+
+    <div class="ecard">
+      <span class="tag yellow">信号</span>
+      <h3>用户开始盯自己的 token</h3>
+      <p>有人反馈自己消耗很高，有人说参考五折对标实际消耗，有人创建个技能花了 200 发了个笑哭。当用户开始心疼消耗，说明普及到了临界点，从「能用就行」走到「我得知道钱花在哪」。成本透明不再是财务要求，成了用户感知的一部分。</p>
+    </div>
+
+    <div class="ecard">
+      <span class="tag purple">打法</span>
+      <h3>推广打法定调，口碑开始外溢</h3>
+      <p>企业工具推广会收敛出核心打法：1v1 深度咨询、从功能对比转向场景协同、判断依据是个人用和企业用两回事、企业更在乎数据沉淀。同一天，产品统筹部的慧姐主动约会，说别的部门 AI 用得散、水平参差，自己部门「简直就是幼儿园」，带着 GPT 串联不了钉钉的痛点来问林氏小龙虾。被动等来的需求，比推出去的靠谱。</p>
+    </div>
+
+    <div class="ecard">
+      <span class="tag orange">战场</span>
+      <h3>对外越磨越专业，对内还在过认知关</h3>
+      <p>放我家效果链路单页 HTML 改到 V2 连交付几版，演示策略定了「5-10 分钟不操作、直接给链路图」，周六央视来门店采访、今天市领导先踩点。可内部仗没打完：健新喷第一场让字节讲 Trae、喷信数为什么不用 Trae 非用自研，同事预感到培训结束又要被喷。外部窗口在打磨，内部认知战还在打。</p>
+    </div>
+
+    <div class="ecard insight">
+      <h3>🔍 四本账，一个共同推力</h3>
+      <p>把今天串起来看：降本汇报是给经营看的账，seedream 评测是给模型选的账，消耗反馈是给用户感知的账，1v1 咨询是给客户算的账。四本账指向同一个结论，AI 在这家公司已经从「敢不敢用」走到了「划不划算」。接下来的推广，谁把账算得越清楚，谁就掌握说服权。</p>
+    </div>
+
+    <div class="ecard concl">
+      <h3>接下来三周</h3>
+      <p>90 天聚焦核心链路节点智能化改造的盘子已立；本周五培训要过健新这一关，周六央视是第一个对外大考。成本账加场景协同，是推广的两条腿。账能算清，故事就有人信。</p>
+    </div>
+  </div>
+
+  <div id="per" class="panel">
+    <div class="pcard">
+      <p>今天一整天都在算账。上午算公司的，下午算模型的，晚上算自己的。</p>
+      <p>上午那场降本增效汇报开了快一个小时，六个人围着数据说话。两个月前定下测 AI 内容生产的时候，大家心里都没底，今天数据回来了，成本降了，效率升了，连经营数据都带回来了。发言人讲种草视频那段，拿拍摄的图片做底，全自动生成，投到工具上引流。我坐在下面想，两个月前我们还在争论 AI 生图能不能过质检，现在已经在汇报里谈「类目」了。</p>
+      <p>中午群里炸了一下。放我家效果链路的单页 HTML 改到 V2，连着交付了好几版，从「出来了」到「交付了！！！」。四个感叹号。那个文件我盯了很多天，从描述想要的效果，到调字体字号色系边距，一遍一遍跟 AI 磨。同事问怎么做的，我说重点不是好不好看，是你要能跟 AI 描述出你觉得好看的具体的表现。这话说出来挺顺，其实我自己也是做了好几版才摸到的。</p>
+      <p>下午收到 seedream 的评测报告，120 组真实用例，建议在旧家具置换场景切换，每月省 3500。3500 块，说大不大，说小不小，但它让模型切换这件事第一次有了价签。同一天还看到两条更小的账，有人说创建个技能花了 200，发了个笑哭的表情，有人说好多人反馈自己消耗很高。我忽然觉得，大家开始心疼 token 了。AI 用到一定份上，人就会开始盯自己的消耗，这是好事还是坏事我说不准，但我知道这说明它真的被用起来了。</p>
+      <p>下午的会都在为周六做准备。央视要来门店采访，今天市领导先来踩点。演示怎么讲、物料够不够、登录有没有问题，几个会来回磨。有人提了一句，上次央视去门店采访，一群人都没搞明白那个临时放我家怎么用。我听完有点慌，但活还是得往下干。Bandicam 也翻出来了，以后产品界面演示都用它录，效果专业些。</p>
+      <div class="quote">「我已经预感到结束之后又要被喷了」</div>
+      <p>晚上聊天里最戳我的就是这句，说的是周五的培训。昨天健新刚喷过第一场让字节来讲 Trae，说信数为什么不让大家用 Trae 非要自研。培训的老师讲得其实不错，同事说她越讲我越觉得讲得蛮好的，可又怕大家被带偏了不用林氏小龙虾。培训把健新的脸培训黑了，这句话我看了好几遍。推广 AI 这件事，外面看着热闹，里面每一步都有人在盯。</p>
+      <p>对了，今天还有个插曲。同事说新哥嫌电视有色差，问是什么牌子，看着像杂牌。我回了个「算了」。后来想想，这个「算了」也挺今天的。很多事情现在都是「算了」，先把手头的账算完，别的再说。</p>
+      <p>下班前问洁敏几点走。公司不支持远程，她得把电脑带回去。我问，回家还能远程吗，她发了串哈哈哈。她问我要不要过去，我说好。</p>
+      <p>晚上我坐在那儿把今天的账又过了一遍。公司的账、模型的账、用户的账，都有人在算。只有我自己那笔账还空着，周六央视那一关，不知道算不算得过来。</p>
+    </div>
+  </div>
+
+  <footer>Hermes Agent · 每日复盘自动生成 · 2026-08-26</footer>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(name).classList.add('active');
+  if (name === 'per') {
+    document.querySelectorAll('.tab')[1].classList.add('active');
+  } else {
+    document.querySelectorAll('.tab')[0].classList.add('active');
+  }
+}
+</script>
+</body>
+</html>
