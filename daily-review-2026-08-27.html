@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-27</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:#0e1015; color:#d7dce4;
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    line-height:1.85; font-size:16px; -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:800px; margin:0 auto; padding:32px 20px 60px; }
+  .header { text-align:center; margin-bottom:28px; }
+  .header .date { font-size:13px; color:#8b93a5; letter-spacing:2px; }
+  .header h1 { font-size:26px; font-weight:700; margin-top:6px; background:linear-gradient(135deg,#8ab4ff,#c084fc); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+  .tabs { display:flex; gap:10px; justify-content:center; margin-bottom:28px; }
+  .tab {
+    padding:9px 22px; border-radius:999px; border:1px solid #2a2f3a; cursor:pointer;
+    font-size:14px; color:#9aa3b5; background:#151820; transition:all .2s; user-select:none;
+  }
+  .tab.active-b { background:#4f6ef7; border-color:#4f6ef7; color:#fff; box-shadow:0 4px 18px rgba(79,110,247,.35); }
+  .tab.active-p { background:#f472b6; border-color:#f472b6; color:#fff; box-shadow:0 4px 18px rgba(244,114,182,.35); }
+  .panel { display:none; }
+  .panel.show { display:block; }
+  .card {
+    background:#151820; border:1px solid #242a37; border-radius:16px;
+    padding:22px 24px; margin-bottom:16px;
+  }
+  .hero-b { background:linear-gradient(135deg,#1c2340,#171a2e); border:1px solid #33406e; }
+  .hero-b p { font-weight:700; color:#c9d6ff; font-size:16.5px; line-height:1.9; }
+  .hero-p { background:linear-gradient(135deg,#3a1f31,#241a2c); border:1px solid #5c2f4d; }
+  .hero-p p { font-weight:700; color:#ffd3e8; font-size:16.5px; line-height:1.9; }
+  .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:16px; }
+  .stat { background:#151820; border:1px solid #242a37; border-radius:12px; padding:14px 8px; text-align:center; }
+  .stat .num { font-size:22px; font-weight:800; color:#8ab4ff; }
+  .stat .lbl { font-size:11.5px; color:#8b93a5; margin-top:4px; }
+  .body-b p { margin-bottom:14px; color:#c9d0dc; }
+  .body-b p:last-child { margin-bottom:0; }
+  .body-b strong { color:#fff; }
+  .body-p p { margin-bottom:14px; color:#d9ccd4; }
+  .body-p blockquote {
+    margin:14px 0; padding:12px 18px; border-left:3px solid #f472b6;
+    background:rgba(244,114,182,.08); border-radius:0 10px 10px 0; color:#ffc9e4;
+  }
+  .foot { text-align:center; color:#5b6475; font-size:12px; margin-top:30px; }
+  @media (max-width:560px){
+    .stats { grid-template-columns:repeat(2,1fr); }
+    .card { padding:18px 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div class="date">DAILY REVIEW · 2026.08.27 周四</div>
+    <h1>每日复盘</h1>
+  </div>
+  <div class="tabs">
+    <div class="tab active-b" id="tabB" onclick="switchTab('b')">📊 商业版</div>
+    <div class="tab" id="tabP" onclick="switchTab('p')">📝 日记版</div>
+  </div>
+
+  <div class="panel show" id="panelB">
+    <div class="card hero-b">
+      <p>今天人不在公司，在出差的路上，可 AI 线所有关键项目都在手机里同时推进。央视采访要用的演示视频在加急，IT 必达的评测集在跑，海外业务的闭环在谈，3.0 的效果图标准在定。对外输出的密度第一次压过了对内交付的进度，本周从「算账」正式转进「赶工」。</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">8</div><div class="lbl">场会议</div></div>
+      <div class="stat"><div class="num">246</div><div class="lbl">会议分钟</div></div>
+      <div class="stat"><div class="num">197</div><div class="lbl">条消息</div></div>
+      <div class="stat"><div class="num">10</div><div class="lbl">条 @我</div></div>
+    </div>
+    <div class="card body-b">
+      <p>上午那场企业 AI 应用实践交流，把这两个多月攒下的实践搬到了外部的桌上。两个半小时，林氏这边讲 Token 中转站怎么把 API 成本压下来，Agent 怎么做数据分析，生图生视频聚合平台怎么从一个人手里长出来，代码 review 怎么交给 AI。对方介绍的是门店数字化和行政 HR 场景的 AI 嵌入。这场交流真正有信息量的部分，是对方抛回来的追问，资深管理者的边际价值到底值不值，数据安全和权限怎么管控，自研还是 SaaS。没人问功能好不好用，所有人都在问要花多少钱、数据安不安全。昨天在内部用成本账说服经营层，今天同一本账在外面的桌上照样能打开话头。账本语言被验证成可复制的对外叙事，这是今天最大的意外收获。</p>
+      <p>同一时刻，央视采访的前置工序在手机里排队。被 @ 加急的那条最直接，视频明天下午就要用。录屏、chatcut 重剪、进度条、字体字号、左右分屏，一轮一轮在群里过，中途还评估了一次重录再剪要多久。想演示放我家 web 端，问下来没有访问链接，「好吧，我记得不是部署了吗」；想演示生图平台，也没部署好。单看都是执行细节，串起来是一个结构，外部日期在倒逼整条交付链。明天下午开营、周六央视，对外承诺的时间表第一次跑在了内部交付前面。</p>
+      <p>3.0 无实景的优化会把能力边界摊在桌面上。评测结果，无实景场景结构不够真实，风格存在漂移，大中小户型只有部分模型能识别。会议没有停在「模型不行」的判断上，解法落在了输入侧，由太原按标准提供空间参考图，不同风格不同功能，正侧斜视角，摆满套系完整产品，再把空间结构、风格、产品的效果图标准逐条理出来。这与昨天 seedream 评测选型是同一件事的延续。AI 项目的瓶颈正在从模型侧移到数据与标准侧，谁手里有干净的参考图和标签，谁就能把模型能力再往前推一截。</p>
+      <p>下午的聊天里有一句话，值得单独记下来。「AI 不是提效的吗」。摆场软装搭配的 demo，对面反馈软装标准化标签难打，方案和清单耗时，要做十几天。这句反问是对项目周期的直接质疑，也是把项目拆回原点的动作，几个场景的直观效果验证就够，生产级全链路不在这一次的范围内。AI 提效有个没人愿意听的前提，先得有标签和标准，而标签和标准比模型本身慢得多。demo 优先，本质是在跟这个前提抢时间。</p>
+      <p>今天 @ 我的信号，六条里没有一条在讨论方向。视频明天下午要用，倒计时；展示视频的商品标题截断，前端已改；3.0 参考图标准交给泰源并更新到项目；IT 必达流程跑通，昨晚打包新版本，今天出评测集；卡罗的应用还停在等 API key；海外业务直接 MCP 连现有代码库，不等德彬的交付。另外那场培训筹备会，有人用三个和尚没水喝来形容协同现状，最后按模块分工，培训整块交给珍珠。培训的事，从内容到组织都还没理顺，明天下午就要开场，这是本周「对外时钟快于对内时钟」的又一个注脚。</p>
+      <p>接下来 48 小时是本周对外承诺的集中兑现。明天下午的培训和开营仪式，动员环节定了我主讲，若与央视采访冲突，键盘或卡罗顶上；周六央视到店采访。演示视频是考前最后一道工序。3.0 的参考图标准决定未来三周无实景能力的边界。账已经算清了，故事也开始有人信，接下来要过的是交付关，这道关没有捷径，只能一件一件把展示件做到位。</p>
+    </div>
+  </div>
+
+  <div class="panel" id="panelP">
+    <div class="card hero-p">
+      <p>出差一整天，办公室就是手机。</p>
+    </div>
+    <div class="card body-p">
+      <p>早上出门的时候，我以为这是平常的一天。路上群里就开始排队了，米酒在试 chatcut，把效果视频交给 Codex 重剪，我列的要求一条一条的，进度条、字体字号、阶段说明。十二Ly 在重录。我人还在路上，脑子里全是那个视频明天下午就要用。有人 @ 我，进度要加急了，我回了个好，继续赶路。</p>
+      <p>到企业那边聊了两个半小时。我们讲 Token 中转站怎么省 API 的钱，讲 Agent 怎么做数据分析，讲生图生视频的平台怎么从一个人手里长出来。对方问得最密的，是数据安不安全，权限怎么管，这些投入对资深管理者值不值。我一边讲一边想，原来外面的人看 AI，第一眼落在成本和安全上，功能反而没人问。我们自己天天泡在功能里，差点忘了这一层。</p>
+      <p>下午想演示放我家 web 端，问了一圈，没有链接。</p>
+      <blockquote>好吧，我记得不是部署了吗哈哈哈</blockquote>
+      <p>后面那三个哈，是我给自己找的台阶。想演示生图平台，也没部署好。工具都在手边，就是够不着。带着一肚子东西出门，想给别人看，发现能拿出手的展示件还差最后一道工序。那一刻挺恍惚的。</p>
+      <p>中间夹了一场两分钟的会，聊一份视力报告。近视只有 25 度，用远视 100 度去测，视力只有 0.4。验光的人给测完就走了，没找大夫。小字看不清，要老花镜才看得见。我听完没接上话。这种事情，使不上劲，只能记着。</p>
+      <p>五点出头到家，给洁敏发了句，我今天出差了，已经到家了。意思是今天不用她接了。发出去的时候，我觉得这一天差不多该结束了。</p>
+      <p>结果晚上一直在干活，到很晚还在回消息。慧姐的 GPT 要续费，我在外面，只能托同事把 session 拿回来充。跟 Cris 通了快四十分钟电话，把白天没来得及说的事情，在电话里说了一遍。出差申请单填了，商旅用车那栏进不去，截图问人，显示不对。小事，出差的人都要碰一遍。</p>
+      <p>还有那场筹备会，有人用三个和尚没水喝形容协同，说人太多，缺一个拍板的人，最后按模块分，培训整块交给珍珠。我坐在屏幕这头听，想笑，又笑不出来。明天下午开营仪式，动员环节我说了我主讲，采访时间还没定，如果撞上，键盘或者卡罗顶上。</p>
+      <p>晚上坐下来，把今天过了一遍。真正在办公室里待了多久，大概不到一小时。所有事情都是隔着屏幕推进的，会议、视频、部署、续费、评测集。人不在公司，事情一样在转。这本来该算 AI 提效的证据。</p>
+      <blockquote>AI 不是提效的吗</blockquote>
+      <p>这话是我发的，发完自己愣了一会儿。我们一边拿 AI 省别人的时间，一边自己的时间被 AI 项目填满。这个账到底怎么算，我还没想清楚。</p>
+      <p>明天下午还有一下午的会。视频要用，采访要来，动员要讲。事情在手机里排着队，一件挨一件。我坐在家里，屏幕还亮着。这一天，其实还没结束。</p>
+    </div>
+  </div>
+
+  <div class="foot">Hermes 每日复盘 · 2026-08-27</div>
+</div>
+<script>
+function switchTab(t){
+  var b=document.getElementById('panelB'),p=document.getElementById('panelP');
+  var tb=document.getElementById('tabB'),tp=document.getElementById('tabP');
+  if(t==='b'){b.classList.add('show');p.classList.remove('show');tb.classList.add('active-b');tp.classList.remove('active-p');}
+  else{p.classList.add('show');b.classList.remove('show');tp.classList.add('active-p');tb.classList.remove('active-b');}
+}
+</script>
+</body>
+</html>
