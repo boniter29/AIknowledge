@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-08-30</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0f1115;color:#d8dce4;font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.85;font-size:16px}
+.wrap{max-width:720px;margin:0 auto;padding:28px 18px 60px}
+h1{font-size:22px;font-weight:700;margin-bottom:4px}
+.date{color:#8a93a3;font-size:14px;margin-bottom:20px}
+.tabs{display:flex;gap:10px;margin-bottom:24px}
+.tab{flex:1;text-align:center;padding:10px 0;border-radius:12px;background:#1a1e26;color:#8a93a3;font-size:15px;cursor:pointer;border:1px solid #262c38;user-select:none}
+.tab.on-biz{background:#16283f;color:#7fb3ff;border-color:#2b4a75}
+.tab.on-diary{background:#331d26;color:#ff9db8;border-color:#5c3145}
+.card{display:none;background:#161a22;border:1px solid #262c38;border-radius:16px;padding:22px 20px}
+.card.show{display:block}
+.card h2{font-size:15px;font-weight:600;margin-bottom:14px;letter-spacing:.05em}
+.biz h2{color:#7fb3ff}.diary h2{color:#ff9db8}
+.card p{margin:0 0 1.1em}
+.tagline{margin-top:18px;padding-top:14px;border-top:1px dashed #2a3140;font-size:14px}
+.tagline b{font-weight:600}
+.foot{margin-top:26px;text-align:center;color:#5c6575;font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘 · 2026-08-30（周日）</h1>
+<div class="date">AI Agent 入门课定型日</div>
+<div class="tabs">
+<div class="tab on-biz" id="tb" onclick="show('biz')">📊 商业版</div>
+<div class="tab" id="td" onclick="show('diary')">📝 日记版</div>
+</div>
+<div class="card biz show" id="biz"><h2>商业复盘</h2><p style="margin:0 0 1.1em;">周日的全部产出都在为周三的第一课铺路，课程骨架今天定了型。</p>
+<p style="margin:0 0 1.1em;">今天录了一段十二分半的口述，把AI Agent入门课程的思路从脑子里倒了出来。这门课面向AI大赛的报名选手，里面有技术同学也有业务同学，AI水平参差不齐，这是课程设计真正的约束条件。同样一小时到一个半小时的课，讲浅了技术同学觉得没用，讲深了业务同学跟不上，所以今天的口述里反复出现的词是「总体介绍」，先拉齐认知，再分层展开。</p>
+<p style="margin:0 0 1.1em;">课程结构定成了四章，提示词与上下文工程、Agent产品开发、AI持续学习能力、Agent评测基础。这个结构有一个值得注意的取舍，竞品调研被包装成「黑科技」放进持续学习能力那一章，评测单独成章放在最后。评测放最后有明确的用意，它接住了前面三章的所有产出，学员听完课做的每一个东西，最终都要能被评判定优劣。</p>
+<p style="margin:0 0 1.1em;">下午把V3课件发了出来，文件名里写着「案例深潜版」，和早上口述的思路是同一条线的推进。口述里那句「决定Vibe Coding产品质量的几个因素」把知识萃取、Agent架构、Skill和MCP、GUI能力并列摆出，这一页大概率就是课程第一章到第二章之间的转折页，从怎么写提示词跳到怎么搭系统。</p>
+<p style="margin:0 0 1.1em;">圈子里发了一篇作业打卡与答疑收集帖，文案开头写「听过，不算会。做过，才算懂。」这篇帖子等审核通过就发大群，它承担的其实是课后评测的功能，和课程最后一章的评测基础互为表里。今天的三件事看起来分散，背后是同一个推力，把一次培训从讲完就算数，变成一个有输入、有产出、有验证的闭环。</p>
+<p style="margin:0 0 1.1em;">晚上照例催了周报，还有四位同学没交。这件小事和备课是同一件事的两面，课程要可评测，团队的日常产出同样要可见。</p>
+<div class="tagline">📊 <b>一句话定调</b>：周日的全部产出都在为周三的第一课铺路，课程骨架今天定了型。</div></div>
+<div class="card diary" id="diary"><h2>日记随笔</h2><p style="margin:0 0 1.1em;">周日，没出门。上午对着手机录了十二分半的音，给自己理下周三要讲的课。</p>
+<p style="margin:0 0 1.1em;">转出来的第一句是「嗯，我接下来准备开发一门AI Agent开发的这个入门的课程」。嗯了两次，还有几个没说圆的地方。奇怪的是，看着这些磕巴的字，反而比昨天在脑子里盘的时候踏实。想法搁在脑子里的时候总觉得已经想清楚了，逼自己说出声，哪里顺哪里卡，一下就现了原形。</p>
+<p style="margin:0 0 1.1em;">这门课不好讲。报名AI大赛的人里，有技术同学，也有业务同学，水平差得远。一小时到一个半小时，讲深了一半人掉队，讲浅了另一半人觉得白来。我把结构改了几轮，最后定成四章，提示词与上下文工程，Agent产品开发，AI持续学习能力，Agent评测基础。定完看着这四行，心里有点高兴，又有点虚。高兴的是骨架立住了，虚的是每章下面还是空的，案例得一个个往里填。</p>
+<p style="margin:0 0 1.1em;">下午把V3课件发了出去，文件名里带「案例深潜版」。V1到V3，每一版都是把上一版觉得差不多的地方推倒重来。做课件这件事有个规律，第一版永远是在抄自己的想法，改到第三版才开始有别人的影子，才会想听课的人坐在下面是什么表情。</p>
+<p style="margin:0 0 1.1em;">中间发了一篇帖子到圈子里，收作业和答疑的。写文案的时候，开头那句几乎没有犹豫，「听过，不算会。做过，才算懂。」写完自己看了一遍，觉得这话一半是说给学员的，一半也是说给自己的。课程设计也一样，光在脑子里过不算设计过，讲过一遍才知道哪里站不住。</p>
+<p style="margin:0 0 1.1em;">晚上还有一件小事，催周报。还差四个人，名单一个个念出来@。这条消息发出去，今天就算收尾了。</p>
+<p style="margin:0 0 1.1em;">躺下前想了一下，今天一天其实只干了一件事，把一门还没讲的课，从一团感觉变成了几页能发出去的东西。剩下的都是周三之前慢慢填的活。填的时候大概还会再卡几次，卡的时候大概又会录几段这样的音。</p>
+<div class="tagline">📝 <b>一个感受</b>：把一门还没讲的课，从一团感觉变成了几页能发出去的东西。</div></div>
+<div class="foot">由 Hermes 自动生成 · 2026-08-30</div>
+</div>
+<script>
+function show(k){var b=document.getElementById('biz'),d=document.getElementById('diary'),tb=document.getElementById('tb'),td=document.getElementById('td');
+if(k=='biz'){b.className='card biz show';d.className='card diary';tb.className='tab on-biz';td.className='tab';}
+else{b.className='card biz';d.className='card diary show';tb.className='tab';td.className='tab on-diary';}}
+</script>
+</body>
+</html>
