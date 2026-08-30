@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每周复盘 2026-08-24 ~ 2026-08-30</title>
+<style>
+:root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#e6edf3;--muted:#8b949e;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75;padding:24px 16px 48px;}
+.wrap{max-width:720px;margin:0 auto;}
+header{text-align:center;margin-bottom:20px;}
+header h1{font-size:1.35rem;font-weight:700;letter-spacing:.5px;}
+header .sub{color:var(--muted);font-size:.85rem;margin-top:6px;}
+.tabs{display:flex;gap:8px;margin-bottom:18px;border-bottom:1px solid var(--border);}
+.tab{flex:1;text-align:center;padding:10px 4px;cursor:pointer;font-size:.92rem;color:var(--muted);border-bottom:2px solid transparent;transition:.2s;user-select:none;}
+.tab.active{color:var(--text);border-bottom-color:var(--accent,#58a6ff);font-weight:600;}
+.panel{display:none;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px 20px;}
+.panel.active{display:block;}
+.panel p{margin-bottom:14px;font-size:.95rem;}
+.panel p:last-child{margin-bottom:0;}
+.panel p.lead{font-size:1.02rem;font-weight:600;padding:12px 14px;border-left:3px solid var(--accent,#58a6ff);background:rgba(255,255,255,.03);border-radius:6px;margin-bottom:16px;}
+.panel strong{color:var(--accent,#58a6ff);}
+footer{margin-top:22px;text-align:center;color:var(--muted);font-size:.78rem;}
+footer a{color:var(--muted);}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>每周复盘 · 周度版 Pro</h1>
+<div class="sub">2026-08-24（周一）~ 2026-08-30（周日）</div>
+</header>
+<div class="tabs">
+<div class="tab active" data-panel="business" style="--accent:#58a6ff;">商业版</div>
+<div class="tab" data-panel="diary" style="--accent:#f78166;">日记版</div>
+<div class="tab" data-panel="silence" style="--accent:#d2a8ff;">沉默板</div>
+</div>
+<div class="panel active" id="business" style="--accent:#58a6ff;">
+<p class="lead"><strong>定调句：这一周，公司 AI 的叙事完成了两次换挡——周一还在「做减法」，周三转成「算账」，到周末已经压在「交付」上。如果只记住一件事，应该是：AI 已经过了「敢不敢用」的阶段，账算清之后，真正的考题变成了产品接不接得住。</strong></p>
+<p class="lead"><strong>线索一 · 成本账成了新的说服语言（展开线）</strong></p>
+<p>周一，范围在收——AI 大赛 GTM 全链路项目被组委会初筛判为「范围过大、可行性存疑」，团队周报把海外 18% 工时和数字分身写到了具体人名头上。周三，叙事正式换挡：AI 内容生产降本汇报第一次把 AI 放进「经营数据」的口径，seedream 评测用「120 组真实用例 + 每月省 3500 块」说话，模型选型从拍脑袋变成比价。周四，这本账在外面验证成功——企业交流里没人问功能好不好用，全在问要花多少钱、数据安不安全。成本账从内部说服工具，升级成了可复制的对外叙事。</p>
+<p class="lead"><strong>线索二 · 对外时钟跑到了内部交付前面（转换线）</strong></p>
+<p>周三央视采访日期开始倒逼交付链，演示视频「明天下午就要用」；周四出差路上，对外输出密度第一次压过对内交付。想演示放我家 web 端——「没部署好」；想演示生图平台——「也没部署好」。工具都在手边，就是够不着。48 小时里要兑现开营、培训、央视采访，对外承诺的时间表第一次跑在了内部交付前面。</p>
+<p class="lead"><strong>线索三 · 热闹背后，产品还没准备好接住人（信号线）</strong></p>
+<p>周五开营办得热闹，但同一晚的会上，小林 AI「能解决的问题很有限、和零食小龙虾割裂、钉钉接得吃力」被摆上台面，架构结论被推到「不能再拖」。大赛正把全公司的人推向 AI，产品却还差最后一道工序。周日的备课，正是在补这个闭环——「听过不算会，做过才算懂」，把一场培训从「讲完就算数」，变成一个「有输入、有产出、有验证」的闭环。</p>
+</div>
+<div class="panel" id="diary" style="--accent:#f78166;">
+<p class="lead"><strong>一个人这一周，被一句反问钉住了：「AI 不是提效的吗」。</strong></p>
+<p>周一他反复跟「记录」较劲。开会前单独给自己开一份听记，提醒同事记得关听记，翻到听记的发言人识别发现没一个是对的。他怕记错，比怕漏掉更甚。最后他做的却是减法——「那我也不收集材料了」。记录，然后做减法，他一天里把这两件事都做了一遍。</p>
+<p>周三他一整天在算账。公司的账、模型的账、用户的账，都有别人在算，只有他自己那笔账还空着。</p>
+<p>转折在周四的出差路上。办公室就是手机，所有事情隔着屏幕推进。他发了一句「AI 不是提效的吗」，发完自己愣了一会儿——一边拿 AI 省别人的时间，一边自己的时间被 AI 项目填满。中间夹了一场两分钟的会，聊一份视力报告：近视 25 度，使不上劲，只能记着。那一刻他没接上话。</p>
+<p>周五他纠结下周三自己讲什么，「会聊天的人很多，能把东西交出去的没几个」。</p>
+<p>周日他没出门，对着手机录了十二分半的口述。转出来的第一句是「嗯……我接下来准备开发一门 AI Agent 入门的课程」，嗯了两次，磕磕巴巴。可看着这些磕巴的字，反而比在脑子里盘的时候踏实。他写了一句「听过，不算会。做过，才算懂。」——一半说给学员，一半说给自己。</p>
+<p>从「记录」到「做」，这一周他走完了这段路。账有没有算清，还不一定；但想法第一次从脑子里，落成了几页能发出去的东西。</p>
+</div>
+<div class="panel" id="silence" style="--accent:#d2a8ff;">
+<p><strong>1. 空间全链路项目</strong> — 周一被点名「两周没推进」、项目经理 owner 缺位，此后整周再无音讯，减法仍然只做了一半。</p>
+<p><strong>2. 海外 18% 工时</strong> — 周一被点名（米酒 63%、YIYI 46%），一周过去没有任何回收动作；数字分身投入 4.6 天无锚定，直到周五才以「Paperclip 替代方案」的形式重新出现。</p>
+<p><strong>3. 小林 AI 架构结论</strong> — 周五被推到「不能再拖」的位置，但结论仍停留在「尽快给」，没有落地。</p>
+<p><strong>4. 展示件部署</strong> — 放我家 web 端、生图平台周四想演示时发现「都没部署好」，对外展示差最后一道工序。</p>
+<p><strong>5. 数据断点</strong> — 周二（8/25）和周六（8/29）两天没有复盘记录，本周的时间线有两处空白。</p>
+</div>
+<footer>每周复盘 · 自动生成 · 2026-08-30</footer>
+</div>
+<script>
+var tabs=document.querySelectorAll('.tab');
+tabs.forEach(function(t){t.addEventListener('click',function(){
+  tabs.forEach(function(x){x.classList.remove('active');});
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
+  t.classList.add('active');
+  document.getElementById(t.dataset.panel).classList.add('active');
+});});
+</script>
+</body>
+</html>
