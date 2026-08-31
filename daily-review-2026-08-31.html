@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 · 2026-08-31</title>
+<style>
+  :root { color-scheme: dark; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0d1117; color:#e6edf3; font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; line-height:1.75; padding:20px 16px 60px; }
+  .wrap { max-width:720px; margin:0 auto; }
+  header { text-align:center; padding:28px 0 18px; }
+  header h1 { font-size:26px; font-weight:700; letter-spacing:1px; }
+  header .sub { color:#8b949e; font-size:14px; margin-top:6px; }
+  .tabs { display:flex; gap:10px; margin:22px 0 0; }
+  .tab { flex:1; text-align:center; padding:12px 0; border-radius:12px; cursor:pointer; font-size:15px; font-weight:600; background:#161b22; border:1px solid #30363d; transition:all .2s; user-select:none; }
+  .tab.active-biz { background:linear-gradient(135deg,#1a3a6b,#2563eb); border-color:#3b82f6; color:#fff; }
+  .tab.active-diary { background:linear-gradient(135deg,#6b2a4a,#ec4899); border-color:#f472b6; color:#fff; }
+  .panel { display:none; margin-top:22px; background:#11161d; border:1px solid #21262d; border-radius:16px; padding:26px 22px; }
+  .panel.show { display:block; }
+  .panel p { margin-bottom:16px; font-size:16px; color:#cdd9e5; text-align:justify; }
+  .panel p b { color:#fff; }
+  .biz .panel.show p b { color:#79b8ff; }
+  .diary .panel.show p b { color:#f9a8c9; }
+  .tagline { margin-top:26px; padding:16px 18px; border-radius:12px; font-size:14px; }
+  .biz-tag { background:rgba(37,99,235,.12); border-left:3px solid #3b82f6; color:#93c5fd; }
+  .diary-tag { background:rgba(236,72,153,.12); border-left:3px solid #ec4899; color:#f9a8c9; }
+  footer { text-align:center; color:#484f58; font-size:12px; margin-top:34px; }
+</style>
+</head>
+<body>
+<div class="wrap" id="app">
+  <header>
+    <h1>每日复盘</h1>
+    <div class="sub">2026年8月31日 · 周一</div>
+  </header>
+  <div class="tabs">
+    <div class="tab active-biz" id="tab-biz" onclick="show('biz')">📊 商业版</div>
+    <div class="tab" id="tab-diary" onclick="show('diary')">📝 日记版</div>
+  </div>
+
+  <div class="panel biz show" id="panel-biz">
+    <p><b>8月31日周一是三场会串起来的一天，三场会其实都在回答同一个问题：</b>AI委员会做了这么多东西，怎么让别人看懂、用上。</p>
+    <p>上午的月例会里，最大的一记反馈来自企业AI产品技术规划那场讨论。有同事直接说，整个AI的规划和战略还是不够清晰，跟外面部门交流时说不清楚我们做了个啥，讲出来很多都是底座的事，应用又很散。这句话值得掰开看。它真正的指控有两层，第一层是叙事缺失，没有一份系统化的介绍，导致每次对内对外都要从头解释；第二层更重，是地基和应用之间的连接没有被讲出来，别人看不到底座上面长出了什么、解决了谁的问题。对比飞书的做法就能看出差距，人家是从办公场景出发往上讲，我们是从底座往外推，方向反了，听的人自然接不住。</p>
+    <p>这条线在下午两场会里其实都有了答案，只是还没有人把它们串起来。专家套件评审会上，测试版小龙虾上已经摆出5个套件，UI交互按原型落了，安装流程跑通，财务内控场景的Agent输入源架构也定了（核心知识加代码、数据库MCP）。这场会暴露的问题是前端显示逻辑、数据输入源缺失这些工程细节，迭代节奏已经排到本周四或周五发新版本。也就是说，套件是从底座长出来的第一个能被业务直接摸到的应用形态。另一场AI产品落地进展会讲得更全，消费成交链路以放我家3.0为牵引，内容和视觉增长链路以小红书加AI视觉为牵引，两条链路实际上就是"底座之上有什么"的活答案。缺的是把这两场会的内容翻译成那位同事要的那种系统化介绍。这应该是接下来一周最值得做的一件事，成本不高，收益是对外话语权的修复。</p>
+    <p>第二条主线是培训与扩张的节奏问题。AI大赛信数重叠64人，合计300多人报名，AI问数和数字员工的分享排到下午，一开始纠结要不要开两场、要不要全司推送，最后拍板信数加AI竞赛的同学现场听，录播放林氏大学，其他人线上看。这个决策背后是键盘点破的现实：课程一开放报名就会涌进来，但报名多不等于到场多，上次报名一百多人实际参与更少，而且林氏大学一旦设课就会发全司培训通知，很难管。选录播留档，等于用最小的管理成本换最大的覆盖面，这个取舍是对的。</p>
+    <p>还有几个零碎但真实的进展。工单机器人正式环境要把知识库检索那一步换成调用数字分身，旧接口在测试环境能实现、正式环境被去掉了，需求已经提给啊超，说改动很快。小龙虾助手有用户报ENOTFOUND连不上API，排查下来是网络问题，开飞连VPN就好，跟之前阿云出差遇到的一模一样。数字分身在git上提了新版本，加了GLM 5.3 flash的配置。海外B2C切割去睿途邦之后，满意度调研确认不再发外部公司，只保留B2B业务方，IECM的业务基本只剩白雪那边的需求，这条线该收的手续可以办了。</p>
+    <p>团队周报的洞察给的是黄灯：主战场工时约40%，活跃战线12条以上，米酒和YIYI还有大量精力压在低优先级的海外IECM/BPS上。今天这三场会反过来印证了这个信号，做的东西够多，聚焦度才是真正稀缺的资源。素材库那边的问法也印证了，海外第一阶段需求已满足，继续往技术优化走还是停，等月会定分工。战线该合的合、该关的关，才能腾出手把那套系统化的叙事做出来。</p>
+  </div>
+
+  <div class="panel diary" id="panel-diary">
+    <p>早上有场月例会，拖到了周一中午。散会的时候脑子里留下一句话，是有同事说的，AI的规划和战略还是不够清晰，跟别的部门聊，讲的都是底座，应用散得很，别人听不懂我们到底做了啥。这话不太好听，但我记了一路。</p>
+    <p>下午先去听专家套件的评审。五个套件摆上了测试版小龙虾，安装流程跑通了，UI还是原型的样子，问题一堆，输入源缺、前端显示不对，但节奏有了，这周四五发新版。散会的时候我在想，那句话的答案其实就摆在这张桌子上。套件就是底座上面长出来的、业务能摸得着的东西。可我们从来没把它串起来讲过。缺的从来不是东西，是那个讲法。</p>
+    <p>再下一场是落地进展，两条链路，一条从放我家3.0走消费成交，一条走小红书和视觉。发言人讲得也散，我听得出来，这两条链路本身就是答案的骨架。散会路上我把三场会在脑子里过了一遍，觉得下周该自己动手把那个系统化的介绍写出来。成本不高，写出来，以后跟谁聊都不用从头解释。</p>
+    <p>培训的事纠结了一下午。AI问数的分享，要不要开两场，要不要全司推送，我给键盘抛了几个来回。键盘说，这种课一开放，人都会涌进来，人性使然。又补了一句，林氏大学一设课就发全司通知，那个动作很难管。最后拍了板，信数加AI竞赛的现场听，录播传林氏大学，其他人线上。报了三百多人，我心里清楚，来的不会多，上回一百多人报名，实际到的更少。无所谓了，录播留着，比面子重要。</p>
+    <p>四点多给自己倒了杯东西，坐了一会儿。翻了翻团队周报的洞察，黄灯，主战场工时四成，战线十二条。我盯着那个数字想，今天这三场会不就是证据吗。做的东西够多了，聚焦才是缺的。米酒和YIYI还有一大块精力压在海外IECM上，那条线业务基本只剩白雪的需求了，该收的手续得办。</p>
+    <p>晚上跟洁敏打了招呼，说今天不太想加班，先坐啊飞的车走了。雨还没停，等雨小点的功夫，把下午那句不太好听的话又想了一遍。他说得对。但今天下午两场会里已经躺着一半答案了，剩下的一半，是我还没写出来。那就写。</p>
+    <p>睡前顺手看了眼群消息。有人@我说明空的分身跑任务报错，ENOTFOUND，我回他说开飞连就好，阿云出差遇到过一模一样的。还有真意@放前面就能发出去的小bug，居然是这样，之前的设计略微有点局限，后面改掉。</p>
+    <p>今天没有大风大浪。就是有人把一面镜子递了过来，我看了一眼，决定下周把它擦干净。</p>
+  </div>
+
+  <div class="tagline biz-tag" id="tag-biz">📊 三场会其实都在回答同一个问题：AI委员会做了这么多东西，怎么让别人看懂、用上。</div>
+  <div class="tagline diary-tag" id="tag-diary" style="display:none">📝 有人把一面镜子递了过来，我看了一眼，决定下周把它擦干净。</div>
+
+  <footer>Hermes · 每日复盘 · 2026-08-31</footer>
+</div>
+<script>
+function show(t){
+  var biz=document.getElementById('panel-biz'), diary=document.getElementById('panel-diary');
+  var tb=document.getElementById('tab-biz'), td=document.getElementById('tab-diary');
+  var gb=document.getElementById('tag-biz'), gd=document.getElementById('tag-diary');
+  biz.className='panel biz'+(t==='biz'?' show':'');
+  diary.className='panel diary'+(t==='diary'?' show':'');
+  tb.className='tab'+(t==='biz'?' active-biz':'');
+  td.className='tab'+(t==='diary'?' active-diary':'');
+  gb.style.display=t==='biz'?'block':'none';
+  gd.style.display=t==='diary'?'block':'none';
+}
+</script>
+</body>
+</html>
