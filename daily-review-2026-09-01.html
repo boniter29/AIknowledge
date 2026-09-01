@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-09-01</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;background:#0d1117;color:#d7dce3;line-height:1.85;font-size:16px}
+.wrap{max-width:720px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:24px;font-weight:700;color:#f0f3f7;letter-spacing:.5px}
+.date{color:#8b949e;font-size:13px;margin-top:6px;margin-bottom:22px}
+.tabs{display:flex;gap:10px;margin-bottom:26px}
+.tab{flex:1;padding:11px 0;border-radius:12px;text-align:center;font-size:15px;font-weight:600;cursor:pointer;border:1px solid #2a3140;background:#151b26;color:#8b949e;transition:.2s}
+.tab.active-biz{background:linear-gradient(135deg,#1d3a6e,#2757a8);color:#fff;border-color:#3b6fd4}
+.tab.active-diary{background:linear-gradient(135deg,#5e2a4a,#a8446e);color:#fff;border-color:#d46a94}
+.panel{display:none;animation:fade .3s}
+.panel.show{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.lead{padding:18px 20px;border-radius:14px;margin-bottom:26px;font-weight:600;font-size:15.5px}
+.biz .lead{background:linear-gradient(135deg,rgba(39,87,168,.18),rgba(39,87,168,.06));border-left:3px solid #3b6fd4;color:#aecbfa}
+.diary .lead{background:linear-gradient(135deg,rgba(168,68,110,.18),rgba(168,68,110,.06));border-left:3px solid #d46a94;color:#f2b8cd}
+.panel.biz p{margin-bottom:18px;text-align:justify}
+.panel.diary p{margin-bottom:18px}
+.panel.diary p:first-child{font-size:17px;color:#f0d5e0}
+hr{border:none;border-top:1px dashed #2a3140;margin:30px 0}
+.foot{margin-top:34px;color:#566070;font-size:12px;text-align:center}
+strong{color:#f0f3f7}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘</h1>
+<div class="date">2026-09-01 周二 · 水滴</div>
+<div class="tabs">
+<div class="tab active-biz" id="tabB" onclick="sw('biz')">📊 商业版</div>
+<div class="tab" id="tabD" onclick="sw('diary')">📝 日记版</div>
+</div>
+
+<div class="panel biz show" id="p-biz">
+<div class="lead">今天所有的事都围着后天那场 Boss 演示转，但真正值得记的是两条暗线——数字分身从个人工具长成了团队套件，评测从速度焦虑逼出了方法。</div>
+<p>演示材料基本成型。林氏AI业务产品技术架构全景 V7.1 和 AI大赛三页直接演示版两份 HTML 都做出来了，生图路线，你觉得基本满足需求，后面继续迭代。标题一开始被自己毙掉，理由是太容易被喷，改成「小林AI、小龙虾不同架构评测结果同步」。明晚拉 heven、德彬、健新过一遍，陈超那边还要约落地细节的专项对齐。</p>
+<p>数字分身直接进演示。今天它已经在 sit 群里回答"下周你有什么计划"，身份和方向都答对了，因为它蒸馏的是你一整年的聊天记录和语料。德彬要照着做小龙虾版本，你干脆决定把创建分身做成套件，实验室和评测纠正保留为核心功能，electron 客户端已经打包，github 私仓给米酒、文鑫开了权限。</p>
+<p>评测这条线今天最扎眼。同样一份文件、同样一份提示词，Codex 不到六分钟交出 HTML，小龙虾跑了一个多小时还没输出。你迭代管理层汇报 skill 让大家帮跑评测，一个 HTML 要跑两个小时。判断下来大概率是并发量的限制，能力本身没掉队，claude agent sdk 按理会比 codex 还快。处置也干脆：把五个评测案例拆给没开梯子的同事，用小龙虾各跑一两轮，先拿结果，后天之前不等单点跑通。</p>
+<p>岗位盘点会的信息量在评价体系和实战表现的错位上。有同事第一次做盘点，把 AI 产品经理拆成两个方向，能力归到 AI 认知、应用探索、赋能几个维度，走继任、育苗、9月调薪的流程。真正值得带走的是浮云那段——人才测评给的评价是发展潜力和上进心不足，可这个人经历过团队从五个人缩到一个人的动荡，独自承接了海外 B2C 和 B2B，还能给接手的同事做支持指引。纸面测评说他没有潜力，战场上他在独当一面，调薪和育苗计划要回答的正是这个矛盾。</p>
+<p>晋升辅导花了半个多小时，核心是同一件事：把做了什么翻译成解决了什么。履历删掉字段规则、流程清单这类岗位本来就要干的话，改成三段式经历加量化数据。项目补上业务指标——报关单原来多少人做、现在辅助生成之后覆盖怎么变。AI 部分单独成段，AI 剪辑工作台 demo 从 0 到 1、竞品分析技能、Codex 使用培训，这些是同级大多数人拿不出来的差异化。你让对方把所有材料先丢给 AI 跑一版，不要一口气做一百分，出个完成版一起讨论再迭代。</p>
+<p>另外两场会偏事务。费用分摊定了规则：模型平台按应用占比分账，月初两三号出上月的账单，运维发起报销，业务部门只核对金额走审批。知识库对比那场六分钟，问题很直接——钉钉飞书的知识库和外挂方案用 AI 问出来有没有差异，结论是技术上走的是同一条 RAG 轨道，差异在访问链路和权限。</p>
+<p>一天串起来看，演示是明线，暗线是你在把个人的 AI 实践不断变成组织里的东西。套件化的分身、可复用的评测方法、写给别人的晋升方法论，后天给 Boss 讲的其实就是这条线。</p>
+</div>
+
+<div class="panel diary" id="p-diary">
+<div class="lead">数字分身今天第一次在别人面前替我说话，它不会累，它说的每一句话最后都算在我头上。</div>
+<p>离后天还有两天。</p>
+<p>一早盯的是评测。同一份文件，同一份提示词，Codex 不到六分钟交出了 HTML，小龙虾跑了一个多小时还没有动静。同事把截图发过来，我盯着那两个时间看了半天，笑出声，又有点笑不出来。下午忍不住催米酒，什么时候能搞定，这个说了很久了，我开发都没有一周多。话说出口自己也知道，火气冲的是时间不等人，后天就要站在 Boss 面前了。好在心里有底，并发量的问题好查，能力没掉队。晚上干脆把五个评测案例拆出去，谁有空谁领一轮跑，先攒结果。</p>
+<p>傍晚数字分身在 sit 群里开口了。有人问它是谁，它答，我是水滴，林氏家居 AI 产品创新主管，现在主要在做 AI 大赛筹备和 AI 视频、小红书内容、AI 分身这几个方向。我看着那条回复愣了一下。它介绍我比我自己介绍自己还完整，毕竟它吃的是我一整年的聊天记录。德彬说想照着做一个小龙虾版本，我想了想，干脆把创建分身的能力做成套件，实验室和评测纠正留着，那是核心。客户端打包好，仓库开了权限，米酒和文鑫去 github 拿最新版。这件事磨了一个多星期，今天是它第一次在别人面前替我说话。</p>
+<p>中间还看了一份白皮书的初稿，提的意见很具体，尽可能结构化，重点有标注，每一页都要有中心思想和展开证据，适当用信息图。对方连着发来两版，我说信息密度高，可读性强，言简意赅，通俗易懂。改材料的活儿今天占了不少时间，都是给后天铺路。</p>
+<p>晋升辅导聊了半个多小时。他念材料，字段规则、流程清单、接口方案，我说这些是岗位本来就要干的事，写上去像凑数，真正要写的是报关单原来多少人做，现在辅助生成之后覆盖少了多少人。他说好，把材料全部丢给 AI 先跑一版。我补了一句，不要一口气做一百分，先出个完成版我们一起改。</p>
+<p>晚上跟一个同事聊了她被人缠着的事。我打字打得很直，你跟她纠缠过多了，很多时候没必要说服对方，表明你的态度就好。发出去之后自己顿了一下。这句话是说给她的，也是说给我自己的，边界这个东西，守它的时候最省力。</p>
+<p>群里有人问 codex 的安装包哪里下，除了闲鱼买。我说官网下载就好，不用买，账号才要买。又问要不要梯子。要用的。梯子怎么弄我不教，违法的事不公开教。总有人想手把手喂饭，愿意用的花点钱呗，闲鱼也行。</p>
+<p>睡前排了一遍明天的会，拉 heven、德彬、健新过演示材料，还要跟陈超约专项。数字分身还在群里替我值班，它不会累。我有点羡慕它，又有点替它紧张，它说的每一句话，最后都算在我头上。</p>
+</div>
+
+<div class="foot">Hermes 每日复盘 · 数据源：AI听记 5 场 / 聊天 157 条 · 自动生成</div>
+</div>
+<script>
+function sw(t){
+  document.getElementById('p-biz').classList.toggle('show',t==='biz');
+  document.getElementById('p-diary').classList.toggle('show',t==='diary');
+  document.getElementById('tabB').className='tab'+(t==='biz'?' active-biz':'');
+  document.getElementById('tabD').className='tab'+(t==='diary'?' active-diary':'');
+}
+</script>
+</body>
+</html>
