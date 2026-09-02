@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 · 2026-09-02</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",sans-serif;background:#0d1117;color:#d8dee4;line-height:1.85;font-size:16px}
+.wrap{max-width:720px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:24px;font-weight:700;margin-bottom:6px}
+.meta{color:#8b949e;font-size:14px;margin-bottom:22px}
+.tabs{display:flex;gap:10px;margin-bottom:26px}
+.tab{flex:1;text-align:center;padding:12px 0;border-radius:12px;background:#161b22;border:1px solid #21262d;cursor:pointer;font-size:15px;color:#8b949e;transition:all .2s;user-select:none}
+.tab.active{color:#fff;font-weight:600}
+.tab.biz.active{background:linear-gradient(135deg,#1d3a5f,#244a75);border-color:#388bfd}
+.tab.diary.active{background:linear-gradient(135deg,#4a2438,#6b3450);border-color:#db6396}
+.panel{display:none;background:#161b22;border:1px solid #21262d;border-radius:16px;padding:26px 22px}
+.panel.active{display:block}
+.panel h2{font-size:17px;margin:26px 0 10px;padding-left:12px;border-left:3px solid #388bfd}
+.panel.diary h2{border-color:#db6396}
+.panel h2:first-of-type{margin-top:0}
+.panel p{margin:12px 0;text-align:justify}
+.panel strong{color:#fff}
+.tag{display:inline-block;font-size:12px;padding:2px 10px;border-radius:20px;margin-right:6px;margin-bottom:12px}
+.biz-tag{background:#12283f;color:#58a6ff}
+.diary-tag{background:#3a1f2d;color:#ff8fb8}
+hr{border:none;border-top:1px dashed #30363d;margin:24px 0}
+.footer{margin-top:26px;text-align:center;color:#484f58;font-size:12px}
+@media (max-width:480px){.wrap{padding:20px 14px 40px}.panel{padding:20px 16px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘 · 2026-09-02</h1>
+<div class="meta">周三 ｜ AI听记 13 场 · 聊天 191 条 ｜ 主题：把活儿拆成 Agent 能接的标准</div>
+<div class="tabs">
+<div class="tab biz active" onclick="switchTab('biz')">📊 商业版</div>
+<div class="tab diary" onclick="switchTab('diary')">📝 日记版</div>
+</div>
+<div class="panel biz active">
+<div><span class="tag biz-tag">数字员工</span><span class="tag biz-tag">Agent 架构</span><span class="tag biz-tag">Skill 迁移</span><span class="tag biz-tag">月度汇报</span></div>
+<p>9月2日的信数团队，所有人都在往同一个方向挤，把各自的活儿交给 Agent。这一天开会近五个小时，跨了十三个议题，真正的分水岭不在谁用了哪个模型，而在哪些事被定义清楚了。</p>
+<p>近50分钟的架构评测会里，争的是小林AI自研的哈尼斯架构和林氏小龙虾的 Claude Agent SDK 谁更适合 Chat 场景。有人从行业经验出发，认为 SDK 在检索和任务拆分上占优。但实测数据摆在桌面上，DWS 检索知识库小龙虾用了2分多，扣子3分多，小A要7分多；把自研架构的推理程度开到最高，3分钟就能追平。争论的实质浮出来了，架构本身不构成壁垒，模型选择加推理配置才是真正的变量。</p>
+<h2>时间对照图里的定位</h2>
+<p>数字员工规划会把这层意思讲得更直白。有人拉出一张时间对照图，把 anthropic、OpenAI、腾讯、阿里、字节、kimi 各自的关键节点，和我们上小英AI 3.1、上林氏小龙虾、用 Claude Agent SDK 的时间点摆在一起。结论是前沿领域我们与全球同代，自主掌握的领域要往深打磨。公式也很干净，前沿模型、前沿翻译架构，加上自有战略知识和企业知识、MCP、评测，等于数字员工。</p>
+<p>战略经营的两个 skill 当天就在部署，CEO经营诊断向内找问题，战略管理向外定机会，方法论上直接引入毛选的矛盾论。海文为了调通工具，前一晚干到11点多。</p>
+<h2>一次成功的迁移，两个说不清的场景</h2>
+<p>同一天发生的另一件事，把这个公式做了一次实战验证。灰子团队之前在豆包里训练了一套实木家具 CAD 图纸加泵表的成本核算流程，因为涉及机密成本，要迁到林氏小龙虾。给到的方法分两步，先把流程拆成输入物、输出物和处理过程的标准定义，打包成协议通用的 Skill，再把整个流程事无巨细写成 handoff 文档，换一个 Agent 也能接着干。这套流程能迁走的前提，是它被一个人完整掌握过，输入输出和处理过程都是清楚的。</p>
+<p>这正好解释了同一天另外两个会的反差。小红书业务链路会上再问目标，答案还是模糊，部门走自然流没有投流经费，手里只有浏览量这类表层数据，甚至没有对接任何经营指标，最后连评测都直接取消了。供应链预测会上则坦率承认，销售预测接近世界级难题，上了AI效果也未必好，发货预测只能边看边调参数。三个案例放在一起看，AI放大的是定义清楚的东西，模糊的事情AI只会更快地产出模糊。</p>
+<h2>资源问题往往是定义问题</h2>
+<p>这种落差同样出现在资源协调上。有同事@过来问，9月的需求安排一个后端开发就够，现在两个人开发量撑不满，要不要和阿匡沟通人力调配。需求端填不满和需求端说不清，往往是同一件事的两面，排序能力缺失的团队，多给人力也只会摊得更平。</p>
+<h2>培训是隐藏的主线</h2>
+<p>今天还有一个隐藏的主线是培训。AI竞赛第三堂课讲 Agent 全栈开发，四章内容覆盖提示词、Agent 工程、Web Coding 和评测，基本是当下 Agent 落地的完整框架。课件发群里按需自取，业务同学的产品中心来的人最多。培训、Skill 迁移、述职辅导，这三件事表面不相干，推力是同一个，团队要跑起来，瓶颈在于每个人手里的活有没有被拆成机器能接的标准。周五要交经分会材料，明天下午见 boss，下周一月度汇报，米酒的述职 PPT 已经陪跑到 V6，每页要求补上项目角色和一句话价值陈述。这周的主角是材料，而材料的天花板，是今天这些会画出来的。</p>
+</div>
+<div class="panel diary">
+<div><span class="tag diary-tag">开不完的会</span><span class="tag diary-tag">述职陪跑</span><span class="tag diary-tag">培训第三课</span></div>
+<p>今天一整天都在开会。手机上看了下，十三个议题，快五个小时。晚上回过神来，最先想起的居然不是哪场会，而是两个画面。</p>
+<p>一个是海文昨晚11点还在搞工具调不通，今天演示的时候问"这个为什么调不了"。另一个是我自己，培训完瘫在椅子上，有人问我要不要加个会，我回了一句"静止中，然后又不想动，但是感觉事情又很多做不完"。</p>
+<p>这两个画面拼在一起，差不多就是今天的状态。事情多到一定地步，人会先停摆几秒。</p>
+<h2>述职材料第几稿了</h2>
+<p>上午给米酒过述职材料。这版已经不知道第几稿了，我提的意见越来越具体，具体到每一页要写清项目角色、每句话要讲清这个项目是干嘛的、连"从5人到1人"这种数字都要标出来。我让他找 Cris 再过一遍讲述逻辑。给 boss 的材料一直要求是最高的，这没什么好说的。说了一嘴"我真的不想去"，说完还是把材料改完了。</p>
+<p>中午出了个小插曲，培训评价的二维码扫不了，好几个人反馈，重新发了一次才好。</p>
+<h2>讲深讲浅，真不好拿</h2>
+<p>下午的培训是 AI 竞赛第三课，讲 Agent 全栈开发，提示词、Agent 工程、Web Coding、评测，四章正好是现在做 Agent 的完整链路。来的人比预想多，产品中心占了大头。讲完我问一个业务同学感受怎么样，能听懂吗，她说太忙了没来得及细想。我自己也发现，讲深讲浅这个度真不好拿，帖子发出去收作业，等反馈吧。</p>
+<p>下午几个会，小红书的链路评审，供应链的预测讨论。小红书那边目标还是模糊，问他们承接谁的需求、怎么定目标，答不上来，只说走自然流没经费，只有浏览量这种表层数据。我当时心里就咯噔一下，连经营的事都没接上，这个项目的价值点在哪呢。晚上干脆把评测取消了。供应链那边倒是坦诚，说销售预测是世界上最难的难题之一，上了AI也不一定行。我喜欢这种先把话说实的态度。</p>
+<h2>帮人把一件事理清楚</h2>
+<p>晚上有个很愉快的讨论。灰子团队在豆包里训练了一套图纸成本核算，想迁到林氏小龙虾来。我建议他先把流程事无巨细打包成 handoff 文档，再把输入物、输出物、处理过程拆成标准定义，做成通用 Skill。他听完说"这个很直观"。能帮人把一件事理清楚，比多开三个会有用。</p>
+<p>然后是小程序里几个琐碎的回合。有人问额度为什么申请不了，有人问能不能把我的 Codex 额度反代给大家用，我说回头有空研究下。我在群里 @文鑫，让参考悟空和豆包工作，下周出个 demo。还有一条让同事去问林氏小龙虾，"你问我的这些问题都可以问林氏小龙虾"，结果她说希望一步一步教，安装完跑来问怎么发消息。我和另一个同事都被问烦了。我在群里开了句玩笑，跟不上时代就要被淘汰，不能还要喂饭到嘴边。玩笑归玩笑，其实培训第三章讲学习方法，第一章讲提示词，这些课就是为了让更多人不用被喂饭。</p>
+<h2>睡前</h2>
+<p>睡前想了下这周的排期。周五交经分会材料，明天下午见 boss，下周一月度汇报，后天还有 90 天 SOP 的会。材料巨多，Codex 置顶快20个了。有人问我怎么样，我说行吧，3q。</p>
+<p>忙，但是知道自己在忙什么。这就是今天。</p>
+</div>
+<div class="footer">Hermes 每日复盘 · 数据来源：钉钉AI听记 + 聊天记录 · 2026-09-02</div>
+</div>
+<script>
+function switchTab(t){
+document.querySelectorAll('.tab').forEach(e=>e.classList.remove('active'));
+document.querySelectorAll('.panel').forEach(e=>e.classList.remove('active'));
+document.querySelector('.tab.'+t).classList.add('active');
+document.querySelector('.panel.'+t).classList.add('active');}
+</script>
+</body>
+</html>
