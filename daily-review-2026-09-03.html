@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-09-03</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#e6e6e6;font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.85;font-size:16px}
+.wrap{max-width:720px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:24px;text-align:center;margin:14px 0 4px}
+.date{text-align:center;color:#8b949e;font-size:14px;margin-bottom:26px}
+.tabs{display:flex;gap:10px;justify-content:center;margin-bottom:28px}
+.tab{flex:1;max-width:220px;padding:12px 0;text-align:center;border-radius:12px;background:#161b22;color:#8b949e;font-size:15px;cursor:pointer;border:1px solid #21262d;transition:.2s}
+.tab.active-a{background:#1c2a44;color:#7ab3ff;border-color:#2d4a7a;font-weight:600}
+.tab.active-b{background:#2e1f28;color:#ff9db8;border-color:#5a3a4a;font-weight:600}
+.panel{display:none}
+.panel.show{display:block}
+.panel h2{font-size:18px;margin:30px 0 12px;padding-left:10px;border-left:3px solid #7ab3ff}
+.panel-b h2{border-color:#ff9db8}
+.panel p{margin:14px 0;color:#d0d7de}
+.panel .lead{font-size:17px;color:#fff;margin-bottom:22px}
+.panel-b .lead{color:#ffe3ec}
+strong{color:#7ab3ff}
+.panel-b strong{color:#ff9db8}
+.foot{margin-top:40px;padding-top:18px;border-top:1px solid #21262d;color:#6e7681;font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘</h1>
+<div class="date">2026-09-03 周四</div>
+<div class="tabs">
+<div class="tab active-a" id="tabA" onclick="sw('a')">📊 商业版</div>
+<div class="tab" id="tabB" onclick="sw('b')">📝 日记版</div>
+</div>
+<div class="panel show" id="pa">
+<p class="lead"><strong>一句话定调：</strong>今天是答辩评审日，一整天的晋升述职、AI大赛的boss反馈和费控套件的自研决策，其实都在回答同一个问题，AI落地这件事，判断标准正在从"做得漂亮"换成"用得真实"。</p>
+<p>上午是连续的产品岗述职。Cris、陈曦、东霓、何南、清晖，加上供应链的杨连志和做了十年客服系统的何新，七八场评下来，最直观的感受是<strong>表达质量差距很大</strong>。东霓的材料视觉和重点标注明显高一档，履历有重点标识，项目都是林氏服务、门店生命周期这类难打的硬仗。这直接催生了中午关起门的复盘：米酒的材料被点出太糙，拿东霓的当对照。更关键的反馈落在评委问答环节，20分钟没用完、问答答得不够展开，而评委问答恰恰是表现自己的窗口。<strong>材料是入场券，临场才是得分点</strong>，这条线今天被反复验证。</p>
+<p>下午88分钟的大会里，boss对空间生图的反馈把"真实感"这个主题推到了顶点。团队想给客户生成更精致、风格统一的图，boss的回应是打开淘宝看评论区的图，用户就是看那些"简陋"的图下单的，我们的人群就是住这样的家的人。精致化是团队的审美偏好，真实还原才是转化率的入口，这个判断决定了后续方向：暂缓过度美化的营销功能，优先打磨"客户拿自家照片想象场景"这类基础能力。AI大赛也同步了数据，初筛前69支队伍最终组织成4支250人，跨部门35支。但boss抛出了组织层面的隐忧，业务可能认为大赛项目完全由IT搞，他们只负责提想法，这与"让业务自己动手提高AI认知"的初衷有出入，边界宣导要跟上。</p>
+<p>傍晚的费控套件会议是今天最有战略味道的决策。团队自研的套件暂时不如业务组现成的效果好，但结论是<strong>先做出来、先给分支</strong>。理由有三层：我们后续拥有的企业数据最多，这套东西会直接跟各个环节打通，费用全是企业承担，长期这条链路最优。配合林氏小龙虾下周接入GPT-5.6，模型侧的差距会收窄。这和白天述职里反复出现的逻辑一致，先跑通业务，再跑系统。</p>
+<p>另外两件执行层的事也值得记。月度汇报材料的Skill迭代到第16版发给了全组，结论是格式限制和效果要取平衡；小林AI在给boss演示前出了会话时间戳错乱、入口数据不同步的问题，紧急排查修复，演示型产品的"能看"本身就是需求。</p>
+<p>今天的因果线可以收成一句：<strong>无论晋升答辩、AI大赛还是套件自研，评判的重心都在从"输出物好不好看"移向"真实场景里有没有人真用它"</strong>。下周一的月会汇报材料应该把这个定调写进去。</p>
+</div>
+<div class="panel panel-b" id="pb">
+<p class="lead"><strong>今天评了一整天答辩，晚上回家的时候脑子还停在会议室里。</strong></p>
+<p>最早的一场是Cris的，六个人坐一圈，线上系统直接下发数字材料，评委打分也在线上点。我本来下午还有个评审，他们说T3到T4的我本来不够资格，结果还是把我拉去了。好吧，评就评。</p>
+<p>上午评下来印象最深的是东霓的材料。左边个人信息，右边履历，重点都有标注，项目挑的都是林氏服务、门店生命周期这种难打的仗。到了中午我关起门跟米酒说，你今天的材料和表达实在太糙了，别怪我直说，人家东霓的PPT你对比看一下。话是狠了点，但第一次当这个评委，看完才知道好的长什么样。后来跟另一头的同学复盘，说今天整体表达比之前好，就是讲得太少，20分钟没用完，评委问答也没答开。评委问答其实是最好的表现自己的时候啊。</p>
+<p>下午的大会开了88分钟，讲AI大赛、数字分身和空间生图。讲到生图，boss说了一句让我记到现在的话，他说你打开淘宝看看评论区的图，客户就是看那些图下单的，我们的人群就是住这样的家的人。会议室安静了一下。我们一直想把图做得精致、风格统一，可用户买的可能恰恰是那个"简陋"。有同事在会上嘀咕，说每个人的体感又不太一样，一个平台一个样。也是。</p>
+<p>散会后就没停过。小林AI出岔子，有些会话时间戳是错的，钉钉入口和OA入口的历史还不一样，眼看下午要给boss演示，急得连发好几条消息。刚给boss演示完，那边又发现codex拉错了东西。带演示的日子就是这样，产品在后台藏着的问题，全挑最要命的时候冒头。</p>
+<p>傍晚跟人聊费控套件。说实话自研这套暂时效果不如人家，但我还是拍板先做出来。道理很简单，企业数据在我们手里最多，链路跟各个环节打通，费用全是企业担的，先给个分支，越做越好就行。反正小龙虾下周接了新模型，差距不会大。</p>
+<p>夜里还在改东西。月度汇报材料的Skill今天迭代到第16版，测了好几版，格式限制狠了效果掉，不限制格式又乱，最后取了个平衡发群里让大家自取。有人问我用了什么模型，GLM 5.3 flash，效果还可以。</p>
+<p>躺下之前想了想，今天听了一天别人怎么汇报，自己也在被审视。材料和真实之间隔的那层纸，东霓捅破了，boss用淘宝评论也捅破了。明天该把下周一汇报的那版材料改一改了。</p>
+</div>
+<div class="foot">每日复盘 · 2026-09-03 · 商业版 & 日记版</div>
+</div>
+<script>
+function sw(x){for(const p of ['a','b']){document.getElementById('p'+p).classList.toggle('show',p===x);document.getElementById('tab'+p.toUpperCase()).classList.toggle('active-a',p==='a'&&x==='a');document.getElementById('tab'+p.toUpperCase()).classList.toggle('active-b',p==='b'&&x==='b');}}
+</script>
+</body>
+</html>
