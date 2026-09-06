@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每周复盘 2026-08-31 ~ 2026-09-06</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --blue: #58a6ff;
+    --orange: #f78166;
+    --purple: #d2a8ff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.75;
+    padding: 24px 16px 48px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 24px; }
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 4px 14px;
+    margin-bottom: 12px;
+  }
+  h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  .tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    padding: 12px 0;
+    z-index: 10;
+  }
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px 8px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--muted);
+    background: var(--card);
+    transition: all .2s;
+    user-select: none;
+  }
+  .tab.active-biz { background: rgba(88,166,255,.15); border-color: var(--blue); color: var(--blue); }
+  .tab.active-diary { background: rgba(247,129,102,.15); border-color: var(--orange); color: var(--orange); }
+  .tab.active-silence { background: rgba(210,168,255,.15); border-color: var(--purple); color: var(--purple); }
+  .panel { display: none; animation: fade .3s; }
+  .panel.show { display: block; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px);} to { opacity: 1; transform: none; } }
+  .thesis {
+    background: var(--card);
+    border-left: 3px solid var(--blue);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .thread { margin-bottom: 22px; }
+  .thread h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--blue);
+    font-weight: 700;
+  }
+  .thread p { font-size: 15px; color: #c9d1d9; }
+  .diary-p { font-size: 15.5px; color: #d5c9bd; margin-bottom: 18px; }
+  .diary-p.first { color: var(--orange); font-weight: 600; }
+  .silence-item {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    font-size: 14.5px;
+  }
+  .silence-item b { color: var(--purple); }
+  footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 32px; }
+  .accent-blue { color: var(--blue); }
+  .accent-orange { color: var(--orange); }
+  .accent-purple { color: var(--purple); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="badge">WEEKLY REVIEW · 周度版 Pro</div>
+    <h1>每周复盘</h1>
+    <div class="sub">2026-08-31（周一）~ 2026-09-06（周日）</div>
+  </header>
+
+  <div class="tabs">
+    <div class="tab active-biz" id="tab-biz" onclick="show('biz')">商业版</div>
+    <div class="tab" id="tab-diary" onclick="show('diary')">日记版</div>
+    <div class="tab" id="tab-silence" onclick="show('silence')">沉默板</div>
+  </div>
+
+  <!-- 商业版 -->
+  <div class="panel show" id="panel-biz">
+    <div class="thesis">本周定调：AI 落地的判断标准，这一周完成了从「做得漂亮」到「用得真实」的换轨。</div>
+    <div class="thread">
+      <h3>线索一 · 从「叙事缺失」到「找对痛点」——一场自我纠偏</h3>
+      <p>周一有同事当面说 AI 的规划和战略「不够清晰，讲的都是底座，应用散得很，别人听不懂我们做了啥」。这话被拆成两层：叙事缺失，以及底座与应用之间的连接没被讲出来。当晚你决定「下周把系统化介绍写出来」。但到周五，摆场 demo 被连泼两盆冷水——两年前就有人做过同类功能、上线两家店没跑通；业务判断「demo 只解决初稿生成，覆盖不了方案定下来之后的变更」。你才真正听懂：缺的不是「介绍」，是「没找到痛点」。判断标准从「输出物好不好看」移到「真实场景里有没有人真用它」，这句话周四被 boss 的淘宝评论（「用户就是看评论区那种简陋的图下单的」）点了题，周五落到行动（退回调研人效与卡点），周日落到「工具普及 vs 工具好用还差一层」。</p>
+    </div>
+    <div class="thread">
+      <h3>线索二 · 数字分身从个人工具长成组织资产</h3>
+      <p>周二它在 sit 群里替你开口、身份方向全对（因为蒸馏了你一整年的语料），你决定把「创建分身」做成套件；周三数字员工规划会把它抽象成公式——前沿模型 + 架构 + 企业知识 + MCP + 评测 = 数字员工，战略经营两个 skill 当天部署；周四费控套件拍板「先做出来、先给分支」，理由是「企业数据最多、链路全打通、费用企业担」；周日又顺着双周报的摩擦点，计划写每周自动汇总的洞察报告。个人实践 → 套件 → 组织能力，这条线一周走完。</p>
+    </div>
+    <div class="thread">
+      <h3>线索三 · 评测标准从「速度焦虑」逼成「深才是区分度」</h3>
+      <p>周二 Codex 六分钟 vs 小龙虾一小时，你急到催米酒；周三架构评测用实测数据证明「架构不构成壁垒，模型 + 推理配置才是变量」（DWS 检索 2 分 vs 小 A 7 分）；到周六，你独立测完 computer use 得出「强得离谱，但不好使」，并抛出一句「快得有点像假的，推理程度是不是太低了」。速度焦虑 → 吞吐 × 准确率 → 深才是区分度，这是一条从「被速度逼着」到「主动校准验收标准」的线。</p>
+    </div>
+    <p style="color:var(--muted);font-size:14px;margin-top:8px;">三条线合起来是同一件事：把「能不能用」的问题，从审美、速度和工具层面，一层层挖到「真实场景里有没有人真用、值不值得等」的底层。</p>
+  </div>
+
+  <!-- 日记版 -->
+  <div class="panel" id="panel-diary">
+    <p class="diary-p first">这一周，他一直在被递镜子。</p>
+    <p class="diary-p">周一那面镜子是同事递的。「AI 的规划还是不够清晰，讲的都是底座，应用散得很，别人听不懂我们做了啥。」话不太好听，他记了一路。散会路上他把三场会在脑子里过了一遍，发现答案其实就摆在专家套件那张桌子上——套件就是底座上面长出来的、业务能摸得着的东西，缺的从来不是东西，是那个讲法。晚上他跟自己说：下周把它擦干净。</p>
+    <p class="diary-p">周二那面镜子是他自己做的。数字分身在 sit 群里开口，介绍他比他自己还完整，因为它吃的是他一整年的聊天记录。他盯着那条回复愣了半天，有点羡慕它不会累，又有点替它紧张——它说的每一句话，最后都算在他头上。</p>
+    <p class="diary-p">周四那面镜子是 boss 递的。「你打开淘宝看看评论区的图，用户就是看那些图下单的，我们的人群就是住这样的家的人。」会议室安静了一下。他和材料之间、和真实之间隔的那层纸，被这一句话捅破了。</p>
+    <p class="diary-p">周五那面镜子是历史递的。摆场 demo 他上午还当成本周主线成果，下午才知道两年前就有人做过、上线两家店没跑通。原来今天踩的是一条两年前有人走过的路，路上的坑都还在原处。他愣完，反而踏实了：上午以为做成了件事，下午发现那件事早失败过一次，傍晚找到了真正该做的事——「今天是赚的」。</p>
+    <p class="diary-p">周六他学会了自己照镜子。从「人类躺平吧」到「特定场景才顺畅」，就隔了几个小时。以后看到「强得离谱」四个字，先想想它一步要几秒、错了几次，再决定信不信。</p>
+    <p class="diary-p">周日，他坐在那里催双周报，把没交的名字一个个 @ 出来。突然想明白一件事：机器能替人写，替不了人记得。工具链做到现在，最后卡住的居然是「记得交作业」这一步。</p>
+    <p class="diary-p" style="color:var(--orange);">下周还有月会、90 天 SOP、德彬的对比结论。他没说累，只说：行吧，3q。</p>
+  </div>
+
+  <!-- 沉默板 -->
+  <div class="panel" id="panel-silence">
+    <div class="silence-item"><b>接口联调</b>：8/25 交代，近两周反复拉扯，到 9/4 才正式动手。根因不是技术，是「先问清楚再动手」的常识判断跟不上推进节奏——数字分身卡在公网域名申请，聊完才发现机器全在 IDC 内网，压根不需要公网。</div>
+    <div class="silence-item"><b>海外 IECM/BPS</b>：周一就下了判断「该收的手续得办」，米酒和 YIYI 还有大量精力压在这条低优先级战线上，一周过去未见收尾动作。</div>
+    <div class="silence-item"><b>系统化叙事 / 对外介绍</b>：周一被点破、也决定「下周写」，但本周被材料压满，这份「成本不高、收益是话语权修复」的文档始终没落笔。</div>
+    <div class="silence-item"><b>摆场 demo</b>：两年前失败过一次、今年又重走一遍——组织记忆的缺失，让同样的坑被踩了两次。</div>
+    <div class="silence-item"><b>浮云的晋升矛盾</b>：纸面测评「潜力不足」vs 实战独当一面，调薪与育苗计划要回答的矛盾，本周没有结论。</div>
+    <div class="silence-item"><b>九大 AI 专项</b>：29 个提炼成 9 个核心，90 天 SOP 倒计时从周五才开始，全部处在起步阶段。</div>
+    <div class="silence-item"><b>小红书</b>：目标反复「说不清」（周三连评测都取消了），曝光率痛点刚锁定，投放数据与选题还没出。</div>
+  </div>
+
+  <footer>每周复盘 · 周度版 Pro · 由 Hermes 自动生成</footer>
+</div>
+
+<script>
+function show(name) {
+  var ids = ['biz', 'diary', 'silence'];
+  ids.forEach(function(id) {
+    var p = document.getElementById('panel-' + id);
+    var t = document.getElementById('tab-' + id);
+    if (id === name) {
+      p.classList.add('show');
+      t.className = 'tab active-' + id;
+    } else {
+      p.classList.remove('show');
+      t.className = 'tab';
+    }
+  });
+}
+</script>
+</body>
+</html>
