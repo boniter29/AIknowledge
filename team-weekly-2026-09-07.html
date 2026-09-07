@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>团队周报洞察 · 08/31 ~ 09/06</title>
+<style>
+  :root {
+    --bg: #0d1117; --panel: #161b22; --panel2: #1c2129; --border: #30363d;
+    --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff;
+    --green: #3fb950; --yellow: #d29922; --red: #f85149; --purple: #bc8cff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.6; padding: 16px; max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 1.5rem; margin: 8px 0 4px; }
+  h2 { font-size: 1.15rem; margin: 24px 0 10px; padding-left: 10px; border-left: 3px solid var(--accent); }
+  .sub { color: var(--muted); font-size: 0.85rem; margin-bottom: 20px; }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-bottom: 14px; }
+  .badge { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+  .b-yellow { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .b-green { background: rgba(63,185,80,0.15); color: var(--green); }
+  .b-red { background: rgba(248,81,73,0.15); color: var(--red); }
+  .b-purple { background: rgba(188,140,255,0.15); color: var(--purple); }
+  .b-gray { background: rgba(139,148,158,0.15); color: var(--muted); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin: 8px 0; }
+  th, td { padding: 8px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 0.75rem; }
+  tr:last-child td { border-bottom: none; }
+  .meter { height: 10px; background: var(--panel2); border-radius: 6px; overflow: hidden; margin: 6px 0 2px; }
+  .meter > span { display: block; height: 100%; border-radius: 6px; }
+  .bar-yellow { background: var(--yellow); }
+  .bar-green { background: var(--green); }
+  .bar-red { background: var(--red); }
+  .bar-purple { background: var(--purple); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+  .stat { background: var(--panel2); border-radius: 10px; padding: 12px; }
+  .stat .num { font-size: 1.6rem; font-weight: 700; }
+  .stat .lbl { color: var(--muted); font-size: 0.75rem; }
+  .pill { display: inline-block; padding: 1px 8px; border-radius: 12px; font-size: 0.72rem; margin: 2px 2px 0 0; background: var(--panel2); border: 1px solid var(--border); }
+  ul { padding-left: 20px; margin: 8px 0; }
+  li { margin: 5px 0; font-size: 0.88rem; }
+  .note { color: var(--muted); font-size: 0.78rem; margin-top: 6px; }
+  .matrix td, .matrix th { font-size: 0.72rem; text-align: center; padding: 6px 4px; }
+  .matrix td:first-child, .matrix th:first-child { text-align: left; }
+  .dot { font-weight: 700; }
+  .d-main { color: var(--green); } .d-low { color: var(--red); } .d-side { color: var(--purple); } .d-mgmt { color: var(--muted); }
+  .tagline { font-size: 0.85rem; color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<h1>🧠 团队周报洞察</h1>
+<div class="sub">周期 2026-08-31（周一）~ 09-06（周日）· 双周报 W35-W36 · 6 人 AI 产品经理 + FDE 混合团队</div>
+
+<h2>〇 聚焦度体检</h2>
+<div class="card">
+  <span class="badge b-yellow">🟡 黄灯</span>
+  <p style="margin-top:10px;font-size:0.92rem">主战场工时约 <b>65%</b>，战线 <b>15 条</b>（红线 9 条）——总量尚可，但战线过散；S&OP 主战场连续两周期 <b>0 投入</b>；海外低优先级集中在两人超个人红线。</p>
+  <div class="grid" style="margin-top:14px">
+    <div class="stat"><div class="num" style="color:var(--yellow)">65%</div><div class="lbl">主战场工时占比（黄线 60%）</div><div class="meter"><span class="bar-yellow" style="width:65%"></span></div></div>
+    <div class="stat"><div class="num" style="color:var(--red)">15 条</div><div class="lbl">战线数量（红线 9 条）</div></div>
+    <div class="stat"><div class="num" style="color:var(--red)">13%</div><div class="lbl">海外 IECM/BPS 团队占比</div><div class="meter"><span class="bar-red" style="width:13%"></span></div></div>
+    <div class="stat"><div class="num" style="color:var(--red)">0%</div><div class="lbl">S&OP 供需联动投入</div><div class="meter"><span class="bar-red" style="width:2%"></span></div></div>
+  </div>
+  <p class="note">⚠️ 个人层面海外占比超 20% 红线：米酒 52%、YIYI 35%。海外战略定位「能做减法就做减法」，此二人工时需止血。</p>
+</div>
+
+<h2>一 价值链看板</h2>
+<div class="card">
+  <table>
+    <tr><th>项目</th><th>主战场</th><th>环节</th><th>断点</th><th>建议</th></tr>
+    <tr><td>专家套件（小龙虾）</td><td>③ 客服导购</td><td>已上线·未见效</td><td>56.2 万请求 / 599 用户，但无经营效果数据</td><td>文鑫+米酒对齐转化口径，验证后再复制</td></tr>
+    <tr><td>林氏放我家 3.0 生图</td><td>② 商品视觉</td><td>构建中</td><td>评测标准未定稿，影响 9 月开量</td><td>水滴+浮云下周定稿并启动数据回流</td></tr>
+    <tr><td>林氏放我家 2.0</td><td>② 商品视觉</td><td>使用中</td><td>Seedream 5.0 Pro 切换待跟踪成功率</td><td>浮云闭环旧家具置换场景切换指标</td></tr>
+    <tr><td>小红书全链路</td><td>① 内容生产</td><td>构建前</td><td>AI 产出对比数据未启动（10/24 演示倒计时）</td><td>YIYI 启动 9 月 500 篇笔记数据积累</td></tr>
+    <tr><td>小林软装终端 DEMO</td><td>② 商品视觉</td><td>已交付·未验证</td><td>缺真实资料版本验证</td><td>Cris 用真实资料校验数据版本与出图效率</td></tr>
+    <tr><td>S&OP 供需计划联动</td><td>④ S&OP</td><td>⚠️ 空转</td><td>连续两周期 0 投入</td><td>与健新确认优先级/指定 owner 或移出清单</td></tr>
+  </table>
+  <p class="note">断点规律：团队集中在「构建 / 做 DEMO / 做评测 / 做汇报材料」，而「经营效果数据回流、转化率验证、标杆复制」等硬仗才刚起步——警惕「易事驱逐难事」。</p>
+</div>
+
+<h2>二 低优先级方向（海外 IECM/BPS）</h2>
+<div class="card">
+  <table>
+    <tr><th>成员</th><th>事项</th><th>工时</th><th>占比</th><th>判断</th></tr>
+    <tr><td>米酒</td><td>IECM 标发/物流/平台接口 + BPS 财务闭环 + TEMU</td><td>4.7 天</td><td><b style="color:var(--red)">52%</b></td><td>🔴 超红线，含 0.5 天 TEMU 新店评估（新开发）</td></tr>
+    <tr><td>YIYI</td><td>BPS 重构结项 + 9 月需求输出 + 工单</td><td>3.2 天</td><td><b style="color:var(--red)">35%</b></td><td>🔴 超红线，「9 月需求输出」1.5 天属新增投入</td></tr>
+  </table>
+  <p class="note">止血建议：BPS/IECM 仅维持「已承诺交付」（结项验收、报关/商检发版、财务月结），冻结 9 月新增需求（YIYI 需求输出、TEMU 新店接入需单独确认是否属承诺范围）。</p>
+</div>
+
+<h2>三 项目 × 人员矩阵</h2>
+<div class="card">
+  <table class="matrix">
+    <tr><th>项目</th><th>Cris</th><th>YIYI</th><th>文鑫</th><th>浮云</th><th>米酒</th><th>水滴</th></tr>
+    <tr><td>小红书全链路</td><td class="dot d-main">0.2</td><td class="dot d-main">2.5</td><td class="dot d-main">1.5</td><td class="dot d-main">1.0</td><td></td><td class="dot d-main">0.25</td></tr>
+    <tr><td>小林软装 DEMO</td><td class="dot d-main">5.1</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>AI 生图/放我家 3.0</td><td class="dot d-main">1.9</td><td class="dot d-main">1.7</td><td></td><td class="dot d-main">6.5</td><td></td><td class="dot d-main">2.95</td></tr>
+    <tr><td>小林生影费用</td><td class="dot d-main">2.4</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>专家套件(小龙虾)</td><td></td><td></td><td class="dot d-main">4.0</td><td></td><td></td><td></td></tr>
+    <tr><td>小林AI 经营分析</td><td></td><td></td><td class="dot d-side">2.1</td><td></td><td></td><td></td></tr>
+    <tr><td>数字分身</td><td></td><td></td><td class="dot d-side">0.5</td><td></td><td class="dot d-main">3.7</td><td class="dot d-main">1.5</td></tr>
+    <tr><td>BPS(海外)</td><td></td><td class="dot d-low">3.2</td><td></td><td></td><td class="dot d-low">1.3</td><td></td></tr>
+    <tr><td>IECM(海外)</td><td></td><td></td><td></td><td></td><td class="dot d-low">3.4</td><td></td></tr>
+    <tr><td>AI 竞赛/内培</td><td class="dot d-mgmt">1.3</td><td class="dot d-mgmt">0.5</td><td></td><td class="dot d-mgmt">0.5</td><td></td><td class="dot d-mgmt">1.55</td></tr>
+    <tr><td>评级/治理/汇报</td><td class="dot d-mgmt">1.4</td><td class="dot d-mgmt">1.75</td><td class="dot d-mgmt">1.6</td><td class="dot d-mgmt">1.0</td><td class="dot d-mgmt">0.9</td><td class="dot d-mgmt">2.75</td></tr>
+  </table>
+  <p class="note">数字单位：天（双周）。<span style="color:var(--green)">●</span>主战场 <span style="color:var(--red)">●</span>海外低优先级 <span style="color:var(--purple)">●</span>经营分析/数字分身等中间地带 <span style="color:var(--muted)">●</span>管理/学习/治理。</p>
+</div>
+
+<h2>四 风险与卡点</h2>
+<div class="card">
+  <table>
+    <tr><th>风险/卡点</th><th>涉及方</th><th>状态</th><th>影响</th></tr>
+    <tr><td>放我家 3.0 生图评测标准未定稿</td><td>空间/营销/业务</td><td>卡 2 周</td><td>影响 9 月生图开量与数据回流</td></tr>
+    <tr><td>无实景参考图及空间/风格/产品效果标准未统一</td><td>空间/营销/业务</td><td>卡 2 周</td><td>放我家 3.0 验收口径无法收敛</td></tr>
+    <tr><td>小林生影模型费用分摊规则</td><td>IT/财务/业务</td><td>进行中</td><td>费用结算无法落地</td></tr>
+    <tr><td>数字分身数据权限与岗位克隆边界</td><td>健新/Cris</td><td>进行中</td><td>数字分身规模化受限</td></tr>
+    <tr><td>小林 AI 会话时间戳错乱、入口历史不一致</td><td>heven(研发)</td><td>已定位待验证</td><td>影响 boss 演示与用户信任</td></tr>
+  </table>
+  <p class="note">风险栏填写率不均衡：水滴(4 项)、浮云(1 项)有实质风险，其余成员「暂无/None」——专家套件生产部署、海外工单等高危事项缺风险记录。</p>
+</div>
+
+<h2>五 行业信号对照</h2>
+<div class="card">
+  <table>
+    <tr><th>信号</th><th>与团队连接</th></tr>
+    <tr><td>Mistral agentic search：给 LLM 检索工具让其自主搜索，金融长文档基准准确率 +27%（vs 一次性 RAG）</td><td>团队正在做知识库/DAM 选型（水滴「知识库对比 RAG/MCP」、YIYI「AI 素材库」、文鑫「战略知识库」）——可直接借鉴「让模型自己检索」思路，而非锁死 RAG 管道</td></tr>
+    <tr><td>「硬件是入场券，AI 理解深度才是胜负手」+ 飞书 AI Notes 打开率仅 3%</td><td>文鑫正在从自建 Agent 平台转向调研通用竞品(PaperClip)——方向决策别纠结「平台/硬件形态」，抓「场景理解深度」；3% 打开率警示团队内部 AI 会议纪要/复盘类产品要往「看了能干什么」定位</td></tr>
+  </table>
+  <p class="note">数据来源：近两周 Notion 剪藏归档（9/05 鲸犀·AI 录音硬件圆桌、8/29 Mistral agentic search）。</p>
+</div>
+
+<h2>六 个人贡献摘要（只报信号，非考核）</h2>
+<div class="card">
+  <ul>
+    <li><b>Cris</b>：小林软装终端 DEMO 打通「画布→AI 搭配→后端→部署」最小闭环（5.1 天，聚焦度标杆之一）；完成职级述职 + 管理/AI Agent 培训（学习信号正面）。</li>
+    <li><b>YIYI</b>：小红书全链路首次拉通梳理 + 输出卡点清单；但 BPS 占 35%（结项 + 9 月需求 1.5 天新增投入），主战场被挤占，需警惕「结项变持续开发」。</li>
+    <li><b>文鑫</b>：专家套件 78 个 skill 全量生产部署上线（原型→生产的跨越）；DeepSeek harness / PaperClip 竞品调研启动（学习信号正面）。</li>
+    <li><b>浮云</b>：放我家 6.5 天（65%）高度聚焦，Seedream 5.0 Pro 用 120 组真实用例完成场景化切换决策——团队聚焦度标杆。</li>
+    <li><b>米酒</b>：IT 必答接入数字分身，接口联调 80%（回复 <1 分钟，主战场正向）；但海外 IECM/BPS 占 52% 严重偏离主战场，含 TEMU 新店评估新开发项。</li>
+    <li><b>水滴</b>：AI 生图 3.0 评测标准 + 门店摆场 DEMO；内培 1.55 天 + 评级盘点，赋能与治理投入占比大（管理岗职能）。</li>
+  </ul>
+</div>
+
+<h2>七 周期趋势（W33-34 → W35-36）</h2>
+<div class="card">
+  <ul>
+    <li>商品视觉 ↑：从「模型选型评测」推进到「回归测试 + 用例平台 + 评测标准 + DEMO」</li>
+    <li>专家套件 ↑：从「原型 V59」跨越到「78 skill 生产部署上线」</li>
+    <li>数字分身 ↑：从「MVP 方向确认」到「IT 必答接口联调 80%」</li>
+    <li>小红书 ↑：从「业务盘点」到「全链路拉通 + 卡点清单」，但仍处前端，10/24 演示数据积累未启动</li>
+    <li>海外 BPS/IECM →：总量持平，但 YIYI 从「结项」转向「9 月新需求」，有持续化风险</li>
+    <li>S&OP →：连续两周期 0 投入，持续空转</li>
+  </ul>
+</div>
+
+<div class="note" style="margin-top:20px;text-align:center;padding:10px">
+  本报告为诊断工具，非考核工具。量化信号仅产生假设，需 1:1 验证。<br>
+  生成时间 2026-09-07 · 数据来源：DWS 双周报（6 人全量）
+</div>
+</body>
+</html>
