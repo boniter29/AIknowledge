@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 · 2026-09-09</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#e6e6e6;font-family:'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;line-height:1.85;padding:24px 16px 60px}
+.wrap{max-width:720px;margin:0 auto}
+h1{font-size:26px;margin-bottom:6px}
+.date{color:#8b949e;font-size:14px;margin-bottom:24px}
+.tabs{display:flex;gap:8px;margin-bottom:28px;position:sticky;top:0;background:#0d1117;padding:12px 0;z-index:10}
+.tab{flex:1;padding:12px 0;text-align:center;border-radius:12px;background:#161b22;color:#8b949e;cursor:pointer;border:1px solid #21262d;font-size:15px;transition:.2s}
+.tab.active-biz{background:#1c2a4a;color:#79b8ff;border-color:#2c4a7a}
+.tab.active-diary{background:#3a1f2e;color:#ff9bb3;border-color:#6a2f4a}
+.panel{display:none;animation:fade .3s}
+.panel.show{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.panel p{margin-bottom:18px;font-size:16px}
+.panel-biz{border-top:3px solid #316dca;padding-top:24px}
+.panel-diary{border-top:3px solid #f272a0;padding-top:24px}
+.tag{display:inline-block;font-size:12px;padding:3px 12px;border-radius:20px;margin-bottom:16px}
+.tag-biz{background:#1c2a4a;color:#79b8ff}
+.tag-diary{background:#3a1f2e;color:#ff9bb3}
+.footer{margin-top:48px;color:#484f58;font-size:13px;text-align:center;border-top:1px solid #21262d;padding-top:20px}
+::selection{background:#316dca;color:#fff}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘</h1>
+<div class="date">2026年9月9日 · 星期三</div>
+<div class="tabs">
+<div class="tab active-biz" id="tab-biz" onclick="show('biz')">📊 商业复盘版</div>
+<div class="tab" id="tab-diary" onclick="show('diary')">📝 日记版</div>
+</div>
+<div class="panel panel-biz show" id="panel-biz"><span class="tag tag-biz">商业版</span>
+<p>9月9日的主题只有一句话，所有事都指向同一个判断，AI要往深水区走，靠热情推进的阶段结束了，接下来要靠标准、流程和账本来推进。</p>
+<p>这条线在下午的品牌词打标人工复核提效会上第一次落地。会前你在群里明确压住了节奏，有同事急着分析要不要用外部产品、要不要证明它不行，你直接说这些都是猜测，先沟通，定义清楚问题再谈解决方案，不要那么快分析到细节。这个表态本身比会议结论更重要，因为品牌词打标这类复核工作，真正的瓶颈从来不是模型能力，而是业务方到底想要什么结论。你在群里让诗诗把意图、背景、目的讲清楚，要测什么、给什么结论，这是把一个模糊的提效需求拖回需求定义的原点。</p>
+<p>晚上的数字分身评审是同一条线的第二个落点。看了钉钉分身之后你提出四个问题，没有问答蒸馏成型的过程、AI分身原则上不能承担责任所以设计里不该有隐瞒身份的要求、没有评测和自进化迭代、记忆和落档结构不确定是否保留镜我那套。这四个问题其实是一件事，一个AI产品如果缺少评测体系和责任边界的定义，它就不能进入承担业务后果的场景。加上林氏小龙虾设置框没有关闭按钮导致误操作丢配置这类细节，今天的评审信号很一致，产品从demo走向可用，中间隔着的是工程规范。</p>
+<p>第三条落点是立项标准。AI委员会例会定在9月17日，下周二下班前各版块交材料，本月林氏放我家、AI视觉、小红书要争取立项。你在群里反复强调立项标准就一条，有没有明显业务价值，结项能不能达成目标。Cris问三个项目是不是走常规项目流程，你回答先按常规要求准备材料，形式不要求，因为项目流程本身可能要改革。这说明流程改革和项目推进在同步进行，材料先动起来，等流程定了再对齐。</p>
+<p>今天的账本意识特别强。聊到生图和视频模型时，一组数字反复出现，游戏插画外包一张500到800块而token成本几十块，实拍短剧几十万而AI短剧token几千块，主图视频人力一条上百块， Lovart年费4000。你去年创业时这些账都亲手算过，所以当牛奶那边拿通义万相的低价视频来问评测时，你第一反应是提醒两件事，电商根本不理解模型边界只看到便宜，单次人机协作的效果和批量工程化是两回事。评测要测的不是效果上限，是生产可用性。这个判断直接决定了小林生影申请seedance权限之后，这单生意该怎么谈。</p>
+<p>一整天的因果链其实很清楚。模型侧banana让生图第一次理解句子、视觉专业理解比提示词技巧更保值，这是能力前提。业务侧电商要便宜量大的视频、复核要提效、分身要承担岗位知识，这是需求侧。中间的桥是标准，视觉标准、评测标准、立项标准、成本标准。今天做的所有事都是在把这座桥的桥墩一根根打下去。下周二收材料、9月17日例会，是这条线最近的检验点。</p>
+</div>
+<div class="panel panel-diary" id="panel-diary"><span class="tag tag-diary">日记版</span>
+<p>早上是被清迈的攻略网页叫醒的。同一个链接更新了一版，电子入境卡改了内容，加了象营和几条支线的攻略，马杀鸡和吃饭的可选项也补上了，让AI去翻了小红书挑的。樱花在群里被点名，Day1的马杀鸡要不要预约，晚上泰拳赛要不要提前买票。又核了一遍航班，好像跟网页有点对不上，看了下，是同一个。出差这件事已经从「去不去」进入「晚上危不危险」的阶段了，说明真的快了。</p>
+<p>上午最热闹的一块是生图。有人发了李继刚的画图提示词，你说了句实话，觉得李继刚写提示词是真牛，还提到上周开课的时候讲过他banana提示词的品鉴。然后话头一路往回倒。二十三年你就在公司落地AI出商品图，那时候用stable diffusion和midjourney，提示词不叫提示词，叫咒语，一大堆正向反向关键词，根本不是人话。直到banana出来，生图模型第一次理解了句子。你去年底写的nano banana提示词还留着，一大堆色号，让同事拿去跑跑看控制效果。现在的Image 2跟nano banana pro跑出来基本没区别。说到最后落在一句判断上，视觉专业不会过时，提示词总会过时。对那些真懂美术风格、构图技法的人，新模型反而是捷报。</p>
+<p>顺嘴算了笔账。游戏插画外包一张500到800，token成本几十块。实拍短剧几十万，AI短剧token几千。原本人力做一条主图视频上百块。去年买lovart年费4000，年会视频就是你生成的，米酒剪的。这些东西你张口就来，因为去年创业的时候每一笔都真金白银花过。</p>
+<p>下午是数字分身的事。看了钉钉分身，一口气提了四个问题，没有问答蒸馏成型的过程，AI分身不能担责所以设计里不该有隐瞒身份的要求，没有评测和自进化，记忆落档结构不知道保没保留镜我那套。德彬和文鑫被@了，文鑫后面帮忙迭代。林氏小龙虾的设置框没关闭按钮，点空白就关，设置没保存就丢了，这个也被记了一笔。折腾了一早上小龙虾还没装好。卡罗那边有数字分身需求，不想拿自己聊天记录做蒸馏，你让米酒转告，镜我可以指定数据范围，只提取工作相关的问答，蒸馏结果也能先给她看。周一教人力安装的时候就已经在用这套说辞安抚担心隐私的人了。</p>
+<p>还有一场没吵起来的架。有同事对着一个外部产品的测试需求分析了一大堆，要不要用外部、要花多少时间证明它不行。你把话按住了，说这一堆都是猜测，先沟通，定义清楚问题再想方案，也别急着给诗诗那边下结论，先问问她想让我们测什么、要什么结论。这个动作你做得越来越熟练了，不是因为变保守，是因为被没有定义的问题耗过的次数够多。</p>
+<p>傍晚牛奶那边的低价视频来了，业务发过来的，说效果和价格都有优势，让评测。你一看就知道是通义万相。先泼了盆冷水，电商根本不理解模型边界，只看到一个便宜的生产视频的工具，也看不出视频差异，可能他们对视觉的标准本身就不清晰。然后给了一条真正有用的提醒，单次人机协作的效果和批量工程化是两回事，之前用AI视频跑量测出来的转化数据，是建立在当时模型质量上的，行业里用通义万相的本来就不多。德彬被派去跟牛奶聊清楚态度，再一起算账。小林生影申请seedance权限的审批你点了同意，可以的话就立一下吧。</p>
+<p>晚上AI委员会的事也推进了。让林氏小龙虾把例会材料文档存档，形成样式规范沉淀成Skill，以后每月汇总自动按规范输出。例会定在17号，下周二下班前各版块交几句话和材料，本月林氏放我家、AI视觉、小红书争取立项。Cris问是不是走常规项目流程，你说先按常规准备，形式不要求，项目流程后面可能改革。立不立项的标准就一条，有没有明显的业务价值，结项能不能达成。</p>
+<p>碎碎的事也有。Trae第二次培训本来定今天，临时取消了，老师还在厦门，内部用Trae的人太少，后续改内部开发课程。有人手机连不上GPT，翻墙软件没开，安排产品过去看。珍珠看到你用阻断剂，闹着要营养师推荐，被逗笑了。</p>
+<p>睡前回头看，这一天其实一直在做同一件事。生图聊的是标准，分身评审提的是规范，视频评测算的是账，立项卡的是价值。热情阶段的东西都聊完了，剩下的全是把话说清楚、把账算明白的活。不性感，但就是这些活把桥架起来。清迈的攻略又近了一版，也算给自己的一个盼头。</p>
+</div>
+<div class="footer">由 Hermes 自动生成 · <a href="https://notion.so/3d6167d0fd0f81ef8d80d0c322bc8521" style="color:#484f58">Notion 存档</a></div>
+</div>
+<script>
+function show(t){
+  document.getElementById('panel-biz').classList.toggle('show', t==='biz');
+  document.getElementById('panel-diary').classList.toggle('show', t==='diary');
+  document.getElementById('tab-biz').classList.toggle('active-biz', t==='biz');
+  document.getElementById('tab-diary').classList.toggle('active-diary', t==='diary');
+}
+</script>
+</body>
+</html>
