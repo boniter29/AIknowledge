@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每周复盘 2026-09-07 ~ 2026-09-13</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --panel: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --muted: #8b949e;
+    --blue: #58a6ff;
+    --orange: #f78166;
+    --purple: #d2a8ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.75;
+    padding: 24px 16px 48px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 24px; }
+  header .range { color: var(--muted); font-size: 14px; margin-top: 4px; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+  .tab {
+    flex: 1; text-align: center; padding: 10px 0; border-radius: 10px;
+    background: var(--panel); border: 1px solid var(--border); cursor: pointer;
+    font-size: 15px; color: var(--muted); transition: all .15s ease;
+  }
+  .tab.active { color: #fff; border-color: transparent; }
+  .tab[data-tab="business"].active { background: rgba(88,166,255,.15); color: var(--blue); border-color: var(--blue); }
+  .tab[data-tab="diary"].active { background: rgba(247,129,102,.15); color: var(--orange); border-color: var(--orange); }
+  .tab[data-tab="silence"].active { background: rgba(210,168,255,.15); color: var(--purple); border-color: var(--purple); }
+  .panel { display: none; background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 24px 20px; }
+  .panel.active { display: block; }
+  .panel p { margin-bottom: 16px; }
+  .panel p:last-child { margin-bottom: 0; }
+  .lead { font-size: 16.5px; color: #fff; border-left: 3px solid; padding-left: 12px; margin-bottom: 20px; }
+  .panel.business .lead { border-color: var(--blue); }
+  .panel.diary .lead { border-color: var(--orange); }
+  .panel.silence .lead { border-color: var(--purple); }
+  .thread { margin-bottom: 18px; }
+  .thread h3 { font-size: 15.5px; color: #fff; margin-bottom: 8px; }
+  .panel.business .thread h3 { color: var(--blue); }
+  .panel.diary p { color: #d0d7de; }
+  .panel.silence ol { padding-left: 20px; }
+  .panel.silence li { margin-bottom: 12px; color: #d0d7de; }
+  .panel.silence li::marker { color: var(--purple); }
+  .footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 28px; }
+  .divider { height: 1px; background: var(--border); margin: 20px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>每周复盘</h1>
+    <div class="range">2026-09-07 ~ 2026-09-13</div>
+  </header>
+
+  <div class="tabs">
+    <div class="tab active" data-tab="business" onclick="switchTab('business')">商业版</div>
+    <div class="tab" data-tab="diary" onclick="switchTab('diary')">日记版</div>
+    <div class="tab" data-tab="silence" onclick="switchTab('silence')">沉默板</div>
+  </div>
+
+  <div class="panel business active" id="panel-business">
+    <div class="lead"><strong>这一周 AI 创新部从「把项目跑通」正式转向「证明自己值多少钱」，而验收标准、激励名额、数据口径三样东西同时跟不上这个转向——五天里所有会议都在为怎么把这份成绩单定价，以及怎么把价格定得住做准备。</strong></div>
+
+    <div class="thread">
+      <h3>线索一：从「验收缺位」到「标准打桩」</h3>
+      <p>周一，专家套件延期、智能美案 demo 跑通却进不了试点，根子其实是同一个：立项时没把「什么叫能用」写成可验收条款，执行到中段只能靠开会补定义。周二，AI 问数的内部分享把这条线往前推了一步——问数做不准十有八九不是模型不够聪明，是指标口径没人钉死（活跃用户怎么定义、欺诈用户算不算），评测要分离线拿标准答案 + 消融实验拆组件。周三，「标准」开始从一句抱怨落地成动作：品牌词打标先定义清楚问题再谈方案、数字分身评审点出缺评测与责任边界、立项标准只剩一条「有没有明显业务价值」。五天里，「标准」从诊断变成了三个具体的桥墩：评测体系、立项标准、成本账本。</p>
+    </div>
+
+    <div class="thread">
+      <h3>线索二：激励制度缺口的演化——从显现到收紧再到转向</h3>
+      <p>周一，口头「能者多劳给激励」撞上「组内只剩 1 个名额」的硬规则。周二，海外团队从六个人减到「半个人加半个人」，「撑不动了」成了高频词。周四，调薪定级会把缺口彻底坐实：30% 涨幅上限、只有 Chris 被点名且被承认薪资倒挂、建新明确以后名额严卡。周五，转向发生了——不再纠结名额，而是用「赋能」补产能：木木一对一培训（大课的粒度落不到她具体的桌面）、千问办公体验账号 20 人铺开、mycontext 仓库交给团队研究底层上下文。当制度收紧到极限，团队本能地转向「用 AI 工具 + 一对一辅导放大单人产能」，这是本周最值得记的判断。</p>
+    </div>
+
+    <div class="thread">
+      <h3>线索三：数据这条暗线——线上/线下两波数据从没整合</h3>
+      <p>周四被新哥点醒：斌哥的数据是直接生成、没经过处理的，更深的问题是线上没有线下字段，两波数据从来没整到一起。这和周一「56 万请求、经营效果数据是零」同源：技术数据有了，经营数据没有，中间缺的是「把请求翻译成经营语言」那一层。直到周日，这条线还停在周报催交和会议改期的收尾动作里，没有真正推进。</p>
+    </div>
+  </div>
+
+  <div class="panel diary" id="panel-diary">
+    <div class="lead"><strong>他这一周在反复算一笔账，到周日凌晨落地的时候，账本还是没合上。</strong></div>
+
+    <p>周一是被会议切碎的一天，四场会没有一场轻松。真正让他停下的，是傍晚写给团队的那段话：熬了几个月苦日子，就想着到清迈、中秋、国庆就好了，现在好日子快到了，也该想想国庆回来又要有苦日子。有人回他「还没出发你就想到回来干活了」，他笑了，说咱先不想后面的。这话一半玩笑，一半是实话——因为下午刚跟健新算过一笔激励的账：团队效率翻了几倍，工作量越来越大，能者多劳，可调薪的硬规则里只剩一个名额。他把这个落差咽进了肚子。</p>
+
+    <p>周二的笑声分两种，一种是真的开心，一种是把累咽下去之前垫的。数人头的时候他自己停了一下：原来六个人，现在半个人加半个人。到周三，他转而去算更远的账——游戏插画外包一张五百到八百，token 成本几十块；实拍短剧几十万，AI 短剧 token 几千。这些数字他张口就来，因为去年创业时每一笔都真金白银花过。睡前他跟自己说了一句：热情阶段的活都聊完了，剩下全是把话说清楚、把账算明白的事。</p>
+
+    <p>周四，账算到了自己头上。白天他给别人定级，晚上被新哥那顿批，他形容那是自己的评审——数据是直接生成的、没经过处理，线上和线下是两波数据、从来没整合到一起，他翻了翻，新哥说得对。酸痛从早跟到晚，他也没等到德彬。</p>
+
+    <p>周五他在培训教室里给这一天「提前上锁」。散场的时候他终于有了答案：不是来学新东西的，是来确认自己半年里踩过的坑，别人也踩过，而且有名字。这是和解的一刻。</p>
+
+    <p>周日凌晨一点落地，他站在传送带边催周报，把下周的绊脚石提前搬开了两块。账本到最后也没合上，但他知道该先做什么了。</p>
+  </div>
+
+  <div class="panel silence" id="panel-silence">
+    <div class="lead"><strong>本周沉默 / 未完成</strong></div>
+    <ol>
+      <li>专家套件的效果数据——周一就点明是「最值得投入的一件事」，要把 56 万请求翻译成经营语言，但整个周末被团建和返程占掉，这条线本周零推进。</li>
+      <li>智能美案生成系统——周一决定收缩做 MVP，之后五天再无下文，MVP 的下一步没有排进日程。</li>
+      <li>S&amp;OP 主战场连续两个周期零投入（周一黄灯）——本周资源没有回补。</li>
+      <li>数字分身评审的四个问题（无蒸馏成型过程、责任边界缺失、无评测自进化、记忆结构未定）——周三提出，本周没有后续落地动作。</li>
+      <li>周报催交成为反复出现的挤压点——周日六点截止前一小时还有四个人没交，周末截止时间本身值得重新审视（是否挪到周一）。</li>
+      <li>专家套件正式上线——周一「先发 beta、明天补测试」，之后没有看到正式发布的消息。</li>
+    </ol>
+  </div>
+
+  <div class="footer">每周复盘 · 周度版 Pro · 2026-09-13</div>
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(function(t){ t.classList.remove('active'); });
+  document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
+  document.querySelector('.tab[data-tab="'+name+'"]').classList.add('active');
+  document.getElementById('panel-'+name).classList.add('active');
+}
+</script>
+</body>
+</html>
