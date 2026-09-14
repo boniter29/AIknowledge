@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 · 2026-09-14</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;background:#0d1117;color:#e6e6e6;line-height:1.85;min-height:100vh}
+.wrap{max-width:720px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:22px;margin-bottom:4px}
+.date{color:#8b949e;font-size:13px;margin-bottom:24px}
+.tabs{display:flex;gap:10px;margin-bottom:24px}
+.tab{flex:1;text-align:center;padding:12px 0;border-radius:12px;background:#161b22;color:#8b949e;cursor:pointer;font-size:15px;border:1px solid #21262d;transition:all .2s}
+.tab.active-biz{background:linear-gradient(135deg,#1a3a5c,#12263f);color:#6cb6ff;border-color:#2b5278}
+.tab.active-diary{background:linear-gradient(135deg,#4a2537,#2e1622);color:#ff9ec4;border-color:#7a3b58}
+.panel{display:none;background:#161b22;border:1px solid #21262d;border-radius:16px;padding:26px 22px}
+.panel.show{display:block}
+.panel h2{font-size:18px;margin-bottom:16px}
+.panel.biz h2{color:#6cb6ff}
+.panel.diary h2{color:#ff9ec4}
+.panel p{margin-bottom:16px;font-size:15.5px;color:#d0d7de;text-align:justify}
+.panel p:first-of-type{font-weight:600;color:#eaeaea}
+.footer{margin-top:28px;text-align:center;color:#484f58;font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘</h1>
+<div class="date">2026-09-14 · 周一 · 团建日</div>
+<div class="tabs">
+<div class="tab active-biz" id="tabB" onclick="show('biz')">📊 商业版</div>
+<div class="tab" id="tabD" onclick="show('diary')">📝 日记版</div>
+</div>
+
+<div class="panel biz show" id="biz">
+<h2>商业复盘版</h2>
+<p>人在团建，AI 落地这件事却在这一天从「要不要做」走到了「谁进去驻场」。新哥那边的口径已经清楚，希望明天就有人进去，浮云大概率先过去。这个节奏说明前面的沟通没有白做，业务方不再满足于看方案，而是要一个坐在现场的人。</p>
+<p>驻场之所以被提上来，是因为单点交付的价值正在快速贬值。今天有句话把这件事说透了，现在需要落地的场景都要全链路梳理，单点的话用林氏小龙虾就解决了。单点能力已经商品化，谁都能调用，能拉开差距的只剩下把点串成线的组织能力。全链路梳理不是多做一个工具，是判断在哪个环节介入能撬动整条链的经营效果，这恰好是驻场才能完成的动作，隔着屏幕梳理不出业务的实际断点。</p>
+<p>周报洞察是另一条印证线。9/7 到 9/13 的数据发给了健新和温德彬，主战场工时约 55%，压在黄线上，战线摊开约 12 条，S&OP 连续两周零投入。这组数字和「单点没意义」的判断指向同一个问题。团队不是不努力，是精力被 12 条战线稀释了，每条线都在推进但每条线都推不透。林氏放我家 3.0 的自定义提示词最典型，已经具备上线条件，却因为优先级转成「无实景」暂缓，评测成果闲在那里。这正是收口动作要解决的事，明确去留比继续铺新摊子更重要。</p>
+<p>还有一条隐线是工具和业务的关系。文鑫这周 5.7 天全在专家套件和 Agent 平台，看似在做工具，实际离四大主战场的经营场景有距离。加上给卡罗训练的 skill 接入小龙虾问答入口后一直不能用，工具链的最后一公里还堵着。收编、驻场、全链路，这三个今天反复出现的词，本质都是把散着的工具和人力往经营效果的漏斗里收。</p>
+<p>竞品赛道的动作也在推进。项目组对接 AI 竞赛的事，要不要提前跟新哥打招呼，想了一下午。这件事的分寸在于，说了等于公开资源投向，不说又可能跟业务方的节奏撞车。结论先放一放，等驻场人员进去摸到真实需求再定，避免用竞赛的框架反过来束缚落地的选择。</p>
+<p>这一天表面上只发了周报、聊了驻场，实际完成了一次方向校准。判断很明确，下一阶段的产出不再以「做了多少个 skill」计，而以哪条业务链被打通计。本周要盯住两件事，浮云驻场后第一周摸到的真实断点清单，以及数据平台权限和成交口径在 BI 侧的卡点能不能推动一次对齐会。这两件落地了，全链路才有第一批可验证的效果。</p>
+</div>
+
+<div class="panel diary" id="diary">
+<h2>日记随笔版</h2>
+<p>今天人在外面团建，手机上一半是「有事留言，急事电联」，另一半是工作追过来了。</p>
+<p>最要紧的一条是新哥那边，水滴转的话，估计今天就要有结论，希望明天就有人进去驻场。我隔着屏幕回了一句「驻场的话，到时候就还是你去吧」。发完想了想，这事其实从上周聊全链路的时候就埋着，只是没想到业务方要人要得这么快。方案听得再多，不如一个人坐进去。这大概是今天最实在的一个领悟。</p>
+<p>在外面看消息有个麻烦，时差。才想起来有一小时时差，连钉钉都自动改了，想了半天为啥你们拉会都拉 13 点。一个小事，但那几分钟真的愣住了，还在心里算谁会把会定在下午一点。</p>
+<p>下午断断续续回消息。有同事问小龙虾和 codex 哪个快，我回「做成 skill 就通用」。又聊到梯子配置兼容国内外网络的事，说有办法但也没那么简单，得让对方把情况讲清楚。这类问题我最近答得越来越顺，顺到有点警惕，工具问题好答，业务问题难答，我别把功夫都花在好答的地方。</p>
+<p>发了这周的周报洞察给健新和温德彬。主战场工时 55%，黄灯，十二条战线，S&OP 又是零。发的时候心里其实有点沉，这种黄灯连着两周了，再发一周还是黄灯，那这份报告就成了例行公事。我还写了那句「单点的话用林氏小龙虾就解决了」，写完觉得对，又觉得扎自己，我们的产出现在很大一部分还是单点。</p>
+<p>晚上有人问起那个训练好的 skill 接到小龙虾问答入口的事，说一直不能使用。又想到放我家 3.0 的自定义提示词，评测都做完了，因为「无实景」暂缓着。东西做出来，摆在那里，这种感觉很像收拾行李时发现忘了装的东西，你知道它在，就是用不上。</p>
+<p>竞品的事想了一下午，要不要跟新哥提项目组在做 AI 竞赛。想了想，先放一放，等有人进去摸到真需求再说。今天下午发的那条状态其实概括了全部心情，团建，有事留言，急事电联。结果一天下来，急事不多，要紧的事倒是一件接一件。</p>
+<p>明天浮云大概率就过去驻场了。希望一周之后，黄灯能往绿的方向挪一格。</p>
+</div>
+
+<div class="footer">Hermes 每日复盘 · 2026-09-14</div>
+</div>
+<script>
+function show(which){
+  document.getElementById('biz').classList.toggle('show', which==='biz');
+  document.getElementById('diary').classList.toggle('show', which==='diary');
+  document.getElementById('tabB').classList.toggle('active-biz', which==='biz');
+  document.getElementById('tabD').classList.toggle('active-diary', which==='diary');
+}
+</script>
+</body>
+</html>
