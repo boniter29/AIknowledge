@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 · 2026-09-15</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;background:#0d1117;color:#d8dee4;line-height:1.85;padding:20px 16px 60px}
+.wrap{max-width:720px;margin:0 auto}
+h1{font-size:22px;color:#f0f3f6;text-align:center;margin:10px 0 4px}
+.date{text-align:center;color:#8b949e;font-size:13px;margin-bottom:24px}
+.tabs{display:flex;gap:10px;justify-content:center;margin-bottom:24px}
+.tab{flex:1;max-width:180px;padding:10px 0;border-radius:12px;text-align:center;cursor:pointer;font-size:15px;font-weight:600;border:1px solid #30363d;color:#8b949e;user-select:none}
+.tab.active-b{background:linear-gradient(135deg,#1d3a8a,#2563eb);color:#fff;border-color:#2563eb}
+.tab.active-d{background:linear-gradient(135deg,#9d4268,#ec4899);color:#fff;border-color:#ec4899}
+.panel{display:none;animation:fade .3s}
+.panel.show{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.card{background:#161b22;border:1px solid #30363d;border-radius:16px;padding:22px 20px;margin-bottom:16px}
+.panel-b .card{border-left:3px solid #2563eb}
+.panel-d .card{border-left:3px solid #ec4899}
+.hook{font-size:17px;font-weight:700;color:#f0f3f6;margin-bottom:14px}
+.panel-b .hook{color:#93b4ff}
+.panel-d .hook{color:#f2a6c8}
+p{margin-bottom:14px;text-align:justify}
+p:last-child{margin-bottom:0}
+.panel-d{font-size:15.5px}
+.footer{text-align:center;color:#484f58;font-size:12px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘 · 2026-09-15 周二</h1>
+<div class="date">AI铺得很广，账还没跟上</div>
+<div class="tabs">
+<div class="tab active-b" id="tabB" onclick="sw('b')">📊 商业版</div>
+<div class="tab" id="tabD" onclick="sw('d')">📝 日记版</div>
+</div>
+
+<div class="panel panel-b show" id="pb">
+<div class="card">
+<div class="hook">今天所有的会都在撞同一堵墙，AI铺得很广，经营层依然看不见变化。</div>
+<p>上午的一对一绩效沟通里，我自己把这堵墙讲了出来。做了很多款AI产品，看上去都有提效，CEO那边一直反馈没看到变化。讲完这句话不到几个小时，AI视频降本增效的会上有人问了同一个问题的计算题版本，本月产了多少视频，其中百分之多少由AI完成，AI完成的那部分成本比人工低多少。会议室里没有人能答。工具铺下去一个季度了，用量没法管控，小郭团队那个key是一个黑盒，谁用了多少没人知道。感觉有帮助的评价攒了再多，也换不成一张能向经营层交差的账。价值没有被记账，等于价值没有发生。</p>
+<p>为什么没有账，因为事情摊得太开。下午对齐小红书AI驻场的优先级，浮云手上同时压着林氏放我家、小红书、AI改款，会上说每个人基本都是三到四个项目。周会@所有人核对分工，五个人数出二十个方向。摊到这个程度，任何一个项目都做不到足够深，深度不够就产不出能被感知的结果。资源不聚焦和看不见变化，是同一条因果链的上下游。</p>
+<p>还有一层原因在协同方式上。1v1里我给转正前的同事指出，他和米酒共通的问题是喜欢闷头把事干到一半再找人，前置的协同讨论能省则省。下午视觉系统的55分钟会把同样的病暴露得更彻底，这个系统前面的用户到底是谁，是策划还是美职，决定了整条链路从哪一头开始画，产经给的41项产品资料到底合并成几份输出，会开到最后这些都在等一个要跟超哥确认的答案。AI放大了每个人的能力，也放大了组与组之间的协同成本，这句话我白天讲给同事听，晚上想想它说的是我们整个排兵布阵。</p>
+<p>收敛的动作已经开始了。外部团队主动找上门来要部署重命名工具，一个用了一个多月、迭代近百版的工具，说明AI在业务侧的引力是真的。明天要做的几件事顺着今天的墙来，把AI视频的占比和成本账补出来，把项目优先级收拢，至于系统用户到底是谁，答案要从超哥那里拿回来。铺开证明过能力，接下来轮到收敛证明价值。</p>
+</div>
+</div>
+
+<div class="panel panel-d" id="pd">
+<div class="card">
+<div class="hook">电梯那一下的失重，到晚上才有后劲。</div>
+<p>电梯从4楼往上走，突然震了一下，上行变成下行，在5楼停住，警报声跟着响起来。我把经过发到群里，后勤回得很麻利，换台电梯，马上检修。人在半空里那几秒钟，比一整天的会都提神。</p>
+<p>早上请了半天假，下午才回公司。第一件事就是一对一，跟转正前的同事聊绩效。进步是真看得见的，过程同步比以前主动，财务那边扎得也比以前深。但我把憋了一阵的话说了出去，我们这个部门做了这么多AI产品，CEO一直反馈没看到变化。说出口才发现这句话在他脸上引起的反应，跟我自己心里那声闷响是一样的。我接着跟他讲，你跟米酒有个共通的毛病，喜欢闷头把事情干到一半再找人，前置的讨论能省则省。海文那边一个需求我们仨聊了三轮都没聊清楚，最后好歹定了一个拍板的口径。你要把我拉进去，拉个会也行。</p>
+<p>视觉系统的会开了55分钟，最大的产出是一个问题。这个系统前面的用户到底是谁，是策划还是美职，决定了链路从哪一头开始画。产经给策划的产品资料有41项，策划要输出排单信息和视觉资料两份东西，做系统就是想把它们并成一份。链路画得越细，那个没人拍板的问题就越沉，散会时大家记下的行动项只有一行，跟超哥确认。</p>
+<p>傍晚周会，@所有人核对分工。五个人，二十来个方向。发给别人看的时候对方回了一句，太多了，看起来像说明书。下午还有人来对小红书驻场的优先级，说每个人手上都压着三四个项目。小郭团队的重命名工具找上门要部署，那个工具用了一个多月，迭代快一百版。事情都在长，账没跟上，key底下的用量没人说得清。</p>
+<p>带了球鞋球衣，说好团建动一动。轩然约的局他自己鸽了，我问群里还有没有人没走，打车过去，坐下聊完一轮天，说了句走的时候喊我吧。</p>
+<p>晚上跟人聊起AI，说小林AI刚迭代了一版能做轻办公，还说以后会让AI把这个月的听记、日志、聊天记录都读一遍，先替我核一遍绩效。说完想起来，今天会场上被问到的那笔账，多少视频是AI做的，比人工省了多少钱，AI本来最擅长算，可惜今天没人带上它。</p>
+<p>电梯那一下的失重，到晚上才有后劲。一天里悬着没落地的事，跟着一起晃了晃。</p>
+</div>
+</div>
+
+<div class="footer">Hermes 每日复盘 · 生成于 2026-09-15 晚</div>
+</div>
+<script>
+function sw(t){
+ document.getElementById('pb').classList.toggle('show',t==='b');
+ document.getElementById('pd').classList.toggle('show',t==='d');
+ var b=document.getElementById('tabB'),d=document.getElementById('tabD');
+ b.className='tab '+(t==='b'?'active-b':'');
+ d.className='tab '+(t==='d'?'active-d':'');
+}
+</script>
+</body>
+</html>
