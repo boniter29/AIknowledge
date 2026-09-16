@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-09-16</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;background:#0d1117;color:#e6e6e6;line-height:1.8;min-height:100vh}
+.wrap{max-width:720px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:22px;text-align:center;margin-bottom:6px}
+.date{text-align:center;color:#8b949e;font-size:13px;margin-bottom:24px}
+.tabs{display:flex;border-radius:12px;overflow:hidden;margin-bottom:28px;border:1px solid #30363d}
+.tab{flex:1;text-align:center;padding:12px 0;cursor:pointer;font-size:15px;background:#161b22;color:#8b949e;transition:.2s}
+.tab.on-biz{background:#1d2f4f;color:#79b8ff;font-weight:600}
+.tab.on-diary{background:#3d2230;color:#f4a2c0;font-weight:600}
+.panel{display:none;animation:fade .3s}
+.panel.show{display:block}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.panel p{margin-bottom:16px;font-size:15.5px;color:#d4d4d4}
+.biz .panel.show p:first-child{font-size:16.5px;font-weight:600;color:#79b8ff}
+.diary .panel.show p:first-child{color:#f4a2c0}
+.tagline{padding:14px 16px;border-radius:12px;font-size:14.5px;margin-top:8px}
+.tag-biz{background:rgba(79,110,247,.12);border:1px solid rgba(79,110,247,.35)}
+.tag-diary{background:rgba(244,162,192,.1);border:1px solid rgba(244,162,192,.3)}
+.hr{border-top:1px solid #21262d;margin:30px 0 0;padding-top:14px;color:#8b949e;font-size:12.5px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘 · 2026-09-16</h1>
+<div class="date">周三 · 林氏 AI 的一天</div>
+<div class="tabs">
+<div class="tab on-biz" id="tabBiz" onclick="sw('biz')">📊 商业版</div>
+<div class="tab" id="tabDiary" onclick="sw('diary')">📝 日记版</div>
+</div>
+
+<div class="biz panel show" id="pBiz">
+<p>9月16日这一天，林氏的AI竞赛被一个外部截止日期逼着完成了从松散推进到项目制的转变。</p>
+<p>火山的全国大赛把时间线卡死了。企业报名9月15日截止，作品复核16号到18号，也就是说，今天之内必须交出资料。而内部的真实状态是，这个竞赛没做立项，参与的人不少，责任却没有清晰划分，业务进度根本掌控不了。有同事在会上直接说，这个AI竞赛我们跟进得不到位。压力就是这样传导下来的。上午定下三支队伍去参加全国大赛，AI视觉工作台、数字分身、放我家，并且明确要求作品名称带上林氏，还要写清楚落地场景，光写一个数字分身没有价值。中午建协同机制，指定项目经理，五个版块各自定了负责人和协作人，每周四收进度，周五向新哥汇报。晚上的聊天记录里全是催材料，@文鑫 @米酒 @Cris，一人一份地追。一天之内，一件没人管得动的事情被外部日期压成了有分工、有周期、有汇报线的东西。</p>
+<p>第二条线藏在演示素材里。参赛演示视频从录屏、剪辑到配音，全部由Codex自己完成，三个小时出成片，人只负责提要求，连脱敏打码都是它自己想到的。数字分身水滴今天也很忙，它既是参赛作品，又反过来在参赛过程中打工，回答界面哪里挤、这周日程怎么排、身份验证这些问题，答案有模有样。产品在参赛，同时也在生产参赛材料，这两件事在今天是同一条流水线。</p>
+<p>第三条线是规矩。IT费用分摊的逻辑今天讲透了，IT承担基本建设，应用产生的费用按各部门使用占比分摊回去，报销走IT归口，以成林科技为主体。同一天还开了物料主数据字段调整的会，统一主型号、统一物料名称、统一物料编码，9月改完。软装库的进销存线上化方案也在讨论，原来线下表格管的东西要进系统。这几件事表面不相干，做的都是同一件事，给粗放运行的东西定规矩，管费用，也管数据和库存。AI推广走到要算成本这一步，说明它已经从尝鲜变成了日常开支。</p>
+<p>明天上午十点半是AI委员会月度例会，材料今天晚上才催齐。九月过半，接下来每周四看进度，10月12日Demo收集截止，10月24日路演。时间表已经从别人手里接到了自己手里。</p>
+</div>
+
+<div class="diary panel" id="pDiary">
+<p>今天值得记的，是三个小时。</p>
+<p>早上开会，大家还在为火山全国大赛的材料发愁。报名表必填项一堆，作品名称要带上林氏，要写落地场景，光是起名字就来回改了好几轮。放我家光写个名字没什么吸引力，要写成导购交易链路什么的。数字分身报不报也讨论了半天，小林身影那个版本太基础，砍掉，定下来报业务那边的AI视觉工作台，再加一个数字分身。中午我发消息说，现在在让Codex用computer use跑一遍，自己录视频自己剪视频。当时也没觉得能成。</p>
+<p>晚上成片出来了。从启动应用到操作，去钉钉测试，录屏，剪辑，配音，全是它自己完成的，三个小时，出一版正式的参赛演示。我盯着看完，跟人说了一句，我震撼了。连脱敏打码都是它自己想到要做的。白天我还让水滴分身帮我试了几个问题。问它界面哪里挤，它说挤的根源是字段没分层，业务字段和技术凭据平铺在一屏，建议把连接字段折叠成高级配置。这回答比我预期的好。又问它这周怎么安排，它把我的日程翻了一遍，说先忙周四上午的AI委员会月度例会，因为那是我组织的。它知道哪些会是我组织的。</p>
+<p>一整天其实都在催材料。早上问进展，下午问卡点，晚上还在问今晚能发出来不。米酒的案例还没要到，人力行政那边的也没到。文鑫那边的一版我直接让Codex先写了个大概，让他们各自核对修改，改的地方标红。飞书文档的权限开了一遍又一遍，进度收集表给每个人都开了编辑权限。到晚上浮云说放我家写好了，我才松了口气。</p>
+<p>今天还定了AI竞赛的分工。之前推进不动，根源是没按项目制来，人不少，责任不清。我跟大家说，后续每周拉一个会跟进，每个版块指定一个主负责人，我协助。初赛决赛机制给德彬，全国大赛材料和对外口径我自己带，培训和奖品给键盘，宣发给卡罗和珍珠，会议室和项目跟进给薯条。珍珠早上不在，我给她补了一条长消息，请她牵头决赛现场布置和物料。她回得很快。</p>
+<p>费用的事也定了。AI费用按各部门使用占比分摊，IT只出基础建设的钱。会上有人问是不是下个月开始，答案是从这次就开始。讲的时候我在想，大家用AI的热情和心疼钱的速度，哪个先来。</p>
+<p>明天十点半AI委员会月度例会。睡前看了一眼今晚的群，材料还差几位的内容。我发了一句，还差你们几位的内容，今晚能发出来不。然后去等成片的反馈了。三个小时做完一个视频这件事，比明天要讲的大部分内容都让我印象深刻。</p>
+</div>
+
+<div class="tagline tag-biz" id="tagline">📊 外部截止日期一天内把松散的AI竞赛压成了项目制，而Codex三小时独立产出的参赛演示，成了这一天最好的注脚。</div>
+
+<div class="hr">每日复盘 · 由 Hermes 自动生成 · 2026-09-16</div>
+</div>
+<script>
+function sw(t){
+ document.getElementById('pBiz').classList.toggle('show',t==='biz');
+ document.getElementById('pDiary').classList.toggle('show',t==='diary');
+ document.getElementById('tabBiz').classList.toggle('on-biz',t==='biz');
+ document.getElementById('tabDiary').classList.toggle('on-diary',t==='diary');
+ var tl=document.getElementById('tagline');
+ if(t==='biz'){tl.className='tagline tag-biz';tl.textContent='📊 外部截止日期一天内把松散的AI竞赛压成了项目制，而Codex三小时独立产出的参赛演示，成了这一天最好的注脚。';}
+ else{tl.className='tagline tag-diary';tl.textContent='📝 三个小时，Codex从录屏到配音自己做出一版参赛视频。它知道哪些会是我组织的。';}
+}
+</script>
+</body>
+</html>
