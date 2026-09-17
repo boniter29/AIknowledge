@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-09-17</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'PingFang SC',-apple-system,sans-serif;background:#0f1117;color:#d7dae0;line-height:1.9;padding:20px 16px 60px}
+.wrap{max-width:720px;margin:0 auto}
+h1{font-size:1.5em;text-align:center;margin:18px 0 4px}
+.date{text-align:center;color:#7a8194;font-size:.9em;margin-bottom:24px}
+.tabs{display:flex;gap:10px;justify-content:center;margin-bottom:22px}
+.tab{padding:8px 20px;border-radius:20px;cursor:pointer;font-size:.95em;border:1px solid #2a2f3d;background:#161a24;color:#9aa3b5;user-select:none}
+.panel{display:none;animation:fade .3s}
+.panel.active{display:block}
+.biz p{margin-bottom:1.1em;text-align:justify}
+.diary p{margin-bottom:1.1em;text-align:justify}
+.biz{background:linear-gradient(180deg,rgba(79,110,247,.06),transparent);padding:8px 4px}
+.diary{background:linear-gradient(180deg,rgba(240,140,160,.06),transparent);padding:8px 4px}
+.lead{font-weight:bold}
+.biz .lead{color:#8fa8ff}
+.diary .lead{color:#f0a3b5}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+</style></head><body><div class="wrap">
+<h1>每日复盘 · 2026-09-17 周四</h1>
+<div class="date">水滴 | 每日复盘</div>
+<div class="tabs">
+<div class="tab" id="t-biz" onclick="sw('biz')">📊 商业版</div>
+<div class="tab" id="t-diary" onclick="sw('diary')">📝 日记版</div>
+</div>
+<div class="panel biz active" id="p-biz"><p class="lead">**今天的所有会其实都在回答同一个问题，模型和平台已经堆够了，卡住的是接入、资产和治理。**</p><p>数字分身一天开了两个会，把这件事讲得很透。下午跟卡罗他们聊集成方案，卡罗对取个人聊天记录有明确的隐私顾虑，分不清哪些是匿名存的，同一句话不同人来问回复还不一样，所以他们的做法是让 AI 只生成草稿，人审完再发。可私聊全开之后草稿太多，他们自己也承认很难一条一条看，最后宁可回去直接维护知识库。晚上的小会把这个结论推到了底，迁移到小林 AI 的方案里，有人直接拍死了蒸馏这条路，原话是「你蒸馏啥呀，他就只有知识库」。于是方向定成 IT 必答先试点，迁到 AI 中台的知识库，下周五先上一个带基础纠偏和回复的版本。这条线的因果其实很干净，隐私顾虑导致人审，人审成本压垮了草稿模式，绕了一圈发现真正要做的事是知识库运营，模型只是外层壳。</p><p>用户资产库的会是同一条线在业务侧的镜像。他们去年用共享盘，找一份报告要翻很久，今年三月迁到腾讯 IMA，一百多人用起来了，结果卡在图片上。项目组想看北京小户型的客厅实拍、想看用户家里沙发的真实布局，知识库里全是文字报告，大量的真实家居图变成了没人调用的静默资产。这个描述跟数字分身那边是同一个推力，非结构化的东西堆在那里，不等于能被用起来。下午供应商来分享 RPA 加 AI，开口也是 MCP 协议、API 联动，大家关心的是同一件事，能力怎么接进来。</p><p>小红书是今天另一条主线。健新在群里追问专项进度，YIYI 梳出了第一个链路，内容策划的全链路环节和部门算是清楚了，早期目标定成每月四千篇的产能。晚上的技术会更具体，套版这件事现在靠实习生手动做，人员一调岗就要重新培训一遍，有人提出用 browser use 直接操作搞定设计来拼版，模板一个月更新一次，手动维护可以接受。会上也在掂量底子，零食小龙虾的浏览器侧边栏连网址都输不进去，水平到底怎样没人说得准。AI 委员会月度例会里，S4 最后一个大版本上线，十个专家套件发布，同时有人提醒同会话切换 Kimi 这类模型会导致效果不稳定，备选模型要留意，产品侧还是优先选内部模型。</p><p>竞赛季的压力也浮出来了。五十四支队伍，你自己的预判是能完赛二十支就不错，一两支退赛太正常。有队反馈生成慢、效果不好，你查了发现用的是 DeepSeek V4 Flash，慢已经没得优化，效果不好的要拉进去看具体差在哪。管理层这边，分组淘汰按百分之十五算下来，这个月变成一点五个人，话题本身比数字更重。</p><p>下周排得很满，周五竞赛进度收集点名，下周五数字分身基础版要上线，九月下旬还有云栖大会。今天是铺线的日子，下周全是验收。</p></div>
+<div class="panel diary" id="p-diary"><p class="lead">今天这一天，「知识库」这三个字我大概听了二十遍以上。早上跟轩然聊完 Nico 那个会，我发消息给 YIYI 他们说感觉好抽象，晚上开完最后一个会，抽象的东西突然全落地了，落点还是这三个字。</p><p>下午跟卡罗那边的会最磨人。数字分身要做，可人家担心的是隐私，个人聊天记录里哪些是匿名存的说不清，同一个问题不同人来问，回复还可能不一样。他们想的办法是让 AI 只出草稿，人看完再发。我听着听着就觉得不对，私聊全开之后草稿是海量的，谁看得过来。果然会上一句一句聊下来，他们自己说更倾向直接维护知识库。到了晚上第二个会，讨论蒸馏的方案，同事一句话把这事说死了，你蒸馏啥呀，他就只有知识库。我笑了一下，今天转了一整圈，起点和终点是同一个地方。</p><p>上午用户资产库的会反而让我有点兴奋。他们把去年就积下来的用户实拍图叫静默资产，说这些北京小户型的客厅、真实的沙发布局，堆在共享盘里没人调用。我坐在那儿想，我们推了这么久的 AI，最后卡住的居然是几张照片放哪儿的问题。共享盘，IMA，图片打标，方案在白板上换来换去，痛点一直没变过。</p><p>小红书的事健新在群里追了好几轮。我先是不在那个业务群里，问 YIYI 有没有拉我，然后进群、对进度、问下一步。四千篇一个月的目标写下来的时候，我知道这事从聊天变成项目了。晚上的技术会更有意思，有人提议用 browser use 去操作搞定设计自动套版，因为实习生做这个事，一调岗就要重新教一遍。有人问小龙虾的浏览器到底什么水平，我说不知道，侧边栏连网址都输不进去，这话一半是实话一半是自嘲。</p><p>竞赛那边今天也起了波澜。五十四支队伍，我跟 Cris 说如实填就好，预想里能完赛二十支就不错了。有队说模型慢，效果不好，我点开一看用的是 DeepSeek V4 Flash，回消息的时候斟酌了一下，慢这个事真没招了，这基本是最快的模型，效果不好的得钻进去看。</p><p>睡前群里还在追口径。文鑫的回复不对，我打回去说紧急变更一下口径，又补了一句记着思考一下。发完最后一条「收到」，我看了一眼日程，下周五数字分身要上线基础版。今天所有的绕圈，都是为了那一天别再绕圈。</p><p>回家路上想，今天见了供应商，开了七七八八的会，最值钱的一句话反而是最朴素的那句，你蒸馏啥呀，他就只有知识库。工具换了一茬又一茬，真正值钱的东西，还是得有人一个文件一个文件地喂进去。</p></div>
+</div>
+<script>
+function sw(k){
+document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+document.querySelectorAll('.tab').forEach(t=>t.style.borderColor='#2a2f3d',t.style.color='#9aa3b5');
+document.getElementById('p-'+k).classList.add('active');
+var t=document.getElementById('t-'+k);t.style.borderColor=k==='biz'?'#4f6ef7':'#f08ca0';t.style.color=k==='biz'?'#8fa8ff':'#f0a3b5';
+}
+sw('biz');
+</script></body></html>
