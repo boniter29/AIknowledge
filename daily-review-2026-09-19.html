@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-09-19</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#0f1115;color:#d8dbe2;line-height:1.85;padding:20px 16px 60px}
+.wrap{max-width:720px;margin:0 auto}
+h1{font-size:22px;text-align:center;margin:18px 0 4px;color:#fff}
+.date{text-align:center;color:#7a8194;font-size:13px;margin-bottom:24px}
+.tabs{display:flex;gap:8px;margin-bottom:20px}
+.tabs button{flex:1;padding:10px 0;border:none;border-radius:12px;background:#1a1e27;color:#9aa2b1;font-size:15px;cursor:pointer;font-weight:600}
+.tabs button.on-b{background:linear-gradient(135deg,#2b4a8f,#3a6fd8);color:#fff}
+.tabs button.on-d{background:linear-gradient(135deg,#8f3a5e,#d86f9a);color:#fff}
+.panel{display:none;background:#161a22;border-radius:16px;padding:26px 22px}
+.panel.show{display:block}
+.panel p{margin-bottom:16px;font-size:15.5px}
+.b{border-top:3px solid #3a6fd8}
+.d{border-top:3px solid #d86f9a}
+.footer{text-align:center;color:#5a6172;font-size:12px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘</h1>
+<div class="date">2026-09-19 · 周六</div>
+<div class="tabs">
+<button id="tb" class="on-b" onclick="sw('b')">📊 商业版</button>
+<button id="td" onclick="sw('d')">📝 日记版</button>
+</div>
+<div id="pb" class="panel b show">
+<p><strong>给模型找场景，和给使用立边界，今天是同一条 AI 落地曲线上的两个动作，一个向外进攻，一个向内设防。</strong></p>
+<p>先看进攻这条线。分类路由、内容审核、意图判断、违规检测、质检、品牌词相关的 NLP 场景，今天被逐个过了一遍筛。这些场景有一个共同结构，输入输出清楚、判断标准相对客观、错了容易兜住，是模型最可能先跑出收益的位置。中午又看到一个决策模型的动态，思路是模仿人类系统一的快决策，我的第一反应是能不能拿来做打标。文章还没细读，但这个反应本身说明筛选标准已经变了，早些时候是看模型能做什么再找地方塞，现在是先找业务里本来就有重复判断的地方，再回去看模型对不对得上。场景清单在收敛，这是好事。</p>
+<p>防守这条线是今天最实的动作。数字分身的任务报错，群里第一反应是额度和网络问题。我盯着报错里的 sensitive_words_detected 和 request id，判断这是任务内容触发了网关的敏感词拦截，内容不改，重试多少次都会被拦。往下还叠了一层网关自身的 panic，那是服务端 bug。再往前想一步，有人把账号密码直接发给了分身，分身可能被拿去爬 BI 数据，BI 侧已经加了限制避免影响正常使用。一个报错，拆出了三层问题，内容安全、服务稳定性、数据使用边界。</p>
+<p>这两条线其实被同一个东西推着走。没有真实的用量增长，不需要急着盘点哪些场景能上模型，也不会有人拿着分身的账号去爬 BI。用得越多，找场景的饥饿感和立规矩的紧迫感会同时上升。今天能看到这一点，说明平台已经过了玩具阶段，开始进入要同时管进攻和防守的时期。</p>
+<p>后续就三件事，德彬跟进敏感词误拦和 panic 的处理，场景清单继续按「业务里本来的重复劳动」这个标准沉淀，BI 限制生效后的使用变化观察几天再下结论。ChatGPT Pro 20X 回归的消息今天也在群里转了一圈，每次这类价格信号出现，都反过来确认自建网关这条路的价值，成本和掌控力都留在自己手里，尽管今天分身自己先出了状况。</p>
+</div>
+<div id="pd" class="panel d">
+<p>今天没开会，一天的话都散在私聊里。花力气最多的一件事，是替一个报错做翻译。</p>
+<p>水滴那边的数字分身任务跑不动，昨天试到今天还是失败。群里猜是额度问题，猜是网络问题。我把报错翻出来看，sensitive_words_detected，后面跟着一长串 request id。这个意思其实很直白，任务要读的内容踩了网关的敏感词，内容不变，重试一百次也是同一个下场。后面还跟着一个 panic，那是网关自己坏了，跟用户没关系。</p>
+<p>解释完第一层，我顺着往下想了一步。分身怎么会读到踩词的内容。聊着聊着发现有人把账号密码直接发给了小龙虾，再一想，是不是有人拿分身去爬 BI 的数据。BI 那边确实已经做了限制，怕影响正常使用。一个报错，从「为什么失败」一路查到「应该怎么用」，半下午就这么过去了。我说这事儿得德彬来定位，误拦自己解不开。</p>
+<p>另一条线轻松些，是给模型找活干。分类路由、内容审核、意图判断、违规检测、质检，一个一个在心里过。中午又刷到一个决策模型，说是模仿人类的系统一，快思考那种。我的第一反应是能不能用来打标。文章还没细读，先把链接存了。这种链接最近攒了不少，真落进管线里的还不算多。不过方向在变，以前是看模型能干嘛再找地方塞，现在是先找那些本来就得人肉一遍遍判断的活儿。</p>
+<p>晚上看到 ChatGPT Pro 20X 又回来的消息，随手转进了群。每次这种价格消息冒出来，我都会庆幸自己这边搭了网关和分身。虽然今天分身自己先闹了脾气，还得求人修。</p>
+<p>一天下来其实就是一件事的两面。给模型找活干，和给用模型的人划线，都是用量真的涨起来之后才有的烦恼。这种烦恼不算坏。</p>
+</div>
+<div class="footer">由 Hermes 生成 · GitHub Pages</div>
+</div>
+<script>
+function sw(k){
+document.getElementById('pb').className='panel b'+(k=='b'?' show':'');
+document.getElementById('pd').className='panel d'+(k=='d'?' show':'');
+document.getElementById('tb').className=k=='b'?'on-b':'';
+document.getElementById('td').className=k=='d'?'on-d':'';
+}
+</script>
+</body>
+</html>
