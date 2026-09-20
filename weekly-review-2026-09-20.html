@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每周复盘 2026-09-14 ~ 2026-09-20</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --panel: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --muted: #8b949e;
+    --blue: #58a6ff;
+    --orange: #f78166;
+    --purple: #d2a8ff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    line-height: 1.85;
+    padding: 20px 16px 60px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  header { text-align: center; padding: 28px 0 22px; border-bottom: 1px solid var(--border); margin-bottom: 22px; }
+  header .kicker { font-size: 12px; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; }
+  header h1 { font-size: 22px; font-weight: 700; margin: 10px 0 6px; }
+  header .date { font-size: 13px; color: var(--muted); }
+  .tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+  .tab {
+    flex: 1; padding: 11px 6px; text-align: center; font-size: 14px; font-weight: 600;
+    background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+    cursor: pointer; color: var(--muted); transition: all .15s;
+  }
+  .tab.active { color: var(--bg); }
+  .tab[data-panel="biz"].active { background: var(--blue); border-color: var(--blue); }
+  .tab[data-panel="diary"].active { background: var(--orange); border-color: var(--orange); }
+  .tab[data-panel="silence"].active { background: var(--purple); border-color: var(--purple); }
+  .panel { display: none; }
+  .panel.active { display: block; animation: fade .25s ease; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 20px 18px; margin-bottom: 14px; }
+  .thesis {
+    background: var(--panel); border: 1px solid var(--blue); border-radius: 14px;
+    padding: 18px; margin-bottom: 16px; font-size: 15px; font-weight: 600; color: var(--blue);
+  }
+  .thread { margin-bottom: 18px; }
+  .thread h3 { font-size: 15px; color: var(--blue); margin-bottom: 8px; }
+  .panel[data-panel="biz"] .thread h3 { color: var(--blue); }
+  .panel[data-panel="diary"] p { margin-bottom: 16px; font-size: 15.5px; }
+  .panel[data-panel="diary"] .anchor {
+    font-style: italic; color: var(--orange); border-left: 3px solid var(--orange);
+    padding-left: 12px; margin: 18px 0;
+  }
+  .silence-section h3 { font-size: 15px; color: var(--purple); margin: 18px 0 10px; }
+  .silence-section ol { padding-left: 20px; }
+  .silence-section li { margin-bottom: 10px; font-size: 14.5px; }
+  .silence-section li b { color: var(--purple); }
+  footer { text-align: center; margin-top: 30px; font-size: 12px; color: var(--muted); }
+  a { color: var(--blue); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Weekly Review · Pro</div>
+    <h1>每周复盘</h1>
+    <div class="date">2026-09-14 ~ 2026-09-20</div>
+  </header>
+
+  <div class="tabs">
+    <div class="tab active" data-panel="biz" onclick="show('biz')">商业版</div>
+    <div class="tab" data-panel="diary" onclick="show('diary')">日记版</div>
+    <div class="tab" data-panel="silence" onclick="show('silence')">沉默板</div>
+  </div>
+
+  <div class="panel active" data-panel="biz">
+    <div class="thesis">这一周，AI 落地从「铺开证明能力」正式转入「收敛证明价值」——而收敛的第一课是照镜子：照见产品没过及格线，照见价值从未被记账。</div>
+
+    <div class="card thread">
+      <h3>线索一 · 单点交付的价值贬值，从「要不要做」走到「求着人用」</h3>
+      <p>周一定下驻场，浮云被派进业务现场，因为「单点用林氏小龙虾就解决了」，能拉开差距的只剩把点串成线的组织能力。周二所有会撞同一堵墙：AI 铺得很广、经营层依然看不见变化，AI 视频占比和成本账没人能答——「价值没有被记账，等于价值没有发生」。周三火山大赛的外部截止日期倒逼出项目制，Codex 三小时自动做出参赛视频，个人能力被 AI 拉到极致。周四的结论最扎心，绕了「蒸馏」「草稿模式」一整圈，最终落回「你就只有知识库」——知识库运营才是真资产，模型只是外层壳。</p>
+    </div>
+
+    <div class="card thread">
+      <h3>线索二 · 个人提效与组织提效的张力，从转述变成动手实验</h3>
+      <p>周二视觉系统的会开满 55 分钟，最大的产出竟是一个没人拍板的问题——AI 放大个人能力的同时，也放大了组与组之间的协同成本。周五建新那句话被真正消化：「AI 给个人提效很大，但没给组织提效」，当天下午就拉会试组织级解法，用强约束提示词让 Data Agent 汇报信息收敛。个人效率可以被 AI 拉满，协同、责任和激励只能靠人一次次把话说清楚。</p>
+    </div>
+
+    <div class="card thread">
+      <h3>线索三 · 价值记账从「做了什么」转向「哪条链被打通」，评测数据先被证伪</h3>
+      <p>周日的评测暴露出最狠的一击——千问办公跑的是 GPT 6 Astra，小龙虾以为切了 deepseek 实际没切上，此前的对比结论全部作废；Codex 审计又发现本地 memory 从未触发。产品没过及格线之前，任何推广话术都是空的。这就是本周要带回下周的唯一结论。</p>
+    </div>
+  </div>
+
+  <div class="panel" data-panel="diary">
+    <div class="card">
+      <p>他这周开头的姿态是「人不在场」。周一团建，他把手机调成「有事留言，急事电联」，可要紧的事一件接一件追过来。他隔着屏幕回了句「驻场的话，到时候就还是你去吧」，发完才意识到这事上周就埋着——方案听得再多，不如一个人坐进去。</p>
+
+      <div class="anchor">「一天里悬着没落地的事，跟着一起晃了晃。」</div>
+
+      <p>转折发生在周二下午那部电梯。电梯从四楼往上走，突然一震，上行变成下行，警报声跟着响起来。他说人在半空那几秒钟，比一整天会都提神。那天夜里他写下的这句话，成了这周的注脚。</p>
+
+      <p>之后几天，他一直在跟失重较劲。周三被 Codex 三小时做出的视频「震撼了」；周四绕一大圈，被同事一句「你蒸馏啥呀，他就只有知识库」点醒，回家路上还惦记着「真正值钱的东西，得有人一个文件一个文件地喂进去」；周五白天立规矩、晚上递台阶，对年轻同事说「你跟以前的我很像」，又转述健新骂他的那句「没有那么复杂」。</p>
+
+      <p>可真正的落地是一记闷棍。周日睡眠空间组驻场第一天，产品在人家电脑上卡死，打字都出不来。他和另外三个人围着恩飞一个人，承诺、赔笑脸、求着人用。他跟薯条说「求着他们不要去找慧姐说我们电脑和小龙虾不好用」，打完这句心里不是滋味——一个做了这么久的产品，落到要靠陪笑脸换使用时长。</p>
+
+      <p>晚上他去看电影，走了十分钟就到影院，陪对象又看了一遍《龙餐厅》。散场出来，工作的事轻了一点。可他还说最近状态不好，「上到崩溃边缘，回去跟对象哭」。明天要去广州门店，恩飞的交接还没写完。</p>
+
+      <p>这一周从「人不在场」开始，到「四个人围一个人」结束。失重的那几秒，到底还是落地了。</p>
+    </div>
+  </div>
+
+  <div class="panel" data-panel="silence">
+    <div class="card silence-section">
+      <h3>本周该推进却未推进的事</h3>
+      <ol>
+        <li><b>S&OP</b> —— 周一在周报洞察里点名「连续两周零投入」，本周再无下文，已是第三周空转。</li>
+        <li><b>数据平台权限 / 成交口径在 BI 侧的卡点对齐会</b> —— 周一列为「本周要盯住的两件事」之一，此后没有任何推进记录。</li>
+        <li><b>千问 vs 小龙虾评测重跑</b> —— 周日明确「这个坑不填，速度和准确率的结论都是空的」，仍未重跑。</li>
+        <li><b>林氏放我家 3.0 自定义提示词</b> —— 评测已做完，因「无实景」暂缓，本周无进展。</li>
+      </ol>
+
+      <h3>反复出现却未解决的问题</h3>
+      <ol>
+        <li><b>训练好的 skill 接入小龙虾问答入口「一直不能用」</b> —— 周一提到，本周无修复。</li>
+        <li><b>竞品 AI 竞赛「要不要提前跟新哥打招呼」</b> —— 周一纠结一下午，后被火山大赛 deadline 冲掉，那个分寸判断始终没做。</li>
+        <li><b>工具链最后一公里</b> —— 文鑫 5.7 天全在专家套件和 Agent 平台，离四大主战场的经营场景仍有距离。</li>
+      </ol>
+    </div>
+  </div>
+
+  <footer>每周复盘 · 2026-09-14 ~ 2026-09-20 · 由 Hermes 生成</footer>
+</div>
+
+<script>
+function show(name) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelector('.panel[data-panel="' + name + '"]').classList.add('active');
+  document.querySelector('.tab[data-panel="' + name + '"]').classList.add('active');
+}
+</script>
+</body>
+</html>
