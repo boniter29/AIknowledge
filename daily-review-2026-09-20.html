@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-09-20</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#0f1115;color:#d8dbe2;line-height:1.85;font-size:16px}
+.wrap{max-width:720px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:24px;font-weight:700;color:#fff;letter-spacing:.5px}
+.date{color:#8a8f9a;font-size:13px;margin:6px 0 22px}
+.tabs{display:flex;gap:10px;margin-bottom:26px}
+.tab{flex:1;text-align:center;padding:11px 0;border-radius:12px;background:#1a1e26;color:#8a8f9a;font-size:15px;cursor:pointer;border:1px solid #262c38;transition:.2s}
+.tab.active-biz{background:linear-gradient(135deg,#1d2a4d,#24356b);color:#8fb3ff;border-color:#3b5aa0;font-weight:600}
+.tab.active-diary{background:linear-gradient(135deg,#3d2436,#5c2f4a);color:#ffb3d1;border-color:#8a4a6b;font-weight:600}
+.panel{display:none}
+.panel.show{display:block}
+.card{background:#171b23;border:1px solid #262c38;border-radius:16px;padding:22px 20px;margin-bottom:18px}
+.biz .card{border-left:3px solid #3b5aa0}
+.diary .card{border-left:3px solid #8a4a6b}
+.lead{font-size:17px;font-weight:600;color:#fff;margin-bottom:12px}
+.biz .lead{color:#a8c7ff}
+.diary .lead{color:#ffc2d8}
+p{margin-bottom:14px;text-align:justify}
+p:last-child{margin-bottom:0}
+.footer{margin-top:30px;text-align:center;color:#5a6070;font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘 · 2026-09-20</h1>
+<div class="date">星期日 · 水滴</div>
+<div class="tabs">
+<div class="tab active-biz" id="tab-biz" onclick="show('biz')">📊 商业复盘版</div>
+<div class="tab" id="tab-diary" onclick="show('diary')">📝 日记版</div>
+</div>
+
+<div class="panel biz show" id="panel-biz">
+<div class="card">
+<div class="lead">定调：今天一整天都在给「AI优先」补课，补的是工程和服务的欠账。</div>
+<p>恩飞笔记本上的林氏小龙虾卡到打字都出不来，群聊消息丢失、不同人看到的内容都不一样。睡眠空间组本来想开ChatGPT Codex，新哥说用我们的林氏小龙虾，结果驻场第一天就把产品的真实水平照了出来。卡顿是最先被看见的，底下还有长任务45分钟没结果的性能问题，再底下是用户信任的问题。</p>
+</div>
+<div class="card">
+<div class="lead">服务动作与清醒的顺序判断</div>
+<p>今天的处理方式值得记下来。我和德彬、文鑫、浮云四个人围着恩飞一个人，承诺配合、承诺速度，桌面运维进场，能换电脑就换。国庆前每天17点站会，目标国庆前打磨好群聊功能、落地猫草的案例。这里有一个清醒的顺序判断，先解决问题，再打造案例，不让用户硬着头皮用。还有一句话今天说得很直白，我们现在是求着人用，求着他们不要去找慧姐说电脑和小龙虾不好用。产品没有到及格线之前，任何推广话术都是空的。</p>
+</div>
+<div class="card">
+<div class="lead">评测这条线和卡顿是同一个推力</div>
+<p>评测这条线和卡顿这条线其实是同一个推力，都是我们自己对自己产品的真实状态了解得太少。上周千问办公和林氏小龙虾的评测，底层模型根本不一致，千问用的GPT 6 Astra，小龙虾以为切了deepseek v4 flash实际没切上。今天安排文鑫重跑同任务同模型的评测，评测集可以沿用。另外让Codex对照Claude Agent SDK的技术文档审计小龙虾的能力，发现本地memory文件完全没有触发过。速度慢是一层，能力没发挥出来是另一层，两层都要靠真实的对比数据才能看清。记忆方案先参考Hermes的记忆设计，落档文件、存储时机、读取方式都有现成文档可以抄。</p>
+</div>
+<div class="card">
+<div class="lead">资源、安全与明天</div>
+<p>资源层面，早上和建新聊资源盘点，他的态度很明确，既然要说AI优先要笃定做，资源不能不够。今天的恩飞案例给这笔投入标了两个去处，一是底下的机器和性能，二是上面的稳定和信任，缺一个用户都会用脚投票。乐选把账号密码直接丢给小龙虾，导致TMS导数失败，后续要发文禁止明文密码，登录环节由人操作再让小龙虾继续。推广做加法之前，安全和稳定得先把及格线立住。</p>
+<p>明天周二和浮云去广州门店，吉盛伟邦和星河COCO PARK两家店，讲解放我家和案例，正好区域经理在店。恩飞的电脑换机、桌面运维跟进、17点站会都要提前安排好交接，专项不能因为出差断档。</p>
+</div>
+</div>
+
+<div class="panel diary" id="panel-diary">
+<div class="card">
+<div class="lead">今天的锚点，是四个人围着一个人。</div>
+<p>早上和建新他们聊资源，AI听记开着开着没电了，讨论断在一半，回头只能靠记忆补。上午开会捋智能体平台的事项清单，战略skill发出去就算完成，数字分身要写PRD，一长串听下来，最重的还是那句，既然要笃定做AI优先，资源不能不够。</p>
+<p>下午风向变了。睡眠空间组驻场，林氏小龙虾在他们电脑上基本卡死，恩飞打字都出不来，群里消息丢失，不同人看到的时间都不一样。我和德彬、文鑫、浮云四个人围着恩飞一个人，承诺怎么配合，怎么快速解决。后来我跟薯条说，让同学注意一下态度，我们现在是求着人用，求着他们不要去找慧姐说我们的电脑和小龙虾不好用。打完这句心里不是滋味，一个做了这么久的产品，落到今天要靠陪笑脸换使用时长。</p>
+<p>恩飞挺实在，说不好意思老发问题，怕人家说他找事。我回他，谁说你找事我们吊他。他代表了很多用户，能提出建设性的问题，这样的用户要当宝看。明天安排同学去看他的电脑，不行就直接换一台。</p>
+<p>傍晚拉了专项群定规矩，国庆前每天下午五点站会，目标国庆前把群聊功能打磨好，把猫草的案例落下来。先解决问题再打造案例，不让用户硬着头皮用，这个顺序今天反复跟几个人确认，大家都认，我就放心了一半。</p>
+<p>晚上聊天，说起最近状态不太好，上到崩溃边缘，回去跟对象哭。打完这行字停了一会儿。还好晚上去看了电影，刚走了十分钟就到影院，龙餐厅我看过一遍，陪对象再看一遍。散场出来，工作的事轻了一点。</p>
+<p>还有一件事没做完，千问和小龙虾的评测要重跑，同任务同模型，这个坑不填，速度和准确率的结论都是空的。明天和浮云去广州门店，讲解放我家，晚上得把恩飞这边的交接写清楚。</p>
+</div>
+</div>
+
+<div class="footer">每日复盘 · 由 Hermes 生成 · 2026-09-20</div>
+</div>
+<script>
+function show(t){
+ document.getElementById('panel-biz').classList.toggle('show',t==='biz');
+ document.getElementById('panel-diary').classList.toggle('show',t==='diary');
+ var b=document.getElementById('tab-biz'),d=document.getElementById('tab-diary');
+ b.className='tab '+(t==='biz'?'active-biz':'');
+ d.className='tab '+(t==='diary'?'active-diary':'');
+}
+</script>
+</body>
+</html>
