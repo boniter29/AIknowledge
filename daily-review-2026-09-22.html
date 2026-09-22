@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 · 2026-09-22</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:#0f1117;color:#d8dce6;line-height:1.85;min-height:100vh;padding:20px 16px 60px}
+.wrap{max-width:720px;margin:0 auto}
+h1{font-size:1.5em;font-weight:700;color:#fff;margin:12px 0 4px}
+.date{color:#7a8199;font-size:.9em;margin-bottom:22px}
+.tabs{display:flex;gap:10px;margin-bottom:22px}
+.tab{flex:1;padding:12px 0;text-align:center;border-radius:12px;border:1px solid #2a2f42;background:#171a26;color:#8a92ab;font-size:.95em;cursor:pointer;font-weight:600;transition:all .2s}
+.tab.active{background:linear-gradient(135deg,#3b5bfd,#6a8bff);color:#fff;border-color:transparent}
+.tab.active.d2{background:linear-gradient(135deg,#d6538f,#e88ab5)}
+.panel{display:none;background:#171a26;border:1px solid #232838;border-radius:16px;padding:26px 22px;animation:fade .3s}
+.panel.show{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.panel h2{font-size:1.15em;margin:26px 0 10px;color:#fff}
+.panel h2:first-of-type{margin-top:0}
+.panel p{margin-bottom:14px;font-size:.97em}
+.panel strong{color:#fff}
+.biz h2{border-left:3px solid #4f6ef7;padding-left:10px}
+.dia h2{border-left:3px solid #d6538f;padding-left:10px}
+.tag{display:inline-block;font-size:.78em;padding:3px 10px;border-radius:20px;margin-right:6px;background:#1f2436;color:#8a92ab}
+.biz .lead{font-size:1.05em;color:#c9d4ff}
+.footer{margin-top:30px;text-align:center;color:#5b627a;font-size:.82em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘</h1>
+<div class="date">2026-09-22 周二</div>
+<div class="tabs">
+<div class="tab active" onclick="sw(0)">📊 商业复盘版</div>
+<div class="tab d2" onclick="sw(1)">📝 日记版</div>
+</div>
+
+<div class="panel biz show">
+<p class="lead"><strong>「开发退半步、运营进一步」是今天的总基调。</strong> 两场培训、一个豆包挽单案例和一条组织调整消息，都在验证同一个判断：工具铺开之后，决定成败的已经从开发速度转向使用质量。</p>
+
+<h2>两场培训：给工具立规矩</h2>
+<p>上午和下午连开两场培训，一场面向新人导购讲导购助手和客户接待流程，一场讲放我家AI生图的标准化，合计超过两个半小时。会上反馈说得很直白：有同事提到AI出图色差严重、想让沙发放这儿它偏放到那儿，现场接待客户根本等不起。更深的隐患也有人点了出来，导购为了让效果图好看，配上一堆茶几挂画地毯，客户实物到家发现落差太大，心理落差直接反噬成交。放我家这个工具的初衷是解决「客户怕买回去放家里不好看」，但使用不规范时，工具会反向制造预期落差。今天讲标准化的目的，是让图诚实一点，图越接近实物到家后的样子，成交后退款的风险越小。</p>
+
+<h2>豆包挽单：一线自己长出来的用法</h2>
+<p>客户收货后不满意，拍了图要退款。门店导购姐姐用豆包帮客户调整光线和软装搭配，把图发回去让客户照着重新搭，单子挽回来了。这个案例的含金量在于它没走官方工具链路，是一线自己摸出来的，已经准备作为标杆案例来打。和放我家培训对照着看：官方工具在防「预期落差」，民间工具在管「到手落差」，两端都在往成交后的满意度收敛。这正是运营深耕该有的样子。</p>
+
+<h2>组织调整：回答谁来打磨工具</h2>
+<p>晚上的消息确认，小林AI和小龙虾的产品设计与交互全部交给产品侧，开发只做技术评估和基础能力封装，发布按正常项目走申请流程，整体节奏放慢，重心转向运营、管理、宣传、培训。白天两场培训在教人用工具，晚上这条调整在回答谁来打磨工具，两件事正好对上。公司层面的判断已经清楚：当前瓶颈在使用侧而非产能侧。</p>
+
+<h2>资源回收的信号</h2>
+<p>财务侧要求睿途邦月度账单同步和三季度对账中秋前结掉；被点名积压的四个海外项目要限期结项；同时继续向团队推荐Jev，认为「交代任务」是一个值得深耕的通用场景，好用又便宜。收尾旧项目、收敛注意力、给一线做培训，全是在为运营深耕腾地方。</p>
+
+<p><strong>今天没有新的大动作，但方向上的收敛很清晰。工具已经有了，接下来拼的是谁用得好、图诚不诚实、标杆能不能复制。</strong></p>
+</div>
+
+<div class="panel dia">
+<p>今天从早到晚都在跟同一拨人打交道，门店的导购。</p>
+<p>上午的培训是给新人开的，讲导购助手，讲怎么接待客户，怎么用AI生图，一直讲到充值和企微沉淀的规范。下午又是一场，讲放我家这个工具的标准化。两场加起来两个多小时。有同事在会上吐槽，说AI出的图色差严重，想让沙发放这儿它偏放到那儿，现场接待客户的时候根本等不起。这话不好听，但是真话。</p>
+<p>下午有人提了一个更扎心的问题。效果图做得太好看了，配了茶几电视柜挂画地毯，客户一看，好，就要这个。东西到家，家里没有那些配衬，落差一下就出来了。为了成交做的图，反过来砸了成交。所以今天的标准化培训，讲的其实是怎么让图诚实一点。</p>
+<p>最让我高兴的是一个野路子案例。客户收了货说不满意，拍了图要退款。门店的导购姐姐用豆包帮他调整光线，调软装，把图发回去让客户照着重新搭一搭，单子挽回来了。没人教过她，她自己摸出来的。我准备把她当标杆案例来打。官方工具在教大家防落差，民间工具自己长出来管预期，两件事在同一天发生，挺妙的。</p>
+<p>晚上还看到一个消息，说小林AI和小龙虾的产品设计和交互以后全部交给产品侧，开发只做技术评估，整体节奏放慢，重心转向运营、管理、培训、宣传。白天在教人用工具，晚上在调整谁来做工具，两件事对上了。</p>
+<p>中间还抽空给团队安利了两回Jev，这个东西适合交代任务那种场景，好用又便宜，建议他们都试试。财务那边的事情也催了一遍，睿途邦的账单同步和三季度对账，要求中秋前结掉。海外积压的四个项目也被点名了，得限期收尾。中午还有个联合国儿童基金会的回访电话打进来，当时在忙，改约到下午一点半，把月捐的事办了。当初在B站刷到就随手买了份爱心礼包，没想到后面还有一整套回访流程，做公益做到这个细致程度，也算是一种功课。</p>
+<p>睡前想起导购姐姐那句反馈，说自定义提示词下架之后，感觉像是失恋了。工具用出感情了，这是好事，也是压力。</p>
+</div>
+
+<div class="footer">由 Hermes Agent 自动生成 · 数据来源：AI听记 + 聊天记录 · 2026-09-22</div>
+</div>
+<script>
+function sw(i){var t=document.querySelectorAll('.tab'),p=document.querySelectorAll('.panel');
+for(var k=0;k<2;k++){t[k].classList.toggle('active',k===i);p[k].classList.toggle('show',k===i);}}
+</script>
+</body>
+</html>
