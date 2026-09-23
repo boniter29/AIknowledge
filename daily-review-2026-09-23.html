@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-09-23</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#0d1117;color:#e6edf3;line-height:1.85;font-size:16px}
+.wrap{max-width:720px;margin:0 auto;padding:24px 20px 60px}
+h1{font-size:22px;margin-bottom:4px}
+.date{color:#8b949e;font-size:13px;margin-bottom:20px}
+.tabs{display:flex;gap:8px;margin-bottom:24px}
+.tabs button{flex:1;padding:10px 0;border:1px solid #30363d;background:#161b22;color:#8b949e;border-radius:10px;font-size:15px;cursor:pointer;transition:.2s}
+.tabs button.active{color:#fff;border-color:transparent}
+#tab-biz.active-tab-btn{background:linear-gradient(135deg,#1f4fd8,#3b82f6)}
+#tab-diary.active-tab-btn{background:linear-gradient(135deg,#be3a6c,#ec6a9c)}
+.panel{display:none}
+.panel.show{display:block}
+.panel.biz .card{border-left:3px solid #3b82f6}
+.panel.diary .card{border-left:3px solid #ec6a9c}
+.card{background:#161b22;border-radius:14px;padding:20px 18px;margin-bottom:16px;white-space:pre-wrap}
+.card h2{font-size:15px;margin-bottom:10px}
+.biz h2{color:#6ea8ff}
+.diary h2{color:#f49bc1}
+.tag{display:inline-block;font-size:12px;padding:2px 10px;border-radius:20px;background:#21262d;color:#8b949e;margin-right:6px;margin-bottom:8px}
+.footer{margin-top:32px;text-align:center;color:#484f58;font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘 · 9月23日</h1>
+<div class="date">2026-09-23 周三</div>
+<div class="tabs">
+<button id="tab-biz" class="active-tab-btn" onclick="show('biz')">📊 商业版</button>
+<button id="tab-diary" onclick="show('diary')">📝 日记版</button>
+</div>
+
+<div class="panel biz show" id="panel-biz">
+<div class="card"><h2>定调</h2>今天一整天其实在做同一件事，把上午抛出的两个问题（AI时代的软件工程、AI时代的组织提效）拆成能落地的动作，从流程培训到决策记录，从数字分身评审到大赛沉淀口径，全部指向让过程可被看见。</div>
+<div class="card"><h2>起点：把焦虑翻译成问题</h2>上午在群里给新哥发了阿里CIO的访谈，说自己一直在焦虑，相信整个行业都在面对同样的两个问题。重点不该放在怎么打磨AI产品上，该放在AI时代的软件工程和组织提效上。这段话发出去之后，今天的日程几乎全是在回答它。</div>
+<div class="card"><h2>第一条线：工程，改源头</h2>中午和文鑫聊出一件事情，把一个应用直接丢给AI去读，它读了很多遍，还是不知道每个细节为什么这么设计。文鑫说他缺一个handle文件，前一天有个设计他压根没注意到。往深处推，这条线早就在了，没有PRD，没有测试用例，产品经理直接跟开发说要改哪里，开发让AI改完就上线，AI改了什么、为什么改，没人留痕。于是借鉴Anthropic的做法，定了决策记录的方向，做成提交代码前自动跑一遍的skill，下午站会同步。同一天另一场会上，Beta版的问题被摆出来，恩飞团队多个任务执行互相干扰，output文件夹扫到旧文件被一起纳入，定时任务跳出来打断正在跑的任务。流程没有记录，问题就只能靠人肉排查。这两件事是同一条因果链，前者在修源头，后者是源头失修的症状。</div>
+<div class="card"><h2>第二条线：组织，让过程可见</h2>下午的需求流程培训把创建到发布拆成ITB、云效、发布中心三个入口，把项目需求和迭代需求的边界讲清楚，后续要立项的都走项目需求。AI大赛那边把半决赛素材的口径定了下来，每个队伍都要交Agent介绍，形式不限，10月12日截止，还补了一句初衷，不要搞了50多支队伍，只有决赛那几只有沉淀。活跃队伍奖的判定也定了方向，看发帖早晚、群消息条数、过程材料数量。这套东西的共同点是让参与过程可被看见，和决策记录机制是同一个逻辑。</div>
+<div class="card"><h2>数字分身：第四轮评审收敛</h2>原来让用户选对话的步骤砍掉，改成一键生成，身份核验直接告诉用户能读到什么，资料收集默认90天，加了版本管理防误覆盖。评审里有人提了个真问题，三个人说的数字分身可能是三个东西，一个讲场景一个讲平台，语言都不一样怎么达成共识。这个问题今天没有答案，但它决定了后面用谁的资源和节奏。</div>
+<div class="card"><h2>业务末梢：一个挽单案例</h2>门店导购用豆包帮客户调光线调软装，把图发回去挽了一单退款。据此拍板开放自定义提示词，并想清楚了与豆包的差异在多轮对话生图和语音输入。这类用法先找企文打标杆，再沉淀成通用功能，这就是组织提效这条线在业务末梢的形态。</div>
+<div class="card"><h2>人事与杂项</h2>招两个人基本定了，一个分担文鑫，一个分担浮云，都要进业务线陪跑。实习生有点犹豫能不能搞定，倾向先聊聊看。明早九点有AI用人需求的会，正好接上。敏感词拦截也排查完了，制度里出售毒品四个字触发，属正常灰产文档内容，调整后已通过。晚上聚餐，坐了YIYI的车。</div>
+</div>
+
+<div class="panel diary" id="panel-diary">
+<div class="card"><h2>锚点：翻译</h2>今天一整天都在做翻译。把焦虑翻译成问题，把问题翻译成流程，把各自的想法翻译成彼此听得懂的话。</div>
+<div class="card"><h2>一</h2>早上先跟新哥说了实话，说我一直在焦虑。发了阿里CIO的访谈给他，说我们组织遇到的问题，整个行业都在面对，重点不该放在怎么打磨AI产品上，是软件工程和组织提效这两件事。发完就去开会了。
+
+第一场会讲需求流程，ITB、云效、发布中心，三个入口。有人问项目需求和迭代需求有什么区别，讲的人想了想说，体感上没什么区别，流程都一样，你们后续要立项就走项目需求吧。大家记下来了。这种会没什么高深的，就是把路修出来，让人知道往哪走。</div>
+<div class="card"><h2>二</h2>中午和文鑫聊了个让自己都有点意外的事。一直以为把应用丢给AI，它读一遍就懂了。它确实读了很多遍，还是不知道每个细节怎么想的。文鑫说他缺一个handle文件，前一天有个设计他压根没注意到。聊着聊着冒出一个想法，做一个提交代码前记录决策的skill，让德斌和海文他们每次提交前跑一遍。AI协作的透明度，最后落在留痕这两个字上。
+
+下午数字分身第四轮评审。把原型里所有要用户操作的步骤都砍了，一键生成，身份核验，资料收集，一条线走完。有人问资料收集除了对话还有什么，答了对话、AI听记、文档、知识库，本地文件也能放进去蒸馏。评审到一半有人说了句话，我们三个人说的数字分身可能是三个东西，他讲场景，我讲平台，语言都不一样，你们怎么达成共识。这话没人当场接住，但值得记下来。
+
+还有一件小事挺有意思。有用户@了分身，没注意，以为是@本人，先答了。分身收到消息的时候，一边跑回答一边收到群里的新消息，于是直接在答案的基础上补了一句，补充个更省事的办法。它比我还快。</div>
+<div class="card"><h2>三</h2>傍晚跟轩然聊电脑卡不卡，要不要加内存条。他说跑太多的时候AI会暂停，得重新跟它说一遍它才继续干活。让他跑通了反馈给德斌。
+
+晚上聚餐。饭前在群里跟洁敏说今晚不坐车，跟YIYI说今晚坐她的车。饭桌上聊了什么记不太清，只记得一天里悬着的那些问题，上午的焦虑，中午的留痕，下午的共识，都还没有答案，但都比早上具体了一点。明天早上九点还有个会，AI用人需求。招两个人的事基本定了，一个分担文鑫，一个分担浮云，都要进业务线陪跑。
+
+睡前想起下午还讲了一瓶水。浮云去门店，刘毅说别人给的瓶装水也不要拿。供应商给你一瓶水，你万一帮他办了个事呢。这话糙，理是硬的。</div>
+</div>
+
+<div class="footer">Hermes 每日复盘 · 2026-09-23</div>
+</div>
+<script>
+function show(t){['biz','diary'].forEach(x=>{document.getElementById('panel-'+x).classList.toggle('show',x===t);document.getElementById('tab-'+x).classList.toggle('active-tab-btn',x===t);});}
+</script>
+</body>
+</html>
