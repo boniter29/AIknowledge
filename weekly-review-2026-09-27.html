@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每周复盘 2026-09-21 ~ 2026-09-27</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --border:#30363d; --text:#e6edf3; --muted:#8b949e;
+    --blue:#58a6ff; --orange:#f78166; --purple:#d2a8ff;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,sans-serif;
+    line-height:1.8; padding:0 16px 40px; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px; margin:0 auto;}
+  header{padding:36px 0 8px;}
+  header h1{font-size:22px; font-weight:700; letter-spacing:.5px;}
+  header .sub{color:var(--muted); font-size:13px; margin-top:8px;}
+  .tabs{display:flex; gap:8px; margin:20px 0 4px; position:sticky; top:0; background:var(--bg); padding:10px 0; z-index:10;}
+  .tab{
+    flex:1; text-align:center; padding:10px 6px; border-radius:10px; cursor:pointer;
+    border:1px solid var(--border); color:var(--muted); font-size:14px; font-weight:600;
+    transition:all .2s; background:var(--panel);
+  }
+  .tab.active{color:#fff; border-color:transparent;}
+  .tab[data-t="biz"].active{background:linear-gradient(135deg,#1f6feb,#58a6ff);}
+  .tab[data-t="diary"].active{background:linear-gradient(135deg,#d93b1a,#f78166);}
+  .tab[data-t="silence"].active{background:linear-gradient(135deg,#8250df,#d2a8ff);}
+  .panel{display:none; padding:24px 20px; border-radius:16px; border:1px solid var(--border); background:var(--panel); margin-top:12px;}
+  .panel.active{display:block;}
+  .panel h2{font-size:18px; margin-bottom:16px; font-weight:700;}
+  .panel p{margin-bottom:14px; font-size:15px;}
+  .panel p:last-child{margin-bottom:0;}
+  .biz{border-top:3px solid var(--blue);}
+  .biz h2{color:var(--blue);}
+  .diary{border-top:3px solid var(--orange);}
+  .diary h2{color:var(--orange);}
+  .silence{border-top:3px solid var(--purple);}
+  .silence h2{color:var(--purple);}
+  .thesis{
+    font-size:16px; font-weight:600; padding:14px 16px; border-radius:12px; margin-bottom:18px;
+    background:rgba(88,166,255,.08); border-left:3px solid var(--blue);
+  }
+  .thread{margin-bottom:16px; padding-bottom:14px; border-bottom:1px dashed var(--border);}
+  .thread:last-child{border-bottom:none;}
+  .thread b{color:var(--blue);}
+  .diary p.lead{color:#c9d1d9; font-size:15px;}
+  .silence ol{padding-left:20px;}
+  .silence li{margin-bottom:12px; font-size:15px;}
+  .silence li b{color:var(--purple);}
+  .lead-tag{display:inline-block; font-size:11px; padding:2px 8px; border-radius:20px; color:var(--muted); border:1px solid var(--border); margin-bottom:12px;}
+  footer{margin-top:24px; text-align:center; color:var(--muted); font-size:12px;}
+  footer a{color:var(--muted);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🗓️ 每周复盘</h1>
+    <div class="sub">2026-09-21 ~ 2026-09-27 · 第 39 周</div>
+  </header>
+
+  <div class="tabs">
+    <div class="tab active" data-t="biz" onclick="switchTab('biz')">📊 商业版</div>
+    <div class="tab" data-t="diary" onclick="switchTab('diary')">📝 日记版</div>
+    <div class="tab" data-t="silence" onclick="switchTab('silence')">🤫 沉默板</div>
+  </div>
+
+  <!-- 商业版 -->
+  <div class="panel biz active" id="biz">
+    <span class="lead-tag">本周定调</span>
+    <div class="thesis">这一周，公司从上到下完成了一次从「铺开」到「见效」的转向——AI 的瓶颈被证明不在工具，而在工具之外：在共识传递、在留痕、在使用质量。</div>
+
+    <div class="thread"><b>线索一：从「加资源」到「定打法」，AI 业务完成收敛。</b><br>周一加资源的决定落下来（扩编招 1-2 人），产品形态同一天切成数字员工+组织协同两条线，ROI 项目制改成价值分档；周二定下「开发退半步、运营进一步」的基调，两场培训立规矩，组织调整把产品设计交回产品侧；周四敲定明年资源打法——弱化 AI 产品、重点做 AI 落地。一条线从「要不要加注」走到「钱往哪砸」。</div>
+
+    <div class="thread"><b>线索二：「落地优先于造轮子」被一篇阿里 CIO 访谈点破并逐日坐实。</b><br>周一同事一句「AI 搞得好不是工具好，是这群人能让公司用好」；周二落到「决定成败的已从开发速度转向使用质量」；周三你把阿里 CIO 访谈发进群，说重点在软件工程与组织提效；周四资源打法与 CIO 的「提升工具锐度、先做端到端标杆」撞个正着。同一条判断被四次独立复述，说明它已从观点变成结论。</div>
+
+    <div class="thread"><b>线索三：一线长出来的豆包挽单，从野路子变成产品决策。</b><br>周二导购姐姐用豆包挽单，没走官方链路；周三你据此拍板开放自定义提示词，并想清楚与豆包的差异在多轮对话生图和语音输入。官方工具防「预期落差」，民间工具管「到手落差」，两端收敛到成交后的满意度——这是运营深耕最具体的形态。</div>
+
+    <div class="thread"><b>线索四（暗线）：留痕与共识传递成了新瓶颈。</b><br>周三你和文鑫发现「没有 PRD、没有测试用例、AI 改了什么没人留痕」，定下决策记录 skill；周四宝良问出酷家乐定位重叠，而共识早在慧姐那儿有了结论、只是没走到他面前。工具之外，信息该流到的地方没流到——这是下一阶段的真问题。</div>
+  </div>
+
+  <!-- 日记版 -->
+  <div class="panel diary" id="diary">
+    <span class="lead-tag">一个人的一周</span>
+    <p class="lead">周一他是从崩溃边缘开始的。八场会里情绪最浓的一场，同事说「每个环节都是失效的，好像都是他一个人在等」，散会后他跟洁敏说了实话：努力一个月，好像什么都没做，有双相复发的抑郁感，头很痛，很爱哭，梦里都有人在骂他。他反问自己是不是个合格领导。</p>
+    <p class="lead">转折在周中。他把焦虑翻译成了动作：跟新哥发阿里 CIO 访谈，说焦虑来自「AI 时代的软件工程与组织提效」；跟文鑫聊出「决策记录 skill」这个念头；把数字分身的原型一步砍成「一键生成」。最妙的瞬间是那个分身，收到他本人的新消息后，直接在他的答案上补了一句——「它比我还快」。</p>
+    <p class="lead">周四被宝良问住，越想越不是滋味，可他写了一条长消息把共识一五一十同步过去，写完「感觉好多了」。有些仗不用在会上打，会前一条消息就够了。</p>
+    <p class="lead">中秋这天他买到了有膏的螃蟹，发了四张图，配一句「这个季节下，只有一个有膏的」。工作也没闲着，那个请求问题排查到晚上，答案只有三个字：翻车了。一半给月亮，一半给请求和周报。</p>
+    <p class="lead">周日他收到周报催办，名单里没有自己，松了口气，又庆幸得太早——下周可能就有了。窗外的天黑得很早，一周里真正属于自己的时间，就剩这么几段。</p>
+  </div>
+
+  <!-- 沉默板 -->
+  <div class="panel silence" id="silence">
+    <span class="lead-tag">本周未完成</span>
+    <ol>
+      <li><b>酷家乐/林氏放我家定位重叠</b>：共识早就在慧姐的会议桌上，却迟迟没传到宝良面前——共识传递链路是反复出现、始终没补上的短板。</li>
+      <li><b>周报催办</b>：周五和周日两次靠人工 @ 点名兜底，提交进度没有自动可视化，节后可能周周复发。</li>
+      <li><b>请求问题「翻车」</b>：中秋当天定性为请求侧稳定缺陷，修复还是挂起未决，直接影响国庆后开工状态。</li>
+      <li><b>招人</b>：定了招两个（分担文鑫和浮云），但实习生「犹豫能不能搞定」，人到岗还需 2-3 个月。</li>
+      <li><b>数字分身共识</b>：周三评审抛出「三个人的数字分身可能是三个东西」，没人接住，答案悬着。</li>
+    </ol>
+  </div>
+
+  <footer>
+    由 Hermes 每周复盘自动生成 · <a href="https://boniter29.github.io/AIknowledge/weekly-review-2026-09-27.html">AIknowledge</a>
+  </footer>
+</div>
+
+<script>
+function switchTab(t){
+  document.querySelectorAll('.tab').forEach(el=>el.classList.toggle('active', el.dataset.t===t));
+  document.querySelectorAll('.panel').forEach(el=>el.classList.toggle('active', el.id===t));
+}
+</script>
+</body>
+</html>
