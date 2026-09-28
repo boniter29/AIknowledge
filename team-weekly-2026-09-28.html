@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>团队周报洞察 · 9/21 ~ 9/27</title>
+<style>
+:root{
+  --bg:#0f1115; --card:#181b22; --card2:#1f232d; --border:#2a2f3a;
+  --text:#e6e8ee; --muted:#9aa3b2; --accent:#4f6ef7; --green:#22c55e;
+  --yellow:#f59e0b; --red:#ef4444; --purple:#a855f7;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Segoe UI",sans-serif;line-height:1.6;padding:16px;max-width:860px;margin:0 auto}
+h1{font-size:1.35rem;margin-bottom:4px}
+.sub{color:var(--muted);font-size:.85rem;margin-bottom:20px}
+h2{font-size:1.05rem;margin:26px 0 12px;padding-left:10px;border-left:3px solid var(--accent)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.metric{background:var(--card2);border-radius:10px;padding:12px;text-align:center}
+.metric .v{font-size:1.5rem;font-weight:700}
+.metric .l{color:var(--muted);font-size:.75rem;margin-top:2px}
+.bar{height:8px;background:#2a2f3a;border-radius:4px;overflow:hidden;margin-top:10px}
+.bar>i{display:block;height:100%;border-radius:4px}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:top}
+th{color:var(--muted);font-weight:500;font-size:.75rem}
+.tag{display:inline-block;padding:2px 8px;border-radius:6px;font-size:.72rem;font-weight:600}
+.tag.green{background:rgba(34,197,94,.15);color:var(--green)}
+.tag.yellow{background:rgba(245,158,11,.15);color:var(--yellow)}
+.tag.red{background:rgba(239,68,68,.15);color:var(--red)}
+.tag.purple{background:rgba(168,85,247,.15);color:var(--purple)}
+.tag.blue{background:rgba(79,110,247,.15);color:var(--accent)}
+.signal{border-left:3px solid var(--accent);padding:10px 14px;background:var(--card2);border-radius:0 10px 10px 0;margin-bottom:10px}
+.matrix td,.matrix th{text-align:center}
+.matrix td:first-child,.matrix th:first-child{text-align:left}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%}
+.muted{color:var(--muted)}
+.small{font-size:.78rem;color:var(--muted)}
+.foot{margin-top:24px;color:var(--muted);font-size:.75rem;text-align:center}
+</style>
+</head>
+<body>
+
+<h1>🧠 团队周报洞察</h1>
+<div class="sub">周期：2026-09-21 ~ 2026-09-27（W39 · 周报） · 6 人团队 · 诊断工具，非考核工具</div>
+
+<h2>① 聚焦度体检</h2>
+<div class="card">
+  <div class="grid">
+    <div class="metric"><div class="v" style="color:var(--yellow)">58%</div><div class="l">主战场工时占比 🟡</div></div>
+    <div class="metric"><div class="v">20+</div><div class="l">战线数量</div></div>
+    <div class="metric"><div class="v" style="color:var(--red)">0</div><div class="l">S&amp;OP 战场投入</div></div>
+    <div class="metric"><div class="v" style="color:var(--yellow)">10%</div><div class="l">海外低优先级消耗</div></div>
+  </div>
+  <div class="bar"><i style="width:58%;background:var(--yellow)"></i></div>
+  <p class="small" style="margin-top:8px">主战场工时约 58%（黄灯，&lt;60%）；四大主战场中「S&amp;OP 供需计划」连续两周零投入；海外 IECM/BPS 占约 10%（未破 20% 红线，但集中在米酒一人）。</p>
+</div>
+
+<h2>② 价值链看板</h2>
+<div class="card">
+<table>
+<tr><th>项目</th><th>环节</th><th>断点</th><th>建议</th></tr>
+<tr><td><b>IT必答·数字分身</b>（米酒）</td><td><span class="tag green">使用中→复制</span></td><td>转人工占比待统计</td><td>本周出开放标准，跨群推广验证</td></tr>
+<tr><td><b>林氏放我家 3.0</b>（浮云）</td><td><span class="tag blue">构建→验证</span></td><td>V1 提示词未批量评测</td><td>先 32 张冒烟，再 152 张正式对比</td></tr>
+<tr><td><b>KBMS/DAM 素材库</b>（YIYI）</td><td><span class="tag blue">构建中</span></td><td>待 SIT 复核</td><td>锁定 10 月底 SKU 小图试点</td></tr>
+<tr><td><b>视觉资源排单</b>（Cris）</td><td><span class="tag blue">构建中</span></td><td>软装数据 Owner 未定</td><td>先两条链路调研，再开发</td></tr>
+<tr><td><b>S&amp;OP 供需计划</b></td><td><span class="tag red">未启动</span></td><td>四战场唯一空缺</td><td>明确负责人 + 最小切入点</td></tr>
+</table>
+<p class="small" style="margin-top:8px">标杆：米酒的 IT 必答/数字分身最接近「已见效可复制」，建议作为第一个标杆推广。</p>
+</div>
+
+<h2>③ 项目 × 人员矩阵</h2>
+<div class="card">
+<table class="matrix">
+<tr><th>成员</th><th>内容生产</th><th>商品视觉</th><th>客服导购</th><th>S&amp;OP</th><th>海外</th><th>治理/其他</th></tr>
+<tr><td>浮云</td><td><span class="dot" style="background:var(--green)"></span></td><td></td><td><span class="dot" style="background:var(--green)"></span></td><td></td><td></td><td><span class="dot" style="background:var(--muted)"></span></td></tr>
+<tr><td>米酒</td><td></td><td></td><td><span class="dot" style="background:var(--green)"></span></td><td></td><td><span class="dot" style="background:var(--red)"></span></td><td><span class="dot" style="background:var(--muted)"></span></td></tr>
+<tr><td>YIYI</td><td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--green)"></span></td><td></td><td></td><td><span class="dot" style="background:var(--yellow)"></span></td><td></td></tr>
+<tr><td>文鑫</td><td></td><td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--green)"></span></td><td></td><td></td><td><span class="dot" style="background:var(--muted)"></span></td></tr>
+<tr><td>Cris</td><td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--green)"></span></td><td></td><td></td><td></td><td><span class="dot" style="background:var(--muted)"></span></td></tr>
+<tr><td>水滴(三叶)</td><td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--green)"></span></td><td></td><td></td><td><span class="dot" style="background:var(--purple)"></span></td></tr>
+</table>
+<p class="small" style="margin-top:8px">🟢 主战场 · 🔴 海外低优先级 · 🟡 部分海外 · ⚪ 治理/培训/带教等。S&amp;OP 列全员空白。</p>
+</div>
+
+<h2>④ 风险卡点面板</h2>
+<div class="card">
+<table>
+<tr><th>事项</th><th>涉及方</th><th>卡了</th><th>建议解法</th></tr>
+<tr><td>小龙虾性能卡顿（耗时 1h+、产物异常）</td><td>浮云/文鑫 ↔ 研发</td><td><span class="tag red">2 周</span></td><td>定责任人+优先级+修复时间，评估 GPT 模型切换</td></tr>
+<tr><td>IECM/VC 标发口径</td><td>米酒 ↔ 业务/仓库</td><td><span class="tag red">2 周</span></td><td>明确「指定发货日」统一约束</td></tr>
+<tr><td>软装物料数据 Owner</td><td>Cris/水滴 ↔ 业务/供应链/BI</td><td><span class="tag yellow">本周</span></td><td>先链路调研再定系统归属</td></tr>
+</table>
+<p class="small" style="margin-top:8px">风险栏填写率 4/6（67%）：米酒、YIYI 风险栏空白；米酒海外依赖多却无协调记录，建议 1:1 补清单。</p>
+</div>
+
+<h2>⑤ 行业信号对照</h2>
+<div class="card">
+<div class="signal"><b>Jev「不说话的决策模型」（TypeSafe，9/20）</b><br><span class="muted">分类/路由/打分场景比 LLM 快 20–200 倍、省得多。</span><br>连接：米酒本周正在做 IT 必答的 Jev 候选相关性/可回答性标注，可直接评估决策模型在客服意图分类场景的省时省力效果。</div>
+<div class="signal"><b>Anthropic《AI-Native SDLC Playbook》（9/27）</b><br><span class="muted">80% 代码由 Claude 写，瓶颈从编码转移到流程两端，流水线 → Loop。</span><br>连接：水滴在建立项/发布流程、文鑫在上手云效需求管理，正对应「意图→方案→计划」结构化产物思路——把流程做成 AI 可消费的 Loop。</div>
+</div>
+
+<h2>⑥ 个人贡献摘要</h2>
+<div class="card">
+<table>
+<tr><th>成员</th><th>主线</th><th>亮点 / 关注</th></tr>
+<tr><td>浮云</td><td>林氏放我家 3.0（3.25d）</td><td>提示词 V1 候选方案已成型，待批量评测</td></tr>
+<tr><td>米酒</td><td>数字分身 + 海外（各约 1.6d）</td><td>IT 必答已上线观察；海外 46% 需止血</td></tr>
+<tr><td>YIYI</td><td>小红书全链路 + KBMS（3.2d）</td><td>主战场占比 73%，聚焦度最优</td></tr>
+<tr><td>文鑫</td><td>小龙虾性能/套件（1.85d）</td><td>学习信号正面（云效流程上手）</td></tr>
+<tr><td>Cris</td><td>视觉资源排单（1.4d）</td><td>8 板块碎片化，主线需收束</td></tr>
+<tr><td>水滴(三叶)</td><td>治理+带教+培训（3.6d）</td><td>超级节点，听记 27 条</td></tr>
+</table>
+<p class="small" style="margin-top:8px">说明：工时为报告自报口径的粗估，未覆盖「持续/日常」项，聚焦度结论置信度【中】，建议以 1:1 校准。</p>
+</div>
+
+<div class="foot">团队周报洞察 · 由 Hermes 自动生成 · 数据来源：DWS 周报（AI产品创新部周报模板）</div>
+</body>
+</html>
