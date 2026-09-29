@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 · 2026-09-29</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.85;min-height:100vh}
+.wrap{max-width:720px;margin:0 auto;padding:32px 20px 60px}
+h1{font-size:26px;color:#f0f6fc;font-weight:700;letter-spacing:.5px}
+.date{color:#8b949e;font-size:14px;margin:8px 0 24px}
+.tabs{display:flex;gap:12px;margin-bottom:28px}
+.tab{flex:1;padding:12px 0;text-align:center;border-radius:12px;cursor:pointer;font-size:15px;font-weight:600;border:1px solid #30363d;transition:.2s}
+.tab.biz{background:#161b22;color:#8b949e}
+.tab.diary{background:#161b22;color:#8b949e}
+.tab.biz.active{background:linear-gradient(135deg,#1f3a5f,#274b7a);color:#eaf2ff;border-color:#3b6ea5}
+.tab.diary.active{background:linear-gradient(135deg,#4f2a3d,#6e3a52);color:#ffeaf3;border-color:#a5627f}
+.panel{display:none;background:#161b22;border:1px solid #30363d;border-radius:16px;padding:28px 22px}
+.panel.active{display:block}
+.panel p{margin-bottom:16px;font-size:15.5px}
+.panel p:first-child{font-size:16.5px;font-weight:600}
+.panel.biz p:first-child{color:#79b8ff}
+.panel.diary p:first-child{color:#ffa3c0}
+.hint{color:#8b949e;font-size:13px;text-align:center;margin-top:20px}
+@media(max-width:480px){.wrap{padding:24px 14px 40px}.panel{padding:22px 16px}h1{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘</h1>
+<div class="date">2026-09-29 星期二</div>
+<div class="tabs">
+<div class="tab biz active" onclick="sw('biz')">📊 商业版</div>
+<div class="tab diary" onclick="sw('diary')">📝 日记版</div>
+</div>
+<div class="panel biz active" id="p-biz">
+<p>【定调】9月29日的主线是落地方向收拢，钉钉被确定为智慧载体，团队把力气从“推广AI”转向“把知识库做实、把贡献度看清楚”。</p>
+<p>一整天约三个半小时的会，其实都在同一个问题上打转。上午聊知识库场景落地，中午务虚复盘，下午定落地策略，三场会串成一条因果链，先承认员工认知分层，硬推只会制造阻力，所以策略改成找业务痛点先打标杆；标杆要能复制，就得有知识库承住沉淀；而知识库要建得起来，卡点在贡献度。有同事提得很实在，他维护限速知识库时，大家都在各自二级部门维护，内容链接过来，活跃度和贡献度根本抓不到。这个洞今天没有补上，但它把所有方案都框住了，智库体系如果看不见“谁在干活”，建了也立不住。</p>
+<p>载体之争有了倾向性结论。对照飞书的案例，钉钉AI能力差距显形，飞书能把表格、文档和AI答问直接串在一起。团队最后仍选钉钉做载体，理由是在线协同和工具密度，方向定成四条：部门建智库体系、会议自动入库、文档不冗余复制只要求AI能读、监控一级部门知识库活跃度。飞书那张图没有白看，它成了钉钉这边的设计输入。</p>
+<p>账也算得细。小会聊模型选型，质量最好的那个模型，一千块额度只够跑十次，二十块的中转费暂时交不了，最后定先用快手账号顶着，跑熟了再正经开。有人评价它快，其实它快是因为每一步都走对了。工具团队的预算和效果，就是在这种一笔一笔的取舍里磨出来的。</p>
+<p>竞赛线在推进但缺口不少。半决赛场地503订了之后可能不够，又补订418，赛制与评分要求两天内搞定，站会压缩到五到十分钟。15点复查时，多个队伍的入围结果、IT答疑对接人、品市沟通结论仍未补齐，缺项清单直接点名到人。</p>
+<p>日历上另一条硬线是10月9日的月会材料，九个板块已分工到人，要求用户视角语言、信息准确。外部环境也在添乱，梯子网络受控变严，全队一度timeout，只能切虚拟网卡加规则模式换节点。落地这件事，工具之内拼认知，工具之外拼的是这些基础设施别掉链子。</p>
+</div>
+<div class="panel diary" id="p-diary">
+<p>今天过得像一面镜子，白天测别人，晚上测自己。</p>
+<p>上午第一场会聊知识库。有同事提了个很实际的问题，知识库谁愿意贡献。他维护过一个限速的知识库，大家都在自己的二级部门里维护，内容链接挂过来，贡献度他抓不到。这话在会议室里转了一圈，没人接得上。原来是钉钉的知识库看活跃度，链接过来的内容它看不见。这个洞今天没有答案，但它把后面所有的方案都框住了，智库体系要建，得先解决“谁在干活”这件事看得见。</p>
+<p>中午的务虚会说好一小时，聊得比预想的深。定调是分层推广，别硬推。让一个还不太会用的人天天用，他只会觉得是负担。先找业务痛点打标杆，标杆立住了，其他人自然会跟过来。这话我想了很多遍，觉得是对的。有同事讲自己怎么搭知识库，一开始让AI每天六点半跑双周报，跑出来一大片，还是缺东西，线下传给他的PPT它抓不到。后来改成月底跑一遍再人工补，反而能用。工具再快，也快不过人先想清楚自己要什么。</p>
+<p>中间穿插了个小会聊模型。有个模型质量真的好，它快是因为每一步都走对了，但一千块额度只够跑十次，二十块的中转费暂时也交不了。最后定先用快手账号顶着，跑熟了再正经给他开。做工具的人算账，一笔一笔都是刀刃。</p>
+<p>晚上继续磨我的数字分身。改着改着把它放出来测试，回一条消息要六分钟，我看着倒计时干着急。它还爱教人做事，用户要一个结果，它先上一堂课。有人吐槽说老是骂人，得回炉重造一下。我认。驯服它这件事，比想象中费劲。</p>
+<p>分身被关掉之后，国庆去哪玩的事还得我自己接手。带娃带俩妈，三四天，以吃为主。潮汕的牛肉火锅、柳州的螺蛳粉、泉州的古城都在候选里。柳州人说人多，四百来万人口的工业重镇，节假日排队是常态，只是相对潮汕那种顶流温和一档。纠结到最后，最实际的一句话是要去今明两天就把房订了，国庆房价一天一个价。</p>
+<p>睡前想起白天那位同事的问题。我的分身也算知识库的一部分吧，它答柳州的时候，引的是我喂给它的判断。贡献度嘛，今天它替我上了不少工时，虽然慢了点，好在态度一直在线。它管这个叫被服务，我管这个叫还得改。</p>
+<p>明天接着改。</p>
+</div>
+<div class="hint">由 Hermes 自动生成 · 数据来源：AI听记 × 5 · 聊天记录 × 328</div>
+</div>
+<script>
+function sw(t){document.querySelectorAll('.tab').forEach(e=>e.classList.remove('active'));document.querySelectorAll('.panel').forEach(e=>e.classList.remove('active'));document.querySelector('.tab.'+t).classList.add('active');document.getElementById('p-'+t).classList.add('active');}
+</script>
+</body>
+</html>
