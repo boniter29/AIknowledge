@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每周复盘 2026-09-28 ~ 2026-10-04</title>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: #0d1117;
+  color: #e6edf3;
+  line-height: 1.85;
+  padding: 0 0 48px;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+header { padding: 40px 20px 20px; text-align: center; }
+header h1 {
+  font-size: 22px; font-weight: 700; letter-spacing: .5px;
+  background: linear-gradient(135deg, #58a6ff, #d2a8ff);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+header .date { color: #8b949e; font-size: 13px; margin-top: 8px; }
+.tabs {
+  display: flex; gap: 8px; justify-content: center; margin: 24px 0 28px; flex-wrap: wrap;
+}
+.tab {
+  padding: 8px 18px; border-radius: 20px; border: 1px solid #30363d;
+  background: transparent; color: #8b949e; cursor: pointer; font-size: 14px; transition: all .2s;
+}
+.tab.active { color: #0d1117; font-weight: 600; }
+.tab[data-panel="biz"].active { background: #58a6ff; border-color: #58a6ff; }
+.tab[data-panel="diary"].active { background: #f78166; border-color: #f78166; }
+.tab[data-panel="silence"].active { background: #d2a8ff; border-color: #d2a8ff; }
+.panel { display: none; animation: fade .3s ease; }
+.panel.active { display: block; }
+@keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.panel p { margin: 0 0 16px; font-size: 16px; }
+.panel p:first-child {
+  font-size: 17px; font-weight: 600; padding: 14px 16px; border-radius: 10px; margin-bottom: 20px;
+}
+#biz p:first-child { background: rgba(88,166,255,.12); border-left: 3px solid #58a6ff; }
+#diary p:first-child { background: rgba(247,129,102,.12); border-left: 3px solid #f78166; }
+#silence p:first-child { background: rgba(210,168,255,.12); border-left: 3px solid #d2a8ff; }
+.panel ol { margin: 0 0 16px; padding-left: 24px; }
+.panel ol li { margin: 0 0 10px; font-size: 15px; }
+footer { text-align: center; color: #484f58; font-size: 12px; margin-top: 40px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>每周复盘 2026-09-28 ~ 2026-10-04</h1>
+  <div class="date">第 40 周 · 商业版 / 日记版 / 沉默板</div>
+</header>
+<div class="wrap">
+  <div class="tabs">
+    <button class="tab active" data-panel="biz">商业版</button>
+    <button class="tab" data-panel="diary">日记版</button>
+    <button class="tab" data-panel="silence">沉默板</button>
+  </div>
+  <div class="panel active" id="biz"><p>定调：这一周，AI 落地从「做出来」进入「管起来」，而真正卡住进度的不是功能，是三样东西——统一的口径、精简的责任、提前的同频。</p>
+<p>国庆假期没有让组织的时钟停摆，六天复盘的主线不是假期，是转型。周一的睡眠项目汇报，把「被喷了一早上」变成了「可以拿出来讲」的交付物，驻场、日会、交付节点第一次被拆成可核查的环节——这是从「演示」到「可度量」的第一步。周二钉钉被定为智慧载体，方向从「推广 AI」转向「把知识库做实、把贡献度看清楚」，团队承认硬推只会制造阻力。周三知识库集成开发完成、待节后验证，但 IT 必答的 30% 解决率被一句「效果一直不太好」戳破了口径。周四的诊断最尖锐：AI 项目集体从「做出来」进入「管起来」，而管的部分没跟上——责任分类过多要精简、集团扣款争议大到要评估项目是否暂停。</p>
+<p>这是一条完整的「展开」线：周一拆解、周二定向、周三落地、周四诊断、周五行动。周五人在婆罗洲，两条消息从雨林边上发回——双周报提醒提前到节前、对瑶瑶的授权直接收口「不再分批请示，只报结果」。这是本周最轻也最重要的信号：组织开始尝试「能定死规则的定死规则，能交出去的交出去」，从「管起来」迈向「自运转」。</p>
+<p>第二条线是度量失真的反复报警，它没有闭环。贡献度抓不到（周二）、解决率口径被戳破（周三）、巡店雷达跳转算不算访问次数未定（周四）——这不是新问题，是「系统先跑起来、规矩后补」的旧账，越晚补越贵。</p>
+<p>第三条线藏在数字分身身上。它周二回一条消息要六分钟、爱教人做事；周三「成精」到能给每个人拟祝福，又「翻车」到两个分身互相 @ 循环、要手动中止。能力已经够用，缺的是机制护栏——这与主线同构：真正稀缺的从来不是功能，是边界。</p></div>
+  <div class="panel" id="diary"><p>这一周，他从「没时间等」活到了「学会等」。</p>
+<p>周一早上他是被喷醒的。坐到工位还没缓过来，就得跟恩飞他们进慧姐办公室，把上周那句「遇到卡点就停住了」翻译成具体的要求。语音拨出去又取消，最后还是当面聊。他没时间等，也等不起。</p>
+<p>周二他等一个数字分身回消息，倒计时跳到六分钟，他干着急。分身还爱教人做事，用户要结果它先上课，被吐槽「老是骂人，得回炉重造」。他认。等自己的复制品变好，比等任何人都磨人。</p>
+<p>周三他在「收尾」和「提前焦虑」之间切换，催着文鑫的转正流程一层层走，放话「你还没走完我就直接踢出迭代」，终于在下班前批了下来。他等的那个结果卡在假期门口落地。傍晚赶飞机，他提前一小时下班，怕堵车。</p>
+<p>周四人在婆罗洲，十二件事还是挤进了一条私聊。责任分类要重做、口径要定、汇报对象要对齐。他读出来乱中有一股劲——技术从来不是最难的部分，把一群人的理解拧到同一个方向才是。</p>
+<p>周五是一整天都在等。等犀鸟飞走，等猩猩幼崽九点半开饭，等傍晚的船慢慢挪向红光。向导说，可能看到猴子、鳄鱼，运气好还有大象。天一点一点黑下去，河上只剩船声。他忽然明白，等红光这件事，找不到也没关系，等本身就是行程的一部分。</p>
+<p>周日他催别人交双周报，又试自己不响的免提功能，顺手留了条听记叫「免提功能测试无响应」。假期过半，能守住的只有这些小事，好在小事也值得记。</p>
+<p>从被喷醒到在河边等红光，这一周他学会了：有些事急不来，但也拖不得。</p></div>
+  <div class="panel" id="silence"><p>本周该推进而未推进、反复出现却未解决的事：</p>
+<ol><li>林氏小龙虾性能卡顿 —— 连续两周未闭环。周一还提醒「国庆窗口只剩三天」，之后仅剩周四的 3.0 demo 构思，性能问题本身再无进展。</li>
+<li>知识库贡献度度量 —— 周二被同事点破「谁在干活」看不见，周三集成开发虽完成，度量问题仍未解决。</li>
+<li>IT 必答解决率口径 —— 周三被「效果一直不太好」戳破 30% 口径，承诺节后重算，未见行动。</li>
+<li>责任分类体系重做 —— 周四最重的诊断：分类过多要精简、集团扣款争议大到评估项目是否暂停，尚未动手，而扣款已在威胁项目存续。</li>
+<li>数字分身防循环机制 —— 周三「成精又翻车」暴露无防循环设计，护栏未加。</li>
+<li>AI 听记进共享知识库 —— 周一睡前卡住（数据量大、难按部门划分、个人数据无权限），思路未出。</li>
+<li>免提功能测试无响应 —— 周日留待工作日复测。</li></ol></div>
+</div>
+<footer>每周复盘 · 自动生成 · boniter29/AIknowledge</footer>
+<script>
+const tabs = document.querySelectorAll('.tab');
+const panels = document.querySelectorAll('.panel');
+tabs.forEach(t => t.addEventListener('click', () => {
+  tabs.forEach(x => x.classList.remove('active'));
+  panels.forEach(p => p.classList.remove('active'));
+  t.classList.add('active');
+  document.getElementById(t.dataset.panel).classList.add('active');
+}));
+</script>
+</body>
+</html>
