@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 · 2026-10-05</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;background:#0d1117;color:#e6e6e6;line-height:1.85;padding:20px 16px 60px}
+.wrap{max-width:720px;margin:0 auto}
+h1{font-size:22px;text-align:center;margin:24px 0 6px}
+.date{text-align:center;color:#8b949e;font-size:13px;margin-bottom:20px}
+.tabs{display:flex;gap:10px;justify-content:center;margin-bottom:26px}
+.tabs button{flex:1;max-width:170px;padding:10px 0;border:1px solid #30363d;border-radius:12px;background:#161b22;color:#8b949e;font-size:14px;cursor:pointer;transition:.2s}
+.tabs button.active.b{background:#12305a;color:#79b8ff;border-color:#1f6feb}
+.tabs button.active.d{background:#3a1d2e;color:#ff9bce;border-color:#db6396}
+.panel{display:none;background:#161b22;border-radius:16px;padding:26px 22px}
+.panel.show{display:block}
+.panel.biz{border-top:3px solid #1f6feb}
+.panel.diary{border-top:3px solid #db6396}
+.lede{font-weight:bold;margin-bottom:18px}
+.panel.biz .lede{color:#79b8ff}
+.panel.diary .lede{color:#ff9bce}
+.panel p{margin-bottom:16px;font-size:15.5px;color:#c9d1d9}
+.footer{text-align:center;color:#484f58;font-size:12px;margin-top:32px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘</h1>
+<div class="date">2026-10-05 · 周一</div>
+<div class="tabs">
+<button id="tb" class="active b" onclick="sw('b')">📊 商业版</button>
+<button id="td" class="d" onclick="sw('d')">📝 日记版</button>
+</div>
+
+<div id="pb" class="panel biz show">
+<p class="lede">今天是纯输出的一天，新信息几乎为零，两条线都在收口，一条通向团队，一条通向一个具体的人。</p>
+<p>全天的素材安静得反常。没有会议，没有听记，聊天记录里三十多条消息全是往外发的视频，真正带内容的只有那条定稿的双周报洞察。这种日子不值得记的理由很多，但它有一个值得记的理由，输出的密度本身就是一个信号，说明这周的工作到了交付和复盘的阶段，而不是输入的阶段。</p>
+<p>那条洞察的判断值得展开。9月21日到10月4日这个双周周期，主战场工时占59%，落在黄灯区。业务成员个体的聚焦度其实都不差，浮云100%，Cris76%，文鑫75%，YIYI73%，问题出在整体被lead的组织事务稀释。海外IECM和BPS的工时集中在米酒一个人身上，38%的比例已经逼近红线。这组数据放在一起读，结论很清楚，个体的努力没有问题，系统的负载分配有问题。</p>
+<p>两个需要领导关注的风险点都在收口期暴露。林氏小龙虾的稳定性在恶化，恩飞和睡眠组都反馈单任务耗时超过一小时，产物出现异常，用户流失的风险是真实的，解法指向研发侧评估增加上下文窗口，这条线要推给德彬。数字分身的代码封装卡了两周半没有动，它是最接近可复制标杆的项目，偏偏停在最后一公里，越晚明确封装方案，走通IT必答单和门店Beta的时间就越往后推。</p>
+<p>今天把这条洞察发出去，对象分了两拨，一拨给领导层点出风险，一拨给业务团队给出看板和建议。同一条信息用两种颗粒度讲，这件事本身说明了团队的沟通现状，风险要向上翻译成资源诉求，建议要向下翻译成可执行的下一步。</p>
+<p>连发三十多条视频是今天的另一条线。它看起来和周报毫无关系，但共同的推力是一样的，这周到了把积累的东西分发出去的时刻。周报分发判断，视频分发内容，都是收口的动作。</p>
+<p>明天值得盯两件事，小龙虾的上下文窗口评估有没有人接住，数字分身的封装方案有没有定下来。这两条线的死活，决定下一个双周周期是继续黄灯还是转绿。</p>
+</div>
+
+<div id="pd" class="panel diary">
+<p class="lede">今天一天没开会。手机相册大概最知道这一点，三十多条视频，一条接一条往外发，发到后来连我自己都数不清是第几条了。</p>
+<p>视频这东西发出去就轻了，转发的手指几乎不经过脑子，可一根根发下去，倒也发出来一种收拾屋子的踏实。</p>
+<p>真正过了脑子的是那条周报洞察。写了改，改了写，最后定稿发出去的那一版，是把九月底到十月初这两周的工时摊开来算过的。59%的主战场占比，黄灯。数字本身不吓人，吓人的是拆开之后的那部分，浮云百分之百，Cris七十六，文鑫七十五，YIYI七十三，每个人的聚焦度都拿得出手，可整体就是被压着。压着大家的东西不在他们身上，在我这类做lead的人身上，组织事务一层层叠下来，工时就这么漏掉了。</p>
+<p>发之前犹豫了一下要不要点米酒的名。海外那摊IECM和BPS，百分之三十八的工时压在一个人身上，数据摆在那里，不说，领导看不见，说了，又怕变成问责。最后还是写了，写法上把人和事分开，红线是工时分布的红线，米酒是在替系统扛，不是在偷懒。发出去之后盯着屏幕看了一会儿，希望读的人能接住这层意思。</p>
+<p>小龙虾的事最揪心。恩飞和睡眠组都反映单任务要跑一个多小时，产物还有异常。用户是拿脚投票的，这种体验多放一周，流失就多一分。给德彬留了话，让他评估加上下文窗口。还有数字分身，代码封装卡了两周半，它明明是最接近能复制的那种标杆，偏偏在最后一公里站着不动。写周报的时候我把这两条列在最前面，是因为怕它们再滑一周。</p>
+<p>发完周报，又把剩下的视频发完了。一天就这么过去，没有新东西进来，但该出去的都出去了。明天想看两件事，小龙虾的窗口有人接没有，封装方案定下来没有。黄灯不吓人，吓人的是黄灯亮着没人管。</p>
+</div>
+
+<div class="footer">Hermes 每日复盘 · 商业版蓝色 / 日记版粉色</div>
+</div>
+<script>
+function sw(k){for(const id of['pb','pd'])document.getElementById(id).classList.remove('show');document.getElementById('tb').classList.remove('active','b');document.getElementById('td').classList.remove('active','d');document.getElementById('p'+k).classList.add('show');document.getElementById('t'+k).classList.add('active',k);}
+</script>
+</body>
+</html>
