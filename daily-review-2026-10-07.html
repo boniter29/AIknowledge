@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 · 2026-10-07</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:#0d1117;color:#e6edf3;line-height:1.8;padding-bottom:60px}
+.wrap{max-width:720px;margin:0 auto;padding:24px 18px}
+h1{font-size:1.5rem;text-align:center;margin:18px 0 4px}
+.date{text-align:center;color:#8b949e;font-size:.9rem;margin-bottom:24px}
+.tabs{display:flex;gap:10px;justify-content:center;margin-bottom:28px}
+.tab{padding:10px 22px;border-radius:20px;border:1px solid #30363d;background:#161b22;color:#8b949e;cursor:pointer;font-size:.95rem}
+.tab.active-b{background:#1f3a5f;color:#79b8ff;border-color:#388bfd}
+.tab.active-d{background:#3f2233;color:#f692ce;border-color:#f778ba}
+.panel{display:none;animation:fade .3s}
+.panel.show{display:block}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.card{background:#161b22;border-radius:12px;padding:20px 22px;margin-bottom:16px;border-left:4px solid #388bfd}
+.diary .card{border-left-color:#f778ba}
+.card p{font-size:1rem;color:#c9d1d9;margin-bottom:12px}
+.card p:last-child{margin-bottom:0}
+.lead{font-size:1.05rem;color:#e6edf3;font-weight:500}
+.tag{text-align:center;color:#8b949e;font-size:.85rem;margin:28px 0 8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘</h1>
+<div class="date">2026年10月7日 · 星期三</div>
+<div class="tabs">
+<div class="tab active-b" id="tabb" onclick="sw('b')">📊 商业版</div>
+<div class="tab" id="tabd" onclick="sw('d')">📝 日记版</div>
+</div>
+
+<div class="panel show" id="panel-b">
+<div class="card">
+<p class="lead">今天的定调，双周报交卷日。</p>
+<p>全天没有一场会议，AI听记为零，聊天记录里只有一件事，就是那份《水滴的双周报》。这不是一个安静的日子，这是一个收口的日子。周期从9月21日到10月4日，十四天的工作在今天被压进一份报告里，说明三条线已经并行到了需要分栏陈述的体量，不再是某一件事的单点推进。</p>
+</div>
+<div class="card">
+<p>报告按专项输出，三条线各有各的进展。数字分身、小林AI、Agent平台是一组，指向的是对外交付的产品线；AI知识库建设是另一组，指向内部能力的沉淀；AI业务场景落地是第三组，指向把这些能力真正用进业务。这三条线的排列本身就是一种判断，产品、能力、落地各占一栏，意味着三者已经可以各自交代，而不是混在一起说。</p>
+</div>
+<div class="card">
+<p>因果链条值得往后看一层。双周报能按专项分栏，前提是过去两周的日常动作已经在按专项分类推进，今天只是把已经发生的事组织成可汇报的结构。而按专项推进的前提，又是这三条线各自有了稳定的负责人和节奏。所以今天的报告不是起点，是确认，确认这套多线并行的工作方式已经跑起来了。</p>
+</div>
+<div class="card">
+<p>一个小的观察，同一条双周报消息在当天出现了多次重复，可能是发送通道的重复推送，也可能是刻意多次同步。结合零会议、零听记来看，今天的主要产出集中在书面沉淀而非口头沟通，这符合双周周期的收口节奏。下一个双周周期的起点在明天，今天的报告就是下一阶段的基线。</p>
+</div>
+</div>
+
+<div class="panel diary" id="panel-d">
+<div class="card">
+<p>今天手机里反复出现同一个东西，那份《水滴的双周报》。我自己发的，发了不止一次。像是怕它没有送出去，又像是想再多看一眼。周期写在第一行，9月21日到10月4日，两个星期，被装进一份文档里。</p>
+</div>
+<div class="card">
+<p>写报告的时候照旧分了栏。数字分身、小林AI、Agent平台放在一起，AI知识库建设单开一栏，AI业务场景落地又是一栏。分栏是熟练的动作了，分到第三第四次，手上已经不需要想哪个该放哪里。这个熟练让我停了一下。半年前写周报还要想怎么措辞，现在表格一套一套地填，事情多到要用表格才装得下。</p>
+</div>
+<div class="card">
+<p>表格背后是这半个月的日常。数字分身和小林AI往前挪了一点，Agent平台动了动，知识库在攒，落地的事在推。单拎任何一天，好像都没什么大事。可是两周一拢，每一栏里都有几行写得出来的东西。日常就是这样，一天一天的，攒着攒着就成了报告里的表格。</p>
+</div>
+<div class="card">
+<p>今天没有会。听记是空的，日程是空的，聊天窗口里除了那份报告也没有别的。交完卷的这个晚上很静，静得有点不习惯。这种安静其实是一种信号，两个星期的账结清了，新的两个星期还没开始记。</p>
+</div>
+<div class="card">
+<p>报告交出去以后就不再属于我了。它变成别人眼里的两行字、三栏表格。只有我自己知道，那几行字背后是多少个下午的调试，多少次知识库里的来回修改。也许这正是写报告的意义，把说不清的过程压成说得清的几行，然后轻手轻脚地，走进下一个双周。</p>
+</div>
+</div>
+
+<div class="tag">Hermes Agent · 每日复盘 Pro</div>
+</div>
+<script>
+function sw(t){
+ document.getElementById('panel-b').classList.toggle('show',t==='b');
+ document.getElementById('panel-d').classList.toggle('show',t==='d');
+ document.getElementById('tabb').className='tab'+(t==='b'?' active-b':'');
+ document.getElementById('tabd').className='tab'+(t==='d'?' active-d':'');
+}
+</script>
+</body>
+</html>
