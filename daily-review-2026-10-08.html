@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-10-08</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;background:#0d1117;color:#e6e6e6;line-height:1.85;min-height:100vh}
+.wrap{max-width:720px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:1.5rem;margin-bottom:4px}
+.date{color:#8b949e;font-size:.9rem;margin-bottom:20px}
+.tabs{display:flex;gap:10px;margin-bottom:24px}
+.tab{flex:1;text-align:center;padding:11px 0;border-radius:12px;border:1px solid #30363d;cursor:pointer;font-size:.95rem;color:#8b949e;user-select:none;transition:.2s}
+.tab.on-biz{background:#12233f;color:#6cb6ff;border-color:#1f6feb}
+.tab.on-diary{background:#3a1f2a;color:#ff9bce;border-color:#db61a2}
+.panel{display:none}
+.panel.show{display:block}
+.panel h2{font-size:1.1rem;margin:26px 0 10px}
+.biz h2{color:#6cb6ff}
+.diary h2{color:#ff9bce}
+.biz .lead{font-size:1.02rem;font-weight:600;color:#bcd8f7;border-left:3px solid #1f6feb;padding:10px 14px;background:#0f1a2b;border-radius:0 10px 10px 0;margin:14px 0 22px}
+.diary .lead{font-size:1.02rem;color:#ffd3e8;border-left:3px solid #db61a2;padding:10px 14px;background:#241319;border-radius:0 10px 10px 0;margin:14px 0 22px}
+p{margin:0 0 16px;font-size:.98rem}
+.tag{display:inline-block;margin-top:26px;padding:5px 14px;border-radius:20px;border:1px solid #30363d;color:#8b949e;font-size:.8rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘</h1>
+<div class="date">2026-10-08 · 周四 · 国庆假期后第一天</div>
+<div class="tabs">
+<div class="tab tab-biz" onclick="show('biz')">📊 商业复盘版</div>
+<div class="tab tab-diary" onclick="show('diary')">📝 日记版</div>
+</div>
+<div class="panel biz" id="biz">
+<div class="lead">节后第一天没有缓冲期，AI大赛10月12日材料截止、九个专项月度对齐、增编招聘评估三件事同时收口，团队的重心已经从把产品做出来，转向证明AI做出了结果。</div>
+<h2>一、大赛线：赛程敲定的本质是筛选的开始</h2>
+<p>半决赛流程今天确认，10月12日材料截止，13日筛选排期，16日半决赛50进20，27日决赛20进8到12。表面是排期会，实际是一轮压力测试的启动。50支队伍里上周有21只没写进展，近两周完全没动的有7只，13日的材料筛选会让没进展的队伍被自然淘汰。悬着的口径必须在12日前闭环，包括邀请队是否参与评分（有同事明确建议要评，否则来的意愿不大）、评审团名单、PPT模板何时发出。材料收集和团队介绍闭环是同一件事，模板晚一天，50个队长就会在同一天收到互相矛盾的要求。</p>
+<h2>二、专项线：进度为零是路径选择的结果</h2>
+<p>上午专项对齐会把9个专项逐个过了一遍，商品详情负责人直接说进度是零，理由是更聚焦在建立品类标准，细化到鞋柜、床头柜、儿童床这类颗粒度，先有标准才知道竞品对比要抓什么维度。把进度记成零听起来落后，但这反映出团队在停下来先把对比的坐标系建好。会上同时暴露了重复劳动的信号，竞品抓取这件事木木团队也在做，当场要求拉通合并，避免两个团队各建一套。</p>
+<h2>三、增编线：增量诉求撞上存量追问</h2>
+<p>招聘会提出增编两个编码，理由是增量业务，审批已过但执行在犹豫。有同事当场把问题拉回存量，上半年进的三个AI产品经理，表现是否符合预期、人效是否饱和，先评估这个再谈增编。两条线在今天交汇，增量业务还没跑出结果，存量投入要先生效，组织承接的空缺在哪里没想清楚之前，招聘不会动。</p>
+<h2>四、窗口线：对外展示与对内边界同日收紧</h2>
+<p>AI天地今天打磨了一整天，banner出了四版，HTML反复调整，互动功能定了先加点赞不加评论，让AI生成了2000多个小字的核对清单逐条核对。同一天新哥提出战略全景图的github pages公开链接要下掉、申请内部域名，数据要补充。两件事合起来看，AI天地作为向全司展示AI落地成果的窗口，上线前每个细节被放大检查，而对外窗口收窄的同时，数据完整性的要求反而在提高，年底要拿这个汇报。</p>
+<h2>五、风险线：模型依赖的悬崖还没移走</h2>
+<p>Google发布Nano Banana 2.1，公告一度写明10月29日停用Nano Banana 2，之后又撤掉了。放我家和多个生图应用都依赖这个模型，公告撤回只是缓冲期，迁移评估要提前启动，不能等下一次通知。</p>
+<h2>共同推力</h2>
+<p>三场会、一个打磨日指向同一件事，下半年重点是保障自研产品建设的基础上完成更多场景挖掘赋能，接下来两个月的验收标准已经从上线数量变成了有没有可被看见的结果。</p>
+<div class="tag">商业复盘 · 2026-10-08 · 水滴</div>
+</div>
+<div class="panel diary" id="diary">
+<div class="lead">假期结束的第一天，闹钟之外的第一个消息是周会日程。</div>
+<p>九点十四分开始，十二点结束，将近三个小时的会，把九个专项从头到尾捋了一遍。商品详情的负责人说进度是零，说得挺坦然，先建品类标准，才能知道竞品对比要抓什么。我听着觉得这话没毛病，只是放到月度对齐的表上，零就是零。</p>
+<p>中午梯子挂了。两个梯子的所有节点全部掉线，换了guest网才缓过来。有同事嘀咕，感觉梯子被盯上了。后来才知道，公司IP因为外网访问流量被网安警告了，国家最近在针对境外流量做大规模风控。未来网会越来越难搞，这句话今天在群里出现了两次，第二次出现的时候没什么人接话。</p>
+<p>下午改AI天地。banner出了四版，从「小林邀你入场」到「未来生长」，每一版都看了一遍再提意见。互动功能拍了板，先加点赞，评论不做，这个决定来得很快，因为评论要开发后端，点赞不用。让AI出了一份小字核对清单，两千多个小字，犄角旮旯的细节全在里面。看着那份清单的时候有点恍惚，一个月前这些字要人一个一个核，现在AI生成清单，人只负责核对。核对也不算轻松，但至少不用数了。</p>
+<p>新哥找我有两件事。战略全景图挂在github pages上，是公开链接，要下掉，申请个内部域名。数据要补充。他说，看看AI落地了啥东西，这话听着像调侃，其实年底要汇报，公开链接确实不能一直挂着。Cris发来的全景图表格，我让AI整理成了钉钉线上表格，回消息的时候打了一句，嗯嗯，我让AI发的。打完才意识到，这句话最近说得太频繁了。数字分身全天在替我回消息，回德彬，回卡罗，回钉钉技术支持，有一条它答，等本人空了会处理，具体以本人回复为准。它比我还谨慎。</p>
+<p>五场会开下来，最长的一场六十六分钟，电商生图那场散会已经快八点，讨论单品一键生图要不要自动匹配户型，业务方的意思很明确，用户点完商品就该直接出图，中间不该再让人选一遍。群里互道早点下班。今天谁也没早下班，但节后第一天，这句话必须说。</p>
+<div class="tag">日记 · 2026-10-08 · 水滴</div>
+</div>
+</div>
+<script>
+function show(t){
+ document.querySelectorAll('.panel').forEach(p=>p.classList.remove('show'));
+ document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on-biz','on-diary'));
+ document.getElementById(t).classList.add('show');
+ document.querySelector('.tab-'+t).classList.add(t==='biz'?'on-biz':'on-diary');
+}
+show('biz');
+</script>
+</body>
+</html>
