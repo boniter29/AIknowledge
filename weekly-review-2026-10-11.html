@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每周复盘 2026-10-05 ~ 2026-10-11</title>
+<style>
+  :root {
+    --bg: #0d1117; --panel: #161b22; --border: #30363d; --text: #c9d1d9;
+    --muted: #8b949e; --blue: #58a6ff; --orange: #f78166; --purple: #d2a8ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.85; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 24px 18px 60px; }
+  header { padding: 8px 0 4px; }
+  header .tag {
+    display: inline-block; font-size: 12px; letter-spacing: 2px; color: var(--muted);
+    border: 1px solid var(--border); border-radius: 20px; padding: 3px 12px; margin-bottom: 14px;
+  }
+  header h1 { font-size: 26px; margin: 0 0 6px; font-weight: 700; color: #f0f6fc; }
+  header .sub { color: var(--muted); font-size: 14px; }
+  .tabs {
+    display: flex; gap: 8px; margin: 22px 0 16px; position: sticky; top: 0;
+    background: var(--bg); padding: 10px 0; z-index: 10;
+  }
+  .tab {
+    flex: 1; text-align: center; padding: 10px 4px; border-radius: 10px; cursor: pointer;
+    font-size: 14px; font-weight: 600; color: var(--muted); border: 1px solid var(--border);
+    background: var(--panel); transition: all .15s ease;
+  }
+  .tab.active { color: #0d1117; border-color: transparent; }
+  .tab[data-t="b"].active { background: var(--blue); }
+  .tab[data-t="d"].active { background: var(--orange); }
+  .tab[data-t="s"].active { background: var(--purple); }
+  .panel { display: none; animation: fade .25s ease; }
+  .panel.active { display: block; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .panel p { margin: 0 0 16px; font-size: 16px; color: #d5dde5; }
+  .panel .lead {
+    font-size: 17px; font-weight: 700; color: #f0f6fc; padding: 14px 16px;
+    border-left: 4px solid var(--blue); background: var(--panel); border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  #panel-d .lead { border-left-color: var(--orange); }
+  #panel-s .lead { border-left-color: var(--purple); }
+  .panel .lead p { margin: 0; color: #f0f6fc; }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="tag">周度复盘 · PRO</span>
+    <h1>每周复盘</h1>
+    <div class="sub">2026-10-05 ~ 2026-10-11 · 本周 6 天有复盘记录（周二缺失）</div>
+  </header>
+
+  <div class="tabs">
+    <div class="tab active" data-t="b" onclick="show('b')">商业版</div>
+    <div class="tab" data-t="d" onclick="show('d')">日记版</div>
+    <div class="tab" data-t="s" onclick="show('s')">沉默板</div>
+  </div>
+
+  <div id="panel-b" class="panel active">
+<div class="lead"><p>定调：这一周，团队把「AI做出了结果」从一句口号，逼成了两个必须被公开检验的交付物——一张可以点开浏览的战略全景图，和一个七成时间还要转人工的数字分身。</p></div>
+<p>线索一：战略全景图，从双周报的三条线长成一棵树。周一的双周报把工作分成产品（数字分身、小林AI、Agent平台）、能力（AI知识库）、落地（AI业务场景）三条线，那还只是书面分栏。周四节后第一天，健新要下周二向 boss 汇报，全司 AI 落地场景被要求每个事业部至少五个、明天下班前补齐，「证明 AI 做出了结果」从此不再是复盘话术，而是一张要填满的多维表格。周五，汇报标准从「讲模型、讲通过率」扭成「讲业务价值」，逼着每个案例回答「解决了什么业务问题」。周日，全景图赶在截止线前从碎片收拢成骨架：科层到网状的叙事切入，效率优先、AI 优先的主张，再到价值链到场景池的可点开目录。一张图从周三的三栏，长成了周日一棵能让人自己往下钻的树。</p>
+<p>线索二：数字分身，从「卡住的封装」变成「全天值班的另一个他」，也暴露了热情的真相。周一时它还只是卡了两周半的代码封装，是收口期要推给德彬的风险点。到周四它已经全天替他回消息、回德彬回卡罗；周五 Cris 生日，它写出的小作文比本人临场憋的强。但同一天，IT 工单群的数字暴露了另一面：9 月 18 日至 10 月 9 日共 148 个工单，72% 转人工，25% 点已解决。热情和真实效果之间的距离，就压在这两个数字之间。周日它被拆成两个 part、加上专家套件功能，正式进入全景图——从风险点变成了战略主张里的一件产品。</p>
+<p>线索三：13 号，一条把所有材料往回挤压的截止线。AI 大赛 10 月 12 日交材料、16 日半决赛；全景图 13 号前要收口；经分会材料压着没走完；场景表 78 个项目缺图要挨个催。这一周几乎没有新信息输入，全是收口——连发的视频是分发，双周报是交付，全景图是收敛。下一个双周是绿是黄，取决于这些「收口」的产物能不能经得起公开检验。</p>
+  </div>
+
+  <div id="panel-d" class="panel">
+<p>这一周的他，一直在做同一件事：把散了一地的东西收起来。</p>
+<p>周一很静，没开会，三十多条视频一条条往外发，发到后来数不清发了多少，倒发出来一种收拾屋子的踏实。真正过了脑子的，是那条把工时摊开来算的双周报洞察——59% 落在黄灯区，拆开看每个人的聚焦度都拿得出手，可整体就是被压着；压着大家的东西不在他们身上，在他这类做 lead 的人身上。周三交卷，报告交出去之后就不再属于他了，变成别人眼里的两行字、三栏表格。那个晚上静得有点不习惯。</p>
+<p>周四假期结束，闹钟之外的第一个消息是周会日程。将近三个小时的会，九个专项捋了一遍，商品详情的负责人说进度是零，说得坦然：先建品类标准，才能知道竞品对比抓什么。零就是零。中午梯子挂了，公司 IP 因为境外流量被网安警告，那句「未来网会越来越难搞」在群里出现了两次，第二次没人接话。</p>
+<p>转折在周四健新谈话之后。三条待办压下来，最大的一条是收全司 AI 落地场景，每个事业部至少五个，明天下班前齐。他对着消息列表发了一会儿呆，然后认命地建表、开权限、拉人、写说明，傍晚还挤了半小时短会。跟同事吐槽「忙得要哭了」，发完表情包继续干活。</p>
+<p>周五他站上讲台讲《把 AI 带进团队》，材料是开讲前一刻才做完的。讲怎么用 AI 省时间的人，自己的时间被撕成五六份——这个仓促本身很诚实。那天他到处都有一个他：数字分身替他回消息、写 Cris 的生日小作文，写出来的那句「最深的印象是你对做得好有标准」比本人临场憋的强。可工单数据说，七成时候它还是得转人工。</p>
+<p>周日，他跟那张全景图较劲了一整天。早上摆叙述骨架，摆完心里踏实了点，至少骨架是自己的；中午做卡片，做完自己否掉，太口语化；晚上把散的东西往一起收。他给新哥发了句实话：「这次时间太赶了，做起来有点吃力。」说「吃力」两个字的时候，其实松了口气——实话比硬撑着说「没问题」舒服。明天下午交付，今天能做的都做了，剩下的交给明天上午的自己。</p>
+  </div>
+
+  <div id="panel-s" class="panel">
+<p>本周沉默 / 未完成</p>
+<p>一、林氏小龙虾的稳定性。周一作为收口期风险点提出（单任务耗时超一小时、产物异常、用户流失风险），要求推给德彬评估上下文窗口。之后一周再无跟进记录。这条线进了风险清单，却没在任何一天的「明天要盯」里落地。</p>
+<p>二、数字分身的代码封装。卡了两周半，周一被列为「最接近可复制标杆、停在最后一公里」的项目。本周它从「封装待定」变成「全天值班」，但封装方案本身是否定了、IT 必答单和门店 Beta 有没有推进，复盘里没有交代。分身的热闹，盖过了封装这个更硬的问题。</p>
+<p>三、模型依赖的悬崖。周四发现 Google Nano Banana 2.1 停用公告（后又撤回），放我家和多个生图应用都依赖它。结论是「迁移评估要提前启动，不能等下一次通知」——这句话之后，本周没有任何迁移动作被记录。</p>
+<p>四、竞品数据抓取的反爬卡点。周四立项时最大卡点是反爬，当场要求木木团队与商品详情拉通合并，避免两套系统。合并是否落地，没有下文。</p>
+<p>五、经分会材料。从周五到周日反复被提及「还压着经分会的材料」，YIYI 的 PPT 改到周日还在推给健新，但这份面向一级长的汇报材料始终没有「走完」的记录，一直被全景图挤到边上。</p>
+<p>一个被隐藏的问题：周二（10 月 6 日）没有复盘记录。是数据缺失，还是那一天真的什么都没发生——这件事本身值得问一句，因为一个完全安静的周二，在「收口周」里显得反常。</p>
+  </div>
+
+  <footer>数据来源：Notion Writing Projects · 每日复盘（商业版 + 日记版） · 生成于 2026-10-11</footer>
+</div>
+<script>
+function show(t) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+  document.getElementById('panel-' + t).classList.add('active');
+  document.querySelector('.tab[data-t="' + t + '"]').classList.add('active');
+  window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>
