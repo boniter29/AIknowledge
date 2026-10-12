@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 · 2026-10-12</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Helvetica Neue',sans-serif;background:#0d1117;color:#e6e6e6;line-height:1.8}
+.wrap{max-width:720px;margin:0 auto;padding:24px 18px 60px}
+h1{font-size:22px;margin-bottom:4px}
+.date{color:#8b949e;font-size:13px;margin-bottom:20px}
+.tabs{display:flex;gap:10px;margin-bottom:24px}
+.tab{flex:1;padding:12px 0;text-align:center;border-radius:12px;cursor:pointer;font-size:15px;font-weight:600;background:#161b22;color:#8b949e;border:1px solid #21262d;transition:.2s}
+.tab.active-b{background:#12233f;color:#58a6ff;border-color:#1f4470}
+.tab.active-d{background:#2b1a24;color:#f7a8c4;border-color:#5c2e42}
+.panel{display:none}
+.panel.show{display:block}
+.body p{margin-bottom:14px;font-size:15.5px;color:#d8dce2;text-align:justify}
+.lead{font-size:15.5px;padding:16px;border-radius:12px;margin-bottom:20px}
+.lead-b{background:#12233f;border-left:3px solid #58a6ff;color:#c9e1ff}
+.lead-d{background:#2b1a24;border-left:3px solid #f7a8c4;color:#ffd9e6}
+.hr{height:1px;background:#21262d;margin:28px 0}
+.footer{margin-top:32px;font-size:12px;color:#8b949e;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘</h1>
+<div class="date">2026年10月12日 · 周一</div>
+<div class="tabs">
+<div class="tab active-b" id="tb" onclick="sw('b')">📊 商业版</div>
+<div class="tab" id="td" onclick="sw('d')">📝 日记版</div>
+</div>
+
+<div class="panel show" id="pb">
+<div class="lead lead-b"><b>定调</b> · AI战略月冲刺首日，五版战略稿、一支全景视频、两轮汇报材料和三场面试在同一个白天里收拢，Q4规划表18点截稿归位，最重的活是把散落的专项拧成一个讲得出来的中心思想。</div>
+<div class="body" id="cb"></div>
+</div>
+
+<div class="panel" id="pd">
+<div class="lead lead-d"><b>感受</b> · 一整天都在跟「中心思想」较劲，最心累的从来不是做，是改。今天唯一的奢侈，是在厕所里多待了两分钟。</div>
+<div class="body" id="cd"></div>
+</div>
+
+<div class="footer">Hermes · 每日复盘</div>
+</div>
+<script>
+function sw(k){
+ var b=k=='b';
+ tb.className='tab '+(b?'active-b':'');td.className='tab '+(b?'':'active-d');
+ pb.className='panel '+(b?'show':'');pd.className='panel '+(b?'':'show');
+}
+function paras(txt,el){txt.split(/\n\n+/).forEach(function(t){var p=document.createElement('p');p.textContent=t.trim();el.appendChild(p)})}
+paras(document.getElementById('ctext').textContent,document.getElementById('cb'));
+paras(document.getElementById('dtext').textContent,document.getElementById('cd'));
+</script>
+<script type="text/plain" id="ctext">**AI战略月冲刺首日，五版战略稿、一支全景视频、两轮汇报材料和三场面试在同一个白天里收拢，Q4规划表18点截稿归位，最重的活是把散落的专项拧成一个讲得出来的中心思想。**
+
+先看这一天的密度是怎么来的。明早给boss汇报AI战略材料，下午月会，经分会PPT在路上，Q4季度规划表又定了今天18点截稿，四条deadline挤在同一天前后。AI战略材料从部门价值链矩阵版、部门场景卡片版到业务领域价值链三级版，一天里迭代五版；视频改了两版；月会材料和经分会PPT各改两版。用户在聊天里说，最近一周做了快10个大材料，今天一天干了以前半个月的工作量。产量上得去的原因很直接，AI承担了初稿和重复劳动，素材审核先让AI按要点过滤一遍，Q4规划表的表头是直接指令林氏小龙虾按Q3的表头结构生成的，预填初稿之后各个版块只需认领修改。团队里陆续回复已更新，18点截止的流程基本跑通。
+
+战略材料反复改版的核心不是排版，是叙事。三个版本的本质区别在讲法，按部门摆场景，还是按业务域讲价值链。最后倾向于V3，用业务域来讲。下午和同事过材料的听记里有一句话点破了问题，就怕他搞了这么多，中心思想在哪。数据不缺，缺的是一条能让boss三十秒抓住的主线。讨论中还有一个判断浮出来，S级的产品应该主要还是人工来做，因为精细细节需要打磨，腰部和尾部的场景才是AI提效的主战场。这条判断会直接影响后面场景取舍和资源分配的说法。与此同时，团队成员在群里逐条核对场景数据，林氏放我家工具客户的询单转化率相对大盘提升7.72个百分点，智能打标分群触达把激活回复率拉高0.59个百分点，材料正在从罗列场景走向用数字讲价值，这个方向是对的。
+
+Q4规划表的意义比一张表大。十几个专项，数字分身、林氏放我家、软装摆场、AI素材库KBMS、海外B2C，每行都预填了初稿，标注了要确认的验收标准、里程碑和依赖，18点统一收口。这实际上是把过去靠口头和文档散落的承诺，第一次压进一张有截止时间的表里。AI创意大赛的素材和覆盖度也在这轮梳理里定了口径，视觉、小红书、产品研发三条线纳入。
+
+对外协同上有一个升级信号。千问办公POC回顾聊完，对方展示了computer use可以作为一个独立的钉钉员工账号运行，看不出和真人员工的区别，还讲了数字员工和企业上下文（知识图谱）两个新能力。用户顺势提出要做企业上下文管理的统一规范，覆盖AI听记、会议、知识库、AI表格的使用，对方愿意配合做文档在线化、权限治理、知识库管理、会议管理四块培训。这是从「用工具」走向「立规范」的一步，规范的收益会在后面每个新员工和每个新场景上复利。
+
+今天还面了三个实习生，IP岗位、大模型Agent开发方向、IT运维方向各一个，HR流程齐全，上午面完下午继续。面试间隙冒出一个很实的观察，之前不怎么看好应届生和实习生，一个原因是AI产品经理和FDE很需要会用前沿工具，但面过的大部分大学生不舍得每个月自费一两千块买顶级模型用。这条以后可以直接进筛选标准，愿不愿意为工具花钱，比简历上的项目名更能说明一个候选人是不是真的把AI当生产力。
+
+一天收下来，真正值钱的产出有两样。一样是叙事的收拢，AI战略从按部门堆场景改成按业务域讲价值链，主线立住了。另一样是秩序的收拢，Q4所有专项进了同一张有deadline的表。材料和视频都还会再改，但这两样不会退回去。</script>
+<script type="text/plain" id="dtext">早上到公司的时候，材料的版本号已经在我脑子里排起队了。AI战略稿昨晚改到几十版，今天还要再过一遍。我给自己排了四条线，boss汇报材料、视频、月会PPT、经分会，外加下午三场面试。排完之后心里其实是麻的，我跟新哥说，今天有点事要稍微早点走，等群里大家都把材料检查完了，我今晚再改一版。话说出口自己都觉得像讨价还价。
+
+一整天都在跟中心思想较劲。材料里场景很多，数据也都在，可就是怕别人看完问一句，你这一堆东西的中心思想在哪。上午听同事聊，S级产品应该主要靠人工打磨，腰部尾部的场景才轮到AI提效，这句话我觉得可以进材料。下午跟卡罗他们核对场景数据，林氏放我家转化率提升7.72个百分点，打标触达的回复率提升0.59，数字一条条对过去，缺图的补图，重复的合并，归属的价值链改来改去。有个同事在群里问我，这工作量没有AI之前得做一周吧。我回他，一天做以前半个月的工作，感觉有点夸张了。AI这几天是真的蹬冒烟了，蹬出来一版我核对一遍，再让玲零零帮忙核一遍。
+
+视频是最磨人的。全景图的视频做了三版，云舟配音、Claude Opus 5.5、字幕演示版，各有一批问题。GPT非要让我挑声音，一个一个听过去，挑得我头大。我跟Cris说，这个HTML本来就是计划要做的，做完顺便让它根据内容出了个视频，结果视频比HTML还折腾。想着下周还要剪这些视频，有点恐怖。
+
+下午三场面试连着来。HR叫Summer，面试官是薯条和水滴。佛山大学的学生，一个做IP岗，一个讲他怎么把意图识别从75优化到93，还有一个研三的讲在联通做政务运维，天天查日志看服务器有没有被强行登录。面试间隙我跟薯条嘀咕了一个事，之前没怎么看应届生，一个原因是AI产品经理和FDE这个岗位，很需要舍得自费每个月一两千块买顶级模型用的人，面过的大部分大学生不舍得。这话没进任何材料，但我记住它了。
+
+傍晚Q4规划表收口。我提前让林氏小龙虾按Q3的表头生成了Q4的初稿，每个专项预填进去，18点前大家在群里陆续回复已更新。看着那些已更新刷出来的时候，我松了一口气，今天最沉的一块石头落地了。期间还有个插曲，YIYI手机找不到了，我帮她留意，后来找到了。还有一个同事的电脑卡死，我让他在群里反馈，联系同学去看。这些零碎事像缝里掉出来的线头，扯一下就得接住。
+
+千问办公那边下午也聊了。他们的computer use可以做成一个独立的钉钉员工账号，看不出跟真人的区别，我展示了一下，觉得这个以后能干很多事。我还提了我们打算做企业上下文管理的统一规范，他们很乐意来帮我们做培训。文档在线化、权限治理、知识库、会议管理，四块。规范这种东西说起来不性感，但真的立起来，后面每个新人每个场景都省事。
+
+晚上离开工位的时候，材料又改了一遍。改一遍改不好，再改一遍，想着怎么描述这个改法。最心累的从来不是做，是改。明天早上汇报完，这一天就算有个交代了。回家路上我想，今天唯一的奢侈，是在厕所里多待了两分钟，谁也没找我。</script>
+</body>
+</html>
