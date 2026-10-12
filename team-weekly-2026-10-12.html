@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>团队周报洞察 · 10/5 ~ 10/11</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --panel2: #1e222b;
+    --text: #e6e8ec;
+    --muted: #8b93a1;
+    --red: #ff5c5c;
+    --yellow: #f5b942;
+    --green: #3ecf8e;
+    --blue: #4f6ef7;
+    --border: #2a2f3a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.6;
+    padding: 16px;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 20px; margin-bottom: 4px; }
+  .sub { color: var(--muted); font-size: 13px; margin-bottom: 20px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  .card h2 {
+    font-size: 15px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+  .dot.red { background: var(--red); }
+  .dot.yellow { background: var(--yellow); }
+  .dot.green { background: var(--green); }
+  .badge {
+    display: inline-block; padding: 2px 8px; border-radius: 20px;
+    font-size: 11px; font-weight: 600;
+  }
+  .badge.red { background: rgba(255,92,92,.15); color: var(--red); }
+  .badge.yellow { background: rgba(245,185,66,.15); color: var(--yellow); }
+  .badge.green { background: rgba(62,207,142,.15); color: var(--green); }
+  .bar-row { margin-bottom: 12px; }
+  .bar-label { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px; }
+  .bar-track { background: var(--panel2); border-radius: 6px; height: 10px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 6px; }
+  .fill-red { background: var(--red); }
+  .fill-yellow { background: var(--yellow); }
+  .fill-green { background: var(--green); }
+  .fill-blue { background: var(--blue); }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th, td { padding: 8px 6px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; white-space: nowrap; }
+  td { vertical-align: top; }
+  .tag {
+    display: inline-block; padding: 1px 7px; border-radius: 4px; font-size: 11px;
+    background: var(--panel2); color: var(--muted); margin: 1px 2px 1px 0; white-space: nowrap;
+  }
+  .tag.hot { background: rgba(255,92,92,.12); color: var(--red); }
+  .tag.warn { background: rgba(245,185,66,.12); color: var(--yellow); }
+  .tag.ok { background: rgba(62,207,142,.12); color: var(--green); }
+  ul { padding-left: 18px; font-size: 13px; }
+  li { margin-bottom: 6px; }
+  .num { font-variant-numeric: tabular-nums; font-weight: 700; }
+  .note { color: var(--muted); font-size: 12px; margin-top: 8px; }
+  .person { border-left: 3px solid var(--border); padding: 10px 12px; margin-bottom: 10px; background: var(--panel2); border-radius: 0 8px 8px 0; }
+  .person h3 { font-size: 14px; margin-bottom: 4px; }
+  .person p { font-size: 12.5px; color: #c4c9d4; }
+  .signal { border-left: 3px solid var(--blue); padding: 10px 12px; margin-bottom: 10px; background: var(--panel2); border-radius: 0 8px 8px 0; }
+</style>
+</head>
+<body>
+
+<h1>🧠 团队周报洞察</h1>
+<div class="sub">周期：2026-10-05 ~ 2026-10-11（W41 · AI产品创新部周报）</div>
+
+<div class="card">
+  <h2>① 聚焦度体检 <span class="badge red">🔴 红</span></h2>
+  <div class="bar-row">
+    <div class="bar-label"><span>主战场合计工时</span><span class="num" style="color:var(--red)">≈ 36%</span></div>
+    <div class="bar-track"><div class="bar-fill fill-red" style="width:36%"></div></div>
+  </div>
+  <div class="bar-row">
+    <div class="bar-label"><span>低优先级 · 海外 IECM/BPS</span><span class="num" style="color:var(--yellow)">≈ 15%</span></div>
+    <div class="bar-track"><div class="bar-fill fill-yellow" style="width:15%"></div></div>
+  </div>
+  <div class="bar-row">
+    <div class="bar-label"><span>其他（月会/大赛/平台/培训）</span><span class="num">≈ 49%</span></div>
+    <div class="bar-track"><div class="bar-fill fill-blue" style="width:49%"></div></div>
+  </div>
+  <ul style="margin-top:12px">
+    <li><b>主战场4（S&OP 供需计划联动）连续 2 周零投入</b>，无人认领。</li>
+    <li>战线约 <span class="num">18 条</span>，远超警戒线（6×1.5=9 条），资源碎片化。</li>
+    <li>本周被 9月月会材料（10-09 截止）、AI大赛半决赛（10-12/13 截止）、集团经分会三件「汇报型大事」集中挤占，主战场硬仗进度偏慢。</li>
+  </ul>
+  <div class="note">主战场工时按周报「工时（天）」聚类估算，浮云为双周报未计入周口径。主战场定义来源：cron 指令（推测，未读 memory）。</div>
+</div>
+
+<div class="card">
+  <h2>② 价值链看板</h2>
+  <table>
+    <tr><th>项目</th><th>环节</th><th>断点</th><th>建议</th></tr>
+    <tr><td>数字分身 IT必答/导购必答</td><td><span class="tag warn">使用中未见效</span></td><td>转人工占比 72% 偏高</td><td>判断逻辑 + 知识库 MCP 落地，定 <50% 目标</td></tr>
+    <tr><td>小红书 KOS 全链路</td><td><span class="tag warn">构建中</span></td><td>方案未定稿</td><td>笔记工具定稿，注入「活人感」设计</td></tr>
+    <tr><td>KBMS 素材库打标</td><td><span class="tag warn">构建中</span></td><td>10月里程碑待启动</td><td>W1 库清空重扫 + 评测体系闭环</td></tr>
+    <tr><td>睡眠空间打标</td><td><span class="tag ok">已交付→验证</span></td><td>驻场环境卡壳</td><td>输出标准部署方案（标杆候选）</td></tr>
+    <tr><td>生图工具转化率验证</td><td><span class="tag warn">待启动</span></td><td>指标口径不一</td><td>新店试点 + 统一取数规则</td></tr>
+    <tr><td>S&amp;OP 供需计划</td><td><span class="tag hot">未启动</span></td><td>无人认领</td><td>定 owner 或明说降级</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h2>③ 项目 × 人员矩阵</h2>
+  <table>
+    <tr><th>项目</th><th>参与人</th></tr>
+    <tr><td>小红书 KOS 全链路</td><td>YIYI</td></tr>
+    <tr><td>KBMS 素材库 / AI 打标</td><td>YIYI</td></tr>
+    <tr><td>数字分身（IT/导购必答）</td><td>文鑫 · 米酒 · 水滴</td></tr>
+    <tr><td>智能体中心 / 企业大脑</td><td>文鑫</td></tr>
+    <tr><td>林氏小龙虾</td><td>文鑫 · 浮云（睡眠组）</td></tr>
+    <tr><td>AI 评测中台 / 大赛</td><td>文鑫 · 米酒 · 水滴</td></tr>
+    <tr><td>林氏放我家</td><td>水滴 · 浮云</td></tr>
+    <tr><td>生图转化率验证</td><td>水滴</td></tr>
+    <tr><td>睡眠空间打标</td><td>浮云</td></tr>
+    <tr><td>海外 IECM / BPS</td><td>米酒 · YIYI</td></tr>
+    <tr><td><b>S&amp;OP 供需计划</b></td><td><span class="tag hot">无</span></td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h2>④ 卡点看板（僵尸协调事项）</h2>
+  <table>
+    <tr><th>事项</th><th>涉及方</th><th>卡了</th><th>建议解法</th></tr>
+    <tr><td>恩飞台式机环境依赖安装失败</td><td>IT · 德彬</td><td><span class="tag hot">2周+</span></td><td>一次性输出标准环境部署方案，不再逐个远程处理</td></tr>
+    <tr><td>放我家成交窗口 / BI 字段对齐</td><td>BI · 业务 · 研发</td><td><span class="tag warn">2周</span></td><td>拉一次三方对齐会，定死口径</td></tr>
+  </table>
+  <div class="note">依赖热点：<b>德彬（研发）</b> 被文鑫、米酒、浮云三方同时依赖（模型切换 / 分享 bug / 环境部署），研发带宽是隐性瓶颈。</div>
+</div>
+
+<div class="card">
+  <h2>⑤ 行业信号对照</h2>
+  <div class="signal">
+    <b>AI Agent 落地加速</b>（Manus Cue 国内跟进 · Muse/Grok 白嫖云主机，10-11 剪藏）<br>
+    团队把「智能体平台 / 数字分身」列为第一优先级，方向对；但行业信号提醒——国内 Agent 商业化烧资源、付费意愿差。团队应聚焦「标杆 → 复制 → 经营效果」，而非继续铺原型。
+  </div>
+  <div class="signal">
+    <b>「活人感 / 不完美稀缺」</b>（刘润，10-07 剪藏）<br>
+    AI 内容「完美通货膨胀」、活人感成新稀缺。YIYI 小红书 KOS 批量生成（AI 生成篇数 460→300）最大风险是「一眼 AI」，方案需注入真实业务场景与活人感设计，而非纯冲量。
+  </div>
+</div>
+
+<div class="card">
+  <h2>⑥ 个人贡献摘要</h2>
+  <div class="person"><h3>文鑫</h3><p>主攻数字分身/智能体中心/小龙虾。小龙虾模型切换后「货盘动作矩阵」耗时 30min→10min（见效↑）；智能体中心像素级复刻、数字分身原型持续迭代（黑客精神正面）。本周 8 条战线偏碎，做原型/文档占比高，警惕「工具倾向」。</p></div>
+  <div class="person"><h3>YIYI</h3><p>唯一覆盖小红书 KOS 与 KBMS 两条主战场。战线最宽（20+ 子项），BPS 工单等「易事」在分流主战场工时。月度汇报业务化改写（术语白话+场景量化）质量高。</p></div>
+  <div class="person"><h3>米酒</h3><p>数字分身 IT必答效果报告 + 海外 B2C/B2B 工单。约 56% 工时在海外低优先级方向，与「能做减法就做减法」定位冲突（结构性问题，非个人问题）。</p></div>
+  <div class="person"><h3>水滴（三叶）</h3><p>AI大赛运营 + 林氏放我家3.0立项 + 生图转化率验证 + 集团经分会。风险栏填写最具体（5 条），跨部门对齐多。本周听记 11 条。</p></div>
+  <div class="person"><h3>浮云</h3><p>睡眠空间打标已交付技能包并进入真实业务验证（标杆候选）；放我家提示词优化 + 门店培训。积极暴露卡点（成交窗口/BI 字段、驻场网络）。本周提交双周报模板。</p></div>
+  <div class="person"><h3>Cris</h3><p><span class="tag hot">本周无报告</span>，无法评估，需确认是否请假或遗漏提交。</p></div>
+</div>
+
+<div class="card">
+  <h2>数据说明</h2>
+  <ul>
+    <li>本周收 5 人报告（文鑫/YIYI/米酒/水滴/浮云），<b>Cris 缺失</b>；浮云提交「双周报」模板，未纳入周口径聚焦度。</li>
+    <li>风险栏填写率偏低：文鑫「无」、YIYI「暂无」、米酒空白，仅水滴具体，风险温度计整体偏冷。</li>
+  </ul>
+</div>
+
+</body>
+</html>
