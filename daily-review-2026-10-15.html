@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-10-15</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;background:#0d1117;color:#e6edf3;line-height:1.9;padding:20px 16px 60px}
+.wrap{max-width:720px;margin:0 auto}
+h1{font-size:24px;margin-bottom:6px}
+.date{color:#8b949e;font-size:14px;margin-bottom:24px}
+.tabs{display:flex;gap:8px;margin-bottom:24px}
+.tab{flex:1;padding:12px;border-radius:12px;text-align:center;font-size:15px;cursor:pointer;border:1px solid #30363d;color:#8b949e;transition:.2s}
+.tab.active{color:#fff}
+.tab-biz.active{background:#1c2a4a;border-color:#4f6ef7}
+.tab-diary.active{background:#3a1f2e;border-color:#e87aa0}
+.panel{display:none;background:#161b22;border-radius:16px;padding:24px 20px;border:1px solid #30363d}
+.panel.show{display:block}
+.panel h2{font-size:17px;margin-bottom:14px}
+.biz h2{color:#6e8bff}.diary h2{color:#f0a0bd}
+.panel p{margin-bottom:16px;font-size:15.5px;color:#d0d7de;text-align:justify}
+.lead{font-weight:600}
+.biz .lead{color:#9db4ff}.diary .lead{color:#ffc4d6}
+.hr{border:0;border-top:1px solid #30363d;margin:20px 0}
+.foot{margin-top:24px;text-align:center;color:#6e7681;font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘</h1>
+<div class="date">2026年10月15日 · 周四</div>
+<div class="tabs">
+<div class="tab tab-biz active" onclick="sw('biz')">📊 商业复盘版</div>
+<div class="tab tab-diary" onclick="sw('diary')">📝 日记版</div>
+</div>
+
+<div id="biz" class="panel biz show">
+<h2>AI到底做成了多少，这个数要能对上账</h2>
+<p class="lead">早上和健新过AI落地场景价值评估，昨晚研究一份材料到很晚。15条实践、场景里写8条、往下又是11个场景88条，进到一个场景里只落了两个。拼图系统确实有个洞，它从来没有说清一条价值链该识别出多少场景、实际做成了几个，每次汇报都要重新数一遍。这个洞不补，年底向上讲价值就只能在数字上打转。</p>
+<p>下午集团层面给了补法。AI场景收集要常态化，每月一版，而且不再收一百多个散点场景，只看价值链。视频生产从什么到什么，林氏放我家从什么到什么，后面挂几个agent、几个持续指标。这是叙事方式的转变，从罗列我们做了什么，改成讲我们改变了什么。散点场景收得再多，领导想看的其实就这一行。</p>
+<p>数据口径是今天补上最硬的一块。AI视觉工作台对外数字从1200+/月改成约500条/月。1200当初是给全国大赛做的产能测算，当时约20人试用，B店一个月视频总量大约1000条，又和电商约定AI与实拍各占一半，实际交付到不了那个数。79%、20人、旧工时口径一并撤下，HTML材料和云舟配音视频都已更新。跟Cris来回多轮，确认PK给不清的工时数据就删，买家秀删掉底下那句话即可。过程磨人，但这版口径经得起追问，明天半决赛评委和业务方都会看这份材料。</p>
+<p>明天就是半决赛。今天花了大量时间处理一场场外风波，显眼包队伍没进20强，多次申诉，负责人把慧姐搬出来站台，她的空间用户资产库确实有140多人用过。最终加了候补观察场，不占20强名额，原名次不变，业务评委木木参评。对外统一口径为申诉复议后增加候补观察场，不主动提，有人问再说明。评分保密口径同步全体评委，评分规则定为业务IT各50%、组内取平均，议程、20个分组日程、评分标准在线文档已补齐。</p>
+<p>平台侧同步推进。小林AI办公平台改版定了方向，把「智能体平台」这类抽象名字换掉，首页引导精简到独有特性，参考豆包和千问办公。多智能体改造配套测试规范立项，积累评测用例，每次发布前回归。十一期间一个版本改了小龙虾三十几个文件被全部撤回，没有回归测试的代价已经付过一次。企业上下文底座开测，RAG加知识图谱混装业务系统数据，先跑通再谈好用。AI听记确定对接会议管理平台，知识库从自研迁到钉钉知识库，选型评测启动。</p>
+<p>月底有业务架构L1-L3共识会，11月6日BPS发起结项流程，12月公司级整合。今天所有事都在为年底那份「AI做了什么」的大汇报备料，数字能对上账，故事才讲得下去。</p>
+</div>
+
+<div id="diary" class="panel diary">
+<h2>能对上账的数字才是自己的</h2>
+<p class="lead">昨晚研究那份材料到很晚，今早开口第一句还是那个数。我真没看懂，15条实践，场景里写8条，往下又是11个场景88条，进到一个场景里只落了两个。拼图那个系统确实有个洞，它从来没说清一条链路该有多少场景、做成了几个。大家都认真，可这本账从来没人管。</p>
+<p>下午和集团方向对齐，AI场景收集往后每月一版，只看价值链，不收散点。我心里松了口气，一百多个场景确实没法看，领导想看的就是视频生产从多少到多少，后面挂几个指标。</p>
+<p>最磨人的是对AI视觉的数。1200条当初是给全国大赛算的产能，B店一个月视频就千把条，还和电商约好AI实拍各占一半。改成500条，79%、20人、旧工时都撤下来。跟Cris来回好几轮，最后把说不清的工时数据干脆删了，买家秀也删掉底下那句话。删掉也好，这种数字留着就是给别人递刀子。</p>
+<p>晚上还要再看一遍云舟配音的新视频，4分51秒。放我家那段在新哥电脑上一直是空白，前端等着发版。物料尺寸也还差着，团队风采竖幅要等二楼培训室的墙面尺寸。我跟珍珠说，最迟不说假话，周四上班前给你。</p>
+<p>中间还有小Joe。她申诉了好几轮，讲了几次都没讲清楚她做的是个啥，产品形态也怪。可她那东西确实有140多人用过，今天她又把慧姐搬出来站台。我跟薯条嘀咕，口风我变一下，给她加一场候补观察场吧，不占20强名额。有热情的选手值得鼓励。对外口径统一为申诉复议后增加的候补场，不主动提，有人问再说。实事求是点，反而好。</p>
+<p>杂事里有点笑料。新买的录音笔A1到了，A1 pro上周丢在泰国，彻底死了，800多顶上。我把几个牌子的收音都测了一遍，钉钉最适合我们的生态。有人翻我钉钉截图，AI查冒烟了都没查出来是什么。</p>
+<p>明天半决赛，二十支队伍，评分保密，议程排到很晚。这一届从夏天办到现在，我倒不担心比赛，担心的是赛后那份账。今天把500条定下来的时候，心里反而踏实了一点。数字小一点没关系，能对上账的数字才是自己的。</p>
+</div>
+
+<div class="foot">Hermes · 每日复盘 · 2026-10-15</div>
+</div>
+<script>
+function sw(n){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('show'));document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.getElementById(n).classList.add('show');document.querySelector('.tab-'+n).classList.add('active')}
+</script>
+</body>
+</html>
