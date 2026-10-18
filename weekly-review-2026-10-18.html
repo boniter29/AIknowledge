@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每周复盘 2026-10-12 ~ 2026-10-18</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --panel: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --blue: #58a6ff;
+    --orange: #f78166;
+    --purple: #d2a8ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+
+  header { margin-bottom: 28px; }
+  .badge {
+    display: inline-block; font-size: 12px; letter-spacing: 1px;
+    color: var(--blue); border: 1px solid var(--border); border-radius: 20px;
+    padding: 4px 12px; margin-bottom: 14px;
+  }
+  header h1 { font-size: 26px; font-weight: 700; margin-bottom: 6px; }
+  .subtitle { color: var(--muted); font-size: 14px; }
+
+  .tabs { display: flex; gap: 8px; margin-bottom: 24px; border-bottom: 1px solid var(--border); }
+  .tab {
+    flex: 1; background: none; border: none; color: var(--muted);
+    font-size: 15px; padding: 12px 8px; cursor: pointer; font-weight: 600;
+    border-bottom: 2px solid transparent; transition: all .2s;
+  }
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--text); }
+  .tab[data-tab="business"].active { color: var(--blue); border-bottom-color: var(--blue); }
+  .tab[data-tab="diary"].active { color: var(--orange); border-bottom-color: var(--orange); }
+  .tab[data-tab="silence"].active { color: var(--purple); border-bottom-color: var(--purple); }
+
+  .panel { display: none; animation: fade .3s ease; }
+  .panel.active { display: block; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+  .panel p { margin-bottom: 18px; font-size: 15.5px; }
+  .panel .thesis {
+    font-size: 16px; font-weight: 700; color: var(--text);
+    padding: 16px 18px; border-left: 3px solid var(--blue);
+    background: var(--panel); border-radius: 8px; margin-bottom: 24px;
+  }
+  #diary .thesis { border-left-color: var(--orange); }
+
+  .thread { margin-bottom: 22px; }
+  .thread h3 { font-size: 15.5px; color: var(--blue); margin-bottom: 6px; }
+  #diary h3 { color: var(--orange); }
+  #silence h3 { color: var(--purple); }
+  .thread p { margin-bottom: 0; }
+
+  .closing { color: var(--muted); font-style: italic; padding-top: 8px; border-top: 1px solid var(--border); margin-top: 8px; }
+
+  #diary p.diary-p { font-size: 16px; }
+  #diary p.diary-p:first-of-type { font-weight: 600; color: var(--orange); }
+
+  .list-title { font-weight: 700; color: var(--purple); font-size: 15.5px; margin: 22px 0 12px; }
+  ol { padding-left: 22px; }
+  ol li { margin-bottom: 12px; font-size: 15px; }
+  ol li b { color: var(--text); }
+
+  footer { margin-top: 40px; color: var(--muted); font-size: 12.5px; text-align: center; border-top: 1px solid var(--border); padding-top: 20px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <span class="badge">每周复盘 · 周度版 Pro</span>
+    <h1>2026.10.12 — 2026.10.18</h1>
+    <p class="subtitle">第 42 周 · 周一至周日</p>
+  </header>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="business">商业版</button>
+    <button class="tab" data-tab="diary">日记版</button>
+    <button class="tab" data-tab="silence">沉默板</button>
+  </div>
+
+  <section id="business" class="panel active">
+    <p class="thesis">这一周表面是 AI 大赛冲进半决赛，本质是在给「AI 到底做成了多少」立一套能被看见、能对上账、能被组织收拢的秩序。</p>
+
+    <div class="thread">
+      <h3>① AI 大赛：从备料到上场的展开线</h3>
+      <p>周一还是 AI 战略月冲刺（五版战略稿、Q4 规划表收口），周二 47 支队伍材料收齐、评分流水线立起来（AI 先跑参考分，人只复核边界），周三半决赛名单评审收尾、毙掉没落地的项目，周四处理申诉风波（候补观察场）并补齐评分口径，周五半决赛打满一天、21 队规模把赛制漏洞全逼出来。一条线从「收材料」走到「上场」，deadline 推得紧，但推得完整。</p>
+    </div>
+
+    <div class="thread">
+      <h3>② 对上账：从「罗列场景」到「数字经得起追问」的深化线</h3>
+      <p>周一材料开始用数字讲价值（转化率 +7.72%、回复率 +0.59%），周三报奖盯口径（写总数等于没写），周四最硬——AI 视觉产能从 1200+/月改成 500 条/月，把当年为全国大赛做的测算、79%、20 人、旧工时口径全部撤下。这条线走到周五成了评分标准：落地影响力和技术完成度分开算。数字不是装饰，是账本。</p>
+    </div>
+
+    <div class="thread">
+      <h3>③ 立规范：从「用工具」到「收归中台」的转型线</h3>
+      <p>周一提出企业上下文管理统一规范，周二划清 AI 问答路径（管理层走小林 AI＋钉钉知识库、执行层走智能体），周三把透明化翻译成管理助手的报告推送，周四平台改版＋回归测试立项，周五最明确——业务队的工具井喷（专利图 6 分钟压到 5 秒）被拍板收归中台化，「组织的作用是集中资源对抗熵增」。工具这一周从散点长成了要收编的队伍。</p>
+    </div>
+
+    <p class="closing">三线合流：比赛是被 deadline 推着跑完的，账是要主动对上的，规范是要提前立的——都在为年底那份「AI 做了什么」的大汇报备料。</p>
+  </section>
+
+  <section id="diary" class="panel">
+    <p class="diary-p">他这一周是被「改」这个词拖着走的。</p>
+
+    <p class="diary-p">周一早上，AI 战略稿的版本号在他脑子里排队。他给自己排了四条线，说出口「今晚再改一版」的时候，自己都觉得像在讨价还价。「最心累的从来不是做，是改」——这句话他晚上写给自己，也成了这一周的底色。</p>
+
+    <p class="diary-p">周二的烦躁挂在断掉的梯子上。改了分工，改了评分方式，连排查会都改成了「让 AI 做个小工具，断了就报警」。</p>
+
+    <p class="diary-p">周三是个转折点。上午新哥说进度不透明，他把汇报责任接到自己身上；晚上评选改名字，他第一反应是「发出去别人会信吗」。他忽然发现，白天在当裁判，晚上也在当裁判——毙掉没落地的，盯着数据口径，怕评选变成内定。透明化那件事，一天里撞见了两次。</p>
+
+    <p class="diary-p">周四他把最硬的一块改掉了：1200 改成 500。删掉那些说不清的口径时，他心里反而踏实了，「数字小一点没关系，能对上账的数字才是自己的」。</p>
+
+    <p class="diary-p">周五他坐在听的位置上，听了一整天，让分身替他在群里挡掉那条 rm -rf。</p>
+
+    <p class="diary-p">周日，站会横跨两天排到明天，系统推了八遍。他买了杯咖啡，觉得周末的会好就好在没人赶着去下一场，可以慢慢讲，讲到真的讲清楚为止。傍晚那条双周报提醒后面跟着五个名字，他忽然明白被催的人未必是懒，是回头一想什么都想不起来。</p>
+
+    <p class="diary-p">安静里全是下周的事。</p>
+  </section>
+
+  <section id="silence" class="panel">
+    <p class="list-title">本周该推进但没推进的</p>
+    <ol>
+      <li><b>四个积压项目结项</b>——周三点出「11 月初要全部结掉」，本周未见后续安排，deadline 已经压到眼前。</li>
+      <li><b>网络断连根因</b>——周二排查 49.9 分钟未定位，MTR 探测工具只立了方向，未落地。</li>
+      <li><b>AI 问答路径评测与指引</b>——周二立待办（浮云整理），本周无后续。</li>
+      <li><b>视频剪辑</b>——周一提到「下周还要剪这些视频」，本周未启动。</li>
+    </ol>
+
+    <p class="list-title">反复出现但没解决的</p>
+    <ol>
+      <li><b>双周报催交</b>——每两周一次的固定模式：截止前 1 小时 @ 一串名字。提醒能解决「忘了写」，解决不了「不知道写什么」，症结是没有随手记录机制。</li>
+      <li><b>拼图系统的账本洞</b>——周四补了 AI 视觉的口径，但「一条价值链该有多少场景、做成了几个」这个系统性的洞还在，年底讲价值仍要重新数一遍。</li>
+    </ol>
+  </section>
+
+  <footer>Generated by Hermes · 每周复盘 Pro · 数据来自 Notion Writing Projects</footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
