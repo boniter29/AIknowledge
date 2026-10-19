@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 · 2026-10-19</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:#0f1115;color:#d8dce6;line-height:1.85;font-size:16px}
+.wrap{max-width:720px;margin:0 auto;padding:28px 18px 60px}
+h1{font-size:24px;font-weight:700;color:#fff;letter-spacing:.5px}
+.date{color:#7c8497;font-size:13px;margin:6px 0 22px;letter-spacing:1px}
+.tabs{display:flex;gap:10px;margin-bottom:26px}
+.tab{flex:1;text-align:center;padding:12px 0;border-radius:12px;background:#1a1e27;color:#8a93a6;font-size:15px;cursor:pointer;border:1px solid #262c38;transition:all .2s}
+.tab.on1{background:linear-gradient(135deg,#1d2f52,#24406e);color:#9cc0ff;border-color:#3a5a94;font-weight:600}
+.tab.on2{background:linear-gradient(135deg,#4a2438,#6b3049);color:#ffb3cf;border-color:#8a4a66;font-weight:600}
+.panel{display:none;animation:fade .3s}
+.panel.show{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.card{background:#171b23;border:1px solid #242a36;border-radius:16px;padding:24px 22px;margin-bottom:18px}
+.panel1 .lead{border-left:3px solid #4f8cff;background:linear-gradient(180deg,#16202e,#141a24)}
+.panel2 .lead{border-left:3px solid #ff7fa8;background:linear-gradient(180deg,#2a1a22,#201620)}
+.tagline{font-weight:600;color:#eaf0fb;margin-bottom:12px;font-size:17px}
+.panel1 .card p{margin-bottom:16px;color:#c3cad8}
+.panel2 .card p{margin-bottom:16px;color:#d6c9ce}
+.card p:last-child{margin-bottom:0}
+.footer{margin-top:34px;text-align:center;color:#5a6274;font-size:12px;letter-spacing:1px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘</h1>
+<div class="date">2026-10-19 · 星期一</div>
+<div class="tabs">
+<div class="tab on1" id="t1" onclick="sw(1)">📊 商业版</div>
+<div class="tab on2" id="t2" onclick="sw(2)">📝 日记版</div>
+</div>
+
+<div class="panel panel1 show" id="p1">
+<div class="card lead">
+<div class="tagline">决赛前最后一段路，今天拼的不是创意，是把所有不确定变成确定。</div>
+<p>AI大赛决赛进入倒计时，最大的进展是把三块悬而未决的事全部钉死：12强名单对外公布、10位业务评委名单落定、决赛汇报结构定稿。</p>
+</div>
+<div class="card">
+<p>先看主线怎么收口。决赛定在27日，今天开的是第一次正式日会，把事项拆成名单赛制、宣发内容、现场物料三大板块，而且当场拍板了几个此前悬着的点：12进6、6组有奖金、人气奖和决赛入围脱钩但一拍即红队双线入围。汇报结构也定稿了，而且这个结构本身有一层值得注意的判断。它从"现场讲demo"改成了"视频为主、人做补充"，开场2-3分钟讲业务场景，视频讲清Agent怎么解决问题，中间讲价值链路和Before/After，结尾讲协作落地规划。这个改法来自健新上周的判断，"先让他们放个视频把东西讲清楚，避免人现场讲不清楚"。这说明组织者已经意识到，决赛真正的风险不在项目质量，在于表达损耗，赛制设计在为人的紧张度兜底。</p>
+<p>但今天也出现了一个意外变量。IT之星和标杆团队评选进入投票环节，投票占20%、复审占80%，而反馈是"我们好像票数不高""今年竞争真激烈"。这条线和大赛主线表面无关，实际是同一个推力的两面：公司层面的AI叙事正在从"做没做"转向"做得好不好、能不能被看见"。大赛比的是项目，评选比的是人和团队的可见度。决赛冲到12强是硬结果，而投票票数说明软性影响力还没跟上项目进度。这给决赛宣发三篇推文（预热、结果、1024）加了一层含义：它不只是赛事运营，也是影响力的补课窗口。</p>
+<p>人这条线上，今天有两场重头戏。一场是给文鑫做人才盘点反馈，结论是"合格线以上，离胜任不远"，六个改进项全部落成可验收的动作：业务驻场深耕、导师带教（水滴担任）、月度复盘、主导立项、软件工程流程承接、AI赋能分享会，截止12月31日。核心转变写得很明确，从被动接任务转向主动定义产品方向，从工具使用者转向业务赋能者。另一场是AI产品面试，陈江林面了100分钟，另有候选人评估为待定，评价是综合素质OK但AI落地经验略差，且从字节离职的轨迹让人对稳定性有顾虑。招人难的本质被点破了：AI行业每个月都在变，每个月面的候选人素质差距很大。这说明岗位画像本身还在漂移，与其等完美候选人，不如像第一位那样先面先推、边面边校准画像。</p>
+<p>执行层面的细节也值得记一笔：队伍名称明天现场过一遍直接定，因为林氏头条、AI天地、宣发视频全部依赖这个名字；取数表统一放群公告，避免各表格队名不一致"一直错下去"；站会提前、明日培训会现场强调改名要求。决赛的胜负手已经从项目本身转移到协调效率上，今天的分工表、材料总表、命名规则，都是在给27日那天减摩擦。</p>
+<p>一句话收束：项目进了12强只是上半场，27日之前，把名字、视频、评委、评分系统每一颗螺丝拧紧，同时把评选票数偏低的信号当作提醒，决赛不只是比赛，也是这个团队AI叙事的一次公开答辩。</p>
+</div>
+</div>
+
+<div class="panel panel2" id="p2">
+<div class="card lead">
+<div class="tagline">该拍板的都拍板了，视频的名字还没改，所有下游都在等这一口气。</div>
+<p>今天的日会开得比前几天都短，因为该拍板的都拍板了。</p>
+</div>
+<div class="card">
+<p>评委名单最后落定的时候，我数了一遍，业务评委十位，白小白对一拍即红，东来对AI路线智能分配，榆非对AI判责与分析洞察。每个评委对应一支队伍，这样安排挺聪明的，评委看自己懂的赛道，队伍也别想蒙混。12选6，6组有奖金，人气奖跟决赛入围脱钩，但一拍即红队两条线都进了。聊到这里有人忽然反应过来人气奖那个组没进决赛，会议室里愣了两秒，然后又都对上了，一笑而过。</p>
+<p>中午定了一个事，暂时不去掉最高分和最低分。我原来觉得该去掉，后来想想12个评委里去掉两个，样本反而变小，就先不动了。这种规则上的小事，纠结半天和拍板只差一句话。</p>
+<p>视频是最磨人的。三个视频，融合主片、风采片、决赛开场短片，我今天看了一遍又一遍，总觉得同一个颜色从头用到尾太单调。本来想加旁白，又怕一开口AI味反而破功。珍珠拍的照片还没打标，队伍对不上，效果出不来。名字没改，素材就锁不死，所有下游全在等这一口气。我跟玲零零说，明天现场过一遍直接定下来，别再线上拉扯了。评委的现场照可以不写具体名称，队伍的必须精确到队名。这些细节今天不说清楚，27日那天就会有人举着错名字的牌子站在台上。</p>
+<p>下午那个评选，我们票数不高。投完看到数字的时候心里咯噔了一下。今年竞争是真激烈，17选6，6选2。健新在会上说帮他站台的话你要讲两句，实质性思维不支持就讲不支持。评委之间这种直来直去我反倒觉得踏实，比客客气气投完票回头嘀咕强。</p>
+<p>给文鑫做人才盘点反馈之前，我想了一下午怎么开口。合格线以上，离胜任不远，这句话在纸上写出来挺温和，当面讲出来分量不一样。我直接跟他讲了三个差距，产品战略承接、业务场景赋能、跨部门协同。他倒是没有抵触，说现在能立项的还只能在系统上提需求，还没有特别明确的路径。这话听着像是推脱，细想是实话，组织还没给他一个明确的口子。所以我给了六个动作，驻场、带教、复盘、立项、流程、分享会，水滴做导师，12月31日见分晓。聊完我在想，所谓带人，其实不是我告诉他方向，是我把模糊的期待拆成他能接住的格子。</p>
+<p>晚上面试陈江林，聊了100分钟。暨南大学硕士，字节火山引擎做过银行项目营销场景的AI落地。讲调研环节的时候他把客户经理营销前准备环节的流程掰开讲的，讲得挺细。底子没问题，但从字节离职这件事让我有顾虑，他太看重个人成就感了。之前面的那位候选人，综合素质OK，落地经验略差。AI这个行业每个月都在变，每个月面的候选人差距都很大，想找一个完全对画像的人，可能画像本身就已经过时了。</p>
+<p>回家路上打了顺风车。车上翻了翻今天群里收到的十几条消息，队伍名称、照片命名、取数表，全是琐碎事。可是转念一想，27日那天台上二十分钟，底下看得见的只有项目，看不见的全是这些琐碎垫出来的。</p>
+<p>睡前想起文鑫面谈里他自己的那句话，从工具使用者到业务赋能者。这句话给他，也给我自己。</p>
+</div>
+</div>
+
+<div class="footer">HERMES DAILY REVIEW · 2026-10-19</div>
+</div>
+<script>
+function sw(n){
+for(var i=1;i<=2;i++){
+document.getElementById('t'+i).className='tab '+(i===n?(i===1?'on1':'on2'):'');
+document.getElementById('p'+i).className='panel panel'+i+(i===n?' show':'');
+}}window.sw(1);
+</script>
+</body>
+</html>
