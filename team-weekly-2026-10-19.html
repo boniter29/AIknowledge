@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>团队周报洞察 · 10/12 ~ 10/18</title>
+<style>
+:root{
+  --bg:#0d1117; --bg2:#161b22; --card:#1c2333; --border:#2d333b;
+  --text:#e6edf3; --muted:#8b949e; --accent:#58a6ff; --green:#3fb950;
+  --yellow:#d29922; --red:#f85149; --purple:#bc8cff; --cyan:#39c5cf;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6;padding:16px;max-width:960px;margin:0 auto}
+h1{font-size:1.4rem;margin-bottom:4px}
+h2{font-size:1.15rem;margin:28px 0 12px;padding-left:10px;border-left:4px solid var(--accent)}
+.sub{color:var(--muted);font-size:.85rem;margin-bottom:20px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:14px}
+.badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:.78rem;font-weight:600;margin-right:6px}
+.badge.yellow{background:rgba(210,153,34,.18);color:var(--yellow)}
+.badge.red{background:rgba(248,81,73,.18);color:var(--red)}
+.badge.green{background:rgba(63,185,80,.18);color:var(--green)}
+.badge.purple{background:rgba(188,140,255,.18);color:var(--purple)}
+.badge.cyan{background:rgba(57,197,207,.18);color:var(--cyan)}
+table{width:100%;border-collapse:collapse;font-size:.85rem;margin:8px 0}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--bg2);color:var(--muted);font-weight:600;white-space:nowrap}
+td a{color:var(--accent);text-decoration:none}
+.meter{height:12px;background:var(--bg2);border-radius:6px;overflow:hidden;margin:6px 0}
+.meter>div{height:100%;border-radius:6px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
+.stat{font-size:1.5rem;font-weight:700}
+.stat small{font-size:.8rem;color:var(--muted);font-weight:400}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--border)}
+.row:last-child{border-bottom:none}
+.tag{font-size:.72rem;color:var(--muted)}
+ul,ol{padding-left:20px;margin:6px 0}
+li{margin:4px 0}
+.hl{color:var(--accent)}
+.warn{color:var(--yellow)}
+.danger{color:var(--red)}
+.ok{color:var(--green)}
+.note{background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.25);border-radius:8px;padding:10px 12px;font-size:.82rem;color:var(--muted);margin:12px 0}
+.section-num{color:var(--muted);font-size:.78rem;font-weight:600;letter-spacing:.5px}
+footer{margin-top:30px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:.75rem}
+</style>
+</head>
+<body>
+
+<h1>🧠 团队周报洞察</h1>
+<div class="sub">2026-10-12 ~ 2026-10-18 · ISO W42（双周报周期）· 6 人团队 · 生成于 2026-10-19</div>
+
+<div class="card">
+  <div class="section-num">〇 聚焦度体检</div>
+  <h2 style="margin-top:6px">🟡 黄灯（偏红）</h2>
+  <div class="row"><span>主战场工时占比</span><span class="stat">≈43% <small>（<40%红灯 · <60%黄灯）</small></span></div>
+  <div class="meter"><div style="width:43%;background:linear-gradient(90deg,#d29922,#f85149)"></div></div>
+  <div class="row"><span>战线数量</span><span class="warn">20+ 条</span><small class="tag">（阈值 9 条，严重碎片化）</small></div>
+  <div class="row"><span>低优先级（海外 IECM/BPS）</span><span>≈8.6%</span></div>
+  <p style="margin-top:10px;font-size:.85rem">核心判断：问题不是"碎片化"，而是<span class="warn">结构性错配</span>——<span class="danger">S&OP 主战场 0 人投入</span>、文鑫整周期平台化、米酒六成海外化。</p>
+</div>
+
+<div class="card">
+  <div class="section-num">主战场 / 低优先级 工时分布（估算）</div>
+  <table>
+    <tr><th>成员</th><th>主战场工时</th><th>占比</th><th>低优先级(海外)</th><th>其他(平台/战略/大赛)</th></tr>
+    <tr><td>Cris</td><td>6.2 天</td><td class="ok">86%</td><td>—</td><td>0.6 战略 + 0.4 学习</td></tr>
+    <tr><td>浮云</td><td>6.0 天</td><td class="ok">75%</td><td>—</td><td>2.0 评测/事务</td></tr>
+    <tr><td>YIYI</td><td>6.8 天</td><td class="ok">70%</td><td class="warn">1.6 天 BPS</td><td>1.3 战略/月报</td></tr>
+    <tr><td>米酒</td><td>0.5 天</td><td class="danger">≈12%</td><td class="danger">2.5 天 IECM/BPS</td><td>1.2 数字分身</td></tr>
+    <tr><td>文鑫</td><td>≈0 天</td><td class="danger">≈0%</td><td>—</td><td class="warn">6.5 天平台基建</td></tr>
+    <tr><td>水滴(lead)</td><td>≈1.0 天</td><td class="danger">≈8%</td><td>—</td><td>11 天战略/大赛/招聘</td></tr>
+  </table>
+  <div class="note">工时口径为对双周报"工时（天）"栏的聚类估算，存在 ±15% 误差。水滴（lead）主战场占比低属角色使然，不计入聚焦度红灯。</div>
+</div>
+
+<div class="card">
+  <div class="section-num">一 价值链看板</div>
+  <table>
+    <tr><th>项目</th><th>环节</th><th>断点</th><th>建议</th></tr>
+    <tr><td>小红书全链路 <span class="tag">主1</span></td><td>构建 → demo 已业务评审</td><td>demo 未接模型/版式规则</td><td>11 月开发前锁定业务方验收标准（柴理/丁丫/影子提效数据）</td></tr>
+    <tr><td>影棚调度台/Order AI <span class="tag">主2</span></td><td>已交付（16 项目/34 样本）</td><td>性能、图片存储、匹配规则、业务验收未收口</td><td>防停"已交付未使用"，收口验收标准</td></tr>
+    <tr><td>林氏放我家 3.0 <span class="tag">主3</span></td><td>技术验证 + 评测集 + 软著</td><td class="danger">旧家具替换/沙发电视柜正对/软装尺度 2 周未闭环</td><td>业务方（泰源/Can）锁定软装目标 + 官搭口径</td></tr>
+    <tr><td>AI素材库/KBMS <span class="tag">主2</span></td><td>需求拆分排期完成</td><td>10 月内美工一号库+YESK 库重打标 deadline 紧</td><td>跟踪 SKU 打标复核评测</td></tr>
+    <tr><td>S&OP 供需计划 <span class="tag">主4</span></td><td class="danger">❌ 空档</td><td>0 人认领</td><td>明确是否启动、谁负责、何时启动</td></tr>
+    <tr><td>海外 IECM/BPS <span class="badge purple">低优先级</span></td><td>结项推进中（80%）</td><td>ROI 工时统计缺失、日常运维持续</td><td>确认结项后退出节点</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <div class="section-num">项目 × 人员矩阵</div>
+  <table>
+    <tr><th>项目</th><th>Cris</th><th>浮云</th><th>YIYI</th><th>米酒</th><th>文鑫</th><th>水滴</th></tr>
+    <tr><td>小红书全链路(主1)</td><td>●</td><td></td><td>●●●</td><td></td><td></td><td>●</td></tr>
+    <tr><td>商品视觉/素材库(主2)</td><td>●●●</td><td>●</td><td>●●●</td><td></td><td></td><td>●</td></tr>
+    <tr><td>客服/导购·林氏放我家(主3)</td><td>●</td><td>●●●</td><td></td><td></td><td></td><td>●</td></tr>
+    <tr><td>S&OP 供需计划(主4)</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>海外 IECM/BPS(低)</td><td></td><td></td><td>●</td><td>●●●</td><td></td><td></td></tr>
+    <tr><td>AI 平台基建</td><td></td><td>●</td><td></td><td>●</td><td>●●●</td><td>●●</td></tr>
+    <tr><td>战略/大赛/招聘/治理</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●●●</td></tr>
+  </table>
+  <div class="note">● 粒度表示投入深度。S&OP 行全空是本期最醒目的结构性缺口。</div>
+</div>
+
+<div class="card">
+  <div class="section-num">三 风险卡点面板</div>
+  <table>
+    <tr><th>事项</th><th>涉及方</th><th>卡了</th><th>建议解法</th></tr>
+    <tr><td class="danger">旧家具替换/沙发电视柜正对/软装尺度未闭环</td><td>浮云 ↔ 泰源/Can/Cris</td><td>2 周</td><td>拉会锁定软装目标 + 门店官搭口径</td></tr>
+    <tr><td class="danger">李爱辉小龙虾跑任务卡死</td><td>文鑫 ↔ 德彬(研发)</td><td>2 周</td><td>研发定位模型池不稳/识图</td></tr>
+    <tr><td>BI 接口字段（功能空间/环境风格）待补齐</td><td>浮云 ↔ BI/研发</td><td>1 周</td><td>明确字段源头与责任人</td></tr>
+    <tr><td>IECM 结项缺 ROI 工时统计</td><td>米酒 ↔ 业务/财务</td><td>进行中</td><td>10-19 催齐运营数据，10-30 前结项申请</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <div class="section-num">四 系统层 · 风险温度计</div>
+  <p class="danger" style="font-weight:600">协调/风险栏填写率极低（仅 1/6）</p>
+  <ul style="font-size:.85rem">
+    <li>水滴：显性化 5 条风险 ✅（唯一认真填写者）</li>
+    <li>浮云："需协调"栏填"暂无"，但工作总结里列了 3 条明确协助需求（泰源/Can/Cris 软装标准、BI 接口、知识库范围）</li>
+    <li>Cris / YIYI / 米酒 / 文鑫：协调栏"暂无"或空白，但项目均有跨部门依赖</li>
+  </ul>
+  <p style="font-size:.85rem;margin-top:6px">风险被压在"工作总结"正文而非显性化 → 结构性盲区，建议统一"需协调"栏填写规范。</p>
+</div>
+
+<div class="card">
+  <div class="section-num">五 行业信号对照</div>
+  <table>
+    <tr><th>行业信号</th><th>团队连接点</th><th>下一步</th></tr>
+    <tr><td>英伟达 RTX Spark"Token 自由"——本地 128G 统一内存 + CUDA，推理成本骤降</td><td>Cris 在做小林生影 9 月费用治理（供应商总额 11.7 万、分摊 1.9 万），模型推理成本是真实痛点</td><td>费用治理从"对账"升级为"降本"：评估本地/边缘推理，而非只算清账</td></tr>
+    <tr><td>Anthropic 2021 路线图曝光——"我们现在抢着做的 Agent 是人家 5 年前的待办清单"；MCP 成事实标准</td><td>文鑫 372 技能归档 + 143 智能体上线、水滴企业上下文 MCP/RAG——平台基建是成熟赛道，非差异化</td><td>警惕平台无限膨胀，多智能体中心交付应锚定导购/生图业务验收，而非功能堆叠</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <div class="section-num">六 个人贡献摘要（诊断视角，非考核）</div>
+  <table>
+    <tr><th>成员</th><th>本期核心产出</th><th>异常/亮点信号</th></tr>
+    <tr><td>Cris</td><td>影棚调度台交付 16 项目/34 样本；小红书方案定排期；小林生影费用治理闭环；林氏放我家立项对齐</td><td class="ok">唯一明确学习投入（五大障碍+Agent培训+育苗）</td></tr>
+    <tr><td>浮云</td><td>林氏放我家 3.0 技术验证 + 评测集 + 软著；睡眠空间竞赛 Demo</td><td class="warn">协调栏"暂无"但实际 3 条依赖待解</td></tr>
+    <tr><td>YIYI</td><td>小红书工作台 demo 落地并业务评审；KBMS 打标需求排期；BPS 咨询单 PRD</td><td class="warn">BPS 结项有硬依赖（开发确认工作量）但未显性化</td></tr>
+    <tr><td>米酒</td><td>IT 必答分流方案；海外 IECM/BPS 结项推进（80%）</td><td class="warn">六成工时低优先级，需止血</td></tr>
+    <tr><td>文鑫</td><td>多智能体中心 v39 + 143 智能体审查；小龙虾 12 用户支撑 + 11 需求；专家套件 skill</td><td class="warn">100% 平台化，主战场≈0；产出量化清晰</td></tr>
+    <tr><td>水滴(lead)</td><td>AI 大赛半决赛组织评审；战略全景 V3；招聘面试；业务架构 L1-L4</td><td>lead 角色，主战场占比低属正常</td></tr>
+  </table>
+</div>
+
+<div class="note">
+  <b>数据与置信度说明：</b>本报告基于 6 份"双周报"+ 2 份补充周报（dw 报告口径），工时占比为聚类估算。行业信号来自本周剪藏归档（AI 日报/信源简报 cron 推送至 origin，未入 session 归档，故以剪藏为降级来源）。所有"假设"均标注置信度，验证方式为 1:1 沟通，未做个体能力/态度判断。
+</div>
+
+<footer>生成：Hermes · team-weekly-summary skill v1.2.1 · 2026-10-19 · 诊断工具，非考核工具</footer>
+
+</body>
+</html>
