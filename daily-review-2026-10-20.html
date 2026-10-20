@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 · 2026-10-20</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#e6e8ee;font-family:-apple-system,'PingFang SC','Helvetica Neue',sans-serif;line-height:1.85;font-size:16px}
+.wrap{max-width:720px;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:26px;margin-bottom:4px}
+.date{color:#8b949e;font-size:14px;margin-bottom:24px}
+.tabs{display:flex;gap:8px;margin-bottom:24px}
+.tabs button{flex:1;padding:10px 0;border:none;border-radius:10px;background:#161b22;color:#8b949e;font-size:15px;cursor:pointer;transition:.2s}
+.tabs button.active-b{background:linear-gradient(135deg,#1d3a6e,#2b5bab);color:#fff}
+.tabs button.active-d{background:linear-gradient(135deg,#5e3a52,#a8628a);color:#fff}
+.panel{display:none;background:#161b22;border-radius:16px;padding:26px 22px}
+.panel.show{display:block}
+.panel h2{font-size:19px;margin:26px 0 10px;padding-top:18px;border-top:1px solid #21262d}
+.panel h2:first-of-type{border-top:none;padding-top:0;margin-top:0}
+.panel p{margin-bottom:14px;color:#c9d1d9;text-align:justify}
+.biz h2{color:#6ea8ff}
+.diary h2{color:#e79ac0}
+.lede{font-size:17px;font-weight:600}
+.biz .lede{color:#9ec5ff}
+.diary .lede{color:#f0b6d2}
+@media(max-width:480px){.wrap{padding:24px 14px 48px}.panel{padding:20px 16px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘</h1>
+<div class="date">2026-10-20 周二</div>
+<div class="tabs">
+<button id="tb" class="active-b" onclick="show('b')">📊 商业复盘版</button>
+<button id="td" onclick="show('d')">📝 日记版</button>
+</div>
+
+<div id="pb" class="panel biz show">
+<p class="lede">今天的定调，AI这件事在公司内部正从「跑得动」走向「管得住」，决赛讲法、架构底座、模型选型、人的带教，四条线今天同时动了。</p>
+<h2>决赛讲法重构</h2>
+<p>下午专门开了15分钟的会，把决赛汇报结构改成开场讲业务场景、中间讲价值链路和Before/After、结尾讲下一步与业务IT协作，并且要求演示尽量用录屏视频而非现场跑agent。这个改动的因果其实很清晰。决赛现场boss和各一级长都会到场，作品的目的已经从内部比拼变成公司级AI标杆案例的输出，而现场跑agent受环境网络等不确定性影响，出一次岔子的代价远大于收益。</p>
+<p>更深一层，汇报要求「先讲大业务价值链和流程节点，再讲具体场景」，这与第二条线是同构的，价值呈现的单位从「工具效果」升级成了「业务链路位置」。配套的时间表也定了，作品名和三百字介绍当天交，海报次日出稿，终版材料周五交，周五下午彩排。</p>
+<h2>架构底座立项</h2>
+<p>上午给海外产品线讲4A架构模板，57分钟评审会里反复回答一个问题，AI都这么发达了为什么还要人工盘架构。给出的答案是AI做的是流程上的单点，架构是数据底座，两者不冲突。随后的小会把这个事情项目制管理起来，由米酒牵头定环节、计划、分工和节点，时间放宽到下月底，理由是其他部门大概率更慢，我们算快的。这条线和第一条线共享同一个判断，先有骨架，单点的AI才有落的位置。</p>
+<h2>模型选型落地</h2>
+<p>和德彬一起见了GPT服务商，账号配额与结算方式聊了40分钟，基本达成合作意向。同步在群里推了选型建议，管理层Chat场景优先Claude Opus 5.5，榜单和实测都明显好于GPT，按官方价单价只有GPT-6 Astra四成左右，但Claude渠道卡在大额预充值和稳定性上。结论是GPT渠道往前走，同时多找几家Claude渠道提上试用做小范围对比。选型从榜单讨论走到了发票和配额，这是落地信号。</p>
+<h2>人的带教</h2>
+<p>米酒的绩效面谈复盘开了一轮，诊断出主动推进少、没有按项目管理思维列计划、完美主义导致开启困难三点，安排Cris带教。有意思的是架构梳理项目正好交给米酒牵头做计划，绩效改进动作和真实业务任务被焊在了一起，这是把面谈结论直接变成了练习场。</p>
+<h2>零散但值得记</h2>
+<p>结项催办发到了YIYI和米酒，BPS财务闭环的运营数据10/19已到期待确认，两组结项材料10/21要交；软装AI效果图定了先手动出2-3套示例图，赶11月中旬线下展厅培训，暂不产品化；钉钉侧确认企业上下文入口已开通，数字员工可在DEAP后台配置，文鑫找卡罗帮忙测人力行政场景。</p>
+<p>还有一个文化信号，视觉内部也搞了AI大赛且奖金很高，我们这边明确导向不设奖金，理由是导向要高尚。同样一件事，两个部门在用两种燃料，这个对比后续值得观察。</p>
+</div>
+
+<div id="pd" class="panel diary">
+<p class="lede">今天给架构定了计划，给项目定了节点，给比赛定了讲法，给模型定了买家。就那只猫，还没定下家。</p>
+<h2>一段开场白</h2>
+<p>早上干的第一件正经事，是润色一段开场白。让AI从符号语言学的角度拆了一遍，给出三版全段改写，连停顿和重音都标了。最后在关键词上做选择，AI推「融合生长」，我挑了两个字版的「生长」。四字太满，两个字留白多。这个决定十分钟做完，是今天唯一纯粹为了讲给别人听而磨的文字。</p>
+<h2>一只猫</h2>
+<p>中间穿插了一件事。捡了只遗弃猫，先带去医院了，发照片到群里问有没有同学想领养。地点在陈村公园。一天就从猫和医院之间开始。</p>
+<h2>八十九分钟的会</h2>
+<p>白天几乎全泡在会里。最长一场八十九分钟，产品评测与智能体平台规划，知识库路径对比、数字员工、My Context的调研方向挨个过。会上让同事展示评测维度，对方愣了一下说不知道从哪头打起，这种卡壳比流畅的汇报更像真做完了评测的人。评测确实做完了，操作指南在收尾。</p>
+<h2>同一个答案讲两遍</h2>
+<p>下午连着两场架构评审。给海外产品线讲4A模板，五十八分钟里一直在回答同一个问题，AI都这么发达了，为什么还要人手工盘架构。答案说了两遍，AI做的是流程上的单点，架构是数据底座。一遍讲给产品线，另一遍其实在讲给米酒。架构梳理项目由米酒牵头做计划，正好是绩效面谈后的第一个练习。面谈里他承认定计划开第一步最难，怕做不好被人看。</p>
+<h2>傍晚与夜晚</h2>
+<p>傍晚五点半，C区文印室，决赛筹备站会。下午的群里已经发过一圈通知，作品名和三百字介绍今天交，海报明晚出稿，终版材料周五交，周五下午彩排。有人在会上问，大老板临时想看现场演示怎么办，答有主持人兜着，尽量全用录屏。别在现场赌agent的网络，这句话今天说了不止一次。</p>
+<p>晚上见了个GPT服务商，回来推了选型建议，管理层Chat优先Opus 5.5，单价只有GPT-6 Astra四成，但Claude渠道卡在大额预充值。又补了一场四十分钟的配额结算会。模型选型这件事，今天从榜单一路聊到了发票。</p>
+<h2>收尾</h2>
+<p>临走前翻手机，陈村公园那只猫的照片还在群里跳，有同学在问领养流程。</p>
+</div>
+</div>
+<script>
+function show(t){
+ var b=document.getElementById('pb'),d=document.getElementById('pd');
+ document.getElementById('tb').className=t=='b'?'active-b':'';
+ document.getElementById('td').className=t=='d'?'active-d':'';
+ b.classList.toggle('show',t=='b');d.classList.toggle('show',t=='d');
+}
+</script>
+</body>
+</html>
