@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-10-21</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Segoe UI',sans-serif;background:#0d1117;color:#d8dee4;line-height:1.85;font-size:16px}
+.wrap{max-width:720px;margin:0 auto;padding:28px 18px 60px}
+h1{font-size:24px;font-weight:700;color:#f0f3f6;text-align:center;margin-bottom:6px}
+.date{text-align:center;color:#8b949e;font-size:14px;margin-bottom:28px}
+.tabs{display:flex;gap:10px;justify-content:center;margin-bottom:28px}
+.tab{padding:10px 24px;border-radius:999px;border:1px solid #30363d;background:#161b22;color:#8b949e;font-size:15px;cursor:pointer;transition:all .2s}
+.tab.active-biz{background:#1c3a5e;border-color:#388bfd;color:#79b8ff;font-weight:600}
+.tab.active-diary{background:#3d2030;border-color:#f272a0;color:#f9a8c4;font-weight:600}
+.panel{display:none}
+.panel.on{display:block}
+.panel p{margin-bottom:18px;text-align:justify}
+.panel .lead{font-weight:700;font-size:17px}
+.biz .lead,.biz p:first-child{color:#79b8ff}
+.diary .lead,.diary p:first-child{color:#f9a8c4}
+.footer{margin-top:40px;padding-top:18px;border-top:1px solid #21262d;text-align:center;color:#484f58;font-size:12px}
+@media(max-width:480px){.tab{padding:8px 16px;font-size:14px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘</h1>
+<div class="date">2026-10-21 周三</div>
+<div class="tabs">
+<button class="tab active-biz" onclick="show('biz')">📊 商业版</button>
+<button class="tab" onclick="show('diary')">📝 日记版</button>
+</div>
+
+<div id="biz" class="panel biz on">
+<p>今天所有的事都压在同一句话上，先跑起来，再收口。</p>
+<p>AI大赛的物料是这条逻辑最典型的一幕。决赛定在周四，评分系统德斌周四改完，12强介绍视频卡在周四下班前，推文、KT板、海报全部赶在今天收尾。海报这条线折腾得最久，从贴墙海报到易拉宝，再到广告机轮播，最后落到二楼培训室门口一张16:9。反复的原因很实际，易拉宝物料公司报价下来，一队奖金才一两千，钱花在物料上不划算，宁可砍掉。视频做了两版，一版1个G，BGM卡点和展示的停留感不对就整体重做，改24张图因为生图慢而放弃，最终定「大赛+12支队伍」一张轮播。每一处取舍都指向同一个判断，决赛要的是能用的物料，不是完美的物料。</p>
+<p>产品侧的两次评审收敛到了同一个决定。智能体市场一期维持现有对话交互方案，A2A交互的技术储备不足，团队判断首期版本不做智能体间自主协作，主智能体和子智能体平级展示，通过召唤套件交互。小林AI那场会碰到了更具体的分叉，海文提议所有智能体统一按多会话管理，一个智能体多个会话；另一版方案是两层结构，最左侧头像栏点进去再看会话列表。改动两层结构意味着研发返工，影响上线节奏。用户在群里把技术判断说得很直接，一个问题一个会话不合理，Codex也是一个会话很多轮，这种交互本身就还原大家的日常习惯，谈不上前沿不前沿。结论是先按现有结构上线，之后再迭代。</p>
+<p>软装这条线是今天时间最长的会，57分钟加一场10分钟评审，把新零售软装搭配和空间视觉方案生成的两个卡点摊开了。标签不统一，图片和基础资料分开维护，谁在哪个系统承载一直模糊。拉通了财务、营销、供应链之后得出的结论是分层推进，标签先由业务统一标准再由IT承接，库存问题产中和新零售分开解决，产中管提前预约和占用，新零售管异常和释放。会上有人把方案尺度压了回来，建议一开始不要做重，上来就盯三个物料，A类物料丢十个进去跑起来，别一上来就是一万个。</p>
+<p>这三件事各走各的线，推力却是同一个。AI大赛是让12支队伍的demo先上决赛舞台，物料从简；智能体市场是让现有形态先上线，交互以后再改；软装是让三个物料先进销存跑通，标签标准慢慢补。甚至晚上在群里宣导的AI视觉版块管理逻辑也是这句话的放大版，业务方做的demo先让他们用，不要成为使用的瓶颈，但源码要收回来，按公司级应用做产品化、资产化，串联小林生影、素材库、NBO这些系统。demo跑起来和产品收口，被明确分成了两个阶段。</p>
+<p>这一天里唯一没被「先跑起来」逻辑覆盖的是结项催办。BPS财务闭环的运营数据收集已逾期，IECM乐歌海外仓的结项材料今天到期，YIYI那边的BPS核心流程重构卡在周五。收口的事有自己的时钟，不能等。</p>
+</div>
+
+<div id="diary" class="panel diary">
+<p>今天是从一段1个G的视频开始的。</p>
+<p>昨晚发的视频，新哥看完说主要跟节奏，还有展示缺个停留感。一句话，BGM卡点全得换。两版视频重做，改到后来自己盯着屏幕里的小林AI看，越看越觉得有点变形了。中午跟同事对推文，卡罗那版结构是好的，就是专有名词和长难句堆在一起，直接看有点难读，于是让写作AI润了一版，数字和人名没动，文末附了三处发布前要核对的点。发出去之前又「pua了一下AI」，对比图放出来的时候笑了，效果好多了。做图之前那版文案也是先让claude润色过再生的图，两个版本放在一起看，好像差不多。</p>
+<p>海报是最磨人的一条线。50×150的尺寸报过去，珍珠说这里放不下，那里尺寸紧张。易拉宝报价出来，两三百一张，十二支队伍摆一圈，一队的奖金才一两千，账算下来不对。想了一圈，企文有没有立架，门对面那面墙有没有机会，要不要环保一点上电子轮播，要不干脆放外面。最后落在二楼培训室门口，一张16:9的大赛加12支队伍轮播，广告机就一张。给珍珠和卡罗确认尺寸的时候，那条消息来回改了五六轮。下午在群里看两张图，说这两个搞定了，松了一口气。</p>
+<p>下午文印区开会，软装那个会拉了七个人，讲标签统一和库存管理。财务、营销、供应链都到了，结论分了层，标签先业务定标准，IT再承接。有人把方案往回收，说别一上来就做一万个物料，先盯三个，丢十个进去跑起来。这句记下来了。</p>
+<p>晚上还有一件事不太像工作。群里聊起捡猫，有人捡了两只，两个多月，隔离在一个房间里，先带去医院检查。前面那个小区出过虐猫的事，猫眼睛嘴巴被滴502，折了手脚，捐款救治了一阵。有人捡的三花跟我捡的像，隔着屏幕对了一下照片。这一段大概是今天最软的部分。</p>
+<p>晚上拉了结项清单。BPS财务闭环的运营数据逾期了，IECM乐歌海外仓的材料今天到期，YIYI那边卡在周五。按10/15群里的承诺一条条@过去，写完发出去，炜潮那边回了句你真棒。夜里顺口问了句车费收多少，转了10块钱过去，备注写着致敬奋斗一线的小伙伴。</p>
+<p>一天下来，视频、海报、推文、评分系统，全都是周四前的死线在后面推着。晚上发那句「让浮云回来给我同步吧」的时候，时间冲突的事已经顾不上纠结了。周四之前，还差一个demo，一摞队伍资料。</p>
+</div>
+
+<div class="footer">Hermes Agent · 每日复盘 · 数据来源：AI听记 × 5 场会议 · 聊天记录 181 条</div>
+</div>
+<script>
+function show(id){
+ document.getElementById('biz').classList.toggle('on',id==='biz');
+ document.getElementById('diary').classList.toggle('on',id==='diary');
+ var t=document.querySelectorAll('.tab');
+ t[0].className='tab'+(id==='biz'?' active-biz':'');
+ t[1].className='tab'+(id==='diary'?' active-diary':'');
+}
+</script>
+</body>
+</html>
