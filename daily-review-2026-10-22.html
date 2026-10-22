@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-10-22</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#d8dee6;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",sans-serif;line-height:1.85;min-height:100vh}
+.wrap{max-width:720px;margin:0 auto;padding:24px 18px 60px}
+h1{font-size:22px;font-weight:700;color:#eef2f7;text-align:center;margin:18px 0 4px}
+.sub{text-align:center;font-size:13px;color:#8b96a5;margin-bottom:22px}
+.tabs{display:flex;border-radius:14px;overflow:hidden;margin-bottom:26px;border:1px solid #21293a}
+.tab{flex:1;padding:12px 0;text-align:center;font-size:15px;font-weight:600;cursor:pointer;background:#131a26;color:#8b96a5;transition:all .25s;border:none;width:50%}
+.tab.on1{background:linear-gradient(135deg,#1a3a5c,#2563a8);color:#fff}
+.tab.on2{background:linear-gradient(135deg,#5c2a44,#a84f7c);color:#fff}
+.panel{display:none;background:#131a26;border-radius:16px;padding:26px 20px;border:1px solid #21293a}
+.panel.show{display:block}
+.panel h2{font-size:18px;margin-bottom:14px}
+.biz h2{color:#5ea3e8}
+.diary h2{color:#e88ab8}
+.panel p{margin-bottom:16px;font-size:15px;text-align:justify}
+.tag{display:inline-block;font-size:12px;padding:3px 12px;border-radius:20px;margin-right:6px;margin-bottom:14px}
+.biz .tag{background:#16283c;color:#5ea3e8;border:1px solid #23405e}
+.diary .tag{background:#331a27;color:#e88ab8;border:1px solid #54263c}
+.foot{margin-top:30px;text-align:center;font-size:12px;color:#5b6675}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘 · 2026-10-22 周四</h1>
+<div class="sub">AI大赛冲刺日 · 物料收口与团队补课</div>
+<div class="tabs">
+<button class="tab on1" id="tabB" onclick="show(1)">📊 商业版</button>
+<button class="tab" id="tabD" onclick="show(2)">📝 日记版</button>
+</div>
+
+<div class="panel biz show" id="pB">
+<h2>工具跑在了人的前面，今天所有事都绕着这个差值转</h2>
+<p>决赛彩排把评分流程走了一遍，评委名单几个版本对不上的问题刚理清，最终定了由我代表评委团公布结果，大屏幕展示一二三等奖的六个队伍。物料侧今天几乎全链路过关，决赛电子海报、会议室投屏、现场PPT图、易拉宝、横幅全部更新，12强的头条推文定了两版，23号发集结版，29号发收官版。</p>
+<p>视频是折腾最多的东西，完整版压到93MB之后钉钉播放器不兼容，内嵌封面、首帧封面、片头2秒挨个试，最后分成内嵌封面和推文发布版两个版本交出去。这条物料链里AI的产出占比已经很高，循环短片和完整片都是用opus 5.5做的，要求讲清楚之后只改了一轮，比之前Codex做的效果好得多，海报改logo、改标题、出两种尺寸也是AI一口气出的。</p>
+<p>数创物流的排查会是今天最扎心的半小时。业务反馈系统数据查询不一致，让小龙虾分析没解决，找到我们的时候问题还是说不清楚，在什么环境、什么客户端、做了什么操作、报什么错、怎么复现，一个都没讲明白。会上定了一个原则，业务群里接到问题先引导对方把这几项讲清楚，问题不清楚就去找人，大概率会被喷回来。</p>
+<p>这条原则很快落到文鑫身上，找条姐要了业务运维培训材料发给团队，想再给他安排一些系统运维的零散任务，因为业务理解浅已经成了他的痛点，遇到具体系统问题就怕，也不敢把业务问清楚。轮岗只能轮一个业务系统、周期又长，先接零散活培养全面了解的基础能力。</p>
+<p>下午的绩效面谈是同一条线的另一端。下属自己说最缺的是落地能力和项目推进能力，一时半会难提到大家的水平，自己提的办法是把大项目拆成最小可跑通的MVP先落地，定了双周计划和带教安排。两头对照，一个是新人不敢碰业务，一个是骨干缺推进方法，团队的能力断层在同一个方向上。</p>
+<p>招聘侧今天把AI产品经理的筛选标准定稿了，最看重真实的业务AI落地经验，自己用Vibe Coding搭过Agent、懂Harness原理是硬门槛，八份简历逐一定了面或不面，约面前先问三个问题校准标准。新来的积分卡同事做了一对一，聊了54分钟，从他口中复盘林氏放我家，从新零售销售端倒推到空间套系规则的定义，这是公司范围内有影响力的标杆。招人、带人、立标杆三件事排在同一天，方向一致，都是把人的能力追上工具的速度。</p>
+<p>明天两件事要看结果，14点结项拉通会，BPS结项材料承诺今天交齐；决赛等队伍交最终demo，下周一换给健新讲AI天地用。</p>
+</div>
+
+<div class="panel diary" id="pD">
+<h2>版本</h2>
+<p>今天的关键词是版本。</p>
+<p>早上第一件事是评委名单，几个版本对不上，发出去的时候自己都想笑，改到统一了才消停。接下来一整天，这个词就没离开过。决赛的循环短片压到93MB，钉钉打开报错，换成内嵌封面再试，再不行就做首帧，一遍遍发给Flora试，最后我说再不行没招了哈哈。12强的海报先发现好像少了眉毛，然后是艺术字有点丑，然后是logo去不去掉的问题，薯条、珍珠、卡罗你一句我一句，我在中间改图、打包、再发出去。易拉宝拿回来的时候感觉差点占了半壁江山，横幅原来也要设计，我以为是现成的。</p>
+<p>改到下午，忽然意识到这些版本都有个终点。视频用opus 5.5重做，要求讲清楚之后只修改了一轮就过了，我在群里说这比Codex做出来的好得多。海报也是AI改的，让它去掉logo、改标题、出两种尺寸，一口气就出来了。物料的世界里，改一轮和改十轮的差距正在消失。</p>
+<p>人的版本慢得多。</p>
+<p>数创物流那边的问题折腾了半天，业务说改了很多次一直用不了，表达很混乱，小龙虾查了也没解决。我在会上说，问题不清楚就去找人，大概率会被喷回来，得先让对方讲清楚在什么环境做了什么操作报了什么错。会后找条姐要了业务运维的培训材料发给大家，叮嘱视频尽量下载下来看，在线看会比较糊。给文鑫安排系统运维零散任务这件事想了一阵，轮岗只能轮一个业务系统，周期又长，先接点零散的活，培养点基础全面了解的能力就够了。</p>
+<p>下午的绩效面谈继续上一次的话题。他坐下来就说自己最缺的是落地能力和项目推进能力，一时半会难提到和大家一样的水平，然后自己提了个办法，把大项目拆成最小能跑通的MVP。我没急着接话。一个人能把自己的短板说到这个份上，办法也自己找出来了，剩下的就是陪他走两轮。面谈完要交一份面谈内容的材料，我交的就是今天聊的这些。</p>
+<p>还有一场54分钟的一对一，新来的积分卡同事过来了解业务，听他讲林氏放我家，从销售端的效果图倒推到空间套系规则的定义。这个故事我讲过很多次，听别人复述一遍，发现自己当初也是这么一步步被逼到规则层的。</p>
+<p>晚上群里还在响，健新怕大家讲不好，说干脆一个视频讲完全部，我回如果怕讲出问题就这么办。Codex账号的事也来了，先不给开，有Trae和千问办公可以开，德彬在飞机上，等他落地。自费的20X账号，团队的Codex大部分都是自费的，限流倒经常。</p>
+<p>日程提醒弹出来才发现，15点19分有个下午茶，在六楼茶水间。蛋糕差点看错成六点吃，想着要化了。一天里改了这么多版本，视频的、海报的、名单的，人那边也改了一点点，文鑫的材料收到了，绩效的双周计划定了，都还没到能发版的时候，但至少在编译了。</p>
+</div>
+
+<div class="foot">Hermes 每日复盘 · 数据源：钉钉AI听记 × 4 场 · 聊天记录 161 条</div>
+</div>
+<script>
+function show(n){
+ document.getElementById('pB').className='panel biz'+(n==1?' show':'');
+ document.getElementById('pD').className='panel diary'+(n==2?' show':'');
+ document.getElementById('tabB').className='tab'+(n==1?' on1':'');
+ document.getElementById('tabD').className='tab'+(n==2?' on2':'');
+}
+</script>
+</body>
+</html>
