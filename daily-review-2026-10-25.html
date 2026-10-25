@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-10-25</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#0f1117;color:#d8dae0;line-height:1.9;padding:20px 0 60px}
+.wrap{max-width:720px;margin:0 auto;padding:0 18px}
+h1{font-size:22px;margin:18px 0 6px;color:#fff}
+.sub{color:#7a7f8c;font-size:13px;margin-bottom:22px}
+.tabs{display:flex;gap:10px;margin-bottom:20px}
+.tab{flex:1;text-align:center;padding:11px 0;border-radius:12px;background:#1a1d27;color:#8a8f9c;font-size:14px;cursor:pointer;border:1px solid #262a36;user-select:none}
+.tab.on1{background:linear-gradient(135deg,#1d2a4a,#22355e);color:#8ab4ff;border-color:#3350a0;font-weight:600}
+.tab.on2{background:linear-gradient(135deg,#3a1f2a,#54293a);color:#ff9db6;border-color:#7a3a52;font-weight:600}
+.panel{display:none;background:#161923;border:1px solid #262a36;border-radius:16px;padding:24px 22px}
+.panel.show{display:block}
+.panel h2{font-size:16px;margin:22px 0 10px}
+.panel h2:first-child{margin-top:0}
+.panel p{margin:10px 0;font-size:15px}
+.biz h2{color:#8ab4ff}
+.diary h2{color:#ff9db6}
+.hl{color:#fff;font-weight:600}
+.meta{margin-top:26px;padding-top:16px;border-top:1px dashed #2b2f3d;font-size:12px;color:#6b7080}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘 · 2026-10-25</h1>
+<div class="sub">周日 · 低信号日 · 商业版 + 日记版</div>
+<div class="tabs">
+<div class="tab on1" id="tb1" onclick="sw(1)">📊 商业版</div>
+<div class="tab" id="tb2" onclick="sw(2)">📝 日记版</div>
+</div>
+<div class="panel biz show" id="p1">
+<h2>定调</h2>
+<p><span class="hl">周日，无会议、无听记、无对外沟通。全天唯一的记录，是傍晚前发出的一条周报截止提醒。</span></p>
+<h2>这条提醒说明了什么</h2>
+<p>提醒的内容很具体：今晚 <span class="hl">18:00</span> 截止，只剩最后 1 小时。Cris 和水滴已经提交，YIYI、文鑫、浮云、米酒尚未提交，逐一 @ 了催交。</p>
+<p>这件事本身有两层含义。第一，周报流程在周末仍在运转，团队节奏没有断。周日傍晚催交说明流程卡点是固定的，哪怕在非工作日也要把闭环收掉。第二，催交名单里的四位到最后一小时还没填，和以往周日晚的常见状态一致：总是有几个伙伴拖到截止线附近才动笔。</p>
+<h2>结论</h2>
+<p>低信号日。无新增事件与决策，仅维持周报提醒流程运转。数据来源：AI听记 0 条，聊天记录仅 1 条（本人发送的周报截止提醒），无 @ 消息。</p>
+</div>
+<div class="panel diary" id="p2">
+<h2>空日</h2>
+<p>今天是真正的空日。没有会议，没有通话，没有别人发来的消息。全天唯一出现的一条记录，是我自己傍晚发出的那条周报截止提醒。</p>
+<h2>最后的一小时</h2>
+<p>提醒是这么写的：今晚 18:00 截止，还剩最后 1 小时，Cris 和水滴已经交了，YIYI、文鑫、浮云、米酒还没填，名字后面挨个 @ 了一遍。</p>
+<p>发出这条消息的时候大概已经过五点。名单上的四个名字我应该是熟悉的，但今天他们没有任何一个人说话，我也只是照着名单把该催的催了。交了的两个名字放在前面，像是一种温和的示范。这种催法做过很多次了，哪次都要等到最后一小时，好像不到截止线前 60 分钟，周报就不算真正开始写。</p>
+<h2>然后天黑</h2>
+<p>除此之外，今天就没有别的事了。没有值得记的对话，没有新的想法，也没有什么情绪起伏。有时候一天就是这样，一个人守着流程，把该转的齿轮推一下，然后天黑。</p>
+<p>我把今天记下来，主要是为了以后翻回去的时候知道：10 月 25 日这个周日，什么都没有发生，而什么都没有发生也是一种被记录下来的日子。</p>
+</div>
+</div>
+<script>
+function sw(n){for(var i=1;i<=2;i++){document.getElementById('p'+i).classList.toggle('show',i==n);document.getElementById('tb'+i).classList.toggle('on'+i,i==n);document.getElementById('tb'+i).classList.toggle(i==1?'on1':'on2',i==n);}}
+document.getElementById('tb1').className='tab on1';document.getElementById('tb2').className='tab';
+</script>
+</body>
+</html>
