@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每周复盘 2026-10-19 ~ 2026-10-25</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --blue: #58a6ff;
+    --orange: #f78166;
+    --purple: #d2a8ff;
+    --green: #3fb950;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.75;
+    padding: 0 16px 48px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  header { padding: 40px 0 24px; text-align: center; }
+  header .kicker { font-size: 13px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; }
+  header h1 { font-size: 26px; font-weight: 700; margin: 8px 0 6px; }
+  header .range { font-size: 15px; color: var(--muted); font-family: "JetBrains Mono", ui-monospace, monospace; }
+  .tabs { display: flex; gap: 8px; margin: 8px 0 24px; }
+  .tab {
+    flex: 1; padding: 12px 8px; text-align: center; cursor: pointer;
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    color: var(--muted); font-size: 15px; font-weight: 600; transition: all .2s;
+  }
+  .tab.active { color: var(--text); border-color: transparent; }
+  .tab[data-tab="biz"].active { background: rgba(88,166,255,.16); color: var(--blue); border-color: rgba(88,166,255,.4); }
+  .tab[data-tab="diary"].active { background: rgba(247,129,102,.16); color: var(--orange); border-color: rgba(247,129,102,.4); }
+  .tab[data-tab="silence"].active { background: rgba(210,168,255,.16); color: var(--purple); border-color: rgba(210,168,255,.4); }
+  .panel { display: none; }
+  .panel.active { display: block; animation: fade .3s ease; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-bottom: 16px; }
+  .thesis {
+    background: rgba(88,166,255,.1); border-left: 3px solid var(--blue);
+    border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; font-size: 16px; font-weight: 600;
+  }
+  .thesis .label { display: block; font-size: 12px; color: var(--blue); letter-spacing: 2px; margin-bottom: 6px; font-weight: 700; }
+  .thread { margin-bottom: 22px; }
+  .thread .tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 20px; margin-bottom: 8px; }
+  .tag.biz { background: rgba(88,166,255,.15); color: var(--blue); }
+  .thread h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; line-height: 1.5; }
+  .thread p { font-size: 15px; color: #c9d1d9; }
+  .diary p { font-size: 16px; margin-bottom: 18px; color: #d6dde6; }
+  .diary p.lead { font-size: 17px; font-weight: 600; color: var(--orange); }
+  .silence ol { list-style: none; counter-reset: item; }
+  .silence li { counter-increment: item; position: relative; padding: 16px 0 16px 40px; border-bottom: 1px solid var(--border); }
+  .silence li:last-child { border-bottom: none; }
+  .silence li::before {
+    content: counter(item); position: absolute; left: 0; top: 16px;
+    width: 26px; height: 26px; border-radius: 50%; background: rgba(210,168,255,.15);
+    color: var(--purple); font-weight: 700; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .silence b { color: var(--purple); }
+  footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 32px; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Weekly Review · Pro</div>
+    <h1>每周复盘</h1>
+    <div class="range">2026-10-19 ~ 2026-10-25</div>
+  </header>
+
+  <div class="tabs">
+    <div class="tab active" data-tab="biz" onclick="show('biz')">📊 商业版</div>
+    <div class="tab" data-tab="diary" onclick="show('diary')">📝 日记版</div>
+    <div class="tab" data-tab="silence" onclick="show('silence')">🤫 沉默板</div>
+  </div>
+
+  <!-- 商业版 -->
+  <div class="panel active" id="biz">
+    <div class="thesis">
+      <span class="label">本周定调</span>
+      这一周，公司里的AI叙事从「能不能跑起来」，切换到了「能不能被看见、被评价、被讲清楚」。
+    </div>
+    <div class="card">
+      <div class="thread">
+        <span class="tag biz">线索一</span>
+        <h3>AI大赛的倒计时冲刺——胜负手从项目质量转向「表达损耗」和「协调摩擦」</h3>
+        <p>周一钉死三件事：12强名单公布、10位业务评委落定、汇报结构定稿，并把结构从「现场讲demo」改成「视频为主、人做补充」；周二重构讲法，先讲业务场景、再讲价值链路与Before/After、结尾讲协作落地；周三定下「先跑起来再收口」，物料从简（海报一路从易拉宝砍到一张16:9轮播）；周四彩排、物料全链路过关，视频用Opus 5.5重做一轮就过；周五收尾。五天里，决赛的胜负手从项目质量转移到了两件事：为人的紧张度兜底（录屏代替现场跑agent，别在现场赌网络），和把协调摩擦减到最小（名字、照片、取数表统一）。决赛定在27日，本周所有「琐碎」都是在给那台二十分钟垫底。</p>
+      </div>
+      <div class="thread">
+        <span class="tag biz">线索二</span>
+        <h3>AI项目的成熟度阶梯——从「跑得动」到「讲得清楚」</h3>
+        <p>周一出现「公司AI叙事从做没做转向做得好不好、能不能被看见」；周二价值呈现单位从「工具效果」升级为「业务链路位置」；周三明确「demo跑起来与产品收口分成两个阶段」；周四点破「工具已经跑在人的前面」；周五收口——Anthropic那套流程「只还原了外壳，灵魂没学到」，AI项目评级开始复用大赛标准（创新性、业务价值、可复制性，去掉完成度）。五天里，AI从demo走向产品、资产，再到可被评价的成果，铺摊子的阶段过去了。</p>
+      </div>
+      <div class="thread">
+        <span class="tag biz">线索三</span>
+        <h3>人的能力断层——招人、带人、立标杆，方向一致</h3>
+        <p>周一给文鑫做人才盘点反馈（合格线以上、离胜任不远，六个动作12/31见分晓）；周二米酒绩效面谈（主动推进少、完美主义致开启困难）；周四新人接零散任务+骨干拆最小MVP双周计划，AI产品经理筛选标准定稿。共同命题是同一句：工具已经跑在人的前面，组织在追。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 日记版 -->
+  <div class="panel" id="diary">
+    <div class="card diary">
+      <p class="lead">这一周他反复在做同一件事：改版本。</p>
+      <p>视频的版本、海报的版本、评委名单的版本。周一该拍板的都拍了板，可票数偏低那一下，他心里还是咯噔了一声。周二一早，为一段开场白磨了十分钟，AI推「融合生长」，他偏挑了两个字版的「生长」——四字太满，留白多一点。周三从一个1个G的视频开始，BGM卡点全换，海报尺寸改了五六轮。周四，93MB的视频在钉钉里报错，内嵌封面、首帧封面挨个试。改到下午他忽然意识到：物料的版本里，「改一轮」和「改十轮」的差距正在消失——用Opus 5.5重做，讲清楚要求，只改一轮就过了。</p>
+      <p>但人的版本慢得多。文鑫的反馈他想了整整一个下午才开口；米酒承认自己定计划最难，怕做不好被人看；下属说自己缺落地能力，又自己找出「拆成最小MVP」的办法。他没急着接话——一个人能把短板说到这个份上，剩下的就是陪他走两轮。周四晚上他写下一句：这些都还没到能发版的时候，但至少在编译了。</p>
+      <p>周五是打磨。四人合影重绘到中午，光线不等于亮度，这句话说出来比调参管用。周日彻底空了，只剩傍晚一条催周报的提醒，他照着名单@了四个没交的名字，交了的两个放在前面，像一种温和的示范。</p>
+      <p>这一年他眼看着自己从「抽巨多卡做场景图」走到「一场投票和Codex就够」。这一周，他站在物料的快和人的慢之间——有些东西改一轮就过，有些要等12月31日才见分晓。</p>
+    </div>
+  </div>
+
+  <!-- 沉默板 -->
+  <div class="panel" id="silence">
+    <div class="card silence">
+      <ol>
+        <li><b>Claude渠道悬而未决</b>：周二就判断「Claude Opus 5.5单价只有GPT-6 Astra四成」，但卡在大额预充值，结论是「GPT渠道先走、Claude多找几家试用」。一周过去，这条本可省钱的路径仍停在纸上。</li>
+        <li><b>AI产品经理画像仍在漂移</b>：周一面试陈江林（100分钟，顾虑其离职轨迹），周五还在筛简历、约王云辉聊，一周没落定一个offer。「想找完全对画像的人，可能画像本身已经过时了」——说对了，但没推动画像被重新定义。</li>
+        <li><b>文鑫的六个动作（12/31）只起了个头</b>：本周只安排了「系统运维零散任务」的雏形，产品战略承接、跨部门协同、主导立项等核心项未实质推进。</li>
+        <li><b>决赛是最大的悬念</b>：27日决赛是本周一切努力的落点，但它发生在下周，所有「琐碎垫出来的」要到那天才见真章。</li>
+      </ol>
+    </div>
+  </div>
+
+  <footer>
+    每周复盘 · Pro &nbsp;|&nbsp; 生成于 2026-10-25 &nbsp;|&nbsp; 数据源：Notion Writing Projects（每日复盘 · 商业版 / 日记版）
+  </footer>
+</div>
+
+<script>
+  function show(name) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById(name).classList.add('active');
+    document.querySelector('.tab[data-tab="' + name + '"]').classList.add('active');
+  }
+</script>
+</body>
+</html>
