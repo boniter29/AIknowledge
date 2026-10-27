@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-10-27</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0b0f14;color:#d8dee6;font-family:"PingFang SC","Hiragino Sans GB",sans-serif;line-height:1.85;padding-bottom:60px}
+.wrap{max-width:720px;margin:0 auto;padding:20px 18px}
+h1{font-size:22px;font-weight:700;color:#fff;margin:14px 0 4px}
+.date{color:#7a8694;font-size:13px;margin-bottom:20px}
+.tabs{display:flex;border-bottom:1px solid #222a34;margin-bottom:22px}
+.tab{flex:1;text-align:center;padding:12px 0;cursor:pointer;color:#7a8694;font-size:15px;border-bottom:2px solid transparent;transition:.2s}
+.tab.active{color:#fff;border-bottom-color:currentColor;font-weight:600}
+.tab.biz.active{color:#6fa8ff;border-bottom-color:#6fa8ff}
+.tab.dia.active{color:#f08fb5;border-bottom-color:#f08fb5}
+.panel{display:none}
+.panel.show{display:block}
+.panel p{margin-bottom:16px;font-size:15.5px}
+.panel strong{font-weight:700}
+.biz .panel p strong{color:#a8c8ff}
+.dia .panel p strong{color:#ffc4d8}
+.footer{margin-top:36px;padding-top:14px;border-top:1px solid #1c242e;color:#5b6672;font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘 · 2026-10-27</h1>
+<div class="date">AI大赛决赛收官日 · 十二支队伍 · 一整天的答案</div>
+<div class="tabs">
+<div class="tab biz active" onclick="sw('biz')">📊 商业版</div>
+<div class="tab dia" onclick="sw('dia')">📝 日记版</div>
+</div>
+<div class="panel biz show" id="p-biz">
+<p><strong>AI大赛决赛收官，公司用一整天回答了一个问题，AI已经在业务里长出了什么，还能再长什么。</strong></p>
+<p>上午五支队伍，下午七支，十二支队伍全部演示完毕。评分规则是业务评委均分乘以50%加IT评委均分乘以50%，评委回避本部门队伍，评完冻结分数、全员公布。IT评委的分普遍比业务评委略高一点，全程透明，连分数排名都直接发了群。这套透明本身是有意的，比赛办到第二届，公信力比任何一支队伍的名次都值钱，明年还办不办、谁来报名，取决于今年大家信不信这个结果。</p>
+<p>今天最硬的落地证据来自两支队伍。新零售的一拍即合做了小红书AI笔记生成与全链路维护工具，背景是口碑建设光靠总部官号和达人笔记远远不够，必须联动全国，工具把笔记生成和维护串成全天候流水线。人力行政的金牌运营更狠，59万份历史简历躺在静态存储里沉睡，每年沉淀10万份新增，外部招聘平台回复率低、重复付费，猎头推荐的人一查重78.6%本来就在库里，光这一项年度费用11.3万。他们的方案是AI自动登录招聘平台打招呼，每个账号每天100到200个招呼，秒级查重命中存量，批量匹配每小时8000份，AI外呼渠道成本0元，130多个原来无人跟踪的战略岗位由规则常驻圈人、异动当日钉钉预警。这些数字不是演示稿里的愿景，全是现有预算表上能对上账的钱。</p>
+<p>大赛和3.0版本评审会同一天开，表面是两件事，推力是同一个。评审会上规划了3.0的四个优化目标，提升真实性、支持大中小户型生成、布局优化、软装风格与前端打通，定在明天10月28日上会汇报。讨论中最有信息量的一幕是老板追问，能不能丢一万张图进去告诉模型这就是简约风格，让它记住这个标签。同事如实回答，现在的生图API都不支持训练，只能靠参考图加提示词去调，那种思路要本地部署模型自己训。这个问答暴露了当前架构的天花板，风格控制的精度依赖调参而非学习，这也解释了为什么比赛项目里AI模特和短视频能力做出来了却暂时用不了。中午的判断很明确，那组东西是高度定制化的垂直场景，覆盖不到全类目全场景，要改造之后才能接入平台，需求收集拉上Cris和Puikin，润琦关心的模特动作存档复用问题也一并纳入，落地看通用性和个性化适配。</p>
+<p>管理线上今天有几句值得记的话。牛奶和PK想做成全平台的的事情，最大的风险被点破是他们和陈超没对齐，两个人信息不一致，各自动作就容易打架。解法是让陈超来说、集中决策、把PK叫上避免单聊，别让自己变成代替陈超去教育别人的人。另一句是开发资源没有用起来，让开发做点自主性工作，业务已有源码的就先拿来做平台接入，产品决策再收上来。小东西抓大放小，不要每个都上心，把自己累死了也没进展。这三条和比赛收尾是一个道理，决赛的物料几个G、循环短片改到昨晚才改好特效、珍珠的照片被做成了最佳战地记者摄影奖，比赛靠密集投入跑出了成绩，接下来要做的恰好是不再靠密集投入。</p>
+<p>比赛圆满结束，还差最后一篇林氏头条推文收尾。真正的考题从明天开始，把舞台上高度定制化的演示拆成平台能力，把59万份简历的账变成明年的预算表，把3.0的四个目标按版本节奏落下去。今天给出的答案是AI已经长出了成果，明天的任务是让它长得通用。</p>
+</div>
+<div class="panel dia" id="p-dia">
+<p><strong>今天是从早上站到晚上的一天，十二支队伍轮流上台，我作为评委全程听完，晚上终于能说一句，这个终于办完了。</strong></p>
+<p>上午第一支队伍讲小红书笔记生成，讲到最后全场都在点头，口碑这件事光靠总部推是不够的，全国一起动才推得动。下午人力的金牌运营报出一串数字，五十九万份简历，百分之七十八的查重率，一年十一万三的猎头费。我坐在评委席上心里算账，这些钱本来每年就在花，只是没人把账摆到一起看。我们IT评委打的分其实普遍比业务评委高一点，评完冻结、全员公布，分数排名直接发群里。遗憾一拍即合没拿奖，我把这话原样跟他们说了，也说了我们给的分很高。</p>
+<p>最有意思的一幕发生在评审会。老板问，能不能丢一万张图进去，告诉模型这就是简约风格，让它记住这个标签。同事想了想答，现在的生图工具不支持训练，只能拿参考图调提示词，要那种效果得本地部署自己训。会议室安静了一秒。这一秒其实挺珍贵的，天花板的边界就这样被当场画了出来。</p>
+<p>傍晚收拾物料的时候跟珍珠说，给她颁个最佳战地记者摄影奖，照片拍的细节太好了。素材几个G，循环短片昨晚才改好特效，今天差一点又要出问题，文鑫那个系统做得真不容易。给Cris发了入职一周年的祝福，忙得今天才想起来补上。</p>
+<p>晚上还有一段扎心的对话。我说牛奶那个团队最大的风险是他们和陈超没对齐，两个人信息不一致，动作就容易打架。让对方知道陈超重点想干嘛，比闷头替他传话重要。又说了一句给自己听的，抓大放小，小东西先搁一边，不要把自己累死了然后也没进展。这句话最近说得有点频繁，说明该听劝的是我自己。</p>
+<p>比赛圆满结束。米酒和YIYI要调动起来，AI定时推送用起来，AI视觉团队的资源用起来，开发的资源也要用起来。今天上台的十二支队伍已经证明了能长出什么，接下来该让它长得通用了。今天想早点下班，视频明天再搞。</p>
+</div>
+<div class="footer">Hermes 每日复盘 · 数据来源：钉钉AI听记 / 聊天记录 · 生成于 2026-10-27</div>
+</div>
+<script>
+function sw(t){
+ document.querySelectorAll('.tab').forEach(e=>e.classList.remove('active'));
+ document.querySelectorAll('.panel').forEach(e=>e.classList.remove('show'));
+ document.getElementById('p-'+t).classList.add('show');
+ document.querySelector('.tab.'+t).classList.add('active');
+}
+</script>
+</body>
+</html>
