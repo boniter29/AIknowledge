@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-10-29</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#d8dee4;font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.85;min-height:100vh}
+.wrap{max-width:720px;margin:0 auto;padding:28px 20px 60px}
+.date{font-size:13px;letter-spacing:2px;color:#8b949e;text-transform:uppercase;margin-bottom:6px}
+h1{font-size:26px;font-weight:700;margin-bottom:24px;color:#f0f3f6}
+.tabs{display:flex;gap:10px;margin-bottom:28px}
+.tab{flex:1;padding:12px 0;text-align:center;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;border:1px solid #21262d;background:#161b22;color:#8b949e;transition:all .2s}
+.tab.active-biz{background:linear-gradient(135deg,#1d3a5f,#274b7a);color:#cfe3ff;border-color:#2f5a8f}
+.tab.active-diary{background:linear-gradient(135deg,#4a2438,#6b3550);color:#ffd6e8;border-color:#8f4a6b}
+.panel{display:none;animation:fade .3s}
+.panel.show{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.card{background:#161b22;border:1px solid #21262d;border-radius:16px;padding:24px 22px;margin-bottom:18px}
+.biz .card{border-left:3px solid #4f8ff7}
+.diary .card{border-left:3px solid #e07aa8}
+.card p{font-size:15.5px;margin-bottom:14px;text-align:justify}
+.card p:last-child{margin-bottom:0}
+.lead{font-weight:700}
+.biz .lead{color:#8ec2ff}
+.diary .lead{color:#ffb3d1}
+em{font-style:normal;color:#8b949e;font-size:13px;display:block;margin-top:16px;border-top:1px dashed #21262d;padding-top:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="date">2026-10-29 · 星期四 · Daily Review</div>
+  <h1>每日复盘</h1>
+  <div class="tabs">
+    <div class="tab active-biz" id="tabB" onclick="sw('biz')">📊 商业版</div>
+    <div class="tab" id="tabD" onclick="sw('diary')">📝 日记版</div>
+  </div>
+
+  <div class="panel biz show" id="pB">
+    <div class="card">
+      <p class="lead">一句话定调：白天开了六场会，几乎全在做收口的事。AI安全规范逐条过审，研发流程方案砍掉一半，积分权手册标黄定稿，创意大赛视频对外脱敏。收口密集出现，是因为下周初有四场汇报要排，所有发散的讨论必须在汇报前变成能拿上台面的定版。</p>
+      <p>安全规范这条线最有代表性。上一次评审被驳回，今天线上一条一条过，连「由人承担责任」要不要改成「由个人」这种措辞都掰了一遍。驳回没有被当成卡壳，反而变成了精度的刻度，上次驳回的每个点，今天都对应一处修改。晚上新版《AI工具使用与安全管理办法》已经发到群里，还挂上了集团的奖惩条款，发布前先交内控风险管理的同学把关，预计下周拉会跟新哥过。</p>
+    </div>
+    <div class="card">
+      <p>研发流程的方案走了另一个方向的收口。林氏小龙虾三个月的问题被分类摆出来，某个版本发版后三天内问题仍然扎堆，说明研发环境和测试有提升空间。新方案把每个人在新流程里的动作列清，写完代码先过本地 code test，再跑产品侧提供的自测 skill。比起昨天那版，今天这版删掉了很多东西。立项原则也定了，数字分身、智能体平台、测试提效立项，日常迭代不立项。</p>
+      <p>几条平行线在同一晚汇到同一个逻辑上。小红书AI笔记项目的白底图还没搞定，11月先上SK小图，但同事直接点破，这是最基础的环节，绕不过去。知识管理会上讨论卡帕西的 LMK 方案，RAG 切片检索的跨文档问题被反复对比，留下的疑问是维护成本和时效。晚上命名之争落定，AI天地被新哥拍板改成AI空间，理由是天地太大，不够接地气。白底图、LMK、命名，看起来不相干，其实都在问同一件事，一个东西要落地，得先小到能被验证。</p>
+    </div>
+    <div class="card">
+      <p>日程上还有一条暗线。下周的四场汇报已经排开，小林AI管理层推送第一版方案、Chat上下文管理评测与使用规范、AI赋能软件研发全链路、数字分身平台改版。今天所有收口动作，都是在为这四场汇报备弹药。另外钉钉侧传来消息，my context 已开始向部分客户试用，已申请跟进，上下文管理这条线的外部对标也在同步进行。</p>
+    </div>
+  </div>
+
+  <div class="panel diary" id="pD">
+    <div class="card">
+      <p class="lead">今天的关键词是改。</p>
+      <p>早上新哥突然来找我说，AI天地这个名字有点太大了，想改几版。我跟我的AI讨论了半天，讨论出一堆方案，新哥挑来挑去，说天地囊括万物了，不够接地气，AI天地感觉太大了。最后拍板定成AI空间。中英文都要改，图也要改。我翻了一遍才发现有几张图还是我生的，只好自己认领回去改。改到一半我说，英文改成 AI space 就行，只是改名字。对，所有地方都要过一遍版。</p>
+      <p>中午的顺风车有点好笑。打到的车跟朋友的车一样，他接单的时候还问我是不是在北滘。哈哈应该不是。高速费我付，二十多的单我付了三十五。打车习惯坐后排，随手就来了后排。</p>
+      <p>下午开会讨论安全规范，上次被驳回的稿子今天一条一条线上过。有个措辞掰了很久，由人承担责任，要不要改成由个人。这种字眼上的纠结外人看着琐碎，但规范这种东西就是靠一个词一个词扣出来的。晚上我把新版办法发出去，挂上集团的奖惩条款，明天还要交内控的同学帮忙看。</p>
+    </div>
+    <div class="card">
+      <p>对象爸妈今天来了，我跟几个朋友说我要提前一小时走，去接他们。结果刚说要走，就有人来抓我说这个东西要改。我正准备走，又急着走来着。大概是每个赶着下班的人都要经历的这一幕。</p>
+      <p>晚上有件让我停下来想了一阵的事。读《马斯克原理》，五步算法，质疑需求、删除、简化、加速、自动化。步骤不难懂，难的是顺序。书里那个例子我记得很清楚，团队把机器人调快一倍，又去优化胶水，最后才问电池包里那块玻璃纤维垫到底干嘛用，一测，有没有它根本没区别，直接删掉，连带省掉一整道工序。我现在基本都用AI干活，最大的反思是AI很容易让人跳过前两步，直接冲到自动化。聪明人最常犯的错，是去优化一个本不该存在的东西。</p>
+    </div>
+    <div class="card">
+      <p>睡前群里还在对知识库的提示词结构。我建好了每个人的文件夹，让每个人先发自己用的提示词，互相吸取点经验，先不用太复杂。有人发来一篇过往的会话总结提示词，说看看可不可以直接用。只有用过才知道香。</p>
+      <p>一天下来，改了名字，改了规范，改了视频的脱敏版，改了提示词。全是小事，但定版这两个字，就是被这些小事推着走完的。</p>
+    </div>
+  </div>
+</div>
+<script>
+function sw(t){
+  document.getElementById('pB').className='panel biz'+(t==='biz'?' show':'');
+  document.getElementById('pD').className='panel diary'+(t==='diary'?' show':'');
+  document.getElementById('tabB').className='tab'+(t==='biz'?' active-biz':'');
+  document.getElementById('tabD').className='tab'+(t==='diary'?' active-diary':'');
+}
+</script>
+</body>
+</html>
