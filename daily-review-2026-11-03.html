@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-11-03</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;background:#0d1117;color:#c9d1d9;line-height:1.85;min-height:100vh}
+.wrap{max-width:720px;margin:0 auto;padding:28px 18px 60px}
+h1{font-size:1.5rem;color:#e6edf3;margin-bottom:4px}
+.sub{color:#8b949e;font-size:.85rem;margin-bottom:22px}
+.tabs{display:flex;gap:10px;margin-bottom:24px}
+.tab{flex:1;text-align:center;padding:12px 0;border-radius:12px;cursor:pointer;font-size:.95rem;font-weight:600;border:1px solid #30363d;color:#8b949e;user-select:none}
+.tab.active-biz{background:linear-gradient(135deg,#1d3a5f,#2563eb);color:#fff;border-color:#3b82f6}
+.tab.active-diary{background:linear-gradient(135deg,#5f2a3a,#ec4899);color:#fff;border-color:#f472b6}
+.panel{display:none;background:#161b22;border:1px solid #30363d;border-radius:16px;padding:26px 22px}
+.panel.show{display:block}
+.panel h2{font-size:1.1rem;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #21262d}
+.panel-biz h2{color:#60a5fa}
+.panel-diary h2{color:#f472b6}
+.panel p{margin-bottom:16px;font-size:.95rem}
+.panel-diary{background:#1c1420;border-color:#4a2b3a}
+.panel-diary p{color:#e8d5de}
+.tagline{display:inline-block;font-size:.78rem;padding:3px 10px;border-radius:99px;margin-bottom:18px}
+.biz-tag{background:#12233d;color:#60a5fa}
+.diary-tag{background:#3d1a2a;color:#f472b6}
+.footer{text-align:center;color:#484f58;font-size:.75rem;margin-top:34px}
+.footer a{color:#58a6ff;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘 · 11月3日</h1>
+<div class="sub">2026-11-03 星期二 · 商业版 + 日记版</div>
+<div class="tabs">
+<div class="tab active-biz" id="tab-biz" onclick="show('biz')">📊 商业版</div>
+<div class="tab" id="tab-diary" onclick="show('diary')">📝 日记版</div>
+</div>
+
+<div class="panel panel-biz show" id="panel-biz">
+<h2>共识的语言，是今天所有卡点的底层约束</h2>
+<span class="tagline biz-tag">AI进组织的真正卡点不在模型能力，在共识的语言</span>
+<p>今天的复盘从一句话开始。AI进组织的真正卡点今天暴露得很彻底，不在模型能力，在共识的语言。</p>
+<p>这条线今天至少在四个场合同时出现，表面看是四件不相干的事。</p>
+<p>下午的软装标签会对了70分钟，9个人。摄影棚和新零售都要搭资源调度系统，底层都靠AI打标，结果两边的标签体系对不上。产品分五大风格，对面是一级意义标签，北欧、华美这些词跟产品体系根本不一致。会议的结论很具体，儿童品类独立打标，床垫暂不进风格体系，颜色字段用文本导入不做系统枚举，新增项目组标签区分货源。但真正的工程量在把两拨人对同一个词的理解掰到一致。AI调度系统只是把这件事逼出来了。</p>
+<p>上午的管理层智能体评审里，同样的逻辑换了个形式。定了两个智能体，今日代办每天早上推送钉钉消息卡片，工作参谋做晚间日报、周报动态、月报复盘三层。同事问了一个关键问题，不同部门的阶段不一样，AI生成的阶段能不能自动适配，别写死。第一版先在信数内部做。这个方案能推下去，靠的是评审时把「交付到什么程度」这种模糊词换成了具体动作，软装的交付目标写成立项或梳理清楚环节定MVP，AI视觉写成分阶段给计划。聊天里给团队的原话就是「可以写的简单直接一点」。</p>
+<p>林氏小龙虾的自动化测试试点，本质也是在争语言。想做主Agent调度子Agent，扫出每次代码变更的测试范围，前提是Agent能读到需求描述和开发改动的中文描述。对方听完觉得这套复杂，说可以把代码权限直接开放，你们想做啥自己做，反正每次提交都有中文描述在git里。两边最后谈拢的落点还是那个，变更的语言描述质量决定Agent能不能干活。系统能不能自动起来，先看人写的变更说明够不够清楚。</p>
+<p>这条线在下午聊天里推到了最直白的一次。有人提「DS-data」「动态数据加载」，追问下去，所谓动态数据加载就是BI数据变了这边也要变。提醒了团队别随便用中台、平台、基线这些词，AI也爱写这种词，用多了对大家没好处。跟着Karpathy提的ASD-STE100思路，找了三个中文受控语言的实现，把一份材料让opus和gpt-6各改了一版，加上简明技术中文版，三版对比着存了下来。晚上审月度经营会的材料，定了一个流程，每个人针对页码提一句话修改意见，AI汇总改。第一版很粗糙，这一版好很多。</p>
+<p>三个供应商侧的信号值得记下。GPT通道不稳，管理层打开有问题就不用了，稳定性和响应速度成了采购的实际标准。生图选了Cdream，理由是比Nano和M2.5快，场景要40秒出图，速度压倒了质量。生视频用可灵。这些选型逻辑都是场景约束在先，模型评测在后，跟年初按榜单选型的做法已经完全不同。</p>
+<p>还有两笔账。token现在一个月14万，照这个涨法明年纯token要200到300万，加上开发和产品的人工，AI这块全年预计500万以上。这个数字跟月底要办的立项复盘对在一起看，才显得迫切。项目制调整后所有AI项目要后补OA立项流程，月中拉会逐个复盘定级，下周五前交材料，逾期可能申请不了等级和奖金。米酒那边的三个结项，库存刊登11月4号提交，另外两个6号前。花了钱的项目，接下来要自己回答值不值。</p>
+<p>生产效率的口径也在被逼着变清楚。业务认了提效，视频产量从一个月100多个到500多个，但减不减人是业务的决定。HR没介入，后续会让业务验证价值、人力进场。有人在群里直接发问，每周提效多少工时，你拍一个。这个数现在还拍不出来，等立项复盘跑完，应该就能拍了。</p>
+</div>
+
+<div class="panel panel-diary" id="panel-diary">
+<h2>今天一天都在跟词打交道</h2>
+<span class="tagline diary-tag">油柑汁和2000块团建经费，是一天里最松弛的注脚</span>
+<p>今天一天都在跟词打交道。</p>
+<p>早上起来先看月度经营会的材料，第一版做得相当low，我自己看完都皱眉。群里让大家对着页码一人提一句话修改意见，XX页改成XX，数据取哪里，重点标哪里，我直接复制给AI汇总去改。改出来这一版好很多了。这样干活的方式终于顺过来了，人只说人看得出来的问题，脏活给AI。</p>
+<p>上午看简历，有个候选人的AI落地能力还可以，但那份简历写得漂亮，人看着野心比历练多，还不看佛山的机会。聊了几句，不聊了吧。招人这种事现在越来越快地下判断，也许是被AI把筛选的成本打下来以后，反而舍得快速放弃了。</p>
+<p>下午最大的会是对软装标签。九个人，对了一个多小时，摄影棚和新零售两边各说各的风格体系，北欧、华美、原木，每个词底下藏的理解都不一样。有个瞬间挺有意思，有人问「同一个枚举不就是同一套字段吗」，又有人反问「啥叫同一个枚举也用两套字段」。你一句我一句，才发现两拨人吵了半天，吵的根本是两件事。最后定下来儿童独立打标，床垫不进风格体系，颜色用文本导入。结论其实早就有，这种会最难的一直是让所有人承认我们对不上，今天承认了。</p>
+<p>会前还跟一个同事聊软装方向怎么推进。他说不知道从哪个方向先开展，想要一个有逻辑性、别人能信服的说法。我说拉个会一起讨论，你把流程拉出来，起个头，提一下之前收到的那几个机会点，剩下让他们讲，你别太主导。他说好，又停了一下，说拉会就得准备材料，是不是要先梳理流程和机会点。这句话听着有点绕回来了，但没拆穿他，准备材料跟主导讨论确实是两回事，他自己分得清就行。</p>
+<p>下午聊天里撞上一个用大词的。什么DS-data，什么动态数据加载，我忍住了，先承认没听说过，再问是啥。答案是BI数据变了这边也要变。fine。晚上在群里忍不住说了一句，求求大家别用抽象大词，除非真的很懂。跟团队的同学也交代了，中台、平台、基线这种词别随便用，AI也爱写这种词，用多了没好处。有个同事就是学了几个技术名词，就觉得自己专业了，把AI当玩具玩的感觉。顶级大佬的表达反而都简单深刻，卡帕西说让文章简单易读可以用STE手册的语言规范，我照这个思路找了三个中文版的受控语言工具，把一份材料让两个模型各改了一版存下来对比。</p>
+<p>傍晚点了一杯油柑汁，先垫上了，让米酒回头报销，凑个单。后来在群里算团建的账，黄师奶人均50，黄但记80，咖啡60，假设两个人带家属加上我带凤梨，全开票的话能凑2000。有人提议干脆这次全AA，拿出来当后续团建经费，反正下次团建花的还是公司的钱。存点钱，后面工作日团建花。</p>
+<p>晚上还有一段有点魔幻的对话。有人想申请服务器，说要多个人用一个数据源，还要24小时跑任务。我说服务器就是一台电脑，你多加一台跟用自己的没区别，你的数据源和服务都在本地，给你服务器你也没法直接用，还得懂部署懂网关。绝大多数场景的卡点都不在设备上。后来让产品同学先进去把需求捋清楚。这种对话最近越来越多，大家开始把AI项目当成真的工程项目来提需求了，这是好事，就是每一步都得有人扶着。</p>
+<p>睡前算了一笔吓人的账，token一个月14万，照这个涨法明年要两三百万。看着这个数字想，钱花出去容易，值不值还得一个个项目自己证明。月中要拉立项复盘会了，下周五前交材料。明天上班第一件事，先把经营会那版材料收尾。</p>
+</div>
+
+<div class="footer">
+Notion: <a href="https://notion.so/40d167d0fd0f814eb6e4de3933d200a8">商业版</a> · <a href="https://notion.so/40d167d0fd0f8145b260fd88ff8916da">日记版</a><br>
+Generated by Hermes Agent · 2026-11-03
+</div>
+</div>
+<script>
+function show(t){
+document.getElementById('panel-biz').classList.toggle('show',t==='biz');
+document.getElementById('panel-diary').classList.toggle('show',t==='diary');
+document.getElementById('tab-biz').classList.toggle('active-biz',t==='biz');
+document.getElementById('tab-biz').classList.remove('active-diary');
+document.getElementById('tab-diary').classList.toggle('active-diary',t==='diary');
+document.getElementById('tab-diary').classList.remove('active-biz');
+}
+</script>
+</body>
+</html>
