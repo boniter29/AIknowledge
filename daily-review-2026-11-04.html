@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-11-04</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;background:#0d1117;color:#e6e6e6;line-height:1.85;padding:16px 0 60px}
+.wrap{max-width:720px;margin:0 auto;padding:0 18px}
+h1{font-size:1.45rem;margin:26px 0 4px;letter-spacing:.5px}
+.sub{color:#8b949e;font-size:.85rem;margin-bottom:22px}
+.tabs{display:flex;gap:10px;margin-bottom:26px}
+.tab{flex:1;text-align:center;padding:11px 0;border-radius:12px;background:#161b22;color:#8b949e;font-size:.95rem;cursor:pointer;border:1px solid #21262d;transition:all .2s}
+.tab.active-b{background:linear-gradient(135deg,#1c3a5e,#16324f);color:#79c0ff;border-color:#2d5a8e}
+.tab.active-d{background:linear-gradient(135deg,#4a2c3d,#3d2433);color:#ffa2c0;border-color:#7d4661}
+.panel{display:none}
+.panel.show{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+p{margin-bottom:1.15em;font-size:1.0rem;color:#d4d4d4;text-align:justify}
+.lead{font-weight:700}
+.panel-b .lead{color:#79c0ff}
+.panel-d .lead{color:#ffa2c0}
+.panel-b p::first-letter{}
+.footer{margin-top:40px;padding-top:18px;border-top:1px solid #21262d;color:#6e7681;font-size:.78rem;line-height:1.7}
+a{color:#58a6ff;text-decoration:none}
+@media(max-width:480px){h1{font-size:1.25rem}p{font-size:.96rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘 · 2026-11-04 周三</h1>
+<div class="sub">AI视觉月会立项 / 小林AI推进 / 林氏放我家与软装边界 / 招聘观察</div>
+<div class="tabs">
+<div class="tab active-b" id="tabb" onclick="switchTab('b')">📊 商业版</div>
+<div class="tab" id="tabd" onclick="switchTab('d')">📝 日记版</div>
+</div>
+<div class="panel panel-b show" id="panelb">
+<p class="lead">今天的主题是把推不动的事情变成项目。</p>
+<p>AI视觉月会敲定了第一波IT立项范围，六个专项进入立项通道，排单与资源调度台独立部署，买家秀批量生成、批量后期P图、视频创作工作台落到小林生影，再加上CAD尺寸图自动生成和成本与渠道数据仪表盘。这份清单的价值在于给散在各处、长期靠人肉催的需求一个资源承诺的容器。竞品卖点分析是反例，盘点后发现它要深度串联产经资料，却形成不了业务的输出物，最后只产出一份分析报告，于是归口产品统筹部。会上有人把差异讲得很透，产品统筹做竞品是为了立项开品，策划这边是为了内容表达，抓取的内容相近、目的不同，合并归口比两条线重复投入更划算。立项在这里成了一道筛选器，能立的是要变成产品的，立不了的是还停在报告里的。</p>
+<p>同一天，数字分身的事也在走同样的路。这条线的困境在聊天里说得直白，米酒要推数字分身，依赖文鑫的小林AI数字分身平台方案，文鑫这边优先级又低，健新一直不接，让我们打磨chat和管理层场景，德彬也觉得优先级低不投资源。一层套一层，每一层的判断单独看都合理，合起来就是原地踏步。结论是立个项来搞。上午你还在群里交代，这事要先在立项上达成共识，不能停在单点解决工具问题的层面。两件事一天之内指向同一个判断，在资源不跟着共识走的组织里，立项是唯一能锁住资源的动作。</p>
+<p>小林AI今天也在密集推进。管理层主动推送方案评审定了方向，今日待办、日报、周报、月报合并为一个智能体承载，通过钉钉消息卡片推送并支持跳转追问，先内部试点，用打开率这类指标衡量效果。数据源上明确要把钉钉接口能拉到的数据一起拿进来，并区分哪些走读接口、哪些走DWS。架构对齐会上明确了小林AI接的是BI数据，德彬的方向是让智能体走Claude agent SDK直接理解数据库，卡点也清楚，字段缺少元数据解释，模型看不懂amount是谁的数量、content是什么内容，需要给模型一层字段说明。这几条线合起来看，小林AI正在从单个工具变成平台入口，而入口的位置决定了后面每个专项的落地成本。</p>
+<p>林氏放我家和软装的边界之争今天走到台前。斯栋下午拉了短会，你给Cris和浮云的策略是先听诉求，先不急着表达观点和反驳她，随后把两人推到台前，让他们和斯栋、培哥对齐项目边界。你在群里把原则讲清楚了，这事最终要业务上达成共识，不能由我们替业务拍板。背后是今天最有分量的一个认知，人的观念会动态变化，尤其在AI领域，刚达成的共识随时可能被推翻。轩然上次的态度现在还作不作数都不一定，要对过才算数。所以共识清单不能只在群里发一下，没有碰撞没有讨论，那只算单方面通知。</p>
+<p>招聘侧的数据从外部印证了内部培养的必要。AI产品经理岗位两周收到70份简历，电话沟通8人，进业务面试1人，0 offer。看完简历的直观感受写在了消息里，市面上的AI产品经理应用经验普遍浅或者过时，用AI解决自己工作超过40%的基本没有，有些人的AI使用能力还不如公司的业务方和业务产品经理。你建议业务同事在群里提一嘴内聘的可能性，理由是公司AI应用走得比市场靠前，外招反而容易素质低要价高。</p>
+<p>收尾的事也在推进。经分会汇报PPT迭代到V5定稿，周五管理层汇报。结项材料已提交等审核，但零零反馈月初月末事务多，11月6日前没时间审核，BPS重构结项流程顺延到11月27日前完成。周五的汇报是这一轮冲刺的验收点，立项清单、小林AI方案和招聘结论都会放在同一个台面上过。</p>
+</div>
+<div class="panel panel-d" id="paneld">
+<p class="lead">立个项来搞</p>
+<p>今天脑子里转得最多的五个字，是「立个项来搞」。</p>
+<p>原话是跟薯条说的。数字分身那件事一层套一层，米酒要推，依赖文鑫的平台方案，文鑫优先级低，健新不接，德彬不投资源。每一层都有道理，合在一起就是原地踏步。说出那句话的时候大概也清楚，立项是没办法里的办法，把一件靠人情和耐心慢慢推的事情，变成一个有名字、有节点、有资源归属的东西。</p>
+<p>到了晚上这个判断被验证了一遍。AI视觉月会把第一波IT立项敲定，六个专项进了通道。竞品卖点分析那个专项没立成，归了产品统筹部。会上有人把它讲得很透，产品统筹做竞品是为了立项开品，策划这边是为了内容表达，要抓的东西相近，目的不同，那就归一处，别两拨人重复踩同样的坑。能立的是要变成产品的，立不了的是还停在报告里的。立项两个字，白天是抓手，晚上成了筛子。</p>
+<p>下午还有一场林氏放我家和软装的边界之争。斯栋拉了个短会，我给Cris和浮云的交代是先听诉求，先不急着表达观点和反驳。晚上在群里补了一句，这事最终要业务上达成共识，我们不能替业务拍板。又想起轩然，上次会上那个态度，现在还作不作数都不一定。人的观念在AI这个领域变得太快，刚握过手的共识，回头就可能翻掉。所以共识清单不能只在群里发一下，没有碰撞没有讨论，那只算单方面通知。带团队做AI这件事，一半的力气花在让大家的认知停在同一个版本上。</p>
+<p>今天最来劲的一段聊天是关于logo。新版的飞机大战UI风格把辨识度改没了，对方说这是经过UI设计过的，我回了一句，logo是心智，要稳定持久。后面连着几句像是说给自己听的，产品要有产品的底线，多大的技术大佬、多么强硬都不能退让，退让了就等于没有产品能力了。这几句发出去的时候挺痛快。做产品的人大概都有这种时刻，平时可以商量，碰到心智层面的东西，寸土不让。</p>
+<p>招聘的事也有些感慨。70份简历，8个电话，1个进业务面试，0个offer。看完的直观感受写在消息里了，市面上的AI产品经理，用AI解决自己工作超过40%的基本没有，有些人的AI使用能力还不如我们公司的业务方。中午建议业务同事在群里提一嘴内聘的可能性。招不到人的时候，身边的人反而看得更清楚。</p>
+<p>傍晚和洁敏说，今天去珠江新城，不坐车回家了。走的时候天应该刚擦黑。这一天从月会开始，到PPT定稿结束，中间五场会，小两百条消息，结项的事还在跟人催。筋疲力竭是真的，飞黄腾达还看不出来。</p>
+<p>不过立项清单是实的，六个专项，每个都有落点。推不动的事情，今天终于都有了自己的名字。</p>
+</div>
+<div class="footer">
+由 Hermes Agent 自动生成 · 数据来源：钉钉AI听记（6场会议）+ 聊天记录（198条）<br>
+Notion 双存：<a href="https://notion.so/40e167d0fd0f8195a4b7ca8cb2660dda">商业版</a> · <a href="https://notion.so/40e167d0fd0f814aaf4fe2a20c4dd8ac">日记版</a>
+</div>
+</div>
+<script>
+function switchTab(t){
+ var b=t==='b';
+ document.getElementById('panelb').classList.toggle('show',b);
+ document.getElementById('paneld').classList.toggle('show',!b);
+ var tb=document.getElementById('tabb'),td=document.getElementById('tabd');
+ tb.classList.toggle('active-b',b);tb.classList.toggle('active-d',false);
+ td.classList.toggle('active-d',!b);td.classList.toggle('active-b',false);
+}
+</script>
+</body>
+</html>
