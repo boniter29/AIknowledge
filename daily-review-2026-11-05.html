@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-11-05</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#e6e6e6;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.85;font-size:16px;padding:0 0 60px}
+.wrap{max-width:720px;margin:0 auto;padding:24px 20px}
+h1{font-size:24px;margin-bottom:6px}
+.date{color:#8b949e;font-size:14px;margin-bottom:22px}
+.tabs{display:flex;gap:10px;margin-bottom:24px}
+.tab{flex:1;padding:12px 0;text-align:center;border-radius:12px;background:#161b22;color:#8b949e;font-size:15px;cursor:pointer;border:1px solid #21262d;transition:.2s}
+.tab.on{color:#fff}
+.tab-biz.on{background:#1c2a4a;border-color:#2f5fc4}
+.tab-diary.on{background:#3a1f2a;border-color:#c46a8a}
+.panel{display:none;background:#161b22;border-radius:16px;padding:26px 22px;border:1px solid #21262d}
+.panel.on{display:block}
+.panel p{margin-bottom:16px;text-align:justify}
+.panel p:first-child{font-size:17px}
+.tagline{padding:14px 16px;border-radius:12px;margin-bottom:18px;font-size:15px}
+.tagline-biz{background:#101b33;border-left:3px solid #4f8ef7}
+.tagline-diary{background:#2a141d;border-left:3px solid #e78fb3}
+.footer{margin-top:26px;color:#484f58;font-size:12px;text-align:center}
+b.blue{color:#7ab0ff}
+b.pink{color:#f2a5c3}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘 · 11月5日</h1>
+<div class="date">2026-11-05 周四</div>
+<div class="tabs">
+<div class="tab tab-biz on" onclick="sw('biz',this)">📊 商业版</div>
+<div class="tab tab-diary" onclick="sw('diary',this)">📝 日记版</div>
+</div>
+
+<div id="biz" class="panel on">
+<div class="tagline tagline-biz"><b class="blue">定调：</b>11月5日是把散点收口成立项的一天。AI协同工作流、数字分身、睡眠空间AI三件事在同一天完成了从想法到立项材料的跨越，背后压着年底标杆案例的考核线。</div>
+<p>推动收口的不只是项目成熟了，更硬的压力来自考核。有人提醒，AI赋能标杆案例到现在还没有一个，年底目标至少一个。要计入案例，得有真实业务场景，有明确赋能动作，拿得出可量化的业务价值，还要业务方点头。散点试用撑不起验收，只有立项、定里程碑、定分工，才可能长出能通过验收的案例。因果线是考核倒逼收口，收口才有里程碑，里程碑才可能兑现成案例。</p>
+<p>收口的方式也在今天被反复统一。AI协同工作流会上有同事提醒，要把落地策略讲出来，梳理流程、做demo、试用、再正式部署，不然业务方会以为一上来就该有成品。下午给客户讲试用方案时又把这条流程说了一遍，demo跑出业务价值、规则清晰之后才谈部署，或者由部门申请公用机做服务端。这条流程今天开始变成对外话术，说明它从团队内部约定升级成了标准动作。</p>
+<p>多智能体的形态之争今天有了完整结论。跟卡罗解释了为什么不做单个超级智能体。从技术讲，单agent多skill效率最优，但实际有两个绕不开的坎，boss一直关注智能体的数量表达，用户对超级智能体的能力边界不清楚。驻场睡眠空间组时发现，他们宁愿用gpts也不用林氏小龙虾。最后落的公式是智能体等于定义加知识库加MCP加skill，场景用智能体加多skill加定时器组合。这个判断的价值在于承认了组织现实，用户心智的隔离需求压过了技术上的最优解。</p>
+<p>对外叙事今天也开了头。虎嗅的采访提纲拉了个七人会来对口径，从研发到生产到终端的全链路AI提效怎么讲，数据是保守讲还是放大讲，需要拿历史对外披露的信息做参照。林氏小龙虾本月接通BI、交付140项独立技能，这些数字攒了一整月，第一次要用媒体口径组织出来。同期两周内要出几份AI使用指引的html和视频，培训提上日程。落地的东西开始要被讲清楚，这本身是项目阶段变化的信号。</p>
+<p>还有一个立场要记下来。选型讨论里明确说不能被研发牵着鼻子走，很多AI实现连workflow都算不上，选型选错会浪费一群人解决没必要的问题。demo先由技术建议跑通，跑通后拿回来自己做。这个立场在接下来几个项目的部署阶段会被反复考验。</p>
+<p>明天盯两件事。11月6日是结项材料截止，BPS财务闭环和IECM海外仓的进度要确认。周五数字分身两个会合并成一个，立项材料按今天定的讲法过一遍。</p>
+</div>
+
+<div id="diary" class="panel">
+<div class="tagline tagline-diary"><b class="pink">感受：</b>全天干的是同一件事，把东西讲清楚。讲了十场，明天接着讲。</div>
+<p>今天过得很快，快到晚上想一下，发现全天干的是同一件事，把东西讲清楚。</p>
+<p>早上先在群里催了两件事。让米酒他们盘手上可提需求的事项，定立项节点，周五前交，还剩两个工作日。库存刊登的结项申请也追了一遍，BPS财务闭环和IECM海外仓明天就到期限。催人的消息发出去，自己心里也紧了一下。</p>
+<p>上午的协同工作流会，目标图、里程碑、分工都摆出来了，明年3月要一个阶段性成果。有同事提醒得对，落地策略也要讲出来，不然业务方会觉得你上手就该出东西，demo出来了是不是立马能用。这种误解他之前在其他项目里见过。我记下这句的时候想，做AI最难的地方早就过了写代码那关，卡在怎么让坐在对面的人知道这条路要分几步走。</p>
+<p>下午讲得更细。睡眠空间的会拉了五个人对目标，首期聚焦软床这条产品线，从规划到设计，知识库直接用钉钉的承接。给客户的试用方案也定了调，他想把资产分享给别人用，可以先引导他用自己的电脑做主机。正式部署要等demo试跑出业务价值再说。晚上还有一段小插曲，有人发来一个操作指引的视频，我看完挑了个毛病，开头没讲清楚这个视频要解决什么问题，也没分环节。我顺手给了他一个结构，先总后分，每一帧都该让人知道自己在整体的哪个版块。挑别人的讲法最容易，轮到自己讲，虎嗅采访的口径会开了七个人，数据保守讲还是放大讲，拿历史披露的信息对了一下午。全链路AI提效这个故事，讲出去之前先要我们自己信，再要我们讲得一致。</p>
+<p>晚上和卡罗把智能体的事掰开了讲。技术上单agent多skill最优，但用户不是这么想的，驻场的时候睡眠空间组宁愿用gpts也不用我们的小龙虾。最后干脆把公式写给他，智能体等于定义加知识库加skill，场景要加定时器。发完这条挺长的消息，忽然觉得今天白天的所有会，都在为晚上这段话做准备。</p>
+<p>群里今天也有热闹。林氏小龙虾接通了BI，140项技能，钉钉还开放了A2UI卡片，我兴冲冲数了一遍，四十七种基础组件，能混搭出十五张卡。英姐抱着电脑去签到培训，笑死我了，表情包那只写着无限进步的小人我存了下来。</p>
+<p>晚上在沙发那边等洁敏，问了句啥时候走。还跟轩然拌了两句嘴，他被人说不叫人去吃，口是心非。一天里最松弛的几分钟。</p>
+<p>明天结项材料截止，还有两份要盯。睡觉前只想记住一件事，讲清楚这件事没有终点，今天讲了十场，明天接着讲。</p>
+</div>
+
+<div class="footer">Hermes 每日复盘 · 数据源：钉钉AI听记 + 聊天记录</div>
+</div>
+<script>
+function sw(k,el){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));document.getElementById(k).classList.add('on');el.classList.add('on');}
+</script>
+</body>
+</html>
