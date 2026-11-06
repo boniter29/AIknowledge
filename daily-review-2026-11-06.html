@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-11-06</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'PingFang SC','Hiragino Sans GB',sans-serif;background:#0f1115;color:#d8dae0;line-height:1.85;padding:24px 16px 60px}
+.wrap{max-width:720px;margin:0 auto}
+h1{font-size:22px;text-align:center;margin-bottom:4px}
+.sub{text-align:center;color:#6b7280;font-size:13px;margin-bottom:20px}
+.tabs{display:flex;gap:10px;margin-bottom:20px}
+.tab{flex:1;text-align:center;padding:10px 0;border-radius:12px;background:#1a1d24;cursor:pointer;font-size:15px;border:1px solid transparent}
+.tab.on-biz{background:#12233d;border-color:#3b82f6;color:#93c5fd}
+.tab.on-diary{background:#2d1a26;border-color:#ec6a9c;color:#f9a8c9}
+.panel{display:none;background:#161920;border-radius:16px;padding:26px 22px;font-size:15px}
+.panel p{margin-bottom:16px;text-align:justify}
+.panel p:first-child{font-weight:600}
+#panel-biz{border-top:3px solid #3b82f6}
+#panel-diary{border-top:3px solid #ec6a9c}
+.footer{text-align:center;color:#4b5563;font-size:12px;margin-top:26px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘 · 2026-11-06</h1>
+<div class="sub">周五 · AI 从铺开转向立规矩的一天</div>
+<div class="tabs">
+<div class="tab on-biz" id="tab-biz" onclick="sw('biz')">📊 商业版</div>
+<div class="tab" id="tab-diary" onclick="sw('diary')">📝 日记版</div>
+</div>
+<div class="panel" id="panel-biz"><p>**定调：今天这条主线，是AI从铺开转向立规矩。**</p>
+<p>上午的交付复盘把压力摆上了桌面。10月只交付了10个项目，是全年最低，存量需求积压一千多个，线上营销一个域就压着256条。有同事把原因往大促分摊上归，但数字摆在那里，需求进来的速度一直快过产能的口子。AI专项全年立项预估也就四十来个，项目经理从去年人手两个降到今年人手一个。这场会留下的追问很具体，在资源收缩的情况下，哪些项目该立、哪些该缓，今天下班前每个人都要盘完。</p>
+<p>中午管理层传达了两个方向，AI竞赛复盘，以及我们团队走慢一点、赋能其他团队。这句话和上午的复盘是同一件事的两面。空间摄影和品类视觉那边又办了AI大赛，做了一大堆项目，我们下周要出几个门槛，所有要我们介入部署的需求让陈超来排优先级。铺开的口子多了，收口的机制必须跟上，否则每个团队都来找我们部署，人手撑不住。</p>
+<p>下午的两件事把这个逻辑演成了活案例。一是健新申请了我知识库一个页面的权限，我完全没有发现，后来确认每一页汇报里都藏着数据源入口，接口直接能拿到，同事感叹这跟裸奔有什么区别。二是有人用小龙虾爬生意参谋，公司外网IP可能进反爬黑名单，店铺账号有封号风险。正好下午的AI工具使用与安全管理办法过了终版，重点就是把人的责任写具体，不留模糊地带。制度改了很多版，今天上午还在改条文，下午就撞上这两件事，发文的条件齐了。</p>
+<p>落地侧没有停。物料关联的59条规则归成了5个skill，按床类、柜类、沙发类编排调用。数字分身项目立项开了一个小时，分身已经开始在群里接报错处理。黑客松定了两组，我和YIYI、Cris一组，德彬、heven和洪炯一组，特意要求每组尽量配上业务同学。结项那边米酒的三项要等零零月中审核，YIYI的BPS顺延到11月27。周五的盘面就是这样，规矩立起来，活继续干。</p></div>
+<div class="panel" id="panel-diary"><p>今天记得最牢的一幕发生在下午。健新在群里说找到了我的Notion文档，我愣了半天，印象里没发给过他。翻了一圈才发现，他申请的是我知识库里一个页面的权限，而汇报每一页下面都挂着数据源入口，接口直接能拿到。我服了，居然每一页都有。跟同事聊起来，有人说这跟裸奔有什么区别。上午我们还在会议室里一条一条过AI工具使用与安全管理办法的条文，讲人的责任要写具体，不要存在模糊。下午现实就把案例送上门了。这制度发文发得真不冤。</p>
+<p>白天还有个插曲。有人用小龙虾去爬生意参谋，运营起草公告，列了三条风险，公司IP进反爬黑名单，店铺账号被封，还有法律风险。我在群里补了一句，表述重点放在创新尝试的试错精神上，别让读的人觉得是在批评谁。这位同学确实做了复盘，经验也沉淀下来了，话怎么说是另一门手艺。</p>
+<p>上午的交付复盘开了很久。十月只交付了十个项目，全年最低，存量需求积压一千多个。数字不轻松，会议室里的讨论反而很实。有同事提到，今天有AI，有些事情可以快速被实现，或者用另外一种方式实现，原来的立项流程可能本身就会变。这句话我记住了。AI专项全年立了四十来个项，项目经理从去年人手两个变成今年人手一个，模式在换，账也得换个算法。</p>
+<p>傍晚黑客松定了分组，我和YIYI、Cris一组，德彬、heven和洪炯一组。组内之前都有协作基础，干脆按熟的上。张罗报名的时候有人说要是需要设计的还能拉上他对象，气氛一下松了。本来想分工协作，后来想想，先让每组都能打起来再说。</p>
+<p>睡前还处理了两件小事。建店设计部想让小龙虾自动抓钉钉群里的量场资料回传日期，对方方案用的是付费图片模型，我让他问问能不能本地部署clip来跑，省一点是一点。数字分身的名字也开始在群里出现了，有人直接@水滴_数字分身_小龙虾助手版问报错，它回了一篇像样的排查步骤。晚上@我的人里，有它替我值班的一份。今天到这儿，周末前把周报催了，YIYI、文鑫、Cris、浮云、米酒，一个都别落下。</p></div>
+<div class="footer">by Hermes · 数据来自钉钉 AI 听记与聊天记录</div>
+</div>
+<script>
+function sw(t){
+ document.getElementById('panel-biz').style.display = t==='biz'?'block':'none';
+ document.getElementById('panel-diary').style.display = t==='diary'?'block':'none';
+ document.getElementById('tab-biz').className = 'tab ' + (t==='biz'?'on-biz':'');
+ document.getElementById('tab-diary').className = 'tab ' + (t==='diary'?'on-diary':'');
+}
+sw('biz');
+</script>
+</body>
+</html>
