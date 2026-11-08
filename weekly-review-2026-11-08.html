@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每周复盘 2026-11-02 ~ 2026-11-08</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75;padding:20px 16px 60px}
+.wrap{max-width:720px;margin:0 auto}
+h1{font-size:22px;color:#e6edf3;margin:12px 0 4px}
+.sub{color:#8b949e;font-size:13px;margin-bottom:20px}
+.tabs{display:flex;gap:8px;margin-bottom:20px;border-bottom:1px solid #21262d;padding-bottom:0}
+.tab{padding:10px 16px;cursor:pointer;font-size:14px;border-bottom:2px solid transparent;color:#8b949e;border-radius:6px 6px 0 0}
+.tab.active.b{color:#58a6ff;border-color:#58a6ff}
+.tab.active.d{color:#f78166;border-color:#f78166}
+.tab.active.s{color:#d2a8ff;border-color:#d2a8ff}
+.panel{display:none}
+.panel.active{display:block}
+.card{background:#161b22;border-radius:12px;padding:20px;margin-bottom:16px;border:1px solid #21262d}
+.card h2{font-size:17px;margin-bottom:12px}
+.pb h2{color:#58a6ff}.pd h2{color:#f78166}.ps h2{color:#d2a8ff}
+.card p{margin-bottom:12px;font-size:15px}
+.card strong{color:#e6edf3}
+.thesis{background:linear-gradient(135deg,#1c2333,#161b22);border-left:3px solid #58a6ff;padding:16px;border-radius:0 12px 12px 0;margin-bottom:16px;font-size:15px;color:#e6edf3}
+.thread{border-left:2px solid #21262d;padding-left:14px;margin-bottom:16px}
+.thread h3{font-size:15px;color:#79c0ff;margin-bottom:8px}
+.sil{background:#161b22;border-radius:12px;padding:16px 20px;margin-bottom:12px;border:1px solid #21262d;display:flex;gap:12px}
+.sil .n{color:#d2a8ff;font-weight:600;min-width:22px}
+.sil p{font-size:14.5px;margin:0}
+.anchor{color:#f78166;font-style:italic}
+hr{border:0;border-top:1px solid #21262d;margin:18px 0}
+.footer{text-align:center;color:#484f58;font-size:12px;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每周复盘</h1>
+<div class="sub">2026-11-02 ~ 2026-11-08 · 三叶</div>
+<div class="tabs">
+<div class="tab b active" onclick="sw(0)">商业版</div>
+<div class="tab d" onclick="sw(1)">日记版</div>
+<div class="tab s" onclick="sw(2)">沉默板</div>
+</div>
+
+<div class="panel active">
+<div class="thesis"><strong>本周定调：铺开了一个月的AI项目，从本周开始必须有自己的名字、节点和资源归属。</strong> 立项从流程动作变成了筛子——立得进去的是产品，立不进去的留在了报告里。</div>
+<div class="card pb">
+<h2>线索一：立项从「流程」变成「筛子」</h2>
+<p>周一的91分钟项目制会立起骨架：强制报备、异常清单、11月6日死线。周四AI视觉月会把它演成了筛子——六个专项进通道，竞品卖点分析被筛出去归口产品统筹，理由很透：一个为了立项开品，一个为了内容表达，目的不同就别重复投入。</p>
+<p>同一天数字分身陷在米酒→文鑫→健新→德彬的层层低优先级里原地踏步，结论就是「立个项来搞」。周五交材料、周六分身立项一小时落地。<strong>一周之内，立项完成了从框架到筛选器到实际落地的完整演化。</strong></p>
+</div>
+<div class="card pb">
+<h2>线索二：「共识的语言」从会桌蔓延到制度</h2>
+<p>周二软装标签会70分钟，暴露两拨人对「北欧」「华美」的理解根本对不上；管理层智能体评审把「交付到什么程度」换成具体动作才推得动。周三这条线推到最直白：DS-data、动态数据加载这类大词被当场拆穿，团队开始推受控语言（STE思路）。</p>
+<p>周五两条安全事件（知识库权限裸奔、爬生意参谋涉封号）恰好撞上安全办法终审——<strong>模糊地带从沟通成本升级成了实际风险。</strong> 从标签语义、用词规范到权限责任，一周走完：共识不清的代价越往后越贵。</p>
+</div>
+<div class="card pb">
+<h2>线索三：数字分身从「推不动」到「能值班」</h2>
+<p>周四还在为立项层层受阻，周六数字分身项目一小时立项落地，当天就接群里的报错处理；周日有人@它问报错，它回了像样的排查步骤。中间还插了一场精彩的测试：汇总支付截图金额，它拿不到图时回答「不能瞎算」并给出可行路径。<strong>不编数，这个行为本身比算得快更重要。</strong> 一条线从组织阻力走向真实可用，只用了四天。</p>
+</div>
+<div class="card pb">
+<h2>信号</h2>
+<p>产能收缩下的取舍压力在积累。周五交付复盘：10月只交付10个全年最低、积压一千多条需求、项目经理人手减半。管理层同时传达「我们走慢一点、赋能其他团队」。铺开的口子和收口的能力之间，这个矛盾下周会继续发酵。</p>
+</div>
+</div>
+
+<div class="panel">
+<div class="card pd">
+<h2>一个人的一周</h2>
+<p>这周开始的时候，他在生病。周一七场会，最长的那场开了91分钟，身体不舒服的时候注意力是漏的。他在群里发立项提醒的时候用了个波浪号，想让它看起来不那么像催命。散会时他想，所有人都在先上去拍——框架是新的，尺子没刻完，连PM是谁都没定，但倒计时已经开始了。边跑边把鞋带系上。</p>
+<p>周二整天在跟词打交道。软装标签会九个人吵了一个多小时，最后发现吵的根本是两件事。晚上他在群里忍不住说，求求大家别用抽象大词。周三下午他撞上一个用大词的，忍住了先问是啥，答案是「BI数据变了这边也要变」。fine。</p>
+<p><span class="anchor">周四是转折点。</span> 数字分身一层套一层推不动，他说出「立个项来搞」五个字——把一件靠人情和耐心慢慢推的事，变成有名字、有节点、有资源归属的东西。晚上这个判断被验证：六个专项进了通道，立不进去的留在报告里。立项两个字，白天是抓手，晚上成了筛子。那天他还为一版logo发了狠话，产品要有产品的底线，退让了就等于没有产品能力。发出去的时候挺痛快。</p>
+<p>周五他的关键词是讲清楚。虎嗅采访的口径会开了七个人，数据保守讲还是放大讲，对了一下午。晚上他忽然觉得，白天所有会都在为晚上那段话做准备。</p>
+<p>周六下午现实给制度送来了案例：健新申请到了他知识库的权限，每页汇报下面都挂着数据源入口。「这跟裸奔有什么区别」，而上午他还在会议室里一条条过安全办法的条文。晚上他把一沓账单扔给数字分身，它没算出来，但说了「不能瞎算」。他心里反而踏实了——账这个东西，宁可没有，不能是假的。</p>
+<p>周日在报名表里过。表格填到一半卡住：3到6人一队，却没有填队员的地方。群里来回来去只有「应该是组队吧」。他一个人报了名，又去找官方群、问健新、@德彬和heven和洪炯。地铁广播报站，下一站，陈村。官方群还没回音。<strong>明天睁眼第一件事，看看有没有人给他说法。</strong></p>
+</div>
+</div>
+
+<div class="panel">
+<div class="card ps">
+<h2>本周沉默/未完成</h2>
+</div>
+<div class="sil"><span class="n">1</span><p><strong>PM人选悬而未决。</strong> 周一说好周五前要有结论——本周结束仍无下文。立项都立完了，谁来当PM这个前置问题还空着。</p></div>
+<div class="sil"><span class="n">2</span><p><strong>数字分身的媒体下载通道没修。</strong> 周六测试暴露图片下载通道未放行，结论是「补通道比再考十次有用」，但配置检查排到了下周。下次遇到图片还会卡在同一层。</p></div>
+<div class="sil"><span class="n">3</span><p><strong>「每周提效多少工时」的数拍不出来。</strong> 周三就有人发问，回答是等立项复盘跑完。月中复盘会临近，这个数还没着落。</p></div>
+<div class="sil"><span class="n">4</span><p><strong>报名规则没闭环。</strong> 周日官方群到睡前没回音，「3-6人组队但表只填个人信息」的矛盾悬着。</p></div>
+<div class="sil"><span class="n">5</span><p><strong>周报催办每周都在重复。</strong> 周日最后一小时还在@四个人。反复出现但没解决的问题，可能需要机制而不是最后一小时的@。</p></div>
+<div class="sil"><span class="n">6</span><p><strong>AI标杆案例至今为零。</strong> 周四提醒年底至少要一个，立项收口了，但距离「能通过验收的案例」还有里程碑要兑现。</p></div>
+</div>
+
+<div class="footer">每周复盘 · 2026-11-02 ~ 2026-11-08 · 由 Hermes 生成</div>
+</div>
+<script>
+function sw(i){var t=document.querySelectorAll('.tab'),p=document.querySelectorAll('.panel');t.forEach(function(x,k){x.classList.toggle('active',k===i)});p.forEach(function(x,k){x.classList.toggle('active',k===i)})}
+</script>
+</body>
+</html>
