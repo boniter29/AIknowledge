@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-11-08</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;min-height:100vh}
+.wrap{max-width:720px;margin:0 auto;padding:28px 18px 60px}
+h1{color:#eef2f8;font-size:24px;font-weight:700;text-align:center;margin-bottom:6px}
+.date{text-align:center;color:#7a8499;font-size:13px;margin-bottom:26px;letter-spacing:1px}
+.tabs{display:flex;gap:10px;margin-bottom:22px}
+.tab{flex:1;padding:12px 0;text-align:center;border-radius:12px;font-size:15px;color:#8b93a7;background:#161c28;cursor:pointer;transition:all .2s;border:1px solid #232b3b;user-select:none}
+.tab.on1{background:linear-gradient(135deg,#24314f,#1a2340);color:#8fb0ff;border-color:#3a4f7d;font-weight:600}
+.tab.on2{background:linear-gradient(135deg,#3f2432,#2a1a26);color:#f5aec6;border-color:#6d3d54;font-weight:600}
+.panel{display:none;background:#121826;border:1px solid #1f2736;border-radius:16px;padding:26px 22px;animation:fade .25s ease}
+.panel.show{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.footer{text-align:center;color:#5a6377;font-size:12px;margin-top:34px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘</h1>
+<div class="date">2026-11-08</div>
+<div class="tabs">
+<div class="tab on1" id="tab1" onclick="sw(1)">商业复盘版</div>
+<div class="tab" id="tab2" onclick="sw(2)">日记随笔版</div>
+</div>
+<div id="commercial" class="panel"><p style="margin:0 0 18px;line-height:1.9;color:#d8dee9;font-size:15.5px;">今天所有的动作其实指向同一件事，把规则不清的报名流程亲手问到清楚为止。周报催办、竞赛报名、官方群求证，看起来是三件零碎事，背后是同一个角色在工作，团队里那个替所有人补信息差的人。周日在做这件事，说明它已经等不到周一了。</p>
+<p style="margin:0 0 18px;line-height:1.9;color:#d8dee9;font-size:15.5px;">先看报名这条线。比赛是3到6人组队，还要筛选人，但报名表只让填个人信息，没有填队员的地方。这三条放在一起，会出现一个很具体的风险。如果有队伍的人每个人都单独报，报名数据里就没有队伍归属，筛选方看不到谁和谁一队，等于把组队信息在第一道关口就丢掉了。如果只让队长一个人报，其他成员又可能拿不到参赛资格。用户在群里把这个疑问直接摆了出来，得到的是「应该是组队吧」这类不确定的回应。按理应该是，这五个字撑不起一个影响全员资格的决定。</p>
+<p style="margin:0 0 18px;line-height:1.9;color:#d8dee9;font-size:15.5px;">所以接下来的一串动作是这条因果链的自然延伸。先去搜到一个官方群，加进去准备问。同时想起健新可能清楚，再去问健新。自己目前抱了一个名，填的是已有队伍，但仍然承认「我也不清楚」。这里值得注意的判断方式是，规则模糊的时候不猜，把确认成本花在自己身上，而不是让队友各自按理解乱填，等筛选结果出来才发现报错了。</p>
+<p style="margin:0 0 18px;line-height:1.9;color:#d8dee9;font-size:15.5px;">组织动作也在同步铺开。@德彬、@heven、@洪炯，挨个问报名了没，要求报完把截图发到群里，自己汇总后统一发给新哥。这是把散落在各个人手里的报名状态收拢成一份可核验的清单。和筛选制的规则放在一起看，这个做法是配套的，截图汇总既能让队伍构成可查，也能在规则最终确认后快速补报或改报。</p>
+<p style="margin:0 0 18px;line-height:1.9;color:#d8dee9;font-size:15.5px;">周报这条线是同构的。截止时间今晚18点，最后一小时还在群里点名，已提交的是Cris和水滴，剩下四个人被@到。周报和报名表都是收口型工作，差别在于周报有明确的截止时间和明确的未交名单，推得动。报名的不确定性反而更大，因为连要不要每个人都报这个前置问题都还没答案。收口型工作的瓶颈从来不在催的动作，在前置规则的清晰度。</p>
+<p style="margin:0 0 18px;line-height:1.9;color:#d8dee9;font-size:15.5px;">自己的产出线也在走，公司写的林氏家居内容在推进。产线和收口线并行，一条对客户，一条对内部。</p>
+<p style="margin:0 0 18px;line-height:1.9;color:#d8dee9;font-size:15.5px;">今天值得记下来的信号是，当规则文档缺位时，用户选择当那个去问的人。这种角色的价值在于把别人的模糊变成全队的确定性，成本是自己的时间，收益是所有人不踩坑。下周值得回头看的一点，官方群给的答复能不能沉淀成一句明确的规则发回自己群里，让这个问题只问一次，之后每个人照着填就行。如果官方群也答不清楚，那就需要在汇总发给新哥的时候把疑问一并带上，让组织方给说法。</p></div>
+<div id="diary" class="panel"><p style="margin:0 0 18px;line-height:1.9;color:#d8dee9;font-size:15.5px;">周日的下午是在报名表里过的。</p>
+<p style="margin:0 0 18px;line-height:1.9;color:#d8dee9;font-size:15.5px;">表格填到一半就卡住了。3到6个人一队，可从头拉到尾，没有一处是填队员的，全是个人信息。我一个人报，算一队还是算六个人，表格不认，我也答不上来。在群里嘀咕了一句，所以不确定有队伍的要不要每个人报。有人回，应该是组队吧。我又问了一遍，按理应该是。按理，按谁的理。这两句话来回来去，谁也拍不了板。</p>
+<p style="margin:0 0 18px;line-height:1.9;color:#d8dee9;font-size:15.5px;">自己手上那个名倒是先抱了，填的地方写的是已有队伍。填完心里还是不踏实，索性去搜，还真让我找到一个官方的群。加进去了，准备进去问问。转念一想，健新应该清楚这事，我去问问他。一个人问不出来的事，就多找一个人问，问的人多了，总有一句是准的。</p>
+<p style="margin:0 0 18px;line-height:1.9;color:#d8dee9;font-size:15.5px;">报名的事问着问着，又想起队里那几个人还没动静。@德彬、@heven、@洪炯，报名了不。报完把截图都发群里，我汇总后发给新哥。发完这句话，群里安静了一会儿。周日嘛，各有各的事。</p>
+<p style="margin:0 0 18px;line-height:1.9;color:#d8dee9;font-size:15.5px;">晚上又轮到周报。截止时间六点，发出去的时候只剩最后一小时。已提交的两个人里，有一个是我自己。剩下四个名字挨个@过去，语气已经顾不上绕弯了，抓紧最后几小时。</p>
+<p style="margin:0 0 18px;line-height:1.9;color:#d8dee9;font-size:15.5px;">想起下午还有一段闲的。有人在洗头，有人在喂小孩，我坐在地铁上发语音，广播正好报站，下一站，陈村。一天里我问了好多遍报名了不，答案凑齐之前，先回家。</p>
+<p style="margin:0 0 18px;line-height:1.9;color:#d8dee9;font-size:15.5px;">官方群里还没回音。明天睁眼第一件事，看看有没有人给我说法。</p></div>
+<div class="footer">由 Hermes 自动生成 · 2026-11-08</div>
+</div>
+<script>
+function sw(n){
+ document.getElementById('tab1').className='tab'+(n==1?' on1':'');
+ document.getElementById('tab2').className='tab'+(n==2?' on2':'');
+ document.getElementById('commercial').classList.toggle('show',n==1);
+ document.getElementById('diary').classList.toggle('show',n==2);
+}
+document.getElementById('commercial').classList.add('show');
+</script>
+</body>
+</html>
