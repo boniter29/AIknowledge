@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>团队周报洞察 · 11/02 ~ 11/08</title>
+<style>
+:root{--bg:#0f1220;--card:#1a1f33;--card2:#20263d;--tx:#e8ecf6;--sub:#9aa4c0;--acc:#4f6ef7;--ok:#2ecc71;--warn:#f5a623;--bad:#e74c3c;--purple:#9b6ef7;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--tx);font-family:'PingFang SC','Noto Sans SC',sans-serif;line-height:1.65;padding:16px;max-width:720px;margin:0 auto}
+h1{font-size:22px;margin:8px 0 4px}
+.meta{color:var(--sub);font-size:13px;margin-bottom:20px}
+.card{background:var(--card);border-radius:16px;padding:16px;margin-bottom:14px}
+.card h2{font-size:16px;margin-bottom:12px;color:#fff}
+.tag{display:inline-block;padding:2px 10px;border-radius:99px;font-size:12px;margin-right:6px}
+.t-ok{background:rgba(46,204,113,.18);color:var(--ok)}
+.t-warn{background:rgba(245,166,35,.18);color:var(--warn)}
+.t-bad{background:rgba(231,76,60,.2);color:var(--bad)}
+.t-acc{background:rgba(79,110,247,.2);color:#8fa3ff}
+.t-purple{background:rgba(155,110,247,.2);color:#c3a6ff}
+.bar{height:10px;border-radius:6px;background:#2a3050;overflow:hidden;margin:8px 0}
+.bar>div{height:100%;border-radius:6px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
+th{color:var(--sub);text-align:left;font-weight:500;padding:6px 8px;border-bottom:1px solid #2a3050;white-space:nowrap}
+td{padding:8px;border-bottom:1px solid #232944;vertical-align:top}
+.small{font-size:12.5px;color:var(--sub)}
+.act{border-left:3px solid var(--acc);padding:8px 12px;margin:10px 0;background:var(--card2);border-radius:0 12px 12px 0;font-size:13.5px}
+.act b{color:#8fa3ff}
+.sig{border-left:3px solid var(--purple);padding:8px 12px;margin:10px 0;background:var(--card2);border-radius:0 12px 12px 0;font-size:13.5px}
+.pill{font-size:12px;color:var(--sub)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.kpi{background:var(--card2);border-radius:12px;padding:12px;text-align:center}
+.kpi .n{font-size:22px;font-weight:700}
+.kpi .l{font-size:12px;color:var(--sub)}
+.lane{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
+.lane .step{background:var(--card2);border-radius:8px;padding:4px 10px;font-size:12px;color:var(--sub)}
+.lane .step.on{background:rgba(79,110,247,.25);color:#a9b8ff;border:1px solid rgba(79,110,247,.5)}
+.person{margin:12px 0;padding:12px;background:var(--card2);border-radius:12px;font-size:13px}
+.person b{font-size:14px}
+footer{color:var(--sub);font-size:12px;text-align:center;padding:16px 0 30px}
+</style>
+</head>
+<body>
+<h1>🧠 团队周报洞察</h1>
+<div class="meta">2026-11-02 ~ 2026-11-08 · W45 · AI产品创新部周报 · 6/6 人提交 · 数据来源：dws 周报（上周+上上周对比）</div>
+
+<div class="card">
+  <h2>① 聚焦度体检 <span class="tag t-warn">黄灯</span></h2>
+  <div class="grid">
+    <div class="kpi"><div class="n" style="color:var(--warn)">~45%</div><div class="l">主战场工时占比（黄灯 &lt;60%）</div></div>
+    <div class="kpi"><div class="n" style="color:var(--bad)">17+</div><div class="l">并行战线（红线 9 条）</div></div>
+    <div class="kpi"><div class="n" style="color:var(--bad)">46%</div><div class="l">米酒个人海外 IECM/BPS 占比</div></div>
+    <div class="kpi"><div class="n" style="color:var(--ok)">6/6</div><div class="l">周报按时提交率</div></div>
+  </div>
+  <div class="bar"><div style="width:45%;background:var(--warn)"></div></div>
+  <p class="small">主战场口径：内容生产(小红书) / 商品视觉(生影·剪辑·DAM) / 客服导购·放我家 / S&amp;OP 供需。海外 IECM/BPS 按战略定位单独计为「低优先级消耗」，不计入主战场。</p>
+  <p class="small" style="margin-top:6px">分人：YIYI ~70% 绿 · 浮云 ~61% 绿 · Cris ~64% 绿 · 米酒 ~22% 红（46% 在海外兜底） · 文鑫 ~0%（全部在平台/研发效能线） · 水滴多为组织与立项事务。<b>结构性解释：</b>米酒被海外兜底需求吸走是历史项目收尾惯性，不是态度问题；文鑫/水滴投入的平台与立项是主战场项目的底座，但按本季 OKR 口径需在汇报中显式建立映射，否则聚焦度长期失真。</p>
+</div>
+
+<div class="card">
+  <h2>② 价值链看板</h2>
+  <table>
+    <tr><th>项目</th><th>环节</th><th>信号</th><th>建议</th></tr>
+    <tr><td>林氏放我家 v3.x</td><td><span class="tag t-warn">使用中未见效</span></td><td>10.28 版生成量大但复制/下载采用偏低，原因未定</td><td>浮云已启动逐案访谈复现（方向正确）。本周内出「效果 vs 流程 vs 操作」三因拆分结论，避免第3周悬置</td></tr>
+    <tr><td>KBMS 素材打标</td><td><span class="tag t-acc">构建中（偏久）</span></td><td>方案反复迭代，复核 612 条且随机性未收敛</td><td>关键在业务方（修羽/启帆）深度参与确认特殊规则——已提出，需本周落到具体确认会</td></tr>
+    <tr><td>AI视频工作台 MVP1</td><td><span class="tag t-acc">构建中</span></td><td>范围 HTML 已成，稳定版/运维评估未锁</td><td>下周锁半年基准版并完成运维评估，防止范围漂移</td></tr>
+    <tr><td>管理层 AI 助手</td><td><span class="tag t-warn">已交付未使用</span></td><td>11/4 评审出 8 项待改，原型改版未开工</td><td>断点风险：评审→改版→试点链条若本周不动，会成僵尸。定改版责任人+排期</td></tr>
+    <tr><td>小红书全链路</td><td><span class="tag t-ok">构建→交付中</span></td><td>门店版+企微通方案 80%，12月底上线节点明确</td><td>保持节奏，立项材料本周出终稿</td></tr>
+    <tr><td>数字员工专项</td><td><span class="tag t-acc">构建中</span></td><td>立项材料 V5，试点 4 场景分工已定</td><td>争取管理层拍板（水滴下周 P0）</td></tr>
+    <tr><td>海外 IECM/BPS</td><td><span class="tag t-bad">低优先级消耗 11%</span></td><td>米酒 46% 个人工时在兜底修复（促销重复、Wayfair、广告接口）</td><td>止血建议：IECM 数据质量问题批量立项一次性治理，而非逐单救火；新开发一律不启动</td></tr>
+  </table>
+  <p class="small">标杆进度：小红书全链路最接近「可复制标杆」（双版本策略清晰、12月节点明确）；放我家是最需抢救的已上线资产。</p>
+</div>
+
+<div class="card">
+  <h2>③ 需要行动的事（Top 3）</h2>
+  <div class="act"><b>1. 米酒的海外兜底消耗失控（46% 个人工时）</b> → 假设：IECM 数据治理是「逐单救火」模式，缺一次性清理方案（置信度：中）→ 动作：三叶本周与米酒 1:1，把促销重复数据、平台报错类问题合并成一个「IECM 数据质量治理专项」，给 0.5 天做一次性治理方案；米酒下周的主战场工时目标 ≥40%。</div>
+  <div class="act"><b>2. 放我家低采用连续第 2 周无结论</b> → 假设：低采用主因在「生成→落地」流程断点而非生成质量（置信度：中）→ 动作：浮云本周访谈产出三因拆分；若确认是流程问题，联合客服负责人定「复制下载」引导改法，进 v3.2.0 范围。</div>
+  <div class="act"><b>3. 管理层助手评审后改版未启动</b> → 假设：易事（原型完善）被会务/评审类易事挤掉（置信度：中）→ 动作：Cris 本周明确改版责任人并排期，试点边界随 11/10 问答评测结论一并定。</div>
+</div>
+
+<div class="card">
+  <h2>④ 卡点看板（协调事项）</h2>
+  <table>
+    <tr><th>事项</th><th>涉及方</th><th>状态</th><th>建议解法</th></tr>
+    <tr><td>软装标签体系/PRM·MDM 字段接口</td><td>Cris + 浮云 + 水滴 ↔ 桉树/新零售</td><td>连续 2 周+ 未收口</td><td>业务已定 11 月底出标签模板；本周先锁字段接口责任人，不等模板</td></tr>
+    <tr><td>FMS 联调窗口与预占排期</td><td>Cris ↔ FMS 侧</td><td>第 2 周</td><td>Cris 先定自身排期再倒逼对方给窗口（计划已有，执行）</td></tr>
+    <tr><td>AI 部署代码托管方案</td><td>Cris ↔ 德彬</td><td>第 1 周</td><td>随部署协作规范本周收口</td></tr>
+    <tr><td>数字员工灰度权限被钉钉拒绝</td><td>文鑫</td><td>路径受阻</td><td>已转「基于小林AI自建」评估，方向正确，本周出替代路径结论</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h2>⑤ 行业信号 → 团队连接</h2>
+  <div class="sig"><b>RTX Spark 类本地一体机（128G 统一内存+CUDA）开启「Token 自由」</b> — 团队 Cris 本周正要为视频工作台做并发/显卡/带宽运维评估。本地大内存方案让批量生图/生视频的边际成本结构多了一个「自建」选项，评估时把「本地一体机跑开源模型」作为云 API 的对照项一起算账。</div>
+  <div class="sig"><b>GPT 辅助 2 天挖出 PHP 底层漏洞（CVSS 9.2）</b> — 水滴本周 P0 是 AI 使用规范与安全管理办法发文。建议规范中纳入两条：AI 生成代码必须过安全审查再合并（对接文鑫小龙虾发版门禁），存量老系统列出 AI 审计优先级。</div>
+</div>
+
+<div class="card">
+  <h2>⑥ 个体层 &amp; 趋势</h2>
+  <div class="person"><b>YIYI</b> — 学习亮点：基于 Claude Agent SDK + DeepSeek 独立完成物料编码关联 Agent Demo（59 条规则热加载），跨界工程能力值得在团队内做一次分享。</div>
+  <div class="person"><b>文鑫</b> — 研发全链路方案 V19 + 错题本建表，产品化思维强；注意点：其工作全部在平台线，需在立项映射中显式对齐主战场价值，避免聚焦度统计失真。</div>
+  <div class="person"><b>浮云</b> — 主动核实「生成多但采用低」是本周期最有价值的诊断动作，正面点名。</div>
+  <div class="person"><b>米酒</b> — 海外兜底量大但处理质量高（103 单恢复、时区规则、重复数据治理均闭环）；风险栏空白，建议 1:1 补充真实阻塞点。</div>
+  <p class="small" style="margin-top:10px">周期趋势（vs 上上周双周报）：聚焦度 ↓（上上周结项收尾反而更聚焦）· 立项密度 ↑（AI视觉7项+数字员工+小红书集中立项）· 学习投入 ↑（Agent SDK 实践）· 协调事项存量 →（软装接口、FMS 持续）。</p>
+</div>
+
+<div class="card">
+  <h2>⑦ 项目 × 人员矩阵（主战场标记）</h2>
+  <table>
+    <tr><th>项目</th><th>主战场</th><th>投入人员</th></tr>
+    <tr><td>小红书全链路</td><td><span class="tag t-acc">①内容生产</span></td><td>YIYI、Cris</td></tr>
+    <tr><td>KBMS 素材库/打标</td><td><span class="tag t-acc">②商品视觉</span></td><td>YIYI</td></tr>
+    <tr><td>AI视频工作台/影棚调度/买家秀白底图</td><td><span class="tag t-acc">②商品视觉</span></td><td>Cris、米酒</td></tr>
+    <tr><td>林氏放我家/软装标签</td><td><span class="tag t-acc">③客服导购</span></td><td>浮云、Cris、水滴</td></tr>
+    <tr><td>睡眠空间/产中数据资产</td><td><span class="tag t-acc">④S&amp;OP</span></td><td>浮云</td></tr>
+    <tr><td>小林AI平台/管理层助手/数字员工/小龙虾</td><td><span class="tag t-purple">平台底座</span></td><td>文鑫、水滴、Cris、浮云、米酒</td></tr>
+    <tr><td>IECM/BPS/4A/亚马逊SC</td><td><span class="tag t-bad">低优先级</span></td><td>米酒、YIYI(收尾)</td></tr>
+  </table>
+</div>
+
+<footer>生成：Hermes Agent · 2026-11-09 · 诊断工具，非考核工具 · 数据不完整处已标注</footer>
+</body>
+</html>
