@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 2026-11-10</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;background:#0d1117;color:#d8dee4;line-height:1.85;font-size:16px}
+.wrap{max-width:720px;margin:0 auto;padding:28px 18px 60px}
+h1{font-size:24px;margin-bottom:4px}
+.sub{color:#8b949e;font-size:14px;margin-bottom:24px}
+.tabs{display:flex;gap:10px;margin-bottom:26px}
+.tab{flex:1;text-align:center;padding:12px 0;border-radius:12px;background:#161b22;border:1px solid #30363d;cursor:pointer;font-size:15px;color:#8b949e;transition:all .2s}
+.tab.active-b{background:#12233f;border-color:#2f81f7;color:#79b8ff}
+.tab.active-d{background:#2d1f28;border-color:#f778ba;color:#ff9bce}
+.panel{display:none}
+.panel.show{display:block}
+.panel p{margin-bottom:18px;text-align:justify}
+.biz p:first-child{color:#79b8ff;font-weight:600;font-size:17px}
+.dia p:first-child{color:#ff9bce;font-size:17px}
+.foot{margin-top:36px;padding-top:16px;border-top:1px solid #21262d;color:#484f58;font-size:12px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>每日复盘</h1>
+<div class="sub">2026-11-10 周二 · 6 场会议 · 146 条消息</div>
+<div class="tabs">
+<div class="tab active-b" id="tb" onclick="sw('b')">📊 商业版</div>
+<div class="tab" id="td" onclick="sw('d')">📝 日记版</div>
+</div>
+<div class="panel biz show" id="pb"></div>
+<div class="panel dia" id="pd"></div>
+<div class="foot">由 Hermes Agent 生成 · 数据来源：钉钉 AI听记 + 聊天记录</div>
+</div>
+<script>
+const B=["今天的主线是收口。六个会从早排到晚，聊的不再是谁又跑出一个 demo，而是谁能上、怎么验收、上下文怎么管。上半年项目散着跑，今天全在往规范和阶段成果上收，收口的代价是流程开始变长。", "部署规范会暴露的是资源稀释的问题。现在业务侧几乎人人手里一两个 demo，找到 AI 部门要部署，甚至绕过去找运维找开发。但拆开看，他们说的部署其实是四类不同的需求，规模化、供数据、产品化、要技术支持，各要的东西不一样。所以规范的核心动作是设门槛，先交价值论证，demo 是否有多人在实际使用，跑了多久，主流程走通了没有。会上把这定为流程第一步。散装尝试多到 AI 部门接不住，才逼出这道闸门，而闸门本身说明项目已经多过了资源。会后用户在群里补了一句，让部署规范内部拉着健新、卡罗、薯条、德彬、heven 过一版，又让浮云改个名放进知识库。规范没有停在被讨论，进到了排期和归档。", "软床研发项目的阶段汇报是另一条收口线。从去年到今年，AI 小组和睡眠空间组一直在找 AI 在产品研发设计环节的切入点，如今产品取数这个杂活已经能靠 AI 辅助生成意向材料，工具层面接入了产品经营分析模型和采购跟进两类数据，目标是明年三四月把整个流程贯通，做成软床业务的 AI 工作流标杆案例。这个标杆能不能立住，取决于汇报材料的质量。今天中午材料还在改，第一个流程图要改成已覆盖哪几个环节，用户让 YIYI 给每个环节补上具体干系人和时间节点。阶段汇报要立住，靠的不是成绩罗列，而是每段链路有人负责、有节点可查，这件事被反复盯到了最后一刻。", "物料匹配转 Agent Skill 的评测会揭示了收口的另一面。同事对比了两种做法，workflow 是单轮的，程序丢一次任务，不管结果好坏都输出给你；agent 拿到的是任务本身，跑的过程里发现指令或程序有问题会自己修正，还会去读你没指明要用的上下文。听起来 agent 全面胜出，但现实是现有提示词已经长到要去猜。有同事吐槽 DeepSeek 的上下文有一百万 token，什么提示词能撑到一百万。这句玩笑点中了要害，从一次性调用转向 agent，前提是上下文治理，问题不在模型能力在喂法。", "数字分身原型评审提供了一个反例。原型砍掉了版本管理，理由是只有五个场景，一个场景对应一个分身就够了，评测迭代靠一天天手工打标积累经验。同事立刻追问，不搞版本管理，评测迭代怎么搞。这个追问和规范会、skill 会在讲同一件事，迭代意识大家都有了，工程化的工具和流程还没跟上，砍功能省下的复杂度迟早要在评测那里还回来。", "选型也在收口。小林 AI 的评测要回答钉钉知识库还是自建，自建的路径更长，上传后多一道索引，同步延迟和成功率被拿体感来质疑，有同事说实际用的时候经常发现没同步。白底商品图打标的视觉模型选型是同一个逻辑，价格加效果加 benchmark 结论，先标三百到五百张做评测集再对比两三个模型。不追求最强的，追求路径最短、可验证的。", "傍晚来了一个急活。佛山台要拿林氏放我家做宣传资料，背景效果图要换成更好看的，明早十点前输出。电视台的人下午刚来公司拍完一轮，回去剪稿前又折回来要素材。宣传侧在追时间，工程侧在建规矩，两边同时压着，这正是 AI 项目从 demo 走向组织的日常。"];
+const D=["今天的关键词是累。从早上第一句汇报材料开始，到晚上说可以回家，脑子一直在换频道。", "上午健新转来水滴的话，下午的汇报材料还在改，流程图那里要改成已经覆盖哪几个环节，其他内容过了几遍问题不大，也发给猫草和恩飞看过了。我中午追了一句，材料改好了没有，健新让上传一下那个日程。这种追问没什么技术含量，但一件件追下来，下午的汇报才立得住。", "中午发过一条我先去沙发了，过了一会儿补一句，我好了。十分钟的幸福，确实缓过来一点。", "下午的会一个接一个。部署规范那个会里，有同事说业务人人手里一两个 demo，都来找 IT 部署，拆开其实是想规模化、要数据、要产品化。听完我在群里补了两件事，部署规范内部拉着健新、卡罗、薯条、德彬、heven 过一版，再让浮云改个名放进知识库。规范这种东西，放错了地方就等于没写。", "素材库的进度我一直不太清楚，只看见他们群里在交流。憋了一阵子，今天直接说了，定期给我同频一下素材库的进度，我对这个项目的进展和卡点一直不太清晰。话说出去就轻松了，项目推进不能靠我在群里偶尔瞄一眼。", "傍晚来活了。佛山台要拿林氏放我做宣传资料，背景效果图要换好看的，明早十点前输出。电视台的人下午刚来拍完一轮，回去剪稿前又折回来要素材，说 CC 觉得要更高大上一点。我拉了木心，让他拿天猫比较主推的套系用林氏放我家跑一两套图。宣传这个东西，永远比工程急。", "晚上还散着处理了几件事。YIYI 问 AI 项目的指标怎么定，我说大多是业务指标和过程指标，很难量化就写定性的价值描述，比如建单门槛降低。白底图打标的模型选型我让 grok bot 做了一版，国内外模型对比、每张图成本、落地建议，整理成 HTML 发给 YIYI，建议先标三百到五百张做评测集。给文鑫发了 latent.space 那篇 CS146S，猜他喜欢。还看了一眼 AIhot 做的每天领羊毛 token 的 Agent，那个设计做得挺好的。", "回到家还想远程看看东西。今天六个会，三个多小时，聊的全是规矩、选型、验收。上半年大家比谁跑得快，下半年在比谁收得住。两边都得管，所以累。"];
+function fill(id,arr){const el=document.getElementById(id);arr.forEach(t=>{const p=document.createElement('p');p.textContent=t;el.appendChild(p);});}
+fill('pb',B);fill('pd',D);
+function sw(k){
+ const b=k==='b';
+ document.getElementById('pb').classList.toggle('show',b);
+ document.getElementById('pd').classList.toggle('show',!b);
+ document.getElementById('tb').className='tab '+(b?'active-b':'');
+ document.getElementById('td').className='tab '+(!b?'active-d':'');
+}
+</script>
+</body>
+</html>
