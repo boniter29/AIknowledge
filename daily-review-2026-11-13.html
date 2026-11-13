@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日复盘 · 2026-11-13</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#e6edf3;font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.8;padding-bottom:60px}
+.wrap{max-width:720px;margin:0 auto;padding:24px 18px}
+header{text-align:center;padding:28px 0 8px}
+header .date{font-size:13px;color:#8b949e;letter-spacing:2px}
+header h1{font-size:26px;font-weight:700;margin-top:6px}
+.tabs{display:flex;gap:10px;margin:24px 0 0;justify-content:center}
+.tabs button{flex:1;max-width:220px;padding:12px 0;border:none;border-radius:14px;font-size:15px;font-weight:600;cursor:pointer;background:#161b22;color:#8b949e;transition:.2s}
+.tabs button.active.busi{background:linear-gradient(135deg,#1f6feb,#388bfd);color:#fff}
+.tabs button.active.diary{background:linear-gradient(135deg,#db4b8a,#f778ba);color:#fff}
+.panel{display:none;background:#161b22;border-radius:16px;padding:26px 22px;margin-top:18px;box-shadow:0 4px 24px rgba(0,0,0,.35)}
+.panel.show{display:block}
+.panel.busi{border-top:3px solid #388bfd}
+.panel.diary{border-top:3px solid #f778ba}
+.panel h2{font-size:17px;margin-bottom:14px}
+.panel.busi h2{color:#79c0ff}
+.panel.diary h2{color:#ff9bce}
+.panel p{margin-bottom:1em;font-size:15px;color:#c9d1d9;text-align:justify}
+.foot{text-align:center;color:#484f58;font-size:12px;margin-top:36px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="date">2026年11月13日 · 星期五</div>
+<h1>每日复盘</h1>
+</header>
+<div class="tabs">
+<button id="b-busi" class="active busi" onclick="sw('busi')">📊 商业复盘版</button>
+<button id="b-diary" onclick="sw('diary')">📝 日记版</button>
+</div>
+<div id="p-busi" class="panel busi show">
+<h2>一句话定调</h2>
+<p><b>今天几乎所有讨论都指向同一件事，AI 项目正在从能跑起来走到要证明值得做，卡住大家的都是验证这条线。</b></p>
+<h2>正文</h2>
+<p>上午的月度经营复盘把数据摊开，客单价各渠道各空间同比环比都好，有人当面问高层怎么看待这个成绩，另一个声音补了一句，大促达成一个都没有。这两个数字放在一起才有信息量。客单价起来有明确来路，季度货盘价整体上提，沙发和餐往上的账单抬得很明显。往年大促新媒体一上达播就把价格带往下打，今年这条投放节奏变了，价格带没有被砸下去。但达成全线没完成说明量没跟上，海外 B2B 的缺口在同一张表上，台湾因库存问题出现重大缺口，澳洲和智利的开店节奏落后于年初预测。提价拉起了客单，量的引擎没有同步点火，这是十月真正的结构性问题。</p>
+<p>下午三场会从不同侧面撞到同一个词。AI 视频项目复盘时有人直接指出，对方先做再验证，而且验证全是单点的，上来就讲十年后的视频工厂，三年两年的路径没有，老板接不住。数字员工界面的评审卡在全局设置和会话级设置的对应关系上，两边都改会不会打架，这个问题没有答案立项就立不稳。电商 AI 数据接入聊得更实，BI 数据只接了部分明细层和汇总层，每加一张表都要先盘点处理逻辑、和 IT 对齐、再排期，整条链路太长。三件事的共同点在于，单点 demo 都已经做出来了，缺的是能说服人掏资源的价值验证，验证方法论不解决，人力就进不去。</p>
+<p>对外这条线今天给了两个正向信号。21 财经报道了林氏放我家，发到群里配的话是大家的努力有被看见。虎嗅的合作也在推进，正常商业报价几十万，这次性质偏资源互换，双十一刚结束，今年大促报道本来就安排得弱，这个时间点补一个有分量的声音值得做。另外三龙湾 AI 分享会定在下周五下午，是区经促点名的任务，有现成材料的先交，下周初要收敛。</p>
+<p>项目收口在按节奏走，库存刊登已提交结项流程，BPS 财务闭环和乐歌海外仓还在等审核，已经催了一句要新的提交日期。还有个插曲值得一提，年初让 AI 出的小林 AI 界面和 IDC 材料，几个月后项目真的获了奖，翻出旧材料重新问它，当时被当成吹的东西现在站住了。这个插曲其实是今天主题的反面印证，AI 产出的东西要变成组织认可的成绩，中间隔的还是验证和落地，今天所有会都在补这一段。</p>
+</div>
+<div id="p-diary" class="panel diary">
+<h2>一个感受句</h2>
+<p><b>漂亮数字和不漂亮数字同框，比单独任何一个都诚实。</b></p>
+<h2>正文</h2>
+<p>早上月度复盘会上，有人当着大家的面问，客单价这么好怎么看。我听着下一句就来了，大促达成一个都没有。这两句话挨在一起挺有意思，价格提上去了，量没跟上。货盘的事我认，季度调价早就定了，沙发和餐的账单抬起来是意料之中。真正扎人的是渠道那边，往年大促一上达播，价格带就被砸下去，今年没砸，客单价才这么好看。可达成全线没完成，海外那边台湾的库存、澳洲智利开店慢半拍，都在说同一件事。散会的时候我想，漂亮数字和不漂亮数字同框，比单独任何一个都诚实。</p>
+<p>下午连着三场会，全在替别人把关。视频项目复盘，我先说了感觉，对方先做再验证，验证还全是单点的。旁边有人接得更狠，说对方上来就讲十年后的视频工厂，三年两年怎么走一个字没有，老板怎么接。数字员工的界面评审更磨人，全局设置和会话设置怎么对应，改这边要不要动那边，聊了半天没结论。我后来想，这些项目单点都跑得挺欢，一到要立项、要人力，就全卡在说不清价值上。验证这两个字，今天被不同的人用不同的方式念了一整天。</p>
+<p>中间还出了一出小喜剧。约了健新同步事情，他日程冲突没来，我直接杀进会议室，发现我自己也没日程。在 423 等了一会，跟同事来回问你去不去，那句我只是想跟健新同步一下这个事情发出去的时候，我自己都笑了。开会这件事，有时候全靠一个想说话的念头撑着。</p>
+<p>晚上消息炸了一下。21 财经报道了林氏放我家，发群里配的话是大家的努力有被看见。虎嗅那边也在聊，正常报价几十万的合作，这次性质很划算，双十一刚过，今年大促的声音本来就弱，正好补上。还有个更好笑的事，年初让 AI 编的小林 AI 界面和 IDC 材料，几个月后项目真获了奖，水滴翻出旧材料重新问它，说编了编居然就获奖了。我盯着这条消息想了一会，AI 写的东西当时没人当真，后来站住了，靠的还是真做出来了。做出来的东西什么时候才算数，今天上午的数据、下午的会、晚上的新闻，都在回答这一句。</p>
+</div>
+<div class="foot">Hermes Agent · 每日复盘 · 2026-11-13</div>
+</div>
+<script>
+function sw(t){
+['busi','diary'].forEach(k=>{
+document.getElementById('p-'+k).classList.toggle('show',k===t);
+document.getElementById('b-'+k).classList.toggle('active',k===t);
+});
+}
+</script>
+</body>
+</html>
