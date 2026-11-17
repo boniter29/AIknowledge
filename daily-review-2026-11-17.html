@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>每日复盘 2026-11-17 · 周二</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+ --bg:#0a0e17; --card:#131926; --card2:#0f1521; --line:#232c3d;
+ --txt:#e8ecf4; --dim:#94a0b4; --blue:#4f6ef7; --pink:#f472b6;
+}
+body{background:var(--bg);color:var(--txt);
+ font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+ line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased;
+ padding:0 0 56px}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px}
+header{padding:34px 0 20px}
+.kicker{font-size:12px;letter-spacing:.18em;color:var(--dim);text-transform:uppercase}
+h1{font-size:23px;font-weight:700;margin:10px 0 6px;letter-spacing:-.01em}
+.sub{color:var(--dim);font-size:13.5px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 0 6px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 8px;text-align:center}
+.stat b{display:block;font-size:17px;font-weight:700;letter-spacing:-.02em}
+.stat span{font-size:11px;color:var(--dim);letter-spacing:.04em}
+.stat:nth-child(1) b{color:var(--blue)}
+.stat:nth-child(2) b{color:#7c8cf8}
+.stat:nth-child(3) b{color:var(--pink)}
+.stat:nth-child(4) b{color:#e9b45c}
+.tabs{display:flex;gap:8px;margin:22px 0 18px;background:var(--card2);
+ border:1px solid var(--line);border-radius:14px;padding:5px}
+.tab{flex:1;padding:10px 6px;text-align:center;font-size:14px;border-radius:10px;
+ color:var(--dim);cursor:pointer;border:none;background:transparent;
+ font-family:inherit;transition:.18s}
+.tab.on{color:#fff;background:linear-gradient(135deg,#2b3552,#1d2540);font-weight:600}
+body[data-mode="per"] .tab.on{background:linear-gradient(135deg,#3d2134,#2a1725)}
+.panel{display:none;animation:fade .25s ease}
+.panel.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+article p{margin:0 0 17px;letter-spacing:.005em}
+article strong{color:#fff;font-weight:700}
+.biz article strong{color:#dbe2ff}
+.biz article p:first-child{background:linear-gradient(135deg,rgba(79,110,247,.16),rgba(79,110,247,.05));
+ border-left:3px solid var(--blue);border-radius:0 12px 12px 0;padding:16px 16px;
+ font-size:16.5px;line-height:1.75}
+.per article p:first-child{color:#f6dfe9}
+.per article p:first-child strong{color:#fff}
+article blockquote{border-left:3px solid var(--pink);padding:6px 0 6px 14px;margin:0 0 17px;
+ color:#e9c9d8;font-style:normal}
+hr{border:none;border-top:1px solid var(--line);margin:26px 0}
+.tag{display:inline-block;font-size:11px;letter-spacing:.1em;color:var(--dim);
+ border:1px solid var(--line);border-radius:999px;padding:3px 10px;margin-bottom:14px}
+footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
+ color:#6b7789;font-size:12px;line-height:1.9;text-align:center}
+@media(max-width:400px){.stats{grid-template-columns:repeat(2,1fr)}h1{font-size:20px}}
+</style>
+</head>
+<body data-mode="biz">
+<div class="wrap">
+<header>
+  <div class="kicker">Daily Review</div>
+  <h1>每日复盘 · 2026年11月17日 · 周二</h1>
+  <div class="sub">两场会 105 分钟 · 41 个节点 · 9 个杠杆</div>
+  <div class="stats">
+    <div class="stat"><b>2</b><span>场会议</span></div>
+    <div class="stat"><b>105'</b><span>总时长</span></div>
+    <div class="stat"><b>169</b><span>发出消息</span></div>
+    <div class="stat"><b>9</b><span>杠杆专项</span></div>
+  </div>
+</header>
+
+<div class="tabs">
+  <button class="tab on" data-target="biz">📊 商业复盘</button>
+  <button class="tab" data-target="per">📝 日记</button>
+</div>
+
+<section class="panel biz on" id="biz">
+  <span class="tag">商业复盘版</span>
+  <article><p><strong>今天真正定下来的不是两个项目，是AI项目在这家公司里怎么走完一段路。</strong></p>
+<p>第一个会 65 分钟，名义是「AI视觉与睡眠项目协同及立项」。开到一半我明白，它要补的是一笔旧账，视觉和睡眠这两个板块前期一直没有人以业务产品经理的身份进来。有人解释了原因，这两块业务流程承载在供应链下面，之前没有太多系统流程。这个解释比「没人重视」精确得多。没有系统流程，就没有对应的产品经理岗位，立项时自然没有人在场。</p>
+<p>机制今天写清楚了。每个AI项目必须有业务产品经理介入，分两段走，第一段由AI产品经理验证落地可行性，第二段业务产品经理进来。会上有人当场纠正了一个用词，「帮助」这个词不太合理，本质是双方协同。</p>
+<p>这个词值得记，因为前半年我们的工作方式就是帮助。做工具交给业务，业务说有用，然后项目停在那里。</p>
+<p>停在哪里，另一个例子给了答案。小林生影是我们给空间摄影部做的AI视频批量生成工具，做完有人用，提效也确实存在，但没有达到他们最终想要的结果。复盘的原因写得很直白，我们停留在业务表面的信息上，拿AI能力去交付，没有进入业务的核心环节。于是有了后来的驻场，我和米酒还有十几个人进到视觉链路里，把两个部门的上下游走通，产品给策划下需求，策划转成主图和详情长描述的策划输出，再分发给空间摄影部拍摄剪辑，产完回到策划和电商运营双审。</p>
+<p>这张全景图还是太粗，定不出该给哪个环节赋能。所以又拉两边业务做半天封闭会，用流程要素全景表把每个节点摊开，输入是什么、输出是什么、标准是什么、SOP是什么、现在用什么工具、耗时多少、几个人、频次多高，纵轴再叠价值评估，覆盖多广、能省多少。</p>
+<p>摊开的结果是41个接入节点。业务方从中提炼29个专项，用一张评分表逐项打分，业务重点强度、量级频次、效率、成本、质量稳定性、资产能否复用、全链路影响、技术可行性、数据资产、风险系数，最后剩下9个杠杆。本月月会圈定1.0立项范围，摄影资源自动化排单、资源线上化调度、买家秀批量生成、CAD信息转产品尺寸图、批量自动化后期处理、成本与渠道数据仪表盘、AI产品图与短视频创作，加上昨天和米酒商量的小林生影AIGC公共能力建设。总目标三条，AI内容占比提升，人工介入度降低，效率与成本下降。</p>
+<p>这套流程比项目本身值钱。它把「值不值得做」从感觉变成了分值，把「给谁赋能」从全景图变成了节点级清单。上周的判断是验证成了时代命题，今天的进度是验证终于有了工具。</p>
+<p>第二场会 39 分钟，接着昨天的两个词。昨天我提数据驱动迭代和自进化，今天先被追问自进化到底指什么。拆开的第一层很朴素，给Agent标注反馈，标注自动存成评测记录，再由评测记录自动生成新版本，这一层只依赖Agent自身，背后配Codex或更强的模型。对方听完总结成一句，喂新数据，点一下，它自己调整。听着轻，落地马上撞墙。有人提醒云校那边代码在云校上面，真要打通不一定动得了。自进化撞到的第一道墙是权限。</p>
+<p>第三件事在聊天里。今天我这边记下169条消息，招聘占了一大半，评价标准事实上换了一套。一个候选人的加分项是上推特学AI、用Claude Code、开了Codex Pro，我给的判断是花真金白银为自己的认知买单，有含金量。另一个专升本的训练营同学，我判断他的AI应用和前沿跟进不比团队差，结论是不拘一格降人才。同一批讨论里另一句话是期望薪资涨幅太高、性价比不高。新标准挑出来的人，旧薪酬体系接不住，这是接下来三个月最现实的摩擦。</p>
+<p>代价也在数字里。今天一天烧掉Codex 20x额度约四成，Grok一成半。</p>
+<p>接下来三周看两件事。AI视觉1.0能不能在月会节奏里把资源真正锁住，而不是又变成一次demo陈列。招聘能不能在现有薪酬框架下签下一两个「付费用户型」候选人。</p></article>
+</section>
+
+<section class="panel per" id="per">
+  <span class="tag">日记版</span>
+  <article><p>会上有个人说，「帮助」这个词用得不太合理。</p>
+<p>他说这句话的时候语气很平，像在改一个错别字。我把它记下来了。前半年我们干活的方式就是这两个字，做工具，交给业务，业务说有用。今天这两个字被当场换掉，换成了协同。换词的人补了一句理由，很多业务板块要做AI，底下的诉求其实不在AI上面，所以谈不上谁帮谁。</p>
+<p>这个词换掉之后，会开得顺了很多。视觉的同事开始讲他们前期怎么进去的。一开始接的是空间摄影部的需求，做小林生影，批量生成AI视频。做完了，有人用，也确实快了一点，但没有达到他们最终想要的结果。他说这句话的时候没有绕，我听着有点沉。工具本身没出问题，我们停在业务表面的信息上。</p>
+<p>后来他们十几个人去驻场，把两个部门的活从头到尾走了一遍。产品给需求，策划转成主图视频和详情长描述，再分给摄影部拍图拍视频剪片，产完回策划和电商运营审。这张图还是太粗，定不出该往哪个环节使劲，于是一天封闭会，把每个环节摊在表上，输入什么，输出什么，标准是什么，SOP是什么，现在用什么工具，耗时多少，几个人，多久做一次。再叠一层价值，覆盖多广，能省多少。</p>
+<p>最后数出来41个节点。</p>
+<p>业务那边从41个里挑出29个专项，用评分表一项项打分，打完剩9个。9个里再圈出这次立项要做的范围，7个，加上昨天和米酒商量的小林生影公共能力。</p>
+<p>散会前有个细节我很喜欢。他们说这张流程表以后有新人入职，直接发给新人看。这话不大，可这是今天最实的一句评价。我们做的第一件被留下来的东西，是一张他们自己能用的表。</p>
+<p>下午换了个房间，也换了个题。昨天我提了两个词，数据驱动和自进化。今天对方先问，自进化你具体指什么。我讲了Codex那个税务智能体的例子，讲了Data Agent那三篇文章。讲完自己心里也有点虚，因为我知道这是个思路，不是方案。后来我把它拆开。第一层很简单，给Agent标注意见，标注自动存成评测记录，评测记录再自动生成一版新东西。这一层不用等别人，Agent自己就能跑。对方听完说，就是喂新数据，点一下，它自己调。</p>
+<p>听着挺轻的。然后有人提了一句云校，代码在云校上面，真要打通不一定动得了。整件事就被按回去了。我们想改的地方，常常不在我们能改的地方。</p>
+<p>中午和下午的大部分时间在翻简历。今天翻的量比平时大，汪嘉璐璐、陈家慧、田原豪、杨丽华、熊冰蕾、承少敏、张妍，还有几个做AI Agent的男生。判断标准今天悄悄换了一套。一个候选人上推特学AI，用Claude Code，还开了Codex Pro，我给的评价是花真金白银为自己的认知买单，有含金量。一个专升本的训练营同学，我跟人说他AI应用和前沿跟进不比我们差，写完这句在对话框里看了两秒，又补了一句不拘一格降人才。熊冰蕾聊过了，水平一般，不推进。另有一个候选人期望薪资涨得很高，我算了一下，性价比不高。</p>
+<p>这几句话放在一起不太好看。一边说不拘一格，一边在算性价比。可这两句都是真心的。我想招的是自己掏钱用过AI的人，公司那套薪酬阶梯量化不了他自己付了多少钱学AI这件事。</p>
+<p>下午还改了容错视频提纲，第五版，一分钟。晚上又发了团队周报洞察，也是第五版，一张长图，八张模块图，一条两倍速的视频，一份HTML。两个第五版凑在同一天，纯属巧合。改到第五版的时候，我已经分不清是我在改它，还是它在改我。每一版都以为自己讲清楚了，发给别人一看还是要解释。</p>
+<p>今天一天烧掉Codex 20x的四成额度，Grok一成半。这个数字我记得很清，它比任何一句「AI很重要」都实。</p>
+<p>傍晚日程上还排着分享会，米酒讲Agent里怎么加决策模型，提纲是我给的，视频也是我做的。我跟他说你自己准备一下，假装没有我的视频。</p>
+<p>明天上午的采访材料还差两条成片。提纲先放着，睡一觉再想。</p></article>
+</section>
+
+<footer>
+  数据来源 · 钉钉 AI 听记 2 场（AI视觉与睡眠项目协同及立项 / 林氏小龙虾数据迭代与立项推进）· 当日聊天记录 169 条<br>
+  每日复盘 Pro · 2026-11-17
+</footer>
+</div>
+<script>
+var tabs=document.querySelectorAll('.tab');
+tabs.forEach(function(t){
+  t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.classList.remove('on')});
+    document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('on')});
+    t.classList.add('on');
+    document.getElementById(t.dataset.target).classList.add('on');
+    document.body.dataset.mode=t.dataset.target;
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
