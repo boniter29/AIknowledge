@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日复盘 2026-11-18</title>
+<style>
+ *{box-sizing:border-box;margin:0;padding:0}
+ body{background:#0d1117;color:#e6edf3;font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+ line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased}
+ .wrap{max-width:720px;margin:0 auto;padding:28px 18px 70px}
+ .date{font-size:13px;letter-spacing:.14em;color:#8b949e;text-transform:uppercase}
+ h1{font-size:26px;font-weight:700;margin:8px 0 18px;letter-spacing:-.5px}
+ .meta{display:flex;gap:18px;flex-wrap:wrap;padding:14px 0 20px;border-top:1px solid #21262d;border-bottom:1px solid #21262d;margin-bottom:22px}
+ .meta div{font-size:12px;color:#8b949e}
+ .meta b{display:block;font-size:17px;color:#e6edf3;font-weight:600;margin-top:2px}
+ .tabs{display:flex;gap:8px;background:#161b22;padding:5px;border-radius:13px;margin-bottom:26px}
+ .tabs button{flex:1;padding:11px 8px;border:0;border-radius:9px;background:transparent;color:#8b949e;
+ font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:.2s}
+ .tabs button.on.b{background:linear-gradient(135deg,#1f6feb,#388bfd);color:#fff}
+ .tabs button.on.d{background:linear-gradient(135deg,#b3468a,#db61a2);color:#fff}
+ section{display:none} section.on{display:block;animation:fade .25s ease}
+ @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+ p{margin:0 0 18px;color:#c9d1d9;text-align:justify}
+ .biz .lede{background:linear-gradient(135deg,rgba(31,111,235,.16),rgba(56,139,253,.06));
+ border-left:3px solid #388bfd;padding:16px 18px;border-radius:0 10px 10px 0;color:#e6edf3;font-weight:600;font-size:16.5px;line-height:1.8}
+ .dia p:first-child{color:#f0d9e6;font-size:19px;font-weight:600;line-height:1.7;margin-bottom:24px;
+ padding-bottom:18px;border-bottom:1px solid #30363d}
+ .dia p{color:#d8cfd5}
+ .foot{margin-top:44px;padding-top:18px;border-top:1px solid #21262d;font-size:12px;color:#6e7681;line-height:1.9}
+ @media(max-width:480px){h1{font-size:22px} body{font-size:15.4px} .meta{gap:12px}}
+</style></head><body><div class="wrap">
+ <div class="date">2026 · 11 · 18 &nbsp;周三</div>
+ <h1>每日复盘</h1>
+ <div class="meta">
+  <div>会议<b>5 场</b></div><div>会议时长<b>4.5 小时</b></div><div>消息<b>157 条</b></div><div>核心<b>评测 · 归属</b></div>
+ </div>
+ <div class="tabs">
+  <button class="b on" onclick="sw(0)">商业复盘版</button>
+  <button class="d" onclick="sw(1)">日记版</button>
+ </div>
+ <section class="biz on"><p class="lede">**今天五场会讲的是同一件事，判断正在从人手里被拆出来，变成可以被定义、被复用、被嵌进流程的零件；而组织这边还在用「做了多少、快不快」评价人。**</p>
+<p>上午我先讲 LangSmith。提示词只有一句话，让它给我做一个可以点的 demo，引导我跑几个核心场景，需要的话自己装一下。三十三分钟后我把它点了一遍，调研就结束了。有人当场说，如果换他去调研，会干一天，因为他会把事情想得比较复杂。他讲得没错，只是他默认了一件事，觉得这个工具的所有东西都重要。这一天被压掉的成本，是「我不知道这东西是什么」的成本。压下来以后剩下的问题只剩一个，你怎么知道自己做得对不对。</p>
+<p>下午浮云那场正好接在这个问题上。他的工作台更像实验室，素材中心、标签、推广跑、评测用例、跑实验，一套把「好不好」变成数据的地方。他说标签得先看完一千条样本才抽象得出来，我接了一句，标签分得太细看不出问题在哪，分得太粗也看不出。这话背后是 EDD 那篇文章里最硬的一条，规范和判据要写进 PRD，写在动手之前。评测的位置在需求前面，它本身就是需求的一部分。</p>
+<p>再往前一步是决策模型那场。把一次「这是哪类请求、该不该调这个工具」的判断，交给一个成本几乎可以忽略的小模型，嵌在 agent loop 里。有人说他的 harness 单次回复要六到七分钟，接进去之后压到两三分钟。这一层的意思更彻底，判断不但能被定义，还能被固化、被摊薄、被塞进每一次循环。三场会连起来是一条线，先定义什么叫对，再把它做成数据集，最后把「判」这个动作本身做成零件。</p>
+<p>缺的最后一块在平台。散会前定的事都朝这个方向，浮云和文心一起做 demo，评测后面要走平台化能力。但平台化真正卡住的地方在责任归属，谁对结果负责这件事还没人说清楚。同一天，我在另一场十分钟的会里被人问，你有想过你的部门要怎么调整吗。营销的线上和线下要合并，海外数字化单独出来，不和这两个合，但放在哪里没定，还得去跟新哥沟通。一个上午还在跟外部评审解释这个部门为什么成立的人，下午发现自己不知道它明天挂在谁的下面。</p>
+<p>再往深一层，绩效。有人让我看现在产品经理的绩效方案，偏数量和时效，质量没有要求，前面几个客观指标大家都能拿到一样的结果，牵引性已经失效了。我部门的做法是另一套，标准提前跟人讲清楚，看的是 AI 落地推进、协同、以及相比上个月有没有进步。问题是全公司还在用旧尺子，而评测这件事恰好证明了旧尺子量不出来。当质量能被数据集判出来，工作量就不再是质量的证据。</p>
+<p>还有一条暗线。今天我在改《AI 工具使用与安全管理办法》，7.1 节按内部工具、外部工具和共同要求重新组织，管理原则、公共 AI 的定义、训练和分享开关都写进正文，减少翻附件；同时对外的《林氏家居的 AI 落地实践》PPT 也在收尾，五个方向加小林 AI 放我家，配上驻场、AI 大赛和培训。一个对内立规矩，一个对外立叙事。可海外那边问数据库 MCP 的时候，两样都撞上硬约束，SSO 没开放，冷备节点得改成只读从库，一个月多 630.72 元，MCP 的审计和控制还没有方案。能力外溢的速度比治理快半步，这半步就是接下来要补的活。</p></section>
+ <section class="dia"><p>「你有想过你的部门要怎么调整吗。」</p>
+<p>这句话是下午快收工的时候听到的。会议室不大，还有十分钟要去下一个场。她先问我，建新有和你说过架构调整的事情吗。我说没有，不知道。她说营销那边线上和线下要合并，海外数字化会单独出来，不和这两个一起合，但具体放在哪里没定，可能还得你去跟他沟通一下。</p>
+<p>我愣了一下，问，我要去跟他沟通这个事情吗。她把话头递回来，你有想过你的部门要怎么调整吗。我说，没有啊，你刚跟我说。</p>
+<p>上午不是这个调子。早上有一场政府质量奖的访谈，十个人围坐，从自我介绍开始，每人报姓名、岗位、入职时间。轮到我说，我叫刘扬帆，信息与数字化中心 AI 产品创新部的主管，去年十月加入林氏，入职时的岗位在海外数字化做产品经理，做的事情其实一样。评审的老师说，您这个是比较新的一个，然后问我，您知道为什么要成立这个部门吗。</p>
+<p>我答得挺顺。年度战略规划、回归用户体验、千方大店、整家大家居，还有我们要往经营型 IT 走，AI 作为一种新的生产力技术能改善经营，这个部门承接的是从上往下的战略。</p>
+<p>同一天里，上午在解释这个部门为什么存在，下午发现自己不知道它明天挂在谁下面。两件事隔了六七个小时，中间我还讲了一场自己挺来劲的分享。</p>
+<p>分享里最得意的是那个三十三分钟。提示词就一句话，让它给我做一个可以点的 demo，引导我跑几个核心场景。它做完了我点了一遍，每个页面都点开看过，调研就结束了。有人当场说，换他去调研会干一天，因为他会把事情想得比较复杂。我跟他掰了一下，你可能觉得它所有的东西都重要，但要看你的目的是什么。这话说出来的时候我是笃定的，现在回头看，我那份笃定全部来自我知道自己要什么。</p>
+<p>中间还放了几个视频对比。小王子的星球可以走，可以找到那棵小树苗，细节有点糙，那间学校的三维场景是代码直出的。有个键盘类的设备，我想知道它到底解决什么问题，就让 AI 做了个介绍片。还有个修图剪片用的控制器，本来想给我对象挑礼物，我不懂那些参数，干脆让它做成片子给我讲。放到第三支的时候，屋里有人说，现在平台上带「叮」一声的，背景音乐都是同一个老师做的。我说要跟别人做出区别，就得指定乐器。</p>
+<p>评测那场有两个细节我记住了。浮云被要求投屏，有人说你这样太抽象了，你拿你的过程，哪怕拿你的 code 也行。后来讲标签，他说得把一千条样本都看完才能抽象出维度。我插了一句，标签分得太细看不出问题在哪，分得太粗也看不出。屋里安静了一两秒，那种安静是大家在各自对照自己手上的数据集。</p>
+<p>微信这边是另一套事。有人拉我们庆功，说那位拿了奖金。我回了一句，他拿了奖金跟我们有啥关系，要拉我们庆功。又补了一句，感觉有种无功受禄的感觉。工资条里有一部分走银行实发，一部分是现金，我问了小林 AI，它解释了一遍，我还是没理解那笔现金是怎么来的、怎么发的。</p>
+<p>回到那句「没有啊，你刚跟我说」。这句是今天唯一一句我没有准备过的回答。别的时候我都在讲方法、讲边界、讲怎么把一件事拆成能被交付的东西。到这一句，我手上什么都没有。</p></section>
+ <div class="foot">数据源 · 钉钉 AI 听记 5 场 + 聊天记录 157 条<br>生成 · Hermes 每日复盘 v2 · 2026-11-18 20:30</div>
+</div>
+<script>
+function sw(i){
+ var bs=document.querySelectorAll('.tabs button'), ss=document.querySelectorAll('section');
+ bs.forEach(function(b,j){b.classList.toggle('on',j===i)});
+ ss.forEach(function(s,j){s.classList.toggle('on',j===i)});
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+</script></body></html>
