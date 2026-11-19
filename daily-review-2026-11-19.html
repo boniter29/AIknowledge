@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日复盘 2026-11-19 周四</title>
+<style>
+:root{--bg:#0d1017;--card:#161a24;--line:#252b38;--txt:#e8ecf4;--mute:#8d97a8;--blue:#4f6ef7;--pink:#f472b6;}
+*{box-sizing:border-box;}
+body{margin:0;background:radial-gradient(circle at 20% 0%,#151b2b 0%,#0d1017 45%);color:var(--txt);
+font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:780px;margin:0 auto;padding:34px 18px 70px;}
+.kicker{font-size:12px;letter-spacing:3px;color:var(--mute);}
+h1{font-size:26px;line-height:1.35;margin:10px 0 6px;font-weight:700;letter-spacing:.5px;}
+.date{color:var(--mute);font-size:14px;margin-bottom:22px;}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 26px;}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 8px;text-align:center;}
+.stat b{display:block;font-size:18px;font-weight:700;}
+.stat span{font-size:11px;color:var(--mute);}
+.tabs{display:flex;gap:8px;margin-bottom:20px;}
+.tab{flex:1;padding:11px 8px;text-align:center;border-radius:11px;background:var(--card);
+border:1px solid var(--line);color:var(--mute);font-size:14px;cursor:pointer;transition:.2s;}
+.tab.on{color:#fff;border-color:transparent;}
+#tb.on{background:linear-gradient(135deg,#4f6ef7,#6f8bff);}
+#td.on{background:linear-gradient(135deg,#f472b6,#fb8ac8);}
+article{display:none;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 20px;}
+article.on{display:block;}
+#biz{border-top:3px solid var(--blue);}
+#diary{border-top:3px solid var(--pink);}
+p{margin:0 0 17px;text-align:justify;}
+p.lead{font-size:17.5px;line-height:1.75;color:#fff;}
+p.lead strong{font-weight:700;color:#fff;}
+strong{color:#fff;font-weight:600;}
+#biz strong{color:#cdd8ff;}
+#diary strong{color:#ffd6ea;}
+blockquote{margin:0 0 18px;padding:14px 16px;border-left:3px solid var(--pink);
+background:rgba(244,114,182,.08);border-radius:0 10px 10px 0;font-size:16.5px;color:#ffe4f1;}
+footer{margin-top:26px;color:var(--mute);font-size:12px;text-align:center;line-height:1.9;}
+@media(max-width:420px){.stats{grid-template-columns:repeat(2,1fr);}h1{font-size:22px;}body{font-size:15.5px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">DAILY REVIEW</div>
+  <h1>规则刚写完，需求就来敲门</h1>
+  <div class="date">2026 年 11 月 19 日 · 周四 · 两场会 33.6 分钟</div>
+
+  <div class="stats">
+    <div class="stat"><b>2</b><span>AI 听记</span></div>
+    <div class="stat"><b>33.6</b><span>会议分钟</span></div>
+    <div class="stat"><b>144</b><span>消息</span></div>
+    <div class="stat"><b>12</b><span>@我</span></div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab on" id="tb" onclick="sw('b')">📊 商业复盘版</div>
+    <div class="tab" id="td" onclick="sw('d')">📝 日记版</div>
+  </div>
+
+  <article id="biz" class="on"><p class="lead"><strong>今天被摆到桌上的只有一件事，AI 做出来的东西由谁来认账。</strong></p>
+<p>上午那场会二十六分钟，五个人，改的是一份 AI 工具使用与安全管理办法的第七点一条。会上的争点在条文，更实在的问题是一个普通员工读到这句话会不会停下来。有人直说站在普通用户角度根本不知道这条在讲什么，也有人提议极简处理，整条挂到信息安全的框架下面，只留服务说明、防泄漏、公司管理条例。我坚持条目和正文要分开，条目单独列出来，正文再写细的。规则写给谁看，决定它会不会被执行。写给法务看的条款，员工读三行就跳过去了。</p>
+<p>下午有一场更短的会，七分钟，业务来问能不能重启竞品库的爬取。微信小程序那条路的风险是封号，登录才涉及，公司 IP 会被封，解法是买 IP 池，据说不太贵。淘宝那条路几乎没得谈，他们一定要登录，所以只能手动导出。魔镜每月十号发一个链接，链接可以下。结论很干脆，淘宝直接爬不可行，微信端还得确认技术细节。这场会真正的信息在时间上，昨天刚写进管理办法的那句话是现阶段不得用 AI 或自动化程序在天猫、淘宝、京东、小红书和公司内部业务系统上全自动批量抓取数据，今天就有真实需求来敲这条线。规则写完只是开始，它的边界是在一次次具体需求里被撞出来的。要设计的是一套能走通的替代路径，手动导出、月度链接、IP 池的成本，这些才是业务听得懂也做得到的东西。</p>
+<p>敏感词那件事我在群里说了另一层。用代码实现拦截肯定不行，A 社和 O 社都在模型层面做安全限制。我给的判断是我只限制给他看什么，不限制他怎么问，可以发言，不给权限就行。治理的落点在权限和数据范围上，话术拦不住。海外 B2C 的审计要求是同一个道理，那块业务上半年已经卖给睿途邦，现在签的是运维合同，要查订单和客户信息，得先说明事项和范围，先看合同依据。边界不清楚的时候，配合得越快，越容易踩到客户数据权限。</p>
+<p><strong>真正沉的一块在健新那串问题上。</strong> 上周他找我聊过一次，这两天我一直在跟不同的人复述。AI 视觉加了三十多个人，一年四五百万。他对做这些事没有意见，问的是定性。算提效动作，就不该加人，而且要有出成效的计划。算建能力，那为什么要建、建多久、什么时候能力能发挥作用，都得讲清楚。陈超的思路一直是建能力，建完之后怎么走，没有说法。Boss 那边认可事情要做，也提了编制。这个矛盾很具体，单点上到处是成绩，视频产量提升、某环节成本下降、提效多少个百分点，翻到专项的账上，九个专项没有一个算完成。</p>
+<p>验收的口径今天也露了半张脸。组织绩效里有一条目标是十二月底前达成 AI 标杆案例，定义写着四个条件，真实业务场景、明确的 AI 介入动作、可量化的实际落地结果、业务方认可，或者回收满意度问卷拿到足够好评也算通过。有人问我，AI 视觉完成前期全流程梳理、业务对齐、部分专项的可行性验证、完成立项，算不算其中一个。这个问题问得很准，它说明大家都在找那把尺子。</p>
+<p><strong>尺子的地基还没打完。</strong> 私聊里我把评测拆成四步讲给人听，构造数据集、拆分评测集、执行评测、标注答案。执行这步目前基本只能手工，后面要靠评测平台。数据集能借知识库构造，可知识库本身有问题，这样做出来的评测集只能解决一部分问题。标注可以用更强的模型，知识库解决不了的那部分只能人工。这段和前天摊出来的东西接得上。十一月十七日把四十一个接入节点摊成二十九个专项、九个杠杆，回答的是做什么；昨天讲的是怎么算对；今天撞上的是谁来认这个数、按什么口径认。三件事其实是一条链上的三段，缺哪一段，前面两段都白做。</p>
+<p>接下来三周看三件事。管理办法评审完，能不能长出可执行的替代路径，禁令容易写，路径难写。AI 视觉的定性之争，能不能落到验收标准上，别落在工作量上。那个标杆案例的名额最后落在谁头上，落定之后，另外八个专项怎么解释自己的位置。</p></article>
+  <article id="diary"><blockquote>「有点气，白费了一天。」</blockquote>
+<p>这句话是我下午打进对话框的。发出去以后自己也觉得好笑，会都开得挺顺，条款改了，别人的质疑也一条条复述过去了，偏偏那件最想办成的事，从上午卡到天黑。对方回我一句已经在解决了。我说还没用上。隔了一个多小时我又补了一句，折腾好久了。再后来是，好累啊我。</p>
+<p>早上第一条消息和工作没关系。手机提醒我今天有采访，出门穿文化衫，照一眼镜子，工牌带上。我照做了。那件文化衫昨晚挂在椅背上忘了收，领口有点皱。到公司之后这件事就彻底被忘掉，直到现在坐下来写东西才想起来。</p>
+<p>上午那场会二十六分钟，五个人，改的是一份 AI 工具使用与安全管理办法的第七点一条。这种会最费神的地方在于每个字都得替别人想一遍。有人说站在普通用户的角度，这一条根本不知道在讲什么。也有人说干脆极简处理，整条挂到信息安全的框架下面，只留服务说明、防泄漏、公司管理条例。我说条目和正文分开，条目单独拎出来。说完没有人反对，也没有人当场同意，大家把这句话记下来，往下翻页。</p>
+<p>我后来一直在想这个瞬间。二十六分钟，我们讨论一句话会不会被人看懂。同一个下午，另一场会只开了七分钟，决定了一件重得多的事。业务想重启竞品库的爬取，微信小程序那条要登录，登录就涉及封号，公司 IP 也会被封，解法是买 IP 池，据说不太贵。淘宝那条基本没得谈，一定要登录，所以只能手动导出。魔镜每个月十号发一个链接，链接能直接下。会上还有人提起，去年十一月做过一版，放在我们这边太久没人用，已经下架了。</p>
+<p>昨天我还在改管理办法，写进去一句现阶段不得用 AI 或自动化程序在天猫、淘宝、京东、小红书和公司内部业务系统上全自动批量抓取数据。今天下午业务就来问能不能开这个口子。纸面上的一句话，落到业务里就是成本、替代方案和一堆没人愿意承担的封号风险。</p>
+<p>中间有个插曲让我觉得踏实。群里德彬问敏感词的事，我说用代码实现肯定不行，A 社和 O 社都是在模型层面做安全限制。我只限制给他看什么，不限制他怎么问，可以发言，不给权限就行。这句话把我一整天在想的虚东西落到了一个具体的开关上。</p>
+<p>还有一块更沉。上周健新找我聊过一次，这两天我一直在跟不同的人复述他那几个问题。AI 视觉团队加了三十多个人，一年四五百万。他对做这些事没有意见，他要问的是定性。算提效动作，那就不该加人，还得有出成效的计划。算建能力，那为什么要建，建多久，什么时候能发挥作用。我复述到第五六遍的时候发现，自己也拿不出一句能说完的答案。单点上的成绩我张口就来，视频产量、成本、某个环节快了多少；问到九个专项里哪个算完成，我一个都举不出来。</p>
+<p>下午在私聊里把评测拆成四步讲给人听，构造数据集，拆分评测集，执行评测，标注答案。执行目前只能手工，后面要靠平台。数据集能借知识库构造，可知识库本身有问题，这样做出来的东西只能解决一部分。我一边打字一边觉得这段话清楚得过分，清楚得像已经做完了。</p>
+<p>写完这些已经快九点。一整天都在替别人把话说清楚，条款要让人看懂，评测要让人照着做。轮到我自己那件事，从早上到晚上，我连它卡在哪一步都说不明白。</p>
+<p>下个月把 Codex 换回 5x，这周用得实在太猛。群里我还 @ 了所有人提醒读书分享，月过半了，我自己的书还停在第三十页。明天接着评那份稿子。希望到那时候，那件事已经能用了。</p></article>
+
+  <footer>Hermes 每日复盘 · 数据源 AI 听记 + 钉钉聊天<br>2026-11-19</footer>
+</div>
+<script>
+function sw(k){
+  var b=document.getElementById('biz'),d=document.getElementById('diary');
+  var tb=document.getElementById('tb'),td=document.getElementById('td');
+  if(k==='b'){b.classList.add('on');d.classList.remove('on');tb.classList.add('on');td.classList.remove('on');}
+  else{d.classList.add('on');b.classList.remove('on');td.classList.add('on');tb.classList.remove('on');}
+}
+</script>
+</body>
+</html>
