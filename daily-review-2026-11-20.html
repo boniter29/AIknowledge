@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日复盘 2026-11-20 · 三笔账同一天到期</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#d7dce4;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.85;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:26px 20px 60px}
+.kicker{font-size:12px;letter-spacing:.22em;color:#5c6773;text-transform:uppercase;margin-bottom:12px}
+h1{font-size:25px;line-height:1.4;font-weight:700;color:#f0f3f7;margin-bottom:8px}
+.sub{font-size:13.5px;color:#7d8896;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:28px}
+.cell{background:#161c26;border:1px solid #222b38;border-radius:12px;padding:12px 8px;text-align:center}
+.cell .n{font-size:19px;font-weight:700;color:#e8edf4;font-variant-numeric:tabular-nums}
+.cell .l{font-size:10.5px;color:#69737f;margin-top:3px;letter-spacing:.04em}
+.tabs{display:flex;gap:8px;margin-bottom:24px;position:sticky;top:0;background:#0d1117;padding:10px 0;z-index:5;border-bottom:1px solid #1b222d}
+.tab{flex:1;padding:11px 8px;text-align:center;font-size:14px;border-radius:10px;background:#161c26;color:#8d97a4;border:1px solid #222b38;cursor:pointer;transition:.18s}
+.tab.on[data-t="b"]{background:#4f6ef7;color:#fff;border-color:#4f6ef7;box-shadow:0 4px 16px rgba(79,110,247,.32)}
+.tab.on[data-t="p"]{background:#f472b6;color:#22141c;border-color:#f472b6;box-shadow:0 4px 16px rgba(244,114,182,.28)}
+.panel{display:none}
+.panel.on{display:block}
+p{font-size:16px;margin-bottom:19px;color:#c9d1dc;text-align:justify;letter-spacing:.012em}
+p.lead{font-size:16.5px;color:#eef2f8}
+.panel[data-p="b"] p.lead{background:linear-gradient(90deg,rgba(79,110,247,.14),rgba(79,110,247,0));border-left:3px solid #4f6ef7;padding:12px 0 12px 15px;border-radius:0 8px 8px 0;margin-bottom:24px}
+.panel[data-p="b"] b{color:#aebbff;font-weight:600}
+.panel[data-p="b"] p:last-child{color:#e3e9f5;border-top:1px solid #1e2733;padding-top:19px;margin-top:26px}
+.panel[data-p="p"] p{color:#d8cdd6}
+.panel[data-p="p"] p:first-of-type{font-size:17.5px;color:#f7e8ef;line-height:1.8}
+.panel[data-p="p"] p:last-child{color:#f0dee7;border-top:1px solid #2a2029;padding-top:19px;margin-top:26px}
+.foot{margin-top:36px;padding-top:18px;border-top:1px solid #1b222d;font-size:11.5px;color:#5c6773;line-height:1.75}
+@media(max-width:380px){.grid{grid-template-columns:repeat(2,1fr)}h1{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">Daily Review · 2026.11.20 Fri</div>
+  <h1>三笔账同一天到期</h1>
+  <div class="sub">数据要多少钱，项目什么时候算完，一个人值多少。</div>
+
+  <div class="grid">
+    <div class="cell"><div class="n">6</div><div class="l">场录音</div></div>
+    <div class="cell"><div class="n">244</div><div class="l">分钟</div></div>
+    <div class="cell"><div class="n">197</div><div class="l">条消息</div></div>
+    <div class="cell"><div class="n">18</div><div class="l">次被 @</div></div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab on" data-t="b" onclick="sw('b')">商业复盘</div>
+    <div class="tab" data-t="p" onclick="sw('p')">日记版</div>
+  </div>
+
+  <div class="panel on" data-p="b">
+<p class="lead"><b>今天五个多小时在开会，只有二十三分钟那一场在往前推，其余时间都在给已经做出来的东西定价。</b></p>
+<p>数据要多少钱，项目什么时候算完，一个人值多少。这三件事今天各占一场会，表面分属三个部门，底下是同一个动作，把模糊的东西变成能结算的东西。</p>
+<p>先说数据库。二十二分钟的会，对方从第一句话起就守着一个前提，在不产生任何成本的条件下。他把这句话说了三遍，第三遍还加了一句这个很关键。我给不出去。生产库不能直接拿去大批量查，并发控制不住会出事。要给他查，得单独开接口。要走 MCP，得先升重库。每一条背后都是人天和 license。业务说的引用一下数据和技术说的引用不是一个意思，前者是一个查询，后者是一条管道。有意思的是他最后说了一句可以免费提供给我们，我没听懂这句话在说什么。这一段暴露的问题跟沟通无关。第一阶段所有 AI 项目都默认数据是免费空气，现在开始收空气费了。模型能力早就不是瓶颈，数据管道的工程造价才是。</p>
+<p>第二件事更绕。四十五分钟的空间套系收尾会，开场第一个人问的是，你帮我讲一下这个调研目的是啥，我其实没有搞懂。这个项目是集团的 A 级项目，去年立项，二十五年底变更过一次，二十六年底又变更一次。明年集团不再按 A 级项目管理，所有 A 级项目年底全部收尾。所以这场会的目标只有一个，把它从一个管理层级里摘出来。事做到哪一步反倒次要。参与者不知道要调研什么很正常，调研的对象其实是流程归属。</p>
+<p class="lead"><b>这两件事接上昨天那句九个专项没有一个算完成，才看出完整的形状。</b> 完成的定义一直不在项目自己手里。做的时候按业务价值讲，收的时候按管理口径算。这中间那道缝，谁都没有责任去补。</p>
+<p>第三个账是人的账。下午两场面试，一百五十分钟。陈发祥从深大城市规划毕业就转行，先做内容运营，再去金融科技媒体做 AI 产品经理，做资讯的自动化生产，从监控、抓取、梳理、写快讯到发布，整条链都自己跑。他讲抓取讲得实，网站有没有官方 API、RSS、sitemap，彭博社那种不给，就抓后端接口、抓前端 HTML，甚至上 Playwright。缺的那块也清楚，问到 Loop 讲不出来，问到评测只有发现问题再改，测试集、标注标准、回归验证一句没提。熊冰蕾是另一个方向，双硕士，六年复杂业务系统，西安地铁智能客服、数据中台衍生的 data agent、两周做出来的给业主查文档的 LLM wiki，技术这块比我熟。我问她落地的业务场景和盈利模式，她说那家是国企，契机是国家拨了款。</p>
+<p>两个人各缺一半，一个自下而上摸出来的，一个自上而下的方案派。我在群里写了三版评价，删到各两句话。写得很顺，顺得让人不安。这两把尺子今天都没有刻度，什么叫理论够，什么叫业务融合够，全凭印象。昨天我才跟人把评测拆成四步，构造数据集、拆评测集、执行、标注，今天挑人用的还是感觉。</p>
+<p>唯一在往前走的是一场二十三分钟的会。九个人，货盘健康度管理的指标和口径这周跟恩菲初步共识，下周二数据全部接进 AI，十二月出设计方案，同时定下 Bad Case 收集和模型排查机制。产出是日期和交付物。四十五分钟那场，产出是一句我没搞懂。会开多长和事推进多远，今天正好反过来。</p>
+<p>还有一件小的。虎嗅的采访要素材，我翻出一个视频，看着挺对，发出去之前想起来那是采购的，三维家或酷家乐，不是林氏放我家。我跟人说，之前那版说得略满，有点高。对外讲的故事正在被核对，这个核对迟早会回到那个定性问题上。</p>
+<p>接下来三周真正要交的东西只有一件，一张表，把数据成本、验收标准、人力价格写在同一张纸上。没有这张表，每个会都会开到四十五分钟，最后还是有人问这个调研是干什么的。</p>
+  </div>
+
+  <div class="panel" data-p="p">
+<p>群里有人来要素材，虎嗅的采访要配图。我翻了一阵，找到一个视频，画面里的搭配效果和风格都对。发出去之前我又看了一眼，想起来这个是采购的，三维家还是酷家乐的东西，不是林氏放我家的。我在群里补了一句，需要的话我可以现设计一个拿出去公关。</p>
+<p>说这话的时候我没觉得什么。晚上坐下来，才发现今天这个句式出现了三次。</p>
+<p>第二次是在数据库那场会上。对方从头到尾守着一句话，在不产生任何成本的条件下。他说了三遍，第三遍加了一句这个很关键的。我给不出去。生产库不能拿去大批量查，并发控制不住会出事。要给他查，得单独开接口。要走 MCP，得先升重库。每一条后面都是人天和钱。他后来说了一句可以免费提供给我们，我没听懂他在说什么。我卡了两秒才反应过来，他大概觉得数据已经在库里放着，多给一个人看不会多花钱。</p>
+<p>第三次是面试。陈发祥，深大城市规划毕业，直接转行，先做内容运营，再去金融科技媒体做 AI 产品经理，做资讯的自动化生产，从监控、抓取、梳理、写快讯到发布，一条链全走通。他讲抓取讲得实在，网站有没有官方 API、RSS、sitemap，彭博社那种不给，就抓后端接口、抓前端 HTML，甚至上 Playwright。这些东西看书看不过来。</p>
+<p>他缺的那块也清楚。我问 Loop，讲不出来。我问评测，他讲的是发现问题再改，测试集、标注标准、回归验证，一句没提。</p>
+<p>熊冰蕾是另一个方向。双硕士，六年复杂业务系统，西安地铁的智能客服，数据中台衍生的 data agent，还有两周做出来的 LLM wiki，给业主查文档用。技术那块她比我熟。我问落地的业务场景和盈利模式，她说那家是国企，契机是国家拨了款，不是非得提效。</p>
+<p>两个人各缺一半。我在群里写评价，写了三版，删到各两句话。写的时候很顺，顺得我有点不安。什么叫理论够，什么叫业务融合够，这两把尺子今天一个刻度都没有。昨天我才跟人把评测拆成四步，构造数据集、拆评测集、执行、标注。今天挑人全靠印象。</p>
+<p>半下午桌上堆了一堆吃的，鸡米花、吮指原味鸡，还有咖啡。我说我都不一定能去吃。下午两场面试一百五十分钟，中间夹着数据库的协调，还插了一个两分钟的转述。有人在群里说你们拉群居然不拉我，我回了一句你排挤我。这几句今天最轻，也最像我。</p>
+<p>海外 B2C 那个审计的事又来了。他们一直在要数据，拿来比对海外 B2B 的客户。我的立场没变，我们是系统运维方，提供数据是违法的。我拉了法务进来，跟人说，我提供判断，专业人士来决策。这话说得很体面，落下来是我也不想一个人扛这个决定。后来我在群里发了句我作茧自缚，画地为牢，四面楚歌，咎由自取，小马。发完自己笑了，最后两个字看着像打错的。</p>
+<p>散会前还听了一耳朵。四十五分钟那场，空间套系收尾，集团明年不按 A 级项目管理了，年底所有 A 级项目都要摘出来。开场第一个人问，你帮我讲一下这个调研目的是啥，我其实没有搞懂。我坐在那儿没说话。我也不太确定这场要调研什么，只知道它必须开。</p>
+<p>洁敏请假，昨天坐的是阿飞的车。今早得跟他核对这几趟，把钱转过去。一天里那么多东西都算不清，最后能算清的是几趟车费。</p>
+  </div>
+
+  <div class="foot">
+    数据来源 · 钉钉 AI 听记 6 段（会议 2 场、面试 2 场、协调 2 段）＋ 私聊与群聊 197 条。<br>
+    生成于 2026-11-20 20:30 · Hermes
+  </div>
+</div>
+<script>
+function sw(t){
+  document.querySelectorAll('.tab').forEach(function(e){e.classList.toggle('on',e.dataset.t===t)});
+  document.querySelectorAll('.panel').forEach(function(e){e.classList.toggle('on',e.dataset.p===t)});
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
