@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每周复盘 2026-11-16 ~ 2026-11-22</title>
+<style>
+  :root{
+    --bg:#0d1117; --card:#161b22; --line:#21262d; --txt:#e6edf3; --dim:#8b949e;
+    --biz:#58a6ff; --diary:#f78166; --silent:#d2a8ff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    line-height:1.85; font-size:16px; padding:20px 16px 60px;
+  }
+  .wrap{max-width:720px;margin:0 auto}
+  header{margin-bottom:22px}
+  .kicker{font-size:12px;letter-spacing:.18em;color:var(--dim);text-transform:uppercase;margin-bottom:8px}
+  h1{font-size:23px;line-height:1.4;font-weight:700;letter-spacing:-.01em}
+  .sub{color:var(--dim);font-size:13px;margin-top:10px}
+  .cue{
+    margin-top:18px;padding:14px 16px;border-radius:12px;
+    background:linear-gradient(135deg,rgba(88,166,255,.12),rgba(210,168,255,.08));
+    border:1px solid var(--line);font-size:14.5px;color:#cdd9e5;
+  }
+  .tabs{display:flex;gap:8px;margin:22px 0 18px;position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:5}
+  .tab{
+    flex:1;text-align:center;padding:10px 6px;border-radius:10px;cursor:pointer;
+    background:var(--card);border:1px solid var(--line);color:var(--dim);
+    font-size:13.5px;font-weight:600;transition:.18s;white-space:nowrap;
+  }
+  .tab.on{color:#0d1117}
+  .tab[data-p="biz"].on{background:var(--biz);border-color:var(--biz)}
+  .tab[data-p="diary"].on{background:var(--diary);border-color:var(--diary)}
+  .tab[data-p="silence"].on{background:var(--silent);border-color:var(--silent)}
+  .panel{display:none}
+  .panel.on{display:block;animation:fade .25s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .meta{font-size:12px;color:var(--dim);margin-bottom:16px;letter-spacing:.04em}
+  .meta .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:7px;vertical-align:1px}
+  .biz .meta .dot{background:var(--biz)}
+  .diary .meta .dot{background:var(--diary)}
+  .silence .meta .dot{background:var(--silent)}
+  p{margin-bottom:15px;color:#dbe4ee}
+  .biz p:first-of-type strong{color:var(--biz)}
+  .silence p strong{color:var(--silent)}
+  strong{color:#fff;font-weight:700}
+  .biz p:first-of-type{
+    font-size:17px;line-height:1.7;padding:16px 18px;border-radius:12px;
+    background:rgba(88,166,255,.08);border-left:3px solid var(--biz);
+  }
+  .diary p{font-size:16.5px;line-height:2;color:#e3dcd8}
+  .silence p{
+    padding:14px 16px;border-radius:10px;background:var(--card);
+    border-left:2px solid rgba(210,168,255,.45);margin-bottom:12px;font-size:15px;
+  }
+  .divider{height:1px;background:var(--line);margin:26px 0}
+  footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--dim);line-height:1.9}
+  .sig{color:#6e7681}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Weekly Review · Pro</div>
+    <h1>每周复盘 · 2026-11-16 → 2026-11-22</h1>
+    <div class="sub">基于本周 7 天、14 篇每日复盘（商业版 + 日记版）交叉综合</div>
+    <div class="cue">📊 <strong>本周定调：</strong>这周争的不是 AI 有多能干，是「怎么算」。</div>
+  </header>
+
+  <div class="tabs">
+    <div class="tab on" data-p="biz">商业版</div>
+    <div class="tab" data-p="diary">日记版</div>
+    <div class="tab" data-p="silence">沉默板</div>
+  </div>
+
+  <section class="panel on biz" id="p-biz">
+    <div class="meta"><span class="dot"></span>本周的交叉线索 · 论点是演化，不是合并</div>
+        <p><strong>定调：这周真正被反复讨论的不是 AI 能做什么，而是「怎么算」——一件东西值多少、一个人算不算数、一个项目什么时候算完。</strong></p>
+    <p>第一条线索是把「值不值」从感觉变成分值。周一培训体系定稿、AI 使用规范被打回，理由都是同一句：用户看不懂。周二的会给出了答案的一半，把两个部门的流程摊成 41 个接入节点，纵轴叠价值评估，业务从中挑 29 个专项逐项打分，剩下 9 个杠杆，本月圈定 7 项立项范围。这张流程表把「该给哪个环节赋能」从全景图变成了节点级清单，业务方当场说以后新人入职就发这张表。同一天会上，「帮助」被换成「协同」，前半年「做工具、交给业务、业务说有用、然后停在那里」的模式，被一句话承认了。</p>
+    <p>第二条线索是这把尺子一旦立起来，立刻不够用。周三讲清了怎么算对——规范和判据写进 PRD，评测的位置在需求前面；周四健新那串问题把整条链问到根上：AI 视觉加了三十多人、一年四五百万，算提效就不该加人，算建能力就要讲清建多久、什么时候能发挥作用，而九个专项里没有一个算完成。周五三笔账同一天到期：数据要收费（生产库不能直接拿去大批量查）、A 级项目年底全部摘出（那场会的目标其实是从管理层级里摘出来，跟做到哪一步无关）、两场面试一百五十分钟两个人都各缺一半。共同点是完成的定义一直不在做事的人手里——做的时候按业务价值讲，收的时候按管理口径算。</p>
+    <p>第三条线索落在人上。周二翻简历时标准事实上换了一套，「自己掏真金白银为认知买单」成了加分项，而旧薪酬阶梯量化不了这件事；周五挑人还靠印象，用他自己的话说，两把尺子今天都没有刻度；周六一位在校研究生和一个没交上作品的人，把「能不能干活」和「能不能进来」分成了两件事。筛选的成本最后转嫁给了候选人和他家里的人。</p>
+    <p>如果只记一件事：这周造出了第一把能用的尺子（流程节点表），也跟着看清了剩下所有没算清的账都在等同一张纸——把数据成本、验收标准、人力价格写在同一张纸上。没有这张纸，每个会都会开到四十五分钟，最后还是有人问这调研是干什么的。</p>
+  </section>
+
+  <section class="panel diary" id="p-diary">
+    <div class="meta"><span class="dot"></span>一个人的一周 · 第三人称 · 锚点：他替别人说得清，说自己说不清</div>
+        <p>周一他把双周报发出去，标黄的那个数字是 61%。下午的会开了三个半小时，主持人手痛，说话带着痛音，会还是撑完了。一天里他两次撞到同一堵墙：用户不问名词，只问场景。晚上规范被打回，理由是太复杂，他和德彬改到周四。这一天他没觉得自己在做什么大事，只在想材料得从问题出发。</p>
+    <p>周二有人把「帮助」换成「协同」，语气很平，像在改一个错别字。他把这个词记下来，听着有点沉——前半年他们干活的方式就是这两个字。散会前有个细节他很喜欢：业务说这张流程表以后新人入职直接发给他看。那是他们做的第一件被留下来的东西，而且是别人自己能用的表。晚上两个第五版凑在同一天，他已经分不清是他在改它，还是它在改他。</p>
+    <p>周三的转折来得毫无铺垫。上午他在政府质量奖的访谈里解释这个部门为什么成立，答得很顺；下午最后十分钟，有人问他有没有想过部门要怎么调整。「没有啊，你刚跟我说。」这是那天他唯一一句没有准备过的回答。</p>
+    <p>周四他在对话框里打了一句「有点气，白费了一天」。会都开得顺，条款改了，别人的质疑也一条条复述过去了，偏偏最想办成的那件事从上午卡到天黑。他替所有人把话说清楚，条款要让人看懂，评测要让人照着做；轮到自己的事，他连卡在哪一步都说不明白。</p>
+    <p>周五虎嗅来要素材，他找到一个对味的视频，发出去之前想起来，这个不是我们的。晚上他发觉这个句式今天出现了三次：数据不是免费的，两个候选人各缺一半，那个素材不是他们的。他在群里发了句作茧自缚画地为牢四面楚歌咎由自取，发完自己笑了。</p>
+    <p>周六手机跳出一句「靠，凤梨没过」。他的手指先动的是排查，问作品填了没，问是拒绝还是候补，要截图。凤梨那边要的大概不是这个。原话发过来，他回了一个字：啊。这是全天最短的一句，也最接近他坐在那里的样子。那天他发出去的消息几乎全是问句，他笑自己像个客服。</p>
+    <p>周日他一整天没说话。早上九点四十一条消息说主动推送被会话休眠挡住，让他回一句窗口就开。他看了一眼，把手机扣回桌上。晚上翻记录才看清，今天署他名的两条都不是他自己打的字：一条够不到他，一条把四个人挨个点了名。他盯着那条催收看了一会儿——它写得比他本人利索。</p>
+    <p>一周下来，他能算清的只有八趟，一百二十块。</p>
+  </section>
+
+  <section class="panel silence" id="p-silence">
+    <div class="meta"><span class="dot"></span>该推进没推进 · 反复出现没解决</div>
+        <p><strong>1. 自进化——一周之内从「下一个结构性能力」降级到无人承接。</strong> 周一提出小林 AI 和林氏小龙虾手里有巨量数据和场景，后续应用与自进化没人做；周二拆到第一层就撞上权限（云校的代码动不了）；周三变成把判断交给小模型嵌进 agent loop；周四评测四步里执行只能手工、知识库本身还有问题；周五起彻底消失。没有落到人，没有落到期。</p>
+    <p><strong>2. 在校生这类人选的口径。</strong> 周六的结论是「周三之前回答这类人选在我们的口径里究竟存不存在，存在就写清路径，不存在就早点讲」。到周日仍无说法。这是本周唯一一件自己给自己定了截止的事。</p>
+    <p><strong>3. 凤梨的准信。</strong> 候补还是出局，周六追问到周日仍悬着。它决定的是那个周末怎么过，不是一份材料怎么补。</p>
+    <p><strong>4. AI 使用规范的替代路径没成文。</strong> 11/16 要求周四前交简化稿，周四之后只见条款仍在讨论（7.1 条开了二十六分钟）。禁令写下了（不得在天猫、淘宝、京东、小红书和内部系统全自动批量抓取），但业务听得懂的替代方案——手动导出、魔镜月度链接、IP 池成本——7 分钟那场会之后再没下文。</p>
+    <p><strong>5. 数据库 MCP 的三件硬约束。</strong> SSO 未开放、冷备节点改只读从库一个月多 630.72 元、MCP 的审计和控制没有方案。11/18 摊出来，之后四天没再出现。</p>
+    <p><strong>6. 部门架构。</strong> 营销线上线下面整合并、海外数字化单独出来但归属未定、需要去跟新哥沟通。周三那句「你有想过你的部门要怎么调整吗」没有回音，之后再没提过。</p>
+    <p><strong>7. 两件拖得更久的小事。</strong> 数字分身专项立项评审已拖三周（11/16 记），本周未再出现；读书分享月已过半，自己的书停在第三十页。</p>
+  </section>
+
+  <div class="divider"></div>
+  <footer>
+    数据来源：Notion · Writing Projects · 每日复盘（2026-11-16 ~ 2026-11-22）<br>
+    生成时间：2026-11-22 21:00 CST · 每日复盘商业版 7 篇 / 日记版 7 篇<br>
+    <span class="sig">Hermes · 周度版 Pro</span>
+  </footer>
+</div>
+
+<script>
+document.querySelectorAll('.tab').forEach(function(t){
+  t.addEventListener('click', function(){
+    document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on')});
+    document.querySelectorAll('.panel').forEach(function(x){x.classList.remove('on')});
+    t.classList.add('on');
+    document.getElementById('p-' + t.dataset.p).classList.add('on');
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
