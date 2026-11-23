@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日复盘 · 2026-11-23</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1014;color:#dfe3e8;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased;padding:0 0 60px}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+.hero{padding:44px 0 26px;border-bottom:1px solid #1e242c}
+.kicker{font-size:12px;letter-spacing:.22em;color:#6b7684;text-transform:uppercase;margin-bottom:12px}
+h1{font-size:26px;font-weight:700;letter-spacing:-.01em;line-height:1.35}
+h1 span{display:block;font-size:15px;font-weight:400;color:#8b96a4;margin-top:10px;letter-spacing:.02em}
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.stat{background:#141a21;border:1px solid #1f2833;border-radius:12px;padding:9px 14px;font-size:12px;color:#9aa6b4}
+.stat b{color:#e8ecf1;font-size:15px;font-weight:600;margin-right:4px}
+.tabs{display:flex;gap:8px;margin:26px 0 0;position:sticky;top:0;background:#0d1014;padding:14px 0 12px;z-index:5;border-bottom:1px solid #1a2028}
+.tab{flex:1;border:1px solid #232c36;background:#12171d;color:#8d98a6;padding:11px 8px;border-radius:11px;font-size:14px;cursor:pointer;font-family:inherit;transition:.18s}
+.tab.on{color:#fff}
+.tab.on[data-t="biz"]{background:rgba(74,158,255,.13);border-color:rgba(74,158,255,.55);color:#8cc4ff}
+.tab.on[data-t="diary"]{background:rgba(255,143,177,.12);border-color:rgba(255,143,177,.5);color:#ffb3c9}
+section{display:none;padding-top:30px;animation:fade .28s ease}
+section.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+#biz{border-left:2px solid transparent}
+p{font-size:16px;margin-bottom:20px;color:#c8d0da}
+p.lead{font-size:17px;color:#eef2f7;padding:18px 18px 18px 20px;border-radius:12px;margin-bottom:26px;line-height:1.85}
+#biz p.lead{background:linear-gradient(135deg,rgba(74,158,255,.12),rgba(74,158,255,.03));border-left:3px solid #4a9eff}
+#diary p.lead{background:linear-gradient(135deg,rgba(255,143,177,.1),rgba(255,143,177,.02));border-left:3px solid #ff8fb1}
+strong{color:#fff;font-weight:600}
+#diary p{font-size:16.5px;line-height:2;color:#d3d9e1;margin-bottom:22px}
+#diary p:nth-of-type(odd){color:#c6cedb}
+.tagline{margin-top:34px;padding-top:22px;border-top:1px solid #1a2028;font-size:12px;color:#5e6975;letter-spacing:.02em}
+.foot{margin-top:40px;font-size:11px;color:#4a545f;text-align:center;letter-spacing:.05em}
+@media(max-width:420px){h1{font-size:22px}p{font-size:15.5px}#diary p{font-size:16px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="kicker">Daily Review</div>
+    <h1>2026 年 11 月 23 日 · 周一<span>六场会，一百八十四条消息，一条主线</span></h1>
+    <div class="stats">
+      <div class="stat"><b>6</b>场会</div>
+      <div class="stat"><b>198</b>分钟</div>
+      <div class="stat"><b>184</b>条消息</div>
+      <div class="stat"><b>2</b>版复盘</div>
+    </div>
+  </div>
+  <div class="tabs">
+    <button class="tab on" data-t="biz">📊 商业复盘</button>
+    <button class="tab" data-t="diary">📝 日记</button>
+  </div>
+  <section id="biz" class="on">
+<p class="lead"><strong>今天六场会、一百八十四条消息，真正在谈的只有一件事，AI 做出来的东西已经跑在说清楚它价值的能力前面。</strong></p>
+<p>上午那份 AI 使用管理制度，做了两个月，迭代到第二版，走审批流直接被驳回。第一版 CEO 觉得太复杂，第二版问得更狠，这个制度到底想干嘛，解决什么问题。健新在那边被说了一下午，最后的办法是让团队手写一版。</p>
+<p>这件事的荒诞处在于内容并不缺。工具准入、使用规范、数据安全都写了，落在第七条之后。第七条以前是制度模板必须带的内容，占了大半篇幅，把实质压成了附件。看的人翻不到那里。</p>
+<p>同样的问题今天在另外三个场合重复了，只是换了皮。</p>
+<p>AI 视觉的汇报被打回，理由是看不出这个项目到底在干啥，只知道在做白底图。讲述从功能出发，SKU 小图怎么处理、白底图怎么生成、各种率多少，业务场景和价值放在最后。有人提了个很轻的改法，把 SKU 小图叫商品规格图，白底图叫电商营销图。名字一换，听的人才明白这东西在电商链路里的哪一段。</p>
+<p>零食小龙虾的培训材料评审，五六个人听了快一小时，意见是结构太深、概念太多、没有案例故事。材料里有提示词技巧、技能沉淀、群应用协同，全是产品功能的自述。连 logo 还是旧版那只蟑螂头。</p>
+<p>小林 AI 和小龙虾要不要合并，会开了三十七分钟没有结论。合并的技术量确实大，可卡住会议的是业务方一直在问的另一件事，这两个工具的定位差别在哪，为什么我们要做两个。在场没人答上来。</p>
+<p>四个场景一个病根。制度按模板章条组织，汇报按功能模块组织。培训材料一上来就讲产品能力，定位那件事干脆没有组织起来。四件事的起点都是我们做了什么，终点都不是对方遇到什么问题。</p>
+<p>下午的 AI 天地改版是这条线的另一面。现状被一句话点破，作为一个 AI 门户，它现在没有任何 AI 能力。目录里躺着七类材料，AI 落地场景、培训课件、小龙虾指引、部署指引、下载页、迭代日志、安全指引，用户要一条一条打开。</p>
+<p>改版拉了三家做参照。Claude 学院把问答放在核心入口，页面是上下结构。千问学院顶上一整条搜索栏，内容分在右边。Workbuddy 走集合站的路子，下载、案例、文档、活动一字排开。三种入口形态，三种组织内容的方式。</p>
+<p>入口形态只解决了找得到。说得清是另一件事。七堆材料加一个问答框，底下的组织逻辑还是按材料类型分的，问答只是在材料堆上开了个窗口。该先回答的是用户进来要办哪三件事，这一格现在是空的。</p>
+<p>也不是没有进展。三种形式摊开了，搜索检索、主界面问答、OA 侧边栏挂件。内容清单列平，短视频专区有人提，封面专门设计，点进去的欲望更强。这些都是第二步的好材料。</p>
+<p>第一步的答案今天已经长在别的地方了。制度会被压到四五个点，第一点就是要报备。汇报会从业务场景重讲一遍。定位打算按场景打标杆，小林 AI 走高层心智，小龙虾走执行层。会上给的这三条其实是一套做法，只是没有人把它当成一套说出来。</p>
+<p>今天花在改说法上的时间，粗算两小时会议加几十条来回消息。这笔成本没有立项，没有排期，不出现在任何人的周报里。它落在最不该落的人身上，CEO 驳回一次，健新扛一下午，再往下传，团队重写一版。</p>
+<p>今天压下去的说法，下个月会以业务方不理解、审批不通过、重复建设的形式回来，一次比一次贵。</p>
+<p>还有一个反向信号值得记。上午分享 AI 资讯工作流，我自己说视频那个板块看起来挺费劲，回头把它干掉。下午判断门户做视频专区，点进去的欲望会强很多。同一天，两个方向相反的判断。做门户的人不是门户的用户，这句话改版时应该贴在墙上。</p>
+<p>团队那边今天只有文鑫一个人更新了上下文。我在群里问这几周是不是没人更新，要不要设个 AI 自动任务。同一段时间我又在说，今年年会我让团队成员主导和发挥，我幕后支持一下。退后一步和兜底同时发生，这是负责人这个位置的常态，也是团队还没长起来的证据。培养人和把事做成，站在这把椅子上，很难分开做。</p>
+<p>结论不需要说得更漂亮。今天六个会给出的答案已经很清楚。先回答这个项目解决谁的什么问题，再把功能一个个塞进去。制度能不能用，看基层看完知不知道要干什么。汇报能不能过，看听的人能不能一句话说出这个项目值多少。门户能不能改好，看用户进来想办的三件事有没有在第一屏。</p>
+<p>顺序对了，文本自然会好。</p>
+    <div class="tagline">一句话定调 · AI 做出来的东西已经跑在说清楚它价值的能力前面</div>
+  </section>
+  <section id="diary">
+<p>下午四点多，屏幕上跳出来一行字。健新刚才没招了，说你们手写一版吧。</p>
+<p>我把聊天往上翻了一屏。前面是两个月的来回，那份 AI 使用管理制度，第一版 CEO 觉得太复杂，改到第二版直接驳回。驳回的理由被转述成一句问话，这个制度到底想干嘛，解决什么问题。健新在那头被说了一下午。</p>
+<p>我在私聊里回了一句，我写的可能还没 AI 好。后来又补一句，手写真的会比 opus 4.6 好吗。</p>
+<p>这话是真心。这两个月我们用模型写过很多东西，制度、指引、汇报、培训材料，模型给的版本都比人写的齐整。今天卡住的地方在别处。这份东西齐整得太像一份制度了，第一条到第六条全是模板里必须带的内容，真正管用的部分挤在第七条之后。翻到第二页的人已经停了。</p>
+<p>他说，那我自己手写一版吧。</p>
+<p>手写这两个字有点旧。纸笔的时代早过去了，可它在这里的意思很清楚，一个人坐下来，一个字一个字过，过的时候脑子里必须挂着个念头，这句到底要解决谁的什么问题。模型不干这个活。它能给你十个版本，每个都通顺，每个都不负责。</p>
+<p>今天一整天绕的就是这件事。有意思的是早上开会时，还有人说不要手写，简单点，一二三就好，其他废话全部拿掉。晚上健新的办法又回到了手写。一天之内的两种答案，指向同一个地方。</p>
+<p>今天一共六个会。</p>
+<p>第一个会讲 AI demo 部署。业务侧现在几乎人手一两个 demo，做完了就来找我们上线。投影看不清，第一排的人被要求往前坐。发言的同事说现在人多单多，要分接单，要分需求类型，要三种规模化的部署方式。讲得都对，我坐在下面想的是另一件事，这些 demo 上去之后谁在用，用了有没有变好，整套流程里没有这一格。</p>
+<p>第二个会是制度，就是下午被驳回的那份。有人说就写四五个点，一二三写清楚。有人接了句，最核心的是人负责，AI 辅助人负责。这句被顶了回去，什么叫人负责，这话等于没说。又有人讲，先讲我们遇到什么问题，这是个指引。会议室静了一下。四五个点，遇到什么问题，这两句其实是同一个要求。</p>
+<p>中间三个会。小龙虾的培训材料，五个人听了快一小时，评价是结构太深、概念太多、没有案例故事，logo 还是旧版那只蟑螂头。小林 AI 和小龙虾要不要合并，三十七分钟，卡在业务方的一个问题上，这两个工具定位差别在哪。我们自己也没答上来。还有一个 Cloud 防封号的分享，五分钟，谷歌账号要三年以上、手机号最好用美国的、网络要 CN2 加住宅 IP，都是花钱试出来的，讲得很实在。</p>
+<p>六个会连着开，中间只够去一趟洗手间。我在群里说好的我也去一下洗手间，回来接着开。</p>
+<p>下午有一段我挺兴奋。AI 天地要改版，我拉了三家做参照，Claude 学院把问答摆在最前面，千问学院顶上一整条搜索栏，Workbuddy 是标准集合站。我打了一大段话发出去，把七类材料摊开，说作为一个 AI 门户，它现在没有任何 AI 能力。有人回得很快，说千问那个案例学院做得很好，可以做个视频专区，封面专门设计，点进去的欲望会强很多。</p>
+<p>兴奋过去得也快。材料摊开之后问题还在原地，用户进来要办哪三件事，这一格没人填。加问答框，加视频专区，都还是在七堆材料上做装修。</p>
+<p>晚上翻自己上午的消息，翻到一段讲 AI 资讯工作流的。我说视频那个板块看起来挺费劲，回头把它干掉。同一件事，上午想砍，下午想加。做门户的人不是门户的用户，这句话放在改版前头挺合适。</p>
+<p>还有一段是年会。我说今年让团队成员主导和发挥，我幕后支持一下，去年做得还不错，今年有去年一半水平就可以了。这话说的时候是真心。说完没多久，我又在群里追问 BPS 的结项卡在哪，问这几周是不是没人更新上下文，只有文鑫一个人动了。</p>
+<p>退一步和兜底，在同一天里来回切。</p>
+<p>再往深里想有点绕。今天的时间主要花在把做过的事重新说一遍上。说给 CEO 听，说给业务方听。也跟刚加入的同事讲过一遍。这件事不出活，也写不进周报。可它是今天唯一在往前走的事。</p>
+<p>手写也许真的不会比 opus 4.6 好。模型更快，也更齐整，它不会累。可一个人在纸上写，写到第七条会停一下，会问自己这句是不是废话。今天所有的驳回，要的可能就是这个停顿。</p>
+<p>后天 25 号，黑客松那边要确认去不去。通过的名单里到现在只有我一个人，凑够三个人才能成一队。凑不够，我也就不去了。</p>
+    <div class="tagline">一个锚点 · 手写一版</div>
+  </section>
+  <div class="foot">Hermes · 每日复盘 · 2026-11-23</div>
+</div>
+<script>
+document.querySelectorAll('.tab').forEach(function(b){b.addEventListener('click',function(){
+  document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on')});
+  document.querySelectorAll('section').forEach(function(s){s.classList.remove('on')});
+  b.classList.add('on');
+  document.getElementById(b.dataset.t).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+})});
+</script>
+</body>
+</html>
