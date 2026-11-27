@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日复盘 · 2026-11-27</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--biz:#5b7cfa;--diary:#f472b6;--bg:#0d1017;--card:#151a24;--line:#232b3a;--txt:#dfe4ee;--dim:#8b95a8}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.85;-webkit-font-smoothing:antialiased}
+.wrap{max-width:780px;margin:0 auto;padding:28px 18px 64px}
+.top{border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:22px}
+.date{color:var(--dim);font-size:13px;letter-spacing:.06em}
+.title{font-size:26px;line-height:1.35;margin-top:8px;font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 0 26px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 6px;text-align:center}
+.stat b{display:block;font-size:20px;color:#fff;font-weight:700}
+.stat span{font-size:11px;color:var(--dim)}
+.tabs{display:flex;gap:8px;margin-bottom:22px;position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:9}
+.tab{flex:1;text-align:center;padding:10px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--dim);font-size:14px;font-family:inherit;cursor:pointer}
+.tab.on{color:#fff;font-weight:600}
+.tab.on[data-t="biz"]{background:rgba(91,124,250,.16);border-color:rgba(91,124,250,.55);color:#a9bcff}
+.tab.on[data-t="diary"]{background:rgba(244,114,182,.14);border-color:rgba(244,114,182,.5);color:#f9a8d4}
+.panel{display:none}
+.panel.on{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+.biz .eyebrow{color:#8ea3ff}
+.diary .eyebrow{color:#f9a8d4}
+.headline{font-size:21px;font-weight:700;line-height:1.45;margin-bottom:20px}
+.biz .headline{color:#e6ecff}
+.diary .headline{color:#fde6f1}
+article p{font-size:16px;margin-bottom:16px;color:#d7dde9}
+.biz article p:first-of-type{border-left:3px solid var(--biz);padding-left:14px;color:#eef2ff}
+.diary article p:first-of-type{font-size:17px;color:#f6e5ee}
+.diary article p:last-of-type{color:#f9a8d4}
+strong{color:#fff;font-weight:600}
+footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);color:#5d6678;font-size:12px;line-height:1.7}
+@media(max-width:420px){.stats{grid-template-columns:repeat(2,1fr)}.title{font-size:23px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="date">2026年11月27日 星期五</div>
+    <h1 class="title">每日复盘 · 2026-11-27</h1>
+  </div>
+  <div class="stats"><div class="stat"><b>9</b><span>场会议</span></div><div class="stat"><b>269</b><span>分钟听记</span></div><div class="stat"><b>246</b><span>条消息</span></div><div class="stat"><b>11</b><span>条@我</span></div></div>
+  <div class="tabs">
+    <button class="tab on" data-t="biz" onclick="sw('biz')">商业复盘</button>
+    <button class="tab" data-t="diary" onclick="sw('diary')">日记</button>
+  </div>
+  <section id="p-biz" class="panel biz on">
+    <div class="eyebrow">商业复盘版</div>
+    <div class="headline">价值论证，从会议室走到招聘桌</div>
+    <article><p><strong>今天九场会、246条消息，绕来绕去只问了一个问题，我们做的东西凭什么值这个钱。上午复盘把「价值论证不清晰」写成了问题，下午腾讯把同一件事做成了人手一个的数字员工，傍晚招聘谈的又是这个问题的定价版。</strong></p>
+<p>小林生影的复盘把问题命名了。会上提了两条，价值论证不清晰，项目管理不规范，有人补了第三条，没深入业务运营。这三条看着是三件事，其实是一根绳上的三个结。前期我们把活儿交给业务自己打磨，让他们自己论证自己产品的价值，听着像放权。被论证的人自己当裁判，这个局一开始就不好破。他们做出来的东西到底什么水平，会上有人的说法是暂时没有定论。更要紧的是有些人开展的事情完全没有被纳入管理，我们既没有过程数据，也没有独立判断，最后只能拿到一份对方自己写的结论。会上给出的方向是把产品抽象成 Chat Canvas、SDK 这类中台能力，建数据回流机制，明确架构。三条合起来是一件事，把证明价值从每个项目各自辩解，变成一套可以复用的凭据。没有数据回流，价值论证就只能靠会议室里的语气。</p>
+<p>下午腾讯那场一百分钟，是同一道题的外部答案。他们讲数字员工，企微里人手可以开一个 bot，场景比我预想的大。能力包装得极好，自动化任务等于 7×24 小时，一句话就把价格问题换算成了工时问题。我们讲模型选择、实时监控、基础配置，他们讲替你上班。我在群里说我们规划的数字员工设置交互还要更好一点，我们还是太超前了哈哈。笑完之后有个不太舒服的念头，超前的另一面是没人用。同一场会里我发了另一句，会开到最后就只剩我们部门的在了。那句话跟坚持没关系，别人把它当基础设施在推，我们还在把它当项目在演示。业务的人先走，采购的走，最后剩下自己人，这个画面比任何一页 PPT 都清楚。</p>
+<p>招聘那条线是同一道题的定价版。熊冰蕾因为 30k 的落差拒了 offer，成都那边给到 26k×14 薪，公积金按 20K 的 6% 算，还要加上从成都到广东的迁移成本。群里在算预算和涨幅，也在算别人家开多少。我在群里说的那句更直接，AI 产生不了价值的话，我乃至我的部门都是没意义的，投入已经不少了，不能产生经营价值的话我都应该滚蛋的。这话和价值论证是同一个逻辑的两头。我们要用价值来证明投入，又必须在价值被证明之前先把人和资源砸进去，这个先后顺序没法调换，只能靠判断顶着。所以我认 AI 优先要砸资源这个说法，没有资源支持的 AI 优先很难真正产生业务价值。</p>
+<p>中间有一条容易漏掉的线。晚上写《超级组织》的读后感，书里有个词叫幽灵效率，个人用 AI 跑得飞快，放进部门协作、评审和上下游交接里，整体产出并没有快多少，局部省下来的时间全在对齐和返工里消耗掉。今天被点出来的两个不规范，项目管理和价值论证，就是这句话的两种表现。上游两天吐出几十版，下游标准没对齐，筛图和扯皮要花双倍时间。小红书笔记工具那场反而像个正面样本，标准版给门店采购，12 月可以先感受一下，专业版、话术库、竞品库排在后面，数据回流和人工标注都写进去了。有交付日期，有版本切分，有明确的验收对象，这种会开完人累但不空。</p>
+<p>最后那场资源拉齐只有一分半，信息量最实。对外已经承诺了时间，对内资源还没定，测试资源要拉进来，因为这个项目涉及门店端交互，不算纯 AI 项目。有人直接指出节奏是反的，一般是先跟产品开发对完时间再对外承诺，你们是先承诺业务时间，内部资源还没定下来。这个月如果只改一件事，我选这个顺序。承诺在前，资源在后，等于把风险全留给交付那天。</p>
+<p>接下来三周我要盯两件很小的事，数据回流有没有真的跑起来，验收口径有没有写进项目计划。这两件不做，今天的复盘下个月还会再开一次，说法都一样。</p></article>
+  </section>
+  <section id="p-diary" class="panel diary">
+    <div class="eyebrow">日记版</div>
+    <div class="headline">最后只剩我们部门的人</div>
+    <article><p>下午四点多我从会议室出来，在群里发了一句，这个会开到最后就只剩我们部门的在了。后面跟了三个点，其实是没写完的一句话。</p>
+<p>那场会开了一百分钟。腾讯的人讲数字员工，讲到企微里人手能开一个 bot，讲到他们把能力写成「自动化任务等于 7×24 小时」。我把这句单独摘到群里，说这个能力包装表达方式太牛了。同样一件事，我们讲的是模型选择、实时监控、基础配置，他们讲的是替你上班。价格这回事就这么绕过去了。我看着是服气的，也有一点不服气。我们规划的数字员工设置交互其实比他们细，我当时就打了这句话，我们还是太超前了哈哈。笑完心里知道，超前的另一面是没人用。</p>
+<p>会开到后面，人一个个走。业务的人先走，采购的走，最后剩我们部门几个。散会之后我翻群，发现这一整天都在说同一件事，只是没人把它说出来。</p>
+<p>早上那场复盘说的是小林生影。两个问题，价值论证不清晰，项目管理不规范。有人说还有一条，没深入业务运营。我坐在那儿听，觉得这三个说法是同一根绳上的三个结。前期我们把活儿交给业务自己打磨，让他们自己去论证自己产品的价值，听上去是给空间。被论证的人自己当裁判，这个局一开始就不好破。他们打磨到什么水平，会上有人说暂时没有定论。有些在开展的事情完全没有被纳入管理，我们手里也就没有过程数据，最后只能拿到一份对方自己写的结论。</p>
+<p>招聘是同一件事的定价版。熊冰蕾因为 30k 的落差拒了我们，成都给到 26k×14 薪，公积金按 20K 的 6%，还要算上从成都过来广东的迁移成本。群里在算预算和涨幅，也在算别人家开多少。我在群里打了一段话，AI 产生不了价值的话，我乃至我的部门都是没意义的，投入已经不少了，不能产生经营价值的话我都应该滚蛋的。发出去之后我盯着屏幕看了一会儿。这话是说给别人听的，也是说给自己听的。</p>
+<p>再往下是幽灵效率。晚上我写《超级组织》的读后感，书里有个词叫幽灵效率，我一下就想到今天。个人用 AI 跑得飞快，两天能出几十版，放进部门协作、评审和上下游交接里，整体产出并没有快多少，省下来的时间全在对齐和返工里吐出去。上游出得快，下游标准没对齐，筛图和扯皮要花双倍时间。这个感受太具体了。今天被点出来的两个不规范，项目管理和价值论证，都在说这件事。</p>
+<p>小红书笔记工具那场会让我踏实一点。标准版给门店采购，12 月就能感受一下，专业版、话术库、竞品库排在后面，数据回流、人工标注、合规一件一件往下排。有交付日期，有版本切分，有谁来验收。这种会开完人是累的，但不空。</p>
+<p>早上还有一个小细节。有人在群里问了两遍，今天的听记有吗，昨天早上的 AI 听记有吗。我看到的时候正在另一个会里，回了句我周末发。到晚上我要把九场听记都过一遍。这件事本身也算幽灵效率，记录做得越全，越显得今天很长。</p>
+<p>资源拉齐那场只有一分半。对外已经承诺了时间，对内资源还没定，测试资源要拉进来，因为这个项目涉及门店端交互，不算纯 AI 项目。有人直接说你们的节奏可能是反的，一般是先跟产品开发对完时间再去承诺。我认这个说法。承诺在前，资源在后，风险全压在交付那天。</p>
+<p>回家路上我想的不是这些。我想的是中午那句「跟大家背靠背，背水一战」。话说得有点大，但今天确实有那种感觉，我们做的事要么很快证明它值钱，要么很快就不需要证明了。</p>
+<p>周末了。明天不用调七点的闹钟。</p></article>
+  </section>
+  <footer>由 Hermes 自动生成 · 数据源 钉钉AI听记 + 聊天记录<br>本文为当日复盘存档，观点判断仅代表个人</footer>
+</div>
+<script>
+function sw(t){
+  document.querySelectorAll('.tab').forEach(function(b){b.classList.toggle('on',b.dataset.t===t)});
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.toggle('on',p.id==='p-'+t)});
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
