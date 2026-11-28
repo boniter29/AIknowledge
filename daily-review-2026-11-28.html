@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日复盘 · 2026-11-28</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--biz:#5b7cfa;--diary:#f472b6;--bg:#0d1017;--card:#151a24;--line:#232b3a;--txt:#dfe4ee;--dim:#8b95a8}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.85;-webkit-font-smoothing:antialiased}
+.wrap{max-width:780px;margin:0 auto;padding:28px 18px 64px}
+.top{border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:22px}
+.date{color:var(--dim);font-size:13px;letter-spacing:.06em}
+.title{font-size:26px;line-height:1.35;margin-top:8px;font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 0 26px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 6px;text-align:center}
+.stat b{display:block;font-size:20px;color:#fff;font-weight:700}
+.stat span{font-size:11px;color:var(--dim)}
+.tabs{display:flex;gap:8px;margin-bottom:22px;position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:9}
+.tab{flex:1;text-align:center;padding:10px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--dim);font-size:14px;font-family:inherit;cursor:pointer}
+.tab.on{color:#fff;font-weight:600}
+.tab.on[data-t="biz"]{background:rgba(91,124,250,.16);border-color:rgba(91,124,250,.55);color:#a9bcff}
+.tab.on[data-t="diary"]{background:rgba(244,114,182,.14);border-color:rgba(244,114,182,.5);color:#f9a8d4}
+.panel{display:none}
+.panel.on{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+.biz .eyebrow{color:#8ea3ff}
+.diary .eyebrow{color:#f9a8d4}
+.headline{font-size:21px;font-weight:700;line-height:1.45;margin-bottom:20px}
+.biz .headline{color:#e6ecff}
+.diary .headline{color:#fde6f1}
+article p{font-size:16px;margin-bottom:16px;color:#d7dde9}
+.biz article p:first-of-type{border-left:3px solid var(--biz);padding-left:14px;color:#eef2ff}
+.diary article p:first-of-type{font-size:17px;color:#f6e5ee}
+.diary article p:last-of-type{color:#f9a8d4}
+strong{color:#fff;font-weight:600}
+footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);color:#5d6678;font-size:12px;line-height:1.7}
+@media(max-width:420px){.stats{grid-template-columns:repeat(2,1fr)}.title{font-size:23px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="date">2026年11月28日 星期六</div>
+    <h1 class="title">每日复盘 · 2026-11-28</h1>
+  </div>
+  <div class="stats"><div class="stat"><b>6</b><span>聊天消息</span></div><div class="stat"><b>0</b><span>场AI听记</span></div><div class="stat"><b>1</b><span>通关键电话</span></div><div class="stat"><b>¥90</b><span>本周车费</span></div></div>
+  <div class="tabs">
+    <button class="tab on" data-t="biz" onclick="sw('biz')">商业复盘</button>
+    <button class="tab" data-t="diary" onclick="sw('diary')">日记</button>
+  </div>
+  <section id="p-biz" class="panel biz on">
+    <div class="eyebrow">商业复盘版</div>
+    <div class="headline">价值要到七成，账上才开始有名字</div>
+    <article><p><strong>今天想透的那件事，AI 在经营账上长期隐形，一半卡在省下来的时间会被组织自动收回，另一半卡在价值要过七成才开始显形。</strong></p>
+<p>昨天最后跟健新聊完，落下来一句话，要把 AI 做深做扎实。昨天它像个结论，今天变成了方法。</p>
+<p>今天上午和友第通了一通电话，他讲的是 AI 的价值怎么转化，战线怎么打。电话挂了之后我回看健新在群里说的那句，核心看进来后能否确定产出价值。两句话隔着不同的场合，指向同一处卡口。坐在那儿把这条线往下捋，捋出了两层规律。</p>
+<p>第一层是关于时间的去处。组织里绝大多数岗位，原本就不在做直接带来增量收益的事。AI 把一件两小时的事压到二十分钟，人并没有偷懒，那一个多小时被填进了另外几件同样不产生增量的事务里。从组织总量看，工时消耗没有减少，产出也没有增加。经营账上看不到动静，原因就在这里。工时在组织里有一个自动回填的水位，省下来的部分会自己涨回去。按省时间折算 ROI 的提案，都会在这一层被消化掉。</p>
+<p>第二层更冷一些。替代五成，账上看不到。做到七成，依然看不到。我把这个叫断崖式门槛。它的含义是投入曲线在前段几乎无法自证，中途的每一个状态都长得像失败。五成能演示，七成才能记账，中间那二十个百分点既没有掌声也没有预算，还得继续往里投。很多 AI 项目停在演示很漂亮、财报没动静的位置，团队并不差，组织只在门槛之后才认账。</p>
+<p>今天还说过一句更小的话。小提执行任务很多时候靠代码和电脑指令，所以说话偏技术。这句本来在替工具解释，说完发现它和上面两层是同一件事的两端。工具真正的门槛落在两处，一处是能不能做，一处是做完之后用什么语言交付。代码和指令属于执行语言，经营账只认业务语言。输入端工时被组织收回，输出端价值没被翻译，两端合起来就是那个隐形机制。</p>
+<p>友第讲战线怎么打，健新讲进来后能否确定产出价值。战线是取舍，产出是验收。断崖意味着能同时铺开的线不多。浅层提效最诱人也最危险的地方，是它能同时铺开很多条，每条都有一点动静，每条都到不了门槛。做深做扎实于是有了具体的落点。做深是选一条线压过门槛，做扎实是在立项时就把口径、基线、验收对象写进方案，等做完再去找价值通常来不及。</p>
+<p>浅层提效本身有意义，人少点疲劳，少犯点错，它该放在员工体验的位置上。拿它去证明 AI 的业务价值，就是拿一组无法记账的证据去申请下一轮资源。很多提案在评审会上讲不动，问题通常出在这。</p>
+<p>往后要落的大概是两个动作。把在跑的 AI 项目按是否跨过门槛重新分一次类，区分演示级和记账级；然后选一条线往深里做，接受其他几条暂时不动。两件事都得在方案里写清基线和验收对象，不然明年这个时候，还在讨论同一个卡口。</p></article>
+  </section>
+  <section id="p-diary" class="panel diary">
+    <div class="eyebrow">日记版</div>
+    <div class="headline">省下来的时间没有人看见</div>
+    <article><p>周六。今天给小提发的东西很少，两条短句，一段很长的聊天记录。</p>
+<p>短句先发。「昨天最后也跟健新聊了下。」隔了几秒又补一句，「总的来说就是要把ai 做深做扎实。」打完第二句我盯着屏幕看了一会儿，觉得它太像挂在会议室墙上的一句话。</p>
+<p>那段长的，是写给健新的。写之前刚跟友第通完电话。友第在电话里讲 AI 的价值怎么转化，讲战线怎么打，语气挺急。挂了电话我翻群，健新上午发过一句，核心看进来后能否确定产出价值。两句话撞在一起，一个一直隐约觉得不对的地方忽然清楚了。</p>
+<p>我在消息里写了第一层，几乎是账房先生的话。组织里绝大多数岗位本来就不在做直接带来增量收益的事。AI 把一件两小时的事压到二十分钟，人没有偷懒，那一个多小时被填进另外几件同样不产生增量的事务里。省下来的时间没有消失，它被组织收回去了。</p>
+<p>写到这句我停了很久。过去一两年做的那些提效，账上确实没动静。以前我把它归到不够深，今天才知道中间隔着一层记账方式。承认这一点有点泄气，那些力气好像白花了。也有一点轻松，至少不用再猜是不是自己方法错了。</p>
+<p>第二层更冷。替代一半看不到价值，做到七成还是看不到。中间那二十个百分点没有掌声，没有预算，还得继续往里投。我把它写成断崖式门槛。这个词不好听，写的时候知道健新会明白它什么意思。</p>
+<p>还有一句更小的。我跟健新说，小提执行任务很多时候靠代码和电脑指令，所以说话偏技术。这句话本来是在替工具解释，写完发现自己被扎了一下。工具做完的事，业务那边接不住，因为交付出来的是技术语言。省下来的时间没人看见，做出来的东西没人看懂，这两件事在我心里是同一个感觉。</p>
+<p>「做深做扎实」这四个字，昨天听着像口号。今天试着把它拆开，做深是把一条线压过门槛，做扎实是把口径和基线提前写清楚。做完再去找价值，通常来不及。</p>
+<p>下午小提自己发来一条提醒，说微信推送被会话休眠挡住了，让我回一句话把窗口打开。机器也有它自己卡住的时候。我回了一句，它就开始补推积压的东西，一条一条往上冒。</p>
+<p>友第说战线怎么打。战线这个词今天听着比效率实在。选一条线压过去，另外几条就得放下。浅层提效最舒服的地方，是它能同时铺开很多条，每条都有点动静，每条都不够。要做深，就得认这个亏。这话说出来容易，落到方案里就是要写清基线，写清验收对象，写不清的那些，明年还在原地。</p>
+<p>周六的好处是没人打断，一条消息可以从头写到尾。坏处是写完之后没有第二个人立刻反驳我，只能自己回过头再读一遍。读到断崖那两个字，觉得用得不客气，可它是我今天最确定的一处。</p>
+<p>晚上收拾桌子，翻到这周的洁敏车费，六趟九十块。一趟十五，谁坐谁没坐，清楚得很。AI 的账要是也能这样记就好了。</p></article>
+  </section>
+  <footer>由 Hermes 自动生成 · 数据源 钉钉AI听记 + 聊天记录<br>本文为当日复盘存档，观点判断仅代表个人</footer>
+</div>
+<script>
+function sw(t){
+  document.querySelectorAll('.tab').forEach(function(b){b.classList.toggle('on',b.dataset.t===t)});
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.toggle('on',p.id==='p-'+t)});
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
